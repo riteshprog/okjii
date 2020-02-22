@@ -1,38 +1,167 @@
-.App {
-  text-align: center;
+*{
+  margin:0;
+  padding: 0;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: white !important;
 }
+
+
+.img-icon{
+  width:100% !important;
+
+  display:flex;
+  flex-grow: inherit;
+  align-items: center;
+
+}
+nav.navbar-dark{
+  background-image: url(../src/img/back.png) !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  width:100% !important;
+}
+.navbar-brand{
+  padding-left: 6% !important;
+}
+.navbar-nav > li{
+  list-style-type: none;
+  padding-right: 2.8rem;
+  margin: 0;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 1rem !important;
+  font-weight:700px !important;
+  flex-wrap: nowrap;
+  word-break: normal;
+  white-space: nowrap;
+}
+.navbar-nav > li a{
+  font-weight: 700 !important;
+}
+a{
+  white-space: nowrap;
+}
+
+
+footer.page-footer, .footer-copyright {
+  background-color: gray !important;
+  border-top:2px solid red !important;
+}
+
+footer.page-footer{
+  
+  border-bottom: 2px solid red !important;
+}
+
+.list-unstyled.footer-list {
+  padding-left: 0;
+  height:50px !important;
+  list-style: none;
+  display:flex;
+  padding-right:3rem !important;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+
+}
+.list-unstyled.footer-list > li{
+  padding: 10px !important;
+  margin: 5px;
+}
+
+.img-icon{
+  display:inline-block !important;
+  display:flex;
+  width:29% !important;
+  
+}
+
+p.cite-text{
+  font-size:80% !important
+}
+.figure-img1{
+  background: url(../src/img/home/Asset6.png) 0 0 no-repeat !important;
+  background-size: 500px 500px;
+width:100% !important;
+height:auto !important;
+
+}
+
+.figure-img>img {
+  margin-bottom: .5rem;
+  line-height: 1;
+  padding-left: 64px !important;
+  width:136% !important;
+}
+
+.col-lg-5.text-center{
+  margin-left: 25% !important;
+}
+
+
+
+.list-image-checkbox li:before, .list-image-hand li:before, .list-image-star li:before, .list-image-correct li:before, .list-image-incorrect li:before, .list-image-checkmark li:before, .list-image-checkmark-white li:before {
+  content: "";
+  background-size: 70% 70%;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  display: block;
+  left: -1.5em;
+  top: -0.2em;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.daily-use div h1{
+  margin-top: 5rem !important;
+}
+
+section.daily-use{
+  background-color: cornsilk !important;
+}
+
+/*.list-image-checkbox > li:before {
+  background-image: url(../../mhe.mhhe-blk2/img/list-icons/icon-checkbox.svg);
+}*/
+/*---Step List---*/
+.list-step, .list-step-center {
+  list-style-type: none;
+  display: table;
+}
+
+.list-step table, .list-step-center table {
+  width: 100%;
+}
+
+.list-step li, .list-step-center li {
+  display: table-row;
+  font-family: "Proxima Nova Regular", Verdana, Helvetica, sans-serif;
+  margin-bottom: .5em;
+}
+
+.list-step .step-title, .list-step-center .step-title {
+  display: table-cell;
+  padding-right: 1.5em;
+  white-space: nowrap;
+}
+
+.list-step .step-info, .list-step-center .step-info {
+  display: table-cell;
+  word-break: break-word;
+}
+
+.list-step .step-info ol, .list-step-center .step-info ol, .list-step .step-info ul, .list-step-center .step-info ul {
+  font-style: normal;
+  margin-left: 0.6667em;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
