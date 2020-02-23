@@ -35,6 +35,22 @@ nav.navbar-dark{
    box-shadow: none !important;
 }
 
+.col-sm-7.figure-img1:before{
+  content: "";
+    display: block;
+    background: url(/static/media/Asset6.1f22c602.png) 0 -2px no-repeat !important;
+    background-size: 100% 100% !important;
+    width: 87.5% !important;
+    height: 557px !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+.col-sm-7.lesspadding{
+  padding-right: 0 !important;
+}
+
 @media (max-width: 716px){
   nav.navbar-dark {
     display: flex!important;
@@ -48,12 +64,13 @@ nav.navbar-dark{
 .col-sm-7.figure-img1:after{
   content: "";
     display: block;
-    background: url(/static/media/Asset6.1f22c602.png) 0 -2px no-repeat !important;
+    background:   0 -2px no-repeat !important;
+ 
     background-size: 100% 100% !important;
     width: 100% !important;
     height: 557px !important;
     position: relative;
-    top: -17px;
+    top: -20px;
     left:-15px;
     right: 0;
     z-index: -1;
@@ -115,21 +132,6 @@ footer.page-footer{
 
 p.cite-text{
   font-size:80% !important
-}
-.col-sm-7.figure-img1:before{
-  content: "";
-    display: block;
-    background: url(/static/media/Asset6.1f22c602.png) 0 -2px no-repeat !important;
-    background-size: 100% 100% !important;
-    width: 87.5% !important;
-    height: 557px !important;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-}
-.col-sm-7.lesspadding{
-  padding-right: 0 !important;
 }
 
 .figure-img>img {
