@@ -1,6 +1,7 @@
 *{
   margin:0;
   padding: 0;
+  box-sizing: border-box !important;
   
 }
 
@@ -21,10 +22,43 @@ nav.navbar-dark{
   background-image: url(../src/img/back.png) !important;
   background-repeat: no-repeat !important;
   background-color: transparent !important;
+  
   width:100% !important;
 }
 .navbar-brand{
-  padding-left: 6% !important;
+  padding-left: 0% !important;
+  
+}
+
+.navbar {
+  font-weight: 300;
+   box-shadow: none !important;
+}
+
+@media (max-width: 716px){
+  nav.navbar-dark {
+    display: flex!important;
+    flex-basis: auto;
+    background-color: green !important;
+}
+.navbar-brand{
+  padding-left: 15% !important;
+  
+}
+.col-sm-7.figure-img1:after{
+  content: "";
+    display: block;
+    background: url(/static/media/Asset6.1f22c602.png) 0 -2px no-repeat !important;
+    background-size: 100% 100% !important;
+    width: 100% !important;
+    height: 557px !important;
+    position: relative;
+    top: -17px;
+    left:-15px;
+    right: 0;
+    z-index: -1;
+}
+
 }
 .navbar-nav > li{
   list-style-type: none;
@@ -82,12 +116,20 @@ footer.page-footer{
 p.cite-text{
   font-size:80% !important
 }
-.figure-img1{
-  background: url(../src/img/home/Asset6.png) 0 0 no-repeat !important;
-  background-size: 500px 500px;
-width:100% !important;
-height:auto !important;
-
+.col-sm-7.figure-img1:before{
+  content: "";
+    display: block;
+    background: url(/static/media/Asset6.1f22c602.png) 0 -2px no-repeat !important;
+    background-size: 100% 100% !important;
+    width: 87.5% !important;
+    height: 557px !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+.col-sm-7.lesspadding{
+  padding-right: 0 !important;
 }
 
 .figure-img>img {
@@ -100,6 +142,21 @@ height:auto !important;
 .col-lg-5.text-center{
   margin-left: 25% !important;
 }
+
+.okkjii-figure-apple img, .okjii-figure-imgkhata  img{
+  width:100% !important;
+}
+
+
+.okjii-khatabook1{
+  background-color: rgb(15, 167, 154) !important;
+}
+
+section.okjii-khatabook{
+  padding-top:2rem;
+  margin-left:25px;
+}
+
 
 
 
@@ -160,8 +217,3 @@ section.daily-use{
 }
 
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
