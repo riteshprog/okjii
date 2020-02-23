@@ -14,7 +14,7 @@ const FooterPage = () => {
     <MDBFooter color="green" className="font-small pt-4 mt-4">
       <MDBContainer className="text-center text-md-left">
         <MDBRow>
-          <MDBCol md="3">
+          <MDBCol className="footer-bdr-right" md="3">
             <h5 className="title">MENU</h5>
             <ul className="list-unstyled">
               <li className="list-unstyled">
@@ -40,7 +40,7 @@ const FooterPage = () => {
 
             </ul>
           </MDBCol>
-          <MDBCol md="3">
+          <MDBCol className="footer-bdr-right" md="3">
             <h5 className="title">HELP</h5>
             <ul className="list-unstyled">
               <li className="list-unstyled">
@@ -67,7 +67,7 @@ const FooterPage = () => {
 
             </ul>
           </MDBCol>
-          <MDBCol md="3">
+          <MDBCol className="footer-bdr-right" md="3">
             <h5 className="title">CATEGORIES</h5>
             <ul className="list-unstyled">
               <li className="list-unstyled">
@@ -116,7 +116,7 @@ const FooterPage = () => {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
-      <div className="footer-copyright py-3">
+      <div className="footer-copyright mt-3 py-3">
         <MDBContainer>
         <p class="cite-text">For best of prices, deals and oﬀers; order online in cities<br /> The delivery service is operational in 13 cities: Ahmedabad, Bengaluru, Chennai, Delhi, Gurugram, Hyderabad, Jaipur, Kanpur, Kolkata, Lucknow, Noida, Mumbai, and Pune.<br /> 
         </p>

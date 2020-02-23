@@ -26,7 +26,7 @@ export default class HomeDelivery extends Component {
  
           </div>
           <div className="col-lg-6">
-            <figure class="figure-img">
+            <figure class="home-delivery-figure-img">
               <img src={Asset2} alt="home delivery" />
             </figure>
           </div>

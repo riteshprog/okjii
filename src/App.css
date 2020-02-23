@@ -123,6 +123,9 @@ footer.page-footer{
   
   border-bottom: 2px solid red !important;
 }
+.footer-bdr-right{
+  border-right: 2px solid red !important;
+}
 
 .list-unstyled.footer-list {
   padding-left: 0;
@@ -162,7 +165,7 @@ p.cite-text{
   margin-left: 25% !important;
 }
 
-.okkjii-figure-apple img, .okjii-figure-imgkhata  img{
+.okkjii-figure-apple img, .okjii-figure-imgkhata  img, .daily-figure-img img, .home-delivery-figure-img img{
   width:100% !important;
 }
 

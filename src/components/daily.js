@@ -11,7 +11,7 @@ export default class daily extends Component {
           <div className="container">
           <div className="row">
             <div className="col-lg-6">
-            <figure class="figure-img1">
+            <figure class="daily-figure-img">
               <img src={Asset1} alt=""/>
             </figure>
             </div>

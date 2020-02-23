@@ -18,7 +18,7 @@ render() {
     <Router>
       <MDBNavbar color="default-color" className="justify-content-end" dark expand="md">
         <MDBNavbarBrand>
-        <strong className="white-text"><img src={logo} alt="store" height="40"/></strong>
+        <img src={logo} alt="store" height="40"/>
 
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />
