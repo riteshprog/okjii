@@ -12,9 +12,9 @@ export default class mainbody extends Component {
     return (
       <div className="container-fluid">
         <div className="row">
-        <div className="col-sm-7 figure-img1 order-sm-12 lesspadding">
-            <figure class="">
-            </figure>
+        <div className="col-sm-7 figure-img2 order-sm-2 ">
+            
+        <img src={Asset6} width="100%" alt="" />
           </div>
 
           <div className="col-sm-5 order-sm-1  mt-5 w-100">

@@ -35,10 +35,10 @@ nav.navbar-dark{
    box-shadow: none !important;
 }
 
-.col-sm-7.figure-img1:before{
+/*.col-sm-7.figure-img1:before{
   content: "";
     display: block;
-    background: url(/static/media/Asset6.1f22c602.png) 0 -2px no-repeat !important;
+    background: url(/static/media/Asset6.1f22c602.png) 0 -2px no-repeat;
     background-size: 100% 100% !important;
     width: 87.5% !important;
     height: 557px !important;
@@ -49,6 +49,15 @@ nav.navbar-dark{
 }
 .col-sm-7.lesspadding{
   padding-right: 0 !important;
+}
+*/
+
+
+
+
+.col-sm-7.figure-img2.order-sm-2 {
+  padding-left: 111.5px;
+  padding-right: 0;
 }
 
 @media (max-width: 716px){
@@ -61,10 +70,10 @@ nav.navbar-dark{
   padding-left: 15% !important;
   
 }
-.col-sm-7.figure-img1:after{
-  content: "";
+/*.col-sm-7.figure-img1:after{
+    content: "";
     display: block;
-    background:   0 -2px no-repeat !important;
+    background: url(/static/media/Asset6.1f22c602.png)0 -2px no-repeat !important;
  
     background-size: 100% 100% !important;
     width: 100% !important;
@@ -74,6 +83,14 @@ nav.navbar-dark{
     left:-15px;
     right: 0;
     z-index: -1;
+    clear: both;
+}
+*/
+
+.col-sm-7.figure-img2.order-sm-2 {
+  padding-left: 0px;
+  padding-right: 0;
+  
 }
 
 }
@@ -134,7 +151,7 @@ p.cite-text{
   font-size:80% !important
 }
 
-.figure-img>img {
+.figure-img > img {
   margin-bottom: .5rem;
   line-height: 1;
   padding-left: 64px !important;
