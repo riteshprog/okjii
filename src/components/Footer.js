@@ -94,7 +94,7 @@ const FooterPage = () => {
 
             </ul>
           </MDBCol>
-          <MDBCol md="3">
+          <MDBCol className="bdr-font" md="3">
             <h5 className="title">FIND US ONLINE</h5>
             <ul className="list-unstyled">
               <li className="list-unstyled">
@@ -120,38 +120,21 @@ const FooterPage = () => {
         <MDBContainer>
         <p class="cite-text">For best of prices, deals and oﬀers; order online in cities<br /> The delivery service is operational in 13 cities: Ahmedabad, Bengaluru, Chennai, Delhi, Gurugram, Hyderabad, Jaipur, Kanpur, Kolkata, Lucknow, Noida, Mumbai, and Pune.<br /> 
         </p>
-        <p class="mt-0"><b>Payment Options</b></p>
-        <ul className="list-unstyled footer-list">
-              <li>
-                <a href="/"><img src={visa} alt="store"  className="img-icon" /> </a>
-              </li>
-              <li>
-                <a href="/"><img src={Maestro} alt="store" className="img-icon" /></a>
-              </li>
-              <li>
-                <a href="/"><img src={paytm} alt="store" className="img-icon"/></a>
-              </li>
-              <li>
-                <a href="/"><img src={MasterCard} alt="store" className="img-icon" /></a>
-              </li>
-              <li>
-                <a href="/"><img src={paypal} alt="store" className="img-icon" /></a>
-                </li>
-                <li>
-                <a href="/"><img src={bhim} alt="store" className="img-icon" /></a>
-                </li>
+        <p class="mt-1"><b>Payment Options</b></p>
 
-                <li>
-                <a href="/"> Net Banking</a>
-                </li>
-                <li>
-                <a href="/"> Cash on Delivery </a>
-                </li>
-                <li>
-                <a href="/"> Udhaar</a>
-                </li>
+        <div className="d-flex align-content-stretch flex-wrap example-parent">
+    <div className="p-2 col-example"><a href="/"><img src={visa} alt="store"  className="img-icon" /> </a></div>
+    <div className="p-2 col-example"><a href="/"><img src={Maestro} alt="store" className="img-icon" /></a></div>
+    <div className="p-2 col-example"><a href="/"><img src={paytm} alt="store" className="img-icon"/></a></div>
+    <div className="p-2 col-example"><a href="/"><img src={MasterCard} alt="store" className="img-icon" /></a></div>
+    <div className="p-2 col-example"><a href="/"><img src={paypal} alt="store" className="img-icon" /></a></div>
+    <div className="p-2 col-example"><a href="/"><img src={bhim} alt="store" className="img-icon" /></a></div>
+    <div className="p-2 col-example"><a href="/"> Net Banking</a></div>
+    <div className="p-2 col-example"><a href="/"> Cash on Delivery </a></div>
+    <div className="p-2 col-example"><a href="/"> Udhaar</a></div>
+      </div>
 
-            </ul>
+
           
   </MDBContainer>
       </div>

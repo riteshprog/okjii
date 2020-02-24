@@ -5,7 +5,8 @@ import apple from '../img/home/apple.png';
 import Asset7 from '../img/home/Asset7.png';
 import HomeDelivery from './HomeDelivery';
 import KhataBook from './KhataBook';
-
+import Testimonial from './Testimonial';
+import Trusted from './Trusted'
 
 export default class mainbody extends Component {
   render() {
@@ -57,6 +58,8 @@ export default class mainbody extends Component {
         <Daily />
         <HomeDelivery />
         <KhataBook />
+        <Testimonial />
+        <Trusted />
               </div>
     )
   }
