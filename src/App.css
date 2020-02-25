@@ -5,11 +5,15 @@
   
 }
 
+
+
 body{
   background-color: white !important;
   position: relative;
   font-family: Muli,BlinkMacSystemFont,-apple-system,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif;
-  font-size: 14px;}
+  font-size: 14px;
+color :#5e5e5e;
+}
 
 
 .img-icon{
@@ -29,6 +33,7 @@ nav.navbar-dark{
 }
 .navbar-brand{
   padding-left: 0% !important;
+  
   
 }
 
@@ -58,11 +63,17 @@ nav.navbar-dark{
 
 
 .col-sm-7.figure-img2.order-sm-2 {
-  padding-left: 111.5px;
+  padding-left: 123.5px;
   padding-right: 0;
 }
 
-@media (max-width: 716px){
+
+
+
+
+
+
+/*@media (max-width: 716px){
   nav.navbar-dark {
     display: flex!important;
     flex-basis: auto;
@@ -72,22 +83,9 @@ nav.navbar-dark{
   padding-left: 15% !important;
   
 }
-/*.col-sm-7.figure-img1:after{
-    content: "";
-    display: block;
-    background: url(/static/media/Asset6.1f22c602.png)0 -2px no-repeat !important;
- 
-    background-size: 100% 100% !important;
-    width: 100% !important;
-    height: 557px !important;
-    position: relative;
-    top: -20px;
-    left:-15px;
-    right: 0;
-    z-index: -1;
-    clear: both;
-}
-*/
+
+
+
 
 .col-sm-7.figure-img2.order-sm-2 {
   padding-left: 0px;
@@ -96,6 +94,10 @@ nav.navbar-dark{
 }
 
 }
+*/
+
+/*  Media Query For All View*/
+
 .navbar-nav > li{
   list-style-type: none;
   padding-right: 2.8rem;
@@ -103,7 +105,7 @@ nav.navbar-dark{
   flex-direction: row;
   justify-content: space-around;
   font-size: 1rem !important;
-  font-weight:700px !important;
+  font-weight:400px !important;
   flex-wrap: nowrap;
   word-break: normal;
   white-space: nowrap;
@@ -116,6 +118,228 @@ a{
 }
 
 
+/* Bast Way */
+
+.okjii-explore h1{
+
+  font-size:2.5rem !important;
+  font-weight:700 !important;
+  color:#5e5e5e !important;
+  padding-top:3.5rem !important
+}
+
+.okjii-explore h2{
+  padding-bottom: 2rem !important;
+  font-size: 2.5rem !important;
+  font-weight:400 !important;
+  color:#5e5e5e !important;
+}
+
+.okjii-explore p{
+  color: #5e5e5e !important;
+  font-size:1.2rem !important;
+  font-weight: 400 !important
+}
+
+.okjii-install h1{
+  font-size:1.3rem !important;
+  font-weight:500 !important;
+  align-items: center !important;
+}
+
+.okjii-install .text-center{
+  text-align: center!important;
+  padding-left: 26px;
+}
+
+
+.okjii-install img{
+  width:10% !important;
+  align-content: center !important;
+}
+
+figure.okkjii-figure-google {
+  width: 88%;
+  align-content: baseline !important;
+  padding-top: 12px;
+}
+
+.okjii-tel{
+  padding-left: 30px !important;
+  position: relative;
+}
+.okjii-tel input{
+  background-color: #5e5e5e !important;
+  height:50px !important;
+  border: none !important;
+    width: 95%;
+}
+
+.okjii-tel button{
+  position: absolute !important;
+  border-radius: 5% !important;
+  width:200px !important;
+  height:50px;
+  align-items: center !important;
+  padding-top:15px !important;
+  z-index:5;
+}
+
+
+
+/*  okjii-daily*/
+
+
+.okjii-best h1{
+  font-size:2.5rem !important;
+  font-weight:400 !important;
+  padding-top: 4rem !important;
+  padding-bottom: 2rem;
+}
+
+section.okjii-daily {
+  background-color: #F7F7F7 !important;
+  padding-left:-15px !important;
+  padding-top:40px !important;
+  padding-bottom: 40px !important;
+  padding-right:-15px !important;
+}
+
+
+.okjii-daily h1{
+  padding-top: 4.5rem !important;
+  font-size:2.5rem !important;
+  font-weight:500;
+  color:#2A2AFF !important;
+}
+
+.okjii-daily p{
+  color: #5e5e5e !important;
+  font-size:1.2rem !important;
+  font-weight: 400 !important
+
+}
+
+ul.list-unstyle {
+  list-style-type: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 0 !important;
+}
+
+.list-unstyle p{
+  font-size:1rem !important;
+}
+
+.fa-2x {
+  font-size: 1.5em !important;
+}
+
+
+
+
+/* okjii-homedelivery */
+
+.okjii-homedelivery h1{
+  font-size:2.5rem !important;
+  font-weight:500;
+  color:#2A2AF0 !important;
+
+}
+
+.okjii-homedelivery p{
+  color: #5e5e5e !important;
+font-size:1.2rem !important;
+font-weight: 400 !important
+}
+
+
+.list-unstyle p{
+  font-size:1rem !important;
+  margin-bottom: 0 !important;
+}
+
+
+/* Khata Book */
+
+.okjii-khatabook1{
+  background-color: #3BA778 !important;
+}
+
+section.okjii-khatabook{
+  padding-top:2rem;
+  margin-left:25px;
+}
+
+
+.okjii-khatabook1{
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+
+.okjii-khatabook1 h1{
+  font-size:2.5rem !important;
+  Padding-top:2rem !important;
+  padding-bottom: 1rem !important;
+  font-weight:500 !important;
+
+
+}
+
+.okjii-khatabook1 p{
+  color:#fff !important;
+  font-size: 1.1rem !important;
+  font-weight: 400 !important;
+
+}
+.no-break{
+  word-break: keep-all;
+}
+
+
+
+/* home-testimonial  */
+.home-testimonial h1{
+color:#5e5e5e !important;
+font-size:2.5rem !important;
+font-weight:500 !important;
+}
+
+.home-testimonial h2{
+  color:#5e5e5e !important;
+  font-size:2rem !important;
+  font-weight:400 !important;
+}
+
+
+.home-testimonial p{
+ color:#5e5e5e !important;
+ font-size:1.3rem !important;
+ font-weight:400 !important;
+}
+
+.home-testimonial.card {
+  font-weight: 400;
+  border: 0;
+  box-shadow: none !important;
+}
+
+.home-testimonial blockquote p{
+  font-size:1rem !important;
+}
+
+
+.trusted-by h1{
+  color:#5e5e5e !important;
+  font-size:2rem !important;
+  font-weight:400 !important;
+
+
+
+}
+
+
 footer.page-footer, .footer-copyright {
   background-color: #F7F7F7 !important;
   
@@ -123,10 +347,26 @@ footer.page-footer, .footer-copyright {
   border-top:2px solid #BCBCBC !important;
 }
 
+footer.page-footer h5{
+  font-size: 1.4rem !important;
+  padding-bottom: 2rem;
+}
+
 footer.page-footer a {
   color:#ACACAC !important;
   font-size: 1rem;
+  
+  font-size:1rem !important;
+  font-weight: 400 !important;
 }
+
+
+.d-flex.align-content-stretch.flex-wrap.example-parent img{
+width:90% !important
+}
+
+
+
 
 .mt-1{
   font-size: 1.01rem;
@@ -172,7 +412,14 @@ footer.page-footer{
 }
 
 p.cite-text{
-  font-size:80% !important
+  font-size:90% !important;
+  font-weight:400 !important;
+}
+
+
+.col-example a{
+  font-size:1rem !important;
+  font-weight: 400 !important;
 }
 
 .figure-img > img {
@@ -186,19 +433,11 @@ p.cite-text{
   margin-left: 25% !important;
 }
 
-.okkjii-figure-apple img, .okjii-figure-imgkhata  img, .daily-figure-img img, .home-delivery-figure-img img{
+.okkjii-figure-apple img, .okkjii-figure-google img, .okjii-figure-imgkhata  img, .daily-figure-img img, .home-delivery-figure-img img{
   width:100% !important;
 }
 
 
-.okjii-khatabook1{
-  background-color: #3BA778 !important;
-}
-
-section.okjii-khatabook{
-  padding-top:2rem;
-  margin-left:25px;
-}
 
 
 
@@ -370,7 +609,7 @@ a.waves-effect, a.waves-light {
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   width: 30px;
-  height: 3px;
+  height: 25px;
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
@@ -381,6 +620,7 @@ a.waves-effect, a.waves-light {
   border-bottom: 10px solid transparent;
   opacity: .5;
   transition: opacity 0.6s ease;
+  position: absolute !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -393,17 +633,7 @@ a.waves-effect, a.waves-light {
   opacity: 1;
 }
 
-.carousel-caption {
-  position: absolute;
-  right: 15%;
-  bottom: 20px;
-  left: 15%;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
-  text-align: center;
-}
+
 
 
 .carousel-multi-item .controls-top .btn-floating {
@@ -423,5 +653,51 @@ a.waves-effect, a.waves-light {
 
 .card-shadow{
   box-shadow: none !important;
+
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  nav.navbar-dark {
+    display: flex!important;
+    flex-basis: auto;
+    background-color: #269E72 !important;
+}
+.footer-bdr-right{
+  border-right: none !important;
+}
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  nav.navbar-dark {
+    display: flex!important;
+    flex-basis: auto;
+    background-color: #269E72 !important;
+}
+
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px ) {
+
+  nav.navbar-dark {
+    display: flex!important;
+    flex-basis: auto;
+    background-color:  #269E72 !important;
+}
+ 
+} 
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (width: 1200px) {
+  nav.navbar-dark {
+    display: flex!important;
+    flex-basis: auto;
+    background-color: transparent !important;
+}
 
 }

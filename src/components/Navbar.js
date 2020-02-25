@@ -16,7 +16,7 @@ render() {
   return (
 
     <Router>
-      <MDBNavbar color="default-color" className="justify-content-end" dark expand="md">
+      <MDBNavbar color="default-color" className="justify-content-end col-xs-12 col-sm-12" dark expand="md">
         <MDBNavbarBrand>
         <img src={logo} alt="store" height="40"/>
 
@@ -25,10 +25,10 @@ render() {
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
           <MDBNavbarNav right>
             <MDBNavItem active>
-              <MDBNavLink to="#!">Home</MDBNavLink>
+              <MDBNavLink to="/">Home</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="/okkjiretaler">OKKJI FOR RETAILER</MDBNavLink>
+              <MDBNavLink to="/Retailer">OKKJI FOR RETAILER</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink to="/okkjiifast">OKKJI FAST</MDBNavLink>

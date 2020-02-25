@@ -12,7 +12,7 @@ import visa from '../img/visa.png';
 const FooterPage = () => {
   return (
     <MDBFooter color="green" className="font-small pt-4 mt-4">
-      <MDBContainer className="text-center text-md-left">
+      <MDBContainer className="text-md-left">
         <MDBRow>
           <MDBCol className="footer-bdr-right" md="3">
             <h5 className="title">MENU</h5>
@@ -116,7 +116,7 @@ const FooterPage = () => {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
-      <div className="footer-copyright mt-3 py-3">
+      <div className="footer-copyright container-fluid mt-3 py-3">
         <MDBContainer>
         <p class="cite-text">For best of prices, deals and oﬀers; order online in cities<br /> The delivery service is operational in 13 cities: Ahmedabad, Bengaluru, Chennai, Delhi, Gurugram, Hyderabad, Jaipur, Kanpur, Kolkata, Lucknow, Noida, Mumbai, and Pune.<br /> 
         </p>

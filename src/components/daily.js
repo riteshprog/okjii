@@ -1,40 +1,44 @@
-import React, { Component } from 'react';
+import React from "react";
+import { MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdbreact";
 import Asset1 from '../img/home/Asset1.png';
-import {MDBIcon} from "mdbreact";
+import {} from "mdbreact";
 
-
-export default class daily extends Component {
-  render() {
-    return (
-<div className="container-fluid">
-        <section className="daily-use ">
-          <div className="container">
-          <div className="row">
-            <div className="col-lg-6">
-            <figure class="daily-figure-img">
+const daily = () => {
+return (
+  <section className="okjii-daily">
+<MDBContainer>
+  <MDBRow>
+    <MDBCol size="6">
+    <figure className="daily-figure-img">
               <img src={Asset1} alt=""/>
-            </figure>
-            </div>
-            <div className="col-lg-6">
-              <h1><b>Daily</b> useable from nearby shops</h1>
+    </figure>
+
+    </MDBCol>
+    <MDBCol size="6">
+    <h1><b>Daily</b> useable from nearby shops</h1>
               <p>Because we digitalized all hyper-local shop who knows the taste and need of Indian families. We are extending the convenience of customer, their faith according to the digital age and social trend.</p>
-              <ul className="list-step-center">
-                <li><div className="step-title"><MDBIcon icon="check-square" /></div> 
-                <div class="step-info"><p>Many payment options</p></div></li>
-                <li><div className="step-title"><MDBIcon icon="check-square" /></div> 
-                <div class="step-info"><p>Street’s store on smartphone</p></div></li>
-                <li><div className="step-title"><MDBIcon icon="check-square" /></div> 
-                <div class="step-info"><p>Digital representation of all product</p></div></li>
-                <li><div className="step-title"><MDBIcon icon="check-square" /></div> 
-                <div class="step-info"><p>Digitalization of evergreen “UDHAAR”</p></div></li>
-                <li><div className="step-title"><MDBIcon icon="check-square" /></div> 
-                <div class="step-info"><p>Digitalization of faith, reliability &amp; local taste</p></div></li>
+              <ul className="list-unstyle">
+                <li> 
+                <p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Many payment options</p></li>
+                <li><p> <MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Street’s store on smartphone</p></li>
+                <li><p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Digital representation of all product</p></li>
+                <li><p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Digitalization of evergreen “UDHAAR”</p></li>
+                <li><p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Digitalization of faith, reliability &amp; local taste</p></li>
               </ul>
-            </div>
-          </div>
-          </div>
-        </section>
-        </div>
-    )
-  }
+    
+    </MDBCol>
+  </MDBRow>
+
+
+</MDBContainer>
+</section>
+);
 }
+
+export default daily;
+
+
+
+
+
+

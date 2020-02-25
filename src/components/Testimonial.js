@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import avatar from '../img/home/avatar.png';
-import {MDBIcon} from "mdbreact";
+import Asset12 from '../img/home/Asset12.png';
 
 export default class Testimonial extends Component {
   render() {
@@ -14,15 +14,15 @@ export default class Testimonial extends Component {
               <p>Endorsement to our services that inspire enthusiasm and zeal.</p>
             </div>
             <div className="col-sm-6 col-12">
-            <div className="card promoting-card">
+            <div className=" promoting-card">
 
 <div className="card-body d-flex flex-row">
 
-  <img src={avatar} className="rounded-circle mr-3" height="50px" width="50px" alt="avatar" />
+  <img src={avatar} className="rounded-circle mr-3" height="100px" width="100px" alt="avatar" />
 
   <div>
 
-    <h4 className="card-title font-weight-bold mb-2">Jyoty Singh</h4>
+    <h2>Jyoty Singh</h2>
     <p className="card-text">Boring Road</p>
 
   </div>
@@ -31,7 +31,8 @@ export default class Testimonial extends Component {
 </div>
 
               <blockquote>
-                <p>Rapidiously morph transparent internal or "organic" sources whereas resource sucking e-business. Conveniently innovate compelling internal. </p>
+                <p> <img src={Asset12} className=" mr-2" height="15px" width="15px" alt="Asset12" />
+Rapidiously morph transparent internal or "organic" sources whereas resource sucking e-business. Conveniently innovate compelling internal. </p>
               </blockquote>
              
                 
