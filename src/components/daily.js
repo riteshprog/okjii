@@ -8,13 +8,13 @@ return (
   <section className="okjii-daily">
 <MDBContainer>
   <MDBRow>
-    <MDBCol size="6">
+    <MDBCol size="6" className="col-sm-6 col-12">
     <figure className="daily-figure-img">
-              <img src={Asset1} alt=""/>
+              <img src={Asset1} className="img-fluid" alt=""/>
     </figure>
 
     </MDBCol>
-    <MDBCol size="6">
+    <MDBCol size="6"  className="col-sm-6 col-12">
     <h1><b>Daily</b> useable from nearby shops</h1>
               <p>Because we digitalized all hyper-local shop who knows the taste and need of Indian families. We are extending the convenience of customer, their faith according to the digital age and social trend.</p>
               <ul className="list-unstyle">

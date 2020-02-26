@@ -8,7 +8,7 @@ export default class KhataBook extends Component {
       <div class="container-fluid  okjii-khatabook1">
         <section className="container">
           <div className="row">
-            <div className="col-lg-4">
+            <div className="col-lg-4 col-12">
               <h1 className="text-white">Khata Book</h1>
               <p>OkkJi takes care of all hectic stuﬀs like handwritien documents, manual listings of purchase &amp; maintaining account transactions by facilitating digital KHATA BOOK.</p>
 
@@ -24,13 +24,13 @@ export default class KhataBook extends Component {
 
 
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 col-12">
             <figure class="okjii-figure-imgkhata">
-              <img src={Asset3} alt=""/>
+              <img src={Asset3} className="img-fluid py-5" alt=""/>
             </figure>
            
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 col-12">
               <h1 className="text-white">Credit Pay</h1>
               <p>OkkJi is cratiing the integral &amp; old-age living shopping heritage that strongly knit local social bond in every crest &amp; through in brand new kalevar.</p>
               <ul className="list-unstyle">

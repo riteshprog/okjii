@@ -16,7 +16,7 @@ export default class mainbody extends Component {
         <div className="row">
         <div className="col-sm-7 figure-img2 order-sm-2 ">
             
-        <img src={Asset6} width="100%" alt="" />
+        <img src={Asset6} width="100%" className="img-fluid"  alt="" />
           </div>
 
           <div className="col-sm-5 order-sm-1  mt-5 w-100 okjii-explore">
@@ -32,21 +32,21 @@ export default class mainbody extends Component {
   </div>
   </div>
 <div className="row mt-3">
-  <div class="col-lg-6">
+  <div class="col-lg-6 col-md-6 col-12 ">
   <figure class="okkjii-figure-apple">
-              <img src={apple} alt=""/>
+              <img src={apple} className="img-fluid apple" alt=""/>
       </figure>
   </div>
-  <div class="col-lg-6">
+  <div class="col-lg-6 col-md-6 col-12">
   <figure class="okkjii-figure-google">
-              <img src={google} alt=""/>
-            </figure>
+              <img className="img-fluid google" src={google} alt=""/>
+  </figure>
   </div>
 </div>
 <div className="row mt-3">
 <div class="col-md-12 okjii-tel">
 <input type="tel" placeholder="91 |Mobile Number"  />
-<button className="bg-primary okjii-button">GET APP LINK</button>
+<button className="okjii-button">GET APP LINK</button>
 
 </div>
 </div>

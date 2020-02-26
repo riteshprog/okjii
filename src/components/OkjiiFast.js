@@ -9,7 +9,7 @@ const MultiCarouselPage = () => {
         <MDBCarouselInner>
           <MDBRow>
             <MDBCarouselItem itemId="1">
-              <MDBCol md="4">
+              <MDBCol md="3">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" />
                   <MDBCardBody>
@@ -22,7 +22,7 @@ const MultiCarouselPage = () => {
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="4">
+              <MDBCol md="3">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" />
                   <MDBCardBody>
@@ -35,7 +35,7 @@ const MultiCarouselPage = () => {
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="4">
+              <MDBCol md="3">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" />
                   <MDBCardBody>
@@ -50,7 +50,7 @@ const MultiCarouselPage = () => {
               </MDBCol>
             </MDBCarouselItem>
             <MDBCarouselItem itemId="2">
-              <MDBCol md="4">
+              <MDBCol md="3">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(60).jpg" />
                   <MDBCardBody>
@@ -63,7 +63,7 @@ const MultiCarouselPage = () => {
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="4">
+              <MDBCol md="3">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(47).jpg" />
                   <MDBCardBody>
@@ -76,7 +76,7 @@ const MultiCarouselPage = () => {
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="4">
+              <MDBCol md="3">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(48).jpg" />
                   <MDBCardBody>
@@ -91,7 +91,7 @@ const MultiCarouselPage = () => {
               </MDBCol>
             </MDBCarouselItem>
             <MDBCarouselItem itemId="3">
-              <MDBCol md="4">
+              <MDBCol md="3">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(53).jpg" />
                   <MDBCardBody>
@@ -104,7 +104,7 @@ const MultiCarouselPage = () => {
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="4">
+              <MDBCol md="3">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(45).jpg" />
                   <MDBCardBody>
@@ -117,7 +117,7 @@ const MultiCarouselPage = () => {
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="4">
+              <MDBCol md="3">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(41).jpg" />
                   <MDBCardBody>
