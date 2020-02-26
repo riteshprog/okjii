@@ -116,7 +116,7 @@ const FooterPage = () => {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
-      <div className="footer-copyright container-fluid mt-3 ml-4 py-3">
+      <div className="footer-copyright container-fluid mt-3  py-3">
         <MDBContainer>
         <p class="cite-text">For best of prices, deals and oﬀers; order online in cities<br /> The delivery service is operational in 13 cities: Ahmedabad, Bengaluru, Chennai, Delhi, Gurugram, Hyderabad, Jaipur, Kanpur, Kolkata, Lucknow, Noida, Mumbai, and Pune.<br /> 
         </p>
