@@ -14,9 +14,11 @@ toggleCollapse = () => {
 
 render() {
   return (
+    <div className="container-fluid bg-image">
 
     <Router>
-      <MDBNavbar color="default-color" className="col-xs-12 col-sm-12" dark expand="md">
+
+      <MDBNavbar color="default-color" className="nav-bar" id="parallelogram" dark expand="md" >
         <MDBNavbarBrand>
         <img src={logo} alt="store"  height="40"/>
 
@@ -31,7 +33,7 @@ render() {
               <MDBNavLink to="/Retailer">OKKJI FOR RETAILER</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="/okkjiifast">OKKJI FAST</MDBNavLink>
+              <MDBNavLink to="/OkjiiFast">OKKJI FAST</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink to="/faq">FAQ</MDBNavLink>
@@ -44,7 +46,9 @@ render() {
           </MDBNavbarNav>
            </MDBCollapse>
       </MDBNavbar>
+      
     </Router>
+    </div>
     );
   }
 }

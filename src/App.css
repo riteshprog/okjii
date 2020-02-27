@@ -10,37 +10,11 @@
 body{
   background-color: white;
   position: relative;
-  font-family: Muli,BlinkMacSystemFont,-apple-system,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family: "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif, Muli,BlinkMacSystemFont,-apple-system;
   font-size: 14px;
 color :#5e5e5e;
 }
 
-
-.img-icon{
-  width:100% !important;
-
-  display:flex;
-  flex-grow: inherit;
-  align-items: center;
-
-}
-nav.navbar-dark{
-  background-image: url(../src/img/back.png) !important;
-  background-repeat: no-repeat !important;
-  background-color: transparent !important;
-  
-  width:100% !important;
-}
-.navbar-brand{
-  padding-left: 0% !important;
-  
-  
-}
-
-.navbar {
-  font-weight: 300;
-   box-shadow: none !important;
-}
 
 /*.col-sm-7.figure-img1:before{
   content: "";
@@ -59,13 +33,35 @@ nav.navbar-dark{
 }
 */
 
-
-
-
-.col-sm-7.figure-img2.order-sm-2 {
-  padding-left: 123.5px;
-  padding-right: 0;
+.navbar{
+  font-weight: 300;
+  box-shadow: none !important;
 }
+
+
+.bg-image{
+    background-image: url(../src/img/back.png);
+  
+    min-height: 50px;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    position: relative;
+  
+}
+
+nav#parallelogram {
+  background-color: transparent !important;
+}
+
+
+.figure-img2 {
+  padding-right: 0 !important;
+  padding-left: 6.2% !important;
+}
+
 
 
 
@@ -105,13 +101,13 @@ nav.navbar-dark{
   flex-direction: row;
   justify-content: space-around;
   font-size: 1rem !important;
-  font-weight:400px !important;
+  font-weight:300px !important;
   flex-wrap: nowrap;
   word-break: normal;
   white-space: nowrap;
 }
 .navbar-nav > li a{
-  font-weight: 700 !important;
+  font-weight: 400 !important;
 }
 a{
   white-space: nowrap;
@@ -122,8 +118,8 @@ a{
 
 .okjii-explore h1{
 
-  font-size:2.5rem !important;
-  font-weight:700 !important;
+  font-size:3rem !important;
+  font-weight:300 !important;
   color:#5e5e5e !important;
   padding-top:3.5rem !important
 }
@@ -131,7 +127,7 @@ a{
 .okjii-explore h2{
   padding-bottom: 2rem !important;
   font-size: 2.5rem !important;
-  font-weight:400 !important;
+  font-weight:300 !important;
   color:#5e5e5e !important;
 }
 
@@ -143,7 +139,7 @@ a{
 
 .okjii-install h1{
   font-size:1.3rem !important;
-  font-weight:500 !important;
+  font-weight:300 !important;
   align-items: center !important;
 }
 
@@ -172,7 +168,7 @@ figure.okkjii-figure-google {
   background-color: #EDEDED !important;
   height:60px !important;
   border: none !important;
-    width: 95%;
+  width: 95%;
 }
 
 .okjii-tel button{
@@ -185,12 +181,11 @@ figure.okkjii-figure-google {
   z-index:5;
 }
 
-input[type="tel"]{
+.okjii-tel input[type="tel"]{
   font-size:20px !important;
   color:#000000;
   border-radius: 25px !important;
-  
-}
+ }
 
 input::placeholder{
   font-size:25px;
@@ -217,7 +212,7 @@ button.okjii-button {
 
 .okjii-best h1{
   font-size:2.5rem !important;
-  font-weight:400 !important;
+  font-weight:300 !important;
   padding-top: 4rem !important;
   padding-bottom: 2rem;
 }
@@ -234,14 +229,14 @@ section.okjii-daily {
 .okjii-daily h1{
   padding-top: 4.5rem !important;
   font-size:2.5rem !important;
-  font-weight:500;
+  font-weight:300;
   color:#2A2AFF !important;
 }
 
 .okjii-daily p{
   color: #5e5e5e !important;
   font-size:1.2rem !important;
-  font-weight: 400 !important
+  font-weight: 300 !important
 
 }
 
@@ -267,7 +262,7 @@ ul.list-unstyle {
 
 .okjii-homedelivery h1{
   font-size:2.5rem !important;
-  font-weight:500;
+  font-weight:300;
   color:#2A2AF0 !important;
 
 }
@@ -275,7 +270,7 @@ ul.list-unstyle {
 .okjii-homedelivery p{
   color: #5e5e5e !important;
 font-size:1.2rem !important;
-font-weight: 400 !important
+font-weight: 300 !important
 }
 
 
@@ -307,15 +302,13 @@ section.okjii-khatabook{
   font-size:2.5rem !important;
   Padding-top:2rem !important;
   padding-bottom: 1rem !important;
-  font-weight:500 !important;
-
-
+  font-weight:300 !important;
 }
 
 .okjii-khatabook1 p{
   color:#fff !important;
   font-size: 1.1rem !important;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
   
 }
 .no-break{
@@ -328,24 +321,24 @@ section.okjii-khatabook{
 .home-testimonial h1{
 color:#5e5e5e !important;
 font-size:2.5rem !important;
-font-weight:500 !important;
+font-weight:300 !important;
 }
 
 .home-testimonial h2{
   color:#5e5e5e !important;
   font-size:2rem !important;
-  font-weight:400 !important;
+  font-weight:300 !important;
 }
 
 
 .home-testimonial p{
  color:#5e5e5e !important;
  font-size:1.3rem !important;
- font-weight:400 !important;
+ font-weight:300 !important;
 }
 
 .home-testimonial.card {
-  font-weight: 400;
+  font-weight: 300;
   border: 0;
   box-shadow: none !important;
 }
@@ -358,7 +351,7 @@ font-weight:500 !important;
 .trusted-by h1{
   color:#5e5e5e !important;
   font-size:2rem !important;
-  font-weight:400 !important;
+  font-weight:300 !important;
 
 
 
@@ -388,7 +381,7 @@ footer.page-footer a {
   font-size: 1rem;
   
   font-size:1rem !important;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
 }
 
 
@@ -401,7 +394,7 @@ width:90% !important
 
 .mt-1{
   font-size: 1.01rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 footer.page-footer{
@@ -414,7 +407,7 @@ footer.page-footer{
 
 .footer-bdr-right h5, .bdr-font h5{
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 
@@ -444,7 +437,7 @@ footer.page-footer{
 
 p.cite-text{
   font-size:90% !important;
-  font-weight:400 !important;
+  font-weight:300 !important;
 }
 
 
@@ -464,9 +457,6 @@ p.cite-text{
   margin-left: 25% !important;
 }
 
-.okkjii-figure-apple img, .okkjii-figure-google img, .okjii-figure-imgkhata  img, .daily-figure-img img, .home-delivery-figure-img img, .turested-slide img{
-  width:100% !important;
-}
 
 
 .img-fluid.twentyfour {
@@ -735,16 +725,109 @@ ol.carousel-indicators li {
 
 
 
+/*   Okjii retalor CSS Start*/
+
+/* okjii-contact*/
+
+.okjii-contact{
+  background-color: #EDEDED !important;
+}
+
+.okjii-retaler h1{
+  font-size:2.5rem;
+  font-weight: 500;
+  color:#5E5E5E;
+  padding-bottom: 5rem;
+}
+
+.okjii-retaler h1 span.text-green{
+  color: #259D70;
+}
+
+.okjii-create-store{
+background-color:#F7F7F7 !important;
+background-image: url(../src/img/retailer/background.png);
+background-repeat: no-repeat !important;
+  background-color: transparent !important;
+}
+
+.okjii-contact button{
+  background-color: #259D70 !important;
+  border-radius: 4px;
+  border:none !important;
+  color:#fff !important;
+  width:40% !important;
+  transform: translate(255% 30%);
+}
+
+.okjii-create-store h1{
+  font-size:2.5rem !important;
+  color:#3365E2;
+  font-weight:300;
+}
+
+.okjii-create-store p{
+  font-size:1.2rem !important;
+  color:#5E5E5E;
+  font-weight:300;
+}
+
+.okjii-whyweshop{
+  background-color: #F7F7F7 !important;
+
+}
+.okjii-whyweshop section {
+  padding-top:3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.okjii-whyweshop section h1{
+  font-size:2.5rem !important;
+  font-weight: 400 !important;
+  padding-bottom: 1.5rem;
+  color:#5E5E5E;
+}
+
+.okjii-whyweshop section h4 {
+  color:#5E5E5E;
+  font-size:1.4rem;
+  font-weight: 400;
+  padding-bottom: 3rem;
+
+}
+.okjii-fast{
+
+  background-image: url(../src/img/back.png) !important;
+  background-repeat: no-repeat;
+  background-position: bottom top;
+  height:100%;
+
+
+
+}
+
+
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
-  nav.navbar-dark {
-    display: flex!important;
-    flex-basis: auto;
-    background-color: #269E72 !important;
-}
-.footer-bdr-right{
+  .footer-bdr-right{
   border-right: none !important;
 }
+
+.bg-image{
+  background-image: url(../src/img/back.png);
+
+  min-height: 50px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  position: relative;
+
+}
+
+
 
 .img-fluid.apple{
   width:70% !important;
@@ -786,14 +869,23 @@ ol.carousel-indicators li {
    transform:translateX(15px);
 }
 
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-  nav.navbar-dark {
-    display: flex!important;
-    flex-basis: auto;
-    background-color: #269E72 !important;
+  
+  .bg-image{
+    background-image: url(../src/img/back.png);
+  
+    min-height: 50px;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    position: relative;
+  
 }
 
 .img-fluid.twentyfour {
@@ -818,13 +910,22 @@ ol.carousel-indicators li {
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px ) {
+@media only screen and (max-width: 992px ) and (min-width:1199px)  {
 
-  nav.navbar-dark {
-    display: flex!important;
-    flex-basis: auto;
-    background-color:  #269E72 !important;
+  .bg-image{
+    background-image: url(../src/img/back.png);
+  
+    min-height: 50px;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    position: relative;
+  
 }
+  
+
 .img-fluid.twentyfour {
   width:100%;
   height: 50px;
@@ -846,12 +947,22 @@ ol.carousel-indicators li {
  
 } 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (width: 1200px) {
-  nav.navbar-dark {
-    display: flex!important;
-    flex-basis: auto;
-    background-color: transparent !important;
+@media only screen and (min-width: 1200px) {
+
+  .bg-image{
+    background-image: url(../src/img/back.png);
+  
+    min-height: 50px;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    position: relative;
+  
 }
+
+
 .img-fluid.twentyfour {
   width:100%;
   height: 50px;

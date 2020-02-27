@@ -8,7 +8,7 @@ export default class Testimonial extends Component {
       <section className="home-testimonial">
         <div className="container">
           <div className="row">
-            <div class="col-sm-6 col-12">
+            <div className="col-sm-6 col-12">
               <h1>Testimonial</h1>
               <h2>What customer say</h2>
               <p>Endorsement to our services that inspire enthusiasm and zeal.</p>

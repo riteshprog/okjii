@@ -14,12 +14,12 @@ export default class mainbody extends Component {
     return (
       <div className="container-fluid">
         <div className="row">
-        <div className="col-sm-7 figure-img2 order-sm-2 ">
+        <div className="col-sm-8 figure-img2 order-sm-2 ">
             
-        <img src={Asset6} width="100%" className="img-fluid"  alt="" />
+        <img src={Asset6} className="img-fluid"  alt="" />
           </div>
 
-          <div className="col-sm-5 order-sm-1  mt-5 w-100 okjii-explore">
+          <div className="col-sm-4 order-sm-1  mt-5 w-100 okjii-explore">
             <h1>Best Way to Explore</h1>
             <h2>all nearby mom-dad retail shops.</h2>
             <p>A revolution in grocery shopping where a customer can buy from their old reliable “Kirana” store without physically going there. A digital hub of all local, neighbourhood retail shop with era driven look and mechanism.
