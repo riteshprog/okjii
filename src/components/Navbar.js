@@ -18,7 +18,7 @@ render() {
 
     <Router>
 
-      <MDBNavbar color="default-color" className="nav-bar" id="parallelogram" dark expand="md" >
+      <MDBNavbar color="default-color" className="nav-bar" id="parallelogram" dark expand="lg" >
         <MDBNavbarBrand>
         <img src={logo} alt="store"  height="40"/>
 

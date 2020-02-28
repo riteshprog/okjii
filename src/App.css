@@ -12,7 +12,7 @@ body{
   position: relative;
   font-family: "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif, Muli,BlinkMacSystemFont,-apple-system;
   font-size: 14px;
-color :#5e5e5e;
+  color :#5e5e5e;
 }
 
 
@@ -58,8 +58,9 @@ nav#parallelogram {
 
 
 .figure-img2 {
+  width:100% !important;
   padding-right: 0 !important;
-  padding-left: 6.2% !important;
+  padding-left: 11% !important;
 }
 
 
@@ -874,7 +875,11 @@ background-repeat: no-repeat !important;
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-  
+  .figure-img2 {
+    padding-right: 0 !important;
+    padding-left: 6% !important;
+  }
+    
   .bg-image{
     background-image: url(../src/img/back.png);
   
@@ -924,7 +929,8 @@ background-repeat: no-repeat !important;
     position: relative;
   
 }
-  
+
+
 
 .img-fluid.twentyfour {
   width:100%;
@@ -962,6 +968,10 @@ background-repeat: no-repeat !important;
   
 }
 
+.figure-img2 {
+  padding-right: 0 !important;
+  padding-left: 14.6% !important;
+}
 
 .img-fluid.twentyfour {
   width:100%;
