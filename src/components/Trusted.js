@@ -18,7 +18,7 @@ const Trusted = () => {
   return (
     
     <MDBContainer>
-      <MDBCarousel activeItem={1} length={4} slide={true} showControls={true} className="trusted-by" showIndicators={true} multiItem>
+      <MDBCarousel activeItem={1} length={4} slide={true} showControls={false} className="trusted-by" showIndicators={true} multiItem>
         <h1 className="trusted-h1 text-center py-5">Trusted by Shop</h1>
         <MDBCarouselInner>
           <MDBRow>

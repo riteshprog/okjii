@@ -12,7 +12,7 @@ import Trusted from './Trusted'
 export default class mainbody extends Component {
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container-fluid okjii-mainbody">
         <div className="row">
         <div className="col-sm-7 figure-img2 order-sm-2 col-md-9">
             
