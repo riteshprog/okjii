@@ -739,6 +739,48 @@ background-repeat: no-repeat !important;
   left: 70px;
 }
 
+
+.okjii-fastfast{
+  position: relative;
+  text-align: left;
+  color: #5E5E5E;
+}
+
+.okjii-fast-left {
+  position: absolute;
+  top: 65px;
+  left: 7%;
+}
+
+
+
+ol.list-unstyled.okjii-fast-left {
+  line-height: 5;
+  text-align: right;
+  font-size:1.3rem;
+  padding-top: 25px;
+  font-weight: 400;
+}
+
+.okjii-fast-right{
+  position: absolute;
+  top: 65px;
+  left: 75%;
+}
+ol.list-unstyled.okjii-fast-right {
+  line-height: 5;
+  text-align: left;
+  font-size:1.3rem;
+  padding-top: 25px;
+  font-weight: 400;
+}
+
+li p + p{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
 .okjii-fastcon h1{
   font-size:3rem;
 }
