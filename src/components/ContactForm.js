@@ -21,7 +21,7 @@ const ContactForm = () => {
                 <input
                   type="text"
                   name="city"
-                  id="defaultFormCardEmailEx"
+                  id="defaultFormCardCity"
                   className="form-control"
                   placeholder="City"
                 />
@@ -30,7 +30,7 @@ const ContactForm = () => {
                 <input
                   type="tel"
                   name="tel"
-                  id="defaultFormCardEmailEx"
+                  id="defaultFormCardNumber"
                   className="form-control"
                   placeholder="Number"
                 />
