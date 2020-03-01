@@ -12,11 +12,11 @@ import Trusted from './Trusted'
 export default class mainbody extends Component {
   render() {
     return (
-      <div className="container-fluid okjii-mainbody">
-        <div className="row">
+      <section className="container-fluid okjii-mainbody">
+        <div className="row ">
         <div className="col-sm-7 figure-img2 order-sm-2 col-md-9">
-            
         <img src={Asset6} className="img-fluid"  alt="" />
+            
           </div>
 
           <div className="col-sm-5 order-sm-1  mt-5 col-md-3 okjii-explore">
@@ -24,20 +24,20 @@ export default class mainbody extends Component {
             <h2>all nearby mom-dad retail shops.</h2>
             <p>A revolution in grocery shopping where a customer can buy from their old reliable “Kirana” store without physically going there. A digital hub of all local, neighbourhood retail shop with era driven look and mechanism.
 </p>
-<div className="row  mt-4">
-  <div class="col-lg-5 order-sm-2 text-center okjii-install">
+<div className="row text-center mt-4">
+  <div class="col-sm-12   okjii-install">
     <h1 class="text-center">INSTALL NOW</h1>
     <p class="text-center"><img src={Asset7} alt="" /></p>
 
   </div>
   </div>
 <div className="row mt-3">
-  <div class="col-lg-6 col-md-6 col-12 ">
+  <div class="col-lg-6 col-md-12 col-sm-12  col-12 ">
   <figure class="okkjii-figure-apple">
               <img src={apple} className="img-fluid apple" alt=""/>
       </figure>
   </div>
-  <div class="col-lg-6 col-md-6 col-12">
+  <div class="col-lg-6 col-md-12 col-sm-12">
   <figure class="okkjii-figure-google">
               <img className="img-fluid google" src={google} alt=""/>
   </figure>
@@ -68,7 +68,7 @@ export default class mainbody extends Component {
         <KhataBook />
         <Testimonial />
         <Trusted />
-              </div>
+              </section>
     )
   }
 }

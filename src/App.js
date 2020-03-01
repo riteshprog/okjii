@@ -6,13 +6,14 @@ import Footer from './components/Footer';
 import MainBody from './components/mainbody';
 import OkjiiRetailer from './components/OkjiiRetailer';
 import OkjiiFast from './components/OkjiiFast';
+import Fastaq from './components/Fastaq';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 
 function App() {
   return (
     <Router>
-    <div className="container-fluid">
+    <div className="App">
      <Navbar />
      <Switch>
      <Route exact path='/'>
@@ -23,6 +24,10 @@ function App() {
      </Route>
      <Route path='/OkjiiFast' >
               <OkjiiFast />
+     </Route>
+      
+     <Route path='/Fastaq' >
+              <Fastaq />
      </Route>
 
      </Switch>

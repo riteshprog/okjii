@@ -3,7 +3,7 @@ import TestimonialSlider from './TestimonialSlider'
 export default class Testimonial extends Component {
   render() {
     return (
-      <section className="home-testimonial">
+      <section className="home-testimonial mb-5">
         <div className="container">
           <div className="row">
             <div className="col-sm-6 col-12">

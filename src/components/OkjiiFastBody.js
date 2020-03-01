@@ -10,16 +10,14 @@ import Trusted from './Trusted';
 export default class OkjiiFastBody extends Component {
   render() {
     return (
-      <div className="container-fluid">
       <div className="okjii-fast">
         <figure>
-        <img src={img4} className="img-fluid okjii-fast-img" alt="" />
+        <img src={img4} className="img-fluid " alt="" />
         </figure>
           <section class="okjii-fastcon">
         <h1><b>OKKJI Fast</b></h1>
         <h2>An exclusive OkkJi service</h2>
         </section>
-               </div>
         <section class="okjii-fasthow">
           <h1>How we work</h1>
           <div>
@@ -51,21 +49,14 @@ export default class OkjiiFastBody extends Component {
           <figure>
             <img src={img1} className="img-fluid okjii-fast-img" alt="" />
           </figure>
-          <ol className="list-unstyled okjii-fast-left">
-            <li><p>Rapid delivery at door step</p></li>
-            <li><p>Get all neighbourhood shop</p></li>
-            <li><p>Additional hand for shops</p>
-            <p> to deliver on time</p></li>
-            <li><p>Relationship-oriented</p>
-            <p>shopping in fast track mode</p></li>
-          </ol>
-          <ol className="list-unstyled okjii-fast-right">
-            <li><p>Three easy steps to shop</p></li>
-            <li><p>An expressway between shop and customer</p></li>
-            <li><p>Order anytime, anywhere from nearby store</p></li>
-            <li><p>Boon for shops that cannot effort home delivery</p></li>
-
-          </ol>
+          <div className="okjii-fast-left1">Rapid delivery at door step</div>
+          <div className="okjii-fast-left2">Get all neighbourhood shop</div>
+          <div className="okjii-fast-left3">Additional hand for shops to deliver on time</div>
+          <div className="okjii-fast-left4">Relationship-oriented shopping in fast track mode</div>
+          <div className="okjii-fast-right1">Three easy steps to shop</div>
+          <div className="okjii-fast-right2">An expressway between shop and customer</div>
+          <div className="okjii-fast-right3">Order anytime, anywhere from nearby store</div>
+          <div className="okjii-fast-right4">Boon for shops that cannot effort home delivery</div>
 
         </section>
         <Testimonial />

@@ -14,7 +14,7 @@ toggleCollapse = () => {
 
 render() {
   return (
-    <div className="container-fluid bg-image">
+    <div className=" bg-image">
 
     <Router>
 
@@ -36,7 +36,7 @@ render() {
               <MDBNavLink to="/OkjiiFast">OKKJI FAST</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="/faq">FAQ</MDBNavLink>
+              <MDBNavLink to="/Fastaq">FAQ</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink to="/offer">OFFER<sup>New</sup></MDBNavLink>
