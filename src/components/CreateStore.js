@@ -7,13 +7,13 @@ export default class HomeDelivery extends Component {
     return (
       <div className="container-fluid my-2 bg-purple">
         <section className="okjii-create-store container">
-        <div class="row">
-        <div className="col-lg-5 col-md-4 col-12">
-            <figure class="home-delivery-figure-img my-5">
+        <div className="row">
+        <div className="col-md-12">
+            <figure className="home-delivery-figure-img my-5">
               <img src={img2} alt="Create Your Shop" className="img-fluid img2" />
             </figure>
           </div>
-          <div className="col-lg-7 col-md-4 col-12">
+          <div className="col-md-12">
             <h1 className="my-5"><b>Create</b> Your Shop
 </h1>
             <p>Digital presence is the inevitability of today’s word whether it is business or individuality. Association with OkkJi not only associates you with the huge network of customers and shops but provides digital appearance also.</p>

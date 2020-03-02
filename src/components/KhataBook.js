@@ -5,7 +5,7 @@ import {MDBIcon} from "mdbreact";
 export default class KhataBook extends Component {
   render() {
     return (
-      <div class="container-fluid  okjii-khatabook1">
+      <div className="container-fluid  okjii-khatabook1">
         <section className="container">
           <div className="row">
             <div className="col-lg-4 col-12">
@@ -18,14 +18,14 @@ export default class KhataBook extends Component {
                 <li><p> <MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Digital creation of purchase list</p></li>
                 <li><p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Easy, transparent &amp; handy billing</p></li>
                 <li><p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Smooth purchase documentation</p></li>
-                <li><p class="no-break"><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Daily/weekly/monthly/ purchase history</p></li>
+                <li><p className="no-break"><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Daily/weekly/monthly/ purchase history</p></li>
               </ul>
     
 
 
             </div>
             <div className="col-lg-4 col-12">
-            <figure class="okjii-figure-imgkhata">
+            <figure className="okjii-figure-imgkhata">
               <img src={Asset3} className="img-fluid py-5" alt=""/>
             </figure>
            
@@ -39,7 +39,7 @@ export default class KhataBook extends Component {
                 <li><p> <MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Monthly purchase settlement</p></li>
                 <li><p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Weekly purchase settlement</p></li>
                 <li><p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Fortnight purchase settlement</p></li>
-                <li><p class="no-break"><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Personal &amp; punctuation based credit</p></li>
+                <li><p className="no-break"><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Personal &amp; punctuation based credit</p></li>
               </ul>
 
 

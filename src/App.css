@@ -5,7 +5,11 @@
   
 }
 
-
+p{
+  font-size:1.5rem;
+  color:#5E5E5E;
+  font-weight:400;
+}
 
 body{
   background-color: white;
@@ -14,7 +18,6 @@ body{
   font-size: 14px;
   color :#5e5e5e;
 }
-
 
 
 /*.col-sm-7.figure-img1:before{
@@ -62,8 +65,8 @@ nav#parallelogram {
 
 .figure-img2 {
   width:100% !important;
-  padding-right: 0 !important;
-  padding-left: 11% !important;
+  padding-right: 0 ;
+  padding-left: 11% ;
 }
 
 
@@ -87,13 +90,17 @@ nav#parallelogram {
   white-space: nowrap;
 }
 .navbar-nav > li a{
-  font-weight: 400 !important;
+  font-weight: 600 !important;
 }
+
 a{
   white-space: nowrap;
 }
 
 
+.image-position{
+  display:flex;
+}
 
 .okjii-explore h1{
 
@@ -178,7 +185,7 @@ button.okjii-button {
   padding-bottom: 23px !important;
   height: 42px;
   color: #fff;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 600 !important;
   margin-bottom: 13px !important;
 }
@@ -211,8 +218,7 @@ section.okjii-daily {
 
 .okjii-daily p{
   color: #5e5e5e !important;
-  font-size:1.2rem !important;
-  font-weight: 300 !important
+  font-weight: 400 !important
 
 }
 
@@ -224,7 +230,7 @@ ul.list-unstyle {
 }
 
 .list-unstyle p{
-  font-size:1rem !important;
+  font-size:1.3rem !important;
 }
 
 .fa-2x {
@@ -250,10 +256,7 @@ font-weight: 300 !important
 }
 
 
-.list-unstyle p{
-  font-size:1rem !important;
-  margin-bottom: 0 !important;
-}
+
 
 
 /* Khata Book */
@@ -360,11 +363,6 @@ position: absolute;
 }
 
 
-.home-testimonial p{
- color:#5e5e5e !important;
- font-size:1.3rem !important;
- font-weight:300 !important;
-}
 
 .home-testimonial.card {
   font-weight: 300;
@@ -373,7 +371,7 @@ position: absolute;
 }
 
 .home-testimonial blockquote p{
-  font-size:1rem !important;
+  font-size:1.2rem !important;
 }
 
 
@@ -427,10 +425,6 @@ width:90% !important
 
 
 
-.mt-1{
-  font-size: 1.01rem;
-  font-weight: 300;
-}
 
 footer.page-footer{
   
@@ -667,11 +661,6 @@ background-repeat: no-repeat !important;
   font-weight:300;
 }
 
-.okjii-create-store p{
-  font-size:1.2rem !important;
-  color:#5E5E5E;
-  font-weight:300;
-}
 
 .okjii-whyweshop{
   background-color: #F7F7F7 !important;
@@ -793,7 +782,7 @@ background-repeat: no-repeat !important;
   text-align:left;
   left: 74%;
   font-size: 1.7rem;
-}
+ }
 
 .okjii-fast-right2 {
   position: absolute;
@@ -887,7 +876,7 @@ background-repeat: no-repeat !important;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen  and (max-width: 480px) {
+@media only screen  and (max-width: 600px) {
   .footer-bdr-right{
   border-right: none !important;
 }
@@ -908,7 +897,7 @@ background-repeat: no-repeat !important;
 .figure-img2 {
   width:100% !important;
   padding-right: 0 !important;
-  padding-left: 6.1% !important;
+  padding-left: 13.1% !important;
 }
 
 .carousel-control-next{
@@ -954,7 +943,7 @@ background-repeat: no-repeat !important;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 601px) {
   .figure-img2 {
     padding-right: 0 !important;
     padding-left: 0 !important;
@@ -990,6 +979,97 @@ background-repeat: no-repeat !important;
 .turested-slide img.twentyfour, .turested-slide img.vmart{
   height:50px !important
 }
+
+.okjii-fast-left1 {
+  position: absolute;
+  width:25%;
+  top: 28%;
+  width:25%;
+  border:1px solid red;
+  text-align:left;
+  left: 2%;
+  font-size: .9rem;
+  
+}
+.okjii-fast-left2{
+  position: absolute;
+  width:25%;
+  top: 42%;
+  width:25%;
+  border:1px solid red;
+  text-align:left;
+  left: 2%;
+  font-size: .9rem;
+  
+}
+.okjii-fast-left3{
+  position: absolute;
+  width:25%;
+  top: 57%;
+  width:25%;
+  border:1px solid red;
+  text-align:left;
+  left: 2%;
+  font-size: .9rem;
+  
+}
+
+.okjii-fast-left4{
+  position: absolute;
+  top: 71%;
+  width:25%;
+  border:1px solid red;
+  text-align:left;
+  left: 2%;
+  font-size: .9rem;
+  
+}
+
+
+.okjii-fast-right1 {
+  position: absolute;
+  width:25%;
+  top: 28%;
+  width:25%;
+  border:1px solid red;
+  text-align:left;
+  left: 74%;
+  font-size: .9rem;
+ }
+
+.okjii-fast-right2 {
+  position: absolute;
+  width:25%;
+  top: 42%;
+  width:25%;
+  border:1px solid red;
+  text-align:left;
+  left: 74%;
+  font-size: .9rem;
+}
+
+.okjii-fast-right3 {
+  position: absolute;
+  width:25%;
+  top: 57%;
+  width:25%;
+  border:1px solid red;
+  text-align:left;
+  left: 74%;
+  font-size: .9rem;
+}
+
+.okjii-fast-right4 {
+  position: absolute;
+  width:25%;
+  top: 71%;
+  width:25%;
+  border:1px solid red;
+  text-align:left;
+  left: 74%;
+  font-size: .9rem;
+}
+
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -1010,7 +1090,7 @@ background-repeat: no-repeat !important;
 
 .figure-img2 {
   padding-right: 0 !important;
-  padding-left: 6.1% !important;
+  padding-left: 3% !important;
 }
 
 .carousel-control-next, .carousel-control-prev{
@@ -1026,6 +1106,8 @@ background-repeat: no-repeat !important;
 .turested-slide img.twentyfour, .turested-slide img.vmart{
   height:50px !important
 }
+
+
 
 } 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -1049,7 +1131,7 @@ background-repeat: no-repeat !important;
 
 .figure-img2 {
   padding-right: 0 !important;
-  padding-left: 6% !important;
+  padding-left: 6.1% !important;
 }
 
 

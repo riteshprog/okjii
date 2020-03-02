@@ -6,7 +6,7 @@ const ContactForm = () => {
     <MDBContainer>
 
       <MDBRow>
-        <MDBCol md="10">
+        <MDBCol md="12">
           <MDBCard className="okjii-contact">
             <MDBCardBody>
               <form>
@@ -28,7 +28,7 @@ const ContactForm = () => {
                 
                 <br />
                 <input
-                  type="tel"
+                  type="number"
                   name="tel"
                   id="defaultFormCardNumber"
                   className="form-control"

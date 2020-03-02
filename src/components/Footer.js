@@ -118,9 +118,9 @@ const FooterPage = () => {
       </MDBContainer>
       <div className="footer-copyright mt-3 ml-5  py-3">
         <MDBContainer fluid >
-        <p class="cite-text">For best of prices, deals and oﬀers; order online in cities<br /> The delivery service is operational in 13 cities: Ahmedabad, Bengaluru, Chennai, Delhi, Gurugram, Hyderabad, Jaipur, Kanpur, Kolkata, Lucknow, Noida, Mumbai, and Pune.<br /> 
+        <p className="cite-text">For best of prices, deals and oﬀers; order online in cities<br /> The delivery service is operational in 13 cities: Ahmedabad, Bengaluru, Chennai, Delhi, Gurugram, Hyderabad, Jaipur, Kanpur, Kolkata, Lucknow, Noida, Mumbai, and Pune.<br /> 
         </p>
-        <p class="mt-1"><b>Payment Options</b></p>
+        <p className="mt-1"><b>Payment Options</b></p>
 
         <div className="d-flex align-content-stretch flex-wrap example-parent">
     <div className="p-2 col-example"><a href="/"><img src={visa} alt="store"  className="img-icon img-fluid" /> </a></div>
