@@ -925,6 +925,184 @@ background-repeat: no-repeat !important;
 }
 
 
+/*  offfer page Css*/
+.input-group-text{
+  border:none !important;
+  font-weight: 700 !important;
+}
+
+.input-group-text::placeholder{
+  font-size:0.5rem;
+}
+.input-group-lg>.form-control:not(textarea) {
+  height: calc(1.5em + 3rem + 2px) !important;
+  background-color: #e9ecef;
+}
+.input-group>.custom-select:not(:first-child), .input-group>.form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-control{
+  border:none !important
+}
+
+.btn-success.btn-subscribe{
+  background-color: #259D70 !important;
+  font-size:1.3rem;
+  font-weight: 400;
+  padding: .54rem 1.14rem;
+}
+
+/* Offer card ***/
+.okjii-offer h1{
+  font-size:2.5rem !important;
+  font-weight: 500 !important;
+
+}
+h1 span{
+  color:#259D70 !important;
+  font-size: 3rem !important;
+  
+}
+
+.okjii-offer h2{
+  font-size:2rem !important;
+  font-weight: 500 !important;
+}
+
+.offer-h1{
+  font-size:2.5rem !important;
+  font-weight: 500 !important;
+}
+
+.offer-h1 span{
+  color:#259D70 !important;
+  font-size: 2.5rem !important;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 1px solid silver;
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+
+
+.wrap    { 
+  flex-wrap: wrap;
+}  
+
+
+.img-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0;
+}
+
+.img-flex img{
+  height: 40px;
+}
+
+.flex-item {
+  padding: 5px;
+  margin: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+.card-content{
+  border:1px solid black !important;
+  padding:25px !important;
+  width:360px !important;
+  width: 360px;
+  height: auto;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+
+.card-content h3{
+  font-size:1.6rem !important;
+  padding:30px !important;
+  font-weight: 500 !important;
+  padding-top:35px !important;
+}
+
+.card-content h3.paytm{
+  color:#06306F !important;
+  padding-bottom:60px !important;
+}
+.card-content h3 span.text-paytm{
+  color:#02B9EF !important;
+}
+
+.card-content h3.easyday{
+  color:#8BC640 !important;
+  padding-bottom:60px !important;
+}
+.card-content h3 span.text-easyday{
+  color:#FDBE3E !important;
+}
+
+.card-content h3 span.text-easyday-price{
+  color:#259A70 !important;
+}
+
+
+.card-content h3.visa{
+  color:#0E1A63 !important;
+}
+.card-content h3 span.text-visa{
+  color:#002898 !important;
+}
+
+.card-content h3 span.text-visa-price{
+  color:#1648B7 !important;
+}
+.btn-paytm{
+  background-color:#C9F0FB !important;
+  color:#06306F !important;
+  font-size:1.5rem !important;
+  font-weight: 700 !important;
+  border-radius: 15px !important;
+  align-items: flex-end !important;
+}
+
+.btn-easyday{
+  background-color:#FEF0D3 !important;
+  color:#FDB930 !important;
+  font-size:1.5rem !important;
+  font-weight: 700 !important;
+  border-radius: 15px !important;
+  align-items: flex-end !important;
+} 
+.btn-visa{
+  background-color:#CCCEDE !important;
+  color:#06306F !important;
+  font-size:1.5rem !important;
+  font-weight: 700 !important;
+  border-radius: 15px !important;
+  align-items: flex-end !important;
+}
+.flex-item h1{
+  padding-top:2.5rem !important;
+  font-size:2.5rem !important;
+  font-weight: 400 !important;
+  color:#5E5E5E !important;
+}
+
+.flex-item a{
+  color: #76A0D0 !important;
+  font-size:1.3rem !important;
+
+}
+
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen  and (max-width: 600px) {
   .footer-bdr-right{

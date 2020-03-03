@@ -14,7 +14,7 @@ import twentyfour from '../img/home/24.png';
 const Trusted = () => {
   return (
     
-    <MDBContainer>
+    <MDBContainer className="container-fluid">
       <MDBCarousel activeItem={1} length={4} slide={true} showControls={false} className="trusted-by mt-5" showIndicators={true} multiItem>
         <h1 className="trusted-h1 text-center py-5">Trusted by Shop</h1>
         <MDBCarouselInner>
