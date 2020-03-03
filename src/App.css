@@ -875,6 +875,56 @@ background-repeat: no-repeat !important;
   margin-bottom: 0 !important;
 }
 
+.accordion .accordion-item.active .title:before {
+  content: url(../src/img/faq/faqimg08.png) !important;
+  width: 6% !important;
+  height: 6% !important;
+  margin-right: 10px;
+}
+
+.accordion .accordion-item .title:before {
+  content: url(../src/img/faq/faqimg06.png) !important;
+  width: 6% !important;
+  height: 6% !important;
+  margin-right: 10px;
+}
+
+.accordion {
+   border: none !important; 
+}
+.accordion .accordion-item .panel {
+  border-left:1px solid #5E5E5E !important;
+  border-right:1px solid #5E5E5E !important;
+  border-bottom:1px solid #5E5E5E !important;
+  border-radius: 0px 0 5px 5px;
+  }
+
+.accordion .accordion-item .panel p{
+  font-size:1.2rem !important;
+
+}
+.accordion .accordion-item.active .title {
+   background-color: #fff;
+}
+
+.accordion-item{
+  padding-bottom: 5% !important;
+}
+.accordion .accordion-item .title {
+  background-color: #fff !important;
+  border: 1px solid #5E5E5E !important;
+  color: #444;
+  font-size: 1.5rem !important;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen  and (max-width: 600px) {
   .footer-bdr-right{
@@ -939,6 +989,93 @@ background-repeat: no-repeat !important;
 .turested-slide img.twentyfour, .turested-slide img.vmart{
   height:50px !important
 }
+
+.okjii-fast-left1 {
+  position: absolute;
+  top: 39%;
+  width:25%;
+  border:1px solid red;
+  text-align:left;
+  left: 2%;
+  font-size: .5rem;
+  
+}
+.okjii-fast-left2{
+  position: absolute;
+  top: 51%;
+  width:25%;
+  border:1px solid red;
+  text-align:left;
+  left: 2%;
+  font-size: .5rem;
+  
+}
+.okjii-fast-left3{
+  position: absolute;
+  top: 63.5%;
+  width:25%;
+  border:1px solid red;
+  text-align:left;
+  left: 2%;
+  font-size: .5rem;
+  
+}
+
+.okjii-fast-left4{
+  position: absolute;
+  top: 76%;
+  width:25%;
+  border:1px solid red;
+  text-align:left;
+  left: 2%;
+  font-size: .5rem;
+  
+}
+
+
+.okjii-fast-right1 {
+  position: absolute;
+  width:25%;
+  top: 39%;
+  border:1px solid red;
+  text-align:left;
+  left: 74%;
+  font-size: .5rem;
+ }
+
+.okjii-fast-right2 {
+  position: absolute;
+  width:25%;
+  top: 52%;
+  width:25%;
+  border:1px solid red;
+  text-align:left;
+  left: 74%;
+  font-size: .5rem;
+}
+
+.okjii-fast-right3 {
+  position: absolute;
+  width:25%;
+  top: 64%;
+  width:25%;
+  border:1px solid red;
+  text-align:left;
+  left: 74%;
+  font-size: .5rem;
+}
+
+.okjii-fast-right4 {
+  position: absolute;
+  width:25%;
+  top: 75%;
+  width:25%;
+  border:1px solid red;
+  text-align:left;
+  left: 74%;
+  font-size: .5rem;
+}
+
 
 }
 

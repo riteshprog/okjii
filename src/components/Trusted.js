@@ -20,39 +20,39 @@ const Trusted = () => {
         <MDBCarouselInner>
           <MDBRow>
             <MDBCarouselItem className="turested-slide" itemId="1">
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid twentyfour" height="40" src={twentyfour} alt="" />
                  
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid easyday" src={easyday} />
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid vishal" src={vishal} />
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid vmart" src={vmart} />
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid twentyfour" src={twentyfour} alt="" />
                  
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid easyday" src={easyday} />
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid vishal" src={vishal} />
                 </MDBCard>
@@ -64,41 +64,41 @@ const Trusted = () => {
 
 
             <MDBCarouselItem className="turested-slide" itemId="2">
-            <MDBCol md="3" lg="1" size="12">
+            <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid vmart" src={vmart} />
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid twentyfour" src={twentyfour} alt="" />
                  
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid easyday" src={easyday} />
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid vishal" src={vishal} />
                 </MDBCard>
               </MDBCol>
              
              
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid vmart" src={vmart} alt="" />
                  
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid twentyfour" src={twentyfour} />
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid easyday" src={easyday} />
                 </MDBCard>
@@ -109,39 +109,39 @@ const Trusted = () => {
 
 
             <MDBCarouselItem className="turested-slide" itemId="3">
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid vishal" src={vishal} alt="" />
                  
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid vmart" src={vmart} />
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid twentyfour" src={twentyfour} />
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid easyday" src={easyday} />
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid vishal" src={vishal} alt="" />
                  
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid vmart" src={vmart} />
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid twentyfour" src={twentyfour} />
                 </MDBCard>
@@ -149,39 +149,39 @@ const Trusted = () => {
 
             </MDBCarouselItem>
             <MDBCarouselItem className="turested-slide" itemId="4">
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid easyday" src={easyday} alt="" />
                  
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid vishal" src={vishal} />
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid vmart" src={vmart} />
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid twentyfour" src={twentyfour} />
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid easyday" src={easyday} alt="" />
                  
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid vishal" src={vishal} />
                 </MDBCard>
               </MDBCol>
-              <MDBCol md="3" lg="1" size="12">
+              <MDBCol md="3" sm="2" lg="1" size="12">
                 <MDBCard className="mb-2">
                   <MDBCardImage className="img-fluid vmart" src={vmart} />
                 </MDBCard>

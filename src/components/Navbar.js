@@ -1,36 +1,24 @@
 import React, { Component } from "react";
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse } from "mdbreact";
-import { BrowserRouter as Router } from 'react-router-dom';
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink,  MDBCollapse } from "mdbreact";
 import logo from '../logo.png'
 
 class NavbarPage extends Component {
-state = {
-  isOpen: false
-};
-
-toggleCollapse = () => {
-  this.setState({ isOpen: !this.state.isOpen });
-}
 
 render() {
   return (
     <div className=" bg-image">
-
-    <Router>
-
       <MDBNavbar color="default-color" className="nav-bar" id="parallelogram" dark expand="lg" >
         <MDBNavbarBrand>
         <img src={logo} alt="store"  height="40"/>
 
         </MDBNavbarBrand>
-        <MDBNavbarToggler onClick={this.toggleCollapse} />
-        <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
+        <MDBCollapse id="navbarCollapse3" navbar>
           <MDBNavbarNav right>
             <MDBNavItem active>
-              <MDBNavLink to="/">Home</MDBNavLink>
+              <MDBNavLink  to="/">Home</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="/Retailer">OKKJI FOR RETAILER</MDBNavLink>
+              <MDBNavLink to="/OkjiiRetailer">OKKJI FOR RETAILER</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink to="/OkjiiFast">OKKJI FAST</MDBNavLink>
@@ -39,7 +27,7 @@ render() {
               <MDBNavLink to="/Fastaq">FAQ</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="/offer">OFFER<sup>New</sup></MDBNavLink>
+              <MDBNavLink to="/OkjiiOffer">OFFER<sup>New</sup></MDBNavLink>
             </MDBNavItem>
 
             
@@ -47,7 +35,6 @@ render() {
            </MDBCollapse>
       </MDBNavbar>
       
-    </Router>
     </div>
     );
   }
