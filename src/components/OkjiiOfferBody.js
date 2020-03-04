@@ -3,8 +3,8 @@ import Offer from '../img/offer/Offer.png';
 import InputPage from './InputPage';
 import OkjiiofferCard from './OkjiiofferCard';
 import Trusted from './Trusted';
-import Multiitemcarusal from './Multiitemcarusal';
-
+import AmazingOffer from './AmazingOffer';
+import HowtoApply from './HowtoApply';
 export default class OkjiiOfferBody extends Component {
   render() {
     return (
@@ -23,11 +23,10 @@ export default class OkjiiOfferBody extends Component {
 </div>
 </div>
 </section>
-<h1 className="text-center my-5 offer-h1"><span>OKK</span>JI BRINGS TO YOU, AMAZING OFFERS!
-</h1>
 <OkjiiofferCard />
+<AmazingOffer />
+<HowtoApply />
 <Trusted />
-<Multiitemcarusal />
       </div>
     )
   }

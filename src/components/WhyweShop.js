@@ -7,24 +7,24 @@ export default class WhyweShop extends Component {
   render() {
     return (
       <div className="container-fluid okjii-whyweshop">
-        <section className="container">
+        <section>
         <div className="row">
-  <div className="col-sm-12 col-md-6 col-lg-6 figure-img2 ">
+  <div className="col-sm-12 col-md-12 col-lg-6 figure-img2 ">
   <h1><b>Why are we</b> for shops</h1>
           <h4>What shop owners had to say about their OkkJi experience
 </h4>
 </div>
-<div className="col-sm-12 col-md-6 col-lg-6 figure-img2 "></div>
+<div className="col-sm-12 col-md-12 col-lg-6 figure-img2 "></div>
 </div>
 
 <div className="row">
-  <div className="col-sm-12 col-md-6 col-lg-6 figure-img2 ">
+  <div className="col-sm-12 col-md-12 col-lg-6 figure-img2 ">
     <figure className="figure-whayweshop">
       <img src={img1} alt="" className="img-fluid" />
     </figure>
   </div>
   
-  <div className="col-sm-12 col-md-6 col-lg-6 figure-img2">
+  <div className="col-sm-12 col-md-12 col-lg-6 figure-img2">
     <figure className="figure-whayweshop">
       <img src={img2} alt="" className="img-fluid" />
     </figure>

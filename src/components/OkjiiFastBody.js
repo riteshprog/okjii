@@ -10,33 +10,33 @@ import Trusted from './Trusted';
 export default class OkjiiFastBody extends Component {
   render() {
     return (
-      <div className="okjii-fast">
+      <div className="okjii-fast1">
         <figure>
         <img src={img4} className="img-fluid " alt="" />
         </figure>
-          <section class="okjii-fastcon">
+        <section class="okjii-fastcon">
         <h1><b>OKKJI Fast</b></h1>
         <h2>An exclusive OkkJi service</h2>
         </section>
         <section class="okjii-fasthow">
           <h1>How we work</h1>
           <div>
-            <div className="row">
+            <div className="row text-center">
               <div className="col-md-4">
           <figure>
-            <img src={img2a} className="img-fluid okjii-fast-img-how py-4" alt="" />
-            <figcaption class="text-center"><h4>Install App</h4></figcaption>
+            <img src={img2a} className="img-fluid okjii-fast-img-how" alt="" />
+            <figcaption><h4>Install App</h4></figcaption>
           </figure>
           </div>
           <div className="col-md-4">
           <figure>
-            <img src={img2b} className="img-fluid okjii-fast-img-how py-4" alt="" />
-            <figcaption class="text-center"><h4>Order Online</h4></figcaption>
+            <img src={img2b} className="img-fluid okjii-fast-img-how" alt="" />
+            <figcaption><h4>Order Online</h4></figcaption>
           </figure>
           </div>
           <div className="col-md-4">
           <figure>
-            <img src={img2c} className="img-fluid okjii-fast-img-how py-4" alt="" />
+            <img src={img2c} className="img-fluid okjii-fast-img-how" alt="" />
             <figcaption class="text-center"><h4>Fast Deliver</h4></figcaption>
           </figure>
           </div>
@@ -61,7 +61,7 @@ export default class OkjiiFastBody extends Component {
         </section>
         <Testimonial />
         <Trusted />
-       
+
       </div>
 
     )

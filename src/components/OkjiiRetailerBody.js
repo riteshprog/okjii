@@ -27,12 +27,12 @@ export default class OkjiiRetailerBody extends Component {
 
 
 <div className="row mt-3">
-  <div className="col-lg-6 col-md-6 ">
+  <div className="col-lg-6 col-md-6 col-sm-6 ">
   <figure className="okkjii-figure-apple">
               <img src={apple} className="img-fluid apple" alt=""/>
       </figure>
   </div>
-  <div className="col-lg-6 col-md-6">
+  <div className="col-lg-6 col-md-6 col-sm-6">
   <figure className="okkjii-figure-google">
               <img className="img-fluid google" src={google} alt=""/>
   </figure>

@@ -11,10 +11,12 @@ import visa from '../img/visa.png';
 
 const FooterPage = () => {
   return (
-    <MDBFooter color="green" className="font-small pt-5 mt-4">
-      <MDBContainer className=" container-fluid ml-5">
-        <MDBRow>
-          <MDBCol className="footer-bdr-right"  lg="3" md="4" sm="6" size="12">
+
+
+    <MDBFooter color="green" className="  container-fluid font-small pt-5 mt-4">
+      <MDBContainer fluid>
+        <MDBRow  className=" ml-5">
+          <MDBCol className="footer-bdr-right"  md="3" sm="12" size="12">
             <h5 className="title">MENU</h5>
             <ul className="list-unstyled">
               <li className="list-unstyled">
@@ -40,7 +42,7 @@ const FooterPage = () => {
 
             </ul>
           </MDBCol>
-          <MDBCol className="footer-bdr-right"  lg="3" md="4" sm="6" size="12">
+          <MDBCol className="footer-bdr-right"  md="3" sm="12" size="12">
             <h5 className="title">HELP</h5>
             <ul className="list-unstyled">
               <li className="list-unstyled">
@@ -67,7 +69,7 @@ const FooterPage = () => {
 
             </ul>
           </MDBCol>
-          <MDBCol className="footer-bdr-right"  lg="3" md="4" sm="6" size="12">
+          <MDBCol className="footer-bdr-right"  md="3" sm="12" size="12">
             <h5 className="title">CATEGORIES</h5>
             <ul className="list-unstyled">
               <li className="list-unstyled">
@@ -94,7 +96,7 @@ const FooterPage = () => {
 
             </ul>
           </MDBCol>
-          <MDBCol className="bdr-font" lg="3" md="4" sm="6" size="12">
+          <MDBCol className="bdr-font" md="3" sm="12"  size="12">
             <h5 className="title">FIND US ONLINE</h5>
             <ul className="list-unstyled">
               <li className="list-unstyled">
@@ -118,7 +120,7 @@ const FooterPage = () => {
       </MDBContainer>
       <div className="footer-copyright mt-3 ml-5  py-3">
         <MDBContainer fluid >
-        <p className="cite-text">For best of prices, deals and oﬀers; order online in cities<br /> The delivery service is operational in 13 cities: Ahmedabad, Bengaluru, Chennai, Delhi, Gurugram, Hyderabad, Jaipur, Kanpur, Kolkata, Lucknow, Noida, Mumbai, and Pune.<br /> 
+        <p className="cite-text">For best of prices, deals and oﬀers; order online in cities<br /> The delivery service is operational in 13 cities: Ahmedabad, Bengaluru, Chennai, Delhi, Gurugram, Hyderabad, Jaipur, Kanpur, Kolkata, Lucknow, Noida, Mumbai, and Pune. 
         </p>
         <p className="mt-1"><b>Payment Options</b></p>
 

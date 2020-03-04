@@ -5,10 +5,10 @@ import sellonline from '../img/retailer/sellonline.png';
 export default class SellOnline extends Component {
   render() {
     return (
-      <div className="container-fluid my-2 bg-purple">
-        <section className="okjii-create-store container">
+      <div className="container-fluid okjii-sell-online my-5 bg-purple">
+        <section className=" ">
         <div className="row">
-          <div className="col-sm-12 col-md-6 col-lg-6">
+          <div className="col-sm-12 col-md-12 col-lg-6">
             <h1 className="my-5"><b>Sell</b> Online
 </h1>
             <p>OkkJi app is the entrance of your shop for a customer. Every notiﬁcation is just like customer’s knock to order. Accept order digitally and give additional thrust to your business.</p>
@@ -24,7 +24,7 @@ export default class SellOnline extends Component {
 
  
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6">
+          <div className="col-sm-12 col-md-12 col-lg-6">
             <figure className="home-delivery-figure-img my-5">
               <img src={sellonline} alt="Create Your Shop" className="img-fluid sellonline" />
             </figure>

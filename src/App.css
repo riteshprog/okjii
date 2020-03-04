@@ -20,6 +20,7 @@ body{
 }
 
 
+
 /*.col-sm-7.figure-img1:before{
   content: "";
     display: block;
@@ -98,9 +99,6 @@ a{
 }
 
 
-.image-position{
-  display:flex;
-}
 
 .okjii-explore h1{
 
@@ -233,6 +231,8 @@ ul.list-unstyle {
   font-size:1.3rem !important;
 }
 
+
+
 .fa-2x {
   font-size: 1.5em !important;
 }
@@ -332,7 +332,7 @@ position: absolute;
   height: 12%;
   padding-top: 5px;
   border-radius: 40%;
-  transform: translatey(-25%);
+  transform: translatey(-100%);
   box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
   margin-top: 6.1% !important;
 }
@@ -343,14 +343,14 @@ position: absolute;
   position: absolute;
   background-color: #C6C6C6;
   width: 6%;
-  transform: translatex(-30%);
+  transform: translatey(-100%);
   height: 12%;
   left: 15% !important;
   padding-top: 5px;
   color: #000 !important;
   border-radius: 50%;
   box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
-  margin-top: 4.7% !important;
+  margin-top: 6.1% !important;
 }
 
 .home-testimonial{
@@ -551,7 +551,7 @@ section.daily-use{
 /* testimony */
 
 .home-testimonial{
-  padding-top: 7%;
+  padding: 10rem !important;
 }
 
 
@@ -560,7 +560,12 @@ section.daily-use{
 
 
 /* Trusted */
-
+.h1-trusted{
+  font-size:3rem !important;
+  padding-top:5rem !important;
+  font-weight: 500 !important;
+  color: #5E5E5E !important;
+}
 
 /* carousel-item */
 .carousel-item.active.carousel-slide-item.turested-slide {
@@ -575,9 +580,14 @@ section.daily-use{
 ol.carousel-indicators li {
   background-color: #C6C6C6 !important;
   padding-top: 2%;
-  transform: translatey(60px);
+  transform: translatey(80px);
   
 }
+
+.carousel-item img {
+  margin:20px !important;
+}
+
 
 /*.controls-top {
   transform: translatey(599px) !important;
@@ -600,18 +610,6 @@ ol.carousel-indicators li {
   width:50% !important
   
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .card-shadow{
   box-shadow: none !important;
@@ -641,9 +639,25 @@ ol.carousel-indicators li {
 
 .okjii-create-store{
 background-color:#F7F7F7 !important;
-background-image: url(../src/img/retailer/background.png);
+background-image: url(../src/img/retailer/createshop1.png);
 background-repeat: no-repeat !important;
   background-color: transparent !important;
+}
+
+.okjii-create-store{
+  padding-left:10rem !important;
+  padding-right:10rem !important;
+}
+
+.okjii-sell-online h1{
+  font-size:2.5rem !important;
+  color:#3365E2;
+  font-weight:300;
+
+}
+
+.okjii-sell-online{
+  padding:10rem !important;
 }
 
 .okjii-contact button{
@@ -664,6 +678,7 @@ background-repeat: no-repeat !important;
 
 .okjii-whyweshop{
   background-color: #F7F7F7 !important;
+  padding:5rem !important;
 
 }
 .okjii-whyweshop section {
@@ -724,7 +739,6 @@ background-repeat: no-repeat !important;
   width:25%;
   top: 18%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 2%;
   font-size: 1.7rem;
@@ -735,7 +749,6 @@ background-repeat: no-repeat !important;
   width:25%;
   top: 35%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 2%;
   font-size: 1.7rem;
@@ -746,7 +759,6 @@ background-repeat: no-repeat !important;
   width:25%;
   top: 51%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 2%;
   font-size: 1.7rem;
@@ -758,7 +770,6 @@ background-repeat: no-repeat !important;
   width:25%;
   top: 68%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 2%;
   font-size: 1.7rem;
@@ -776,44 +787,40 @@ background-repeat: no-repeat !important;
 .okjii-fast-right1 {
   position: absolute;
   width:25%;
-  top: 18%;
+  top: 17%;
   width:25%;
-  border:1px solid red;
   text-align:left;
-  left: 74%;
+  left: 70%;
   font-size: 1.7rem;
  }
 
 .okjii-fast-right2 {
   position: absolute;
   width:25%;
-  top: 35%;
+  top: 34%;
   width:25%;
-  border:1px solid red;
   text-align:left;
-  left: 74%;
+  left: 70%;
   font-size: 1.7rem;
 }
 
 .okjii-fast-right3 {
   position: absolute;
   width:25%;
-  top: 51%;
+  top: 50%;
   width:25%;
-  border:1px solid red;
   text-align:left;
-  left: 74%;
+  left: 70%;
   font-size: 1.7rem;
 }
 
 .okjii-fast-right4 {
   position: absolute;
   width:25%;
-  top: 68%;
+  top: 67%;
   width:25%;
-  border:1px solid red;
   text-align:left;
-  left: 74%;
+  left: 70%;
   font-size: 1.7rem;
 }
 
@@ -835,15 +842,19 @@ background-repeat: no-repeat !important;
   padding-top: 30px;
 }
 .okjii-fast-img-how {
-  width: 93%;
+  width: 60%;
   align-items: center !important;
-  padding-left: 150px;
 }
 
 .faqimg05, .faqimg07{
   width:80% !important;
 }
 
+figcaption h4{
+  font-size:2.5rem !important;
+  font-weight: 400 !important;
+  color:#5E5E5E !important;
+}
 
 .okkji-faq{
   position:relative;
@@ -1103,6 +1114,52 @@ h1 span{
 }
 
 
+
+.carousel{
+  margin-top: 20px;
+}
+.carousel-item{
+  text-align: center;
+  min-height: auto; 
+  display: flex;
+  flex-direction: row !important;
+  
+}
+
+.carousel-item p{
+  text-align:left !important;
+}
+
+.item{
+  width:200px !important;
+  height: 60px !important;
+  align-items: center !important;
+  align-content: center !important;
+  justify-content: space-between !important;
+}
+.bs-example{
+margin: 20px;
+}
+
+.okkji-howtoapply{
+  padding:10rem !important;
+}
+ol.okkji-howtoapply-list{
+  padding:5rem !important
+}
+
+
+.bolded-list-indicator li {
+  font-weight: 700;
+  font-size:1.8rem;
+}
+
+.bolded-list-indicator li p {
+  
+  font-weight: 400;
+  padding-left: 2rem;
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen  and (max-width: 600px) {
   .footer-bdr-right{
@@ -1113,6 +1170,7 @@ h1 span{
   background-image: url(../src/img/back.png);
 
   min-height: 50px;
+  left:0 !important;
 
   background-position: center;
   background-repeat: no-repeat;
@@ -1172,7 +1230,6 @@ h1 span{
   position: absolute;
   top: 39%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 2%;
   font-size: .5rem;
@@ -1182,7 +1239,6 @@ h1 span{
   position: absolute;
   top: 51%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 2%;
   font-size: .5rem;
@@ -1192,7 +1248,6 @@ h1 span{
   position: absolute;
   top: 63.5%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 2%;
   font-size: .5rem;
@@ -1203,7 +1258,6 @@ h1 span{
   position: absolute;
   top: 76%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 2%;
   font-size: .5rem;
@@ -1215,7 +1269,6 @@ h1 span{
   position: absolute;
   width:25%;
   top: 39%;
-  border:1px solid red;
   text-align:left;
   left: 74%;
   font-size: .5rem;
@@ -1226,7 +1279,6 @@ h1 span{
   width:25%;
   top: 52%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 74%;
   font-size: .5rem;
@@ -1237,7 +1289,6 @@ h1 span{
   width:25%;
   top: 64%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 74%;
   font-size: .5rem;
@@ -1248,7 +1299,6 @@ h1 span{
   width:25%;
   top: 75%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 74%;
   font-size: .5rem;
@@ -1270,6 +1320,8 @@ h1 span{
     background-image: url(../src/img/back.png);
   
     min-height: 50px;
+    left:0 !important;
+    right: 0 !important;
   
     background-position: center;
     background-repeat: no-repeat;
@@ -1300,7 +1352,6 @@ h1 span{
   width:25%;
   top: 28%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 2%;
   font-size: .9rem;
@@ -1311,7 +1362,6 @@ h1 span{
   width:25%;
   top: 42%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 2%;
   font-size: .9rem;
@@ -1322,7 +1372,6 @@ h1 span{
   width:25%;
   top: 57%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 2%;
   font-size: .9rem;
@@ -1333,7 +1382,6 @@ h1 span{
   position: absolute;
   top: 71%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 2%;
   font-size: .9rem;
@@ -1346,7 +1394,6 @@ h1 span{
   width:25%;
   top: 28%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 74%;
   font-size: .9rem;
@@ -1357,7 +1404,6 @@ h1 span{
   width:25%;
   top: 42%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 74%;
   font-size: .9rem;
@@ -1368,7 +1414,6 @@ h1 span{
   width:25%;
   top: 57%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 74%;
   font-size: .9rem;
@@ -1379,7 +1424,6 @@ h1 span{
   width:25%;
   top: 71%;
   width:25%;
-  border:1px solid red;
   text-align:left;
   left: 74%;
   font-size: .9rem;
@@ -1394,7 +1438,8 @@ h1 span{
     background-image: url(../src/img/back.png);
   
     min-height: 50px;
-  
+    left:0 !important;
+    right: 0 !important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1432,7 +1477,8 @@ h1 span{
     background-image: url(../src/img/back.png);
   
     min-height: 50px;
-  
+    left:0 !important;
+    right:0 !important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
