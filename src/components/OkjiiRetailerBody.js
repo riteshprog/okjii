@@ -15,6 +15,8 @@ export default class OkjiiRetailerBody extends Component {
         return (
             
 <div className="container-fluid">
+
+  
         <div className="row">
         <div className="col-md-8 figure-img2 order-md-2 ">
             

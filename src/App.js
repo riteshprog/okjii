@@ -8,8 +8,8 @@ import MainBody from './components/mainbody';
 import OkjiiRetailer from './components/OkjiiRetailer';
 import OkjiiFast from './components/OkjiiFast';
 import Fastaq from './components/Fastaq';
-import OkjiiOffer from './components/OkjiiOffer'
-
+import OkjiiOffer from './components/OkjiiOffer';
+import OkjiiBlog from './components/OkkjiBlog';
 
 function App() {
   return (
@@ -34,6 +34,10 @@ function App() {
      <Route path='/OkjiiOffer' >
       <OkjiiOffer />
       </Route>
+      <Route path='/OkjiiBlog' >
+      <OkjiiBlog />
+      </Route>
+
      </Switch>
      <Footer />
     </div>

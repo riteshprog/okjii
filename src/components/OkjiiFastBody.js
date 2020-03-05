@@ -10,15 +10,24 @@ import Trusted from './Trusted';
 export default class OkjiiFastBody extends Component {
   render() {
     return (
-      <div className="okjii-fast1">
-        <figure>
-        <img src={img4} className="img-fluid " alt="" />
-        </figure>
-        <section class="okjii-fastcon">
+      <div>
+      <section  className="okkji-faq">
+      <figure className="okkji-faq-figure">
+        <img src={img4} alt="" className="img-fluid" />
+      </figure>
+      <div class="okjii-fastcon">
         <h1><b>OKKJI Fast</b></h1>
         <h2>An exclusive OkkJi service</h2>
-        </section>
-        <section class="okjii-fasthow">
+        </div>
+      
+
+
+   </section>
+
+
+      <div className="container-fluid">
+      
+        <div class="okjii-fasthow">
           <h1>How we work</h1>
           <div>
             <div className="row text-center">
@@ -43,8 +52,8 @@ export default class OkjiiFastBody extends Component {
             </div>
           </div>
 
-        </section>
-        <section class="okjii-fastfast">
+        </div>
+        <div class="okjii-fastfast">
           <h1>OkkJi Fast</h1>
           <figure>
             <img src={img1} className="img-fluid okjii-fast-img" alt="" />
@@ -58,12 +67,12 @@ export default class OkjiiFastBody extends Component {
           <div className="okjii-fast-right3">Order anytime, anywhere from nearby store</div>
           <div className="okjii-fast-right4">Boon for shops that cannot effort home delivery</div>
 
-        </section>
+        </div>
         <Testimonial />
         <Trusted />
 
       </div>
-
+</div>
     )
   }
 }

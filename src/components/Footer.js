@@ -13,7 +13,7 @@ const FooterPage = () => {
   return (
 
 
-    <MDBFooter color="green" className="  container-fluid font-small pt-5 mt-4">
+    <MDBFooter color="green" className=" font-small pt-5 mt-4">
       <MDBContainer fluid>
         <MDBRow  className=" ml-5">
           <MDBCol className="footer-bdr-right"  md="3" sm="12" size="12">
@@ -26,7 +26,7 @@ const FooterPage = () => {
                 <a href="/"> JOIN AS RETAILER</a>
               </li>
               <li className="list-unstyled">
-                <a href="/">BLOG</a>
+                <a href="/OkkjiBlog">BLOG</a>
               </li>
               <li className="list-unstyled">
                 <a href="/"> CAREER

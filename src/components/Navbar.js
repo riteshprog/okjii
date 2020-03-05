@@ -35,7 +35,7 @@ render() {
               <MDBNavLink to="/Fastaq">FAQ</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="/OkjiiOffer">OFFER<sup>New</sup></MDBNavLink>
+              <MDBNavLink to="/OkjiiOffer">OFFER <sup class="badge badge-warning badge-text"><span >New</span></sup></MDBNavLink>
             </MDBNavItem>
 
             
