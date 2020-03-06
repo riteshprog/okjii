@@ -64,16 +64,16 @@ import InputPageButton from './InputPageButton';
 
                         </div>
 
-                      <div className="playstore text-center">
-                                    <img className="img-fluid apple"  src={apple} alt=""/>
-                                    <img className="img-fluid google" src={google} alt=""/>
+                      <div className="row text-center">
+                        <div className="col-sm-6">
+                           <img className=" apple"  src={apple} alt=""/>
+                        </div>
+                         <div className="col-sm-6">
+                                    <img className="google" src={google} alt=""/>
+                                    </div>
 
                       </div>
-
-                      <div className="row col-sm-12 mt-3">
-                      <InputPageButton />
-                     
-                      </div>
+<InputPageButton />
 
                     </div>
 
