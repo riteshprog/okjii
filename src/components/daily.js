@@ -14,15 +14,15 @@ return (
     </figure>
 </div>
   <div className="col-sm-6">
-  <h1><b>Daily</b> useable from nearby shops</h1>
+  <h1><b className="daily">Daily</b> useable from nearby shops</h1>
               <p>Because we digitalized all hyper-local shop who knows the taste and need of Indian families. We are extending the convenience of customer, their faith according to the digital age and social trend.</p>
               <ul className="list-unstyle">
                 <li> 
-                <p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Many payment options</p></li>
-                <li><p> <MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Street’s store on smartphone</p></li>
-                <li><p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Digital representation of all product</p></li>
-                <li><p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Digitalization of evergreen “UDHAAR”</p></li>
-                <li><p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Digitalization of faith, reliability &amp; local taste</p></li>
+                <MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Many payment options</li>
+                <li> <MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Street’s store on smartphone</li>
+                <li><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Digital representation of all product</li>
+                <li><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Digitalization of evergreen “UDHAAR”</li>
+                <li><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Digitalization of faith, reliability &amp; local taste</li>
               </ul>
 
   </div>

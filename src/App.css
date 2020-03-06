@@ -7,7 +7,7 @@
 
 
 p{
-  font-size:1.5rem;
+  font-size:1.25rem;
   color:#5E5E5E;
   font-weight:400;
 }
@@ -20,7 +20,7 @@ h1{
 body{
   background-color: white;
   position: relative;
-  font-family: "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif, Muli,BlinkMacSystemFont,-apple-system;
+  font-family: "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif, Muli,BlinkMacSystemFont,-apple-system !important;
   font-size: 14px;
   color :#5e5e5e;
 }
@@ -116,10 +116,12 @@ nav#parallelogram {
 
 
 .badge.badge-text{
-  margin:0;
-  font-size:85%;
+  margin: 0;
+  font-size: 70%;
   padding: 0.10em 0.4em;
-  color: #000 !important;
+  color: #8d8282 !important;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 a sup {
   top: -0.8em !important;
@@ -139,15 +141,15 @@ a{
 }
 
 .okjii-explore  h1{
-  font-weight: 600;
+  font-weight: 700;
   color:#5e5e5e !important;
   padding-top:3.5rem !important
 }
 
 .okjii-explore h2{
   padding-bottom: 2rem !important;
-  font-size: 1.6rem !important;
-  font-weight:400 !important;
+  font-size: 1.8rem !important;
+  font-weight:500 !important;
   color:#5e5e5e !important;
 }
 
@@ -158,19 +160,23 @@ a{
 }
 
 .install-now, p.install-now {
-  margin-top: 2rem !important;
-  font-size:1.1rem !important;
+  margin-top: 3.5rem !important;
+  font-size:1.2rem !important;
   align-items: center !important;
   margin-bottom: 0 !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
 }
 
 
+.okjii-install-image{
+  float:left;
+}
 
 
 .okjii-install img{
-  width:4% !important;
-  padding-top: 0 !important;
+  width:6% !important;
+  padding-top: 7px !important;
+  padding-bottom: 1rem;
   align-content: center !important;
 }
 
@@ -190,10 +196,18 @@ a{
 
 
 .form-input{
+display: flex;
+flex-wrap: nowrap;
+flex-direction: row;
   background-color: #EDEDED !important;
   height:55px;
   border-radius: 10px;
   
+}
+
+.input-item{
+  justify-content: center;
+  align-content: center;
 }
 
 .form-input input{
@@ -235,11 +249,19 @@ a{
 
 .okjii-best h1{
 
-  font-weight:300 !important;
+  font-weight:400 !important;
   padding-top: 4rem !important;
+  color: #5E5E5E;
+  font-size:2.1rem !important;
   padding-bottom: 1.8rem !important;
 }
-
+.okjii-best b.best{
+  font-weight:700 !important;
+  font-size:2rem !important;
+  color: #5E5E5E;
+  
+  
+}
 .okjii-daily {
   background-color: #F7F7F7 !important;
   padding:50px !important;
@@ -247,13 +269,24 @@ a{
 
 
 .okjii-daily h1{
-  padding-top: 4.5rem !important;
+  padding-top: 4rem !important;
   color:#2A2AFF !important;
+  font-weight: 400 !important;
+  font-size:2.1rem !important;
+  padding-bottom: 1rem;
 }
 
+.okjii-daily b.daily{
+  font-size: 2rem !important;
+  font-weight: 700;
+  color:#2A2AFF !important;
+
+}
 .okjii-daily p{
   color: #5e5e5e !important;
-  font-weight: 300 !important
+  font-size:1.1rem !important;
+  font-weight: 400 !important;
+  padding-bottom: .5rem !important;
 
 }
 
@@ -264,9 +297,11 @@ ul.list-unstyle {
   line-height: 0 !important;
 }
 
-.list-unstyle p{
+.list-unstyle li{
   font-size:1.1rem !important;
-  line-height: 1.1em !important;
+  line-height: 1.9em !important;
+  font-weight: 400;
+  color:#5E5E5E;
 }
 
 
@@ -275,7 +310,8 @@ ul.list-unstyle {
   font-size: 1em !important;
 }
 figure.daily-figure-img {
-  width: 70%;
+  margin-top:12px ;
+  width: 66%;
 }
 
 
@@ -283,18 +319,30 @@ figure.daily-figure-img {
 /* okjii-homedelivery */
 
 .okjii-homedelivery h1{
-  font-size:2.5rem !important;
-  font-weight:300;
-  color:#2A2AF0 !important;
+  color:#2A2AFF !important;
+  padding-top: 2rem !important;
+  font-weight: 400 !important;
+  font-size:2.1rem !important;
+  padding-bottom: .5rem;
+}
+
+.okjii-homedelivery b.home{
+  font-size: 2rem !important;
+  font-weight: 700;
+  color:#2A2AFF !important;
 
 }
 
 .okjii-homedelivery p{
   color: #5e5e5e !important;
-font-size:1.2rem !important;
-font-weight: 300 !important
+  font-size:1.1rem !important;
+  font-weight: 400 !important;
+  padding-bottom: 0.5rem !important;
 }
+.home-delivery-figure-img{
+  width:90% !important;
 
+}
 
 
 
@@ -318,17 +366,28 @@ section.okjii-khatabook{
 
 
 .okjii-khatabook1 h1{
-  font-size:2.5rem !important;
-  Padding-top:2rem !important;
-  padding-bottom: 1rem !important;
-  font-weight:300 !important;
+  padding-top: 2rem !important;
+  font-weight: 700 !important;
+  font-size:2rem !important;
+  padding-bottom: .5rem;
+  color:#fff;
 }
 
 .okjii-khatabook1 p{
   color:#fff !important;
-  font-size: 1.1rem !important;
-  font-weight: 300 !important;
+  font-size:1.1rem !important;
+  font-weight: 400 !important;
+  padding-bottom: 0.5rem !important;
   
+}
+
+.list-unstyle.list-color li{
+
+  font-size:1.1rem !important;
+  line-height: 1.9em !important;
+  font-weight: 400;
+  color:#fff;
+
 }
 .no-break{
   word-break: keep-all;
@@ -337,14 +396,40 @@ section.okjii-khatabook{
 
 
 /* home-testimonial  */
-.home-testimonial h1{
-color:#5e5e5e !important;
-font-size:2.5rem !important;
-font-weight:300 !important;
+.home-testimonial{
+  padding:0 50px !important;
 }
 
+.home-testimonial h1{
+color:#5e5e5e !important;
+padding-top: 5rem !important;
+font-weight: 600 !important;
+font-size:2rem !important;
+padding-bottom: .6rem;
+}
+
+.home-testimonial h2{
+  color:#5e5e5e !important;
+  padding-bottom: 1rem;
+  font-size:1.8rem !important;
+  font-weight:450 !important;
+}
+
+.home-testimonial p{
+  font-size:1.1rem !important;
+}
+
+.testmonial-slide h2{
+  
+  color:#5e5e5e !important;
+  padding-top: 1.4rem;
+  font-size:1.8rem !important;
+  font-weight:450 !important;
+}
+
+
 .testimoni-img{
-  width:15% !important;
+  width:20% !important;
 }
 
 .Asset12{
@@ -395,11 +480,6 @@ position: absolute;
 
 .home-testimonial{
   position: relative;
-}
-.home-testimonial h2{
-  color:#5e5e5e !important;
-  font-size:2rem !important;
-  font-weight:300 !important;
 }
 
 
@@ -590,9 +670,6 @@ section.daily-use{
 
 /* testimony */
 
-.home-testimonial{
-  padding: 10rem !important;
-}
 
 
 
@@ -1011,8 +1088,8 @@ figcaption h4{
 
 }
 h1 span{
-  color:#259D70 !important;
-  font-size: 3rem !important;
+  color:#259D70 ;
+  font-size: 3rem ;
   
 }
 

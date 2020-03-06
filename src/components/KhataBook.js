@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import Asset3 from '../img/home/Asset3.png';
+import checked from '../img/home/checked.png';
 import {MDBIcon} from "mdbreact";
 
 export default class KhataBook extends Component {
@@ -12,13 +13,13 @@ export default class KhataBook extends Component {
               <h1 className="text-white">Khata Book</h1>
               <p>OkkJi takes care of all hectic stuﬀs like handwritien documents, manual listings of purchase &amp; maintaining account transactions by facilitating digital KHATA BOOK.</p>
 
-              <ul className="list-unstyle">
+              <ul className="list-unstyle list-color">
                 <li> 
-                <p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Diﬀerent methods of payment</p></li>
-                <li><p> <MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Digital creation of purchase list</p></li>
-                <li><p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Easy, transparent &amp; handy billing</p></li>
-                <li><p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Smooth purchase documentation</p></li>
-                <li><p className="no-break"><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Daily/weekly/monthly/ purchase history</p></li>
+                <img src={checked} width="16" alt="" /> Diﬀerent methods of payment</li>
+                <li><img src={checked} width="16" alt="" /> Digital creation of purchase list</li>
+                <li><img src={checked} width="16" alt="" /> Easy, transparent &amp; handy billing</li>
+                <li><img src={checked} width="16" alt="" /> Smooth purchase documentation</li>
+                <li><img src={checked} width="16" alt="" /> Daily/weekly/monthly/ purchase history</li>
               </ul>
     
 
@@ -26,20 +27,20 @@ export default class KhataBook extends Component {
             </div>
             <div className="col-lg-4 col-12">
             <figure className="okjii-figure-imgkhata">
-              <img src={Asset3} className="img-fluid py-5" alt=""/>
+              <img src={Asset3} className="img-fluid mt-5" alt=""/>
             </figure>
            
             </div>
             <div className="col-lg-4 col-12">
               <h1 className="text-white">Credit Pay</h1>
               <p>OkkJi is cratiing the integral &amp; old-age living shopping heritage that strongly knit local social bond in every crest &amp; through in brand new kalevar.</p>
-              <ul className="list-unstyle">
+              <ul className="list-unstyle list-color">
                 <li> 
-                <p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Buy, and pay after some time</p></li>
-                <li><p> <MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Monthly purchase settlement</p></li>
-                <li><p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Weekly purchase settlement</p></li>
-                <li><p><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Fortnight purchase settlement</p></li>
-                <li><p className="no-break"><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Personal &amp; punctuation based credit</p></li>
+                <img src={checked} width="16" alt="" /> Buy, and pay after some time</li>
+                <li><img src={checked} width="16" alt="" /> Monthly purchase settlement</li>
+                <li><img src={checked} width="16" alt="" /> Weekly purchase settlement</li>
+                <li><img src={checked} width="16" alt="" /> Fortnight purchase settlement</li>
+                <li><img src={checked} width="16" alt="" /> Personal &amp; punctuation based credit</li>
               </ul>
 
 

@@ -49,12 +49,12 @@ import InputPageButton from './InputPageButton';
                     <p>A revolution in grocery shopping where a customer can buy from their old reliable “Kirana” store without physically going there. A digital hub of all local, neighbourhood retail shop with era driven look and mechanism.
 
                     </p>
+                      <div className="okjii-install-image">
+                      <div className="row mt-4">
 
-                      <div className="row text-center mt-4">
+                        <div className="col-sm-12  okjii-install">
 
-                        <div className="col-sm-12   okjii-install">
-
-                          <p className="install-now">INSTALL NOW</p>
+                          <p className="install-now text-center ">INSTALL NOW</p>
 
                           <p className="text-center"><img src={Asset7} alt="" /></p>
 
@@ -73,10 +73,10 @@ import InputPageButton from './InputPageButton';
                                     </div>
 
                       </div>
-<InputPageButton />
+{/*<InputPageButton />*/}
 
                     </div>
-
+                    </div>
                     </div>
 
 
@@ -93,7 +93,7 @@ import InputPageButton from './InputPageButton';
 
                   <div className="col-lg-12 okjii-best">
 
-                    <h1 className="text-center">Why Customer <b>Loves Okkji</b></h1>
+                    <h1 className="text-center">Why Customer <b className="best">Loves OkkJi</b></h1>
 
                   </div>
 
