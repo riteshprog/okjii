@@ -70,7 +70,7 @@ import InputPageButton from './InputPageButton';
 
                       </div>
 
-                      <div className="row mt-3">
+                      <div className="row col-sm-12 mt-3">
                       <InputPageButton />
                      
                       </div>
