@@ -14,7 +14,7 @@ class NavbarPage extends Component {
 render() {
   return (
     <div className=" bg-image">
-      <MDBNavbar color="default-color" className="nav-bar" id="parallelogram" dark expand="lg" >
+      <MDBNavbar color="default-color" className="nav-bar" id="parallelogram" dark expand={'md' } >
         <MDBNavbarBrand>
         <img src={logo} alt="store"  height="40"/>
 

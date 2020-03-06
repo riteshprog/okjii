@@ -18,7 +18,7 @@ import Testimonial from './Testimonial';
 
 import Trusted from './Trusted'
 
-
+import InputPageButton from './InputPageButton';
 
         export default class mainbody extends Component {
 
@@ -30,7 +30,7 @@ import Trusted from './Trusted'
 
                 <div className="row image-position">
 
-                <div className="col-md-6 col-sm-12 width-65 figure-img2 order-md-2 okjii-explore-right">
+                <div className="col-md-7 col-sm-12 width-65 figure-img2 order-md-2 okjii-explore-right">
 
                 <img src={Asset6} className="img-fluid"  alt="" />
 
@@ -40,7 +40,7 @@ import Trusted from './Trusted'
 
 
 
-                  <div className="col-md-6 col-sm-12 width-35 order-md-1 mt-5 okjii-explore okjii-explore-left">
+                  <div className="col-md-5 col-sm-12 width-35 order-md-1 mt-5 okjii-explore okjii-explore-left">
 
                     <h1>Best Way to Explore</h1>
 
@@ -71,17 +71,8 @@ import Trusted from './Trusted'
                       </div>
 
                       <div className="row mt-3">
-
-                      <div className="col-md-12 okjii-tel">
-
-                      <input type="tel" placeholder="91 |Mobile Number"  />
-
-                      <button className="okjii-button">GET APP LINK</button>
-
-
-
-                      </div>
-
+                      <InputPageButton />
+                     
                       </div>
 
                     </div>
