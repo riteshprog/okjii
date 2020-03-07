@@ -17,6 +17,7 @@ import KhataBook from './KhataBook';
 import Testimonial from './Testimonial';
 
 import Trusted from './Trusted'
+import owlcarosoul from './owlcarosoul';
 
 import InputPageButton from './InputPageButton';
 
@@ -109,6 +110,7 @@ import InputPageButton from './InputPageButton';
                 <Testimonial />
 
                 <Trusted />
+                <owlcarosoul />
 
               </div>
 

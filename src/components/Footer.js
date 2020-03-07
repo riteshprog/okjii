@@ -18,25 +18,25 @@ const FooterPage = () => {
         <MDBRow  className=" ml-5">
           <MDBCol className="footer-bdr-right"  md="3" sm="12" size="12">
             <h5 className="title">MENU</h5>
-            <ul className="list-unstyled">
-              <li className="list-unstyled">
+            <ul className="list-unstyled footer-list">
+              <li>
                 <a href="/">ABOUT US</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="/"> JOIN AS RETAILER</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="/OkkjiBlog">BLOG</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="/"> CAREER
 </a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="/">OFFERS</a>
               </li>
 
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">REFER &amp; EARN</a>
               </li>
 
@@ -44,26 +44,26 @@ const FooterPage = () => {
           </MDBCol>
           <MDBCol className="footer-bdr-right"  md="3" sm="12" size="12">
             <h5 className="title">HELP</h5>
-            <ul className="list-unstyled">
-              <li className="list-unstyled">
+            <ul className="list-unstyled footer-list">
+              <li>
                 <a href="#!">HELP CENTER
 </a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">CONTACT US</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">TERMS &amp; CONDITION</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!"> PRIVACY POLICY
 </a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">REFUND POLICY</a>
               </li>
 
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">DISCLAIMER</a>
               </li>
 
@@ -71,26 +71,26 @@ const FooterPage = () => {
           </MDBCol>
           <MDBCol className="footer-bdr-right"  md="3" sm="12" size="12">
             <h5 className="title">CATEGORIES</h5>
-            <ul className="list-unstyled">
-              <li className="list-unstyled">
+            <ul className="list-unstyled footer-list">
+              <li>
                 <a href="#!">BEVERAGES
 </a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">GRAINS, PULSES &amp; FLOUR</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">FOODS &amp; DRINKS</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!"> DAIRY &amp; EGGS
 </a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">SNACKS</a>
               </li>
 
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">PERSONAL CARE</a>
               </li>
 
@@ -98,20 +98,20 @@ const FooterPage = () => {
           </MDBCol>
           <MDBCol className="bdr-font" md="3" sm="12"  size="12">
             <h5 className="title">FIND US ONLINE</h5>
-            <ul className="list-unstyled">
-              <li className="list-unstyled">
+            <ul className="list-unstyled footer-list">
+              <li>
                 <a href="#!"><MDBIcon fab icon="facebook" className="mr-2" /> FACEBOOK</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!"><MDBIcon fab icon="twitter-square"  className="mr-2" /> TWITTER</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!"><MDBIcon fab icon="linkedin"  className="mr-2" /> LINKEDIN</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!"><MDBIcon fab icon="instagram"  className="mr-2" /> INSTAGRAM</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!"><MDBIcon fab icon="youtube-square"  className="mr-2" /> YOUTUBE</a>
                 </li>
             </ul>
@@ -122,13 +122,13 @@ const FooterPage = () => {
         <MDBContainer fluid >
         <p className="cite-text">For best of prices, deals and oﬀers; order online in cities<br /> The delivery service is operational in 13 cities: Ahmedabad, Bengaluru, Chennai, Delhi, Gurugram, Hyderabad, Jaipur, Kanpur, Kolkata, Lucknow, Noida, Mumbai, and Pune. 
         </p>
-        <p className="mt-1"><b>Payment Options</b></p>
+        <h4 className="mt-1 payment">Payment Options</h4>
 
-        <div className="d-flex align-content-stretch flex-wrap example-parent">
-    <div className="p-2 col-example"><a href="/"><img src={visa} alt="store"  className="img-icon img-fluid" /> </a></div>
-    <div className="p-2 col-example"><a href="/"><img src={Maestro} alt="store" className="img-icon img-fluid" /></a></div>
-    <div className="p-2 col-example"><a href="/"><img src={paytm} alt="store" className="img-icon img-fluid"/></a></div>
-    <div className="p-2 col-example"><a href="/"><img src={MasterCard} alt="store" className="img-icon img-fluid" /></a></div>
+        <div className="example-parent">
+    <div className="p-2 col-example"><a href="/"><img src={visa} alt="store"  className="visa img-fluid" /> </a></div>
+    <div className="p-2 col-example"><a href="/"><img src={Maestro} alt="store" className="Maestro img-fluid" /></a></div>
+    <div className="p-2 col-example"><a href="/"><img src={paytm} alt="store" className="paytm img-fluid"/></a></div>
+    <div className="p-2 col-example"><a href="/"><img src={MasterCard} alt="store" className=" MasterCard img-fluid" /></a></div>
     <div className="p-2 col-example"><a href="/"><img src={paypal} alt="store" className="img-icon" /></a></div>
     <div className="p-2 col-example"><a href="/"><img src={bhim} alt="store" className="img-icon" /></a></div>
     <div className="p-2 col-example"><a href="/"> Net Banking</a></div>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDBNavLink,  MDBCollapse } from "mdbreact";
-import logo from '../logo.png'
+import logo from '../img/logo.png';
+//import logowhite from '../img/logowhite.png';
 
 class NavbarPage extends Component {
   state = {
@@ -11,12 +12,14 @@ class NavbarPage extends Component {
     this.setState({ isOpen: !this.state.isOpen });
   }
   
+
 render() {
   return (
     <div className=" bg-image">
-      <MDBNavbar color="default-color" className="nav-bar" id="parallelogram" dark expand={'md' } >
+      <MDBNavbar  className="nav-bar fixed-top"  id="parallelogram" dark expand={'md' } >
         <MDBNavbarBrand>
-        <img src={logo} alt="store"  height="40"/>
+        <img src={logo} alt="store" class="logo"  id="logo" height="35"/>
+
 
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />

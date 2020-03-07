@@ -6,10 +6,10 @@ import {} from "mdbreact";
 const daily = () => {
 return (
 <div className="container-fluid okjii-daily">
-  <div className="container">
+  <div className="container pt-1">
   <div className="row">
   <div className="col-sm-6">  
-     <figure className="daily-figure-img">
+     <figure className="daily-figure-img pt-4">
               <img src={Asset1} className="img-fluid" alt=""/>
     </figure>
 </div>

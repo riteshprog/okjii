@@ -15,7 +15,7 @@ export default class AmazingOffer extends Component {
     <img src={paytm} alt="" className="img-fluid my-5" />
     <h2 className="my-5">Using Paytm &amp; Get <span className="">Upto ₹300 Cashback
 </span></h2>
-<a className="btn btn-paytm my-5"> Code: OKKJIPAYTM</a>
+<a className="btn btn-paytm my-5" href="/"> Code: OKKJIPAYTM</a>
 
   </div>
   <div className="col-md-6">
