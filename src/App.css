@@ -591,7 +591,9 @@ footer.page-footer a {
   font-weight: 300 !important;
 }
 
-
+.container-fluid.footer-margin {
+  margin: 2rem;
+}
 .d-flex.align-content-stretch.flex-wrap.example-parent img{
 width:90% !important
 }
@@ -1328,18 +1330,50 @@ ol.okkji-howtoapply-list{
   padding-left: 2rem;
 }
 
+.navbar-brand .mobile{
+  display: none !important;
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen  and (max-width: 600px) {
   .footer-bdr-right{
   border-right: none !important;
 }
+.navbar-brand .mobile {
+  display: block !important;
+}
+.navbar-brand .desktop {
+  display: none !important;
+}
 
+nav#parallelogram {
+  background-color: #259A70 !important;
+}
 
+.navbar-brand{
+  margin-left:0 !important;
+}
+
+.okjii-explore {
+  padding: 0 20px !important;
+}
+
+.home-testimonial {
+  padding: 0 20px !important;
+}
+
+.figure-img2 {
+  width: 100% !important;
+  padding-right: 0;
+  padding-left: 0%;
+  top: 50px;
+  z-index: -1;
+}
 
 .figure-img2 {
   width:100% !important;
   padding-right: 0 !important;
-  padding-left: 13.1% !important;
+  padding-left: 0 !important;
 }
 
 .carousel-control-next{
@@ -1350,22 +1384,23 @@ ol.okkji-howtoapply-list{
   top:100% !important;
 }
 
+.testmonial-slide.carousel-fade a.carousel-control-prev{
+
+    width: 11%;
+    height: 11%;
+    padding-top: 5px;
+    border-radius: 50%;
+    transform: translatey(-50%);
+}
+
+.testmonial-slide.carousel-fade a.carousel-control-next{
+    width: 11%;
+    transform: translatey(-50%);
+    height: 11%;
+    left: 16% !important;
+}
 
 
-.carousel-multi-item .controls-top {
-   margin-bottom: 1.88rem; 
-   padding-left: 0px; 
-   transform:translateX(15px);
-}
-.carousel-item.active.carousel-slide-item.turested-slide {
-  display: flex !important;
-  align-content: center;
-  justify-content: space-around;
-  width: 90%;
-}
-.turested-slide img.twentyfour, .turested-slide img.vmart{
-  height:50px !important
-}
 
 .okjii-fast-left1 {
   position: absolute;

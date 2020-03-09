@@ -5,8 +5,8 @@ import Asset2 from '../img/home/Asset2.png';
 export default class HomeDelivery extends Component {
   render() {
     return (
-      <div className="container">
-        <section className="okjii-homedelivery">
+      <div className="container-fluid">
+        <section className="container okjii-homedelivery">
         <div className="row">
           <div className="col-lg-6">
             <h1 className="mb-4 mt-4"><b className="home">Home</b> Delivery</h1>

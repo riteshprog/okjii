@@ -13,10 +13,10 @@ const FooterPage = () => {
   return (
 
 
-    <MDBFooter color="green" className=" font-small pt-5 mt-4">
-      <MDBContainer fluid>
-        <MDBRow  className=" ml-5">
-          <MDBCol className="footer-bdr-right"  md="3" sm="12" size="12">
+    <MDBFooter color="green" className=" font-small ">
+      <MDBContainer fluid className="footer-margin">
+        <MDBRow  className="">
+          <MDBCol className="footer-bdr-right"  md="3" sm="6" size="12">
             <h5 className="title">MENU</h5>
             <ul className="list-unstyled footer-list">
               <li>
@@ -42,7 +42,7 @@ const FooterPage = () => {
 
             </ul>
           </MDBCol>
-          <MDBCol className="footer-bdr-right"  md="3" sm="12" size="12">
+          <MDBCol className="footer-bdr-right"  md="3" sm="6" size="12">
             <h5 className="title">HELP</h5>
             <ul className="list-unstyled footer-list">
               <li>
@@ -69,7 +69,7 @@ const FooterPage = () => {
 
             </ul>
           </MDBCol>
-          <MDBCol className="footer-bdr-right"  md="3" sm="12" size="12">
+          <MDBCol className="footer-bdr-right"  md="3" sm="6" size="12">
             <h5 className="title">CATEGORIES</h5>
             <ul className="list-unstyled footer-list">
               <li>
@@ -96,7 +96,7 @@ const FooterPage = () => {
 
             </ul>
           </MDBCol>
-          <MDBCol className="bdr-font" md="3" sm="12"  size="12">
+          <MDBCol className="bdr-font" md="3" sm="6"  size="12">
             <h5 className="title">FIND US ONLINE</h5>
             <ul className="list-unstyled footer-list">
               <li>
@@ -118,8 +118,8 @@ const FooterPage = () => {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
-      <div className="footer-copyright mt-3 ml-5  py-3">
-        <MDBContainer fluid >
+      <div className="footer-copyright ">
+        <MDBContainer fluid className="footer-margin" >
         <p className="cite-text">For best of prices, deals and oﬀers; order online in cities<br /> The delivery service is operational in 13 cities: Ahmedabad, Bengaluru, Chennai, Delhi, Gurugram, Hyderabad, Jaipur, Kanpur, Kolkata, Lucknow, Noida, Mumbai, and Pune. 
         </p>
         <h4 className="mt-1 payment">Payment Options</h4>

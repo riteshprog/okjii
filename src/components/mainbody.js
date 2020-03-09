@@ -17,7 +17,6 @@ import KhataBook from './KhataBook';
 import Testimonial from './Testimonial';
 
 import Trusted from './Trusted'
-import owlcarosoul from './owlcarosoul';
 
 import InputPageButton from './InputPageButton';
 
@@ -30,18 +29,18 @@ import InputPageButton from './InputPageButton';
               <div className="container-fluid okjii-mainbody">
 
                 <div className="row image-position">
+                <div className="col-md-12 col-sm-12 col-lg-7 width-65 figure-img2 order-md-2 okjii-explore-right">
 
-                <div className="col-md-7 col-sm-12 width-65 figure-img2 order-md-2 okjii-explore-right">
+<img src={Asset6} className="img-fluid"  alt="" />
 
-                <img src={Asset6} className="img-fluid"  alt="" />
+    
 
-                    
-
-                </div>
-
+</div>
 
 
-                  <div className="col-md-5 col-sm-12 width-35 order-md-1 mt-5 okjii-explore okjii-explore-left">
+
+
+                  <div className="col-md-12 col-sm-12 col-lg-5 width-35 order-md-1 mt-5 okjii-explore okjii-explore-left">
 
                     <h1>Best Way to Explore</h1>
 
@@ -67,10 +66,10 @@ import InputPageButton from './InputPageButton';
 
                       <div className="row text-center">
                         <div className="col-sm-6">
-                           <img className=" apple"  src={apple} alt=""/>
+                           <img className="img-fluid apple"  src={apple} alt=""/>
                         </div>
                          <div className="col-sm-6">
-                                    <img className="google" src={google} alt=""/>
+                                    <img className="img-fluid google" src={google} alt=""/>
                                     </div>
 
                       </div>
@@ -78,6 +77,7 @@ import InputPageButton from './InputPageButton';
 
                     </div>
                     </div>
+
                     </div>
 
 

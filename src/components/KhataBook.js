@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Asset3 from '../img/home/Asset3.png';
 import checked from '../img/home/checked.png';
-import {MDBIcon} from "mdbreact";
 
 export default class KhataBook extends Component {
   render() {
@@ -28,6 +27,7 @@ export default class KhataBook extends Component {
             <div className="col-lg-4 col-12">
             <figure className="okjii-figure-imgkhata">
               <img src={Asset3} className="img-fluid mt-5" alt=""/>
+
             </figure>
            
             </div>
