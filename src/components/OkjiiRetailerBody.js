@@ -13,8 +13,8 @@ import WhyweShop from './WhyweShop';
 export default class OkjiiRetailerBody extends Component {
     render() {
         return (
-            
-<div className="container-fluid OkjiiRetailerBody">
+<div>            
+<div className="container-fluid  OkjiiRetailerBody">
 
   
         <div className="row">
@@ -41,12 +41,10 @@ export default class OkjiiRetailerBody extends Component {
           
                   </div>
 
-
-
-
-
+                  </div>
+                  <div className="container-fluid">
             <h1 className="text-center my-5"><b>New way to</b><br />connect with customers</h1>
-
+</div>
         <CreateStore />
         <SellOnline />
         <WhyweShop />

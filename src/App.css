@@ -866,7 +866,7 @@ ol.carousel-indicators li {
     padding-left: 0 !important;
   }
 
-  
+
   
   .home-delivery-figure-img{
     padding-top: 3rem;
@@ -1388,6 +1388,15 @@ ol.okkji-howtoapply-list{
   display: none !important;
 }
 
+.carousel-control-next{
+  top:105% !important;
+} 
+  
+.carousel-control-prev{
+  top:105% !important;
+}
+
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen  and (max-width: 600px) {
   .footer-bdr-right{
@@ -1483,6 +1492,46 @@ nav#parallelogram {
   margin-right: auto;
   margin-left: auto;
 }
+
+.install-now, p.install-now {
+  margin-top: .5rem !important;
+  font-size:1.2rem !important;
+  align-items: center !important;
+  margin-bottom: 0 !important;
+  font-weight: 700 !important;
+}
+
+.okjii-daily h1 {
+  padding-top: 2rem !important;
+  color: #2A2AFF !important;
+  font-weight: 400 !important;
+  font-size: 2.1rem !important;
+  padding-bottom: 1rem;
+}
+
+
+figure.home-delivery-figure-img.my-5 {
+    margin-top: .5rem !important;
+    margin-bottom: .5rem !important;
+}
+
+.okjii-khatabook1 h1 {
+  padding-top: 0.5rem !important;
+}
+
+.home-testimonial h1 {
+  padding-top: 2rem !important;
+}
+
+.owl-carousel .owl-item{
+  left:2rem;
+}
+
+footer.page-footer h5 {
+padding-top:1rem !important;
+  font-size: 1.2rem !important;
+}
+
 
 .okjii-fast-left1 {
   position: absolute;

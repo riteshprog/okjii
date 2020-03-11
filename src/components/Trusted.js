@@ -7,16 +7,37 @@ import vishal from '../img/home/vishal.png';
 import vmart from '../img/home/vmart.png';
 import easyday from '../img/home/easyday.png';
 import twentyfour from '../img/home/24.png';
-const options = {
-    items: 6,
-};
-
-const Trusted = () => {
-  return (
-    <div className="container-fluid h1-trusted">
+class Trusted extends React.Component {
+  state= {
+    responsive:{
+        0: {
+            items: 2,
+        },
+        450: {
+            items: 3,
+        },
+        600: {
+            items: 4,
+        },
+        1000: {
+            items: 6,
+        },
+    },
+}
+render(){
+  return(
+<div className="container-fluid h1-trusted text-center">
         <div className="container">
       <h1 class="text-center">Trusted by Shop</h1>
-<OwlCarousel items={6} className="owl-theme" loop margin={10}
+<OwlCarousel className={'owl-theme'}
+    loop={true}
+    margin={20}
+    nav={false}
+    dots={true}
+    autoplay={true}
+    autoplayTimeout={2000}
+    items={6}
+    responsive={this.state.responsive}
 >
 
 <div class="item"><img className="item" src={twentyfour} alt="" /></div>
@@ -30,7 +51,8 @@ const Trusted = () => {
      </OwlCarousel>
      </div>
   </div>
-  );
-}
 
+  )
+}
+}
 export default Trusted;
