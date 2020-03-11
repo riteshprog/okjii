@@ -16,7 +16,7 @@ const Trusted = () => {
     <div className="container-fluid h1-trusted">
         <div className="container">
       <h1 class="text-center">Trusted by Shop</h1>
-<OwlCarousel items={6} className="owl-theme" loop  margin={10}
+<OwlCarousel items={6} className="owl-theme" loop margin={10}
 >
 
 <div class="item"><img className="item" src={twentyfour} alt="" /></div>

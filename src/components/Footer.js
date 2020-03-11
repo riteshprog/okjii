@@ -16,7 +16,7 @@ const FooterPage = () => {
     <MDBFooter color="green" className=" font-small ">
       <MDBContainer fluid className="footer-margin">
         <MDBRow  className="">
-          <MDBCol className="footer-bdr-right"  md="3" sm="6" size="12">
+          <MDBCol className="footer-bdr-right"  md="3" size="12">
             <h5 className="title">MENU</h5>
             <ul className="list-unstyled footer-list">
               <li>
@@ -42,7 +42,7 @@ const FooterPage = () => {
 
             </ul>
           </MDBCol>
-          <MDBCol className="footer-bdr-right"  md="3" sm="6" size="12">
+          <MDBCol className="footer-bdr-right"  md="3" size="12">
             <h5 className="title">HELP</h5>
             <ul className="list-unstyled footer-list">
               <li>
@@ -69,7 +69,7 @@ const FooterPage = () => {
 
             </ul>
           </MDBCol>
-          <MDBCol className="footer-bdr-right"  md="3" sm="6" size="12">
+          <MDBCol className="footer-bdr-right"  md="3" size="12">
             <h5 className="title">CATEGORIES</h5>
             <ul className="list-unstyled footer-list">
               <li>
@@ -96,7 +96,7 @@ const FooterPage = () => {
 
             </ul>
           </MDBCol>
-          <MDBCol className="bdr-font" md="3" sm="6"  size="12">
+          <MDBCol className="bdr-font" md="3" size="12">
             <h5 className="title">FIND US ONLINE</h5>
             <ul className="list-unstyled footer-list">
               <li>

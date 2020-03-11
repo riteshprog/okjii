@@ -5,7 +5,7 @@ import avatar from '../img/home/avatar.png';
 
 const TestimonialSlider = () => {
   return (
-    <MDBContainer fluid>
+    <MDBContainer>
       
         <MDBCarousel
       activeItem={1}

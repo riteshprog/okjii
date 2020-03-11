@@ -14,32 +14,29 @@ export default class OkjiiRetailerBody extends Component {
     render() {
         return (
             
-<div className="container-fluid">
+<div className="container-fluid OkjiiRetailerBody">
 
   
         <div className="row">
-        <div className="col-md-8 figure-img2 order-md-2 ">
+        <div className="col-md-8 retailer-figure-img2 retailer order-md-2 ">
             
         <img src={retailer} width="100%" className="img-fluid"  alt="" />
           </div>
 
-          <div className="col-md-4 order-md-1  order-sm-1  mt-5 w-100 okjii-retaler">
-            <h1><b>Partner</b> with <b><span className="text-green">Okk</span>Ji</b></h1>
+          <div className="col-md-4 order-md-1  order-sm-1  mt-5 okjii-retaler">
+            <h1>Partner <span className="text-normal">with</span> <span className="text-green">Okk</span>Ji</h1>
             <ContactForm />
 
 
-<div className="row mt-3">
-  <div className="col-lg-6 col-md-6 col-sm-6 ">
-  <figure className="okkjii-figure-apple">
-              <img src={apple} className="img-fluid apple" alt=""/>
-      </figure>
-  </div>
-  <div className="col-lg-6 col-md-6 col-sm-6">
-  <figure className="okkjii-figure-google">
-              <img className="img-fluid google" src={google} alt=""/>
-  </figure>
-  </div>
-</div>
+            <div className="row text-center mt-5">
+                        <div className="col-sm-6">
+                           <img className="img-fluid apple"  src={apple} alt=""/>
+                        </div>
+                         <div className="col-sm-6">
+                                    <img className="img-fluid google" src={google} alt=""/>
+                                    </div>
+
+                      </div>
           </div>
           
                   </div>
@@ -48,11 +45,7 @@ export default class OkjiiRetailerBody extends Component {
 
 
 
-        <div className="row">
-          <div className="col-lg-12 okjii-best">
             <h1 className="text-center my-5"><b>New way to</b><br />connect with customers</h1>
-          </div>
-        </div>
 
         <CreateStore />
         <SellOnline />
