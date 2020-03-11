@@ -944,7 +944,7 @@ ol.carousel-indicators li {
 .okjii-fastcon {
   position: absolute;
   top: 65px;
-  left: 70px;
+  left: 53px;
 }
 
 
@@ -954,113 +954,58 @@ ol.carousel-indicators li {
   color: #5E5E5E;
 }
 
-.okjii-fastfast.okjii-fast-left1, .okjii-fastfast.okjii-fast-left2, .okjii-fastfast.okjii-fast-left3, .okjii-fastfast.okjii-fast-left4 {
-  position: absolute;
-  width:15%;
+
+.okjii-fast-left1{
+  position:absolute !important;
+  top: 24%;
+  left:3rem;
+}
+.okjii-fast-left1 div{
+  width:60% !important;
+  padding-top:35px !important;
+  padding-bottom:35px !important;
+  font-size:1.3rem !important;
+  font-weight: 500;
+
+}
+
+.okjii-fast-right1{
+  position:absolute !important;
+  top: 24%;
+  right:35%;
+}
+.okjii-fast-right1 div{
+  width:60% !important;
+  padding-top:35px !important;
+  padding-bottom:35px !important;
+  font-size:1.3rem !important;
+  font-weight: 500;
 
 }
 
 
-
-.okjii-fast-left1 {
-  position: absolute;
-  width:25%;
-  top: 18%;
-  width:25%;
-  text-align:left;
-  left: 2%;
-  font-size: 1.7rem;
-  
-}
-.okjii-fast-left2{
-  position: absolute;
-  width:25%;
-  top: 35%;
-  width:25%;
-  text-align:left;
-  left: 2%;
-  font-size: 1.7rem;
-  
-}
-.okjii-fast-left3{
-  position: absolute;
-  width:25%;
-  top: 51%;
-  width:25%;
-  text-align:left;
-  left: 2%;
-  font-size: 1.7rem;
-  
-}
-
-.okjii-fast-left4{
-  position: absolute;
-  width:25%;
-  top: 68%;
-  width:25%;
-  text-align:left;
-  left: 2%;
-  font-size: 1.7rem;
-  
-}
-
-
-
-.okjii-fastfast.okjii-fast-right1, .okjii-fastfast.okjii-fast-right2, .okjii-fastfast.okjii-fast-right3, .okjii-fastfast.okjii-fast-right4 {
-  position: absolute;
-  width:15%;
-
-}
-
-.okjii-fast-right1 {
-  position: absolute;
-  width:25%;
-  top: 17%;
-  width:25%;
-  text-align:left;
-  left: 70%;
-  font-size: 1.7rem;
- }
-
-.okjii-fast-right2 {
-  position: absolute;
-  width:25%;
-  top: 34%;
-  width:25%;
-  text-align:left;
-  left: 70%;
-  font-size: 1.7rem;
-}
-
-.okjii-fast-right3 {
-  position: absolute;
-  width:25%;
-  top: 50%;
-  width:25%;
-  text-align:left;
-  left: 70%;
-  font-size: 1.7rem;
-}
-
-.okjii-fast-right4 {
-  position: absolute;
-  width:25%;
-  top: 67%;
-  width:25%;
-  text-align:left;
-  left: 70%;
-  font-size: 1.7rem;
-}
 
 .okjii-fastcon h1{
-  font-size:3rem;
+  font-size:2.1rem !important;
+  font-weight: 300;
+  padding-top: .8rem;
 }
 
+.okjii-fastcon h2{
+  font-size:1.5rem !important;
+  padding-top:.5rem;
+  font-weight: 400;
+}
+
+
 .okjii-fasthow h1{
-  font-size:3rem;
-  font-weight:400;
+  font-size:2.1rem;
+  font-weight:700;
+  color:#5e5e5e !important;
   text-align: center;
   padding-top: 30px;
+  padding-bottom: 30px;
+
 }
 
 .okjii-fastfast h1{
@@ -1068,6 +1013,15 @@ ol.carousel-indicators li {
   font-weight:400;
   text-align: center;
   padding-top: 30px;
+}
+
+
+.okjii-fast{
+  font-size:2.1rem !important;
+  font-weight: 700 !important;
+  color: #5e5e5e !important;
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
 }
 .okjii-fast-img-how {
   width: 60%;
@@ -1079,8 +1033,8 @@ ol.carousel-indicators li {
 }
 
 figcaption h4{
-  font-size:2.5rem !important;
-  font-weight: 400 !important;
+  font-size:1.5rem !important;
+  font-weight: 500 !important;
   color:#5E5E5E !important;
 }
 

@@ -54,19 +54,23 @@ export default class OkjiiFastBody extends Component {
 
         </div>
         <div class="okjii-fastfast">
-          <h1>OkkJi Fast</h1>
+          <h1 className="okjii-fast">OkkJi Fast</h1>
           <figure>
             <img src={img1} className="img-fluid okjii-fast-img" alt="" />
           </figure>
-          <div className="okjii-fast-left1">Rapid delivery at door step</div>
-          <div className="okjii-fast-left2">Get all neighbourhood shop</div>
-          <div className="okjii-fast-left3">Additional hand for shops to deliver on time</div>
-          <div className="okjii-fast-left4">Relationship-oriented shopping in fast track mode</div>
-          <div className="okjii-fast-right1">Three easy steps to shop</div>
-          <div className="okjii-fast-right2">An expressway between shop and customer</div>
-          <div className="okjii-fast-right3">Order anytime, anywhere from nearby store</div>
-          <div className="okjii-fast-right4">Boon for shops that cannot effort home delivery</div>
-
+          <div className="okjii-fast-left1">
+          <div className="okjii-fast-left">Rapid delivery at door step</div>
+          <div className="okjii-fast-left">Get all neighbourhood shop</div>
+          <div className="okjii-fast-left">Additional hand for shops to deliver on time</div>
+          <div className="okjii-fast-left">Relationship-oriented shopping in fast track mode</div>
+          </div>
+          <div className="okjii-fast-right1">
+          
+          <div className="okjii-fast-right">Three easy steps to shop</div>
+          <div className="okjii-fast-right">An expressway between shop and customer</div>
+          <div className="okjii-fast-right">Order anytime, anywhere from nearby store</div>
+          <div className="okjii-fast-right">Boon for shops that cannot effort home delivery</div>
+        </div>
         </div>
         <Testimonial />
         <Trusted />
