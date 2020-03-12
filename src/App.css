@@ -1084,13 +1084,14 @@ figcaption h4{
   background-color: #ffff !important;
 }
 
-.input-group-prepend {
-  margin-right: -1px !important;
+.search-form .input-group-prepend {
+  margin-right: -35px !important;
 }
 
 .search-form{
   margin-top:0 !important;
   margin-bottom: 0 !important;
+  border-radius: 10px !important;
 }
 
 .accordion .accordion-item.active .title:before {
@@ -1177,6 +1178,11 @@ figcaption h4{
 
 }
 
+
+.white {
+  background-color: #fff !important;
+  border-radius: 7px !important;
+}
 
 
 
