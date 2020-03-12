@@ -10,11 +10,13 @@ import OkjiiFast from './components/OkjiiFast';
 import Fastaq from './components/Fastaq';
 import OkjiiOffer from './components/OkjiiOffer';
 import OkjiiBlog from './components/OkkjiBlog';
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <Router>
     <div className="App">
+      <ScrollToTop />
      <Navbar />
      <Switch>
      <Route path='/OkjiiRetailer' >

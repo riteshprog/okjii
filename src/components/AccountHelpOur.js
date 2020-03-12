@@ -3,27 +3,27 @@ import React, { Component } from 'react'
 export default class AccountHelpOur extends Component {
   render() {
     return (
-      <div>
-        <div class="row">
+      <div className="container-fluid">
+        <div class="row okjii-account">
           <div className="col-md-4">
-            <h3 className="mb-3  font-weight-bold">Your Account</h3>
-            <ul className="list-bullet">
-              <li><p>Can't access your account?</p></li>
-              <li><p>Recent order with OkkJi?</p></li>
-              <li><p>Useful stuﬀ you can do with OkkJi?</p></li>
+            <h3 className="mb-3 ">Your Account</h3>
+            <ul className="ml-4">
+              <li><span class="text-blue">Can't access your account?</span></li>
+              <li><span class="text-blue">Recent order with OkkJi?</span></li>
+              <li><span class="text-blue">Useful stuﬀ you can do with OkkJi?</span></li>
             </ul>
           </div>
           <div className="col-md-4">
-            <h3 className="mb-3 font-weight-bold">Social Help</h3>
+            <h3 className="mb-3">Social Help</h3>
             <ul className="list-unstyled">
-              <li><p>Sign in with social account?</p></li>
-              <li><p>Use your personal account or create one just for Help on Social</p></li>
+              <li><span class="text-blue">Sign in with social account?</span></li>
+              <li>Use your personal account or create one just for Help on Social</li>
             </ul>
           </div>
           <div className="col-md-4">
-            <h3 className="mb-3  font-weight-bold">Our Comminites</h3>
+            <h3 className="mb-3 ">Our Comminites</h3>
             <ul className="list-unstyled">
-              <li><p>Learn more about OkkJi, So you can join our online communities</p></li>
+              <li>Learn more about <span class="text-blue">OkkJi</span>, So you can join our online communities</li>
             </ul>
           </div>
         </div>

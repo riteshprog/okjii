@@ -8,24 +8,24 @@ import faqimg05 from '../img/faq/faqimg05.png';
 const FaqCards = () => {
 return (
 <MDBContainer>
-  <MDBCard className="card-body" style={{ width: "18rem", marginTop: "1rem"  }}>
-    <MDBCardText><img src={faqimg02} alt="" width="10%" height="10%" /> Create Store
+  <MDBCard className="card-body faq-card">
+    <MDBCardText><img src={faqimg02} alt="" width="10%" height="20%"/> Create Store
     
     </MDBCardText>
     
   </MDBCard>
-  <MDBCard className="card-body" style={{ width: "18rem", marginTop: "1rem" }}>
-    <MDBCardText><img src={faqimg03} alt="" width="10%" height="10%" /> Offer
+  <MDBCard className="card-body  faq-card">
+    <MDBCardText><img src={faqimg03} alt="" width="10%" height="20%" /> Offer
     </MDBCardText>
     
   </MDBCard>
-  <MDBCard className="card-body" style={{ width: "18rem", marginTop: "1rem" }}>
-    <MDBCardText><img src={faqimg04} alt="" width="10%" height="10%" /> Refer &amp; Earn
+  <MDBCard className="card-body  faq-card">
+    <MDBCardText><img src={faqimg04} alt="" width="10%" height="20%" /> Refer &amp; Earn
     </MDBCardText>
     
   </MDBCard>
-  <MDBCard className="card-body" style={{ width: "18rem", marginTop: "1rem" }}>
-    <MDBCardText><img src={faqimg05} alt="" width="10%" height="10%" /> Nearby Shop
+  <MDBCard className="card-body  faq-card">
+    <MDBCardText><img src={faqimg05} alt="" width="10%" height="20%" /> Nearby Shop
     </MDBCardText>
     
   </MDBCard>

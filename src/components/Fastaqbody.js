@@ -10,7 +10,7 @@ export default class Fastaqbody extends Component {
     return (
       <div>
         <section  className="okkji-faq">
-          <figure className="okkji-faq-figure">
+          <figure className="okkji-faq-figure faqimg01">
             <img src={faqimg01} alt="" className="img-fluid" />
           </figure>
           <div className="search-page">
@@ -18,12 +18,15 @@ export default class Fastaqbody extends Component {
           </div>
           
 
-
+          
+  
+         
        </section>
-       <h1 className="text-center py-3">SUPPORT : 1800 1212 2121</h1>
-          <p className="text-center pt-3">If you need custom services or Need more? Contact us
+
+       <h1 className="faq-h1 pl-3">SUPPORT : 1800 1212 2121</h1>
+          <p className="text-center support-para pl-3 pt-3">If you need custom services or Need more? Contact us
 </p>
-<div className="container">
+      <div className="container">
         <div className="row">
           <div className="col-sm-9 col-md-7 col-lg-9">
           <Faqshowhide />
@@ -33,6 +36,7 @@ export default class Fastaqbody extends Component {
             <FaqCards />
           </div>
         </div>
+        <hr  className="pt-3"/>
         <AccountHelpOur />
         </div>
         <Trusted />

@@ -16,7 +16,7 @@ const SearchPage = () => {
         <input className="form-control my-0 py-1" type="text" placeholder="| Search" aria-label="Search" />
         <div className="input-group-append">
           <span className="input-group-text white lighten-3" id="basic-text1">
-            <img src={faqimg05} alt="" className="img-fluid faqimg05" />
+            <img src={faqimg05} alt="" className="img-fluid  float-right faqimg05" />
           </span>
         </div>
       </div>

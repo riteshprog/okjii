@@ -68,7 +68,7 @@ body{
 .navbar-brand img{
   position: absolute;
 	transition: opacity 0.3s ease;
-	margin-top: -20px !important;
+	margin-top: -15px !important;
 }
 
 
@@ -852,19 +852,14 @@ ol.carousel-indicators li {
 
   }
 
-  .retailer-figure-img2{
+  .retailer-figure-img2, .okjii-fast-img4, .faqimg01{
 
     width: 100% !important;
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
     top: 0px;
     z-index: -1;  
   } 
-  .retailer-figure-img2{
-    width:100% !important;
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-  }
 
 
   
@@ -947,44 +942,6 @@ ol.carousel-indicators li {
   left: 53px;
 }
 
-
-.okjii-fastfast{
-  position: relative;
-  text-align: left;
-  color: #5E5E5E;
-}
-
-
-.okjii-fast-left1{
-  position:absolute !important;
-  top: 24%;
-  left:3rem;
-}
-.okjii-fast-left1 div{
-  width:60% !important;
-  padding-top:35px !important;
-  padding-bottom:35px !important;
-  font-size:1.3rem !important;
-  font-weight: 500;
-
-}
-
-.okjii-fast-right1{
-  position:absolute !important;
-  top: 24%;
-  right:35%;
-}
-.okjii-fast-right1 div{
-  width:60% !important;
-  padding-top:35px !important;
-  padding-bottom:35px !important;
-  font-size:1.3rem !important;
-  font-weight: 500;
-
-}
-
-
-
 .okjii-fastcon h1{
   font-size:2.1rem !important;
   font-weight: 300;
@@ -996,6 +953,63 @@ ol.carousel-indicators li {
   padding-top:.5rem;
   font-weight: 400;
 }
+
+.okjii-fastfast{
+  position: relative;
+  text-align: left;
+  color: #5E5E5E;
+}
+
+
+.okjii-fast-left1{
+  position: absolute;
+  top: 173px;
+  left: 5rem;
+  border:1px solid red;
+  width:20%;
+}
+.okjii-fast-left1 div{
+  padding-top:36px !important;
+  padding-bottom:36px !important;
+  font-size:1.2rem !important;
+  font-weight: 500;
+
+}
+
+.okjii-fast-left1 div:last-child{
+  padding-top:10px !important;
+  padding-bottom:10px !important;
+  font-size:1.2rem !important;
+  font-weight: 500;
+
+}
+
+.okjii-fast-right1{
+  position: absolute;
+  top: 173px;
+  right: 10px;
+  border:1px solid red;
+  width:25%;
+}
+.okjii-fast-right1 div{
+  padding-top:35px !important;
+  padding-bottom:35px !important;
+  font-size:1.2rem !important;
+  font-weight: 500;
+
+}
+
+.okjii-fast-right1 div:nth-of-type(3){
+  padding-top:15px !important;
+  padding-bottom:15px !important;
+  font-size:1.2rem !important;
+  font-weight: 500;
+
+}
+
+
+
+
 
 
 .okjii-fasthow h1{
@@ -1029,7 +1043,7 @@ ol.carousel-indicators li {
 }
 
 .faqimg05, .faqimg07{
-  width:80% !important;
+  width:50% !important;
 }
 
 figcaption h4{
@@ -1047,10 +1061,21 @@ figcaption h4{
 
 }
 
+.faq-h1{
+  font-size:2.1rem;
+  font-weight: 700;
+  color:#5e5e5e;
+  text-align: center;
+  display: block;
+}
+
+
+
+
 .search-page{
   position:absolute;
   width:100%;
-  top:25%;
+  top:35%;
   display:flex;
   justify-content: center !important;
 }
@@ -1106,16 +1131,53 @@ figcaption h4{
 .accordion .accordion-item .title {
   background-color: #fff !important;
   border: 1px solid #5E5E5E !important;
-  color: #444;
-  font-size: 1.5rem !important;
+  color: #5e5e5e !important;
+  font-size: 1.2rem !important;
   cursor: pointer;
   padding: 18px;
   width: 100%;
+  font-weight: 400 !important;
   text-align: left;
   border: none;
   outline: none;
   transition: 0.4s;
 }
+
+.support-para{
+  font-size:1.05rem !important;
+  color:#5e5e5e;
+  font-weight: 400 !important;
+}
+
+.text-blue{
+  color:blue;
+}
+
+.okjii-account h3{
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
+  color: #5e5e5e !important;
+  padding-bottom: 1rem;
+}
+
+.faq-card{
+  margin-top: 1rem !important;
+}
+
+.faq-card img{
+  margin-right: 1rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important; 
+}
+
+.faq-card p{
+  font-size:1.2rem !important;
+  font-weight: 500 !important;
+  color: #5e5e5e !important;
+
+}
+
+
 
 
 /*  offfer page Css*/
@@ -1363,12 +1425,19 @@ ol.okkji-howtoapply-list{
   display: none !important;
 }
 
+.navbar-nav > li{
+  padding-right:15px;
+}
+
 nav#parallelogram {
   background-color: #259A70 !important;
 }
 
 .navbar-brand{
   margin-left:0 !important;
+}
+.navbar-collapse{
+  padding-top:15px;
 }
 
 .okjii-explore {
@@ -1396,16 +1465,19 @@ nav#parallelogram {
 .retailer-figure-img2{
 
   width: 100% !important;
-  padding-right: 0;
-  padding-left: 0;
-  top: 24px;
-  z-index: -1;  
-} 
-.retailer-figure-img2{
-  width:100% !important;
   padding-right: 0 !important;
   padding-left: 0 !important;
+  margin-top: 24px !important;
+  z-index: -1;  
 }
+.okjii-fast-img4, .faqimg01{
+
+  width: 100% !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-top: 34px !important;
+  z-index: -1;  
+} 
 
 .carousel-control-next{
   top:100% !important;
@@ -1455,6 +1527,11 @@ nav#parallelogram {
   font-weight: 700 !important;
 }
 
+.okjii-retaler h1 {
+  padding-bottom: 2rem;
+  padding-top:0rem;
+}
+
 .okjii-daily h1 {
   padding-top: 2rem !important;
   color: #2A2AFF !important;
@@ -1486,84 +1563,92 @@ padding-top:1rem !important;
   font-size: 1.2rem !important;
 }
 
-
-.okjii-fast-left1 {
+.okjii-fastcon {
   position: absolute;
-  top: 39%;
-  width:25%;
-  text-align:left;
-  left: 2%;
-  font-size: .5rem;
-  
-}
-.okjii-fast-left2{
-  position: absolute;
-  top: 51%;
-  width:25%;
-  text-align:left;
-  left: 2%;
-  font-size: .5rem;
-  
-}
-.okjii-fast-left3{
-  position: absolute;
-  top: 63.5%;
-  width:25%;
-  text-align:left;
-  left: 2%;
-  font-size: .5rem;
-  
+  top: 50px;
+  left: 20px;
 }
 
-.okjii-fast-left4{
-  position: absolute;
-  top: 76%;
-  width:25%;
-  text-align:left;
-  left: 2%;
-  font-size: .5rem;
-  
+.okjii-fastcon h1{
+  font-size:1.5rem !important;
+  font-weight: 300;
+  padding-top: .5rem;
+  padding-bottom: 0 !important;
+}
+
+.okjii-fastcon h2{
+  font-size:1rem !important;
+  font-weight: 400;
 }
 
 
-.okjii-fast-right1 {
-  position: absolute;
-  width:25%;
-  top: 39%;
-  text-align:left;
-  left: 74%;
-  font-size: .5rem;
- }
-
-.okjii-fast-right2 {
-  position: absolute;
-  width:25%;
-  top: 52%;
-  width:25%;
-  text-align:left;
-  left: 74%;
-  font-size: .5rem;
+.okjii-fast {
+  font-size: 2.1rem !important;
+  font-weight: 700 !important;
+  color: #5e5e5e !important;
+  text-align: center !important;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
 }
 
-.okjii-fast-right3 {
-  position: absolute;
-  width:25%;
-  top: 64%;
-  width:25%;
-  text-align:left;
-  left: 74%;
-  font-size: .5rem;
+
+.search-page{
+  position:absolute;
+  width:100%;
+  top:45%;
+  display:flex;
+  justify-content: center !important;
+}
+.faqimg05, .faqimg07 {
+  width: 25% !important;
 }
 
-.okjii-fast-right4 {
+/* okkjii for fast ****/
+/*.okjii-fast-left1{
   position: absolute;
-  width:25%;
-  top: 75%;
-  width:25%;
-  text-align:left;
-  left: 74%;
-  font-size: .5rem;
+  top: 173px;
+  left: 1rem;
+  border:1px solid red;
+  width:23%;
 }
+.okjii-fast-left1 div{
+  padding-top:10px !important;
+  padding-bottom:10px !important;
+  font-size:.3rem !important;
+  font-weight: 400;
+
+}
+
+.okjii-fast-left1 div:last-child{
+  padding-top:0px !important;
+  padding-bottom:0px !important;
+  font-size:.3rem !important;
+  font-weight: 400;
+
+}
+
+.okjii-fast-right1{
+  position: absolute;
+  top: 173px;
+  right: 6px;
+  border:1px solid red;
+  width:25%;
+}
+.okjii-fast-right1 div{
+  padding-top:14px !important;
+  padding-bottom:14px !important;
+  font-size:.6rem !important;
+  font-weight: 400;
+
+}
+
+.okjii-fast-right1 div:nth-of-type(3){
+  padding-top:0px !important;
+  padding-bottom:0px !important;
+  font-size:.6rem !important;
+  font-weight: 400;
+
+}*/
 
 
 }
@@ -1596,87 +1681,6 @@ padding-top:1rem !important;
   height:50px !important
 }
 
-.okjii-fast-left1 {
-  position: absolute;
-  width:25%;
-  top: 28%;
-  width:25%;
-  text-align:left;
-  left: 2%;
-  font-size: .9rem;
-  
-}
-.okjii-fast-left2{
-  position: absolute;
-  width:25%;
-  top: 42%;
-  width:25%;
-  text-align:left;
-  left: 2%;
-  font-size: .9rem;
-  
-}
-.okjii-fast-left3{
-  position: absolute;
-  width:25%;
-  top: 57%;
-  width:25%;
-  text-align:left;
-  left: 2%;
-  font-size: .9rem;
-  
-}
-
-.okjii-fast-left4{
-  position: absolute;
-  top: 71%;
-  width:25%;
-  text-align:left;
-  left: 2%;
-  font-size: .9rem;
-  
-}
-
-
-.okjii-fast-right1 {
-  position: absolute;
-  width:25%;
-  top: 28%;
-  width:25%;
-  text-align:left;
-  left: 74%;
-  font-size: .9rem;
- }
-
-.okjii-fast-right2 {
-  position: absolute;
-  width:25%;
-  top: 42%;
-  width:25%;
-  text-align:left;
-  left: 74%;
-  font-size: .9rem;
-}
-
-.okjii-fast-right3 {
-  position: absolute;
-  width:25%;
-  top: 57%;
-  width:25%;
-  text-align:left;
-  left: 74%;
-  font-size: .9rem;
-}
-
-.okjii-fast-right4 {
-  position: absolute;
-  width:25%;
-  top: 71%;
-  width:25%;
-  text-align:left;
-  left: 74%;
-  font-size: .9rem;
-}
 
 } 
 

@@ -4,7 +4,7 @@ import 'react-light-accordion/demo/css/index.css';
 
 
 const Faqshowhide = () => (
-  <div className="my-3">
+  <div className="accordian-title my-3">
     <Accordion atomic={true}>
 
       <AccordionItem title="Which license do I need?">

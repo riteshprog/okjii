@@ -62,36 +62,14 @@
 var logo = "/static/media/logo.0ace7e07.png";
 $(function () { 
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 60) { 
+        if ($(this).scrollTop() > 10) { 
             $('.navbar .navbar-brand img').attr('src',whitelogo);
         }
-        if ($(this).scrollTop() < 60) { 
+        if ($(this).scrollTop() < 10) { 
             $('.navbar .navbar-brand img').attr('src','/static/media/logo.0ace7e07.png');
         }
     })
 });</script>
-<script>
-  $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            nav:true
-        },
-        600:{
-            items:3,
-            nav:false
-        },
-        1000:{
-            items:5,
-            nav:true,
-            loop:false
-        }
-    }
-})
-</script>
 
   </body>
 </html>
