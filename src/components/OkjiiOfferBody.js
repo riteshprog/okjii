@@ -9,7 +9,7 @@ export default class OkjiiOfferBody extends Component {
   render() {
     return (
       <div>
-      <section className="container-fluid okjii-offer">
+      <div className="container-fluid okjii-offer">
         <div className="row image-position">
         <div className="col-md-7 figure-img2 order-md-2 my-5">
         <img src={Offer} className="img-fluid"  alt="" />
@@ -22,10 +22,10 @@ export default class OkjiiOfferBody extends Component {
 <InputPage />
 </div>
 </div>
-</section>
+</div>
 <OkjiiofferCard />
-<AmazingOffer />
-<HowtoApply />
+{/*<AmazingOffer />*/}
+{/*<HowtoApply />*/}
 <Trusted />
       </div>
     )

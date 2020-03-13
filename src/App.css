@@ -12,8 +12,8 @@ p{
 }
 
 h1{
-  font-size:2rem !important;
-  font-weight: 400;
+  font-size:2.1rem !important;
+  font-weight: 500;
 }
 
 img{
@@ -807,12 +807,12 @@ ol.carousel-indicators li {
 }
 
 .okjii-retaler h1{
-  font-weight: 700;
-  font-size:2rem;
+  font-weight: 500;
+  font-size:2.1rem;
   color:#5E5E5E;
-  padding-top: 5rem;
+  padding-top: 3rem;
   padding-left:1rem;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
 }
 
 .okjii-retaler h1 span.text-green{
@@ -857,7 +857,7 @@ ol.carousel-indicators li {
     width: 100% !important;
     padding-right: 0 !important;
     padding-left: 0 !important;
-    top: 0px;
+    top: -16px;
     z-index: -1;  
   } 
 
@@ -869,6 +869,10 @@ ol.carousel-indicators li {
   }
 
 
+.okjii-sell-online{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
 
 .okjii-sell-online h1{
   color:#2A2AFF !important;
@@ -907,7 +911,7 @@ ol.carousel-indicators li {
 }
 
 .okjii-whyweshop section h1{
-  font-size:2.5rem !important;
+  font-size:2.1rem !important;
   font-weight: 400 !important;
   padding-bottom: 1.5rem;
   color:#5E5E5E;
@@ -1397,13 +1401,14 @@ ol.okkji-howtoapply-list{
 
 .bolded-list-indicator li {
   font-weight: 700;
-  font-size:1.8rem;
+  font-size:1.1rem;
 }
 
 .bolded-list-indicator li p {
   
   font-weight: 400;
   padding-left: 2rem;
+  font-size:1.1rem;
 }
 
 .navbar-brand .mobile{
@@ -1467,6 +1472,20 @@ nav#parallelogram {
   padding-right: 0 !important;
   padding-left: 0 !important;
 }
+.retailer-figure-img2, .okjii-fast-img4, .faqimg01{
+
+  top: 0px;
+  z-index: -1;  
+}
+
+.home-delivery-figure-img {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.home-delivery-figure-img, .okjii-figure-imgkhata, .okjii-create-store-img, figure.daily-figure-img  {
+  width: 100% !important;
+}
+
 
 .retailer-figure-img2{
 
@@ -1517,6 +1536,11 @@ nav#parallelogram {
   padding-top:0rem !important;
 }
 
+img.rounded-circle.testimoni-img {
+  margin-left: 0 !important;
+  margin-right: 20px !important;
+}
+
 .container {
   width: 100%;
   padding-right: 0px; 
@@ -1536,6 +1560,24 @@ nav#parallelogram {
 .okjii-retaler h1 {
   padding-bottom: 2rem;
   padding-top:0rem;
+}
+
+.okjii-create-store-background{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+  
+  .okjii-create-store h1{
+      padding-top: 1rem !important;
+      padding-bottom: .5rem;
+    
+  }
+
+
+.okjii-sell-online{
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .okjii-daily h1 {

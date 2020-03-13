@@ -27,8 +27,8 @@ export default class OkjiiRetailerBody extends Component {
             <h1>Partner <span className="text-normal">with</span> <span className="text-green">Okk</span>Ji</h1>
             <ContactForm />
 
-
-            <div className="row text-center mt-5">
+            <div className="container">
+                          <div className="row text-center mt-5">
                         <div className="col-sm-6">
                            <img className="img-fluid apple"  src={apple} alt=""/>
                         </div>
@@ -38,6 +38,8 @@ export default class OkjiiRetailerBody extends Component {
 
                       </div>
           </div>
+          </div>
+
           
                   </div>
 

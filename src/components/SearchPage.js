@@ -8,7 +8,7 @@ const SearchPage = () => {
   return (
     <MDBCol md="6">
       <div className="input-group search-form md-form form-sm form-1 pl-0">
-        <div className="input-group-prepend">
+        <div className="input-group-prepend ">
           <span className="input-group-text white lighten-3" id="basic-text1">
             <img src={faqimg07} alt="" className="img-fluid faqimg07" />
           </span>

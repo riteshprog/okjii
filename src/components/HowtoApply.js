@@ -4,10 +4,11 @@ export default class HowtoApply extends Component {
   render() {
     return (
       <div>
-        <section className="okkji-howtoapply">
+        <div className="container-fluid okkji-howtoapply">
+          <div className="row">
         <h1 className="text-center py-5">How to Apply</h1>
         <div>
-          <ol className="bolded-list-indicator card okkji-howtoapply-list">
+          <ol className="bolded-list-indicator okkji-howtoapply-list">
             <li><p>The oﬀer begins on 03/12/2019.</p></li>
             <li><p>The promo code can be used two times per user. </p></li>
             <li><p>The oﬀer is valid on two categories: Utility (Electricity, DTH, Broadband, Datacard, Postpaid) and Prepaid Recharge.</p></li>
@@ -22,7 +23,8 @@ export default class HowtoApply extends Component {
             <li><p>By participating in Bill Pe Bachat you agree to be governed by the terms and conditions of this oﬀer.</p></li>
           </ol>
         </div>
-        </section>
+        </div>
+        </div>
       </div>
     )
   }

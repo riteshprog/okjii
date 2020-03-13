@@ -24,7 +24,7 @@ export default class SellOnline extends Component {
  
           </div>
           <div className="col-sm-12 col-md-12 col-lg-6">
-            <figure className="home-delivery-figure-img my-5">
+            <figure className="home-delivery-figure-img">
               <img src={sellonline} alt="Create Your Shop" className="img-fluid sellonline" />
             </figure>
           </div>

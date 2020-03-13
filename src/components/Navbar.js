@@ -19,7 +19,7 @@ render() {
   return (
     <div className=" bg-image">
       <MDBNavbar  className="nav-bar fixed-top"  id="parallelogram" dark expand="md" >
-        <MDBNavbarBrand>
+        <MDBNavbarBrand href="/">
         <img src={logowhite} alt="store" class="mobile"  id="logo" height="35"/>
         <img src={logo} alt="store" class="desktop"  id="logo" height="35"/>
        
@@ -32,7 +32,7 @@ render() {
               <MDBNavLink  to="/">HOME</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="/OkjiiRetailer">OKKJI FOR RETAILER</MDBNavLink>
+              <MDBNavLink  to="/OkjiiRetailer">OKKJI FOR RETAILER</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink to="/OkjiiFast">OKKJI FAST</MDBNavLink>
