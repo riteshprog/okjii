@@ -46,7 +46,7 @@ import InputPageButton from './InputPageButton';
 
                     <h2>all nearby mom-dad retail shops.</h2>
 
-                    <p>A revolution in grocery shopping where a customer can buy from their old reliable “Kirana” store without physically going there. A digital hub of all local, neighbourhood retail shop with era driven look and mechanism.
+                    <p>A revolutionn in grocery shopping where a customer can buy from their old reliable “Kirana” store without physically going there. A digital hub of all local, neighbourhood retail shop with era driven look and mechanism.
 
                     </p>
                       <div className="okjii-install-image">
