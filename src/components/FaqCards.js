@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBCard, MDBCardText, MDBContainer } from "mdbreact";
+import { MDBCard, MDBCardText } from "mdbreact";
 import faqimg02 from '../img/faq/faqimg02.png';
 import faqimg03 from '../img/faq/faqimg03.png';
 import faqimg04 from '../img/faq/faqimg04.png';
@@ -7,7 +7,7 @@ import faqimg05 from '../img/faq/faqimg05.png';
 
 const FaqCards = () => {
 return (
-<MDBContainer>
+<div>
   <MDBCard className="card-body faq-card">
     <MDBCardText><img src={faqimg02} alt="" width="10%" height="20%"/> Create Store
     
@@ -30,7 +30,7 @@ return (
     
   </MDBCard>
 
-</MDBContainer>
+</div>
 );
 };
 

@@ -8,7 +8,7 @@ import AccountHelpOur from './AccountHelpOur'
 export default class Fastaqbody extends Component {
   render() {
     return (
-      <div>
+      <div className="okkji-faqs">
         <section  className="okkji-faq">
           <figure className="okkji-faq-figure faqimg01">
             <img src={faqimg01} alt="" className="img-fluid" />

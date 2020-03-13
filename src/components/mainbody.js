@@ -29,18 +29,14 @@ import InputPageButton from './InputPageButton';
               <div className="container-fluid okjii-mainbody">
 
                 <div className="row image-position">
-                <div className="col-md-12 col-sm-12 col-lg-7 width-65 figure-img2 order-md-2 okjii-explore-right">
+                <div className="col-md-7 col-sm-12 col-lg-7 figure-img2 order-md-2">
 
 <img src={Asset6} className="img-fluid"  alt="" />
 
     
 
 </div>
-
-
-
-
-                  <div className="col-md-12 col-sm-12 col-lg-5 width-35 order-md-1 mt-5 okjii-explore okjii-explore-left">
+                  <div className="col-md-5 col-sm-12 col-lg-5 order-md-1 mt-5 okjii-explore okjii-explore-left">
 
                     <h1>Best Way to Explore</h1>
 
