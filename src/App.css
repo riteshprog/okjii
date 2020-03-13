@@ -1419,6 +1419,9 @@ ol.okkji-howtoapply-list{
   margin-top: 50px !important;
   z-index: -1; 
 }
+figure.figure-whayweshop img {
+  border-radius: 15px !important;
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen  and (max-width: 600px) {
