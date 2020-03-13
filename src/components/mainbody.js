@@ -42,7 +42,7 @@ import InputPageButton from './InputPageButton';
 
                   <div className="col-md-12 col-sm-12 col-lg-5 width-35 order-md-1 mt-5 okjii-explore okjii-explore-left">
 
-                    <h1>Best Way to Exploreeee</h1>
+                    <h1>Best Way to Explore</h1>
 
                     <h2>all nearby mom-dad retail shops.</h2>
 

@@ -29,7 +29,7 @@ render() {
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
           <MDBNavbarNav right>
             <MDBNavItem active>
-              <MDBNavLink  to="/">HOME</MDBNavLink>
+              <MDBNavLink  to="/">HOMEE</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink  to="/OkjiiRetailer">OKKJI FOR RETAILER</MDBNavLink>
@@ -41,7 +41,7 @@ render() {
               <MDBNavLink to="/Fastaq">FAQ</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="/OkjiiOffer">OFFER <sup class="badge badge-warning badge-text"><span >New</span></sup></MDBNavLink>
+              <MDBNavLink  to="/OkjiiOffer">OFFER <sup class="badge badge-warning badge-text"><span >New</span></sup></MDBNavLink>
             </MDBNavItem>
 
             
