@@ -5,7 +5,6 @@
   
 }
 
-
 p{
   font-size:1.25rem;
   color:#5E5E5E;
@@ -66,8 +65,7 @@ body{
 
 .navbar-brand img{
   position: absolute;
-	transition: opacity 0.3s ease;
-	margin-top: -15px !important;
+	margin-top: -17px !important;
 }
 
 
@@ -147,7 +145,7 @@ nav#parallelogram {
   margin: 0;
   flex-direction: row;
   justify-content: space-around;
-  font-size: 0.90rem !important;
+  font-size: 0.85rem !important;
   font-weight:300px !important;
   flex-wrap: nowrap;
   word-break: normal;
@@ -184,21 +182,24 @@ a{
 }
 
 .okjii-explore h1{
-  font-weight: 700;
-  color:#5e5e5e !important;
-  padding-top:3.5rem !important
+      font-weight: 500;
+    color: #5e5e5e !important;
+    font-size: 22pt;
+    padding-top: 4.5rem !important;
 }
 
 .okjii-explore h2{
-  padding-bottom: 2rem !important;
-  font-size: 1.8rem !important;
-  font-weight:500 !important;
-  color:#5e5e5e !important;
+      padding-bottom: 2rem !important;
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+    color: #5e5e5e !important;
+    letter-spacing: 0.3px;
 }
 
 .okjii-explore p{
-  color: #5e5e5e !important;
-  font-size:1.1rem !important;
+     color: #5e5e5e !important;
+    font-size: 1rem !important;
+    letter-spacing: 0.5px;
 }
 
 .install-now, p.install-now {
@@ -291,44 +292,42 @@ flex-direction: row;
 
 .okjii-best h1{
 
-  font-weight:400 !important;
-  padding-top: 4rem !important;
-  color: #5E5E5E;
-  font-size:2rem !important;
-  font-weight:700;
-  padding-bottom: 1.8rem !important;
+    padding-top: 4rem !important;
+    color: #5E5E5E;
+    font-size: 1.6rem !important;
+    padding-bottom: 1.6rem !important;
 }
 .okjii-best b.best{
-  font-weight:700 !important;
-  font-size:2rem !important;
-  color: #5E5E5E;
-  
+ font-weight: 500 !important;
+    font-size: 1.6rem !important;
+    color: #5E5E5E;
   
 }
 .okjii-daily {
-  background-color: #F7F7F7 !important;
-  padding-bottom: 25px;
+     background-color: #F7F7F7 !important;
+    padding-bottom: 7px;
+    padding-top: 5px;
 }
 
 
 .okjii-daily h1{
   padding-top: 4rem !important;
   color:#2A2AFF !important;
-  font-weight: 400 !important;
-  font-size:2.1rem !important;
+  font-size:1.6rem !important;
   padding-bottom: 1rem;
 }
 
 .okjii-daily b.daily{
-  font-size: 2rem !important;
-  font-weight: 700;
+  font-size: 1.6rem !important;
+  font-weight: 500;
   color:#2A2AFF !important;
 
 }
 .okjii-daily p{
-  color: #5e5e5e !important;
-  font-size:1.1rem !important;
-  padding-bottom: .5rem !important;
+     color: #5e5e5e !important;
+    font-size: 1rem !important;
+    padding-bottom: .5rem !important;
+    letter-spacing: 0.5px;
 
 }
 
@@ -340,9 +339,11 @@ ul.list-unstyle {
 }
 
 .list-unstyle li{
-  font-size:1.1rem !important;
+  font-size:1rem !important;
   line-height: 1.9em !important;
   color:#5E5E5E;
+      color: #5E5E5E;
+    letter-spacing: 0.1px;
 }
 
 
@@ -361,22 +362,22 @@ figure.daily-figure-img {
 .okjii-homedelivery h1{
   color:#2A2AFF !important;
   padding-top: 2rem !important;
-  font-weight: 400 !important;
-  font-size:2.1rem !important;
+  font-size:1.6rem !important;
   padding-bottom: .5rem;
 }
 
 .okjii-homedelivery b.home{
-  font-size: 2rem !important;
-  font-weight: 700;
+  font-size: 1.6rem !important;
+  font-weight: 500;
   color:#2A2AFF !important;
 
 }
 
 .okjii-homedelivery p{
   color: #5e5e5e !important;
-  font-size:1.1rem !important;
+  font-size:1rem !important;
   padding-bottom: 0.5rem !important;
+  letter-spacing: 0.5px;
 }
 .home-delivery-figure-img{
   width:90% !important;
@@ -389,12 +390,13 @@ figure.daily-figure-img {
 }
 
 
-
-
 /* Khata Book */
 
 .okjii-khatabook1{
   background-color: #3BA778 !important;
+   padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+
 }
 
 section.okjii-khatabook{
@@ -403,32 +405,31 @@ section.okjii-khatabook{
 }
 
 
-.okjii-khatabook1{
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
-}
 
 
 .okjii-khatabook1 h1{
   padding-top: 2rem !important;
-  font-weight: 700 !important;
-  font-size:2rem !important;
+  font-weight: 500 !important;
+  font-size:1.6rem !important;
   padding-bottom: .5rem;
   color:#fff;
 }
 
 .okjii-khatabook1 p{
-  color:#fff !important;
-  font-size:1.1rem !important;
-  padding-bottom: 0.5rem !important;
+     color: #fff !important;
+    font-size: 1rem !important;
+    padding-bottom: 0.5rem !important;
+    letter-spacing: 0.5px;
   
 }
 
 .list-unstyle.list-color li{
 
-  font-size:1.1rem !important;
+  font-size:1rem !important;
   line-height: 1.9em !important;
   color:#fff;
+      letter-spacing: 0.1px;
+
 
 }
 .no-break{
@@ -443,31 +444,31 @@ section.okjii-khatabook{
 }
 
 .home-testimonial h1{
-color:#5e5e5e !important;
-padding-top: 5rem !important;
-font-weight: 600 !important;
-font-size:2rem !important;
-padding-bottom: .6rem;
+    color: #5e5e5e !important;
+    padding-top: 20% !important;
+    font-weight: 500;
+    font-size: 1.6rem !important;
+    padding-bottom: .3rem;
 }
 
 .home-testimonial h2{
-  color:#5e5e5e !important;
-  padding-bottom: 1rem;
-  font-size:1.8rem !important;
-  font-weight:450 !important;
+     color: #5E5E5E;
+    font-size: 1.5rem !important;
+    padding-bottom: 0.5rem !important;
+    padding-top: 6px;
 }
 
+
 .home-testimonial p{
-  font-size:1.1rem !important;
+  font-size:1rem !important;
 }
 
 .testmonial-slide h2{
-  
-  color:#5e5e5e !important;
-  padding-top: 1.8rem;
-  font-size:1.8rem !important;
-  font-weight:450 !important;
-  padding-bottom: 0 !important;
+    color: #5e5e5e !important;
+    padding-top: 1.8rem;
+    font-size: 1.5rem !important;
+    font-weight: 400;
+    padding-bottom: 0 !important;
 }
 .testmonial-slide p{
 padding-top: 0 !important;
@@ -492,6 +493,7 @@ i.fa.fa-quote-left.color-green {
   align-content: center !important;
   justify-content: space-between;
   flex-wrap: wrap !important;
+  margin-bottom: 4px;
 }
 
 .testmonial-slide.carousel-fade a.carousel-control-prev {
@@ -559,6 +561,7 @@ img.rounded-circle.testimoni-img {
 
 .home-testimonial blockquote p{
   font-size:1rem !important;
+  letter-spacing: 0.5px;
 }
 
 
@@ -572,8 +575,8 @@ img.rounded-circle.testimoni-img {
 
 .h1-trusted h1{
   color:#5e5e5e !important;
-  font-weight: 450 !important;
-  font-size:1.8rem !important;
+  font-weight: 500 !important;
+  font-size:1.6rem !important;
   padding-bottom: 2rem;
   }
   
@@ -621,7 +624,7 @@ h4.payment{
   padding-bottom: 1rem !important;
 }
 .list-unstyled.footer-list li{
-  padding-bottom: .1rem !important;
+  padding-bottom: .3rem !important;
 }
 
 footer.page-footer{
