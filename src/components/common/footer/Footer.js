@@ -1,11 +1,11 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBIcon, MDBRow, MDBFooter } from "mdbreact";
-import paytm from '../img/paytm.png';
-import bhim from '../img/bhim.png';
-import MasterCard from '../img/MasterCard.png';
-import Maestro from '../img/Maestro.png';
-import paypal from '../img/paypal.png';
-import visa from '../img/visa.png';
+import paytm from '../../../img/paytm.png';
+import bhim from '../../../img/bhim.png';
+import MasterCard from '../../../img/MasterCard.png';
+import Maestro from '../../../img/Maestro.png';
+import paypal from '../../../img/paypal.png';
+import visa from '../../../img/visa.png';
 
 
 

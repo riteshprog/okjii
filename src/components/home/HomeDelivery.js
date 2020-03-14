@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {MDBIcon} from "mdbreact";
-import Asset2 from '../img/home/Asset2.png';
+import Asset2 from '../../img/home/Asset2.png';
 
 export default class HomeDelivery extends Component {
   render() {

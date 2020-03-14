@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Asset3 from '../img/home/Asset3.png';
-import checked from '../img/home/checked.png';
+import Asset3 from '../../img/home/Asset3.png';
+import checked from '../../img/home/checked.png';
 
 export default class KhataBook extends Component {
   render() {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {MDBIcon} from "mdbreact";
-import sellonline from '../img/retailer/sellonline.png';
+import sellonline from '../../img/retailer/sellonline.png';
 
 export default class SellOnline extends Component {
   render() {

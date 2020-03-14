@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import OkjiiRetailerBody from './OkjiiRetailerBody'
+import OkjiiRetailerBody from '../retailer/OkjiiRetailerBody'
 
 export default class OkjiiRetailer extends Component {
   render() {

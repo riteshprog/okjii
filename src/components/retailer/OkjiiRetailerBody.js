@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import retailer from '../img/retailer/Retailer.png';
-import apple from '../img/home/apple.png';
-import google from '../img/home/google.png';
-import Testimonial from './Testimonial';
-import Trusted from './Trusted';
-import ContactForm from './ContactForm';
-import CreateStore from './CreateStore';
-import SellOnline from './SellOnline';
-import WhyweShop from './WhyweShop';
+import retailer from '../../img/retailer/Retailer.png';
+import apple from '../../img/home/apple.png';
+import google from '../../img/home/google.png';
+import Testimonial from '../common/testimonial/Testimonial';
+import Trusted from '../common/Trusted';
+import ContactForm from '../retailer/ContactForm';
+import CreateStore from '../retailer/CreateStore';
+import SellOnline from '../retailer/SellOnline';
+import WhyweShop from '../retailer/WhyweShop';
 
 
 export default class OkjiiRetailerBody extends Component {

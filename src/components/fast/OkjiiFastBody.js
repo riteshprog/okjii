@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import img4 from '../img/okjiifast/img4.png';
+import img4 from '../../img/okjiifast/img4.png';
 //import img2a from '../img/okjiifast/img2a.png';
 //import img2b from '../img/okjiifast/img2b.png';
 //import img2c from '../img/okjiifast/img2c.png';
-import Howwework from '../img/okjiifast/Howwework.png';
-import OkkJiFast01 from '../img/okjiifast/OkkJiFast01.png';
-import img1 from '../img/okjiifast/img1.png';
-import Testimonial from './Testimonial';
-import Trusted from './Trusted';
+import Howwework from '../../img/okjiifast/Howwework.png';
+import OkkJiFast01 from '../../img/okjiifast/OkkJiFast01.png';
+//import img1 from '../img/okjiifast/img1.png';
+import Testimonial from '../common/testimonial/Testimonial';
+import Trusted from '../common/Trusted';
 
 export default class OkjiiFastBody extends Component {
   render() {

@@ -1,7 +1,7 @@
 import React from "react";
 import { MDBCol} from "mdbreact";
-import faqimg07 from '../img/faq/faqimg07.png';
-import faqimg05 from '../img/faq/faqimg05.png';
+import faqimg07 from '../../img/faq/faqimg07.png';
+import faqimg05 from '../../img/faq/faqimg05.png';
 
 
 const SearchPage = () => {

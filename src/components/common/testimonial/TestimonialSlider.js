@@ -1,7 +1,7 @@
 import React from "react";
 import { MDBCarousel, MDBCarouselInner, MDBCarouselItem,  MDBContainer, MDBIcon } from
 "mdbreact";
-import avatar from '../img/home/avatar.png';
+import avatar from '../../../img/home/avatar.png';
 
 const TestimonialSlider = () => {
   return (

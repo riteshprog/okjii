@@ -3,10 +3,10 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-import vishal from '../img/home/vishal.png';
-import vmart from '../img/home/vmart.png';
-import easyday from '../img/home/easyday.png';
-import twentyfour from '../img/home/24.png';
+import vishal from '../../img/home/vishal.png';
+import vmart from '../../img/home/vmart.png';
+import easyday from '../../img/home/easyday.png';
+import twentyfour from '../../img/home/24.png';
 class Trusted extends React.Component {
   state= {
     responsive:{

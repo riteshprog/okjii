@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {MDBIcon} from "mdbreact";
-import createshop2 from '../img/retailer/createshop2.png';
+import createshop2 from '../../img/retailer/createshop2.png';
 
 export default class HomeDelivery extends Component {
   render() {

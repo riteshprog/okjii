@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Fastaqbody from './Fastaqbody';
+import Fastaqbody from '../faq/Fastaqbody';
 export default class Fastaq extends Component {
   render() {
     return (

@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
+import Daily from '../home/daily';
 
-import Daily from '../components/daily';
 
-import Asset6 from '../img/home/Asset6.png';
 
-import apple from '../img/home/apple.png';
+import Asset6 from '../../img/home/Asset6.png';
 
-import google from '../img/home/google.png';
+import apple from '../../img/home/apple.png';
 
-import Asset7 from '../img/home/Asset7.png';
+import google from '../../img/home/google.png';
+
+import Asset7 from '../../img/home/Asset7.png';
 
 import HomeDelivery from './HomeDelivery';
 
 import KhataBook from './KhataBook';
 
-import Testimonial from './Testimonial';
+import Testimonial from '../common/testimonial/Testimonial';
 
-import Trusted from './Trusted'
+import Trusted from '../common/Trusted';
 
-import InputPageButton from './InputPageButton';
+import InputPageButton from '../InputPageButton';
 
         export default class mainbody extends Component {
 

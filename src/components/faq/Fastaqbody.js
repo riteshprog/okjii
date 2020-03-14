@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import faqimg01 from '../img/faq/faqimg01.png';
-import Trusted from './Trusted';
-import SearchPage from './SearchPage';
-import Faqshowhide from './Faqshowhide';
-import FaqCards from './FaqCards'
-import AccountHelpOur from './AccountHelpOur'
+import faqimg01 from '../../img/faq/faqimg01.png';
+import Trusted from '../common/Trusted';
+import SearchPage from '../faq/SearchPage';
+import Faqshowhide from '../faq/Faqshowhide';
+import FaqCards from '../faq/FaqCards';
+import AccountHelpOur from '../faq/AccountHelpOur';
 export default class Fastaqbody extends Component {
   render() {
     return (

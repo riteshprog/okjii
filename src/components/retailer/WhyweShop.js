@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import img1 from '../img/retailer/img1.jpg';
-import img2 from '../img/retailer/img2.jpg';
+import img1 from '../../img/retailer/img1.jpg';
+import img2 from '../../img/retailer/img2.jpg';
 
 
 export default class WhyweShop extends Component {

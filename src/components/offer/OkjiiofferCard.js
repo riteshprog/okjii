@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import faqimg07 from '../img/offer/faqimg07.png';
-import easyday from '../img/offer/easyday.png';
-import paytm from '../img/offer/paytm.png';
-import Visa from '../img/offer/Visa.png';
+import faqimg07 from '../../img/offer/faqimg07.png';
+import easyday from '../../img/offer/easyday.png';
+import paytm from '../../img/offer/paytm.png';
+import Visa from '../../img/offer/Visa.png';
 
 export default class OkjiiofferCard extends Component {
   render() {

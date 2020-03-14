@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import paytm from '../img/offer/paytm.png';
-import Okkjipaytm from '../img/offer/Okkjipaytm.png';
+import paytm from '../../img/offer/paytm.png';
+import Okkjipaytm from '../../img/offer/Okkjipaytm.png';
 
 
 export default class AmazingOffer extends Component {

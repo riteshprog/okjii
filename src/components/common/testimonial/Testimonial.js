@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TestimonialSlider from './TestimonialSlider';
+import TestimonialSlider from '../testimonial/TestimonialSlider';
 
 export default class Testimonial extends Component {
   render() {

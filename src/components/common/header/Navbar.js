@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDBNavLink,  MDBCollapse } from "mdbreact";
-import logo from '../img/logo.png';
-import logowhite from '../img/logowhite.png';
+import logo from '../../../img/logo.png'
+import logowhite from '../../../img/logowhite.png'
+
 
 class NavbarPage extends Component {
   constructor(props) {
@@ -37,16 +38,16 @@ render() {
               <MDBNavLink  to="/">HOME</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick }>
-              <MDBNavLink  to="/OkjiiRetailer">OKKJI FOR RETAILER</MDBNavLink>
+              <MDBNavLink  to="/okjiiretailer">OKKJI FOR RETAILER</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick }>
-              <MDBNavLink to="/OkjiiFast">OKKJI FAST</MDBNavLink>
+              <MDBNavLink to="/okjiifast">OKKJI FAST</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick }>
-              <MDBNavLink to="/Fastaq">FAQ</MDBNavLink>
+              <MDBNavLink to="/fastaq">FAQ</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick }>
-              <MDBNavLink  to="/OkjiiOffer">OFFER <sup class="badge badge-warning badge-text"><span >New</span></sup></MDBNavLink>
+              <MDBNavLink  to="/okjiioffer">OFFER <sup class="badge badge-warning badge-text"><span >New</span></sup></MDBNavLink>
             </MDBNavItem>
 
             

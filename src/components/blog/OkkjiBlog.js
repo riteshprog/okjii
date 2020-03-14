@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import OkkjiBlogBody from './OkkjiBlogBody';
+import OkkjiBlogBody from '../blog/OkkjiBlogBody';
 
 export default class OkkjiBlog extends Component {
   render() {

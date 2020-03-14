@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import OkjiiOfferBody from './OkjiiOfferBody';
+import OkjiiOfferBody from '../offer/OkjiiOfferBody';
 
 export default class OkjiiOffer extends Component {
   render() {

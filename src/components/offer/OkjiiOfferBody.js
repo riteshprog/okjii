@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Offer from '../img/offer/Offer.png';
-import InputPage from './InputPage';
-import OkjiiofferCard from './OkjiiofferCard';
-import Trusted from './Trusted';
+import Offer from '../../img/offer/Offer.png';
+import InputPage from '../offer/InputPage';
+import OkjiiofferCard from '../offer/OkjiiofferCard';
+import Trusted from '../common/Trusted';
 //import AmazingOffer from './AmazingOffer';
 //import HowtoApply from './HowtoApply';
 export default class OkjiiOfferBody extends Component {

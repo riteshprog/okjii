@@ -1,6 +1,6 @@
 import React from "react";
 import { MDBIcon } from "mdbreact";
-import Asset1 from '../img/home/Asset1.png';
+import Asset1 from '../../img/home/Asset1.png';
 import {} from "mdbreact";
 
 const daily = () => {
