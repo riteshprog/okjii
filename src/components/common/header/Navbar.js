@@ -25,7 +25,7 @@ render() {
     <div className=" bg-image">
       <MDBNavbar  className="nav-bar fixed-top"  id="parallelogram" dark expand="md" >
         <MDBNavbarBrand href="/">
-        <img src={logowhite} alt="store" class="mobile"  id="logo" height="35"/>
+        <img src={logowhite} alt="store" class="mobile"  id="logo" height="29"/>
         <img src={logo} alt="store" class="desktop"  id="logo" height="35"/>
        
 

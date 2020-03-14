@@ -10,7 +10,7 @@ return (
   <div className="row">
   <div className="col-sm-6 col-md-12 col-lg-6">  
      <figure className="daily-figure-img pt-4">
-              <img src={Asset1} className="img-fluid" alt=""/>
+              <img src={Asset1} className="img-fluid" width="90%" alt=""/>
     </figure>
 </div>
   <div className="col-sm-6 col-md-12 col-lg-6">

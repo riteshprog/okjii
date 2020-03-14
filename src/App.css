@@ -607,7 +607,7 @@ footer.page-footer a {
 }
 
 .container-fluid.footer-margin {
-  margin: 2rem;
+  margin: 1.8rem;
 }
 .d-flex.align-content-stretch.flex-wrap.example-parent img{
 width:90% !important
@@ -621,7 +621,7 @@ width:90% !important
 h4.payment{
   font-size:0.9rem !important;
   font-weight: 500 !important;
-  padding-bottom: 1rem !important;
+  padding-bottom: 0.5rem !important;
 }
 .list-unstyled.footer-list li{
   padding-bottom: .3rem !important;
@@ -655,6 +655,7 @@ footer.page-footer{
 p.cite-text{
   font-size:90% !important;
   font-weight:300 !important;
+      letter-spacing: 0.2px;
 }
 
 
@@ -877,7 +878,7 @@ ol.carousel-indicators li {
 
   
   .home-delivery-figure-img{
-    padding-top: 3rem;
+    padding-top: 4.5rem;
     padding-bottom: 3rem;
   }
 
@@ -1597,7 +1598,7 @@ img.rounded-circle.testimoni-img {
   padding-top: 2rem !important;
   color: #2A2AFF !important;
   font-weight: 400 !important;
-  font-size: 2.1rem !important;
+  font-size:1.6rem !important;
   padding-bottom: 1rem;
 }
 
@@ -1738,7 +1739,7 @@ padding-top:1rem !important;
 }
 
 .retailer-figure-img2, .okjii-fast-img4, .faqimg01, .figure-img2, .okjii-offer-image{
-
+margin-top: -9px;
   top: 0px;
   z-index: -1;  
 }
