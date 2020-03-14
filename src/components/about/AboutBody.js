@@ -1,0 +1,78 @@
+import React, { Component } from 'react';
+import Trusted from '../common/Trusted';
+import AboutOurTeam from '../about/AboutOurTeam';
+import OurStory from '../about/OurStory';
+import CustomerKirana from '../about/CustomerKirana';
+
+
+
+import digitalreliability from '../../img/about/digitalreliability.png';
+import homedelovery from '../../img/about/homedelovery.png';
+import store from '../../img/about/store.png';
+import smartbilling from '../../img/about/smartbilling.png';
+
+export default class AboutBody extends Component {
+  render() {
+    return (
+      <div>
+        <div className="container-fluid about-image">
+
+        </div>
+        <div className="container-fluid about">
+       <h1 className="about-h1">Let us introduce</h1>
+            <h2 className="about-h2">India&#x2019;s First Digital &#x201C;Retail&#x201D; Hub
+</h2>
+
+          <div className="row">
+<div className="col-sm-6 col-md-3">
+  <figure>
+    <img src={store} alt="" className="img-fluid" />
+    <figcaption>
+      <h3>Store on App</h3>
+      <p>Order anytime, anywhere from neighourhood shop</p>
+    </figcaption>
+  </figure>
+</div>
+<div className="col-sm-6 col-md-3">
+<figure>
+    <img src={smartbilling} alt="" className="img-fluid" />
+    <figcaption>
+      <h3>Smart Billing</h3>
+      <p>Transparent, real time &amp; manual mistake free digital billing</p>
+    </figcaption>
+  </figure>
+</div>
+<div className="col-sm-6 col-md-3">
+<figure>
+    <img src={homedelovery} alt="" className="img-fluid" />
+    <figcaption>
+      <h3>Home Delivery</h3>
+      <p>Door step delivery of app based shopping from local stores</p>
+    </figcaption>
+  </figure>
+</div>
+<div className="col-sm-6 col-md-3">
+<figure>
+    <img src={digitalreliability} alt="" className="img-fluid" />
+    <figcaption>
+      <h3>Digital reliability</h3>
+      <p>Digital moderation of faith &amp; Believe on street’s store</p>
+    </figcaption>
+  </figure>
+</div>
+<p>Society is the synonym of change, every component of it needs to be updated according to time to remain relevant. OkkJi is a digital incarnation of the traditional and trustworthy age-old relationship of general customer and neighbourhood mom-pop (Kirana) shop as a mobile App. It is the new deﬁnition of domestic shopping from reliable, trusted and nearby shops without physically going there</p>
+<p>OkkJi is a step to update and modernize traditional retail shops according to change. It isan initiative to update “local” to “Global” through a web-based digital presence.</p>
+
+          </div>
+        </div>
+        <div className="">
+          <AboutOurTeam />
+          <OurStory />
+          <CustomerKirana />
+        </div>
+        <h1>About Body</h1>
+        <Trusted />
+      </div>
+    )
+  }
+}
