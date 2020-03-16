@@ -9,23 +9,23 @@ const FaqCards = () => {
 return (
 <div>
   <MDBCard className="card-body faq-card">
-    <MDBCardText><img src={faqimg02} alt="" width="10%" height="20%"/> Create Store
+    <MDBCardText><img src={faqimg02} alt="" width="15%" height="15%"/> Create Store
     
     </MDBCardText>
     
   </MDBCard>
   <MDBCard className="card-body  faq-card">
-    <MDBCardText><img src={faqimg03} alt="" width="10%" height="20%" /> Offer
+    <MDBCardText><img src={faqimg03} alt="" width="15%" height="15%" /> Offer
     </MDBCardText>
     
   </MDBCard>
   <MDBCard className="card-body  faq-card">
-    <MDBCardText><img src={faqimg04} alt="" width="10%" height="20%" /> Refer &amp; Earn
+    <MDBCardText><img src={faqimg04} alt="" width="15%" height="15%" /> Refer &amp; Earn
     </MDBCardText>
     
   </MDBCard>
   <MDBCard className="card-body  faq-card">
-    <MDBCardText><img src={faqimg05} alt="" width="10%" height="20%" /> Nearby Shop
+    <MDBCardText><img src={faqimg05} alt="" width="15%" height="15%" /> Nearby Shop
     </MDBCardText>
     
   </MDBCard>

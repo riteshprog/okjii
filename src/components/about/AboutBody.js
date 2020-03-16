@@ -12,18 +12,25 @@ import homedelovery from '../../img/about/homedelovery.png';
 import store from '../../img/about/store.png';
 import smartbilling from '../../img/about/smartbilling.png';
 import topImg from '../../img/about/topImg.png';
+import img4 from '../../img/okjiifast/img4.png';
 
 export default class AboutBody extends Component {
   render() {
     return (
       <div>
-        <div className="container-fluid about-image">
-          <div className="row">
-            <div className="col-md-12">
-              <img src={topImg} alt="" className="img-fluid" />
-          </div>
-          </div>
+      <div className="container-fluid okkji-about">
+        <div className="row">
+      <figure className="okkji-faq-figure ">
+      <img src={topImg} alt="" className="img-fluid" />
+      </figure>
+      <div class="okjii-digital">
+        <h1><b>DIGITALIZING RELATIONSHIP<br />UPGRADING SHOPPING<br />CONNECTING CUSTOMER’S NEED</b></h1>
+      
         </div>
+        </div>
+
+   </div>
+
         <div className="container-fluid about">
           <div className="container">
        <h1 className="about-h1">Let us introduce</h1>

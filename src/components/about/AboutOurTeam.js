@@ -116,7 +116,7 @@ export default class AboutOurTeam extends Component {
 
           </div>
         </div>
-        <div className="row  pt-5 ">
+        <div className="row text-center our-teams  pt-5 ">
         <div className="col-md-3 col-sm-6">
           <figure className="text-center">
             <img src={Ankur} alt="" className="img-fluid rounded-circle Vicky" />

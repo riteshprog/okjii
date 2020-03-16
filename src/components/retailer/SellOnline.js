@@ -9,7 +9,7 @@ export default class SellOnline extends Component {
         <section className="container">
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-6">
-            <h1><b>Sell</b> Online
+            <h1><b className="sell">Sell</b> Online
 </h1>
             <p>OkkJi app is the entrance of your shop for a customer. Every notiﬁcation is just like customer’s knock to order. Accept order digitally and give additional thrust to your business.</p>
             <ul className="list-unstyle">
@@ -24,7 +24,7 @@ export default class SellOnline extends Component {
  
           </div>
           <div className="col-sm-12 col-md-12 col-lg-6">
-            <figure className="home-delivery-figure-img">
+            <figure className="sell-online-figure-img">
               <img src={sellonline} alt="Create Your Shop" className="img-fluid sellonline" />
             </figure>
           </div>

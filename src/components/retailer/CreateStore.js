@@ -16,14 +16,14 @@ export default class HomeDelivery extends Component {
 
 
           <div className="col-md-12  col-lg-6">
-            <h1><b>Create</b> Your Shop</h1>
+            <h1><b className="create">Create</b> Your Shop</h1>
             <p>Digital presence is the inevitability of today’s word whether it is business or individuality. Association with OkkJi not only associates you with the huge network of customers and shops but provides digital appearance also.</p>
             <ul className="list-unstyle">
                 <li> 
                 <MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Enlist all items that you used to sell</li>
                 <li><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Create an account to partner with us</li>
                 <li><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Showcase your sellable items digitally</li>
-                <li><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Increase sell &amp; customer base in your locatio</li>
+                <li><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Increase sell &amp; customer base in your location</li>
                 <li><MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Innovative ideas &amp; rewards to increase sell with huge network</li>
               </ul>
     
