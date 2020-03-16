@@ -6,7 +6,7 @@ export default class CustomerKirana extends Component {
   render() {
     return (
       <div>
-        <div className="container-fluid okjii-whyweshop">
+        <div className="container-fluid okjii-customerkirana">
           <div className="container">
           <div className="row">
   <div className="col-sm-12 col-md-12 col-lg-12">

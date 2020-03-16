@@ -3,6 +3,7 @@ import Trusted from '../common/Trusted';
 import AboutOurTeam from '../about/AboutOurTeam';
 import OurStory from '../about/OurStory';
 import CustomerKirana from '../about/CustomerKirana';
+import OurPractice from '../about/OurPractice';
 
 
 
@@ -10,20 +11,26 @@ import digitalreliability from '../../img/about/digitalreliability.png';
 import homedelovery from '../../img/about/homedelovery.png';
 import store from '../../img/about/store.png';
 import smartbilling from '../../img/about/smartbilling.png';
+import topImg from '../../img/about/topImg.png';
 
 export default class AboutBody extends Component {
   render() {
     return (
       <div>
         <div className="container-fluid about-image">
-
+          <div className="row">
+            <div className="col-md-12">
+              <img src={topImg} alt="" className="img-fluid" />
+          </div>
+          </div>
         </div>
         <div className="container-fluid about">
+          <div className="container">
        <h1 className="about-h1">Let us introduce</h1>
             <h2 className="about-h2">India&#x2019;s First Digital &#x201C;Retail&#x201D; Hub
 </h2>
 
-          <div className="row">
+          <div className="row text-center">
 <div className="col-sm-6 col-md-3">
   <figure>
     <img src={store} alt="" className="img-fluid" />
@@ -65,12 +72,13 @@ export default class AboutBody extends Component {
 
           </div>
         </div>
+        </div>
         <div className="">
           <AboutOurTeam />
           <OurStory />
           <CustomerKirana />
+          <OurPractice />
         </div>
-        <h1>About Body</h1>
         <Trusted />
       </div>
     )

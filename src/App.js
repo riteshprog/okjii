@@ -12,6 +12,7 @@ import OkjiiFast from './components/fast/OkjiiFast';
 import Fastaq from './components/faq/Fastaq';
 import OkjiiOffer from './components/offer/OkjiiOffer';
 import OkjiiBlog from './components/blog/OkkjiBlog';
+import About from './components/about/About';
 
 import ScrollToTop from './components/ScrollToTop'
 
@@ -41,6 +42,9 @@ function App() {
       </Route>
       <Route path='/okjiiblog' >
       <OkjiiBlog />
+      </Route>
+      <Route path='/about' >
+      <About />
       </Route>
 
      </Switch>

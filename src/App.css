@@ -913,7 +913,7 @@ ol.carousel-indicators li {
 
 
 
-.okjii-whyweshop{
+.okjii-whyweshop, .okjii-customerkirana{
   background-color: #F7F7F7 !important;
  
 }
@@ -1153,7 +1153,7 @@ figcaption h4{
 }
 
 .input-group-text::placeholder{
-  font-size:0.5rem;
+  font-size:.2rem !important;
 }
 .input-group-lg>.form-control:not(textarea) {
   height: calc(1.5em + 3rem + 2px) !important;
@@ -1425,6 +1425,201 @@ ol.okkji-howtoapply-list{
 }
 figure.figure-whayweshop img {
   border-radius: 15px !important;
+}
+
+/* About Us Page */
+
+.about{
+  padding-top:2rem;
+  padding-bottom: 2rem;
+}
+
+.about h1{
+  font-weight: 500;
+  color: #5e5e5e !important;
+  font-size: 1.6rem;
+  text-align: center;
+  padding-bottom:1rem;
+
+}
+
+.about h2{
+  padding-bottom: 3rem !important;
+  font-size: 1.5rem !important;
+  font-weight: 400 !important;
+  color: #5e5e5e !important;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+.about h3{
+  padding-bottom: 2rem !important;
+  padding-top:1rem;
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
+  color: #5e5e5e !important;
+  text-align: center;
+
+}
+.about p{
+  font-size: 1.1rem;;
+  color: #5e5e5e !important;
+  padding-top:1rem;
+}
+
+.our-team{
+  background-color: #F7F7F7;
+  padding:2rem;
+}
+
+.our-team h1{
+  font-weight: 500;
+  color: #5e5e5e !important;
+  font-size: 1.6rem;
+  text-align: center;
+  padding-bottom:2rem;
+}
+
+.our-team .Mannu{
+  width:8%;
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+
+}
+
+.our-team .Vicky{
+  width:30%;
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+
+}
+.our-team figcaption h2{
+  font-size:1.2rem;
+  font-weight: 500;
+  text-align: center;
+  color:#5e5e5e;
+  padding-top:1rem;
+  padding-bottom:0px;
+}
+.our-team figcaption i{
+color:#0197D2;
+}
+.our-team figcaption p{
+  font-size:1rem;
+  font-weight: 300;
+  color:#5e5e5e;
+  text-align:center;
+}
+
+
+.our-story{
+  padding-top:4rem;
+  padding-bottom: 4rem;
+}
+
+.our-story h1{
+  font-size: 1.6rem !important;
+  font-weight: 500 !important;
+  padding-bottom: 3rem;
+  color: #5E5E5E;
+text-align: center; 
+}
+
+.our-story h2{
+  font-size: 1.3rem !important;
+  font-weight: 500 !important;
+  padding-bottom: 1rem !important;
+  padding-top:1rem !important;
+  color: #5E5E5E;
+
+}
+.our-story p{
+  font-size: 1.1rem;
+  color: #5E5E5E;
+
+}
+
+.our-story img{
+  width:50%;
+}
+
+.okjii-customerkirana{
+  padding-top:2rem;
+  padding-bottom: 2rem;
+}
+
+.okjii-customerkirana h1{
+  font-size: 1.6rem !important;
+  font-weight: 500 !important;
+  padding-bottom: 2rem;
+  color: #5E5E5E;
+}
+
+.okkji-ourpractice{
+  padding-top:2rem;
+  padding-bottom: 2rem;
+}
+
+.okkji-ourpractice h1{
+  font-size: 1.6rem !important;
+  font-weight: 500 !important;
+  padding-top:2rem;
+  padding-bottom: 2rem;
+  color: #5E5E5E;
+
+}
+
+.okkji-ourpractice h2{
+  font-size: 1.3rem !important;
+  font-weight: 500 !important;
+  padding-bottom: 1rem !important;
+  padding-top:1rem !important;
+  color: #5E5E5E;
+}
+
+.okkji-ourpractice p{
+  font-size: 1.1rem;
+  color: #5E5E5E;
+
+}
+
+.okkji-ourpractice .ourpractice {
+  padding-top:12rem;
+}
+.img-apple{
+  padding-top:2rem;
+  width:25%;
+}
+
+.getapp-link{
+  padding-left:2rem;
+  padding-right:4rem;
+}
+.getapp-link .input-group{
+  background-color: #e9ecef !important;
+  border-radius: 25px !important;
+}
+
+
+.getapp-link .input-group-lg>.form-control:not(textarea) {
+  height: calc(1em + 1rem + 2px) !important;
+  background-color: #e9ecef;
+}
+
+
+.getapp-link .input-group-append .input-group-text{
+  background-color: #259D70 !important;
+  height:2rem;
+  color:#fff !important;
+  font-size:.9rem !important;
+  border-radius: 15px !important;
+  margin-top: 7px !important;
+  margin-right:8px !important;
+}
+
+.get-applink{
+  display: flex;
+  margin-left: 15.5rem !important;
+  width:50% !important;
+  vertical-align: middle;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

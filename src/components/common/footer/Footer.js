@@ -20,24 +20,24 @@ const FooterPage = () => {
             <h5 className="title">MENU</h5>
             <ul className="list-unstyled footer-list">
               <li>
-                <a href="/">ABOUT US</a>
+                <a href="/about">ABOUT US</a>
               </li>
               <li>
-                <a href="/"> JOIN AS RETAILER</a>
+                <a href="/okjiiretailer"> JOIN AS RETAILER</a>
               </li>
               <li>
-                <a href="/OkkjiBlog">BLOG</a>
+                <a href="/">BLOG</a>
               </li>
               <li>
                 <a href="/"> CAREER
 </a>
               </li>
               <li>
-                <a href="/">OFFERS</a>
+                <a href="/okjiioffer">OFFERS</a>
               </li>
 
               <li>
-                <a href="#!">REFER &amp; EARN</a>
+                <a href="/">REFER &amp; EARN</a>
               </li>
 
             </ul>
