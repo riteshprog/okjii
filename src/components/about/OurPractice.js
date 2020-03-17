@@ -30,7 +30,7 @@ export default class OurPractice extends Component {
           </div>
           </div>
         
-          <div className="row text-center desktop">
+          <div className="row text-center  desktop">
             <div className="col-md-6 col-sm-6">
               <figure>
                 <img src={apple} alt="" className="img-fluid float-right  img-apple" />
@@ -57,7 +57,7 @@ export default class OurPractice extends Component {
             </div>
           </div>
 
-          <div className="row offset-lg-3 offset-md-3">
+          <div className="row offset-lg-4 offset-md-4">
           <GetAppLink />
           </div>
           </div>

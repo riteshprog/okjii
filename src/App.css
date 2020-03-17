@@ -1674,6 +1674,13 @@ text-align: center;
   padding-top:2rem;
 }
 
+.getapp-link input{
+  margin-top: .5rem !important;
+  margin-left:-1em !important;
+  padding-left:0.2 !important;
+}
+
+
 .okkji-ourpractice p{
   font-size: 1rem;
   color: #5E5E5E;
@@ -2148,6 +2155,14 @@ padding-top:1rem !important;
 
 .google-top{
   margin-top: -2rem;
+}
+
+.our-team .Mannu {
+  width: 33%;
+}
+.img-apple {
+  padding-top: 2rem;
+  width: 52%;
 }
 
 }
