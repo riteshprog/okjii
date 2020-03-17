@@ -13,6 +13,7 @@ import Fastaq from './components/faq/Fastaq';
 import OkjiiOffer from './components/offer/OkjiiOffer';
 import OkjiiBlog from './components/blog/OkkjiBlog';
 import About from './components/about/About';
+import Contact from './components/contact/Contact';
 
 import ScrollToTop from './components/ScrollToTop'
 
@@ -46,7 +47,9 @@ function App() {
       <Route path='/about' >
       <About />
       </Route>
-
+      <Route path='/contact' >
+      <Contact />
+      </Route>
      </Switch>
      <Footer />
     </div>

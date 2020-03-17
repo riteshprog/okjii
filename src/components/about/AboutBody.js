@@ -12,15 +12,18 @@ import homedelovery from '../../img/about/homedelovery.png';
 import store from '../../img/about/store.png';
 import smartbilling from '../../img/about/smartbilling.png';
 import topImg from '../../img/about/topImg.png';
-import img4 from '../../img/okjiifast/img4.png';
+
 
 export default class AboutBody extends Component {
   render() {
     return (
       <div>
+
+
+
       <div className="container-fluid okkji-about">
         <div className="row">
-      <figure className="okkji-faq-figure ">
+      <figure className="okkji-faq-figure okjii-fast-img4">
       <img src={topImg} alt="" className="img-fluid" />
       </figure>
       <div class="okjii-digital">
@@ -37,7 +40,7 @@ export default class AboutBody extends Component {
             <h2 className="about-h2">India&#x2019;s First Digital &#x201C;Retail&#x201D; Hub
 </h2>
 
-          <div className="row text-center">
+          <div className="row okjii-letus text-center">
 <div className="col-sm-6 col-md-3">
   <figure>
     <img src={store} alt="" className="img-fluid" />
@@ -74,7 +77,7 @@ export default class AboutBody extends Component {
     </figcaption>
   </figure>
 </div>
-<p>Society is the synonym of change, every component of it needs to be updated according to time to remain relevant. OkkJi is a digital incarnation of the traditional and trustworthy age-old relationship of general customer and neighbourhood mom-pop (Kirana) shop as a mobile App. It is the new deﬁnition of domestic shopping from reliable, trusted and nearby shops without physically going there</p>
+<p className="okjii-about-para">Society is the synonym of change, every component of it needs to be updated according to time to remain relevant. OkkJi is a digital incarnation of the traditional and trustworthy age-old relationship of general customer and neighbourhood mom-pop (Kirana) shop as a mobile App. It is the new deﬁnition of domestic shopping from reliable, trusted and nearby shops without physically going there</p>
 <p>OkkJi is a step to update and modernize traditional retail shops according to change. It isan initiative to update “local” to “Global” through a web-based digital presence.</p>
 
           </div>

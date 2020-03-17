@@ -12,7 +12,7 @@ export default class OurPractice extends Component {
           <div className="container">
           <div className="row">
             <div className="col-md-6 col-sm-6">
-              <figure>
+              <figure className="">
                 <img src={ourpractice} alt="" className="img-fluid ourpractice" />
               </figure>
             </div>
@@ -30,7 +30,7 @@ export default class OurPractice extends Component {
           </div>
           </div>
         
-          <div className="row text-center ">
+          <div className="row text-center desktop">
             <div className="col-md-6 col-sm-6">
               <figure>
                 <img src={apple} alt="" className="img-fluid float-right  img-apple" />
@@ -43,12 +43,22 @@ export default class OurPractice extends Component {
               </figure>
             </div>
           </div>
-
-          
-          <div className="row mt-5 text-center get-applink ">
-            <div className="col-md-12">
-            <GetAppLink />
+          <div className="row text-center mobile">
+            <div className="col-md-6 col-sm-6">
+              <figure>
+                <a href="#"><img src={apple} alt="" className="img-fluid  img-apple" /></a>
+              </figure>
             </div>
+            
+            <div className="col-md-6  col-sm-6 google-top">
+              <figure>
+              <a href="#"><img src={google} alt="" className="img-fluid img-apple" /></a>
+              </figure>
+            </div>
+          </div>
+
+          <div className="row offset-lg-3 offset-md-3">
+          <GetAppLink />
           </div>
           </div>
         </div>

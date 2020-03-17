@@ -18,6 +18,7 @@ import KhataBook from './KhataBook';
 import Testimonial from '../common/testimonial/Testimonial';
 
 import Trusted from '../common/Trusted';
+import GetAppLink from '../about/GetAppLink';
 
 import InputPageButton from '../InputPageButton';
 
@@ -26,7 +27,7 @@ import InputPageButton from '../InputPageButton';
           render() {
 
             return (
-<div>
+<div className="okjii-home">
               <div className="container-fluid okjii-mainbody">
 
                 <div className="row image-position">
@@ -47,7 +48,7 @@ import InputPageButton from '../InputPageButton';
 
                     </p>
                       <div className="okjii-install-image">
-                      <div className="row mt-4">
+                      <div className="row offset-lg-1 offset-md-1 mt-4">
 
                         <div className="col-sm-12  okjii-install">
 
@@ -61,7 +62,7 @@ import InputPageButton from '../InputPageButton';
 
                         </div>
 
-                      <div className="row text-center">
+                      <div className="row offset-lg-1 offset-md-1 text-center">
                         <div className="col-sm-6">
                            <img className="img-fluid apple"  src={apple} alt=""/>
                         </div>
@@ -70,8 +71,10 @@ import InputPageButton from '../InputPageButton';
                                     </div>
 
                       </div>
-{/*<InputPageButton />*/}
-
+                      <div className="row offset-lg-1 offset-md-1">
+          <GetAppLink />
+          </div>
+ 
                     </div>
                     </div>
 

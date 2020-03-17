@@ -28,7 +28,7 @@ export default class OurStory extends Component {
               </figure>
             </div>
           </div>
-          <div className="row">
+          <div className="row okjii-about-para">
             <div className="col-md-6">
               <figure className="text-center">
                 <img src={howwork} alt="" className="img-fluid iedagen" />
@@ -40,7 +40,7 @@ export default class OurStory extends Component {
 
             </div>
           </div>
-          <div className="row">
+          <div className="row okjii-about-para">
             <div className="col-md-6">
               <h2>Our destination</h2>
               <p>We start with a motive to establish a unanimous umbrella, a giant mom-Dad retail store chain across the country where every single store has its sovereignty and growing opportunity. We wish to transform the ancient purchase method and customer-shop relationship according to new trends but with the same fragrance, naive, touch, nativity and customer satisfaction.</p>

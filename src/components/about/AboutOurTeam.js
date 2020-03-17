@@ -32,7 +32,7 @@ export default class AboutOurTeam extends Component {
 
 
 
-        <div className="row pt-5">
+        <div className="row pt-4">
           <div className="col-md-3 col-sm-6">
           <figure className="text-center">
             <img src={Vicky} alt="" className="img-fluid rounded-circle Vicky" />
@@ -74,7 +74,7 @@ export default class AboutOurTeam extends Component {
 
           </div>
         </div>
-        <div className="row  pt-5">
+        <div className="row  pt-4">
         <div className="col-md-3 col-sm-6">
           <figure className="text-center">
             <img src={Ritesh} alt="" className="img-fluid rounded-circle Vicky" />
@@ -116,20 +116,10 @@ export default class AboutOurTeam extends Component {
 
           </div>
         </div>
-        <div className="row text-center our-teams  pt-5 ">
+        <div className="row text-center our-teams  pt-4 ">
         <div className="col-md-3 col-sm-6">
           <figure className="text-center">
-            <img src={Ankur} alt="" className="img-fluid rounded-circle Vicky" />
-            <figcaption>
-              <h2>Sachin Kumar Singh  <i class="fab fa-linkedin"></i></h2>
-              <p>Office Admin</p>
-            </figcaption>
-          </figure>
-
-          </div>
-          <div className="col-md-3 col-sm-6">
-          <figure className="text-center">
-            <img src={Sachin} alt="" className="img-fluid rounded-circle Vicky" />
+          <img src={Ankur} alt="" className="img-fluid rounded-circle Vicky" />
             <figcaption>
               <h2>Ankur Sinha  <i class="fab fa-linkedin"></i></h2>
               <p>Support Head</p>
@@ -137,7 +127,19 @@ export default class AboutOurTeam extends Component {
           </figure>
 
           </div>
-        </div>
+
+        <div className="col-md-3 col-sm-6">
+          <figure className="text-center">
+          <img src={Sachin} alt="" className="img-fluid rounded-circle Vicky" />
+            <figcaption>
+              <h2>Sachin Kumar Singh  <i class="fab fa-linkedin"></i></h2>
+              <p>Office Admin</p>
+            </figcaption>
+          </figure>
+
+          </div>
+         
+                 </div>
         </div>
         </div>
     )

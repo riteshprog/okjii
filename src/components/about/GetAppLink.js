@@ -6,8 +6,8 @@ const GetAppLink = () => {
 
 
 
-<div className="text-center getapp-link ">
-<MDBInputGroup containerClassName="mb-3" prepend="91+" append="GET APP LINK" hint="|Mobile Number" type="number" size="lg" />
+<div className="getapp-link ">
+<MDBInputGroup container ClassName="mb-3" prepend="91+" append="GET APP LINK" hint="| Mobile Number" type="number" size="lg" />
       
 
 </div>);
