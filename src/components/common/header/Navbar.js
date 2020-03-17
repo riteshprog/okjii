@@ -25,8 +25,8 @@ render() {
     <div className=" bg-image">
       <MDBNavbar  className="nav-bar fixed-top"  id="parallelogram" dark expand="md" >
         <MDBNavbarBrand href="/">
-        <img src={logowhite} alt="store" class="mobile"  id="logo" height="29"/>
-        <img src={logo} alt="store" class="desktop"  id="logo" height="35"/>
+        <img src={logowhite} alt="store" className="mobile"  id="logo" height="29"/>
+        <img src={logo} alt="store" className="desktop"  id="logo" height="35"/>
        
 
         </MDBNavbarBrand>
@@ -47,7 +47,7 @@ render() {
               <MDBNavLink to="/fastaq">FAQ</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick }>
-              <MDBNavLink  to="/okjiioffer">OFFER <sup class="badge badge-warning badge-text"><span >New</span></sup></MDBNavLink>
+              <MDBNavLink  to="/okjiioffer">OFFER <sup className="badge badge-warning badge-text"><span >New</span></sup></MDBNavLink>
             </MDBNavItem>
 
             

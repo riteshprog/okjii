@@ -35,8 +35,8 @@ const ContactUsForm = () => {
                   placeholder="Number"
                 />
                 <br />
-                <div class="form-group">
-    <select class="form-control" id="exampleFormControlSelect1">
+                <div className="form-group">
+    <select className="form-control" id="exampleFormControlSelect1">
       <option>Purpose</option>
       <option>Shopping</option>
       <option>Visiting</option>

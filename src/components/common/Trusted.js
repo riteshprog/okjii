@@ -28,7 +28,7 @@ render(){
   return(
 <div className="container-fluid h1-trusted text-center">
         <div className="container">
-      <h1 class="text-center">Trusted by Shop</h1>
+      <h1 className="text-center">Trusted by Shop</h1>
 <OwlCarousel className={'owl-theme'}
     loop={true}
     margin={20}
@@ -40,13 +40,13 @@ render(){
     responsive={this.state.responsive}
 >
 
-<div class="item"><img className="item" src={twentyfour} alt="" /></div>
-<div class="item"><img  className="item" src={easyday} alt="" /></div>
-<div class="item"><img  className="item" src={vishal}  alt=""/></div>
-<div class="item"><img  className="item" src={vmart}  alt="" /></div>
-<div class="item"><img  className="item" src={twentyfour} alt="" /></div>
-<div class="item"><img  className="item" src={easyday}  alt="" /></div>
-<div class="item"><img  className="item" src={vishal}  alt="" /></div>
+<div className="item"><img className="item" src={twentyfour} alt="" /></div>
+<div className="item"><img  className="item" src={easyday} alt="" /></div>
+<div className="item"><img  className="item" src={vishal}  alt=""/></div>
+<div className="item"><img  className="item" src={vmart}  alt="" /></div>
+<div className="item"><img  className="item" src={twentyfour} alt="" /></div>
+<div className="item"><img  className="item" src={easyday}  alt="" /></div>
+<div className="item"><img  className="item" src={vishal}  alt="" /></div>
       
      </OwlCarousel>
      </div>
