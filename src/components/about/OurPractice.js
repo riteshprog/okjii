@@ -11,12 +11,12 @@ export default class OurPractice extends Component {
         <div className="container-fluid okkji-ourpractice">
           <div className="container">
           <div className="row">
-            <div className="col-md-6 col-sm-6">
+            <div className="col-md-6 col-sm-12">
               <figure className="">
                 <img src={ourpractice} alt="" className="img-fluid ourpractice" />
               </figure>
             </div>
-          <div className="col-md-6 col-sm-6">
+          <div className="col-md-6 col-sm-12">
             <h1>Our practices &amp; philosophy</h1>
             <p><b>OkkJi believes</b> to rejuvenate static, stable &amp; sustainable relationships of past and balancing it with new demand, era, &amp; expectations. We believe to nurture our living heritage by making them relevant in changing norms and parameters of society. Our working philosophy and team endeavor are entirely dedicated to smoothen the age-old relationship through ﬁne-tuning and digital epitome. Our practices and work culture are irrigating by transparency, coherence and mutual cooperation.</p>
             <h2>Be the king of your responsibilities</h2>
@@ -43,7 +43,7 @@ export default class OurPractice extends Component {
               </figure>
             </div>
           </div>
-          <div className="row text-center mobile">
+          <div className="row text-center offset-sm-3 mobile">
             <div className="col-md-6 col-sm-6">
               <figure>
                 <a href="#"><img src={apple} alt="" className="img-fluid  img-apple" /></a>
@@ -57,7 +57,7 @@ export default class OurPractice extends Component {
             </div>
           </div>
 
-          <div className="row offset-lg-4 offset-md-4">
+          <div className="row offset-lg-4 offset-sm-2 offset-md-4">
           <GetAppLink />
           </div>
           </div>
