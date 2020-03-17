@@ -46,13 +46,13 @@ export default class OurPractice extends Component {
           <div className="row text-center offset-sm-3 mobile">
             <div className="col-md-6 col-sm-6">
               <figure>
-                <a href="#"><img src={apple} alt="" className="img-fluid  img-apple" /></a>
+                <img src={apple} alt="" className="img-fluid  img-apple" />
               </figure>
             </div>
             
             <div className="col-md-6  col-sm-6 google-top">
               <figure>
-              <a href="#"><img src={google} alt="" className="img-fluid img-apple" /></a>
+              <img src={google} alt="" className="img-fluid img-apple" />
               </figure>
             </div>
           </div>

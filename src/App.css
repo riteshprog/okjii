@@ -1803,7 +1803,7 @@ input.form-control::placeholder {
   padding-top:4rem;
 }
 
-.okjii-retailer .h1-trusted {
+.okjii-retailer .h1-trusted, .ok-fast .h1-trusted {
   padding-top: 5rem;
 }
 .okjii-cardbody .h1-trusted, .okkji-faqs .h1-trusted{

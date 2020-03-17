@@ -20,7 +20,6 @@ import Testimonial from '../common/testimonial/Testimonial';
 import Trusted from '../common/Trusted';
 import GetAppLink from '../about/GetAppLink';
 
-import InputPageButton from '../InputPageButton';
 
         export default class mainbody extends Component {
 

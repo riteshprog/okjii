@@ -12,7 +12,7 @@ import Trusted from '../common/Trusted';
 export default class OkjiiFastBody extends Component {
   render() {
     return (
-      <div>
+      <div className="ok-fast">
       <div className="container-fluid okkji-faq">
         <div className="row">
       <figure className="okkji-faq-figure okjii-fast-img4">
