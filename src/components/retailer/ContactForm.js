@@ -1,5 +1,6 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody } from 'mdbreact';
+import Googlemap from '../../img/retailer/Googlemap.png';
 
 const ContactForm = () => {
   return (
@@ -18,14 +19,12 @@ const ContactForm = () => {
                   placeholder="Name"
                 />
                 <br />
-                <input
-                  type="text"
-                  name="city"
-                  id="defaultFormCardCity"
-                  className="form-control"
-                  placeholder="City"
-                />
-                
+                <div class="input-group1">
+    <input id="location" type="Location" class="form-control" name="location" placeholder="Location" />
+    <span class="input-group-addon1 google-map-right"><img src={Googlemap} class=" Googlemap" alt="Google Map" alt="" /></span>
+
+
+  </div>
                 <br />
                 <input
                   type="number"

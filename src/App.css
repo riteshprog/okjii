@@ -5,9 +5,14 @@
   
 }
 
+
+
 p{
   font-size:1.25rem;
   color:#5E5E5E;
+  margin-top: 0;
+  margin-bottom: 2rem;
+
 }
 
 h1{
@@ -22,7 +27,9 @@ img{
 body{
   background-color: white;
   position: relative;
-  font-family: "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif, Muli,BlinkMacSystemFont,-apple-system !important;
+  
+
+  font-family: Muli,BlinkMacSystemFont,-apple-system,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif !important;
   font-size: 14px;
   color :#5e5e5e;
 }
@@ -55,12 +62,7 @@ body{
 .fixed-top.scrolled .nav-link {
   color:#555;
 }
-.bg-image.scrolled{
-  background-image: url(../src/img/back.png) !important;
-  
-  min-height: 50px;
 
-}
 
 
 .navbar-brand img{
@@ -106,18 +108,15 @@ body{
 } */
 
 nav#parallelogram {
-  background-color: none !important;
+  background-color: #FDFFFE  !important;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.18) !important;
+
 }
 
-
-
-.figure-img2 {
-  width:100% !important;
-  padding-right: 0 ;
-  padding-left: 11% ;
-  top:-67px;
-  z-index:-1;
+.navbar.navbar-dark .navbar-toggler-icon{
+  background-color: #259D70;
 }
+
 
 
 
@@ -152,6 +151,7 @@ nav#parallelogram {
   white-space: nowrap;
 }
 .navbar-nav > li a{
+  color:#5e5e5e !important;
   font-weight: 400 !important;
 }
 
@@ -174,8 +174,77 @@ a{
 }
 
 
+.okjii-mainbody{
 
+  background-image: url(../src/img/home/Home-background.png);
+  
+  top:50px;
+  left:0 ;
+  right:0;
 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  position: relative;
+}
+
+.OkjiiRetailerBody{
+  background-image: url(../src/img/retailer/BackgroundRetailer.png);
+  
+  top:50px;
+  left:0 ;
+  right:0;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  position: relative;
+
+}
+
+.main-body-mobile {
+  display: none;
+}
+
+.container-fluid.OkjiiRetailerBody {
+  display: block;
+}
+.container-fluid.OkjiiRetailerBody-mobile {
+  display: none;
+}
+
+.okjii-mainbody-mobile{
+  background-image: linear-gradient(to right, rgb(255, 255, 255, 0.30), rgb(37, 157, 112, 0.1)), url(../src/img/home/BackgroundMobile.png);
+  
+  top:50px !important;
+  left:0 ;
+  right:0;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  position: relative;
+}
+
+.mobile-google{
+  margin-left:18%;
+}
+
+.okjii-install-image {
+  float: center !important;
+}
+
+.image-position .Asset6{
+  width:80% !important;
+}
+
+.image-row{
+  display: flex;
+  justify-content: flex-end;
+}
 
 .okjii-explore{
   padding:0 50px !important;
@@ -185,8 +254,8 @@ a{
 .okjii-explore h1{
       font-weight: 500;
     color: #5e5e5e !important;
-    font-size: 22pt;
-    padding-top: 4.5rem !important;
+    font-size: 17pt;
+    padding-top: 3.5rem !important;
 }
 
 .okjii-explore h2{
@@ -293,14 +362,14 @@ flex-direction: row;
 
 .okjii-best h1{
 
-    padding-top: 4rem !important;
+    padding-top: 6rem !important;
     color: #5E5E5E;
-    font-size: 1.6rem !important;
+    font-size: 1.2rem !important;
     padding-bottom: 1.6rem !important;
 }
 .okjii-best b.best{
- font-weight: 500 !important;
-    font-size: 1.6rem !important;
+ font-weight: 600 !important;
+    font-size: 1.2rem !important;
     color: #5E5E5E;
   
 }
@@ -314,13 +383,13 @@ flex-direction: row;
 .okjii-daily h1{
   padding-top: 4rem !important;
   color:#2A2AFF !important;
-  font-size:1.6rem !important;
+  font-size:1.2rem !important;
   padding-bottom: 1rem;
 }
 
 .okjii-daily b.daily{
-  font-size: 1.6rem !important;
-  font-weight: 500;
+  font-size: 1.2rem !important;
+  font-weight: 600;
   color:#2A2AFF !important;
 
 }
@@ -363,13 +432,13 @@ figure.daily-figure-img {
 .okjii-homedelivery h1{
   color:#2A2AFF !important;
   padding-top: 2rem !important;
-  font-size:1.6rem !important;
+  font-size:1.2rem !important;
   padding-bottom: .5rem;
 }
 
 .okjii-homedelivery b.home{
-  font-size: 1.6rem !important;
-  font-weight: 500;
+  font-size: 1.2rem !important;
+  font-weight: 600;
   color:#2A2AFF !important;
 
 }
@@ -411,7 +480,7 @@ section.okjii-khatabook{
 .okjii-khatabook1 h1{
   padding-top: 2rem !important;
   font-weight: 500 !important;
-  font-size:1.6rem !important;
+  font-size:1.2rem !important;
   padding-bottom: .5rem;
   color:#fff;
 }
@@ -447,14 +516,14 @@ section.okjii-khatabook{
 .home-testimonial h1{
     color: #5e5e5e !important;
     padding-top: 20% !important;
-    font-weight: 500;
-    font-size: 1.6rem !important;
+    font-weight: 600;
+    font-size: 1.2rem !important;
     padding-bottom: .3rem;
 }
 
 .home-testimonial h2{
      color: #5E5E5E;
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
     padding-bottom: 0.5rem !important;
     padding-top: 6px;
 }
@@ -467,8 +536,8 @@ section.okjii-khatabook{
 .testmonial-slide h2{
     color: #5e5e5e !important;
     padding-top: 1.8rem;
-    font-size: 1.5rem !important;
-    font-weight: 400;
+    font-size: 1.2rem !important;
+    font-weight: 500;
     padding-bottom: 0 !important;
 }
 .testmonial-slide p{
@@ -577,7 +646,7 @@ img.rounded-circle.testimoni-img {
 .h1-trusted h1{
   color:#5e5e5e !important;
   font-weight: 500 !important;
-  font-size:1.6rem !important;
+  font-size:1.2rem !important;
   padding-bottom: 2rem;
   }
   
@@ -616,11 +685,11 @@ width:90% !important
 
 
 .list-unstyled li a{
-  font-size:0.9rem !important;
+  font-size:0.8rem !important;
 
 }
 h4.payment{
-  font-size:0.9rem !important;
+  font-size:0.8rem !important;
   font-weight: 500 !important;
   padding-bottom: 0.5rem !important;
 }
@@ -817,18 +886,18 @@ ol.carousel-indicators li {
 }
 
 .okkjii-retalore b.best{
-  font-weight: 500 !important;
-     font-size: 1.6rem !important;
+  font-weight: 600 !important;
+     font-size: 1.2rem !important;
      color: #5E5E5E;
    
  }
  .okkjii-retalore h1{
-   font-size:1.6rem !important
+   font-size:1.2rem !important
  }
 
 .okjii-retaler h1{
-  font-weight: 500;
-  font-size: 22pt !important;
+  font-weight: 600;
+  font-size: 17pt !important;
   color: #5E5E5E;
   padding-top: 3rem;
   padding-left: 1rem;
@@ -837,6 +906,17 @@ ol.carousel-indicators li {
 
 .okjii-retaler h1 span.text-green{
   color: #259D70;
+}
+
+.google-map-right{
+  float: right;
+  transform: translate(37%, -107%);
+}
+img.Googlemap {
+  width: 55%;
+}
+.container-fluid.okkjii-retalore {
+  padding-top: 3rem;
 }
 .text-normal{
   font-weight: 400;
@@ -860,13 +940,13 @@ ol.carousel-indicators li {
     color: #2A2AFF !important;
     padding-top: 2rem !important;
     /* font-weight: 400 !important; */
-    font-size: 1.6rem !important;
+    font-size: 1.2rem !important;
     padding-bottom: .5rem;
     
   }
 .okjii-create-store b.create {
-  font-size: 1.6rem !important;
-  font-weight: 500 !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
 }
 
 
@@ -913,7 +993,7 @@ ol.carousel-indicators li {
 .okjii-sell-online h1{
   color:#2A2AFF !important;
   padding-top: 2.5rem !important;
-  font-size:1.6rem !important;
+  font-size:1.2rem !important;
   padding-bottom: .5rem;
 
 }
@@ -930,8 +1010,8 @@ ol.carousel-indicators li {
 
 
 .sell {
-  font-size: 1.6rem !important;
-  font-weight: 500 !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
 }
 
 
@@ -964,14 +1044,14 @@ ol.carousel-indicators li {
 }
 
 .okjii-whyweshop section h1{
-  font-size:1.6rem !important;
+  font-size:1.2rem !important;
   padding-bottom: .5rem;
   color:#5E5E5E;
 }
 
 .okjii-whyweshop section h2 {
   color:#5E5E5E;
-  font-size:1.2rem;
+  font-size:1.1rem;
   padding-bottom: 2.5rem;
 
 }
@@ -1001,21 +1081,21 @@ ol.carousel-indicators li {
 }
 
 .okjii-fastcon h1{
-  font-size:2.1rem !important;
-  font-weight: 300;
+  font-size:17pt !important;
+  font-weight: 400;
   padding-top: 1.5rem;
 }
 
 .okjii-fastcon h2{
-  font-size:1.5rem !important;
+  font-size:1.2rem !important;
   margin-top:0rem;
   font-weight: 400;
 }
 
 .okjii-fasthow h1{
-  font-weight: 500;
+  font-weight: 600;
   color: #5e5e5e !important;
-  font-size: 22pt;
+  font-size: 17pt;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -1032,8 +1112,8 @@ ol.carousel-indicators li {
 
 
 .okjii-fast{
-  font-size:2.1rem !important;
-  font-weight: 700 !important;
+  font-size:17pt !important;
+  font-weight: 600 !important;
   color: #5e5e5e !important;
 }
 .okjii-fast-img-how {
@@ -1061,8 +1141,8 @@ figcaption h4{
 }
 
 .faq-h1{
-  font-size:2.1rem;
-  font-weight: 700;
+  font-size:1.7rem;
+  font-weight: 500;
   color:#5e5e5e;
   text-align: center;
   display: block;
@@ -1153,7 +1233,7 @@ figcaption h4{
 }
 
 .support-para{
-  font-size:1.05rem !important;
+  font-size:1rem !important;
   color:#5e5e5e;
   font-weight: 400 !important;
 }
@@ -1223,7 +1303,7 @@ figcaption h4{
 
 /* Offer card ***/
 .okjii-offer h1{
-  font-size:22pt !important;
+  font-size:17pt !important;
   font-weight: 500 !important;
   padding-top:9rem;
   color:#5e5e5e;
@@ -1239,7 +1319,7 @@ padding-left:2rem;
   color:#5e5e5e;
 }
 .okjii-offer .okjii-bring{
-  font-size:1.6rem !important;
+  font-size:1.2rem !important;
   font-weight: 500 !important;
   padding-top:0rem;
   padding-bottom:1.5rem;
@@ -1467,6 +1547,13 @@ ol.okkji-howtoapply-list{
 .okkji-ourpractice .mobile{
   display: none !important;
 }
+
+
+.okjii-home.main-body-mobile{
+  display: none !important;
+}
+
+
 .carousel-control-next{
   top:105% !important;
 } 
@@ -1501,7 +1588,7 @@ figure.figure-whayweshop img {
 
   font-weight: 500;
   color: #5e5e5e !important;
-  font-size: 22pt;
+  font-size: 17pt;
   padding-top: 5.5rem !important;
 
 
@@ -1525,9 +1612,9 @@ figure.figure-whayweshop img {
 }*/
 
 .about h1{
-  font-weight: 500;
+  font-weight: 600;
   color: #5e5e5e !important;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   text-align: center;
   padding-bottom:0.5rem;
 
@@ -1535,7 +1622,7 @@ figure.figure-whayweshop img {
 
 .about h2{
   padding-bottom: 2rem !important;
-  font-size: 1.2rem !important;
+  font-size: 1.1rem !important;
   color: #5e5e5e !important;
   letter-spacing: 0.3px;
   text-align: center;
@@ -1543,7 +1630,7 @@ figure.figure-whayweshop img {
 
 .about h3{
   padding-top:1.5rem;
-  font-size: 1.2rem !important;
+  font-size: 1.1rem !important;
   font-weight: 500 !important;
   color: #5e5e5e !important;
   text-align: center;
@@ -1565,9 +1652,9 @@ figure.figure-whayweshop img {
 }
 
 .our-team h1{
-  font-weight: 500;
+  font-weight: 600;
   color: #5e5e5e !important;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   text-align: center;
   padding-bottom:2rem;
 }
@@ -1585,7 +1672,7 @@ figure.figure-whayweshop img {
 
 }
 .our-team figcaption h2{
-  font-size:1.2rem;
+  font-size:1.1rem;
   font-weight: 500;
   text-align: center;
   color:#5e5e5e;
@@ -1612,15 +1699,15 @@ color:#0197D2;
 }
 
 .our-story h1{
-  font-size: 1.6rem !important;
-  font-weight: 500 !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
   padding-bottom: 3rem;
   color: #5E5E5E;
 text-align: center; 
 }
 
 .our-story h2{
-  font-size: 1.3rem !important;
+  font-size: 1.2rem !important;
   font-weight: 500 !important;
   padding-bottom: 1rem !important;
   padding-top:1rem !important;
@@ -1643,7 +1730,7 @@ text-align: center;
 }
 
 .okjii-customerkirana h1{
-  font-size: 1.6rem !important;
+  font-size: 1.2rem !important;
   padding-bottom: 2rem;
   color: #5E5E5E;
 }
@@ -1654,8 +1741,8 @@ text-align: center;
 }
 
 .okkji-ourpractice h1{
-  font-size: 1.6rem !important;
-  font-weight: 500 !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
   padding-top:1rem;
   padding-bottom: 1rem;
   color: #5E5E5E;
@@ -1675,7 +1762,7 @@ text-align: center;
 }
 
 .getapp-link input{
-  margin-top: .5rem !important;
+  margin-top: 0rem !important;
   margin-left:-1em !important;
   padding-left:0.2 !important;
 }
@@ -1721,18 +1808,18 @@ input.form-control::placeholder {
 .getapp-link.form-control{
   margin-left: -1rem;
   padding-left: 0 !important;
-  padding-top: 1.5rem !important;
+  padding-top: 1rem !important;
 }
 
 
 
 .getapp-link .input-group-lg>.form-control:not(textarea) {
-  height: calc(1em + 1rem + 2px) !important;
+  height: calc(1em + 3rem + 2px) !important;
   background-color: #e9ecef;
 }
 
 .input-group-lg>.form-control{
-  padding: .7rem 1.5rem;
+  padding: .2rem 1.5rem;
   font-size: .9rem !important;
 }
 
@@ -1743,7 +1830,7 @@ input.form-control::placeholder {
   color:#fff !important;
   font-size:.9rem !important;
   border-radius: 5px !important;
-  margin-top: 7px !important;
+  margin-top: 16px !important;
   margin-right:8px !important;
 }
 
@@ -1761,7 +1848,7 @@ input.form-control::placeholder {
 
 .okjii-contactus h1{
 
-  font-size:1.6rem;
+  font-size:1.2rem;
   color:#5e5e5e;
   text-align: center;
   padding-top:2rem;
@@ -1787,7 +1874,7 @@ input.form-control::placeholder {
 }
 
 .card-address h3{
-  font-size:1.2rem;
+  font-size:1.1rem;
   color:#5e5e5e;
   padding-top:1.2rem;
   padding-bottom: 0.7rem;
@@ -1827,6 +1914,13 @@ input.form-control::placeholder {
   display: none !important;
 }
 
+.container-fluid.okjii-mainbody.main-body-desktop {
+  display: none;
+}
+.okjii-home .main-body-mobile{
+  display:block !important;
+}
+
 .get-applink{
   display: flex;
   width:100% !important;
@@ -1844,7 +1938,8 @@ input.form-control::placeholder {
 }
 
 nav#parallelogram {
-  background-color: #259A70 !important;
+  background-color: #FDFFFE  !important;
+  box-shadow: 0 1px 11px 0 rgba(0,0,0,0.18), 0 2px 15px 0 rgba(0,0,0,0.15) !important;
 }
 
 .navbar-brand{
@@ -1862,12 +1957,18 @@ nav#parallelogram {
   padding: 0 20px !important;
 }
 
-.figure-img2 {
+/* .figure-img2 {
   width: 100% !important;
   padding-right: 0;
   padding-left: 0;
   top: 50px;
   z-index: -1;
+} */
+.okjii-home .getapp-link {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .figure-img2 {
@@ -1975,7 +2076,7 @@ img.rounded-circle.testimoni-img {
 }
 
 .okjii-explore h1{
-  font-weight: 500;
+  font-weight: 600;
 color: #5e5e5e !important;
 font-size: 18pt;
 padding-top: 3.5rem !important;
@@ -1983,7 +2084,7 @@ padding-top: 3.5rem !important;
 
 .okjii-explore h2{
   padding-bottom: 1rem !important;
-font-size: 1.3rem !important;
+font-size: 1.2rem !important;
 font-weight: 400 !important;
 color: #5e5e5e !important;
 letter-spacing: 0.3px;
@@ -2049,7 +2150,7 @@ figure.home-delivery-figure-img.my-5 {
 
 footer.page-footer h5 {
 padding-top:1rem !important;
-  font-size: 1.2rem !important;
+  font-size: 1.1rem !important;
 }
 
 .okjii-fastcon {
@@ -2165,19 +2266,56 @@ padding-top:1rem !important;
   width: 52%;
 }
 
+.OkjiiRetailerBody-mobile h1{
+  padding-top:3rem;
+  padding-bottom: 2rem;
+}
+.OkjiiRetailerBody-mobile h1{
+  padding-bottom: 3rem;
+}
+.container-fluid.OkjiiRetailerBody {
+  display: none;
+}
+.container-fluid.OkjiiRetailerBody-mobile {
+  display: block;
+}
+.OkjiiRetailerBody-mobile{
+  background-image: url(../src/img/retailer/Retailer.png);
+  
+  top:50px;
+  left:0 ;
+  right:0;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  position: relative;
+
+}
+
+
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media screen and (max-width: 768px) and (min-width: 601px) {
   
 
-  .figure-img2 {
+  /* .figure-img2 {
     padding-right: 0 !important;
     padding-left: -1px !important;
     top: 0px;
     z-index: -1;
   
+  } */
+
+  .container-fluid.okjii-mainbody.main-body-desktop {
+    display: none;
   }
+  .okjii-home .main-body-mobile{
+    display:block !important;
+  }  
 
   .retailer-figure-img2, .okjii-fast-img4, .faqimg01, .okjii-offer-image, .okjii-fast-ourpractice{
 
@@ -2211,12 +2349,12 @@ padding-top:1rem !important;
 
  
 
-.figure-img2 {
+/* .figure-img2 {
   padding-right: 0 !important;
   padding-left: 3% !important;
-}
+} */
 
-.retailer-figure-img2, .okjii-fast-img4, .faqimg01, .figure-img2, .okjii-offer-image, .okjii-fast-ourpractice{
+.retailer-figure-img2, .okjii-fast-img4, .faqimg01, .okjii-offer-image, .okjii-fast-ourpractice{
 margin-top: -9px;
   top: 0px;
   z-index: -1;  
@@ -2247,10 +2385,10 @@ margin-top: -9px;
   top:100% !important;
 }
 
-.figure-img2 {
+/* .figure-img2 {
   padding-right: 0 !important;
   padding-left: 0% !important;
-}
+} */
 
 
 .carousel-item.active.carousel-slide-item.turested-slide {

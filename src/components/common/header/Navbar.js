@@ -25,8 +25,7 @@ render() {
     <div className=" bg-image">
       <MDBNavbar  className="nav-bar fixed-top"  id="parallelogram" dark expand="md" >
         <MDBNavbarBrand href="/">
-        <img src={logowhite} alt="store" className="mobile"  id="logo" height="29"/>
-        <img src={logo} alt="store" className="desktop"  id="logo" height="35"/>
+        <img src={logo} alt="store"   id="logo" height="35"/>
        
 
         </MDBNavbarBrand>
@@ -34,7 +33,7 @@ render() {
               <MDBCollapse id="navbarCollapse3" isOpen = { this.state.collapse } navbar>
 
           <MDBNavbarNav right>
-            <MDBNavItem className="mat-ripple-element" onClick={ this.onClick } active>
+            <MDBNavItem  onClick={ this.onClick } active>
               <MDBNavLink  to="/">HOME</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick }>

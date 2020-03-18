@@ -9,7 +9,7 @@ export default class KhataBook extends Component {
         <section className="container">
           <div className="row">
             <div className="col-lg-4 col-12">
-              <h1 className="text-white">Khata Book</h1>
+              <h1 className="text-white">OkkJi Khata</h1>
               <p>OkkJi takes care of all hectic stuﬀs like handwritien documents, manual listings of purchase &amp; maintaining account transactions by facilitating digital KHATA BOOK.</p>
 
               <ul className="list-unstyle list-color">

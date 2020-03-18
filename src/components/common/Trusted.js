@@ -28,7 +28,7 @@ render(){
   return(
 <div className="container-fluid h1-trusted text-center">
         <div className="container">
-      <h1 className="text-center">Trusted by Shop</h1>
+      <h1 className="text-center">TRUSTED BY STORE</h1>
 <OwlCarousel className={'owl-theme'}
     loop={true}
     margin={20}

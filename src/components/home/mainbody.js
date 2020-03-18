@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Daily from '../home/daily';
 
 
+//import BackgroundMobile from '../../img/home/BackgroundMobile.png';
 
 import Asset6 from '../../img/home/Asset6.png';
 
@@ -27,27 +28,31 @@ import GetAppLink from '../about/GetAppLink';
 
             return (
 <div className="okjii-home">
-              <div className="container-fluid okjii-mainbody">
+              <div className="container-fluid okjii-mainbody main-body-desktop">
 
                 <div className="row image-position">
-                <div className="col-md-7 col-sm-12 col-lg-7 figure-img2 order-md-2">
+                <div className="col-lg-7 col-md-7 order-lg-12 image-row">
 
-<img src={Asset6} className="img-fluid"  alt="" />
+<img src={Asset6} className="img-fluid Asset6"  alt="" />
 
     
 
 </div>
-                  <div className="col-md-5 col-sm-12 col-lg-5 order-md-1 mt-5 okjii-explore okjii-explore-left">
+                  <div className="col-lg-5 col-md-5 order-lg-1 okjii-explore okjii-explore-left">
 
-                    <h1>Best Way to Explore</h1>
+                    <h1>BEST WAY TO EXPLORE</h1>
 
                     <h2>all nearby mom-dad retail shops.</h2>
 
-                    <p>A revolution in grocery shopping where a customer can buy from their old reliable “Kirana” store without physically going there. A digital hub of all local, neighbourhood retail shop with era driven look and mechanism.
+                    <p> A digital hub of all local, neighbourhood retail shop with era driven look and mechanism.
 
                     </p>
+                    <div className="row">
+          <GetAppLink />
+          </div>
+
                       <div className="okjii-install-image">
-                      <div className="row offset-lg-1 offset-md-1 mt-4">
+                      <div className="row ">
 
                         <div className="col-sm-12  okjii-install">
 
@@ -61,7 +66,7 @@ import GetAppLink from '../about/GetAppLink';
 
                         </div>
 
-                      <div className="row offset-lg-1 offset-md-1 text-center">
+                      <div className="row  text-center">
                         <div className="col-sm-6">
                            <img className="img-fluid apple"  src={apple} alt=""/>
                         </div>
@@ -70,30 +75,77 @@ import GetAppLink from '../about/GetAppLink';
                                     </div>
 
                       </div>
-                      <div className="row offset-lg-1 offset-md-1">
-          <GetAppLink />
-          </div>
  
                     </div>
                     </div>
 
+
+
+
+
+
                     </div>
 
 
+</div>
+{/* Mobile View */}
+
+<div className="container-fluid okjii-mainbody-mobile main-body-mobile">
+<div className="row okjii-explore okjii-explore-left">
+
+<h1>BEST WAY TO EXPLORE</h1>
+
+<h2>all nearby mom-dad retail shops.</h2>
+
+<p>A digital hub of all local, neighbourhood retail shop with era driven look and mechanism.
+
+</p>
+<div className="row offset-lg-1 offset-md-1">
+<GetAppLink />
+</div>
+
+  <div className="mobile-google text-center">
+
+  <div className="row text-center">
+    <div className="col-sm-6 col-md-6">
+       {/* <img className="img-fluid apple"  src={apple} alt=""/> */}
+    </div>
+     <div className="col-sm-6 col-md-6">
+                <img className="img-fluid google" src={google} alt=""/>
+                </div>
+
+  </div>
+  <div className="row">
+
+<div className="col-sm-12  okjii-install">
+
+
+  <p className="install-now text-center"><img src={Asset7} alt="" /></p>
+  <p className=" text-center ">INSTALL NOW</p>
+
+
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+
+
+
+   </div>
 
 
 
 
-
-
-
-
-
+<div className="container-fluid">
                 <div className="row">
 
-                  <div className="col-lg-12 okjii-best">
+                  <div className="col-lg-12 col-sm-12 col-md-12 okjii-best">
 
-                    <h1 className="text-center">Why Customer <b className="best">Loves OkkJi</b></h1>
+                    <h1 className="text-center">WHY CUSTOMER <b className="best">LOVES OKKJI</b></h1>
 
                   </div>
 
