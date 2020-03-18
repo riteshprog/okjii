@@ -15,11 +15,14 @@ return (
 
 
    <div className="container-fluid  OkjiiRetailerBody">
-      <div className="row">
-         <div className="col-md-8 retailer-figure-img2 retailer order-md-2 ">
+   <div className="row row-addding">
+
+</div>
+<div className="row">
+         <div className="col-md-8 order-md-2 ">
             {/* <img src={retailer} width="100%" className="img-fluid"  alt="" /> */}
          </div>
-         <div className="col-md-4 order-md-1  order-sm-1  mt-5 okjii-explore okjii-retaler">
+         <div className="col-md-4 order-md-1  order-sm-1 okjii-explore okjii-retaler">
             <h1>Partner <span className="text-normal">with</span> <span className="text-green">Okk</span>Ji</h1>
             <ContactForm />
             <div className="container">
@@ -32,11 +35,17 @@ return (
                   </div>
                </div>
             </div>
+            <div className="row row-addding">
+
+</div>
          </div>
       </div>
    </div>
 
    <div className="container-fluid  OkjiiRetailerBody-mobile">
+   <div className="row row-addding">
+
+</div>
       <div className="row">
          <div className="col-md-12">
             <h1>Partner <span className="text-normal">with</span> <span className="text-green">Okk</span>Ji</h1>
@@ -45,12 +54,15 @@ return (
             <div className="container">
                <div className="row text-center mt-5">
                   <div className="col-sm-6">
-                     <img className="img-fluid apple"  src={apple} alt=""/>
+                     {/* <img className="img-fluid apple"  src={apple} alt=""/> */}
                   </div>
                   <div className="col-sm-6">
                      <img className="img-fluid google" src={google} alt=""/>
                   </div>
                </div>
+            </div>
+            <div className="row row-addding">
+
             </div>
          </div>
       </div>
