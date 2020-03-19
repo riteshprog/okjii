@@ -16,7 +16,7 @@ const FooterPage = () => {
     <MDBFooter color="green" className=" font-small ">
       <MDBContainer fluid className="footer-margin">
         <MDBRow  className="">
-          <MDBCol className="footer-bdr-right"  md="3" sm="6" size="12">
+          <MDBCol className="footer-bdr-right"  md="3" sm="6" xs="6" size="12">
             <h5 className="title">MENU</h5>
             <ul className="list-unstyled footer-list">
               <li>
@@ -42,7 +42,7 @@ const FooterPage = () => {
 
             </ul>
           </MDBCol>
-          <MDBCol className="footer-bdr-right"  md="3"  sm="6" size="12">
+          <MDBCol className="footer-bdr-right"  md="3"  sm="6" xs="6" size="12">
             <h5 className="title">HELP</h5>
             <ul className="list-unstyled footer-list">
               <li>
@@ -69,7 +69,7 @@ const FooterPage = () => {
 
             </ul>
           </MDBCol>
-          <MDBCol className="footer-bdr-right"  md="3"  sm="6" size="12">
+          <MDBCol className="footer-bdr-right"  md="3"  sm="6" xs="6" size="12">
             <h5 className="title">CATEGORIES</h5>
             <ul className="list-unstyled footer-list">
               <li>
@@ -96,7 +96,7 @@ const FooterPage = () => {
 
             </ul>
           </MDBCol>
-          <MDBCol className="bdr-font" md="3"  sm="6" size="12">
+          <MDBCol className="bdr-font" md="3"  sm="6" xs="6" size="12">
             <h5 className="title">FIND US ONLINE</h5>
             <ul className="list-unstyled footer-list">
               <li>
@@ -120,7 +120,7 @@ const FooterPage = () => {
       </MDBContainer>
       <div className="footer-copyright ">
         <MDBContainer fluid className="footer-margin" >
-        <p className="cite-text">For best of prices, deals and oﬀers; order online in cities<br /> The delivery service is operational in 13 cities: Ahmedabad, Bengaluru, Chennai, Delhi, Gurugram, Hyderabad, Jaipur, Kanpur, Kolkata, Lucknow, Noida, Mumbai, and Pune. 
+        <p className="cite-text">We are rooting our-self in Patna and Jaipur initially. The sprite of premium service,customer's convenience and super fast delivery will touch the most prominent emerging cities like Ahmadabad, Lucknow, Hyderabad, Chandigarh, Kolkata, Ranchi, Raipur, Varanasi and Delhi-NCR in very near future.
         </p>
         <h4 className="mt-1 payment">Payment Options</h4>
 

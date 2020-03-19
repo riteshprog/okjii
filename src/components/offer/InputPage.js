@@ -7,8 +7,8 @@ const InputPage = () => {
 
 
 
-<div className="text-center input-form">
-<MDBInputGroup  prepend="91+" hint="|Mobile Number" type="number" size="lg" />
+<div className="input-form">
+<MDBInputGroup  prepend="+91" hint="|Mobile Number" type="number" size="lg" />
       
 <MDBBtn color="success" className="btn-subscribe btn-offerpage text-center">SUBSCRIBE NOW</MDBBtn>
 </div>);

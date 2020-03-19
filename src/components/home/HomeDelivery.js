@@ -10,7 +10,7 @@ export default class HomeDelivery extends Component {
         <div className="row">
           <div className="col-lg-6">
             <h1 className="mb-3 mt-4"><b className="home">Home</b> Delivery</h1>
-            <p>OkkJi limits consumer’s effort in all possible manner whether it is their physical presence or delivery of their shopping at doorstep according to their convenience in terms of time &amp; comfort.</p>
+            <p>OkkJi brings ease to your life by reducing the need of your physical presence and delivering at your doorstep.</p>
             <ul className="list-unstyle">
                 <li> 
                 <MDBIcon icon="check-square" size="2x" className="indigo-text pr-1 my-0" /> Free home delivery</li>

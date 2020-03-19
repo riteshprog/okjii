@@ -9,14 +9,12 @@ export default class ContactBody extends Component {
   render() {
     return (
       <div>
-        <div className="container-fluid  OkjiiRetailerBody">
-      <div className="row">
-         <div className="col-md-8 retailer-figure-img2 retailer order-md-2 ">
-            <img src={Contactusimage} width="100%" className="img-fluid"  alt="" />
-         </div>
-         <div className="col-md-4 order-md-1  order-sm-1  mt-5 okjii-retaler">
+        <div className="container-fluid okkjiicontactus ">
+      <div className="row okjii-explore okjii-retaler">
+         <div className="col-md-4 ">
             <h1>Contact Us</h1>
             <ContactUsForm />
+            
            </div>
       </div>
    </div>

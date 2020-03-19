@@ -15,15 +15,15 @@ return (
 
 
    <div className="container-fluid  OkjiiRetailerBody">
-   <div className="row row-addding">
-
-</div>
+      
+   
 <div className="row">
          <div className="col-md-8 order-md-2 ">
             {/* <img src={retailer} width="100%" className="img-fluid"  alt="" /> */}
          </div>
          <div className="col-md-4 order-md-1  order-sm-1 okjii-explore okjii-retaler">
             <h1>Partner <span className="text-normal">with</span> <span className="text-green">Okk</span>Ji</h1>
+            <p className="">A digital hub of all local, neighbourhood retail shop with era driven look and mechanism.</p>
             <ContactForm />
             <div className="container">
                <div className="row text-center mt-5">
@@ -40,6 +40,7 @@ return (
 </div>
          </div>
       </div>
+
    </div>
 
    <div className="container-fluid  OkjiiRetailerBody-mobile">

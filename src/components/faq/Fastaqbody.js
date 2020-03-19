@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import faqimg01 from '../../img/faq/faqimg01.png';
+import faqimg01mobile from '../../img/faq/faqimg01.png';
 import Trusted from '../common/Trusted';
 import SearchPage from '../faq/SearchPage';
 import Faqshowhide from '../faq/Faqshowhide';
@@ -8,13 +9,18 @@ import AccountHelpOur from '../faq/AccountHelpOur';
 export default class Fastaqbody extends Component {
   render() {
     return (
-      <div className="okkji-faqs">
-        <section  className="okkji-faq">
+      <div className="">
+        <section  className="okkji-faq offer-desktop">
           <figure className="okkji-faq-figure faqimg01">
             <img src={faqimg01} alt="" className="img-fluid" />
           </figure>
-          <div className="search-page">
-          <SearchPage />
+          <div className="search-page container">
+            <div className=" text-center">
+            <h1 className="text-center">HELP CENTER</h1>
+
+            <SearchPage />
+
+          </div>
           </div>
           
 
@@ -22,6 +28,24 @@ export default class Fastaqbody extends Component {
   
          
        </section>
+
+       <section  className="okkji-faq offer-mobile">
+          <figure className="okkji-faq-figure faqimg01">
+            <img src={faqimg01mobile} alt="" className="img-fluid" />
+          </figure>
+          <div className="search-page container">
+            <div className=" text-center">
+            <h1 className="text-center">HELP CENTER</h1>
+
+
+
+          </div>
+          </div>
+          <div className="search-page-faq"><SearchPage />
+          </div>
+       </section>
+
+
 
        <h1 className="faq-h1 pl-3">SUPPORT : 1800 1212 2121</h1>
           <p className="text-center support-para pl-3 pt-3">If you need custom services or Need more? Contact us

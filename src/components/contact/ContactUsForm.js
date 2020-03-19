@@ -1,9 +1,9 @@
 import React from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody } from 'mdbreact';
+import { MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody } from 'mdbreact';
 
 const ContactUsForm = () => {
   return (
-    <MDBContainer>
+    <div>
 
       <MDBRow>
         <MDBCol md="12">
@@ -60,7 +60,7 @@ const ContactUsForm = () => {
           </MDBCard>
         </MDBCol>
       </MDBRow>
-    </MDBContainer>
+    </div>
   );
 };
 

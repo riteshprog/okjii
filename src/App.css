@@ -6,7 +6,9 @@
 }
 
 
-
+section.okkji-faq.offer-mobile {
+  display: none;
+}
 p{
   font-size:1.25rem;
   color:#5E5E5E;
@@ -191,10 +193,16 @@ a{
   position: relative;
 }
 
+.search-page-faq .search-form{
+  margin-left: 15px !important;
+  margin-right:15px !important;
+
+}
+
 .OkjiiRetailerBody{
+  padding: 10rem;
   background-image: url(../src/img/retailer/BackgroundRetailer.png);
-  
-  top:50px;
+  top:0;
   left:0 ;
   right:0;
 
@@ -204,6 +212,30 @@ a{
   
   position: relative;
 
+}
+
+.okkjiicontactus{
+  padding-top: 13rem !important;
+  background-image: url(../src/img/contact/Contactusdesktop.png);
+  top:0;
+  left:0 ;
+  right:0;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  position: relative;
+
+}
+
+
+.okkjiicontactus-h1{
+  margin-top:-2rem;
+}
+
+.OkjiiRetailerBody h1{
+  margin-top:1rem;
 }
 
 .okkji-fast-body{
@@ -222,6 +254,23 @@ a{
 }
 
 
+.okjii-offer-body{
+  background-image: url(../src/img/offer/BAckgroundOfferBody.png);
+  
+  top:56px;
+  left:0 ;
+  right:0;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  position: relative;
+
+}
+
+
+
 .main-body-mobile {
   display: none;
 }
@@ -230,6 +279,10 @@ a{
   display: block;
 }
 .container-fluid.OkjiiRetailerBody-mobile {
+  display: none;
+}
+
+section.okkji-faq.faq-mobile, .offer-mobile {
   display: none;
 }
 
@@ -257,8 +310,13 @@ a{
 
 .image-position .Asset6{
   width:80% !important;
+  margin-top:2rem;
 }
 
+.image-position h1{
+  margin-top:3rem;
+
+}
 .image-row{
   display: flex;
   justify-content: flex-end;
@@ -288,6 +346,7 @@ a{
      color: #5e5e5e !important;
     font-size: 1rem !important;
     letter-spacing: 0.5px;
+    padding-bottom: 1rem;
 }
 
 .install-now, p.install-now {
@@ -917,8 +976,9 @@ ol.carousel-indicators li {
   font-weight: 600;
   font-size: 17pt !important;
   color: #5E5E5E;
+  margin-top:-5rem;
   padding-top: 3rem;
-  padding-left: 1rem;
+  padding-left: 0rem;
   padding-bottom: 2rem;
 }
 
@@ -930,8 +990,9 @@ ol.carousel-indicators li {
   float: right;
   transform: translate(37%, -107%);
 }
-img.Googlemap {
-  width: 55%;
+.google-map-right img {
+  width: 55% !important;
+
 }
 .container-fluid.okkjii-retalore {
   padding-top: 3rem;
@@ -1184,6 +1245,16 @@ figcaption h4{
   padding-bottom: 1rem;
 }
 
+.okkji-offer{
+  position:relative;
+  display:flex;
+  align-content: left !important;
+  justify-content: left !important;
+  z-index: 1;
+
+}
+
+
 .okkji-faq, .okkji-about{
   position:relative;
   display:flex;
@@ -1205,7 +1276,7 @@ figcaption h4{
 .search-page{
   position:absolute;
   width:100%;
-  top:35%;
+  top:25%;
   display:flex;
   justify-content: center !important;
 }
@@ -1216,6 +1287,13 @@ figcaption h4{
 
 .search-form .input-group-prepend {
   margin-right: -35px !important;
+}
+
+.search-page h1{
+  font-size:17pt;
+  font-weight: 700;
+  color:#fff;
+  padding-bottom:1rem;
 }
 
 .search-form{
@@ -1358,7 +1436,7 @@ figcaption h4{
 .okjii-offer h1{
   font-size:17pt !important;
   font-weight: 500 !important;
-  padding-top:9rem;
+  padding-top:10rem;
   color:#5e5e5e;
 padding-left:2rem;
 }
@@ -1371,7 +1449,7 @@ padding-left:2rem;
   padding-left:2rem;
   color:#5e5e5e;
 }
-.okjii-offer .okjii-bring{
+ .okjii-bring{
   font-size:1.2rem !important;
   font-weight: 500 !important;
   padding-top:0rem;
@@ -1379,10 +1457,10 @@ padding-left:2rem;
   color:#5e5e5e;
 }
 
-.input-form{
+/* .input-form{
   padding-left:2rem;
   padding-right:2rem;
-}
+} */
 .input-form .input-group{
   background-color: #e9ecef !important;
   border-radius: 10px !important;
@@ -1605,6 +1683,7 @@ ol.okkji-howtoapply-list{
 .okjii-home.main-body-mobile{
   display: none !important;
 }
+
 
 
 .carousel-control-next{
@@ -1973,6 +2052,9 @@ input.form-control::placeholder {
 .okjii-home .main-body-mobile{
   display:block !important;
 }
+section.okkji-faq.offer-mobile {
+  display: block;
+}
 
 .get-applink{
   display: flex;
@@ -2213,7 +2295,7 @@ padding-top:1rem !important;
 }
 
 .okjii-fastcon h1{
-  font-size: 17pt !important;
+  font-size: 14pt !important;
   font-weight: 600;
   color:#fff;
 
@@ -2236,6 +2318,12 @@ padding-top:1rem !important;
   padding-bottom: 0px !important;
 
 }
+.okjii-fasthow{
+  padding-left:1rem !important;
+  margin-left:15px !important;
+  margin-right: 15px !important;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.18) !important;
+}
 
 .okjii-fastfast h1{
   font-weight: 500 !important;
@@ -2245,13 +2333,28 @@ padding-top:1rem !important;
   padding-top: 30px !important;
 }
 
+
+.offer-page{
+  position:absolute;
+  width:100%;
+  top:0%;
+  display:flex;
+  justify-content: right !important;
+}
+
+
+
 .search-page{
   position:absolute;
   width:100%;
-  top:42%;
+  top:33%;
   display:flex;
   justify-content: center !important;
+  left:1.3rem;
+  right:2rem;
 }
+
+
 .faqimg05, .faqimg07 {
   width: 25% !important;
 }
@@ -2334,6 +2437,14 @@ padding-top:1rem !important;
 .container-fluid.OkjiiRetailerBody-mobile {
   display: block;
 }
+section.okkji-faq.faq-mobile, .offer-mobile {
+  display: block;
+}
+section.okkji-faq.faq-desktop, .offer-desktop {
+  display: none;
+}
+
+
 .OkjiiRetailerBody-mobile{
   background-image: url(../src/img/retailer/Retailer.png);
   
@@ -2356,6 +2467,56 @@ padding-top:1rem !important;
 .okkji-howwework {
   margin-top: -5rem;
   background-color: #fff !important;
+}
+
+.search-page h1{
+  font-size:14pt;
+  font-weight: 700;
+  color:#4065BA;
+  margin-top: -2rem !important;
+    margin-left: -1rem !important;
+  padding-bottom:1rem;
+}
+
+.offerheading {
+  top: -4% !important;
+}
+
+.offerheading h1 {
+  font-size: 12pt;
+  padding-top: 2rem;
+  padding-left: 1rem !important;
+  padding-right: 2rem;
+  padding-bottom: .5rem !important;
+}
+.offerheading h2 {
+  font-size: 1rem !important;
+  font-weight: 500;
+  color: #5e5e5e;
+  padding-left: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+.faq-mobile .input-form {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  padding-top:.5rem;
+  text-align: center !important;
+  width:100% !important;
+}
+
+.okjii-bring {
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
+  padding-top: 0rem;
+  padding-bottom: 1.5rem;
+  color: #5e5e5e;
+}
+
+.offer-mobile .search-form{
+  padding-top:0rem !important;
+  padding-left:1rem !important;
+  padding-right:1rem !important;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.18) !important;
 }
 
 }
@@ -2404,6 +2565,7 @@ padding-top:1rem !important;
 }
 
 
+
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -2417,7 +2579,7 @@ padding-top:1rem !important;
 } */
 
 .retailer-figure-img2, .okjii-fast-img4, .faqimg01, .okjii-offer-image, .okjii-fast-ourpractice{
-margin-top: -9px;
+margin-top: 56px;
   top: 0px;
   z-index: -1;  
 }
@@ -2463,4 +2625,45 @@ margin-top: -9px;
   height:52px !important
 }
 
+}
+
+.offer-page {
+  margin-top: -39rem;
+  margin-left: 2rem !important;
+}
+
+
+.offer-page h1{
+  font-size:17pt;
+  font-weight: 600;
+  color:#5e5e5e;
+}
+
+.offerheading {
+  position: absolute !important;
+  width: 100%;
+  top: 15%;
+  display: flex;
+}
+
+.offerheading h1{
+  font-size:17pt;
+  font-weight: 600;
+  color:#5e5e5e;
+  padding-top:2rem;
+  padding-left:2rem;
+  padding-right:2rem;
+  padding-bottom:2rem;
+}
+
+.offerheading h2{
+  font-size:1.2rem;
+  font-weight: 500;
+  color:#5e5e5e;
+  padding-left:2rem;
+  padding-bottom:2rem;
+}
+.offerheading .input-form{
+  padding-left: 2rem;
+  padding-right:2rem;
 }

@@ -40,11 +40,11 @@ import GetAppLink from '../about/GetAppLink';
 </div>
                   <div className="col-lg-5 col-md-5 order-lg-1 okjii-explore okjii-explore-left">
 
-                    <h1>BEST WAY TO EXPLORE</h1>
+                    <h1>EASIEST WAY TO ORDER</h1>
 
-                    <h2>all nearby mom-dad retail shops.</h2>
+                    <h2>from your local kirana shops.</h2>
 
-                    <p> A digital hub of all local, neighbourhood retail shop with era driven look and mechanism.
+                    <p> A digital hub of all neighbourhood retail shops with new age look and a simple setup.
 
                     </p>
                     <div className="row">
@@ -93,13 +93,11 @@ import GetAppLink from '../about/GetAppLink';
 <div className="container-fluid okjii-mainbody-mobile main-body-mobile">
 <div className="row okjii-explore okjii-explore-left">
 
-<h1>BEST WAY TO EXPLORE</h1>
+<h1>EASIEST WAY TO ORDER</h1>
 
-<h2>all nearby mom-dad retail shops.</h2>
+<h2>from your local kirana shops.</h2>
 
-<p>A digital hub of all local, neighbourhood retail shop with era driven look and mechanism.
-
-</p>
+<p>A digital hub of all neighbourhood retail shops with new age look and a simple setup.</p>
 <div className="row offset-lg-1 offset-md-1">
 <GetAppLink />
 </div>
@@ -145,7 +143,7 @@ import GetAppLink from '../about/GetAppLink';
 
                   <div className="col-lg-12 col-sm-12 col-md-12 okjii-best">
 
-                    <h1 className="text-center">WHY CUSTOMER <b className="best">LOVES OKKJI</b></h1>
+                    <h1 className="text-center">WHY CUSTOMERS <b className="best">LOVE OKKJI?</b></h1>
 
                   </div>
 

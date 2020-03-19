@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBNavItem, MDBNavLink,  MDBCollapse } from "mdbreact";
 import logo from '../../../img/logo.png'
-import logowhite from '../../../img/logowhite.png'
+//import logowhite from '../../../img/logowhite.png'
 
 
 class NavbarPage extends Component {

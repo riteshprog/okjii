@@ -1,10 +1,10 @@
 import React from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody } from 'mdbreact';
+import { MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody } from 'mdbreact';
 import Googlemap from '../../img/retailer/Googlemap.png';
 
 const ContactForm = () => {
   return (
-    <MDBContainer>
+    <div>
 
       <MDBRow>
         <MDBCol md="12">
@@ -21,7 +21,7 @@ const ContactForm = () => {
                 <br />
                 <div class="input-group1">
     <input id="location" type="Location" class="form-control" name="location" placeholder="Location" />
-    <span class="input-group-addon1 google-map-right"><img src={Googlemap} class=" Googlemap" alt="Google Map" alt="" /></span>
+    <span class="input-group-addon1 Googlemap google-map-right"><img src={Googlemap}  alt="Google Map" alt="" /></span>
 
 
   </div>
@@ -44,7 +44,7 @@ const ContactForm = () => {
           </MDBCard>
         </MDBCol>
       </MDBRow>
-    </MDBContainer>
+    </div>
   );
 };
 

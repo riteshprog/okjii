@@ -3,10 +3,13 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-import vishal from '../../img/home/vishal.png';
-import vmart from '../../img/home/vmart.png';
-import easyday from '../../img/home/easyday.png';
-import twentyfour from '../../img/home/24.png';
+import Hyper from '../../img/home/Hyper.png';
+import Patanjali from '../../img/home/Patanjali.png';
+import SHEKHAR from '../../img/home/SHEKHAR.png';
+import EzeeFresh from '../../img/home/EzeeFresh.png';
+import BigMart from '../../img/home/BigMart.png';
+import Crossing from '../../img/home/Crossing.png';
+
 class Trusted extends React.Component {
   state= {
     responsive:{
@@ -20,7 +23,7 @@ class Trusted extends React.Component {
             items: 4,
         },
         1000: {
-            items: 6,
+            items: 5,
         },
     },
 }
@@ -36,17 +39,16 @@ render(){
     dots={true}
     autoplay={true}
     autoplayTimeout={2000}
-    items={6}
+    items={5}
     responsive={this.state.responsive}
 >
 
-<div className="item"><img className="item" src={twentyfour} alt="" /></div>
-<div className="item"><img  className="item" src={easyday} alt="" /></div>
-<div className="item"><img  className="item" src={vishal}  alt=""/></div>
-<div className="item"><img  className="item" src={vmart}  alt="" /></div>
-<div className="item"><img  className="item" src={twentyfour} alt="" /></div>
-<div className="item"><img  className="item" src={easyday}  alt="" /></div>
-<div className="item"><img  className="item" src={vishal}  alt="" /></div>
+<div className="item"><img className="item" src={SHEKHAR} alt="" /></div>
+<div className="item"><img  className="item" src={Patanjali} alt="" /></div>
+<div className="item"><img  className="item" src={Hyper}  alt=""/></div>
+<div className="item"><img  className="item" src={EzeeFresh}  alt="" /></div>
+<div className="item"><img  className="item" src={BigMart} alt="" /></div>
+<div className="item"><img  className="item" src={Crossing}  alt="" /></div>
       
      </OwlCarousel>
      </div>
