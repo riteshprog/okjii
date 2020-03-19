@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,700,800|PT+Mono" rel="stylesheet" />
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+     
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>OKKji - Connecting Customer Needs </title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- <script>
+  var whitelogo = "data:image/png;base64,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";
+var logo = "/static/media/logo.0ace7e07.png";
+$(function () { 
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 10) { 
+          $('.navbar .navbar-brand img').attr('src',whitelogo);
+        }
+        if ($(this).scrollTop() < 10) { 
+          $('.navbar .navbar-brand img').attr('src','/static/media/logo.0ace7e07.png');
+        }
+    })
+});</script> -->
+
+   <!-- <script>
+ $(function () {
+  $(document).scroll(function () {
+	  var $nav = $(".fixed-top");
+	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+	});
+});
+   </script> -->
+
+
+  </body>
+</html>
