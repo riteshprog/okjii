@@ -46,7 +46,7 @@ const FooterPage = () => {
             <h5 className="title">HELP</h5>
             <ul className="list-unstyled footer-list">
               <li>
-                <a href="/fastaq">HELP CENTER
+                <a href="/help">HELP CENTER
 </a>
               </li>
               <li>

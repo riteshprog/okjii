@@ -22,7 +22,8 @@ export default class OkjiiFastBody extends Component {
         <img src={OkkjifastBackground} alt="" className="img-fluid " />
       </figure>
       <div class="okjii-fastcon">
-        <h1>AN EXCLUSIVE OKKJI SERVICE</h1>
+        {/* <h1>AN EXCLUSIVE OKKJI SERVICE</h1> */}
+        <h1>Get free and fast delivery for your <br />daily groceries and utilities at your <br />doorstep from local retail shops </h1>
       
         </div>
 

@@ -27,7 +27,8 @@ export default class AboutBody extends Component {
       <img src={topImg} alt="" className="img-fluid" />
       </figure>
       <div class="okjii-digital">
-        <h1><b>DIGITALIZING RELATIONSHIP<br />UPGRADING SHOPPING<br />CONNECTING CUSTOMER’S NEED</b></h1>
+        <h1><b>A digital aggregator of local retail shops</b></h1>
+        {/* <h1><b>DIGITALIZING RELATIONSHIP<br />UPGRADING SHOPPING<br />CONNECTING CUSTOMER’S NEED</b></h1> */}
       
         </div>
         </div>

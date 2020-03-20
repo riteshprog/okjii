@@ -5,8 +5,9 @@ export default class OkjiiFast extends Component {
   render() {
     return (
       <div>
-        <Helmet>
-<title>Okkji Fast</title>
+<Helmet>
+<meta name="description" content="Get groceries delivered at your doorstep from local retail shops and kirana stores." />
+<title>Fast and free delivery of groceries by local retail shops</title>
 </Helmet>
         <OkjiiFastBody />
         
