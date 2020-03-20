@@ -36,17 +36,17 @@ function App() {
      <Route path='/okkji-retailer' >
               <OkjiiRetailer />
      </Route>
-     <Route path='/okjiifast' >
+     <Route path='/okjii-fast' >
               <OkjiiFast />
      </Route>
       
      <Route path='/help' >
               <Fastaq />
      </Route>
-     <Route path='/okjiioffer' >
+     <Route path='/offer' >
       <OkjiiOffer />
       </Route>
-      <Route path='/okjiiblog' >
+      <Route path='/blog' >
       <OkjiiBlog />
       </Route>
       <Route path='/about' >
@@ -55,7 +55,7 @@ function App() {
       <Route path='/contact' >
       <Contact />
       </Route>
-      <Route path='/terms' >
+      <Route path='/tnc' >
       <TermsConditions />
       </Route>
       <Route path='/privacy' >

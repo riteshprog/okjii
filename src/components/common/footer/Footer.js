@@ -26,14 +26,14 @@ const FooterPage = () => {
                 <a href="/okkji-retailer"> JOIN AS RETAILER</a>
               </li>
               <li>
-                <a href="/okjiiblog">BLOG</a>
+                <a href="/blog">BLOG</a>
               </li>
               <li>
                 <a href="/"> CAREER
 </a>
               </li>
               <li>
-                <a href="/okjiioffer">OFFERS</a>
+                <a href="/offer">OFFERS</a>
               </li>
 
               <li>
@@ -53,7 +53,7 @@ const FooterPage = () => {
                 <a href="/contact">CONTACT US</a>
               </li>
               <li>
-                <a href="/terms">TERMS &amp; CONDITION</a>
+                <a href="/tnc">TERMS &amp; CONDITION</a>
               </li>
               <li>
                 <a href="/privacy"> PRIVACY POLICY
