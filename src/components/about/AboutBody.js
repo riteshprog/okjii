@@ -12,6 +12,7 @@ import homedelovery from '../../img/about/homedelovery.png';
 import store from '../../img/about/store.png';
 import smartbilling from '../../img/about/smartbilling.png';
 import topImg from '../../img/about/topImg.png';
+import MobileBackground from '../../img/about/MobileBackground.png';
 
 
 export default class AboutBody extends Component {
@@ -24,10 +25,12 @@ export default class AboutBody extends Component {
       <div className="container-fluid okkji-about">
         <div className="row">
       <figure className="okkji-faq-figure okjii-fast-img4">
-      <img src={topImg} alt="" className="img-fluid" />
+      <img src={topImg} alt="" className="img-fluid desktop" />
+      <img src={MobileBackground} alt="" className="img-fluid mobile" />
+
       </figure>
       <div class="okjii-digital">
-        <h1><b>A digital aggregator of local retail shops</b></h1>
+        <h1 className="text-uppercase"><b>A digital aggregator of <br />local retail shops</b></h1>
         {/* <h1><b>DIGITALIZING RELATIONSHIP<br />UPGRADING SHOPPING<br />CONNECTING CUSTOMER’S NEED</b></h1> */}
       
         </div>

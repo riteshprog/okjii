@@ -333,7 +333,7 @@ section.okkji-faq.faq-mobile, .offer-mobile {
 
 
 .okjii-explore h1{
-      font-weight: 500;
+      font-weight: 600;
     color: #5e5e5e !important;
     font-size: 17pt;
     padding-top: 0rem !important;
@@ -1680,6 +1680,9 @@ ol.okkji-howtoapply-list{
   display: none !important;
 }
 
+img.img-fluid.mobile {
+  display: none;
+}
 .okkji-ourpractice .mobile{
   display: none !important;
 }
@@ -2124,7 +2127,11 @@ h1.term-h1-heading{
   padding-top:.4rem;
 }
 
-
+.blog-column h2{
+  font-size:1.2rem;
+  font-weight: 600;
+  color:
+}
 
 /* Okjii Blog end */
 
@@ -2139,6 +2146,13 @@ h1.term-h1-heading{
 }
 .navbar-brand .desktop {
   display: none !important;
+}
+img.img-fluid.desktop {
+  display: none;
+}
+
+img.img-fluid.mobile {
+  display: block;
 }
 
 .container-fluid.okjii-mainbody.main-body-desktop {
