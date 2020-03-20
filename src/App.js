@@ -14,6 +14,11 @@ import OkjiiOffer from './components/offer/OkjiiOffer';
 import OkjiiBlog from './components/blog/OkkjiBlog';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
+import TermsConditions from './components/terms/TermsConditions';
+import PrivacyPolicy from './components/privacy/PrivacyPolicy';
+import RefundPolicy from './components/refund/RefundPolicy';
+import Disclaimer from './components/disclaimer/Disclaimer';
+
 
 import ScrollToTop from './components/ScrollToTop'
 
@@ -28,14 +33,14 @@ function App() {
      <MainBody />
      
      </Route>
-     <Route path='/okjiiretailer' >
+     <Route path='/okkji-retailer' >
               <OkjiiRetailer />
      </Route>
      <Route path='/okjiifast' >
               <OkjiiFast />
      </Route>
       
-     <Route path='/fastaq' >
+     <Route path='/help' >
               <Fastaq />
      </Route>
      <Route path='/okjiioffer' >
@@ -49,6 +54,18 @@ function App() {
       </Route>
       <Route path='/contact' >
       <Contact />
+      </Route>
+      <Route path='/terms' >
+      <TermsConditions />
+      </Route>
+      <Route path='/privacy' >
+      <PrivacyPolicy />
+      </Route>
+      <Route path='/refund' >
+      <RefundPolicy />
+      </Route>
+      <Route path='/disclaimer' >
+      <Disclaimer />
       </Route>
      </Switch>
      <Footer />

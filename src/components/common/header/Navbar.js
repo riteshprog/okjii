@@ -37,13 +37,13 @@ render() {
               <MDBNavLink  to="/">HOME</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick }>
-              <MDBNavLink  to="/okjiiretailer">OKKJI FOR RETAILER</MDBNavLink>
+              <MDBNavLink  to="/okkji-retailer">OKKJI FOR RETAILER</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick }>
               <MDBNavLink to="/okjiifast">OKKJI FAST</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick }>
-              <MDBNavLink to="/fastaq">FAQ</MDBNavLink>
+              <MDBNavLink to="/help">FAQ</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick }>
               <MDBNavLink  to="/okjiioffer">OFFER <sup className="badge badge-warning badge-text"><span >New</span></sup></MDBNavLink>

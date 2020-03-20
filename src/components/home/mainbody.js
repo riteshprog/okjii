@@ -20,6 +20,7 @@ import Testimonial from '../common/testimonial/Testimonial';
 
 import Trusted from '../common/Trusted';
 import GetAppLink from '../about/GetAppLink';
+import { Helmet } from 'react-helmet';
 
 
         export default class mainbody extends Component {
@@ -28,6 +29,9 @@ import GetAppLink from '../about/GetAppLink';
 
             return (
 <div className="okjii-home">
+<Helmet>
+<title>Home</title>
+</Helmet>
               <div className="container-fluid okjii-mainbody main-body-desktop">
 
                 <div className="row image-position">

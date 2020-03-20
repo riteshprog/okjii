@@ -23,10 +23,10 @@ const FooterPage = () => {
                 <a href="/about">ABOUT US</a>
               </li>
               <li>
-                <a href="/okjiiretailer"> JOIN AS RETAILER</a>
+                <a href="/okkji-retailer"> JOIN AS RETAILER</a>
               </li>
               <li>
-                <a href="/">BLOG</a>
+                <a href="/okjiiblog">BLOG</a>
               </li>
               <li>
                 <a href="/"> CAREER
@@ -46,25 +46,25 @@ const FooterPage = () => {
             <h5 className="title">HELP</h5>
             <ul className="list-unstyled footer-list">
               <li>
-                <a href="#!">HELP CENTER
+                <a href="/fastaq">HELP CENTER
 </a>
               </li>
               <li>
                 <a href="/contact">CONTACT US</a>
               </li>
               <li>
-                <a href="#!">TERMS &amp; CONDITION</a>
+                <a href="/terms">TERMS &amp; CONDITION</a>
               </li>
               <li>
-                <a href="#!"> PRIVACY POLICY
+                <a href="/privacy"> PRIVACY POLICY
 </a>
               </li>
               <li>
-                <a href="#!">REFUND POLICY</a>
+                <a href="/refund">REFUND POLICY</a>
               </li>
 
               <li>
-                <a href="#!">DISCLAIMER</a>
+                <a href="/disclaimer">DISCLAIMER</a>
               </li>
 
             </ul>

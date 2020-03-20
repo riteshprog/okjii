@@ -10,6 +10,7 @@
     "mdbreact": "^4.25.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
     "react-light-accordion": "^0.1.4",
     "react-multi-carousel": "^2.5.2",
     "react-owl-carousel": "^2.3.1",
