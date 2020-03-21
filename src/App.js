@@ -18,6 +18,7 @@ import TermsConditions from './components/terms/TermsConditions';
 import PrivacyPolicy from './components/privacy/PrivacyPolicy';
 import RefundPolicy from './components/refund/RefundPolicy';
 import Disclaimer from './components/disclaimer/Disclaimer';
+import Registration from './components/registration/Registration';
 
 
 import ScrollToTop from './components/ScrollToTop'
@@ -67,6 +68,10 @@ function App() {
       <Route path='/disclaimer' >
       <Disclaimer />
       </Route>
+      <Route path='/registration' >
+      <Registration />
+      </Route>
+
      </Switch>
      <Footer />
     </div>

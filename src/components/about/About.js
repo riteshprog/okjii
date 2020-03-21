@@ -6,8 +6,8 @@ export default class About extends Component {
     return (
       <div>
         <Helmet>
+        <title>OKKJI empowers local retail shops by digitalising their business</title>
         <meta name="description" content="Connecting customers with local retail shops" />
-          <title>Connecting customers with local retail shops</title>
         </Helmet>
         <AboutBody />
       </div>

@@ -15,7 +15,7 @@ export default class OkjiiOfferBody extends Component {
 
 
 
-<div className="">
+<div className="offer-body">
         <section  className="okkji-faq faq-desktop">
           <figure className="okkji-faq-figure faqimg01">
             <img src={BAckgroundOfferBody} alt="" className="img-fluid" />

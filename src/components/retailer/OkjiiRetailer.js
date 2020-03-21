@@ -7,8 +7,8 @@ export default class OkjiiRetailer extends Component {
     return (
       <div>
         <Helmet>
+        <title>Connecting customers with local retail shops</title>
         <meta name="description" content="OKKJI connects local retail shops and kirana stores with their customers. Build lasting relationships and give the benefit of free delivery to your customers" />
-          <title>Connecting customers with local retail shops</title>
         </Helmet>
         <OkjiiRetailerBody />
       </div>

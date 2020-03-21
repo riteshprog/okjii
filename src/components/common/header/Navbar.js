@@ -33,6 +33,9 @@ render() {
               <MDBCollapse id="navbarCollapse3" isOpen = { this.state.collapse } navbar>
 
           <MDBNavbarNav right>
+          <MDBNavItem  onClick={ this.onClick }>
+              <MDBNavLink className="pre-registration" to="/registration">PRE-REGISTRATION</MDBNavLink>
+            </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick } active>
               <MDBNavLink  to="/">HOME</MDBNavLink>
             </MDBNavItem>

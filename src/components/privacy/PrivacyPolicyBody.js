@@ -8,28 +8,68 @@ export default class PrivacyPolicyBody extends Component {
           <h1 className="term-h1-heading">PRIVACY POLICY</h1>
           <div className="row">
             <section className="okjii-term-condition">
-              <p className="mb-0">Esythink recognizes the importance of maintaining users and associate partners privacy. We value your privacy and appreciate your trust in us. This describes how we treat user information. This Privacy Policy applies to current and former visitors to our website and to our online customers. By visiting and/or using our website, you agree to this Privacy Policy. </p>
-              <p className="mb-0">Esythink is an initiative under Esythink solutions Pvt Ltd, register under registrar of companies oﬃce, India having head oﬃce at 6th ﬂoor, MM tower, plot no-08 &amp; 09, Udyog Vihar phase-04, Gurugram, Haryana.</p>
-              <p className="mb-0">Please, go through with the whole privacy policy carefully before enjoying or op</p>
-              <p>We have all rights to re-write or change the whole policy document at any point of time which immediately aﬀects the services as well as associated partners terms and conditions. It comprehensively includes teacher, parents and school in its sphere.</p>
-              <h2>Why we collect information</h2>
-              <p>In order to facilitate our different kind of services to you, we are collecting data from you. It may include name, address, phone numbers, email educational and employment history, resume, payment details, and other related document for job placement support, child-admission, teacher hiring support, admission process support and many other facilities.</p>
-              <h2>To whom we collect data</h2>
-              <p>We collect data from teachers, job seekers, parents who wish to admit their child in diﬀerent school through our portal, child detail who wants to take admission in school from our portal from their parents concern, schools details which is associated with us.</p>
-              <h2>What we gather from you</h2>
-              <h3>Contact information.</h3>
-              <p>We may take your name, email, mobile number, phone number, street, city, state, pin code, country and IP address from you before facilitating you.</p>
-              <h3>Payment and billing information</h3>
-              <p>We may take details of payment mode and associated data like name, billing address, payment details like card no, OTP, password, expiree date of your card, CVV no but we NEVER stored or collect payment details and associated data in our database. All mentioned information is actually c and veriﬁed by your bank and payment gateway.</p>
-              <h3>Information of your post</h3>
-              <p>We collect information you post in forms comment, post, request, suggestion or anything related to our services in a public space on our website or on third-party social media site belonging to Esythink.</p>
-              <h3>Demographic information</h3>
-              <p>We may collect demographic information about you, events you like, events you intend to participate in, or any other information provided by you the use of our website. We might collect this as a part of a survey also.</p>
-              <h3>Other information</h3>
-              <p>If you use our website, we may collect information about your IP address and the browser you're using. We might look at what site you came from, duration of time spent on our website, pages accessed or what site you visit when you leave us. We might also collect the type of mobile device you using, or the version of the operating system your computer or device is running. </p>
-              <h2>How we collect information</h2>
-              <p>We collect information directly from you only. We collect information directly from you when you register with Esythink as a school, parent, become a teacher, or enroll child or buy our plan. We also collect information if you post a comment on our websites or ask us a question through phone.</p>
-
+             <p>At www.okkji.com, accessible from https://www.okkji.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by www.okkji.com and how we use it.</p>
+             <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
+             <p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in www.okkji.com. This policy is not applicable to any information collected offline or via channels other than this website.</p>
+             <h2>Consent</h2>
+             <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+             <h2>Information we collect</h2>
+             <p>The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.</p>
+             <p>If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.</p>
+             <p>When you register for an Account, we may ask for your contact information, including items such as name, company name, address, email address, and telephone number.</p>
+             <h2>How we use your information</h2>
+             <p>We use the information we collect in various ways, including to:</p>
+             <ul className="ul-unstyle">
+               <li>Provide, operate, and maintain our webste</li>
+               <li>Improve, personalize, and expand our webste</li>
+               <li>Understand and analyze how you use our webste</li>
+               <li>Develop new products, services, features, and functionality</li>
+               <li>Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the webste, and for marketing and promotional purposes</li>
+               <li>Send you emails</li>
+               <li>Find and prevent fraud</li>
+             </ul>
+             <h2>Log Files</h2>
+             <p>www.okkji.com follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services&#x2019; analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users&#x2019; movement on the website, and gathering demographic information. Our Privacy Policy was created with the help of the Privacy Policy Generator and the Privacy Policy Template.</p>
+             <h2>Cookies and Web Beacons</h2>
+             <p>Like any other website, www.okkji.com uses &#x2018;cookies&#x2019;. These cookies are used to store information including visitors&#x2019; preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users&#x2019; experience by customizing our web page content based on visitors&#x2019; browser type and/or other information.</p>
+             <h2>Google DoubleClick DART Cookie</h2>
+             <p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL &#x2014; <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+             <h2>Our Advertising Partners</h2>
+             <p>Some of advertisers on our site may use cookies and web beacons. Our advertising partners are listed below. Each of our advertising partners has their own Privacy Policy for their policies on user data. For easier access, we hyperlinked to their Privacy Policies below.</p>
+             <ul className="ul-unstyle">
+               <li>Google</li>
+             </ul>
+             <p><a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+             <h2>Advertising Partners Privacy Policies</h2>
+             <p>You may consult this list to find the Privacy Policy for each of the advertising partners of www.okkji.com.</p>
+             <p>Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on www.okkji.com, which are sent directly to users&#x2019; browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p>
+             <p>Note that www.okkji.com has no access to or control over these cookies that are used by third-party advertisers.</p>
+             <h2>Third Party Privacy Policies</h2>
+             <p>www.okkji.com&#x2019;s Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options. You may find a complete list of these Privacy Policies and their links here: Privacy Policy Links.</p>
+             <p>You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers&#x2019; respective websites. What Are Cookies?</p>
+             <h2>CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>
+             <p>Under the CCPA, among other rights, California consumers have the right to:</p>
+             <ul className="list-unstyled">
+             <li>Request that a business that collects a consumer&#x2019;s personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.</li>
+             <li>Request that a business delete any personal data about the consumer that a business has collected.</li>
+             <li>Request that a business that sells a consumer&#x2019;s personal data, not sell the consumer&#x2019;s personal data.</li>
+             <li>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</li>
+             
+             </ul>
+             <h2>GDPR Data Protection Rights</h2>
+             <p>We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p>
+             <ul className="list-unstyled">
+               <li>The right to access &#x2014; You have the right to request copies of your personal data. We may charge you a small fee for this service.</li>
+               <li>The right to rectification &#x2014; You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete.</li>
+               <li>The right to erasure &#x2014; You have the right to request that we erase your personal data, under certain conditions.</li>
+               <li>The right to restrict processing &#x2014; You have the right to request that we restrict the processing of your personal data, under certain conditions.</li>
+               <li>The right to object to processing &#x2014; You have the right to object to our processing of your personal data, under certain conditions.</li>
+               <p>The right to data portability &#x2014; You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.</p>
+               <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
+               <h2>Children&#x2019;s Information</h2>
+               <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
+               <p>www.okkji.com does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
+             </ul>
             </section>
             <Trusted />
 

@@ -55,9 +55,9 @@ export default class OurPractice extends Component {
               <img src={google} alt="" className="img-fluid img-apple" />
               </figure>
             </div>
-          </div>
 
-          <div className="row offset-lg-4 offset-sm-2 offset-md-4">
+          </div>
+          <div className="about-getapplink">
           <GetAppLink />
           </div>
           </div>

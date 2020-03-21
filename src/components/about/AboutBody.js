@@ -18,7 +18,7 @@ import MobileBackground from '../../img/about/MobileBackground.png';
 export default class AboutBody extends Component {
   render() {
     return (
-      <div>
+      <div className="about-body">
 
 
 
