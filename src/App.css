@@ -2080,7 +2080,6 @@ h1.term-h1-heading{
 .okjii-term-condition p{
   font-size:1rem;
   color:#5e5e5e !important;
-  padding-bottom: 1rem;
 }
 
 .okjii-term-condition h2{
@@ -2107,7 +2106,7 @@ h1.term-h1-heading{
 }
 
 .offerheading{
-  margin-left:1rem !important;
+  padding-left:1rem !important;
 }
 /* Okjii Blog start  */
 .okjii-blog, .okjii-regbody, .blog-page{
@@ -2401,6 +2400,7 @@ margin: 0 auto;
   }
   .btn.btn-getotp, .btn.form-btn {
     background-color: #259D70 !important;
+    color: #fff;
 }
   .okjii-registration{
     background-color:#fff;
@@ -2446,9 +2446,36 @@ margin: 0 auto;
     padding-left: 1rem !important;
     padding-right: 28rem !important;
     }
+    .sound-signal h1{
+  font-size: 18pt;
+  font-weight: 700;
+  color: #259D70 !important;
+  padding-top:4rem;
+  padding-bottom: 2rem;
+
+}
+
+.sound-signal p{
+  margin-bottom: -1rem !important;
+}
+
+.reg-offerpage label{
+  font-size:1rem;
+  color: #5e5e5e;
+}
+
+.reg-offerpage img{
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin: 0 auto;
+}
+
+input[type="radio"] + label:before{
+  margin-left: 2px !important;
+}
 
   .okjii-regbody h1{
-    font-size: 35pt;
+    font-size: 18pt;
     font-weight: 700;
     color: #5e5e5e;
     padding-top:1rem;
@@ -2543,6 +2570,11 @@ input[type="radio"]:checked + label:before {
 }
 .sound-signal{
   margin-bottom: 1rem;
+}
+.howtoapply{
+  font-size: 18pt;
+  font-weight: 700;
+  color: #5e5e5e;
 }
 
 /* Registration End */
@@ -3147,10 +3179,10 @@ input#formGroupExampleInput {
 
 /* Pre Registrations */
 .okjii-regbody h1 {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #5e5e5e;
-  padding-top: 1rem;
+  padding-top: .7rem;
   padding-bottom: 1rem;
 }
 
@@ -3174,8 +3206,19 @@ input#formGroupExampleInput {
 }
 
 
+.accordion {
+  margin: 5px;
+}
+.faq-card{
+  margin-left:5px;
+  margin-right:5px;
+}
 
-
+.reg-offerpage img{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -3311,6 +3354,7 @@ margin-top: 51px;
   display: flex;
 
 }
+
 
 .offerheading h1{
   font-size:17pt;

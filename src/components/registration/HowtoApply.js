@@ -4,7 +4,7 @@ export default class HowtoApply extends Component {
   render() {
     return (
       <div>
-          <h1 className="text-center pb-2">How to Apply</h1>
+          <h1 className="text-center howtoapply pb-2">How to Apply</h1>
         <div className="container-fluid reg-howtoapply">
           <div className="container">
           <div className="row">

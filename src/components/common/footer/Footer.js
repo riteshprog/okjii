@@ -53,7 +53,7 @@ const FooterPage = () => {
                 <a href="/contact">CONTACT US</a>
               </li>
               <li>
-                <a href="/tnc">TERMS &amp; CONDITION</a>
+                <a href="/terms-condition">TERMS &amp; CONDITION</a>
               </li>
               <li>
                 <a href="/privacy"> PRIVACY POLICY

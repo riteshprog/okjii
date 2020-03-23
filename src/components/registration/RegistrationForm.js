@@ -25,7 +25,7 @@ export default class RegistrationForm extends Component {
                   name="phone"
                   id="defaultFormCardNumber"
                   className="form-control"
-                  
+                  pattern="[0-9]{10}"
                   placeholder="Mobile Number"
                 />
                 <MDBBtn className="btn btn-getotp" type="submit">
@@ -40,7 +40,7 @@ export default class RegistrationForm extends Component {
                   name="phone"
                   id="defaultFormCardNumber"
                   className="form-control"
-                  
+                  pattern="[0-9]{10}"
                   placeholder="Four Digit OTP"
                 />
                  <MDBBtn className="btn btn-getotp" type="submit">
@@ -66,9 +66,11 @@ export default class RegistrationForm extends Component {
                   placeholder="Pin Code"
                 />
                 <div className="text-center mt-3">
-                  <MDBBtn className="btn form-btn" type="submit">
+                  
+                  <a href="/user-offer" className="btn form-btn" type="submit">
                     Get Offer
-                  </MDBBtn>
+                  </a>
+                   
                 </div>
               </form>
             </MDBCardBody>
