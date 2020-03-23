@@ -13,7 +13,7 @@ import Fastaq from './components/faq/Fastaq';
 import OkjiiOffer from './components/offer/OkjiiOffer';
 import OkjiiBlog from './components/blog/OkkjiBlog';
 import About from './components/about/About';
-import Contact from './components/contact/Contact';
+import Contact from './components/contact/contact';
 import TermsConditions from './components/terms/TermsConditions';
 import PrivacyPolicy from './components/privacy/PrivacyPolicy';
 import RefundPolicy from './components/refund/RefundPolicy';
