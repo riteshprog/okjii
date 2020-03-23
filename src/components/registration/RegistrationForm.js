@@ -21,10 +21,11 @@ export default class RegistrationForm extends Component {
                 <br />
                 <div className="textbuttonotp">
                 <input
-                  type="number"
-                  name="tel"
+                  type="tel"
+                  name="phone"
                   id="defaultFormCardNumber"
                   className="form-control"
+                  
                   placeholder="Mobile Number"
                 />
                 <MDBBtn className="btn btn-getotp" type="submit">
@@ -35,10 +36,11 @@ export default class RegistrationForm extends Component {
                 <br />
                 <div className="textbuttonotp">
                 <input
-                  type="number"
-                  name="tel"
+                  type="tel"
+                  name="phone"
                   id="defaultFormCardNumber"
                   className="form-control"
+                  
                   placeholder="Four Digit OTP"
                 />
                  <MDBBtn className="btn btn-getotp" type="submit">

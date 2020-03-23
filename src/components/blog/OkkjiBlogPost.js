@@ -18,7 +18,7 @@ export default class OkkjiBlogPost extends Component {
             </figure>
             <h2>#BeatTheHeat with Grofers.</h2>
              <p className="" id="collapseContent">During this time of the year, parents are always busy geting creative to make the kids have a gala time with – refreshing drinks, fun and light snacks and quirky games.</p>
-            <button className="btn  blog-button" >Read More</button>
+            <a className="btn  blog-button" href="/user-blog">Read More</a>
             <MDBIcon icon="share-alt" className="float-right  mdb-icon" /><span className="float-right number-flower">07</span>
             <MDBIcon far icon="heart" className="float-right  mdb-icon" /><span className="float-right number-flower">49</span>
           </div>

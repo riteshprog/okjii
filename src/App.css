@@ -2106,7 +2106,7 @@ h1.term-h1-heading{
   margin-left:1rem !important;
 }
 /* Okjii Blog start  */
-.okjii-blog, .okjii-regbody{
+.okjii-blog, .okjii-regbody, .blog-page{
   padding-top:51px !important;
 }
 .okjii-heading{
@@ -2195,6 +2195,77 @@ h1.term-h1-heading{
 }
 
 /* Okjii Blog end */
+/* Okjii BlogPage start */
+.container-fluid.blog-information {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.blog-information img{
+  width:100%;
+  padding-right: 0rem;
+  padding-left: 5rem;
+  vertical-align: middle;
+}
+.social-cards{
+  padding-top:2rem;
+  padding-bottom: 4rem;
+}
+.social-network{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.social-card{
+  padding-left:2rem;
+  padding-right: 2rem;
+  margin-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.social-card .far, .social-card .fab{
+font-size: 1.3rem;
+margin-right:1rem;
+}
+
+.text-social{
+  color: #5e5e5e;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.social-card.love{
+  border:1px solid #F95555;
+  color:#F95555;
+ 
+}
+.social-card.facebook{
+  border:1px solid #6763E3;
+  color:#3C5A99;
+ }
+ .social-card.twitter{
+  border:1px solid #7FDBF0;
+
+  color: #33CCFF;
+ }
+ .social-card.whatsapp{
+  border:1px solid #4B8C4B;
+  color: #61FC7D;
+ }
+ .social-card.story{
+  border:1px solid #F674DD;
+  color: #D33D98;
+ }
+
+ .start{
+   padding-left:5rem;
+   border:1px solid #5e5e5e;
+
+ }
+
+
+/* Okjii BlogPage end */
+
 /* Registration start */
 
 .okjii-reg{
@@ -2205,7 +2276,7 @@ h1.term-h1-heading{
 .okjii-reg-h1{
   position: absolute;
   top: 7rem;
-  left: 5rem;
+  left: 3rem;
   color:#fff !important;
 }
 .pre-okjii-black{
@@ -2241,10 +2312,17 @@ h1.term-h1-heading{
     height: calc(1.5em + 2rem + 2px) !important;
   }
 
+  .form-inline .form-check{
+    padding-right:4rem;
+  }
   .okjii-registration .btn{
     padding:.6rem 1.8rem !important;
   }
-
+  a.nav-link.Ripple-parent.pre-registration {
+    background-color: #259D70;
+    color: #fff !important;
+    border-radius: 5px;
+  }
   .form-table{
     width:auto;
     display: flex;
@@ -2264,15 +2342,20 @@ h1.term-h1-heading{
     }
 
   .okjii-regbody h1{
-    font-size: 18pt;
+    font-size: 35pt;
     font-weight: 700;
     color: #5e5e5e;
     padding-top:1rem;
     padding-bottom: 1rem;
   }
 .okjii-registration{
-  padding-top:1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top:1rem;
+  padding-bottom: 1rem;
+}
+
+.reg-howtoapply {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 }
   .okjii-regbody p{
     font-size:.9rem;
@@ -2288,7 +2371,7 @@ h1.term-h1-heading{
   line-height: 1.8;
 }
 .pre-okjii{
-font-size: 3rem;
+font-size: 4.5rem;
 font-weight: 700;
 line-height: 1;
 }
@@ -2301,24 +2384,60 @@ line-height: 1;
   padding-bottom: 1rem;
 }
 
-ol.registration-howtoapply-list{
-  padding:1rem !important
+.bolded-list-indicator{
+  margin: 2rem;
 }
 
-
-.registration-howtoapply-list li {
+.bolded-list-indicator li{
+  font-size:1.3rem;
+  color: #5e5e5e;
   font-weight: 700;
-  font-size:1rem;
 }
 
-.registration-howtoapply-list li p {
-  
-  font-weight: 400;
-  padding-left: 1.2rem;
-  line-height: 0rem !important;
-  font-size:1rem;
+.bolded-list-indicator li p{
+  font-size: 1rem;
+  color: #5e5e5e;
+  margin-bottom: 0.5rem !important;
 }
 
+
+
+
+
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding: 3px;
+  margin-right: 15px;
+  margin-left:15px;
+  vertical-align: middle;
+  background-clip: content-box;
+  border: 1px solid #259D70;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+input[type="radio"]:first-child{
+  transform: translateX(100px);
+}
+
+input[type="radio"]:last-child{
+  transform: translateX(200px) !important;
+}
+
+/* appearance of checked radiobutton */
+input[type="radio"]:checked + label:before {
+  background-color: #259D70;
+  vertical-align: middle;
+}
+.sound-signal{
+  margin-bottom: 1rem;
+}
 
 /* Registration End */
 
@@ -2864,6 +2983,43 @@ h1.term-h1-heading{
   padding-left: 15px !important;
   
 }
+
+/* Okkji Blog */
+.blog-column {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+/* Pre Registrations */
+.okjii-regbody h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #5e5e5e;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.okjii-reg-h1 {
+   top: 0rem;
+   left: 1rem; 
+}
+
+.pre-okjii {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.okjii-registration input {
+  padding-left: 1rem !important;
+  padding-right: 5rem !important;
+}
+.okjii-registration form {
+   padding-left: 0rem !important;
+   padding-right: 0rem !important; 
+}
+
 
 
 }

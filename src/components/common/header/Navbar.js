@@ -43,7 +43,7 @@ render() {
               <MDBNavLink  to="/okkji-retailer">OKKJI FOR RETAILER</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick }>
-              <MDBNavLink to="/okjii-fast">OKKJI FAST</MDBNavLink>
+              <MDBNavLink to="/okkji-fast">OKKJI FAST</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick }>
               <MDBNavLink to="/help">FAQ</MDBNavLink>

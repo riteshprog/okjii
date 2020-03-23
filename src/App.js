@@ -22,6 +22,7 @@ import Registration from './components/registration/Registration';
 
 
 import ScrollToTop from './components/ScrollToTop'
+import BlogPage from './components/blogpage/BlogPage';
 
 function App() {
   return (
@@ -37,7 +38,7 @@ function App() {
      <Route path='/okkji-retailer' >
               <OkjiiRetailer />
      </Route>
-     <Route path='/okjii-fast' >
+     <Route path='/okkji-fast' >
               <OkjiiFast />
      </Route>
       
@@ -70,6 +71,9 @@ function App() {
       </Route>
       <Route path='/registration' >
       <Registration />
+      </Route>
+      <Route path='/user-blog' >
+      <BlogPage />
       </Route>
 
      </Switch>
