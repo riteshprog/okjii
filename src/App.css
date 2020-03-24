@@ -692,7 +692,7 @@ position: absolute;
 }
 
 .testimoni-img > .author-img{
-  flex:0;
+  /* flex:0; */
 }
 
 img.rounded-circle.testimoni-img {
@@ -3213,4 +3213,11 @@ margin-top: 51px;
 }
 .mtb-10{
   margin: 10px 0px;
+}
+
+.okkji-howwework{
+
+  display: flex;
+  flex-direction: column;
+
 }
