@@ -19,6 +19,7 @@ import PrivacyPolicy from './components/privacy/PrivacyPolicy';
 import RefundPolicy from './components/refund/RefundPolicy';
 import Disclaimer from './components/disclaimer/Disclaimer';
 import Registration from './components/registration/Registration';
+import RegistrationOffer from './components/registrationoffer/RegistrationOffer';
 
 
 import ScrollToTop from './components/ScrollToTop'
@@ -56,8 +57,8 @@ function App() {
       <Route path='/contact' >
         <Contact />
       </Route>
-      <Route path='/tnc' >
-        <TermsConditions />
+      <Route path='/terms-condition' >
+      <TermsConditions />
       </Route>
       <Route path='/privacy' >
         <PrivacyPolicy />
@@ -73,6 +74,9 @@ function App() {
       </Route>
       <Route path='/user-blog' >
         <BlogPage />
+      </Route>
+      <Route path='/user-offer' >
+      <RegistrationOffer />
       </Route>
      </Switch>
      <Footer />

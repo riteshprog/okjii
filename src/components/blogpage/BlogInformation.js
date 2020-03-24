@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import blog1 from '../../img/blogpage/blog1.png';
-import {MDBIcon} from "mdbreact";
+import {MDBIcon, MDBBtn} from "mdbreact";
 export default class BlogInformation extends Component {
   render() {
     return (
       <div className="container-fluid blog-information">
         <h1>Rising from the ashes of a flailing business, Sunil tells his story of grit and resilience</h1>
-        <h2>Sunil’s life and business had hit rock bottom in 2014. After a bad investment of a huge sum in a distribution business he saw a glimmer of hope when his friend told him about the Amazon Service Partner program.</h2>
+        <h2>Sunil’s life and business had hit rock bottom in 2014. After a bad investment of <br />a huge sum in a distribution business he saw a glimmer of hope when his <br />friend told him about the Amazon Service Partner program.</h2>
         <div className="row">
           <div className="col-md-6">
             <p>Sunil’s life and business had hit rock bottom in 2014. After a bad investment of a huge sum in a distribution business that sank without a trace, he was unemployed and low on ﬁnancial backing but motivated like never before to turn things around for himself and his aging parents. He saw a glimmer of hope when his friend told him about the Amazon Service Partner program.</p>
@@ -36,21 +36,71 @@ export default class BlogInformation extends Component {
 
             </div>
           </div>
-          <div className="row rating-card">
-            <div className="col-12">
+          <div className="row text-center desktop">
+            <div className="col-md-12 rating-card">
 
-              <div className="start"><span className="text-star">How did you like this story?</span><MDBIcon icon="star" /><MDBIcon icon="star" /><MDBIcon icon="star" /><MDBIcon icon="star" /><MDBIcon icon="star" /> <span className="text-star-right">121 Rating</span> </div>
+              <div className="star"><span className="text-star">How did you like this story?</span><MDBIcon icon="star" /><MDBIcon icon="star" /><MDBIcon icon="star" /><MDBIcon icon="star" /><MDBIcon icon="star" /> <span className="text-star-right">121 Rating</span> </div>
 
             </div>
           </div>
+
+          <div className="row text-center mobile">
+            <div className="col-md-12 rating-card">
+
+              <div className="star"><span className="text-star">How did you like this story?<br /></span><MDBIcon icon="star" /><MDBIcon icon="star" /><MDBIcon icon="star" /><MDBIcon icon="star" /><MDBIcon icon="star" /><br /> <span className="text-star-right">121 Rating</span> </div>
+
+            </div>
+          </div>
+
+
           <div className="row leave-reply-box">
 
             <div className="col-12">
+              <div className="leave-reply-outer">
               <h1>Leave a Reply</h1>
+            <div className="leave-reply">
+              <textarea
+            className="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            />
 
             </div>
-          </div>
+            <div className="form-group leave-field">
+            <input
+        type="text"
+        name="name"
+        className="form-control mr-4"
+        id="formGroupExampleInput"
+        placeholder="Your Name*"
+      />
+      <input
+        type="email"
+        name="email"
+        className="form-control mr-4"
+        id="formGroupExampleInput"
+        placeholder="Your Mail*"
+      />
+      <input
+        type="text"
+        name="website"
+        className="form-control"
+        id="formGroupExampleInput"
+        placeholder="Website"
+      />
+            </div>
+            <div className="text-center leave-button">
+          <MDBBtn>Submit</MDBBtn>
+        </div>
+            </div>
+            </div>
 
+
+          </div>
+<div className="row text-center related-blog">
+  <div className="col-md-12"><h1>Related Blogs</h1></div>
+</div>
+<div className="bdr-bottom"></div>
         
       </div>
     )

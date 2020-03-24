@@ -9,6 +9,10 @@
 section.okkji-faq.offer-mobile {
   display: none;
 }
+
+.row.text-center.mobile {
+  display: none;
+}
 p{
   font-size:1.25rem;
   color:#5E5E5E;
@@ -433,7 +437,9 @@ flex-direction: row;
   background-color: #259D70 !important;
 }
 
-
+.okjii-explore-left{
+  padding-left: 3rem !important;
+}
 
 /*  okjii-daily*/
 
@@ -979,12 +985,15 @@ ol.carousel-indicators li {
   color: #5E5E5E;
   margin-top:-5rem;
   padding-top: 3rem;
-  padding-left: 0rem;
   padding-bottom: 2rem;
 }
 
 .okjii-retaler h1 span.text-green{
   color: #259D70;
+}
+
+.contact-form{
+  padding-left:2rem;
 }
 
 .google-map-right{
@@ -1480,7 +1489,11 @@ padding-left:2rem;
 
 
 .input-form .input-group-lg>.form-control:not(textarea) {
+<<<<<<< HEAD
   /* height: calc(1em + 1rem + 2px) !important; */
+=======
+  height: calc(1em + 3rem + 2px) !important;
+>>>>>>> 58de028074108435bc837ed894f6d87fed08e9c3
   background-color: #e9ecef;
   border: none !important;
 }
@@ -2077,7 +2090,7 @@ h1.term-h1-heading{
   padding-top: 25px;
   margin-left: -15px;
   margin-right: -15px;
-  padding-left: 51px !important;
+  padding-left: 3rem !important;
   padding-right: 0 !important;
   padding-bottom: 25px;
   vertical-align: middle;
@@ -2088,8 +2101,8 @@ h1.term-h1-heading{
   padding-top:2rem;
 }
 .okjii-term-condition{
-  padding-left:75px;
-  padding-right: 75px;
+  padding-left:3rem;
+  padding-right: 3rem;
 }
 .okjii-term-condition p:first-child{
   padding-top:1rem;
@@ -2098,7 +2111,6 @@ h1.term-h1-heading{
 .okjii-term-condition p{
   font-size:1rem;
   color:#5e5e5e !important;
-  padding-bottom: 1rem;
 }
 
 .okjii-term-condition h2{
@@ -2125,7 +2137,7 @@ h1.term-h1-heading{
 }
 
 .offerheading{
-  margin-left:1rem !important;
+  padding-left:1rem !important;
 }
 /* Okjii Blog start  */
 .okjii-blog, .okjii-regbody, .blog-page{
@@ -2225,8 +2237,28 @@ h1.term-h1-heading{
 .blog-information img{
   width:100%;
   padding-right: 0rem;
-  padding-left: 5rem;
+  padding-left: 10rem;
   vertical-align: middle;
+}
+
+.blog-information h1{
+  font-size:17pt;
+  font-weight: 600;
+  color: #5e5e5e;
+  padding-top:1rem;
+  padding-bottom: 1rem;
+}
+.blog-information h2{
+  font-size:1.2rem;
+  font-weight: 500;
+  color: #5e5e5e;
+  padding-bottom: 2rem;
+
+}
+.blog-information p{
+  font-size:1rem;
+  color: #5e5e5e;
+
 }
 .social-cards{
   padding-top:2rem;
@@ -2278,13 +2310,95 @@ margin-right:1rem;
   border:1px solid #F674DD;
   color: #D33D98;
  }
+.rating-card{
+  margin-bottom: 2rem;
+}
 
- .start{
-   padding-left:5rem;
-   border:1px solid #5e5e5e;
+.star{
+  border:1px solid #BDBDBD;
+width:45%;
+margin: 0 auto;
+padding:1.5rem;
+}
+
+.leave-reply-box{
+  padding-top:3rem;
+  padding-bottom: 3rem;
+}
+
+.leave-reply-box h1{
+  font-size:1.5rem;
+  font-weight: 600;
+  color: #5e5e5e;
+  padding-top:1rem;
+  padding-bottom: 1rem;
+  padding-left:4rem;
+} 
+
+.leave-reply-outer{
+  border:1px solid #BDBDBD;
+width:80% !important;
+padding-top: 1rem;
+padding-bottom: 1rem;
+margin: 0 auto;
+
+}
+.leave-reply{
+width:90%;
+margin: 0 auto;
+}
+ .text-star{
+   margin-right:1rem;
+   font-size:1rem;
+   font-weight: 600;
+   color:#5e5e5e;
 
  }
+ .text-star-right{
+   padding-left:1rem;
+   font-size:1rem;
+   font-weight: 600;
+   color:#5e5e5e;
+ }
 
+.star .fa-star{
+  font-size:2rem;
+  color:#898989;
+  vertical-align: middle;
+  margin-right: .5rem;
+}
+
+
+.leave-field{
+width:90%;
+margin: 0 auto;
+}
+
+.leave-field .form-control, .leave-reply .form-control {
+  border: 1px solid #BEBEBE !important;
+  padding: 2rem .75rem !important;
+}
+.leave-field{
+  display: flex;
+  padding-bottom: 1rem;
+  margin-top:2rem;
+}
+.leave-field input{
+  margin-top: .5rem;
+  margin-right: .5rem;
+}
+
+.leave-button .btn{
+    background-color: #259D70 !important;
+    font-weight: 600;
+}
+.related-blog h1{
+  font-size:17pt;
+  font-weight: 600;
+  color: #5e5e5e;
+  padding-top:3rem;
+  padding-bottom: 3rem;
+}
 
 /* Okjii BlogPage end */
 
@@ -2300,6 +2414,11 @@ margin-right:1rem;
   top: 7rem;
   left: 3rem;
   color:#fff !important;
+}
+
+.okjii-regbody h1.okjii-reg-h1 {
+  font-size: 42pt;
+  font-weight: 500 !important;
 }
 .pre-okjii-black{
   color: #5e5e5e;
@@ -2317,6 +2436,7 @@ margin-right:1rem;
   }
   .btn.btn-getotp, .btn.form-btn {
     background-color: #259D70 !important;
+    color: #fff;
 }
   .okjii-registration{
     background-color:#fff;
@@ -2345,6 +2465,7 @@ margin-right:1rem;
     color: #fff !important;
     border-radius: 5px;
   }
+
   .form-table{
     width:auto;
     display: flex;
@@ -2352,6 +2473,7 @@ margin-right:1rem;
     justify-content: center;
       }
 
+  
   .okjii-registration form{
     padding-left: 5rem !important;
     padding-right: 5rem !important;
@@ -2362,9 +2484,36 @@ margin-right:1rem;
     padding-left: 1rem !important;
     padding-right: 28rem !important;
     }
+    .sound-signal h1{
+  font-size: 18pt;
+  font-weight: 700;
+  color: #259D70 !important;
+  padding-top:4rem;
+  padding-bottom: 2rem;
+
+}
+
+.sound-signal p{
+  margin-bottom: -1rem !important;
+}
+
+.reg-offerpage label{
+  font-size:1rem;
+  color: #5e5e5e;
+}
+
+.reg-offerpage img{
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin: 0 auto;
+}
+
+input[type="radio"] + label:before{
+  margin-left: 2px !important;
+}
 
   .okjii-regbody h1{
-    font-size: 35pt;
+    font-size: 18pt;
     font-weight: 700;
     color: #5e5e5e;
     padding-top:1rem;
@@ -2407,7 +2556,10 @@ line-height: 1;
 }
 
 .bolded-list-indicator{
-  margin: 2rem;
+  margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
 }
 
 .bolded-list-indicator li{
@@ -2466,6 +2618,19 @@ input[type="radio"]:checked + label:before {
 .preReg-radio-label input[type="radio"] + label:before{
   margin: 10px;
 }
+.howtoapply{
+  font-size: 18pt;
+  font-weight: 700;
+  color: #5e5e5e;
+}
+
+.Ripple {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+}
 
 /* Registration End */
 
@@ -2482,11 +2647,19 @@ input[type="radio"]:checked + label:before {
 .navbar-brand .desktop {
   display: none !important;
 }
-img.img-fluid.desktop {
+img.img-fluid.desktop, .desktop {
   display: none;
 }
 
 img.img-fluid.mobile {
+  display: block;
+}
+
+.row.text-center.desktop {
+  display: none;
+}
+
+.row.text-center.mobile {
   display: block;
 }
 
@@ -2606,7 +2779,12 @@ nav#parallelogram {
   z-index: -1;  
 } 
 
-
+.okjii-install img{
+  width:11% !important;
+  padding-top: 7px !important;
+  padding-bottom: 1rem;
+  align-content: center !important;
+}
 
 .carousel-control-next{
   top:100% !important;
@@ -2661,7 +2839,9 @@ img.rounded-circle.testimoni-img {
   margin-bottom: 0 !important;
   font-weight: 700 !important;
 }
-
+.contact-form {
+  padding-left: 0rem;
+}
 .okjii-explore h1{
   font-weight: 600;
 color: #5e5e5e !important;
@@ -2802,8 +2982,8 @@ padding-top:1rem !important;
   top:33%;
   display:flex;
   justify-content: center !important;
-  left:1.3rem;
-  right:2rem;
+  left:0rem;
+  right:0rem;
 }
 
 
@@ -2938,7 +3118,7 @@ section.okkji-faq.faq-desktop, .offer-desktop {
   
 }
 .offerheading {
-  margin-left: 0rem !important;
+  margin-left: -1rem !important;
 }
 
 .offerheading h1 {
@@ -3020,13 +3200,57 @@ h1.term-h1-heading{
   padding-bottom: 1rem !important;
 }
 
+.okjii-blog-h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: 700;
+}
+.container-fluid.blog-information {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.blog-information img{
+  width:100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  vertical-align: middle;
+}
+
+.leave-reply-box {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.leave-reply-outer {
+  width: 100% !important;
+}
+.star {
+  border: 1px solid #BDBDBD;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+input#formGroupExampleInput {
+  margin-right: .5rem !important;
+}
+
 /* Pre Registrations */
 .okjii-regbody h1 {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #5e5e5e;
-  padding-top: 1rem;
+  padding-top: .7rem;
   padding-bottom: 1rem;
+}
+
+h1.okjii-reg-h1 {
+  font-size: 1.4rem!important;
+  font-weight: 600 !important;
 }
 
 .okjii-reg-h1 {
@@ -3049,6 +3273,25 @@ h1.term-h1-heading{
 }
 
 
+.accordion {
+  margin: 5px;
+}
+.faq-card{
+  margin-left:5px;
+  margin-right:5px;
+}
+
+.reg-offerpage img{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+.form-table {
+  width: auto;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
 
 }
 
@@ -3064,7 +3307,9 @@ h1.term-h1-heading{
   
   } */
 
-  .container-fluid.okjii-mainbody.main-body-desktop {
+  .container-fluid.okjii-mainbody.main-body-desktop
+  
+  {
     display: none;
   }
   .okjii-home .main-body-mobile{
@@ -3183,6 +3428,7 @@ margin-top: 51px;
   display: flex;
 
 }
+
 
 .offerheading h1{
   font-size:17pt;

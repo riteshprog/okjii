@@ -53,7 +53,7 @@ const FooterPage = () => {
                 <a href="/contact">CONTACT US</a>
               </li>
               <li>
-                <a href="/tnc">TERMS &amp; CONDITION</a>
+                <a href="/terms-condition">TERMS &amp; CONDITION</a>
               </li>
               <li>
                 <a href="/privacy"> PRIVACY POLICY
@@ -120,7 +120,7 @@ const FooterPage = () => {
       </MDBContainer>
       <div className="footer-copyright ">
         <MDBContainer fluid className="footer-margin" >
-        <p className="cite-text">We are rooting our-self in Patna and Jaipur initially. The sprite of premium service,customer's convenience and super fast delivery will touch the most prominent emerging cities like Ahmadabad, Lucknow, Hyderabad, Chandigarh, Kolkata, Ranchi, Raipur, Varanasi and Delhi-NCR in very near future.
+        <p className="cite-text">We are rooting our-self in Patna and Jaipur initially. The sprite of premium service,customer's convenience and super fast delivery will touch the most prominent emerging cities like Ahmedabad, Lucknow, Hyderabad, Chandigarh, Kolkata, Ranchi, Raipur, Varanasi and Delhi-NCR in very near future.
         </p>
         <h4 className="mt-1 payment">Payment Options</h4>
 

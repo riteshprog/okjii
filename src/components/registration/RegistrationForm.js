@@ -143,7 +143,7 @@ export default class RegistrationForm extends Component {
                   name="mobileNumber"
                   id="defaultFormCardNumber"
                   className="form-control"
-                  
+                  pattern="[0-9]{10}"
                   placeholder="Mobile Number"
                 />
                 <MDBBtn className="btn btn-getotp" type="submit" onClick={this.handleSendOtp}>
@@ -159,8 +159,13 @@ export default class RegistrationForm extends Component {
                   name="otp"
                   id="defaultFormCardNumber"
                   className="form-control"
+<<<<<<< HEAD
                   
                   placeholder="Six Digit OTP"
+=======
+                  pattern="[0-9]{10}"
+                  placeholder="Four Digit OTP"
+>>>>>>> 58de028074108435bc837ed894f6d87fed08e9c3
                 />
                  <MDBBtn className="btn btn-getotp" type="submit" onClick={this.handleOtpVerify}>
                     {!this.state.isMobileVerified?'Verify':'Verified'}
@@ -190,9 +195,15 @@ export default class RegistrationForm extends Component {
                   {this.state.pincodeAllowed?<><MDBIcon icon="check-square" className='green-text mr-2' /> <span className='text-success'>Pincode is Valid</span></>:<><MDBIcon far icon="window-close" className='deep-orange-text mr-2'/><span className='text-danger'>Pincode is not valid</span></>}
                 </div>:null}
                 <div className="text-center mt-3">
+<<<<<<< HEAD
                   <MDBBtn className="btn form-btn" type="submit" onClick={this.handleSubmit}>
+=======
+                  
+                  <a href="/user-offer" className="btn form-btn" type="submit">
+>>>>>>> 58de028074108435bc837ed894f6d87fed08e9c3
                     Get Offer
-                  </MDBBtn>
+                  </a>
+                   
                 </div>
               </form>
             </MDBCardBody>
