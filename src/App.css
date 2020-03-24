@@ -1489,11 +1489,7 @@ padding-left:2rem;
 
 
 .input-form .input-group-lg>.form-control:not(textarea) {
-<<<<<<< HEAD
   /* height: calc(1em + 1rem + 2px) !important; */
-=======
-  height: calc(1em + 3rem + 2px) !important;
->>>>>>> 58de028074108435bc837ed894f6d87fed08e9c3
   background-color: #e9ecef;
   border: none !important;
 }
