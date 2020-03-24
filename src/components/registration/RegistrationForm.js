@@ -119,9 +119,7 @@ export default class RegistrationForm extends Component {
     }else{
       alert(`Can't Register, invalid/missing data`);
     }
-
   }
-
   render() {
     return (
       <div>

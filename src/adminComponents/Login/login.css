@@ -1,0 +1,17 @@
+.main-wrapper {
+  background-color: #ccc6c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container { 
+  display: flex; 
+  justify-content: center;
+  min-height: 300px;
+}
+.login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

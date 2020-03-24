@@ -1,0 +1,85 @@
+.step{
+  cursor: pointer;
+}
+
+.shopCardFooter{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.i-grp>button {
+  height: 100%;
+  border: none;
+}
+.i-grp-btn {
+  height: 100%;
+  border: none;
+  width: 100px;
+  border-radius: 0 5px 5px 0;
+}
+
+.badge{
+  font-size: medium;
+}
+
+.label-round{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.add-shop-label{
+  font-size: 16px !important;
+}
+.select-option-storetype{
+  display: flex;
+  /* justify-content: space-between; */
+  font-size: 15px;
+  margin: 10px;
+  overflow: hidden;
+  flex-flow: wrap;
+}
+.select-option-storetype>div{
+  margin-right: 100px;
+  font-size: large;
+}
+.table-responsive{
+  overflow: hidden;
+}
+.custom-control{
+  width: 300px;
+}
+
+input[type="radio"] + label:before {
+  /* margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+   */
+  margin: 0px;
+  width: 20px;
+  height: 20px;
+}
+/* tab */
+@media only screen and (max-width: 800px){
+  .table-responsive{
+    overflow: scroll;
+  } 
+}
+
+/* mobile */
+@media only screen and (max-width: 600px){
+  .select-option-storetype{
+    display: block;
+    font-size: 15px;
+  }
+  .ant-steps-navigation{
+    padding-top: 0px;
+  }
+  .ant-steps-navigation .ant-steps-item-container{
+    padding: 0px;
+  }
+  .ant-steps-horizontal .ant-steps-label-horizontal .ant-steps-item-content{
+    min-height: 40px;
+  }
+}

@@ -1,0 +1,57 @@
+body{
+  overflow-x: hidden;
+}
+.form-control{
+  border: 1px solid #DDDDDD !important;
+}
+.sidebar .nav p, .off-canvas-sidebar .nav p{
+  font-size: medium;
+}
+.sidebar .sidebar-wrapper, .off-canvas-sidebar .sidebar-wrapper{
+  overflow: hidden !important;
+}
+
+.cp{
+  cursor: pointer;
+}
+.desc{
+ color: red; 
+}
+
+.icon-sm{
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  background-size: cover;
+  font-size: 30px;
+}
+.df{
+  display: flex;
+}
+.jcc{
+  justify-content: center;
+}
+.aic{
+  align-items: center;
+}
+.autocomplete-dropdown-container{
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  background-color: #ffff;
+  width: 100%;
+}
+.fd-c{
+  flex-direction: column;
+}
+.form-required{
+  font-size: 15px;
+  color: #bb2222;
+}
+.ta{
+  text-align: center;
+}
+
+.t-large{
+  font-size: 30px !important;
+}

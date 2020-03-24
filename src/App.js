@@ -28,54 +28,52 @@ function App() {
   return (
     <Router>
     <div className="App">
-     <ScrollToTop />
-     <Navbar />
-     <Switch>
-     <Route exact path='/'>
-     <MainBody />
-     
-     </Route>
-     <Route path='/okkji-retailer' >
-              <OkjiiRetailer />
-     </Route>
-     <Route path='/okkji-fast' >
-              <OkjiiFast />
-     </Route>
-      
-     <Route path='/help' >
-              <Fastaq />
-     </Route>
-     <Route path='/offer' >
-      <OkjiiOffer />
+      <ScrollToTop />
+      <Navbar />
+      <Switch>
+      <Route exact path='/'>
+        <MainBody />
+      </Route>
+      <Route path='/okkji-retailer' >
+        <OkjiiRetailer />
+      </Route>
+      <Route path='/okkji-fast' >
+        <OkjiiFast />
+      </Route>
+        
+      <Route path='/help' >
+        <Fastaq />
+      </Route>
+      <Route path='/offer' >
+          <OkjiiOffer />
       </Route>
       <Route path='/blog' >
-      <OkjiiBlog />
+        <OkjiiBlog />
       </Route>
       <Route path='/about' >
-      <About />
+        <About />
       </Route>
       <Route path='/contact' >
-      <Contact />
+        <Contact />
       </Route>
       <Route path='/tnc' >
-      <TermsConditions />
+        <TermsConditions />
       </Route>
       <Route path='/privacy' >
-      <PrivacyPolicy />
+        <PrivacyPolicy />
       </Route>
       <Route path='/refund' >
-      <RefundPolicy />
+        <RefundPolicy />
       </Route>
       <Route path='/disclaimer' >
-      <Disclaimer />
+        <Disclaimer />
       </Route>
       <Route path='/registration' >
-      <Registration />
+        <Registration />
       </Route>
       <Route path='/user-blog' >
-      <BlogPage />
+        <BlogPage />
       </Route>
-
      </Switch>
      <Footer />
     </div>
