@@ -1269,6 +1269,10 @@ figcaption h4{
 
 }
 
+.about-let-us-container{
+  display: flex;
+  flex-direction: column;
+}
 
 .okkji-faq, .okkji-about{
   position:relative;

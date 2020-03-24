@@ -10,7 +10,7 @@ export default class OurStory extends Component {
     return (
       <div>
         <div className="container-fluid our-story">
-          <div className="container">
+          <div className="container df fdc">
           <div className="row">
             <div className="col-md-12">
               <h1>Our Story</h1>

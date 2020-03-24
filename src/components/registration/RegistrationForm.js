@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import RadioButton from '../registration/RadioButton';
-
+import PreRegistration from '../../img/registration/PreRegistration.png';
 import { MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody, MDBIcon } from 'mdbreact';
 import Axios from 'axios';
 
@@ -190,9 +190,9 @@ export default class RegistrationForm extends Component {
                 </div>:null}
                 <div className="text-center mt-3">
                   <MDBBtn className="btn form-btn" type="submit" onClick={this.handleSubmit}>
-                  <a href="/user-offer" className="btn form-btn" type="submit">
+                  {/* <a href="/user-offer" className="btn form-btn" type="submit"> */}
                     Get Offer
-                  </a>
+                  {/* </a> */}
                   </MDBBtn> 
                 </div>
               </form>
@@ -205,7 +205,7 @@ export default class RegistrationForm extends Component {
             </div>
             <div className='f1'>
             {/* <MDBIcon size="5x" icon="award" /> */}
-              <img src='https://picsum.photos/500' className='offer-image'/>
+              <img src={PreRegistration} className='offer-image'/>
             </div>
           </div>)}
       </div>

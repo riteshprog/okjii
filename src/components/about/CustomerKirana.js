@@ -7,7 +7,7 @@ export default class CustomerKirana extends Component {
     return (
       <div>
         <div className="container-fluid okjii-customerkirana">
-          <div className="container">
+          <div className="container df fdc">
           <div className="row">
   <div className="col-sm-12 col-md-12 col-lg-12">
   <h1><b className="sell">How OkkJi</b> brings customer and Kirana together</h1>

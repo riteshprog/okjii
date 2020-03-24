@@ -9,7 +9,7 @@ export default class OurPractice extends Component {
     return (
       <div>
         <div className="container-fluid okkji-ourpractice">
-          <div className="container">
+          <div className="container df fdc">
           <div className="row">
             <div className="col-md-6 col-sm-12">
               <figure className="">
