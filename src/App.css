@@ -2747,7 +2747,12 @@ nav#parallelogram {
   z-index: -1;  
 } 
 
-
+.okjii-install img{
+  width:11% !important;
+  padding-top: 7px !important;
+  padding-bottom: 1rem;
+  align-content: center !important;
+}
 
 .carousel-control-next{
   top:100% !important;
