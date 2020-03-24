@@ -2439,6 +2439,7 @@ margin: 0 auto;
     color: #fff !important;
     border-radius: 5px;
   }
+
   .form-table{
     width:auto;
     display: flex;
@@ -2446,6 +2447,7 @@ margin: 0 auto;
     justify-content: center;
       }
 
+  
   .okjii-registration form{
     padding-left: 5rem !important;
     padding-right: 5rem !important;
@@ -2588,6 +2590,14 @@ input[type="radio"]:checked + label:before {
   font-size: 18pt;
   font-weight: 700;
   color: #5e5e5e;
+}
+
+.Ripple {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
 }
 
 /* Registration End */
@@ -2935,8 +2945,8 @@ padding-top:1rem !important;
   top:33%;
   display:flex;
   justify-content: center !important;
-  left:1.3rem;
-  right:2rem;
+  left:0rem;
+  right:0rem;
 }
 
 
@@ -3071,7 +3081,7 @@ section.okkji-faq.faq-desktop, .offer-desktop {
   
 }
 .offerheading {
-  margin-left: 0rem !important;
+  margin-left: -1rem !important;
 }
 
 .offerheading h1 {
@@ -3239,6 +3249,13 @@ h1.okjii-reg-h1 {
   padding-right: 15px;
   margin: 0 auto;
 }
+.form-table {
+  width: auto;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

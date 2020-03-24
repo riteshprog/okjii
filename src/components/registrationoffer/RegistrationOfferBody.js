@@ -11,7 +11,7 @@ import Trusted from '../common/Trusted';
 export default class RegistrationBody extends Component {
   render() {
     return (
-      <div className="pre-regbody">
+      <div className="">
         <div className="container-fluid okjii-regbody">
         <div className="row okjii-reg pb-4">
                 <img src={PreRegistrationDesktop} alt="" className="img-fluid desktop" />
