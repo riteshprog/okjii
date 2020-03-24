@@ -1,12 +1,18 @@
 body{
   overflow-x: hidden;
 }
+
 .form-control{
   border: 1px solid #DDDDDD !important;
 }
+.form-control-web{
+  border: none;
+}
+
 .sidebar .nav p, .off-canvas-sidebar .nav p{
   font-size: medium;
 }
+
 .sidebar .sidebar-wrapper, .off-canvas-sidebar .sidebar-wrapper{
   overflow: hidden !important;
 }
@@ -14,6 +20,7 @@ body{
 .cp{
   cursor: pointer;
 }
+
 .desc{
  color: red; 
 }

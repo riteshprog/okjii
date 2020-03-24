@@ -4,7 +4,7 @@ import { createBrowserHistory } from 'history';
 import AdminLayout from "./layouts/Admin";
 import CookieHandler from './utils/cookieHandler';
 
-
+import './common.css'
 import Login from './adminComponents/Login/login.jsx';
 const history = createBrowserHistory();
 

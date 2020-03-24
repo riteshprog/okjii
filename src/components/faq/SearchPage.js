@@ -23,7 +23,7 @@ const SearchPage = () => {
             <img src={faqimg07} alt="" className="img-fluid faqimg07" />
           </span>
         </div>
-        <input className="form-control my-0 py-1" type="search" onChange={handleSearchChange} placeholder="| Search" aria-label="Search" />
+        <input className="form-control-web my-0 py-1 m-2" type="search" onChange={handleSearchChange} placeholder="Search" aria-label="Search" />
         <div className="input-group-append">
           <span className="input-group-text white lighten-3"  id="basic-text1">
             

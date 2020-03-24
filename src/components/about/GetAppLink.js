@@ -3,14 +3,19 @@ import { MDBInputGroup } from "mdbreact";
 
 const GetAppLink = () => {
   return (
-
-
-
-<div className="getapp-link ">
-<MDBInputGroup container ClassName="mb-3" prepend="+91" append="GET APP LINK" hint="| Mobile Number" type="number" size="lg" />
-      
-
-</div>);
-}
+    <div className="getapp-link ">
+      <MDBInputGroup
+        style={{ height: '100%'}}
+        container
+        ClassName="mb-3"
+        prepend="+91 "
+        append="GET APP LINK"
+        hint="Mobile Number"
+        type="number"
+        size="lg"
+      />
+    </div>
+  );
+};
 
 export default GetAppLink;

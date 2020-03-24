@@ -16,7 +16,7 @@ class RadioButton extends Component {
     return (
       <div class="sound-signal">
   <input type="radio" name="soundsignal" id="soundsignal1" checked="checked" />
-  <label for="soundsignal1">Patna</label>
+  <label for="soundsignal1" style={{margin: '10px'}} className='preReg-radio-label'>Patna</label>
   <input type="radio" name="soundsignal" id="soundsignal2" className="float-right" />
   <label for="soundsignal2">Jaipur</label>
 </div>

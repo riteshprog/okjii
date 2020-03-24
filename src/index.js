@@ -6,7 +6,6 @@ import App from "./app";
 
 // import './assets/scss/paper-dashboard.scss';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
-import './common.css'
 import "bootstrap/dist/css/bootstrap.css";
 
 import "./assets/scss/paper-dashboard.scss?v=1.1.0";
