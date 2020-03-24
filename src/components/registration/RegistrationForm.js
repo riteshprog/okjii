@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import RadioButton from '../registration/RadioButton';
 
-import { MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody } from 'mdbreact';
+import { MDBBtn, MDBCard, MDBCardBody } from 'mdbreact';
 
 export default class RegistrationForm extends Component {
   render() {
