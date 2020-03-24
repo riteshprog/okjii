@@ -437,7 +437,9 @@ flex-direction: row;
   background-color: #259D70 !important;
 }
 
-
+.okjii-explore-left{
+  padding-left: 3rem !important;
+}
 
 /*  okjii-daily*/
 
@@ -983,12 +985,15 @@ ol.carousel-indicators li {
   color: #5E5E5E;
   margin-top:-5rem;
   padding-top: 3rem;
-  padding-left: 0rem;
   padding-bottom: 2rem;
 }
 
 .okjii-retaler h1 span.text-green{
   color: #259D70;
+}
+
+.contact-form{
+  padding-left:2rem;
 }
 
 .google-map-right{
@@ -1473,7 +1478,7 @@ padding-left:2rem;
 
 
 .input-form .input-group-lg>.form-control:not(textarea) {
-  height: calc(1em + 1rem + 2px) !important;
+  height: calc(1em + 3rem + 2px) !important;
   background-color: #e9ecef;
 }
 
@@ -2059,7 +2064,7 @@ h1.term-h1-heading{
   padding-top: 25px;
   margin-left: -15px;
   margin-right: -15px;
-  padding-left: 51px !important;
+  padding-left: 3rem !important;
   padding-right: 0 !important;
   padding-bottom: 25px;
   vertical-align: middle;
@@ -2070,8 +2075,8 @@ h1.term-h1-heading{
   padding-top:2rem;
 }
 .okjii-term-condition{
-  padding-left:75px;
-  padding-right: 75px;
+  padding-left:3rem;
+  padding-right: 3rem;
 }
 .okjii-term-condition p:first-child{
   padding-top:1rem;
@@ -2384,6 +2389,11 @@ margin: 0 auto;
   left: 3rem;
   color:#fff !important;
 }
+
+.okjii-regbody h1.okjii-reg-h1 {
+  font-size: 42pt;
+  font-weight: 500 !important;
+}
 .pre-okjii-black{
   color: #5e5e5e;
 }
@@ -2518,7 +2528,10 @@ line-height: 1;
 }
 
 .bolded-list-indicator{
-  margin: 2rem;
+  margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
 }
 
 .bolded-list-indicator li{
@@ -2779,7 +2792,9 @@ img.rounded-circle.testimoni-img {
   margin-bottom: 0 !important;
   font-weight: 700 !important;
 }
-
+.contact-form {
+  padding-left: 0rem;
+}
 .okjii-explore h1{
   font-weight: 600;
 color: #5e5e5e !important;
@@ -3184,6 +3199,11 @@ input#formGroupExampleInput {
   color: #5e5e5e;
   padding-top: .7rem;
   padding-bottom: 1rem;
+}
+
+h1.okjii-reg-h1 {
+  font-size: 1.4rem!important;
+  font-weight: 600 !important;
 }
 
 .okjii-reg-h1 {

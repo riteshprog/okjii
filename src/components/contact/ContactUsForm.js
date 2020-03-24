@@ -3,7 +3,7 @@ import { MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody } from 'mdbreact';
 
 const ContactUsForm = () => {
   return (
-    <div>
+    <div class="contact-form">
 
       <MDBRow>
         <MDBCol md="12">
