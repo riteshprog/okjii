@@ -206,9 +206,9 @@ class Dashboard extends React.Component {
                 </CardBody>
                 <CardFooter>
                   <div className="legend">
-                    <i className="fa fa-circle text-primary" /> Opened{" "}
-                    <i className="fa fa-circle text-warning" /> Read{" "}
-                    <i className="fa fa-circle text-danger" /> Deleted{" "}
+                    <i className="fa fa-circle text-primary" /> Opened
+                    <i className="fa fa-circle text-warning" /> Read
+                    <i className="fa fa-circle text-danger" /> Deleted
                     <i className="fa fa-circle text-gray" /> Unopened
                   </div>
                   <hr />

@@ -50,7 +50,7 @@ export default class Fastaqbody extends Component {
        <h1 className="faq-h1 pl-3">SUPPORT : 1800 1212 2121</h1>
           <p className="text-center support-para pl-3 pt-3">If you need custom services or Need more? Contact us
 </p>
-      <div className="container">
+      <div className="container df fdc">
         <div className="row">
           <div className="col-sm-9 col-md-7 col-lg-9">
           <Faqshowhide />

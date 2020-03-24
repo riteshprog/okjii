@@ -1110,7 +1110,10 @@ ol.carousel-indicators li {
   transform: translate(255% 30%);
 }
 
-
+.trusted-by-store{
+  display: flex;
+  flex-direction: column;
+}
 
 .okjii-whyweshop, .okjii-customerkirana{
   background-color: #F7F7F7 !important;
@@ -1119,6 +1122,8 @@ ol.carousel-indicators li {
 
 
 .okjii-whyweshop section {
+  display: flex;
+  flex-direction: column;
   padding-top:3rem !important;
   padding-bottom: 3rem !important;
 }
@@ -3236,6 +3241,10 @@ margin-top: 51px;
 }
 .mtb-10{
   margin: 10px 0px;
+}
+
+.fdc{
+  flex-direction: column;
 }
 
 .okkji-howwework{
