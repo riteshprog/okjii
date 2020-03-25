@@ -978,6 +978,9 @@ ol.carousel-indicators li {
  .okkjii-retalore h1{
    font-size:1.2rem !important
  }
+ .input-group .input-group-prepend .input-group-text{
+   /* padding: none; */
+ }
 
 .okjii-retaler h1{
   font-weight: 600;
