@@ -25,7 +25,7 @@ export default class RegistrationForm extends Component {
         title: '',
         howToApply: []
       },
-      showOffer: true,
+      showOffer: false,
       otp: "",
       isMobileVerified: false,
       pincodeAllowed: false,
