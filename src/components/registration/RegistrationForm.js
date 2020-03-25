@@ -11,6 +11,8 @@ import {
 } from "mdbreact";
 import Axios from "axios";
 
+import {message} from 'antd';
+
 export default class RegistrationForm extends Component {
   constructor(props) {
     super(props);
@@ -81,7 +83,7 @@ export default class RegistrationForm extends Component {
   handleSendOtp = e => {
     e.preventDefault();
     const { mobileNumber } = this.state.preRegistraionData;
-    if (!mobileNumber) alert(`Invalid Mobile Number`);
+    if (!mobileNumber) message.error(`Invalid Mobile Number`);
     else {
       Axios.get(process.env.REACT_APP_API_URL + "/otp/send/" + mobileNumber)
         .then(({ data }) => {
@@ -95,7 +97,7 @@ export default class RegistrationForm extends Component {
   handleOtpVerify = e => {
     e.preventDefault();
     const { otp } = this.state;
-    if (!otp || (otp && otp.length != 6)) alert(`Invalid Otp`);
+    if (!otp || (otp && otp.length != 6)) message.error(`Invalid Otp`);
     else {
       const data = {
         mobile: this.state.preRegistraionData.mobileNumber,
@@ -107,7 +109,7 @@ export default class RegistrationForm extends Component {
             this.setState({ isMobileVerified: true });
           } else {
             console.log(data);
-            alert(`Error ${data.message}`);
+            message.error(`Error ${data.message}`);
           }
         })
         .catch(err => {
@@ -139,19 +141,23 @@ export default class RegistrationForm extends Component {
         .then(({ data }) => {
           if (data.status) {
             this.setState({ offer: data.offer, showOffer: true });
+            message.success(`Registered Successfully`)
           } else {
-            alert(data.errorMsg);
+            message.error(data.errorMsg);
           }
         })
         .catch(err => {
-          alert(`Something went wrong, Try Again`);
+          message.error(`Something went wrong, Try Again`);
           console.log(err);
         });
     } else {
-      alert(`Can't Register, invalid/missing data`);
+      message.error(`Can't Register, invalid/missing data`);
     }
   };
   render() {
+    message.config({
+      top: 100
+    })
     return (
       <div>
         {!this.state.showOffer ? (
