@@ -2062,6 +2062,13 @@ input.form-control::placeholder {
   padding-top:4rem;
 }
 
+<<<<<<< HEAD
+.okjii-retailor-body h1{
+  padding-top:11rem !important;
+}
+
+=======
+>>>>>>> 11da09f8f700129e8e2afd35b2a1d4917ef215a8
 .okjii-retailer .h1-trusted, .ok-fast .h1-trusted {
   padding-top: 5rem;
 }
