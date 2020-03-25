@@ -213,7 +213,6 @@ a{
 }
 
 .OkjiiRetailerBody{
-  padding: 10rem;
   background-image: url(../src/img/retailer/BackgroundRetailer.png);
   top:0;
   left:0 ;
@@ -292,6 +291,10 @@ a{
 
 .container-fluid.OkjiiRetailerBody {
   display: block;
+}
+
+.OkjiiRetailerBody h1{
+  padding-top: 11rem;
 }
 .container-fluid.OkjiiRetailerBody-mobile {
   display: none;
@@ -2087,8 +2090,12 @@ input.form-control::placeholder {
 .okjii-retailer .h1-trusted, .ok-fast .h1-trusted {
   padding-top: 5rem;
 }
-.okjii-cardbody .h1-trusted, .okkji-faqs .h1-trusted, .pre-regbody .h1-trusted{
+.okjii-cardbody .h1-trusted, .okkji-faqs .h1-trusted{
   padding-top:3rem !important;
+}
+
+.pre-regbody .h1-trusted{
+  padding-top:1rem !important;
 }
 
 .okjii-home .h1-trusted{
@@ -2555,7 +2562,7 @@ input[type="radio"] + label:before{
     font-size:.9rem;
     columns: #5e5e5e;
     font-weight: 500;
-    padding-bottom: 2rem;
+    padding-bottom: 0rem !important;
   }
 .okjii-reg-h1{
   font-size:1.5rem;
@@ -2660,6 +2667,14 @@ input[type="radio"]:checked + label:before {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen  and (max-width: 600px) {
+
+  .navbar .navbar-toggler {
+    width: 84px !important;
+    height: 50px;
+    vertical-align: middle;
+    outline: 0;
+    cursor: pointer;
+}
   
   .footer-bdr-right{
   border-right: none !important;
@@ -2725,7 +2740,7 @@ nav#parallelogram {
   margin-left:0 !important;
 }
 .navbar-collapse{
-  padding-top:15px;
+  padding-top:5px;
 }
 
 .okjii-explore {
