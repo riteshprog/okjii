@@ -1,0 +1,56 @@
+/*!
+
+ =========================================================
+ * Paper Dashboard React - v1.1.0 based on Paper Dashboard 2 - v2.0.0
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/paper-dashboard-2
+ * Copyright 2019 Creative Tim (http://www.creative-tim.com)
+
+ * Designed by www.invisionapp.com Coded by www.creative-tim.com
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+@import 'paper-dashboard/variables.scss';
+@import 'paper-dashboard/mixins.scss';
+
+// Plugins CSS
+@import "paper-dashboard/plugins/plugin-animate-bootstrap-notify.scss";
+@import "paper-dashboard/plugins/plugin-perfect-scrollbar.scss";
+
+// Core CSS
+@import "paper-dashboard/buttons.scss";
+@import "paper-dashboard/inputs.scss";
+@import "paper-dashboard/typography.scss";
+@import "paper-dashboard/misc.scss";
+@import "paper-dashboard/checkboxes-radio.scss";
+
+
+// components
+@import "paper-dashboard/navbar.scss";
+@import "paper-dashboard/page-header.scss";
+@import "paper-dashboard/dropdown.scss";
+@import "paper-dashboard/alerts.scss";
+@import "paper-dashboard/images.scss";
+@import "paper-dashboard/nucleo-outline.scss";
+@import "paper-dashboard/tables.scss";
+@import "paper-dashboard/sidebar-and-main-panel.scss";
+@import "paper-dashboard/footers.scss";
+@import "paper-dashboard/fixed-plugin.scss";
+
+// cards
+@import "paper-dashboard/cards.scss";
+@import "paper-dashboard/cards/card-plain.scss";
+@import "paper-dashboard/cards/card-chart.scss";
+@import "paper-dashboard/cards/card-user.scss";
+@import "paper-dashboard/cards/card-map.scss";
+@import "paper-dashboard/cards/card-stats.scss";
+
+@import "paper-dashboard/responsive.scss";
+
+// html to react differences
+@import "paper-dashboard/react/react-differences.scss";
