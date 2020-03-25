@@ -5,7 +5,7 @@ const GetAppLink = () => {
   return (
     <div className="getapp-link ">
       <MDBInputGroup
-        style={{ height: '100%'}}
+        style={{ height: '100%', padding: 'none'}}
         container
         ClassName="mb-3"
         prepend="+91 "

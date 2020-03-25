@@ -90,6 +90,7 @@ body{
 }
 
 .navbar{
+  padding: 16px;
   font-weight: 300;
   box-shadow: none !important;
 }
@@ -118,9 +119,6 @@ nav#parallelogram {
 .navbar.navbar-dark .navbar-toggler-icon{
   background-color: #259D70;
 }
-
-
-
 
 .okjii-offer-image {
   top: -49px !important;
@@ -979,7 +977,7 @@ ol.carousel-indicators li {
    font-size:1.2rem !important
  }
  .input-group .input-group-prepend .input-group-text{
-   /* padding: none; */
+  padding-right: 15px !important;
  }
 
 .okjii-retaler h1{
@@ -3252,7 +3250,7 @@ input#formGroupExampleInput {
 }
 
 h1.okjii-reg-h1 {
-  font-size: 1.4rem!important;
+  font-size: 1.2rem !important;
   font-weight: 600 !important;
 }
 
@@ -3297,6 +3295,12 @@ h1.okjii-reg-h1 {
 }
 
 }
+/* @media screen and (max-width: 991px){ */
+  .navbar {
+      padding: 16px;
+  }
+/* } */
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media screen and (max-width: 768px) and (min-width: 601px) {

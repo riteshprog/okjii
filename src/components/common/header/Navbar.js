@@ -23,7 +23,7 @@ class NavbarPage extends Component {
 render() {
   return (
     <div className=" bg-image">
-      <MDBNavbar  className="nav-bar fixed-top"  id="parallelogram" dark expand="md" >
+      <MDBNavbar  className="nav-bar fixed-top" style={{padding: '16px'}}  id="parallelogram" dark expand="md" >
         <MDBNavbarBrand href="/">
         <img src={logo} alt="store"   id="logo" height="35"/>
        
