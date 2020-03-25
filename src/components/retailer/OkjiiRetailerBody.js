@@ -11,8 +11,8 @@ import WhyweShop from '../retailer/WhyweShop';
 export default class OkjiiRetailerBody extends Component {
 render() {
 return (
-<div className="okjii-retailer okjii-retailor-body">
 
+<div className="okjii-retailer">
 
    <div className="container-fluid  OkjiiRetailerBody">
       

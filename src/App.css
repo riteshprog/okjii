@@ -200,6 +200,10 @@ a{
 }
 
 .OkjiiRetailerBody{
+<<<<<<< HEAD
+=======
+  padding: 10rem;
+>>>>>>> 11da09f8f700129e8e2afd35b2a1d4917ef215a8
   background-image: url(../src/img/retailer/BackgroundRetailer.png);
   top:0;
   left:0 ;
@@ -335,7 +339,11 @@ section.okkji-faq.faq-mobile, .offer-mobile {
     font-weight: 600;
     color: #5e5e5e !important;
     font-size: 17pt;
+<<<<<<< HEAD
     padding-top: 0rem !important;
+=======
+    /* padding-top: 0rem !important; */
+>>>>>>> 11da09f8f700129e8e2afd35b2a1d4917ef215a8
 }
 
 .okjii-explore h2{
@@ -977,13 +985,23 @@ ol.carousel-indicators li {
  .okkjii-retalore h1{
    font-size:1.2rem !important
  }
+<<<<<<< HEAD
+=======
+ .input-group .input-group-prepend .input-group-text{
+   /* padding: none; */
+ }
+>>>>>>> 11da09f8f700129e8e2afd35b2a1d4917ef215a8
 
 .okjii-retaler h1{
   font-weight: 600;
   font-size: 17pt !important;
   color: #5E5E5E;
   margin-top:-5rem;
+<<<<<<< HEAD
   padding-top: 3rem;
+=======
+  padding-top: 0rem;
+>>>>>>> 11da09f8f700129e8e2afd35b2a1d4917ef215a8
   padding-bottom: 2rem;
 }
 
@@ -2060,10 +2078,13 @@ input.form-control::placeholder {
   padding-top:4rem;
 }
 
+<<<<<<< HEAD
 .okjii-retailor-body h1{
   padding-top:11rem !important;
 }
 
+=======
+>>>>>>> 11da09f8f700129e8e2afd35b2a1d4917ef215a8
 .okjii-retailer .h1-trusted, .ok-fast .h1-trusted {
   padding-top: 5rem;
 }
@@ -2723,11 +2744,14 @@ nav#parallelogram {
   top: 50px;
   z-index: -1;
 } */
+<<<<<<< HEAD
 
 .okjii-retailor-body h1{
   padding-top:.5rem !important;
 }
 
+=======
+>>>>>>> 11da09f8f700129e8e2afd35b2a1d4917ef215a8
 .okjii-home .getapp-link {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -3469,7 +3493,12 @@ margin-top: 51px;
 }
 .offer-title{
   color: #259D70;
+<<<<<<< HEAD
   font-size: 30px;
+=======
+  text-transform: capitalize;
+  font-size: 23px;
+>>>>>>> 11da09f8f700129e8e2afd35b2a1d4917ef215a8
 }
 .offer-image{
   width: 250px;

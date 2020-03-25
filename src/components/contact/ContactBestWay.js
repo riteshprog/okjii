@@ -15,7 +15,7 @@ import mail from '../../img/contact/mail.png';
 export default class ContactBestWay extends Component {
   render() {
     return (
-      <div className="container okjii-contactus">
+      <div className="container okjii-contactus fdc">
         <h1><b className="sell">Best way to Connect</b> with OkkJI</h1>
         <div className="row okjii-whatsapp">
           <div className="col-sm-12 col-md-4">
