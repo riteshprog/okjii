@@ -50,7 +50,7 @@ class Dashboard extends React.Component {
     }
   }
   componentDidMount() {
-    Axios.get('http://localhost:5000/api/v1/dashboard').then(({data})=>{
+    Axios.get(process.env.REACT_APP_API_URL + '/dashboard').then(({data})=>{
       const dashboardData = data.dashboardData;
       this.setState({dashboardData})
     }).catch(err=>{

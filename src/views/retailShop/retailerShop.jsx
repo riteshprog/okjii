@@ -20,7 +20,7 @@ class Tables extends React.Component {
     }
   }
   componentDidMount(){
-    Axios.get('http://localhost:5000/api/v1/' + 'shop')
+    Axios.get(process.env.REACT_APP_API_URL + '/shop')
     .then(({data})=>{
       if(data.status){
         this.setState({allShops: data.allShops})

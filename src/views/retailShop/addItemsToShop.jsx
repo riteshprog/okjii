@@ -51,7 +51,7 @@ export default class AddProductToShop extends React.Component {
     }
   }
   componentDidMount(){
-    Axios.get('http://localhost:5000/api/v1/' + 'shop/' + this.props.match.params.shopId)
+    Axios.get(process.env.REACT_APP_API_URL + '/shop/' + this.props.match.params.shopId)
     .then(({data})=>{
       if(data.status){
         console.log(data);
@@ -88,7 +88,7 @@ export default class AddProductToShop extends React.Component {
       category,
       shopType: this.state.shopData.storeCatelogue.storeType
     }
-    Axios.post('http://localhost:5000/api/v1/' + 'shop/get-brands', data)
+    Axios.post(process.env.REACT_APP_API_URL + '/shop/get-brands', data)
     .then(({data})=>{
       if(data.status){
         this.setState({subCategoriesWithBrands: data.subCategoriesWithBrands})
@@ -120,7 +120,7 @@ export default class AddProductToShop extends React.Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    const url = 'http://localhost:5000/api/v1/' + 'shop/add-products';
+    const url = process.env.REACT_APP_API_URL + '/shop/add-products';
     let data = {
       shopId: this.state.shopData._id,
       shopType: this.state.shopData.storeCatelogue.storeType,

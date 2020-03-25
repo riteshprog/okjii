@@ -24,7 +24,7 @@ class AddNewShop extends React.Component {
     }
   }
   componentDidMount() {
-    Axios.get('http://localhost:5000/api/v1/' + 'shop/1236547890') //+ this.props.shopMobileNumber)
+    Axios.get(process.env.REACT_APP_API_URL + '/shop/1236547890') //+ this.props.shopMobileNumber)
     .then(({data})=>{
       if(data.status){
         this.setState({shopData: data.shopData})

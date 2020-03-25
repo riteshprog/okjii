@@ -278,7 +278,7 @@ class AddNewShop extends React.Component {
     shopData.basic.waltLicense && data.append('waltLicense', shopData.basic.waltLicense);
     
     
-    Axios.post('http://localhost:5000/api/v1/' + 'shop', data, {
+    Axios.post(process.env.REACT_APP_API_URL + '/shop', data, {
       headers:{
         'Accept': 'application/json'
       }
@@ -339,7 +339,7 @@ class AddNewShop extends React.Component {
   }
   handleGetOtp = (e) => {
     e.preventDefault();
-    Axios.get('http://localhost:5000/api/v1/' + 'otp/send/91' + this.state.shopData.basic.mobileNumber)
+    Axios.get(process.env.REACT_APP_API_URL + '/otp/send/91' + this.state.shopData.basic.mobileNumber)
     .then(({data})=>{
       if(data.type == 'success'){
         message.success('OTP Send')
@@ -354,7 +354,7 @@ class AddNewShop extends React.Component {
       mobile: this.state.shopData.basic.mobileNumber,
       otp: this.state.shopData.basic.otp
     }
-    Axios.post('http://localhost:5000/api/v1/' + 'otp/verify', body)
+    Axios.post(process.env.REACT_APP_API_URL + '/otp/verify', body)
     .then(({data})=>{
       if(data.type == 'success'){
         message.success('OTP Verified')
