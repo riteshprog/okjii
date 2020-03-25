@@ -3464,7 +3464,8 @@ margin-top: 51px;
 }
 .offer-title{
   color: #259D70;
-  font-size: 30px;
+  text-transform: capitalize;
+  font-size: 23px;
 }
 .offer-image{
   width: 250px;
