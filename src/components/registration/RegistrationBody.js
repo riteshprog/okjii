@@ -21,7 +21,7 @@ export default class RegistrationBody extends Component {
 शॉपिंग होगा <br />और भी <br />ईज़ी।</h1>
           </div>
           <h1 className="text-center pre-reg-h1">PRE - REGISTRATION FOR CUSTOMER</h1>
-            <p className="text-center">OKKJI Offer You Pre - Registration Benifits for Upcoming Kirana Shopping</p>
+            <p className="text-center">OKKJI Offers You Pre - Registration Benefits for Upcoming Kirana Shopping</p>
             <div className="form-table">
           <RegistrationForm />
 
