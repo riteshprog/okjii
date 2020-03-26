@@ -73,7 +73,7 @@ class PreReg extends React.Component {
                   <div>
                     {this.state.preRegistraion.length ? (
                       <span className="ml-1 desc">
-                        Total Registraions: {this.state.preRegistraion.length}
+                        Total Registrations: {this.state.preRegistraion.length}
                       </span>
                     ) : null}
                   </div>
@@ -105,7 +105,7 @@ class PreReg extends React.Component {
                       </tbody>
                     </Table>
                   ) : (
-                    <span>Currenty there are no Registraions yet</span>
+                    <span>Currenty there are no registrations yet</span>
                   )}
                 </CardBody>
               </Card>
