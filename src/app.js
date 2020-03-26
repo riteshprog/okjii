@@ -19,6 +19,7 @@ import Disclaimer from "./components/disclaimer/Disclaimer";
 import Registration from "./components/registration/Registration";
 import ScrollToTop from "./components/ScrollToTop";
 import BlogPage from "./components/blogpage/BlogPage";
+import Career from "./components/career/Career";
 
 import AdminApp from './adminApp.jsx';
 
@@ -83,6 +84,10 @@ class App extends React.Component {
             <Route path="/user-blog">
               <BlogPage />
             </Route>
+            <Route path="/career">
+              <Career />
+            </Route>
+
           </Switch>
           <Footer />
         </div>

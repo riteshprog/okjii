@@ -29,7 +29,7 @@ const FooterPage = () => {
                 <a href="/blog">BLOG</a>
               </li>
               <li>
-                <a href="/"> CAREER
+                <a href="/career"> CAREER
 </a>
               </li>
               <li>
