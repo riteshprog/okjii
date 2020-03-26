@@ -67,7 +67,7 @@ class PreReg extends React.Component {
             <Col md="12">
               <Card>
                 <CardHeader>
-                  <CardTitle tag="h4">Pre Registraions</CardTitle>
+                  <CardTitle tag="h4">Pre Registrations</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <div>
