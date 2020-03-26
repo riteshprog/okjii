@@ -242,8 +242,16 @@ a{
 
 
 
-.okkjiicontactus-h1{
-  margin-top:-2rem;
+.okkjiicontactus h1{
+  margin-top:-5rem;
+  padding-left: 2rem;
+  font-size:18pt;
+  font-weight: 600;
+  columns: #5e5e5e;
+}
+
+.okkjiicontactus textarea.form-control{
+  padding-left:15px;
 }
 
 .OkjiiRetailerBody h1{
@@ -1873,6 +1881,7 @@ color:#0197D2;
   font-weight: 300;
   color:#5e5e5e;
   text-align:center;
+  margin-top: -1.5rem;
 }
 
 .row.our-teams{
@@ -2101,7 +2110,7 @@ input.form-control::placeholder {
 }
 
 .okjii-retailer .h1-trusted, .ok-fast .h1-trusted {
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 .okjii-cardbody .h1-trusted, .okkji-faqs .h1-trusted{
   padding-top:3rem !important;
@@ -2113,7 +2122,7 @@ input.form-control::placeholder {
 }
 
 .okjii-home .h1-trusted{
-  padding-top:5rem;
+  padding-top:3rem;
 }
 
 .about-getapplink {
@@ -2141,8 +2150,9 @@ h1.term-h1-heading{
 
 }
 
-.faq-body .h1-trusted, .offer-body .h1-trusted, .about-body .h1-trusted{
-  padding-top:2rem;
+.about-body .h1-trusted, .offer-body .h1-trusted, .faq-body .h1-trusted{
+  padding-top:0rem;
+  margin-top:-1rem;
 }
 
 .blog-body .h1-trusted{

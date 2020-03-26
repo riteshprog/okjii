@@ -10,7 +10,7 @@ export default class ContactBody extends Component {
     return (
       <div>
         <div className="container-fluid okkjiicontactus okkjiicontactus-desktop ">
-      <div className="row okjii-explore okjii-retaler">
+      <div className="row ">
          <div className="col-md-4 ">
             <h1>Contact Us</h1>
             <ContactUsForm />
