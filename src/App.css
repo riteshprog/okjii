@@ -2313,6 +2313,11 @@ h1.term-h1-heading{
   color: #5e5e5e;
 
 }
+
+p.card-text {
+  margin-top: -1rem;
+}
+
 .social-cards{
   padding-top:2rem;
   padding-bottom: 4rem;
