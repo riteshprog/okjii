@@ -151,7 +151,7 @@ class Dashboard extends React.Component {
                     </Col>
                     <Col md="8" xs="7">
                       <div className="numbers">
-                        <p className="card-category">Pre Registraions</p>
+                        <p className="card-category">Pre Registrations</p>
                           <CardTitle tag="p">{this.state.dashboardData.preReg?this.state.dashboardData.preReg:0}</CardTitle>
                         <p />
                       </div>
