@@ -26,9 +26,9 @@ export default class RegistrationBody extends Component {
           <RegistrationForm />
 
           </div>
+          <Trusted />
         </div>
         {/* <HowtoApply /> */}
-        <Trusted />
 
       </div>
     )

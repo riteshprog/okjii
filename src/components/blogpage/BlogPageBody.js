@@ -13,12 +13,10 @@ export default class BlogPageBody extends Component {
                 <img src={blogpagebackground} alt="" className="img-fluid" />
               <h1 className="okjii-blog-h1">Food &amp; LifeStyle</h1>
           </div>
+          <BlogInformation />
+        <OkkjiBlogPost />
         </div>
-        <BlogInformation />
-        <div className="container">
-          <OkkjiBlogPost />
           <Trusted />
-        </div>
       </div>
     )
   }

@@ -18,12 +18,9 @@ return (
       
    
 <div className="row">
-         <div className="col-md-8 order-md-2 ">
-            {/* <img src={retailer} width="100%" className="img-fluid"  alt="" /> */}
-         </div>
-         <div className="col-md-4 order-md-1  order-sm-1 okjii-explore okjii-retaler okjii-explore-left">
+         <div className="col-md-5  okjii-explore  okjii-retaler okjii-explore-left">
             {/* <h1>Partner <span className="text-normal">with</span> <span className="text-green">Okk</span>Ji</h1> */}
-            <h1 className="text-uppercase"> A great opportunity for retailers to build long lasting relationships with their customers</h1>
+            <h1 className="text-uppercase "> A great opportunity for retailers to build long lasting relationships with their customers</h1>
             <p className="">A digital hub of all local, neighbourhood retail shop with era driven look and mechanism.</p>
             <ContactForm />
             <div className="container">
@@ -36,9 +33,6 @@ return (
                   </div>
                </div>
             </div>
-            <div className="row row-addding">
-
-</div>
          </div>
       </div>
 
