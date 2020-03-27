@@ -9,7 +9,7 @@ import blog7 from '../../img/blog/blog7.jpg';
 
 
 
-import blog1 from '../../img/blogpage/blog1.png';
+//import blog1 from '../../img/blogpage/blog1.png';
 //import blog2 from '../../img/blogpage/blog2.png';
 
 
@@ -45,7 +45,7 @@ export default class OkkjiBlogPost extends Component {
               <h3>Aakash Kumar | 25 Nov 2019 | Food &amp; LifeStyle</h3>
               </figcaption>
             </figure>
-            <h2>#What is the Future of Online Grocery in India</h2>
+            <h2>#What is the Future of Online Grocery in India<br /><br /></h2>
             <p className="" id="collapseContent">During this time of the year, parents are always busy geting creative to make the kids have a gala time with – refreshing drinks, fun and light snacks and quirky games.</p>
   <a href="/user-blog" className="btn blog-button">Read More</a>
   <MDBIcon icon="share-alt" className="float-right mdb-icon" /><span className="float-right number-flower">07</span>
@@ -57,12 +57,12 @@ export default class OkkjiBlogPost extends Component {
           <div className="col-md-6">
             <div className="blog-column">
           <figure classname="blog-figure">
-              <img src={blog1} alt=""  className="img-fluid" />
+              <img src={blog6} alt=""  className="img-fluid" />
               <figcaption>
               <h3>Aakash Kumar | 25 Nov 2019 | Food &amp; LifeStyle</h3>
               </figcaption>
             </figure>
-            <h2>#BeatTheHeat with Grofers.</h2>
+            <h2>#Why Kirana Store is an Integral Part of Indian Society</h2>
             <p className="" id="collapseContent">During this time of the year, parents are always busy geting creative to make the kids have a gala time with – refreshing drinks, fun and light snacks and quirky games.</p>
   <a href="/user-blog" className="btn blog-button">Read More</a>
   <MDBIcon icon="share-alt" className="float-right mdb-icon" /><span className="float-right number-flower">07</span>

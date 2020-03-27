@@ -2704,7 +2704,7 @@ input[type="radio"]:checked + label:before {
 
 /* Career Css start */
 
-.career-body{
+.career-body, .career-page{
   padding-top:50px;
 }
 
@@ -2713,6 +2713,13 @@ input[type="radio"]:checked + label:before {
 }
 
 .career-left {
+  position: absolute;
+  top: 12rem;
+  left: 3rem;
+
+}
+
+.career-page-left{
   position: absolute;
   top: 12rem;
   left: 3rem;
@@ -2798,6 +2805,99 @@ input[type="radio"]:checked + label:before {
   margin-top:10px;
 }
 /* Career Css end  */
+
+/* Career page Css start */
+.career-page-left{
+  width:23%;
+}
+
+.career-page-left h1{
+  font-size:18pt;
+  color: #5e5e5e;
+  font-weight: 600;
+
+}
+
+.career-page-left p{
+  font-size: 1rem;
+  color: #5e5e5e;
+}
+
+.career-page h1{
+  font-size:18pt;
+  color: #5e5e5e;
+  font-weight: 600;
+
+}
+
+.career-technical{
+  padding-left:3rem;
+  padding-right:3rem;
+}
+
+.career-technical h2{
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #5e5e5e;
+}
+.career-technical p{
+  font-size: 1rem;
+  color:#5e5e5e;
+}
+
+.career-technical ul{
+  padding-left: 3rem;
+
+}
+
+.career-technical ul:last-child{
+  padding-bottom: 2rem;
+}
+
+.career-apply {
+  background-color: #F4F4F4;
+  padding-top:2rem;
+  padding-bottom: 1rem;
+}
+
+.applypage h1{
+  font-size:1.2rem;
+  color:#5e5e5e;
+  font-weight: 600;
+  padding-left:1rem;
+  margin-bottom: 0.8rem;
+}
+.card.applypage {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.applypage input{
+  padding: 1rem;
+}
+
+.applypage .custom-file-label::after{
+  display: none;
+}
+
+.applypage .custom-file-label{
+  background-color: transparent;
+  color: #3156F4;
+  border: none;
+  padding-left:2rem;
+  font-size:1rem;
+  font-weight: 600;
+  }
+  .applypage .my-top{
+    margin-top:-2rem;
+  }
+
+  .applypage .btn{
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+/* Career page Css End */
 
 /* Registration End */
 
@@ -3518,8 +3618,42 @@ h1.okjii-reg-h1 {
   margin-right: 0rem;
 }
 
-
 /*  career css end */
+
+/* career page start */
+
+.career-page-left{
+  width:75%;
+}
+
+.career-page-left {
+  top: 2rem;
+  left: 1rem;
+}
+
+.career-page-left h1{
+
+  font-size:1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.career-page h1.text-center{
+  padding-top:1rem;
+}
+
+.career-technical{
+  padding-left:1rem;
+  padding-right: 1rem;
+}
+
+.career-technical ul{
+padding-left:2rem;
+padding-right:1rem;
+
+}
+
+
+/* career page end */
 
 
 }

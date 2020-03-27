@@ -22,6 +22,7 @@ import BlogPage from "./components/blogpage/BlogPage";
 import Career from "./components/career/Career";
 
 import AdminApp from './adminApp.jsx';
+import CareerPage from "./components/careerpage/CareerPage";
 
 class App extends React.Component {
   constructor(props) {
@@ -86,6 +87,9 @@ class App extends React.Component {
             </Route>
             <Route path="/career">
               <Career />
+            </Route>
+            <Route path="/careerpage">
+              <CareerPage />
             </Route>
 
           </Switch>

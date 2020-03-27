@@ -43,6 +43,7 @@ export default class CureentJob extends Component {
     </div>
 
     <div className="col-md-4">
+      <a href="/careerpage">
       <div className="career-card">
       <img src={CareerIcon4} alt="" className="img-fluid" />
       <div className="career-offer-heading">
@@ -50,6 +51,7 @@ export default class CureentJob extends Component {
         <p>Patna</p>
       </div>
       </div>
+      </a>
     </div>
 
     <div className="col-md-4">
