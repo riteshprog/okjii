@@ -2,7 +2,9 @@
 body{
   overflow-x: hidden;
 }
-
+.width-wfa{
+  width: -webkit-fill-available;
+}
 .form-control{
   border: 1px solid #DDDDDD !important;
 }

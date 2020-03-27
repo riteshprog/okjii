@@ -23,8 +23,10 @@ import SingleShop from "./views/retailShop/./viewSingleShop.jsx";
 import { MyFancyComponent } from "./adminComponents/googleMap/googleMap";
 import AddProductToShop from "./views/retailShop/addItemsToShop";
 import PreReg from "./views/preRegistration/preReg";
+import Users from './views/userManagement/users';
 
 var routes = [
+  /* --------------------Side Bar Routes Starts-------------------- */
   {
     path: "/dashboard",
     onSideBar: true,
@@ -33,12 +35,12 @@ var routes = [
     component: Dashboard,
     layout: "/admin"
   },
-
   {
     path: "/shops/add-new",
     name: "Add New Shop",
     icon: "nc-icon nc-shop",
     component: AddNewShop,
+    accessTo: ['admin', 'market'],
     layout: "/admin"
   },
   {
@@ -46,9 +48,31 @@ var routes = [
     onSideBar: true,
     name: "Retailer Shop",
     icon: "nc-icon nc-shop",
+    accessTo: ['admin', 'market'],
     component: RetailerShop,
     layout: "/admin"
   },
+  {
+    path: "/user",
+    onSideBar: true,
+    name: "User Mangement",
+    icon: "nc-icon nc-satisfied",
+    component: Users,
+    accessTo: ['admin'],
+    layout: "/admin"
+  },
+  {
+    path: "/pre-registration",
+    onSideBar: true,
+    name: "Pre Registrations",
+    icon: "nc-icon nc-badge",
+    accessTo: ['admin'],
+    component: PreReg,
+    layout: "/admin"
+  },
+
+  /* --------------------Side Bar Routes Starts-------------------- */
+
   {
     path: "/shops/single/:shopId",
     onSideBar: false,
@@ -66,15 +90,7 @@ var routes = [
     layout: "/admin"
   },
 
-  {
-    path: "/pre-registration",
-    onSideBar: true,
-    name: "Pre Registrations",
-    icon: "nc-icon nc-badge",
-    component: PreReg,
-    layout: "/admin"
-  },
-
+  //google map
   {
     path: "/map",
     onSideBar: false,
@@ -82,7 +98,7 @@ var routes = [
     icon: "nc-icon nc-shop",
     component: MyFancyComponent,
     layout: "/admin"
-  }
+  },
 
   // {
   //   path: "/maps",
