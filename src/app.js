@@ -23,6 +23,7 @@ import Career from "./components/career/Career";
 
 import AdminApp from './adminApp.jsx';
 import CareerPage from "./components/careerpage/CareerPage";
+import ReferEarn from "./components/referearn/ReferEarn";
 
 class App extends React.Component {
   constructor(props) {
@@ -90,6 +91,9 @@ class App extends React.Component {
             </Route>
             <Route path="/careerpage">
               <CareerPage />
+            </Route>
+            <Route path="/refer-earn">
+              <ReferEarn />
             </Route>
 
           </Switch>

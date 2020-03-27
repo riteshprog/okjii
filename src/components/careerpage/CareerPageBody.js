@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CareerSinglepage from '../../img/career/CareerSinglepage.png';
+import Locationicon from '../../img/career/Locationicon.png';
 import ApplyPage from '../careerpage/ApplyPage';
 import Trusted from '../common/Trusted';
 
@@ -15,11 +16,11 @@ export default class CareerPageBody extends Component {
               <p>Have the appetite to discover, learn and build with the team that is changing the way India living?</p>
             </div>
           </div>
-        <h1 className="text-center">GROWING WITH <span className="text-green">OKK</span>JI</h1>
+        <h1 className="text-center ">GROWING WITH <span className="text-green">OKK</span>JI</h1>
         <div className="row career-technical">
             <div>
               <h2>Technical Program Manager</h2>
-              <p>Patna</p>
+              <p><img src={Locationicon} alt="" className="location-icon" />Patna</p>
               <p>As a Technical Program Manager at OkkJi, you could expect to:</p>
               <ul>
                 <li>Partner with Business, Product / Tech owners and Operation Leaders in understanding long-term capabilities / initiatives that needs to be managed in-line with the Organisational/Functional goals.</li>

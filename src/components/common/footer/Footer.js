@@ -37,7 +37,7 @@ const FooterPage = () => {
               </li>
 
               <li>
-                <a href="/">REFER &amp; EARN</a>
+                <a href="/refer-earn">REFER &amp; EARN</a>
               </li>
 
             </ul>

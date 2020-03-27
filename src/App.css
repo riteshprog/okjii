@@ -2701,6 +2701,7 @@ input[type="radio"]:checked + label:before {
   opacity: 0;
   transform: scale(0);
 }
+/* Registration End */
 
 /* Career Css start */
 
@@ -2891,15 +2892,158 @@ input[type="radio"]:checked + label:before {
   .applypage .my-top{
     margin-top:-2rem;
   }
-
+  .location-icon{
+    height:20px;
+    margin-right: .5rem;
+  }
   .applypage .btn{
     padding-left: 3rem;
     padding-right: 3rem;
   }
 
 /* Career page Css End */
+/* Refer and Earn page Css Start */
+.refer-earn{
+  padding-top: 80px;
+}
 
-/* Registration End */
+.refer-earn{
+  position: relative;
+}
+
+.refer-earn-content {
+  position: absolute;
+  top: 6rem;
+  left: 3rem;
+}
+
+.refer-earn-con h1{
+  font-size:18pt;
+  font-weight: 600;
+  color:#5e5e5e;
+  padding-top:3rem;
+  margin-bottom: 1rem;
+
+}
+
+.refer-earn-con p{
+  font-size:1rem;
+  color:#5e5e5e;
+}
+
+.Referandearn{
+  width:80%;
+  display: block;
+  margin-left: 5rem;
+  margin-right:0px;
+}
+
+.refer-earn-apple{
+  width:62%;
+  position: absolute;
+}
+.refer-earn-apple .install-now{
+  font-size: 1rem;
+  font-weight: 600;
+  color:#5e5e5e;
+}
+.refer-earn-apple .Asset7-install{
+width:23px;
+padding-bottom: 1rem;
+}
+
+.refer-earn-get-applink{
+  padding-top:2rem;
+}
+
+.refer-earn-how-to{
+  margin-top: 3rem;
+  box-shadow: 0 5px 12px 0 rgba(0,0,0,0.18);
+  padding:2rem;
+}
+
+.refer-earn-how-to h1{
+  font-size: 1.2rem;
+  color:#5e5e5e;
+  font-weight: 600;
+  padding-left:4rem;
+  padding-right: 2rem;
+}
+
+.refer-earn-how-to ul{
+  padding-left:4rem !important;
+  padding-right: 2rem !important;
+}
+
+.refer-earn-how-to ul li{
+  padding-bottom: 1rem;
+}
+
+.okjii-referearn{
+  margin-left: -30px !important;
+  margin-right: -30px !important;
+}
+
+.refer-earn-how-to .okjii-whatsapp.col-sm-12.col-md-4{
+      padding-left:0;
+}
+
+.earn-how{
+  padding-bottom:4rem;
+}
+
+.refer-earn-refer{
+  margin-top: 3rem;
+  box-shadow: 0 5px 12px 0 rgba(0,0,0,0.18);
+  padding-bottom: 2rem;
+}
+
+.refer-earn-refer h2{
+  font-size:1.2rem;
+  font-weight: 600;
+  color:#5e5e5e;
+  padding-top:2rem;
+}
+
+.refer-earn-refer h3{
+  font-size:1.1rem;
+  font-weight: 600;
+  color:#5e5e5e;
+  margin-bottom: .5rem;
+}
+
+.refer-earn-refer .btn{
+  background-color: #259D70 !important;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.refer-earn-refer input{
+  width:100%;
+  margin-bottom: .5rem;
+  padding:.5rem;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+}
+
+.refer-term-condition{
+  padding-top:3rem;
+  text-align: center;
+}
+
+.refer-term-condition h1{
+  font-size:1.2rem;
+  font-weight: 600;
+  color:#5e5e5e;
+}
+.refer-term-condition p{
+  font-size: 1rem;
+  color:#5e5e5e;
+}
+
+/* Refer and Earn page Css End */
+
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
