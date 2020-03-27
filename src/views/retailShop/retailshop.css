@@ -60,6 +60,16 @@ input[type="radio"] + label:before {
   width: 20px;
   height: 20px;
 }
+
+
+/* ---------------------------ANT CLASS STARTS-------------------- */
+.ant-table {
+  overflow: scroll;
+}
+
+
+/* ---------------------------ANT CLASS ENDS-------------------- */
+
 /* tab */
 @media only screen and (max-width: 800px){
   .table-responsive{

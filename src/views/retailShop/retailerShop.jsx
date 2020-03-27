@@ -1,10 +1,11 @@
 import React from "react";
 
 // reactstrap components
-import { Card, CardHeader, CardBody, CardTitle, Table, Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Input } from "reactstrap";
+import { Card, CardHeader, CardBody, CardTitle, Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Input } from "reactstrap";
 import Axios from "axios";
 import moment from 'moment-timezone';
-import { Avatar } from "antd";
+import { Avatar, Table, Tag } from "antd";
+
 import {CheckOutlined, CloseOutlined} from '@ant-design/icons';
 import { Redirect, Link } from "react-router-dom";
 import AddProductToShop from "./addItemsToShop";
@@ -19,6 +20,56 @@ class Tables extends React.Component {
       allShops: []
     }
   }
+  columns = [
+    {
+      title: `Owner`,
+      dataIndex: 'basic',
+      key: '_id',
+      render: basic => <Avatar size={64} src={basic.ownerPhoto}/>
+    },
+    {
+      title: 'Shop Id',
+      dataIndex: '_id',
+      key: '_id',
+      render: id => <span>OKKJIXXXX</span>,
+    },
+    {
+      title: 'Shop Name',
+      dataIndex: 'basic',
+      key: '_id',
+      render: basic => <span>{basic.shopName}</span>,
+    },
+    {
+      title: 'Owner Name',
+      dataIndex: 'basic',
+      key: '_id',
+      render: basic => <span>{basic.ownerName}</span>,
+    },
+    {
+      title: 'Shop Type',
+      dataIndex: 'storeCatelogue',
+      key: '_id',
+      render: storeCatelogue => <Tag color={storeCatelogue.storeType =='24x7Store'?'green':storeCatelogue.storeType =='Medium Store'?'blue':'red'}>{storeCatelogue.storeType}</Tag>,
+    },
+    {
+      title: 'Added On',
+      dataIndex: 'shopInfo',
+      key: '_id',
+      render: shopInfo => <span>{moment(shopInfo.createdAt).format("lll")}</span>,
+    },
+    {
+      title: 'Shop Location',
+      dataIndex: 'basic',
+      key: '_id',
+      render: basic => <span>{basic.shopLocation.label}</span>,
+    },
+    {
+      title: 'Action',
+      dataIndex: '_id',
+      key: 'x',
+      render: shopId => <a >View</a>, //href={`/admin/shops/single/${shopId}`}
+    }
+  ]
   componentDidMount(){
     Axios.get(process.env.REACT_APP_API_URL + '/shop')
     .then(({data})=>{
@@ -39,6 +90,7 @@ class Tables extends React.Component {
       // this.toggleAddNewShopModal();
     }
   }
+
   renderAddNewModal = () => (
     <Modal isOpen={this.state.addNewShopModalVisibility} toggle={this.toggleAddNewShopModal} >
       <ModalHeader toggle={this.toggleAddNewShopModal}>Add a New Shop</ModalHeader>
@@ -183,7 +235,8 @@ class Tables extends React.Component {
                 </CardHeader>
                 <CardBody>
                 {this.state.allShops.length?<span className='ml-1 desc'>Total Shops: {this.state.allShops.length}</span>:(null)}
-                  {this.state.allShops.length?<Table responsive>
+                  <Table columns={this.columns} dataSource={this.state.allShops} />
+                  {/* {this.state.allShops.length?<Table responsive>
                     <thead className="text-primary">
                       <tr className='ta'>
                         <th><i className='nc-icon nc-shop t-large'></i></th>
@@ -207,12 +260,15 @@ class Tables extends React.Component {
                         <td>{shop.storeCatelogue.storeType}</td>
                         <td>{moment(shop.shopInfo.createdAt).format("LL")}</td>
                         <td>
-                          {/* <button className='btn btn-danger' onClick={()=>this.handleOnAddProductClicked(shop._id)}> add products</button> */}
                           <Link className='btn btn-danger' to={`/admin/shops/add-item/${shop._id}`}   params={{id: shop._id}} shopName={shop.basic.shopName}>Add Product</Link>
+                        </td>
+                        <td>
+                          <Link className='btn btn-danger' to={`/admin/shops/add-item/${shop._id}`}   params={{id: shop._id}} shopName={shop.basic.shopName}>View</Link>
                         </td>
                       </tr>))}
                     </tbody>
                   </Table>:<span>Currenty there are no shops. Click on "Add new a Shop" Button to add one</span>}
+                 */}
                 </CardBody>
               </Card>
             </Col>

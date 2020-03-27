@@ -1,28 +1,10 @@
 import React from "react";
-
-// reactstrap components
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardTitle,
-  Table,
-  Row,
-  Col,
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Form,
-  FormGroup,
-  Input
-} from "reactstrap";
 import Axios from "axios";
-import moment from "moment-timezone";
-import { Avatar } from "antd";
-import { CheckOutlined, CloseOutlined } from "@ant-design/icons";
-import { Redirect, Link } from "react-router-dom";
+import { Radio } from 'antd';
+import { Card, CardHeader, CardBody, CardTitle, Row, Col } from "reactstrap";
+import { Avatar, Table, Tag } from 'antd';
+import moment from 'moment-timezone';
+
 
 class PreReg extends React.Component {
   constructor(props) {
@@ -31,8 +13,57 @@ class PreReg extends React.Component {
       addNewShopModalVisibility: false,
       showActions: false,
       preRegistraion: [],
+      filter: {
+        district: 'all'
+      }
     };
   }
+
+  columns = [
+    {
+      title: 'Name',
+      dataIndex: 'fullName',
+      key: '_id',
+      render: name => <span>{name}</span>,
+    },
+    {
+      title: 'Mobile',
+      dataIndex: 'mobileNumber',
+      key: '_id',
+      render: mobileNumber => <span>{mobileNumber}</span>,
+    },
+    {
+      title: 'Pincode',
+      dataIndex: 'pincode',
+      key: '_id',
+      render: pincode => <span>{pincode}</span>,
+    },
+    {
+      title: 'District',
+      dataIndex: 'district',
+      key: '_id',
+      render: district => <span>{district}</span>,
+    },
+    {
+      title: 'State',
+      dataIndex: 'pincode',
+      key: '_id',
+      render: state => <span>{state}</span>,
+    },
+    {
+      title: 'Offer',
+      dataIndex: 'offer',
+      key: '_id',
+      render: offer => <span>{offer.title}</span>,
+    },
+    {
+      title: 'Email',
+      dataIndex: 'email',
+      key: '_id',
+      render: email => <span>{email?email:'N/A'}</span>,
+    }
+  ]
+
   componentDidMount() {
     Axios.get(process.env.REACT_APP_API_URL + "/pre-registraion")
       .then(({ data }) => {
@@ -46,19 +77,29 @@ class PreReg extends React.Component {
         console.log(`catch`, err);
       });
   }
+  callApiOnFilterChange = ()=> {
+    let filterObj = this.state.filter, queryStr = ``;
+    Object.keys(filterObj).map(key=> queryStr += `${key}=${filterObj[key]}`)
 
-  toggleAddNewShopModal = () =>
-    this.setState({
-      addNewShopModalVisibility: !this.state.addNewShopModalVisibility
-    });
-  handleAddNewShop = (e, type) => {
-    if (type == "addNewShop") {
-      window.location.pathname = "admin/shops/add-new";
-      // this.toggleAddNewShopModal();
-    }
-  };
-  handleOnAddProductClicked = shopId => <Link to="/login" />;
-
+    Axios.get(process.env.REACT_APP_API_URL + "/pre-registraion?" + queryStr)
+      .then(({ data }) => {
+        if (data.status) {
+          this.setState({ preRegistraion: data.allPreRegs });
+        } else {
+          console.log("no preRegistraion found");
+        }
+      })
+      .catch(err => {
+        console.log(`catch`, err);
+      });
+  }
+  handleFilterChange = (e, type) => {
+    const value = e.target.value;
+    const filter = this.state.filter;
+    filter[type] = value;
+    this.setState({filter});
+    this.callApiOnFilterChange();
+  }
   render() {
     return (
       <>
@@ -70,14 +111,25 @@ class PreReg extends React.Component {
                   <CardTitle tag="h4">Pre Registrations</CardTitle>
                 </CardHeader>
                 <CardBody>
-                  <div>
-                    {this.state.preRegistraion.length ? (
-                      <span className="ml-1 desc">
-                        Total Registrations: {this.state.preRegistraion.length}
-                      </span>
-                    ) : null}
+                  <div className='df jcsb'>
+                    <div className='m-2'>
+                      {this.state.preRegistraion.length ? (
+                        <span className="ml-1 desc">
+                          Total Registrations: {this.state.preRegistraion.length}
+                        </span>
+                      ) : null}
+                    </div>
+                    <div className='m-2'>
+                    <Radio.Group value={this.state.filter.district} onChange={(e)=>this.handleFilterChange(e, 'district')}>
+                      <Radio.Button value="all">All</Radio.Button>
+                      <Radio.Button value="Patna">Patna</Radio.Button>
+                      <Radio.Button value="Jaipur">Jaipur</Radio.Button>
+                    </Radio.Group>
+                    </div>
+
                   </div>
-                  {this.state.preRegistraion.length ? (
+                  <Table  columns={this.columns} dataSource={this.state.preRegistraion} />
+                  {/* {this.state.preRegistraion.length ? (
                     <Table responsive>
                       <thead className="text-primary">
                         <tr className="ta">
@@ -106,7 +158,7 @@ class PreReg extends React.Component {
                     </Table>
                   ) : (
                     <span>Currenty there are no registrations yet</span>
-                  )}
+                  )} */}
                 </CardBody>
               </Card>
             </Col>

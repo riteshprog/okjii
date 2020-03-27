@@ -1,3 +1,4 @@
+
 body{
   overflow-x: hidden;
 }
@@ -7,6 +8,12 @@ body{
 }
 .form-control-web{
   border: none;
+}
+.a-link{
+  color: blue;
+}
+.fg-1{
+  flex-grow: 1;
 }
 
 .sidebar .nav p, .off-canvas-sidebar .nav p{
@@ -25,6 +32,7 @@ body{
  color: red; 
 }
 
+
 .icon-sm{
   width: 60px;
   height: 60px;
@@ -38,6 +46,10 @@ body{
 .jcc{
   justify-content: center;
 }
+.jcsb{
+  justify-content: space-between;
+}
+
 .aic{
   align-items: center;
 }
