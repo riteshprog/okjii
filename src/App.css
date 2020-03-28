@@ -2903,6 +2903,21 @@ input[type="radio"]:checked + label:before {
 
 /* Career page Css End */
 /* Refer and Earn page Css Start */
+.refer-earn-mobile{
+  display:none;
+}
+
+.refer-earn-desktop{
+  display:block;
+}
+.container.refer-earn-form-mobile {
+  display: none;
+}
+
+.container.refer-earn-form-desktop {
+  display: block;
+}
+
 .refer-earn{
   padding-top: 80px;
 }
@@ -3798,7 +3813,76 @@ padding-right:1rem;
 
 
 /* career page end */
+/*  Refere earn-page start */
 
+.refer-earn-desktop{
+  display: none;
+}
+
+.refer-earn-mobile {
+  display:block;
+}
+
+.container.refer-earn-form-desktop {
+  display: none;
+}
+
+.container.refer-earn-form-mobile {
+  display: block;
+}
+
+.refer-earn-con h1 {
+  font-size: 17pt;
+  font-weight: 600;
+  color: #5e5e5e;
+  padding-top: 0rem;
+  margin-top:-1rem;
+  margin-bottom: 1rem;
+}
+
+.refer-earn-content {
+  position: absolute;
+  top: 6rem;
+  left: 1.3rem;
+}
+
+.refer-earn-mobile img.Mobilebackground{
+  padding-top:4rem;
+  padding-bottom: 7rem;
+}
+
+.refer-earn-apple{
+  padding-top:16rem;
+  width:100%;
+}
+
+.refer-earn-apple .Asset7-install{
+  padding-top: 3rem;
+  margin-top: -1rem !important;
+}
+
+.okjii-referearn {
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+}
+
+.refer-term-condition h1, .refer-term-condition p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* .refer-earn-mobile{
+  background-image: linear-gradient(to right, rgb(255, 255, 255, 0.30), rgb(37, 157, 112, 0.1)), url(/static/media/BackgroundMobile.26271e97.png);
+    top: 50px !important;
+    left: 0;
+    right: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+} */
+
+/*refer earn page end */
 
 }
 /* @media screen and (max-width: 991px){ */

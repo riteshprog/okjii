@@ -6,7 +6,7 @@ import MasterCard from '../../../img/MasterCard.png';
 import Maestro from '../../../img/Maestro.png';
 import paypal from '../../../img/paypal.png';
 import visa from '../../../img/visa.png';
-
+import { Link } from 'react-router-dom';
 
 
 const FooterPage = () => {
@@ -20,24 +20,24 @@ const FooterPage = () => {
             <h5 className="title">MENU</h5>
             <ul className="list-unstyled footer-list">
               <li>
-                <a href="/about">ABOUT US</a>
+                <Link to="/about">ABOUT US</Link>
               </li>
               <li>
-                <a href="/okkji-retailer"> JOIN AS RETAILER</a>
+                <Link to="/okkji-retailer"> JOIN AS RETAILER</Link>
               </li>
               <li>
-                <a href="/blog">BLOG</a>
+                <Link to="/blog">BLOG</Link>
               </li>
               <li>
-                <a href="/career"> CAREER
-</a>
+                <Link to="/career"> CAREER
+</Link>
               </li>
               <li>
-                <a href="/offer">OFFERS</a>
+                <Link to="/offer">OFFERS</Link>
               </li>
 
               <li>
-                <a href="/refer-earn">REFER &amp; EARN</a>
+                <Link to="/refer-earn">REFER &amp; EARN</Link>
               </li>
 
             </ul>
@@ -46,25 +46,23 @@ const FooterPage = () => {
             <h5 className="title">HELP</h5>
             <ul className="list-unstyled footer-list">
               <li>
-                <a href="/help">HELP CENTER
-</a>
+                <Link to="/help">HELP CENTER</Link>
               </li>
               <li>
-                <a href="/contact">CONTACT US</a>
+                <Link to="/contact">CONTACT US</Link>
               </li>
               <li>
-                <a href="/terms-condition">TERMS &amp; CONDITION</a>
+                <Link to="/terms-condition">TERMS &amp; CONDITION</Link>
               </li>
               <li>
-                <a href="/privacy"> PRIVACY POLICY
-</a>
+                <Link to="/privacy"> PRIVACY POLICY</Link>
               </li>
               <li>
-                <a href="/refund">REFUND POLICY</a>
+                <Link to="/refund">REFUND POLICY</Link>
               </li>
 
               <li>
-                <a href="/disclaimer">DISCLAIMER</a>
+                <Link to="/disclaimer">DISCLAIMER</Link>
               </li>
 
             </ul>
