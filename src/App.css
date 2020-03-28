@@ -3062,25 +3062,22 @@ padding-bottom: 1rem;
 /* Upload  Selfy start*/
 .selfi-blog{
   position: relative;
+  height: 50vh;
   margin: 0 auto;
 }
-
+.row.blog {
+  width: 41%;
+}
+.selfi-blog .col-md-6{
+  border:1px solid #259D70;
+  
+}
 .selfi-blog{
   margin-top:100px;
   margin-bottom: 100px;
 }
 
-.left{
-  border:1px solid #259D70;
-  width:250px;
-  height: 250px;
-}
 
-.right{
-  border:1px solid #259D70;
-  width:250px;
-  height: 250px;
-}
 .selfi-blog p{
   padding:5px;
   font-size:.7rem;
@@ -3092,7 +3089,7 @@ padding-bottom: 1rem;
 .selfi-icon{
 
   position: absolute;
-  top: 54%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -3100,7 +3097,7 @@ padding-bottom: 1rem;
 .selfi-blogicon{
   margin: 0 auto;
   display: block;
-  padding-top: 80px !important;
+  margin-top: -1.5rem;
 }
 
 .selfi-icon{
@@ -3110,9 +3107,6 @@ padding-bottom: 1rem;
   border-radius: 50%;
   border: 2px solid #259D70;
   padding:5px;
-}
-.blog-page {
-  margin-bottom: 9rem;
 }
 
 .selfi-blog button{
