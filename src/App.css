@@ -3060,16 +3060,25 @@ padding-bottom: 1rem;
 /* Refer and Earn page Css End */
 
 /* Upload  Selfy start*/
+
+.selfi-blog{
+  display: flex;
+  justify-content: center;
+  min-height: auto !important;
+  margin-left:0rem;
+}
 .selfi-blog{
   position: relative;
-  height: 50vh;
-  margin: 0 auto;
+  height: auto;
+  display: flex;
+  margin-left: 15px;
+  margin-right: 15px;
 }
-.row.blog {
-  width: 41%;
-}
-.selfi-blog .col-md-6{
+
+.selfi-blog .right1, .selfi-blog .left1{
   border:1px solid #259D70;
+  width:530px;
+  height:560px;
   
 }
 .selfi-blog{
@@ -3079,8 +3088,9 @@ padding-bottom: 1rem;
 
 
 .selfi-blog p{
-  padding:5px;
-  font-size:.7rem;
+padding-top:5px;
+padding-bottom: 5px;
+  font-size:1rem;
   text-align: center;
   font-weight: 600;
   color: #259D70;
@@ -3094,8 +3104,10 @@ padding-bottom: 1rem;
   transform: translate(-50%, -50%);
 }
 
+
 .selfi-blogicon{
   margin: 0 auto;
+  width:100%;
   display: block;
   margin-top: -1.5rem;
 }
@@ -3114,7 +3126,7 @@ padding-bottom: 1rem;
   border:none;
   font-weight: 600;
   color:#5e5e5e;
-  padding-top:70px;
+padding-top: 5rem;
 }
 
 /*  Upload selfy end*/
@@ -3928,6 +3940,82 @@ padding-right:1rem;
   margin-left: 15px;
   margin-right: 15px;
 }
+
+/* selfy start */
+
+.selfi-blog{
+  display: flex;
+  justify-content: center;
+  min-height: auto !important;
+  margin-left:0rem;
+}
+.selfi-blog{
+  position: relative;
+  height: auto;
+  display: flex;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.selfi-blog .right1, .selfi-blog .left1{
+  border:1px solid #259D70;
+  width:150px;
+  height:165px;
+  
+}
+.selfi-blog{
+  margin-top:50px;
+  margin-bottom: 50px;
+}
+
+
+.selfi-blog p{
+padding-top:5px;
+padding-bottom: 5px;
+  font-size:.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: #259D70;
+}
+
+.selfi-icon{
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.selfi-blogicon{
+  margin: 0 auto;
+  width:100%;
+  display: block;
+  margin-top: -1.5rem;
+}
+
+.selfi-icon{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #259D70;
+  padding:5px;
+}
+
+.selfi-blog button{
+  background-color: transparent;
+  border:none;
+  font-weight: 600;
+  color:#5e5e5e;
+padding-top: 5rem;
+}
+
+
+
+/*  Selfy End */
+
+
 
 /* .refer-earn-mobile{
   background-image: linear-gradient(to right, rgb(255, 255, 255, 0.30), rgb(37, 157, 112, 0.1)), url(/static/media/BackgroundMobile.26271e97.png);
