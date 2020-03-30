@@ -45,6 +45,7 @@ export default class UplaodSelfyBody extends Component {
   render() {
     return (
       <div className="blog-page">
+<<<<<<< HEAD
         <div className="container selfi-blog">
           <div className="row blog">
             <div className="col-md-6">
@@ -81,6 +82,33 @@ export default class UplaodSelfyBody extends Component {
                 </p>
               </div>
             </div>
+=======
+        <div className="selfi-blog">
+
+          <div className=" blog">
+            <div className="">
+          <div className="left1"><p>We Care 24 Hour for You</p>
+          <img src={Doctor} alt="" className="img-fluid selfi-blogicon" />
+</div>
+</div>
+<div className="">
+          <div className="left1"><p>We Surve 24 Hour For You</p>
+          <img src={DeliveryPerson} alt="" className="img-fluid selfi-blogicon" />
+</div>
+</div>
+</div>
+<div className="blog">
+<div className="">
+          <div className="right1"><p>We Protect 24 Hour For You</p>
+          <img src={Police} alt="" className="img-fluid selfi-blogicon" />
+</div>
+</div>
+      
+<div className="">
+          <div className="right1"><p>I Stay At Home 24 Hour For all of You</p>
+          <p><button  type="file">Click Your Image And<br />Share On Social Media</button></p></div>
+          </div>
+>>>>>>> 8af19dd0a6311aac1c4ea970d69c90a2aa980ede
           </div>
           <img src={okjiilogo} alt="" id='selfy-logo' className="img-fluid selfi-icon" />
         </div>

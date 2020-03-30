@@ -26,7 +26,7 @@ import CareerPage from "./components/careerpage/CareerPage";
 import ReferEarn from "./components/referearn/ReferEarn";
 import Uploadselfi from "./components/uploadselfi/Uploadselfi";
 
-
+import KiranaStoreEdit from "./components/kiranastoreedit/KiranaStoreEdit";
 
 class App extends React.Component {
   constructor(props) {
@@ -100,6 +100,11 @@ class App extends React.Component {
             </Route>
             <Route path="/upload-selfy">
               <Uploadselfi />
+
+            </Route>
+            <Route path="/kirana-edit">
+              <KiranaStoreEdit />
+
 
             </Route>
           </Switch>

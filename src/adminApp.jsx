@@ -14,8 +14,8 @@ export default class Routes extends Component {
     this.state = {
       userData: null,
     }
-    const userData = CookieHandler.readCookie('userData');
-    if(!userData) window.location = '/login'
+    // const userData = CookieHandler.readCookie('userData');
+    // if(!userData) window.location = '/login'
   }
   componentDidMount() {
     const userData = CookieHandler.readCookie('userData');    

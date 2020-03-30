@@ -67,7 +67,7 @@ class Tables extends React.Component {
       title: 'Action',
       dataIndex: '_id',
       key: 'x',
-      render: shopId => <a >View</a>, //href={`/admin/shops/single/${shopId}`}
+      render: shopId => <a href={`/admin/shops/single/${shopId}`}>View</a>, //
     }
   ]
   componentDidMount(){
