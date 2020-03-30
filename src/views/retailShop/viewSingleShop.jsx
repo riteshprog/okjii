@@ -8,8 +8,13 @@ import {
   CardTitle,
   Row,
   Col,
-  Input
+  Input,
+  Form, 
+  FormGroup, 
+  Label,
+  Button 
 } from "reactstrap";
+
 import { IdcardFilled, BankOutlined, StarOutlined } from "@ant-design/icons";
 
 import "./retailshop.css";
@@ -28,7 +33,11 @@ class AddNewShop extends React.Component {
       isShopSaved: false,
       hasOwnerAvtar: false,
       shopData: {
-        basic: {}
+        basic: {
+          shopLocation: {}
+        },
+        bankDetails: {},
+        storeCatelogue: {}
       }
     };
   }
@@ -46,7 +55,7 @@ class AddNewShop extends React.Component {
   }
 
   render() {
-    const { basic, shopInfo } = this.state.shopData;
+    const { basic, shopInfo, storeCatelogue, bankDetails } = this.state.shopData;
     return (
       <>
         <div className="content">
@@ -78,23 +87,96 @@ class AddNewShop extends React.Component {
               />
             </Steps>
           </Row>
-          <Row>
-            <Card className="card-user pr-3 fg-1">
-              <CardHeader>
-                <CardTitle tag="h5">Basic</CardTitle>
-              </CardHeader>
-              <CardBody>
-                <Col className="pr-1" md={6}  >
-                  <span>{basic.shopName}</span>
-                </Col>
-                <Col className="pr-1" md={6}>
-                  <span>{basic.shopName}</span>
-                </Col>
-              </CardBody>
-            </Card>
-          </Row>
-          <span>{JSON.stringify(this.state.shopData)}</span>
-          
+          <Form className="retail-shop">
+        <FormGroup row>
+        <Col sm={2}><img src={basic.ownerPhoto} alt="" /></Col>
+        <Col sm={8}>
+          <p>{basic.shopName}</p>
+          <p><span className="text-green">OKK</span>P0001</p>
+        </Col>
+        <Col sm={2}>
+        <Button className="bg-green">Edit</Button>
+        </Col>
+      </FormGroup>
+      </Form>
+          <Form className="retail-shop-background">
+      <FormGroup row inline>
+        <Label for="exampleSName" sm={2}>Store Name:</Label>
+        <Col sm={4}>
+          <p>{basic.shopName}</p>
+        </Col>
+        <Label for="exampleOName" sm={2}>Owner Name:</Label>
+        <Col sm={4}>
+            <p>{basic.ownerName}</p>
+        </Col>
+      </FormGroup>
+      <FormGroup row inline>
+        <Label for="exampleSType" sm={2}>Store Type:</Label>
+        <Col sm={4}>
+              <p>{storeCatelogue.storeType}</p>
+        </Col>
+        <Label for="exampleMNumber" sm={2}>Mobile Number:</Label>
+        <Col sm={4}>
+              <p>{basic.mobileNumber}</p>
+        </Col>
+      </FormGroup>
+
+      <FormGroup row inline>
+        <Label for="exampleGLocation" sm={2}>Google Location:</Label>
+        <Col sm={10}>
+              <p>{basic.shopLocation.label}</p>
+        </Col>
+      </FormGroup>
+      <FormGroup row inline>
+        <Label for="exampleBName" sm={2}>Bank Name:</Label>
+        <Col sm={4}>
+              <p>{bankDetails.bankName}</p>
+        </Col>
+        <Label for="exampleMNumber" sm={2}>Acc Holder Name:</Label>
+        <Col sm={4}>
+              <p>{bankDetails.accountHolderName}</p>
+        </Col>
+      </FormGroup>
+      <FormGroup row inline>
+        <Label for="exampleAName" sm={2}>Account Number:</Label>
+        <Col sm={4}>
+              <p>{bankDetails.accountNumber}</p>
+        </Col>
+        <Label for="exampleIFSCode" sm={2}>IFSC Code:</Label>
+        <Col sm={4}>
+              <p>{bankDetails.ifscCode}</p>
+        </Col>
+      </FormGroup>
+      <FormGroup row inline>
+        <Label for="exampleAType" sm={2}>Account Type:</Label>
+        <Col sm={4}>
+          {bankDetails.accountType}
+        </Col>
+        <Label for="examplePNumber" sm={2}>Phone Number:</Label>
+        <Col sm={4}>
+          <p>{basic.mobileNumber}</p>
+        </Col>
+      </FormGroup>
+      <FormGroup row inline>
+        <Label for="exampleBAddress" sm={2}>Bank Address:</Label>
+        <Col sm={10}>
+              <p>{bankDetails.bankAddress}</p>
+        </Col>
+      </FormGroup>
+      <FormGroup row inline>
+        <Label for="exampleOImage" sm={2}>Owner Image:</Label>
+        <Col sm={4}>
+        <img src={basic.ownerPhoto} alt="" />
+        </Col>
+        <Label for="examplePNumber" sm={2}>Document Image:</Label>
+        <Col sm={4}>
+          <img src={basic.ownerPhoto} alt="" />
+        </Col>
+      </FormGroup>
+
+    </Form>
+          {/* <span>{JSON.stringify(this.state.shopData)}</span> */}
+          {console.log(this.state.shopData)}
         </div>
       </>
     );

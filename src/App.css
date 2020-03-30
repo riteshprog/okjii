@@ -3131,6 +3131,44 @@ padding-top: 5rem;
 
 /*  Upload selfy end*/
 
+/*  Kirana Store start*/
+
+.kirana-store{
+  padding-top:80px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 40px;
+}
+
+.retail-shop p{
+  font-size: 1.2rem;
+  font-weight: 500;
+  color:#5e5e5e;
+ 
+}
+
+.retail-shop button{
+  background-color: #259D70 !important;
+  font-weight: 400;
+  text-transform: none;
+  padding-left:2rem;
+  padding-right:2rem;
+}
+
+.retail-shop-background{
+  background-color: #fff !important;
+  box-shadow: 0 5 12 0 rgba(0,0,0,0.18);
+  border-radius: 10px;
+  padding:15px;
+}
+.retail-shop-background p{
+  font-size: .9rem;
+  color:#5e5e5e;
+  margin-top: 0.4rem;
+}
+
+/*  kirana Store End  */
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen  and (max-width: 600px) {
 
