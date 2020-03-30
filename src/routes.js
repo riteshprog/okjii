@@ -24,6 +24,7 @@ import { MyFancyComponent } from "./adminComponents/googleMap/googleMap";
 import AddProductToShop from "./views/retailShop/addItemsToShop";
 import PreReg from "./views/preRegistration/preReg";
 import Users from './views/userManagement/users';
+import SingleShopEdit from './views/retailShop/singleShopEdit';
 
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
@@ -71,7 +72,7 @@ var routes = [
     layout: "/admin"
   },
 
-  /* --------------------Side Bar Routes Starts-------------------- */
+  /* --------------------Side Bar Routes Ends-------------------- */
 
   {
     path: "/shops/single/:shopId",
@@ -81,6 +82,15 @@ var routes = [
     component: SingleShop,
     layout: "/admin"
   },
+  {
+    path: "/shops/single/edit/:shopId",
+    onSideBar: false,
+    name: "Edit Shop",
+    icon: "nc-icon nc-shop",
+    component: SingleShopEdit,
+    layout: "/admin"
+  },
+  
   {
     path: "/shops/add-item/:shopId?",
     onSideBar: false,

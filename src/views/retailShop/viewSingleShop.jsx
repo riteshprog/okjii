@@ -95,7 +95,7 @@ class AddNewShop extends React.Component {
           <p><span className="text-green">OKK</span>P0001</p>
         </Col>
         <Col sm={2}>
-        <Button className="bg-green">Edit</Button>
+        <a href={'/admin/shops/single/edit/' + this.state.shopData._id}  className="bg-green">Edit</a>
         </Col>
       </FormGroup>
       </Form>

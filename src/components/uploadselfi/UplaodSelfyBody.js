@@ -45,44 +45,6 @@ export default class UplaodSelfyBody extends Component {
   render() {
     return (
       <div className="blog-page">
-<<<<<<< HEAD
-        <div className="container selfi-blog">
-          <div className="row blog">
-            <div className="col-md-6">
-              <div className="left1">
-                <p>We Care 24 Hour for You</p>
-                <img src={Doctor} alt="" id='upload1' className="img-fluid selfi-blogicon" />
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="right1">
-                <p>We Protect 24 Hour For You</p>
-                <img src={Police} alt="" className="img-fluid selfi-blogicon" />
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="left1">
-                <p>We Surve 24 Hour For You</p>
-                <img
-                  src={DeliveryPerson}
-                  alt=""
-                  className="img-fluid selfi-blogicon"
-                />
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="right1">
-                <p>I Stay At Home 24 Hour For all of You</p>
-                <p>
-                  <button type="file" onClick={()=>this.selfyRef.current.click()}>
-                    Click Your Image And
-                    Share On Social Media
-                  </button>
-                  <input type='file' onChange={this.handleImgChange} className='dnone' ref={this.selfyRef}/>
-                </p>
-              </div>
-            </div>
-=======
         <div className="selfi-blog">
 
           <div className=" blog">
@@ -108,7 +70,6 @@ export default class UplaodSelfyBody extends Component {
           <div className="right1"><p>I Stay At Home 24 Hour For all of You</p>
           <p><button  type="file">Click Your Image And<br />Share On Social Media</button></p></div>
           </div>
->>>>>>> 8af19dd0a6311aac1c4ea970d69c90a2aa980ede
           </div>
           <img src={okjiilogo} alt="" id='selfy-logo' className="img-fluid selfi-icon" />
         </div>
