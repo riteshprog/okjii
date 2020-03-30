@@ -3156,9 +3156,6 @@ padding-top: 5rem;
 }
 
 .retail-shop-background{
-  background-color: #fff !important;
-  box-shadow: 0 5 12 0 rgba(0,0,0,0.18);
-  border-radius: 10px;
   padding:15px;
 }
 .retail-shop-background p{
@@ -3166,7 +3163,10 @@ padding-top: 5rem;
   color:#5e5e5e;
   margin-top: 0.4rem;
 }
-
+.retail-shop-background label {
+  font-size: .9rem;
+  color:#5e5e5e;
+}
 /*  kirana Store End  */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

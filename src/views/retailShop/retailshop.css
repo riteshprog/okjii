@@ -61,6 +61,16 @@ input[type="radio"] + label:before {
   height: 20px;
 }
 
+.shop-doc-container{
+    display: flex;
+    justify-content: space-between;
+}
+.shop-doc-container > img {
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+  margin: 2px;
+}
 
 /* ---------------------------ANT CLASS STARTS-------------------- */
 .ant-table {
