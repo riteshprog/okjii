@@ -303,6 +303,13 @@ class AddNewShop extends React.Component {
             ) {
               address += data.results[0].address_components[i].long_name + ", ";
             }
+            if (
+              data.results[0].address_components[i].types.indexOf(
+                "locality"
+              ) > -1
+            ) {
+              address += data.results[0].address_components[i].long_name + ", ";
+            }
           }
           return address;
         } else return address;
@@ -544,12 +551,14 @@ class AddNewShop extends React.Component {
         preferenceLocation.lat,
         preferenceLocation.lng
       ).then(result => {
+          
         shopData["basic"]["shopLocation"]["label"] = result || "No Name found";
         let resultArr = result.split(", ").reverse();
         if (resultArr.length) {
           shopData["basic"]["country"] = resultArr[0];
           shopData["basic"]["state"] = resultArr[1];
           shopData["basic"]["distirct"] = resultArr[2];
+          shopData['basic']['address'] = result//resultArr.slice(3).join(',');
         }
         this.setState({ shopData });
       });

@@ -12,16 +12,8 @@ import {
   Form,
   FormGroup,
   Label,
-  Button
 } from "reactstrap";
-
-import { IdcardFilled, BankOutlined, StarOutlined } from "@ant-design/icons";
-
 import "./retailshop.css";
-
-const { Step } = Steps;
-const { Option } = Select;
-const { TextArea } = Input;
 
 class AddNewShop extends React.Component {
   constructor(props) {
@@ -78,7 +70,7 @@ class AddNewShop extends React.Component {
                       <span className="text-green">OKK</span>P0001
                     </p>
                   </Col>
-                  <Col sm={2}>
+                  <Col className='df jcc aic' sm={2}>
                     <a
                       href={
                         "/admin/shops/single/edit/" + this.state.shopData._id

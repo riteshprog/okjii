@@ -23,9 +23,9 @@ class Tables extends React.Component {
     },
     {
       title: 'Shop Id',
-      dataIndex: '_id',
+      dataIndex: 'shopInfo',
       key: '_id',
-      render: id => <span>OKKJIXXXX</span>,
+      render: shopInfo => <span>{shopInfo.shopCode?shopInfo.shopCode:'N/A'}</span>,
     },
     {
       title: 'Shop Name',
