@@ -3147,12 +3147,15 @@ padding-top: 5rem;
  
 }
 
-.retail-shop button{
+.retail-shop a, .retail-shop button{
   background-color: #259D70 !important;
   font-weight: 400;
   text-transform: none;
   padding-left:2rem;
   padding-right:2rem;
+  padding-top:1rem;
+  color:#fff;
+  padding-bottom: 1rem;
 }
 
 .retail-shop-background{
