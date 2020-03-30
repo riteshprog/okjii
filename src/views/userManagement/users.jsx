@@ -3,7 +3,7 @@ import Axios from "axios";
 import Validate from 'raysk-vali';
 import moment from 'moment-timezone';
 import { Link } from "react-router-dom";
-import { Avatar, Table, Tag, Select, DatePicker } from "antd";
+import { Avatar, Table, Tag, Select, DatePicker, message } from "antd";
 import { Card, CardHeader, CardBody, CardTitle, Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Input, InputGroup, InputGroupAddon } from "reactstrap";
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 
@@ -30,6 +30,7 @@ class User extends React.Component {
         district: '',
         dob: ''
       },
+      errorMessage: '',
       showEmailError: false,
       userTypes: ['1', '2'],
       location: {
@@ -62,9 +63,9 @@ class User extends React.Component {
     },
     {
       title: 'User Type',
-      dataIndex: 'basic',
+      dataIndex: 'userInfo',
       key: '_id',
-      render: ({email}) => <span>{email}</span>,
+      render: ({userType}) => (userType && userType.name)?<Tag>{userType.name}</Tag>:<span>N/A</span>,
     },
     {
       title: 'Gender',
@@ -186,11 +187,12 @@ class User extends React.Component {
     let location = this.state.location;
     let newUser = this.state.newUser;
     location['label'] = preferenceLocation;
-    let labelArr = location['label'].split(',').reverse();
+    let labelArr = location['label'].split(', ').reverse();
     
     newUser.country = labelArr[0];
     newUser.state = labelArr[1];
     newUser.district = labelArr[2];
+
     this.setState({newUser})
     this.setState({location}, () => {
       geocodeByAddress(preferenceLocation)
@@ -204,7 +206,7 @@ class User extends React.Component {
     });
   }
   
-  submitNewUserDate = ({basic, userInfo}) => {
+  submitNewUserDate = ({basic, userInfo}, e) => {
     let data = new FormData();
     console.log(basic, userInfo)
     data.set('basic', JSON.stringify(basic));
@@ -219,16 +221,22 @@ class User extends React.Component {
     })
     .then(({data})=>{
       if(data.status){
-        console.log(data);
+        this.setState({errorMessage: ``})
+        document.querySelector('#save-btn').disabled = false;
+        window.location.reload();
       }else{
-        console.log('Something went wrong', data.errorMsg)
+        this.setState({errorMessage: data.errorMessage})
+        console.log('Something went wrong', data.errorMessage);
+        document.querySelector('#save-btn').disabled = false;
       }
     }).catch(err=>{
+      this.setState({errorMessage: `Something went wrong`})
+      document.querySelector('#save-btn').disabled = false;
       console.log(`catch`, err);
     })
   }
   
-  handleOnUserSave = ()=> {
+  handleOnUserSave = (e)=> {
     const {userType, ...basic} = this.state.newUser;
     const isValidEmail = this.checkForEmail(basic.email);
     if(!isValidEmail) this.setState({showEmailError: true});
@@ -243,7 +251,8 @@ class User extends React.Component {
           userType
         }
       }
-      this.submitNewUserDate(userObj);
+      e.target.disabled = true;
+      this.submitNewUserDate(userObj, e);
     }
   }
 
@@ -297,6 +306,20 @@ class User extends React.Component {
               </FormGroup>
             </Col>
           </Row>
+
+          <Row className='df jcc'>
+            <Col className="pl-1" md="10">
+              <FormGroup>
+                <label htmlFor="userName">
+                  Mobile Number
+                </label>
+                <Input placeholder="Enter Mobile Number" value={this.state.newUser.mobileNUmber} onChange={(e)=>this.handleOnChange(e, 'mobileNumber')} type="number" />
+                <InputGroup>
+                </InputGroup>
+              </FormGroup>
+            </Col>
+          </Row>
+
           <Row className='df jcc'>
             <Col className="pl-1" md="10">
               <FormGroup>
@@ -328,7 +351,8 @@ class User extends React.Component {
                
       </ModalBody>
       <ModalFooter>
-        <Button color="primary" onClick={this.handleOnUserSave}>Add</Button>
+        {this.state.errorMessage?<span className='mr-3 text-danger'>{this.state.errorMessage}</span>:null}
+        <Button id='save-btn' color="primary" onClick={this.handleOnUserSave}>Add</Button>
         <Button color="secondary" onClick={this.toggleAddNewUser}>Cancel</Button>
       </ModalFooter>
     </Modal>

@@ -286,12 +286,12 @@ class AddNewShop extends React.Component {
     .then(({data})=>{
       if(data.status){
         message.success('Shop saved successfully');
+        setTimeout(()=> {
+          window.location.pathname= 'admin/shops';
+        }, 1000);
       }else{
         message.error(data.errorMessage);
       }
-      setTimeout(()=> {
-        window.location.pathname= 'admin/shops';
-      }, 1000);
     }).catch(err=>{
       console.log(`catch err`, err)
       message.error('Something went wrong!');
@@ -317,7 +317,13 @@ class AddNewShop extends React.Component {
       shopData['basic']['shopLocation']['lat'] = preferenceLocation.lat;
       shopData['basic']['shopLocation']['lng'] = preferenceLocation.lng;
       this.getAddressFromLatLong( preferenceLocation.lat, preferenceLocation.lng).then(result =>{
-        shopData['basic']['shopLocation']['label'] = result || 'No Name found';        
+        shopData['basic']['shopLocation']['label'] = result || 'No Name found';
+        let resultArr = result.split(', ').reverse();
+        if(resultArr.length) {
+          shopData['basic']['country'] = resultArr[0];
+          shopData['basic']['state'] = resultArr[1];
+          shopData['basic']['distirct'] = resultArr[2];
+        }
         this.setState({shopData})
       });
     }else {
@@ -339,11 +345,17 @@ class AddNewShop extends React.Component {
   }
   handleGetOtp = (e) => {
     e.preventDefault();
-    Axios.get(process.env.REACT_APP_API_URL + '/otp/send/91' + this.state.shopData.basic.mobileNumber)
-    .then(({data})=>{
-      if(data.type == 'success'){
-        message.success('OTP Send')
-      }
+    Axios.get(process.env.REACT_APP_API_URL + '/utils/check-mobile/' + this.state.shopData.basic.mobileNumber).then(({data})=>{
+      if(data.status){
+        Axios.get(process.env.REACT_APP_API_URL + '/otp/send/' + this.state.shopData.basic.mobileNumber)
+        .then(({data})=>{
+          if(data.type == 'success'){
+            message.success('OTP Send')
+          }
+        })
+      }else {
+        message.error(data.errorMessage);
+      } 
     }).catch(err=>{
       message.error('OTP Send Failed')
     })
@@ -359,6 +371,8 @@ class AddNewShop extends React.Component {
       if(data.type == 'success'){
         message.success('OTP Verified')
         this.setState({otpVerified: true});
+      }else{
+        message.error(data.message)
       }
     }).catch(err=>{
       message.error('OTP Send Failed')

@@ -45,6 +45,9 @@ body{
 .df{
   display: flex;
 }
+.dnone{
+  display: none;
+}
 .jcc{
   justify-content: center;
 }

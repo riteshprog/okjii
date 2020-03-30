@@ -33,8 +33,8 @@ class Login extends React.Component {
     this.toggle = this.toggle.bind(this);
     this.dropdownToggle = this.dropdownToggle.bind(this);
     this.sidebarToggle = React.createRef();
-    // const userData = CookieHandler.readCookie('userData');
-    // if(userData) window.location.pathname = '/admin/dashboard'
+    const userData = CookieHandler.readCookie('userData');
+    if(userData) window.location.pathname = '/admin/dashboard'
   }
   toggle() {
     if (this.state.isOpen) {
