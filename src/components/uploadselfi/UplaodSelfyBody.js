@@ -8,7 +8,7 @@ import FourImage from '../../img/selfy/fourImage.jpg';
 import Axios from "axios";
 import { message } from "antd";
 
-import mergeImg from 'merge-img';
+//import mergeImg from 'merge-img';
 
 export default class UplaodSelfyBody extends Component {
   constructor(props){
