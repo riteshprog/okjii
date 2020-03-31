@@ -19,6 +19,7 @@ import Disclaimer from "./components/disclaimer/Disclaimer";
 import Registration from "./components/registration/Registration";
 import ScrollToTop from "./components/ScrollToTop";
 import BlogPage from "./components/blogpage/BlogPage";
+import BlogPage1 from "./components/blogpage1/BlogPage1";
 import Career from "./components/career/Career";
 
 import AdminApp from './adminApp.jsx';
@@ -65,6 +66,12 @@ class App extends React.Component {
             <Route path="/blog">
               <OkjiiBlog />
             </Route>
+            <Route path="/user-blog">
+              <BlogPage />
+            </Route>
+            <Route path="/user-blog-3">
+              <BlogPage1 />
+            </Route>
             <Route path="/about">
               <About />
             </Route>
@@ -85,9 +92,6 @@ class App extends React.Component {
             </Route>
             <Route path="/registration">
               <Registration />
-            </Route>
-            <Route path="/user-blog">
-              <BlogPage />
             </Route>
             <Route path="/career">
               <Career />

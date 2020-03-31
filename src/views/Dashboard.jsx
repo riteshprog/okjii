@@ -60,10 +60,10 @@ class Dashboard extends React.Component {
   render() {
     return (
       <>
-        <div className="content">
+        <div className="content okjii-dashboard">
           <Row>
             <Col lg="3" md="6" sm="6">
-              <Card className="card-stats">
+              <Card className="card-stats dashbord-card1">
                 <CardBody>
                   <Row>
                     <Col md="4" xs="5">
@@ -73,7 +73,7 @@ class Dashboard extends React.Component {
                     </Col>
                     <Col md="8" xs="7">
                       <div className="numbers">
-                        <p className="card-category">Totoal Shops</p>
+                        <p className="card-category">Total Shops</p>
                           <CardTitle tag="p">{this.state.dashboardData.shopsCount}</CardTitle>
                         <p />
                       </div>
@@ -82,14 +82,14 @@ class Dashboard extends React.Component {
                 </CardBody>
                 <CardFooter>
                   <hr />
-                  <div className="stats">
-                    <i className="fas fa-sync-alt" /> Update Now
+                  <div className="stats footer-card1">
+                     Update Now <i className="fas fa-sync-alt float-right" />
                   </div>
                 </CardFooter>
               </Card>
             </Col>
             <Col lg="3" md="6" sm="6">
-              <Card className="card-stats">
+              <Card className="card-stats dashbord-card2">
                 <CardBody>
                   <Row>
                     <Col md="4" xs="5">
@@ -108,14 +108,14 @@ class Dashboard extends React.Component {
                 </CardBody>
                 <CardFooter>
                   <hr />
-                  <div className="stats">
-                    <i className="far fa-calendar" /> Last day
+                  <div className="stats footer-card2">
+                     Last day <i className="far fa-calendar float-right" />
                   </div>
                 </CardFooter>
               </Card>
             </Col>
             <Col lg="3" md="6" sm="6">
-              <Card className="card-stats">
+              <Card className="card-stats dashbord-card3">
                 <CardBody>
                   <Row>
                     <Col md="4" xs="5">
@@ -134,14 +134,14 @@ class Dashboard extends React.Component {
                 </CardBody>
                 <CardFooter>
                   <hr />
-                  <div className="stats">
-                    <i className="far fa-clock" /> In the last hour
+                  <div className="stats footer-card3">
+                     In the last hour <i className="far fa-clock float-right" />
                   </div>
                 </CardFooter>
               </Card>
             </Col>
             <Col lg="3" md="6" sm="6">
-              <Card className="card-stats">
+              <Card className="card-stats dashbord-card4">
                 <CardBody>
                   <Row>
                     <Col md="4" xs="5">
@@ -160,8 +160,8 @@ class Dashboard extends React.Component {
                 </CardBody>
                 <CardFooter>
                   <hr />
-                  <div className="stats">
-                    <i className="fas fa-sync-alt" /> Update now
+                  <div className="stats footer-card4">
+                     Update now <i className="fas fa-sync-alt float-right" />
                   </div>
                 </CardFooter>
               </Card>
@@ -245,6 +245,48 @@ class Dashboard extends React.Component {
               </Card>
             </Col>
           </Row>
+
+          <Row className="card-list-body">
+            <Col md="4">
+              <Card>
+                <CardHeader>
+                  <CardTitle tag="h5">Current Listing <i className="nc-icon nc-shop text-warning float-right" /> &#160;&#160;&#160;&#160;</CardTitle>
+                  <p className="card-category">Today's Campaign Performance</p>
+                </CardHeader>
+                <CardBody>
+                  <Row className="card-list">
+                    <Col md="2"><i className="nc-icon nc-shop text-warning" /></Col>
+                    <Col md="8">Ram Lal Kirana Store</Col>
+                    <Col md="2"><i class="fas fa-eye pr-2" aria-hidden="true" /></Col>
+                  </Row>
+                  <Row className="card-list">
+                    <Col md="2"><i className="nc-icon nc-shop text-warning" /></Col>
+                    <Col md="8">Ravi Retail Shop</Col>
+                    <Col md="2"><i class="fas fa-eye" aria-hidden="true" /></Col>
+                  </Row>
+                  <Row className="card-list">
+                    <Col md="2"><i className="nc-icon nc-shop text-warning" /></Col>
+                    <Col md="8">Akash Kirana</Col>
+                    <Col md="2"><i class="fas fa-eye pr-2" aria-hidden="true" /></Col>
+                  </Row>
+                  <Row className="card-list">
+                    <Col md="2"><i className="nc-icon nc-shop text-warning" /></Col>
+                    <Col md="8">Easy Club</Col>
+                    <Col md="2"><i class="fas fa-eye pr-2" aria-hidden="true" /></Col>
+                  </Row>
+                  <Row className="card-list">
+                    <Col md="2"><i className="nc-icon nc-shop text-warning" /></Col>
+                    <Col md="8">9 to 9 Store</Col>
+                    <Col md="2"><i class="fas fa-eye pr-2" aria-hidden="true" /></Col>
+                  </Row>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col md="8">
+            </Col>
+          </Row>
+
+
         </div>
       </>
     );

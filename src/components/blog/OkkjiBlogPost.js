@@ -28,8 +28,8 @@ export default class OkkjiBlogPost extends Component {
               <h3>Aakash Kumar | 25 Nov 2019 | Food &amp; LifeStyle</h3>
               </figcaption>
             </figure>
-            <h2>#How Neighbourhood Kirana Survive in the Wave of E-Commerce</h2>
-             <p className="" id="collapseContent">During this time of the year, parents are always busy geting creative to make the kids have a gala time with – refreshing drinks, fun and light snacks and quirky games.</p>
+            <h2>#Why Neighbourhood Kirana Survive in the Wave of E-Commerce</h2>
+             <p className="" id="collapseContent">When the e-commerce sector is growing at a rapid rate, Kirana shops are firm static in their places. When giant corporate houses entering in eCommerce business and ready to temper the traditional Kirana shopping, Small Kirana shops are not only challenging them but also at the upper age in this competition. So, a very genuine question arises that why neighborhood Kirana survives in the wave of E-commerce and how?</p>
             <a href="/user-blog" className="btn  blog-button">Read More</a>
             <MDBIcon icon="share-alt" className="float-right  mdb-icon" /><span className="float-right number-flower">07</span>
             <MDBIcon far icon="heart" className="float-right  mdb-icon" /><span className="float-right number-flower">49</span>
@@ -62,9 +62,9 @@ export default class OkkjiBlogPost extends Component {
               <h3>Aakash Kumar | 25 Nov 2019 | Food &amp; LifeStyle</h3>
               </figcaption>
             </figure>
-            <h2>#Why Kirana Store is an Integral Part of Indian Society</h2>
-            <p className="" id="collapseContent">During this time of the year, parents are always busy geting creative to make the kids have a gala time with – refreshing drinks, fun and light snacks and quirky games.</p>
-  <a href="/user-blog" className="btn blog-button">Read More</a>
+            <h2>#Why Kirana stores are Evergreen in Indian Society?</h2>
+            <p className="" id="collapseContent">For about insofar as individuals have existed, they have been sharing, trading, selling, and expanding assets.  Society Kirana stores are Evergreen from the very beginning of society. If we follow the total history of trade back to its beginning, we should make a trip to when wooly mammoths despite everything strolled the Earth. Individuals traded bovines and sheep in exchange as far back as 9000 BC, they move to coins and eventually paper currency.</p>
+  <a href="/user-blog-3" className="btn blog-button">Read More</a>
   <MDBIcon icon="share-alt" className="float-right mdb-icon" /><span className="float-right number-flower">07</span>
   <MDBIcon far icon="heart" className="float-right mdb-icon" /><span className="float-right number-flower">49</span>
   </div>

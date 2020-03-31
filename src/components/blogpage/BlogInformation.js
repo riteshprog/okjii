@@ -1,29 +1,33 @@
 import React, { Component } from 'react';
-import blog1 from '../../img/blogpage/blog1.png';
+import blog3 from '../../img/blogpage/blog3.jpg';
 import {MDBIcon, MDBBtn} from "mdbreact";
 export default class BlogInformation extends Component {
   render() {
     return (
       <div className="container-fluid blog-information">
-        <h1>Rising from the ashes of a flailing business, Sunil tells his story of grit and resilience</h1>
-        <h2>Sunil’s life and business had hit rock bottom in 2014. After a bad investment of <br />a huge sum in a distribution business he saw a glimmer of hope when his <br />friend told him about the Amazon Service Partner program.</h2>
+        <h1>Why neighborhood Kirana Survive in the wave of E-commerce?</h1>
         <div className="row">
           <div className="col-md-6">
-            <p>Sunil’s life and business had hit rock bottom in 2014. After a bad investment of a huge sum in a distribution business that sank without a trace, he was unemployed and low on ﬁnancial backing but motivated like never before to turn things around for himself and his aging parents. He saw a glimmer of hope when his friend told him about the Amazon Service Partner program.</p>
-            <p>“You’ve got to take the chance when you come face to face with it. You never know when your luck and hard work pay off!” Sunil says with conviction as he relates his story of turnaround. As a Service Partner who joined the Amazon India network in 2015, he was equal parts amazed and relieved that a global brand was willing to take a chance on a regular person without seeking any ﬁnancial reassurance or investment to get things oﬀ the ground. All Sunil needed to bring to the table was motivation, courage, and a strong resolve to make amazing things happen. “And those were just the things I had in supply as I kicked oﬀ V Care Services in partnership with Amazon” he says.</p>
+            <p>When the e-commerce sector is growing at a rapid rate, Kirana shops are firm static in their places. When giant corporate houses entering in eCommerce business and ready to temper the traditional Kirana shopping, Small Kirana shops are not only challenging them but also at the upper age in this competition. So, a very genuine question arises that why neighborhood Kirana survives in the wave of E-commerce and how?</p>
+            <p>The sustainability of the Kirana store resides in the nature of its operation and existence. The deep-rooted presence, micro-level operation, age-old bounding and rich experience of the local test are the main reasons that put Kirana store on the front foot.</p>
           </div>
           <div className="col-md-6">
             <figure>
-              <img src={blog1} alt="blog1" className="img-fluid" />
+              <img src={blog3} alt="blog3" className="img-fluid" />
             </figure>
           </div>
         </div>
         <div className="row">
             <div className="col-12">
-            <p>Heart was set on successWith three employees and just 15 shipments a day to begin with, V Care Services was going to be stationed in Morbi, 350 kilometres away from Sunil’s hometown. Meagre ﬁnancial resources left Sunil with just two options – renting a home or renting an office. He rented the oﬃce and slept there for a few months as he stabilized the early phase of his Service Partner business. “All I needed was an initial foundation to get me started.</p>
-            <p>All I had to my name was my resolve to do well in life, but Amazon gave me the ground beneath my feet from which I could shoot for the stars. Even today, from workforce training and re-training to streamlining processes for a rapidly growing business like ours, Amazon has been extremely forthcoming with guidance and support.”</p>
-            <p>Sunil remembers his ﬁrst ever shipment delivery like it was yesterday. Situated 12 kilometres away from town and in the middle of a ceramic industrial area, Sunil and his Amazon contact were both covered in white industrial dust as they reached their destination. But the satisfaction of having delivered the ﬁrst ever Amazon package was unmatched. The customer too was pleased about receiving his ﬁrst Amazon delivery and coming into the e-commerce fold despite living in a remote industrial area. What followed was a celebration rife with selﬁes and more between two Indians whose life was slowly and steadily turning around, thanks to Amazon.</p>
-            <p>A small-scale empire that continues to grow rapidly From just three employees in 2015, V Care Services has grown to employ over 350 motivated individuals spanning a network of close to 50 delivery stations across Gujarat, Daman &amp; Diu, Madhya Pradesh, and Rajasthan. The company delivers close to 10,000 packages a day through its network for Amazon. With V Care Services, Amazon’s delivery footprint has reached tiny hamlets and towns like Rajpipla, Karjan, Pamoli and Dahej.</p>
+              <h2>Deep-rooted presence:</h2>
+            <p>The penetration of the Neighbourhood Kirana store is quite high and dense with respect to giant eCommerce Players. Ecommerce sites and apps are targeting megacities and metros but the presences of Kirana stores are everywhere, from the remotest of the remote area of the country to metros and tier 1 cities. This widespread presence places Kirana stores in front that automatically get the natural attraction of the common buyer. This deep presence makes Kirana sustain in the storm of E-commerce.</p>
+            <h2>Micro-level Operation:</h2>
+            <p>Kirana shops are micro-unit of shopping that target a certain area of each demographic location. The presence of many shops in a certain area magnifies this even more. The operation is so directed and perfect that no parachuted competitor can intrude in the territory of a mom-dad Kirana store. They tune very easily with the geographical need of a specific location that is tough for big players that can target some universally needs and demands only.</p>
+            <h2>Age-old Bounding:</h2>
+            <p>Kirana store in India is not only a business but it the ambition, expectations, and strength of the individual as well as the society that develops with the development of human civilization. The relation between a Kirana shop and a customer is not a buyer-seller relationship. It is far beyond that as it is so deeply embedded in the heart of common people that they think their purchasing ultimately benefits themselves or their friends or family. This kind of relationship development takes centuries to build. Any compete capitalist eCommerce never attached or related themselves with common people in such a manner that Kirana shops already have.</p>
+            <h2>Rich Experience of local test:</h2>
+            <p>India is a foodie country. Food is not just a need or requirement; it is a culture that changes with the demography of the country. The diversity of India makes it rather critical. The taste and need of different areas are different. The food habit, taste, and savour are changing very frequently with the demography, language, climate, and culture which generally changes every 3 kilometers in India. Local Kirana has specialization to know the local test that an eCommerce company cannot do. Big retail houses operate on some universal acceptable things only.</p>
+            <p>Hence, Kirana stores are presently on the upper edge due to their traditional face and nature. These roots hold neighborhood Kirana in the wave of E-commerce.</p>
             </div>
           </div>
           <div className="row social-cards">

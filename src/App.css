@@ -26,6 +26,11 @@ h1{
   font-weight: 500;
 }
 
+li p{
+  font-size:1rem;
+  color:#5e5e5e;
+}
+
 img{
   vertical-align: middle;
 }
@@ -2313,9 +2318,9 @@ h1.term-h1-heading{
 }
 .blog-information h2{
   font-size:1.2rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #5e5e5e;
-  padding-bottom: 2rem;
+  margin-bottom: 1rem;
 
 }
 .blog-information p{
@@ -3172,6 +3177,80 @@ padding-top: 5rem;
 
 /*  kirana Store End  */
 
+/*  Dash Bord Card  Start */
+.dashbord-card1{
+  background-image: linear-gradient(-90deg, #6071E3, #805FE4 );
+}
+.dashbord-card2{
+  background-image: linear-gradient(-90deg, #12B0EF, #1173EE  );
+}
+
+.dashbord-card3{
+  background-image: linear-gradient(-90deg, #F53759, #F55D38  );
+}
+
+.dashbord-card4{
+  background-image: linear-gradient(-90deg, #17294D, #1B184D  );
+}
+
+.dashbord-card1 i, .dashbord-card1 p, .dashbord-card1 .stats, .dashbord-card2 i, .dashbord-card2 p, .dashbord-card2 .stats, .dashbord-card3 i, .dashbord-card3 p, .dashbord-card3 .stats, .dashbord-card4 i, .dashbord-card4 p, .dashbord-card4 .stats{
+  color:#fff !important;
+}
+.card-footer .footer-card1 i{
+  border-radius: 50%;
+  background-color: #fff ;
+  color: #6071E3 !important;
+  padding: 5px;
+  }
+  .card-footer .footer-card2 i{
+    border-radius: 50%;
+    background-color: #fff ;
+    color: #12B0EF !important;
+    padding: 5px;
+    }
+    .card-footer .footer-card3 i{
+      border-radius: 50%;
+      background-color: #fff ;
+      color: #F53759 !important;
+      padding: 5px;
+      }
+      .card-footer .footer-card4 i{
+        border-radius: 50%;
+        background-color: #fff ;
+        color: #17294D !important;
+        padding: 5px;
+        }
+        .okjii-dashboard .card-footer .stats{
+          border-top: 1px solid #fff !important;
+          margin-top: -1rem;
+          padding-top:5px
+        }
+
+      .card-list-body .card-body{ 
+        padding-left:15px;
+      }
+
+
+        .card-list-body .card-category{
+          border-bottom:1px solid #5e5e5e !important;
+          padding-bottom:8px;
+
+        }
+
+        .card-list-body .card-body .card-list {
+          border-bottom:1px solid #5e5e5e !important;
+          padding-bottom:14px;
+          padding-top: 14px;
+          margin-left:0px;
+          margin-right: 0px;
+
+        }
+
+        
+
+/* DashBoard Card End */ 
+
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen  and (max-width: 600px) {
 
@@ -3791,6 +3870,10 @@ input#formGroupExampleInput {
   margin-right: .5rem !important;
 }
 
+a.btn.blog-button:hover {
+  background-color: #fff !important;
+  color: blue !important;
+}
 /* Pre Registrations */
 .okjii-regbody h1 {
   font-size: 1.4rem;
