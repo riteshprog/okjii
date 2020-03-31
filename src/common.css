@@ -34,6 +34,12 @@ body{
  color: red; 
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-scroll {
+  overflow: scroll;
+}
 
 .icon-sm{
   width: 60px;
@@ -92,4 +98,9 @@ body{
 }
 .no-border{
   border: none !important;
+}
+
+/* dashboard common class */
+.dashboard-card{
+  max-height: 31.5rem;
 }

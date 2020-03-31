@@ -341,6 +341,10 @@ class AddNewShop extends React.Component {
         otp: joi.any(),
         ownerPhoto: joi.any(),
         shopLocation: joi.any(),
+        state: joi.any(),
+        distirct: joi.any(),
+        country: joi.any(),
+        address: joi.any(),
         businessEntityIncorporation: joi.any(),
         shopActRegistration: joi.any(),
         gstRegistration: joi.any(),
@@ -381,8 +385,10 @@ class AddNewShop extends React.Component {
       message.error(this.state.errorObj[errorObjKeys[0]]);
     } else {
       if (this.state.currentStep == 0) {
-        if (!this.state.otpVerified)
-          message.error("Please Verify Your Mobile Number");
+        let {basic} = this.state.shopData;
+        if(!this.state.hasOwnerAvtar) message.error("Shop Owner Image is Required");
+        else if (!basic.country) message.error("Shop Location is Required");
+        else if (!this.state.otpVerified) message.error("Please Verify Your Mobile Number");
         else
           this.setState({
             currentStep: step,

@@ -47,7 +47,9 @@ export default class AddProductToShop extends React.Component {
           storeOpeningDays: []
         }
       },
-      shopProductData: {}
+      shopProductData: {},
+      storeTypeCategoriesVisited: [],
+      storeTypeSubCategoriesVisited: []
     }
   }
   componentDidMount(){
@@ -75,12 +77,14 @@ export default class AddProductToShop extends React.Component {
   }
 
   toggleAddNewShopModal = () => this.setState({addNewShopModalVisibility: !this.state.addNewShopModalVisibility})
+
   handleAddNewShop = (e, type) => {
     if(type == 'addNewShop'){
       window.location.pathname= 'admin/shops/add-new';
       // this.toggleAddNewShopModal();
     }
   }
+  
   renderRequiredIcon = () => <span className='form-required'> * </span>
   
   getSubCategoriesWithBrands = (category) => {
@@ -103,7 +107,9 @@ export default class AddProductToShop extends React.Component {
 
   handleOnSelect = (e, type)=> {
     if(type == 'brandCategory'){
-      this.setState({selectedCategory: e});
+      let storeTypeCategoriesVisited = this.state.storeTypeCategoriesVisited;
+      !storeTypeCategoriesVisited.includes(e) && storeTypeCategoriesVisited.push(e);
+      this.setState({selectedCategory: e, storeTypeCategoriesVisited, storeTypeSubCategoriesVisited: []});
       this.getSubCategoriesWithBrands(e);
     }
   }
@@ -116,7 +122,9 @@ export default class AddProductToShop extends React.Component {
     } else {
       shopProductData[this.state.selectedCategory][sub] = [...shopProductData[this.state.selectedCategory][sub], brand];
     }
-    this.setState({shopProductData})
+    let storeTypeSubCategoriesVisited = this.state.storeTypeSubCategoriesVisited;
+    !storeTypeSubCategoriesVisited.includes(sub) && storeTypeSubCategoriesVisited.push(sub);
+    this.setState({shopProductData, storeTypeSubCategoriesVisited});
   }
   handleSubmit = (e) => {
     e.preventDefault();
@@ -156,7 +164,7 @@ export default class AddProductToShop extends React.Component {
                       <label className='add-shop-label'>Select Product Category</label>{this.renderRequiredIcon()} 
                         <Select placeholder='Select Product Category' size="large" onSelect={(e)=>this.handleOnSelect(e, 'brandCategory')} showSearch style={{ width: '100%' }} >
                           <Option value="Categories" disabled>Store Product Categories</Option>
-                            {this.state.storeTypeCategories.map(cat=><Option value={cat}>{cat}</Option>)}
+                            {this.state.storeTypeCategories.map(cat=><Option value={cat}>{cat}{this.state.storeTypeCategoriesVisited.includes(cat)?<i className='text-success nc-icon nc-check-2 ml-3'/>:null}</Option>)}
                         </Select>
                       </FormGroup>
                     </Col>
@@ -166,7 +174,7 @@ export default class AddProductToShop extends React.Component {
                     <Col className='pr-1' md={12}>
                       <label className='add-shop-label'>Brand + Company</label>{this.renderRequiredIcon()} 
                       <FormGroup>
-                        <label className='form-control p-3'>Select 8 out of 14</label>
+                        <label className='form-control p-3'>Selected {this.state.storeTypeSubCategoriesVisited.length} from {this.state.subCategoriesWithBrands.length}</label>
                       </FormGroup>
                     </Col>
                   </Row>

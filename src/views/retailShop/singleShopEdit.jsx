@@ -75,14 +75,17 @@ class SingleShopEdit extends Component {
     shopData[type][key] = e.target.value;
     this.setState({ shopData });
   };
+  
   handleOnSelect = (value, type, key) => {
     let shopData = this.state.shopData;
     shopData[type][key] = value;
     this.setState({ shopData });
   };
+
   handleOnUploadClicked = (e) => {
     e.preventDefault();
-    Axios.patch(process.env.REACT_APP_API_URL + '/shop/' + this.state.shopData.mobileNumber, this.state.shopData)
+    const {basic} = this.state.shopData;
+    Axios.patch(process.env.REACT_APP_API_URL + '/shop/' + basic.mobileNumber, this.state.shopData)
     .then(({data})=>{
       console.log(`shop update data`, data);
       if(data.status){

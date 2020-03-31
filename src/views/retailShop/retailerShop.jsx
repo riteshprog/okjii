@@ -45,12 +45,12 @@ class Tables extends React.Component {
       key: '_id',
       render: storeCatelogue => <Tag color={storeCatelogue.storeType =='24x7Store'?'green':storeCatelogue.storeType =='Medium Store'?'blue':'red'}>{storeCatelogue.storeType}</Tag>,
     },
-    {
-      title: 'Added On',
-      dataIndex: 'shopInfo',
-      key: '_id',
-      render: shopInfo => <span>{moment(shopInfo.createdAt).format("lll")}</span>,
-    },
+    // {
+    //   title: 'Added On',
+    //   dataIndex: 'shopInfo',
+    //   key: '_id',
+    //   render: shopInfo => <span>{moment(shopInfo.createdAt).format("lll")}</span>,
+    // },
     {
       title: 'Shop Location',
       dataIndex: 'basic',
@@ -61,7 +61,10 @@ class Tables extends React.Component {
       title: 'Action',
       dataIndex: '_id',
       key: 'x',
-      render: shopId => <a href={`/admin/shops/single/${shopId}`}>View</a>, //
+      render: shopId => <div className='df fdc'>
+        <a href={`/admin/shops/single/${shopId}`}>View</a>
+        <a href={`/admin/shops/add-item/${shopId}`}>Add Product</a>
+      </div>, //
     }
   ]
   componentDidMount(){
