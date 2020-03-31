@@ -65,7 +65,7 @@ class SingleShopEdit extends Component {
             <Form className="retail-shop">
               <FormGroup row>
                 <Col className="df jcc aic" sm={1}>
-                  <img className='icon-md' src={basic.ownerPhoto} alt="" />
+                  <img className="icon-md" src={basic.ownerPhoto} alt="" />
                 </Col>
                 <Col sm={8}>
                   <p>{basic.shopName}</p>
@@ -74,7 +74,7 @@ class SingleShopEdit extends Component {
                     <span className="text-green">OKK</span>P0001
                   </p>
                 </Col>
-                <Col className='df aic jcfe' sm={2}>
+                <Col className="df aic jcfe" sm={2}>
                   <Button className="bg-green">Update</Button>
                 </Col>
               </FormGroup>

@@ -334,14 +334,8 @@ class AddNewShop extends React.Component {
       const basicSchema = {
         shopName: joi.string().required(),
         ownerName: joi.string().required(),
-        mobileNumber: joi
-          .string()
-          .required()
-          .length(10),
-        altMobileNumber: joi
-          .string()
-          .length(10)
-          .allow(""),
+        mobileNumber: joi.string().required().length(10),
+        altMobileNumber: joi.string().length(10).allow(""),
         OwnerPicture: joi.any(),
         uploadDocuments: joi.any(),
         otp: joi.any(),
@@ -544,6 +538,7 @@ class AddNewShop extends React.Component {
 
   onPreferenceLocationChange = (preferenceLocation, type = "") => {
     if (type == "map") {
+      // invokes when marked from the google map
       let shopData = this.state.shopData;
       shopData["basic"]["shopLocation"]["lat"] = preferenceLocation.lat;
       shopData["basic"]["shopLocation"]["lng"] = preferenceLocation.lng;
@@ -551,23 +546,32 @@ class AddNewShop extends React.Component {
         preferenceLocation.lat,
         preferenceLocation.lng
       ).then(result => {
-          
         shopData["basic"]["shopLocation"]["label"] = result || "No Name found";
         let resultArr = result.split(", ").reverse();
         if (resultArr.length) {
           shopData["basic"]["country"] = resultArr[0];
           shopData["basic"]["state"] = resultArr[1];
           shopData["basic"]["distirct"] = resultArr[2];
-          shopData['basic']['address'] = result//resultArr.slice(3).join(',');
+          shopData['basic']['address'] = result.split(', ').splice(0, result.split(', ').length-3).join(', ');
         }
         this.setState({ shopData });
       });
     } else {
+      // invokes when user types the location
       const map = new MyMapComponent();
-
       let shopData = this.state.shopData;
       shopData["basic"]["shopLocation"]["label"] = preferenceLocation;
+      let preferenceLocationArr = preferenceLocation.split(', ');
+      shopData["basic"]['address'] = preferenceLocationArr.splice(0, preferenceLocationArr.length-3).join(', ')
+      
+      let preferenceLocationArrReverse = preferenceLocationArr.reverse();
+      shopData["basic"]["country"] = preferenceLocationArrReverse[0];
+      shopData["basic"]["state"] = preferenceLocationArrReverse[1];
+      shopData["basic"]["distirct"] = preferenceLocationArrReverse[2];
+
+      console.log(shopData["basic"])
       this.setState({ shopData }, () => {
+
         geocodeByAddress(preferenceLocation)
           .then(results => getLatLng(results[0]))
           .then(latLng => {
