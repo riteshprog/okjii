@@ -90,3 +90,6 @@ body{
 .t-large{
   font-size: 30px !important;
 }
+.no-border{
+  border: none !important;
+}

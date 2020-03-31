@@ -561,13 +561,11 @@ class AddNewShop extends React.Component {
       const map = new MyMapComponent();
       let shopData = this.state.shopData;
       shopData["basic"]["shopLocation"]["label"] = preferenceLocation;
-      let preferenceLocationArr = preferenceLocation.split(', ');
-      shopData["basic"]['address'] = preferenceLocationArr.splice(0, preferenceLocationArr.length-3).join(', ')
-      
-      let preferenceLocationArrReverse = preferenceLocationArr.reverse();
+      let preferenceLocationArr = preferenceLocation.split(', '), preferenceLocationArrReverse = preferenceLocationArr.reverse();
       shopData["basic"]["country"] = preferenceLocationArrReverse[0];
       shopData["basic"]["state"] = preferenceLocationArrReverse[1];
       shopData["basic"]["distirct"] = preferenceLocationArrReverse[2];
+      shopData["basic"]['address'] = preferenceLocationArr.splice(0, preferenceLocationArr.length-3).join(', ')
 
       console.log(shopData["basic"])
       this.setState({ shopData }, () => {

@@ -155,14 +155,10 @@ class Header extends React.Component {
             <span className="navbar-toggler-bar navbar-kebab" />
             <span className="navbar-toggler-bar navbar-kebab" />
           </NavbarToggler>
-          <Collapse
-            isOpen={this.state.isOpen}
-            navbar
-            className="justify-content-end"
-          >
+          <Collapse isOpen={this.state.isOpen} navbar className="justify-content-end" >
             <form>
               <InputGroup className="no-border">
-                <Input placeholder="Search..." />
+                <Input className='no-border' placeholder="Search..." />
                 <InputGroupAddon addonType="append">
                   <InputGroupText>
                     <i className="nc-icon nc-zoom-split" />
