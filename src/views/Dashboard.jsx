@@ -62,6 +62,9 @@ class Dashboard extends React.Component {
       <>
         <div className="content okjii-dashboard">
           <Row>
+            <Col md="12"><p className="border-bottom dashbord-text">Dashboard</p></Col>
+          </Row>
+          <Row>
             <Col lg="3" md="6" sm="6">
               <Card className="card-stats dashbord-card1">
                 <CardBody>
@@ -83,7 +86,7 @@ class Dashboard extends React.Component {
                 <CardFooter>
                   <hr />
                   <div className="stats footer-card1">
-                     Update Now <i className="fas fa-sync-alt float-right" />
+                     Update Now <i className="far fa-calendar-alt float-right" />
                   </div>
                 </CardFooter>
               </Card>

@@ -25,6 +25,8 @@ import AddProductToShop from "./views/retailShop/addItemsToShop";
 import PreReg from "./views/preRegistration/preReg";
 import Users from './views/userManagement/users';
 import SingleShopEdit from './views/retailShop/singleShopEdit';
+import CustomerDetails from "./views/customer/CustomerDetails";
+//import ViewCustomerDetails from "./views/customer/ViewCustomerDetails";
 
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
@@ -54,6 +56,15 @@ var routes = [
     layout: "/admin"
   },
   {
+    path: "/customer",
+    onSideBar: true,
+    name: "Customer",
+    icon: "far fa-user",
+    component: CustomerDetails,
+    accessTo: ['admin'],
+    layout: "/admin"
+  },
+  {
     path: "/user",
     onSideBar: true,
     name: "User Mangement",
@@ -71,6 +82,7 @@ var routes = [
     component: PreReg,
     layout: "/admin"
   },
+
 
   /* --------------------Side Bar Routes Ends-------------------- */
 

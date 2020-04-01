@@ -18,6 +18,7 @@
 */
 import React from "react";
 import { Link } from "react-router-dom";
+import {MDBIcon} from "mdbreact";
 import {
   Collapse,
   Navbar,
@@ -158,21 +159,27 @@ class Header extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar className="justify-content-end" >
             <form>
               <InputGroup className="no-border">
-                <Input className='no-border' placeholder="Search..." />
-                <InputGroupAddon addonType="append">
+              <InputGroupAddon addonType="prepend">
                   <InputGroupText>
-                    <i className="nc-icon nc-zoom-split" />
+                  <i class="fas fa-search" />
                   </InputGroupText>
                 </InputGroupAddon>
+                <Input className='no-border' placeholder="Search..." />
               </InputGroup>
             </form>
             <Nav navbar>
-              <NavItem>
+            <NavItem>
+              <Link to="/" className="nav-link nav-btn"><i class="far fa-question-circle"></i> <MDBIcon far icon="bell" /> <MDBIcon icon="dharmachakra" /></Link>
+            </NavItem>
+
+
+
+              {/* <NavItem>
                 <Link to="shops/add-new" className="nav-link btn-magnify">
-                  {/* <PlusCircleOutlined style={{fontSize: 25}}/> */}
+                  <PlusCircleOutlined style={{fontSize: 25}}/>
                   <i className="nc-icon nc-simple-add" />
                 </Link>
-              </NavItem>
+              </NavItem> */}
               {/* <NavItem>
                 <Link to="#pablo" className="nav-link btn-rotate">
                   <i className="nc-icon nc-settings-gear-65" />
@@ -182,9 +189,9 @@ class Header extends React.Component {
                 </Link>
               </NavItem> */}
 
-              <div className='df aic ml-2'>
+              {/* <div className='df aic ml-2'>
                 <span >Hi, {this.state.userData.email}</span>
-              </div>
+              </div> */}
               
               <Dropdown nav isOpen={this.state.dropdownOpen} toggle={e => this.dropdownToggle(e)}>
                 <DropdownToggle caret nav>
