@@ -1,35 +1,15 @@
 import joi from "joi";
 import React from "react";
 import Axios from "axios";
+import CookieHandler from "../../utils/cookieHandler";
 import { Steps, Select, Avatar, message } from "antd";
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 import { MyFancyComponent, MyMapComponent } from "../../adminComponents/googleMap/googleMap";
+import { Card, CardHeader, CardBody, CardTitle, Row, Col, Button, Form, FormGroup, Input, CustomInput, InputGroup, InputGroupAddon } from "reactstrap";
 
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardTitle,
-  Row,
-  Col,
-  Button,
-  Form,
-  FormGroup,
-  Input,
-  CustomInput,
-  InputGroup,
-  InputGroupAddon
-} from "reactstrap";
-import {
-  IdcardFilled,
-  BankOutlined,
-  StarOutlined,
-  UploadOutlined,
-  CheckOutlined
-} from "@ant-design/icons";
+import { IdcardFilled, BankOutlined, StarOutlined, UploadOutlined, CheckOutlined } from "@ant-design/icons";
 
 import "./retailshop.css";
-import CookieHandler from "../../utils/cookieHandler";
 
 const { Step } = Steps;
 const { Option } = Select;
