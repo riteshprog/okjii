@@ -3,6 +3,7 @@ import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 import avatar from '../../img/home/avatar.png';
 import CustomerNavBar from '../customer/CustomerNavBar';
+import { Row, Col } from 'reactstrap';
 
 
 
@@ -136,6 +137,7 @@ export default class CustomerDetails extends Component {
 
       </MDBTableBody>
     </MDBTable>
+   
         </div>
       </>
     )

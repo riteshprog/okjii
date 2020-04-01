@@ -9,20 +9,21 @@ export default class ViewCustomerDetails extends Component {
   render() {
     return (
       <>
-        <div className="content">
+       <div className="content">
           <CustomerNavBar />
-          <div className="customer-table">
+          <div className="customer-table customer-details">
             <Row>
-              <Col md="2"><img src={avatar} className="rounded-circle testimoni-img" width="40" height="40" alt="avatar" /></Col>
-              <Col md="6"><p><span className="text-green">Ravi Kumar Singh</span><br />
+              <Col md="1"><img src={avatar} className="rounded-circle testimoni-img" width="60" height="60" alt="avatar" /></Col>
+              <Col md="7"><p><span className="text-green">Ravi Kumar Singh</span><br />
               <span className="text-green">Okk</span>P0001
               </p></Col>
               <Col md="2"><button class="btn-copy-code btn">Edit</button></Col>
               <Col md="2">ENABEL </Col>
             </Row>
+            <hr />
             <Row>
-              <Col md="2"></Col>
-              <Col md="10"><p>Mobole Number: <br /><span className="number-properties">9998888777</span></p>
+              <Col md="1"></Col>
+              <Col md="11"><p>Mobole Number: <br /><span className="number-properties">9998888777</span></p>
               <p>Discription: <br /><span className="number-properties">Bank Po at PNB Kanti Factory, Kankarbagh</span></p>
               <p>Location: <br /><span className="number-properties">B-12, Mahatma Gandhi Nagar, Kanti Factory, Kankarbagh, Patna Bihar</span></p>
               <p>Total Number Orders: <br /><span className="number-properties">28 Times</span></p>
