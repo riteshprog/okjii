@@ -108,8 +108,6 @@ class App extends React.Component {
             </Route>
             <Route path="/kirana-edit">
               <KiranaStoreEdit />
-
-
             </Route>
           </Switch>
           <Footer />

@@ -16,7 +16,7 @@
     "mdbootstrap": "^4.13.0",
     "mdbreact": "^4.25.2",
     "moment-timezone": "^0.5.28",
-    "node-sass": "4.12.0",
+    "node-sass": "^4.13.1",
     "perfect-scrollbar": "1.4.0",
     "raysk-vali": "^1.1.0",
     "react": "^16.12.0",
