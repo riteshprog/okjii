@@ -26,7 +26,7 @@ import PreReg from "./views/preRegistration/preReg";
 import Users from './views/userManagement/users';
 import SingleShopEdit from './views/retailShop/singleShopEdit';
 import CustomerDetails from "./views/customer/CustomerDetails";
-//import ViewCustomerDetails from "./views/customer/ViewCustomerDetails";
+import Categories from './views/category/viewAllCategories.jsx';
 
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
@@ -39,11 +39,12 @@ var routes = [
     layout: "/admin"
   },
   {
-    path: "/shops/add-new",
-    name: "Add New Shop",
+    path: "/category",
+    onSideBar: true,
+    name: "Categories",
     icon: "nc-icon nc-shop",
-    component: AddNewShop,
     accessTo: ['admin', 'market'],
+    component: Categories,
     layout: "/admin"
   },
   {
@@ -83,7 +84,6 @@ var routes = [
     layout: "/admin"
   },
 
-
   /* --------------------Side Bar Routes Ends-------------------- */
 
   {
@@ -92,6 +92,14 @@ var routes = [
     name: "Single Shop",
     icon: "nc-icon nc-shop",
     component: SingleShop,
+    layout: "/admin"
+  },
+  {
+    path: "/shops/add-new",
+    name: "Add New Shop",
+    icon: "nc-icon nc-shop",
+    component: AddNewShop,
+    accessTo: ['admin', 'market'],
     layout: "/admin"
   },
   {
