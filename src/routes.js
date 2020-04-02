@@ -42,7 +42,7 @@ var routes = [
     path: "/category",
     onSideBar: true,
     name: "Categories",
-    icon: "nc-icon nc-shop",
+    icon: "nc-icon nc-tag-content",
     accessTo: ['admin', 'market'],
     component: Categories,
     layout: "/admin"

@@ -1,7 +1,7 @@
 import React from "react";
 import Axios from "axios";
-import { Radio } from 'antd';
-import { Card, CardHeader, CardBody, CardTitle, Row, Col } from "reactstrap";
+import { Radio, message } from 'antd';
+import { Card, CardHeader, CardBody, CardTitle, Row, Col, Button, Modal, ModalBody, ModalFooter, ModalHeader, FormGroup, Form, Input } from "reactstrap";
 import { Avatar, Table, Tag } from 'antd';
 import moment from 'moment-timezone';
 
@@ -9,96 +9,90 @@ class Categories extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      addNewShopModalVisibility: false,
       showActions: false,
-      preRegistraion: [],
-      filter: {
-        district: 'all'
-      }
+      allCategories: [],
+      addNewCategoryModalVisibility: false,
+      newCategory: {
+        name: ''
+      },
+      errorMessage: ''
     };
   }
 
   columns = [
     {
-      title: 'Name',
-      dataIndex: 'fullName',
+      title: 'Categories',
+      dataIndex: 'name',
       key: '_id',
       render: name => <span>{name}</span>,
-    },
-    {
-      title: 'Mobile',
-      dataIndex: 'mobileNumber',
-      key: '_id',
-      render: mobileNumber => <span>{mobileNumber}</span>,
-    },
-    {
-      title: 'Pincode',
-      dataIndex: 'pincode',
-      key: '_id',
-      render: pincode => <span>{pincode}</span>,
-    },
-    {
-      title: 'District',
-      dataIndex: 'district',
-      key: '_id',
-      render: district => <span>{district}</span>,
-    },
-    {
-      title: 'State',
-      dataIndex: 'pincode',
-      key: '_id',
-      render: state => <span>{state}</span>,
-    },
-    {
-      title: 'Offer',
-      dataIndex: 'offer',
-      key: '_id',
-      render: offer => <span>{offer.title}</span>,
-    },
-    {
-      title: 'Email',
-      dataIndex: 'email',
-      key: '_id',
-      render: email => <span>{email?email:'N/A'}</span>,
     }
   ]
 
   componentDidMount() {
-    Axios.get(process.env.REACT_APP_API_URL + "/pre-registraion")
+    Axios.get(process.env.REACT_APP_API_URL + "/category")
       .then(({ data }) => {
         if (data.status) {
-          this.setState({ preRegistraion: data.allPreRegs });
+          this.setState({ allCategories: data.allCategories });
         } else {
-          console.log("no preRegistraion found");
+          console.log("no allCategories found");
         }
       })
       .catch(err => {
         console.log(`catch`, err);
       });
   }
-  callApiOnFilterChange = ()=> {
-    let filterObj = this.state.filter, queryStr = ``;
-    Object.keys(filterObj).map(key=> queryStr += `${key}=${filterObj[key]}`)
 
-    Axios.get(process.env.REACT_APP_API_URL + "/pre-registraion?" + queryStr)
-      .then(({ data }) => {
-        if (data.status) {
-          this.setState({ preRegistraion: data.allPreRegs });
-        } else {
-          console.log("no preRegistraion found");
+  renderAddNewModal = () => (
+    <Modal isOpen={this.state.addNewCategoryModalVisibility} toggle={this.toggleAddNewCategory} >
+      <ModalHeader toggle={this.toggleAddNewCategory}>Add New Category</ModalHeader>
+      <ModalBody>
+        <Form>
+          <Row className='df jcc'>
+            <Col className="pl-1" md="10">
+              <FormGroup>
+                <label htmlFor="userName">
+                  Category Name
+                </label>
+                <Input placeholder="Enter Category Name" value={this.state.newCategory.name} onChange={(e)=>this.handleOnChange(e, 'name')} type="text" />
+              </FormGroup>
+            </Col>
+          </Row>
+        </Form>
+               
+      </ModalBody>
+      <ModalFooter>
+        {this.state.errorMessage?<span className='mr-3 text-danger'>{this.state.errorMessage}</span>:null}
+        <Button id='save-btn' color="primary" onClick={this.handleOnAddNewCategorySave}>Add</Button>
+        <Button color="secondary" onClick={this.toggleAddNewCategory}>Cancel</Button>
+      </ModalFooter>
+    </Modal>
+  )
+
+  toggleAddNewCategory = () => this.setState({addNewCategoryModalVisibility: !this.state.addNewCategoryModalVisibility, errorMessage: ``});
+  
+  handleOnChange = (e, key) => {
+    let {newCategory} = this.state;
+    newCategory[key] = e.target.value;
+    this.setState({newCategory});
+  }
+  
+  handleOnAddNewCategorySave = () => {
+    let {newCategory, errorMessage} = this.state;
+    if(!newCategory.name) this.setState({errorMessage: 'Invalid Category Name'});
+    else if(!errorMessage) {
+      Axios.post(process.env.REACT_APP_API_URL + '/category', newCategory).then(({data})=>{
+        if(!data.status){
+          this.setState({errorMessage: data.errorMessage});
+        }else {
+          message.success(`New Category Added Successfully`);
+          this.setState({errorMessage: ``, addNewCategoryModalVisibility: false})
         }
+      }).catch((er)=>{
+        this.setState({errorMessage: `Something went wrong`})
       })
-      .catch(err => {
-        console.log(`catch`, err);
-      });
+    }
   }
-  handleFilterChange = (e, type) => {
-    const value = e.target.value;
-    const filter = this.state.filter;
-    filter[type] = value;
-    this.setState({filter});
-    this.callApiOnFilterChange();
-  }
+
   render() {
     return (
       <>
@@ -107,60 +101,20 @@ class Categories extends React.Component {
             <Col md="12">
               <Card>
                 <CardHeader>
-                  <CardTitle tag="h4">Pre Registrations</CardTitle>
+                  <CardTitle tag="h4">Categories</CardTitle>
                 </CardHeader>
                 <CardBody>
-                  <div className='df jcsb'>
-                    <div className='m-2'>
-                      {this.state.preRegistraion.length ? (
-                        <span className="ml-1 desc">
-                          Total Registrations: {this.state.preRegistraion.length}
-                        </span>
-                      ) : null}
-                    </div>
-                    <div className='m-2'>
-                    <Radio.Group value={this.state.filter.district} onChange={(e)=>this.handleFilterChange(e, 'district')}>
-                      <Radio.Button value="all">All</Radio.Button>
-                      <Radio.Button value="Patna">Patna</Radio.Button>
-                      <Radio.Button value="Jaipur">Jaipur</Radio.Button>
-                    </Radio.Group>
-                    </div>
-
-                  </div>
-                  <Table  columns={this.columns} dataSource={this.state.preRegistraion} />
-                  {/* {this.state.preRegistraion.length ? (
-                    <Table responsive>
-                      <thead className="text-primary">
-                        <tr className="ta">
-                          <th>Name</th>
-                          <th>Mobile Number</th>
-                          <th>Pincode</th>
-                          <th>District</th>
-                          <th>State</th>
-                          <th>Offer</th>
-                          <th>Email</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {this.state.preRegistraion.map(user => (
-                          <tr className="ta">
-                            <th className="tal">{user.fullName}</th>
-                            <td>{user.mobileNumber}</td>
-                            <td>{user.pincode}</td>
-                            <td>{user.district}</td>
-                            <td>{user.state}</td>
-                            <td>{user.offer.title}</td>
-                            <td>{user.email ? user.email : "N/A"}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </Table>
-                  ) : (
-                    <span>Currenty there are no registrations yet</span>
-                  )} */}
+                  <Button color="primary" onClick={this.toggleAddNewCategory}>Add New Category</Button>
+                  <Row>
+                    <Col className="pr-1" md={12}>
+                      <Table  columns={this.columns} dataSource={this.state.allCategories} />  
+                    </Col>
+                  </Row>
+                  
                 </CardBody>
               </Card>
             </Col>
+            {this.renderAddNewModal()}
           </Row>
         </div>
       </>
