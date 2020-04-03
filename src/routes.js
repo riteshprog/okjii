@@ -26,10 +26,14 @@ import PreReg from "./views/preRegistration/preReg";
 import Users from './views/userManagement/users';
 import SingleShopEdit from './views/retailShop/singleShopEdit';
 import CustomerDetails from "./views/customer/CustomerDetails";
+<<<<<<< HEAD
 import ViewCustomerDetails from "./views/customer/ViewDetailsCustomer";
 import LoginPage from "./views/login/LoaginPage.jsx";
 import LoginPageOtp from "./views/login/LoginPageOtp.jsx";
 
+=======
+import Categories from './views/category/viewAllCategories.jsx';
+>>>>>>> a4c1143ccb78963d22c35bc3cffe3f8f746f3b9f
 
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
@@ -42,6 +46,7 @@ var routes = [
     layout: "/admin"
   },
   {
+<<<<<<< HEAD
     path: "/login",
     onSideBar: true,
     name: "Login",
@@ -54,7 +59,14 @@ var routes = [
     name: "Add New Shop",
     icon: "nc-icon nc-shop",
     component: AddNewShop,
+=======
+    path: "/category",
+    onSideBar: true,
+    name: "Categories",
+    icon: "nc-icon nc-tag-content",
+>>>>>>> a4c1143ccb78963d22c35bc3cffe3f8f746f3b9f
     accessTo: ['admin', 'market'],
+    component: Categories,
     layout: "/admin"
   },
   {
@@ -94,7 +106,6 @@ var routes = [
     layout: "/admin"
   },
 
-
   /* --------------------Side Bar Routes Ends-------------------- */
   {
     path: "/customer/singlecustomer/:custId",
@@ -119,6 +130,14 @@ var routes = [
     name: "Single Shop",
     icon: "nc-icon nc-shop",
     component: SingleShop,
+    layout: "/admin"
+  },
+  {
+    path: "/shops/add-new",
+    name: "Add New Shop",
+    icon: "nc-icon nc-shop",
+    component: AddNewShop,
+    accessTo: ['admin', 'market'],
     layout: "/admin"
   },
   {
