@@ -6,7 +6,7 @@ import { CustomInput, Row, Col } from 'reactstrap';
 
 
 
-export default class ViewCustomerDetails extends Component {
+export default class ViewDetailsCustomer extends Component {
   render() {
     return (
       <>

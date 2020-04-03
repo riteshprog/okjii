@@ -26,15 +26,12 @@ import PreReg from "./views/preRegistration/preReg";
 import Users from './views/userManagement/users';
 import SingleShopEdit from './views/retailShop/singleShopEdit';
 import CustomerDetails from "./views/customer/CustomerDetails";
-<<<<<<< HEAD
-import ViewCustomerDetails from "./views/customer/ViewDetailsCustomer";
-import LoginPage from "./views/login/LoaginPage.jsx";
-import LoginPageOtp from "./views/login/LoginPageOtp.jsx";
-
-=======
+import ViewDetailsCustomer from "./views/customer/ViewDetailsCustomer.jsx";
 import Categories from './views/category/viewAllCategories.jsx';
->>>>>>> a4c1143ccb78963d22c35bc3cffe3f8f746f3b9f
-
+import BlogDetails from "./views/blog/BlogDetails";
+import BlogAdd from "./views/blog/BlogAdd.jsx";
+import StoreDetails from "./views/store/StoreDetails.jsx";
+import ViewStoreDetails from "./views/store/ViewStoreDetails.jsx";
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
   {
@@ -46,25 +43,10 @@ var routes = [
     layout: "/admin"
   },
   {
-<<<<<<< HEAD
-    path: "/login",
-    onSideBar: true,
-    name: "Login",
-    icon: "nc-icon nc-bank",
-    component: LoginPage,
-    layout: "/admin"
-  },
-  {
-    path: "/shops/add-new",
-    name: "Add New Shop",
-    icon: "nc-icon nc-shop",
-    component: AddNewShop,
-=======
     path: "/category",
     onSideBar: true,
     name: "Categories",
     icon: "nc-icon nc-tag-content",
->>>>>>> a4c1143ccb78963d22c35bc3cffe3f8f746f3b9f
     accessTo: ['admin', 'market'],
     component: Categories,
     layout: "/admin"
@@ -79,11 +61,29 @@ var routes = [
     layout: "/admin"
   },
   {
+    path: "/store",
+    onSideBar: true,
+    name: "Store",
+    icon: "nc-icon nc-shop",
+    accessTo: ['admin', 'market'],
+    component: StoreDetails,
+    layout: "/admin"
+  },
+  {
     path: "/customer",
     onSideBar: true,
     name: "Customer",
     icon: "far fa-user",
     component: CustomerDetails,
+    accessTo: ['admin'],
+    layout: "/admin"
+  },
+  {
+    path: "/blog",
+    onSideBar: true,
+    name: "Blog",
+    icon: "far fa-user",
+    component: BlogDetails,
     accessTo: ['admin'],
     layout: "/admin"
   },
@@ -110,19 +110,28 @@ var routes = [
   {
     path: "/customer/singlecustomer/:custId",
     onSideBar: false,
-    name: "Single Customer",
+    name: "Customer Details",
     icon: "nc-icon nc-shop",
-    component:   ViewCustomerDetails,
+    component:   ViewDetailsCustomer,
     layout: "/admin"
   },
   {
-    path: "/login/loginverify/:loginId",
+    path: "/store/viewstoredetails/:storeId",
     onSideBar: false,
-    name: "Login Page",
+    name: "Store Details",
     icon: "nc-icon nc-shop",
-    component:   LoginPageOtp,
+    component:   ViewStoreDetails,
     layout: "/admin"
   },
+  
+  // {
+  //   path: "/login/loginverify/:loginId",
+  //   onSideBar: false,
+  //   name: "Login Page",
+  //   icon: "nc-icon nc-shop",
+  //   component:   LoginPageOtp,
+  //   layout: "/admin"
+  // },
 
   {
     path: "/shops/single/:shopId",
@@ -155,6 +164,15 @@ var routes = [
     name: "Add Product",
     icon: "nc-icon nc-shop",
     component: AddProductToShop,
+    layout: "/admin"
+  },
+  {
+    path: "/blog/add-blog/:blogId",
+    onSideBar: false,
+    name: "Add Blog",
+    icon: "far fa-user",
+    component: BlogAdd,
+    accessTo: ['admin'],
     layout: "/admin"
   },
 

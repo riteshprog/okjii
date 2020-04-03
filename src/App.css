@@ -3367,9 +3367,7 @@ input.no-border.form-control {
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: #F3F7F6 !important;
 }
-.table-striped{
-  margin-left:1rem;
-}
+
 .table-striped th, .table-striped td {
   padding: 0.75rem;
   vertical-align: top;
@@ -3527,6 +3525,82 @@ z-index: 5;
   background-color: none !important;
 }
 /* Customer Login End  */
+/*  Blog Page Start  */
+.blog-table{
+  background-color: #fff !important;
+}
+
+.blog-table .table-striped{
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+
+.blog-table thead,.blog-table tbody, .blog-table tr  {
+  border:1px solid #F8F9F9;
+}
+.blog-table td{
+  border:1px solid #F8F9F9;
+}
+
+.table-striped.blog-table tbody tr:nth-of-type(odd) {
+  background-color: #FBFCFD !important;
+}
+
+.text-green-background{
+  background-color: #3CCD5E;
+  color:#fff;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.table-striped .btn {
+  margin: 0;
+  background-color: #fff !important;
+  color: #5e5e5e;
+  font-size: 1.2rem;
+  padding: 2px 8px;
+}
+.blog-navbar{
+  background-color: #fff;
+  widows: 100%;
+  height: 60px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 12px 0 rgba(0,0,0,0.18);
+}
+
+.blog-navbar .col-md-10 p:first-child{
+margin-top: .8rem;
+}
+
+.blog-navbar .btn{
+  background-color: #5484F4 !important;
+  padding: 10px 10px;
+  font-size:.9rem;
+}
+
+
+.add-blog {
+  background-color: #fff;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+
+.add-blog .form-group input[type=file] {
+  opacity: 1;
+  margin-top:2rem;
+
+}
+.add-blog .btn, .add-blog .btn .text-center {
+  background-color: #3CCD5E !important;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: auto;
+  padding: 5px 10px;
+}
+  .
+/*  Blog Page End   */
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen  and (max-width: 600px) {
 
