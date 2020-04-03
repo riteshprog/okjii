@@ -26,7 +26,10 @@ import PreReg from "./views/preRegistration/preReg";
 import Users from './views/userManagement/users';
 import SingleShopEdit from './views/retailShop/singleShopEdit';
 import CustomerDetails from "./views/customer/CustomerDetails";
-//import ViewCustomerDetails from "./views/customer/ViewCustomerDetails";
+import ViewCustomerDetails from "./views/customer/ViewDetailsCustomer";
+import LoginPage from "./views/login/LoaginPage.jsx";
+import LoginPageOtp from "./views/login/LoginPageOtp.jsx";
+
 
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
@@ -36,6 +39,14 @@ var routes = [
     name: "Dashboard",
     icon: "nc-icon nc-bank",
     component: Dashboard,
+    layout: "/admin"
+  },
+  {
+    path: "/login",
+    onSideBar: true,
+    name: "Login",
+    icon: "nc-icon nc-bank",
+    component: LoginPage,
     layout: "/admin"
   },
   {
@@ -85,6 +96,22 @@ var routes = [
 
 
   /* --------------------Side Bar Routes Ends-------------------- */
+  {
+    path: "/customer/singlecustomer/:custId",
+    onSideBar: false,
+    name: "Single Customer",
+    icon: "nc-icon nc-shop",
+    component:   ViewCustomerDetails,
+    layout: "/admin"
+  },
+  {
+    path: "/login/loginverify/:loginId",
+    onSideBar: false,
+    name: "Login Page",
+    icon: "nc-icon nc-shop",
+    component:   LoginPageOtp,
+    layout: "/admin"
+  },
 
   {
     path: "/shops/single/:shopId",

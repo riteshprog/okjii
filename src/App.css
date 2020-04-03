@@ -193,6 +193,19 @@ a{
   white-space: nowrap;
 }
 
+.login-page{
+  background-image: url(../src/img/login/background.jpg);
+  
+  top:0;
+  left:0 ;
+  right:0 ;
+  height: 100vh;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 
 .okjii-mainbody{
 
@@ -3301,6 +3314,9 @@ nav.navbar-absolute.fixed-top.navbar-transparent.navbar.navbar-expand-lg.bg-tran
   margin-right: 12px;
 }
 
+input.no-border.form-control {
+  background-color: #fff !important;
+}
 .sidebar .nav, .off-canvas-sidebar .nav {
   margin-top: -31px !important;
   display: block;
@@ -3342,6 +3358,12 @@ nav.navbar-absolute.fixed-top.navbar-transparent.navbar.navbar-expand-lg.bg-tran
   border-radius: 15px;
 }
 
+.customer-table .btn{
+  margin-left:1rem !important;
+  padding:11px;
+  text-align: middle;
+}
+
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: #F3F7F6 !important;
 }
@@ -3355,7 +3377,8 @@ nav.navbar-absolute.fixed-top.navbar-transparent.navbar.navbar-expand-lg.bg-tran
 }
 .table-striped img.rounded-circle.testimoni-img {
   margin-left: 3rem !important;
-  margin-right: 0 !important;
+  margin-right: 3rem !important;
+  
 }
 
 .table-striped .btn{
@@ -3415,9 +3438,95 @@ font-size: 1.2rem;
   color:#C4C4C4;
 }
 
+.custome-switch{
+  display: flex;
+}
+
+.custome-switch label{
+  padding-right:2rem;
+  padding-top:1rem;
+}
+.custome-switch .custom-switch{
+  padding-top: 1rem;
+}
+
+.custom-switch .custom-control-label::before {
+ content: '';
+  left: -2.25rem;
+  width: 3.75rem !important;
+  pointer-events: all;
+  border-radius: 0.5rem;
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+ content:'';
+  background-color: #fff;
+  transform: translateX(2.75rem) !important;
+}
 
 /*  Customer Page End */
+/* Customer Login start */
+.login-page{
+  width:100%;
+}
+.login-page-information{
+  background-color: #fff !important;
+  /* clip-path: polygon(0% 0%, 65% 0%, 65% 0%, 47% 100%, 0% 100%); */
 
+}
+
+.login-information{
+  padding-top: 10rem;
+  width:60%;
+  height: 100vh;
+  margin: 0 auto;
+}
+.login-information h1{
+  font-size:18pt;
+  color:#5e5e5e;
+  font-weight: 600;
+  padding: 2rem 0rem;
+}
+
+
+.login-information .input-group-lg>.form-control {
+  height: calc(1.5em + 1rem + 2px) !important;
+  background-color: #e9ecef;
+}
+
+.offer-input input.form-control {
+  margin-top: .3rem;
+}
+
+.otp-input .input-group-lg>.form-control:not(textarea) {
+  margin: 1rem !important;
+  background-color: #e9ecef;
+  border: 1px solid green !important;
+  border-radius: 5px !important;
+ 
+}
+
+/* .login-page {
+	width: 100%;
+	height: 100vh;
+	background-color:  red !important;
+  transition: 0.4s cubic-bezier(1, -1, 0, 2);
+  clip-path: polygon(35% 0%, 100% 0%, 100% 50%, 100% 100%, 30% 100%);
+z-index: 5;
+} */
+
+.login-information .btn{
+  padding: .7rem 2rem;
+  margin-top:3rem;
+  margin-bottom: 12rem;
+}
+
+.login-information p{
+  font-size:1rem;
+  color:#5e5e5e;
+  background-color: none !important;
+}
+/* Customer Login End  */
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen  and (max-width: 600px) {
 

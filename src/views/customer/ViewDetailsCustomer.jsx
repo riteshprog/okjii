@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import avatar from '../../img/home/avatar.png';
 import CustomerNavBar from '../customer/CustomerNavBar';
-import { Row, Col } from 'reactstrap';
+//import { MDBSwitch } from "mdbreact";
+import { CustomInput, Row, Col } from 'reactstrap';
 
 
 
@@ -18,7 +19,10 @@ export default class ViewCustomerDetails extends Component {
               <span className="text-green">Okk</span>P0001
               </p></Col>
               <Col md="2"><button class="btn-copy-code btn">Edit</button></Col>
-              <Col md="2">ENABEL </Col>
+              <Col md="2" className="custome-switch">
+                <label>ENABEL</label>
+              <CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch"  />
+      </Col>
             </Row>
             <hr />
             <Row>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 import avatar from '../../img/home/avatar.png';
@@ -36,7 +37,7 @@ export default class CustomerDetails extends Component {
         <i class="fas fa-ellipsis-v" />
         </MDBDropdownToggle>
         <MDBDropdownMenu  basic className="dropdown-bottom" >
-          <MDBDropdownItem>View Details</MDBDropdownItem>
+          <MDBDropdownItem><Link to="customer/singlecustomer/:custId">View Details</Link></MDBDropdownItem>
           <MDBDropdownItem>Wallet</MDBDropdownItem>
           <MDBDropdownItem>OkkJi Khata</MDBDropdownItem>
           <MDBDropdownItem>Setting</MDBDropdownItem>
@@ -54,7 +55,7 @@ export default class CustomerDetails extends Component {
         <i class="fas fa-ellipsis-v" />
         </MDBDropdownToggle>
         <MDBDropdownMenu  basic className="dropdown-bottom" >
-          <MDBDropdownItem>View Details</MDBDropdownItem>
+          <MDBDropdownItem><Link to="customer/singlecustomer/:custId">View Details</Link></MDBDropdownItem>
           <MDBDropdownItem>Wallet</MDBDropdownItem>
           <MDBDropdownItem>OkkJi Khata</MDBDropdownItem>
           <MDBDropdownItem>Setting</MDBDropdownItem>
@@ -72,7 +73,7 @@ export default class CustomerDetails extends Component {
         <i class="fas fa-ellipsis-v" />
         </MDBDropdownToggle>
         <MDBDropdownMenu  basic className="dropdown-bottom" >
-          <MDBDropdownItem>View Details</MDBDropdownItem>
+          <MDBDropdownItem><Link to="customer/singlecustomer/:custId">View Details</Link></MDBDropdownItem>
           <MDBDropdownItem>Wallet</MDBDropdownItem>
           <MDBDropdownItem>OkkJi Khata</MDBDropdownItem>
           <MDBDropdownItem>Setting</MDBDropdownItem>
@@ -90,7 +91,7 @@ export default class CustomerDetails extends Component {
         <i class="fas fa-ellipsis-v" />
         </MDBDropdownToggle>
         <MDBDropdownMenu  basic className="dropdown-bottom" >
-          <MDBDropdownItem>View Details</MDBDropdownItem>
+          <MDBDropdownItem><Link to="customer/singlecustomer/:custId">View Details</Link></MDBDropdownItem>
           <MDBDropdownItem>Wallet</MDBDropdownItem>
           <MDBDropdownItem>OkkJi Khata</MDBDropdownItem>
           <MDBDropdownItem>Setting</MDBDropdownItem>
@@ -108,7 +109,7 @@ export default class CustomerDetails extends Component {
         <i class="fas fa-ellipsis-v" />
         </MDBDropdownToggle>
         <MDBDropdownMenu  basic className="dropdown-bottom" >
-          <MDBDropdownItem>View Details</MDBDropdownItem>
+          <MDBDropdownItem><Link to="customer/singlecustomer/:custId">View Details</Link></MDBDropdownItem>
           <MDBDropdownItem>Wallet</MDBDropdownItem>
           <MDBDropdownItem>OkkJi Khata</MDBDropdownItem>
           <MDBDropdownItem>Setting</MDBDropdownItem>
@@ -126,7 +127,7 @@ export default class CustomerDetails extends Component {
         <i class="fas fa-ellipsis-v" />
         </MDBDropdownToggle>
         <MDBDropdownMenu  basic className="dropdown-bottom" >
-          <MDBDropdownItem>View Details</MDBDropdownItem>
+          <MDBDropdownItem><Link to="customer/singlecustomer/:custId">View Details</Link></MDBDropdownItem>
           <MDBDropdownItem>Wallet</MDBDropdownItem>
           <MDBDropdownItem>OkkJi Khata</MDBDropdownItem>
           <MDBDropdownItem>Setting</MDBDropdownItem>
