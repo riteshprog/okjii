@@ -23,15 +23,24 @@ import SingleShop from "./views/retailShop/./viewSingleShop.jsx";
 import { MyFancyComponent } from "./adminComponents/googleMap/googleMap";
 import AddProductToShop from "./views/retailShop/addItemsToShop";
 import PreReg from "./views/preRegistration/preReg";
-import Users from './views/userManagement/users';
-import SingleShopEdit from './views/retailShop/singleShopEdit';
+import Users from "./views/userManagement/users";
+import SingleShopEdit from "./views/retailShop/singleShopEdit";
 import CustomerDetails from "./views/customer/CustomerDetails";
 import ViewDetailsCustomer from "./views/customer/ViewDetailsCustomer.jsx";
-import Categories from './views/category/viewAllCategories.jsx';
+import Categories from "./views/category/viewAllCategories.jsx";
 import BlogDetails from "./views/blog/BlogDetails";
 import BlogAdd from "./views/blog/BlogAdd.jsx";
 import StoreDetails from "./views/store/StoreDetails.jsx";
 import ViewStoreDetails from "./views/store/ViewStoreDetails.jsx";
+import Wallet from "./views/wallet/wallet";
+import Foodji from "./views/foodJi/foodji";
+import OkkjiSelect from "./views/okkjiSelect/okkjiSelect";
+import Order from "./views/order/order";
+import Payment from "./views/payment/payment";
+import Setting from "./views/settings/setting";
+import StoreSettelment from "./views/storeSettelment/storeSettelment";
+import TotalSale from "./views/totalSale/totalSale";
+
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
   {
@@ -43,30 +52,12 @@ var routes = [
     layout: "/admin"
   },
   {
-    path: "/category",
-    onSideBar: true,
-    name: "Categories",
-    icon: "nc-icon nc-tag-content",
-    accessTo: ['admin', 'market'],
-    component: Categories,
-    layout: "/admin"
-  },
-  {
     path: "/shops",
     onSideBar: true,
     name: "Retailer Shop",
     icon: "nc-icon nc-shop",
-    accessTo: ['admin', 'market'],
+    accessTo: ["admin", "market"],
     component: RetailerShop,
-    layout: "/admin"
-  },
-  {
-    path: "/store",
-    onSideBar: true,
-    name: "Store",
-    icon: "nc-icon nc-shop",
-    accessTo: ['admin', 'market'],
-    component: StoreDetails,
     layout: "/admin"
   },
   {
@@ -75,25 +66,92 @@ var routes = [
     name: "Customer",
     icon: "far fa-user",
     component: CustomerDetails,
-    accessTo: ['admin'],
+    accessTo: ["admin"],
+    layout: "/admin"
+  },
+  {
+    path: "/store",
+    onSideBar: true,
+    name: "Store",
+    icon: "nc-icon nc-shop",
+    accessTo: ["admin", "market"],
+    component: StoreDetails,
+    layout: "/admin"
+  },
+  {
+    path: "/category",
+    onSideBar: true,
+    name: "Store Catalogue",
+    icon: "nc-icon nc-tag-content",
+    accessTo: ["admin", "market"],
+    component: Categories,
+    layout: "/admin"
+  },
+  {
+    path: "/user",
+    onSideBar: true,
+    name: "User",
+    icon: "nc-icon nc-satisfied",
+    component: Users,
+    accessTo: ["admin"],
+    layout: "/admin"
+  },
+  {
+    path: "/Order",
+    onSideBar: true,
+    name: "Order",
+    icon: "nc-icon nc-app",
+    component: Order,
+    layout: "/admin"
+  },
+  {
+    path: "/TotalSale",
+    onSideBar: true,
+    name: "Total Sale",
+    icon: "fa fa-pie-chart",
+    component: TotalSale,
+    layout: "/admin"
+  },
+  {
+    path: "/Payment",
+    onSideBar: true,
+    name: "Payment",
+    icon: "nc-icon nc-money-coins",
+    component: Payment,
+    layout: "/admin"
+  },
+  {
+    path: "/StoreSettelment",
+    onSideBar: true,
+    name: "Store Settelment",
+    icon: "fa fa-credit-card",
+    component: StoreSettelment,
+    layout: "/admin"
+  },
+  {
+    path: "/foodji",
+    onSideBar: true,
+    name: "Foodji",
+    icon: "fa fa-beer",
+    accessTo: ["admin"],
+    component: Foodji,
+    layout: "/admin"
+  },
+  {
+    path: "/OkkjiSelect",
+    onSideBar: true,
+    name: "OkkjiSelect",
+    icon: "nc-icon nc-bulb-63",
+    component: OkkjiSelect,
     layout: "/admin"
   },
   {
     path: "/blog",
     onSideBar: true,
     name: "Blog",
-    icon: "far fa-user",
+    icon: "fa fa-pencil-square-o",
     component: BlogDetails,
-    accessTo: ['admin'],
-    layout: "/admin"
-  },
-  {
-    path: "/user",
-    onSideBar: true,
-    name: "User Mangement",
-    icon: "nc-icon nc-satisfied",
-    component: Users,
-    accessTo: ['admin'],
+    accessTo: ["admin"],
     layout: "/admin"
   },
   {
@@ -101,8 +159,25 @@ var routes = [
     onSideBar: true,
     name: "Pre Registrations",
     icon: "nc-icon nc-badge",
-    accessTo: ['admin'],
+    accessTo: ["admin"],
     component: PreReg,
+    layout: "/admin"
+  },
+  {
+    path: "/wallet",
+    onSideBar: true,
+    name: "Wallet",
+    icon: "fa fa-money",
+    accessTo: ["admin"],
+    component: Wallet,
+    layout: "/admin"
+  },
+  {
+    path: "/Setting",
+    onSideBar: true,
+    name: "Setting",
+    icon: "fa fa-cog",
+    component: Setting,
     layout: "/admin"
   },
 
@@ -112,7 +187,7 @@ var routes = [
     onSideBar: false,
     name: "Customer Details",
     icon: "nc-icon nc-shop",
-    component:   ViewDetailsCustomer,
+    component: ViewDetailsCustomer,
     layout: "/admin"
   },
   {
@@ -120,10 +195,10 @@ var routes = [
     onSideBar: false,
     name: "Store Details",
     icon: "nc-icon nc-shop",
-    component:   ViewStoreDetails,
+    component: ViewStoreDetails,
     layout: "/admin"
   },
-  
+
   // {
   //   path: "/login/loginverify/:loginId",
   //   onSideBar: false,
@@ -146,7 +221,7 @@ var routes = [
     name: "Add New Shop",
     icon: "nc-icon nc-shop",
     component: AddNewShop,
-    accessTo: ['admin', 'market'],
+    accessTo: ["admin", "market"],
     layout: "/admin"
   },
   {
@@ -157,7 +232,7 @@ var routes = [
     component: SingleShopEdit,
     layout: "/admin"
   },
-  
+
   {
     path: "/shops/add-item/:shopId?",
     onSideBar: false,
@@ -172,7 +247,7 @@ var routes = [
     name: "Add Blog",
     icon: "far fa-user",
     component: BlogAdd,
-    accessTo: ['admin'],
+    accessTo: ["admin"],
     layout: "/admin"
   },
 
@@ -184,7 +259,7 @@ var routes = [
     icon: "nc-icon nc-shop",
     component: MyFancyComponent,
     layout: "/admin"
-  },
+  }
 
   // {
   //   path: "/maps",

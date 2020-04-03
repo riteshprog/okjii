@@ -40,7 +40,7 @@ class Sidebar extends React.Component {
         <div className="logo">
           <a href="#" className="simple-text logo-mini" >
             <div className="logo-img">
-              <img src='/SMALL-OKKJI-LOGO.png' alt="react-logo" />
+              <img src='/SMALL-OKKJI-LOGO.PNG' alt="react-logo" />
             </div>
           </a>
           <a href="#" className="simple-text logo-normal"> <i class="fas fa-align-right float-right"></i> </a>

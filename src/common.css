@@ -23,7 +23,7 @@ body{
 }
 
 .sidebar .sidebar-wrapper, .off-canvas-sidebar .sidebar-wrapper{
-  overflow: hidden !important;
+  overflow-x: hidden !important;
 }
 
 .cp{
