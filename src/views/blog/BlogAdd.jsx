@@ -8,7 +8,7 @@ export default class BlogAdd extends Component {
   render() {
     return (
       <>
-        <div className="content">
+        <div className="content add-blog-page">
         <Row className="blog-navbar">
             <Col md="10"><p>Add Blog</p></Col>
             <Col md="2"><p><Link to="admin/blog" type="button" className="btn">BACK</Link> </p></Col>
