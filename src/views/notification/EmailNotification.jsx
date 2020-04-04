@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 //import NotificationNavBar from './NotificationNavBar'
-import { Switch } from 'antd';
 import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter, MDBCollapse, MDBCard, MDBCardBody } from "mdbreact";
 import { CustomInput, Row, Col, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Switch } from 'antd';
 
-
-class Notification extends Component {
+class EmailNotification extends Component {
   state={
     modal4: false,
     modal5: false,
     modal6: false,
     collapseID: "collapse1"
+
+
   }
   
   toggle = nr => () => {
@@ -24,12 +25,14 @@ class Notification extends Component {
   this.setState(prevState => ({
     collapseID: prevState.collapseID !== collapseID ? collapseID : ""
   }));
-  render() { 
+
+  render() {
     const { collapseID } = this.state;
-        return ( 
+ 
+    return ( 
       <div className='content notification-container'>
           <Row className="customer-filter">
-            <Col md="10"><p>Notification <span className="greter-than">></span> Push Notification</p></Col>
+            <Col md="10"><p>Notifications <span className="greter-than">></span> Email Notifications</p></Col>
             <Col md="2" className="filter-search">
             <a onClick={this.toggle(16)}><span className="filter-txt"> Create</span> <span className="pluse-sign"><i class="fas fa-plus"></i></span></a></Col>
           </Row>
@@ -50,7 +53,7 @@ class Notification extends Component {
           <td>Active on my Reviews</td>
           <td><span className="text-green">Customer</span></td>
           <td>17 Nov 2019</td>
-          <td className="text-center"><Switch checkedChildren="yes" unCheckedChildren="no" className="Switch-button" /></td>
+          <td className="text-center"> <Switch checkedChildren="yes" unCheckedChildren="no" /></td>
           <td className="text-center"><MDBDropdown dropleft>
         <MDBDropdownToggle color="primary">
         <i class="fas fa-ellipsis-v" />
@@ -66,7 +69,7 @@ class Notification extends Component {
           <td>Important Updates for Okkji</td>
           <td><span className="text-green">Retail</span></td>
           <td>15 Dec 2019</td>
-          <td className="text-center"><Switch checkedChildren="yes" unCheckedChildren="no" className="Switch-button" /></td>
+          <td className="text-center"><Switch checkedChildren="yes" unCheckedChildren="no" /></td>
           <td className="text-center"><MDBDropdown dropleft>
         <MDBDropdownToggle color="primary">
         <i class="fas fa-ellipsis-v" />
@@ -101,7 +104,7 @@ class Notification extends Component {
     <MDBContainer>
         
         <MDBModal isOpen={this.state.modal14} toggle={this.toggle(14)} centered>
-          <MDBModalHeader toggle={this.toggle(14)}>Edit Push Notification</MDBModalHeader>
+          <MDBModalHeader toggle={this.toggle(14)}>Edit Email Notification</MDBModalHeader>
           <MDBModalBody>
           <FormGroup>
         <Label for="exampleEmail">Parameter</Label>
@@ -145,7 +148,7 @@ class Notification extends Component {
       <MDBContainer>
         
         <MDBModal isOpen={this.state.modal15} toggle={this.toggle(15)} centered>
-          <MDBModalHeader toggle={this.toggle(15)}>Delete Push Notification</MDBModalHeader>
+          <MDBModalHeader toggle={this.toggle(15)}>Delete Email Notification</MDBModalHeader>
           <MDBModalBody>
 You want to Delete &#x201C;PUSH ID Okk01&#x201D; notification, Please Confirme.            </MDBModalBody>
           <MDBModalFooter>
@@ -158,7 +161,7 @@ You want to Delete &#x201C;PUSH ID Okk01&#x201D; notification, Please Confirme. 
       <MDBContainer>
         
         <MDBModal isOpen={this.state.modal16} toggle={this.toggle(16)} centered>
-          <MDBModalHeader toggle={this.toggle(16)}>Create New Push Notification</MDBModalHeader>
+          <MDBModalHeader toggle={this.toggle(16)}>Edit Email Notification</MDBModalHeader>
           <MDBModalBody>
           <FormGroup>
         <Label for="exampleEmail">Parameter</Label>
@@ -169,8 +172,6 @@ You want to Delete &#x201C;PUSH ID Okk01&#x201D; notification, Please Confirme. 
           placeholder="Enter Parameter Name"
         />
       </FormGroup>
-
-      <Label for="exampleSelect">App ID</Label>
       <MDBCard className="collesp-header">
           <h4 onClick={this.toggleCollapse("collapse1")}>
           Selected App ID
@@ -208,4 +209,4 @@ You want to Delete &#x201C;PUSH ID Okk01&#x201D; notification, Please Confirme. 
   }
 }
  
-export default Notification;
+export default EmailNotification;

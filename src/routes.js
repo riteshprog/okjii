@@ -40,6 +40,9 @@ import Payment from "./views/payment/payment";
 import Setting from "./views/settings/setting";
 import StoreSettelment from "./views/storeSettelment/storeSettelment";
 import TotalSale from "./views/totalSale/totalSale";
+import Notification from "./views/notification/notification";
+import EmailNotification from "./views/notification/EmailNotification.jsx";
+import { notification } from "antd";
 
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
@@ -113,6 +116,22 @@ var routes = [
     layout: "/admin"
   },
   {
+    path: "/notification",
+    onSideBar: true,
+    name: "Push Notification",
+    icon: "far fa-bell",
+    component: Notification,
+    layout: "/admin"
+  },
+  {
+    path: "/EmailNotification",
+    onSideBar: true,
+    name: "Email Notification",
+    icon: "far fa-bell",
+    component: EmailNotification,
+    layout: "/admin"
+  },
+   {
     path: "/Payment",
     onSideBar: true,
     name: "Payment",

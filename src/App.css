@@ -3467,6 +3467,148 @@ z-index: 5;
 
 /*  Blog Page End   */
 
+/*  Notification Page start */
+
+.notification-container .customer-filter p{
+  font-size:1.1rem;
+  color: #5e5e5e;
+  font-weight: 500;
+}
+
+.greter-than{
+  margin-left:1rem;
+  margin-right: 1rem;
+}
+
+.filter-txt{
+  font-size:1.1rem;
+  font-weight: 400;
+}
+.pluse-sign i{
+  background-color: #259d70;
+  border-radius: 50%;
+  padding: 10px;
+  color:#fff;
+  font-size:1rem;
+}
+
+.notification-container .customer-table {
+  margin-top: 2%; 
+  border: 2px solid #fff;
+  box-shadow: 1px 1px 11px 3px #cfcfcf;
+  border-radius: 5px !important;
+}
+
+.notification-container .customer-table thead th{
+  padding:1.5rem;
+  border-bottom: 1px solid #757676;
+  border-right:1px solid #757676;
+  vertical-align: middle;
+}
+.notification-container .customer-table tbody td{
+  padding:1.5rem;
+  border-right:1px solid #757676;
+  vertical-align: middle;
+
+}
+
+
+.notification-container input:focus ~ label, input:valid ~ label {
+  top: auto !important;
+  font-size: 14px;
+  color: #444444;
+}
+
+.notification-container .custom-control {
+  width: auto;
+}
+
+.notification-container .close{
+  display:none;
+} 
+
+.notification-container h4{
+margin-top:.5rem;
+font-size: 1.2rem;
+font-weight: 500;
+color:#289C71;
+}
+
+.notification-container .modal-body{
+  margin-top:1rem;
+  
+}
+
+.notification-container .modal-body input, .notification-container .modal-body select, .notification-container .card{
+  width:80%;
+}
+.notification-container .form-control{
+  border:1px solid #289C71 !important;
+  font-size: .8rem;
+  border-radius: none !important;
+
+}
+.notification-container .input::placeholder{
+  font-size:.9rem;
+}
+
+.notification-container .modal-footer{
+  border-top:none;
+}
+
+.notification-container .modal-footer .btn:first-child{
+  background-color: #259D70 !important;
+  text-transform: uppercase !important;
+  padding: .5rem 2rem;
+  font-weight: 400 !important;
+}
+
+.notification-container .modal-footer .btn:last-child{
+  text-transform: uppercase !important;
+  padding: .5rem 1rem;
+  font-weight: 400 !important;
+  border:1px solid #259d70 !important;
+}
+
+.notification-container .modal-footer .btn:last-child:hover{
+  background-color: #259d70 !important;
+}
+
+.notification-container .dropdown-item:hover{
+  background-color: #fff !important;
+}
+
+.notification-container .collesp-header{
+  margin-bottom: 0px;
+  padding: 0rem .7rem;
+}
+
+.notification-container .collesp-header h4{
+  font-size:1rem;
+  color:#5e5e5e;
+}
+
+.notification-container .card{
+  box-shadow: none;
+  border:1px solid #259d70;
+  border-radius: 5px;
+
+}
+
+.notification-container .ant-switch-inner{
+  color:#259d70;
+  text-transform: uppercase;
+
+}
+
+.notification-container .ant-switch-checked, .notification-container .ant-switch {
+  background-color: transparent !important;
+  border:1px solid #259d70;
+}
+
+/* Notification Page end */
+
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
   .navbar .navbar-toggler {
