@@ -3606,6 +3606,14 @@ color:#289C71;
   border:1px solid #259d70;
 }
 
+.show.basic.dropdown-menu.dropdown-bottom {
+  top: 30px !important;
+  left: 30px !important;
+}
+
+.notification-container .dropdown-menu{
+  border-radius: 0px !important;
+}
 /* Notification Page end */
 
 
