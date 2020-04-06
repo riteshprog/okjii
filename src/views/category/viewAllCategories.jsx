@@ -6,7 +6,7 @@ import { Row, Col, Button, Modal, ModalBody, ModalFooter, ModalHeader, FormGroup
 
 const { Option } = Select;
 
-class Categories extends React.Component {
+export default class Categories extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -87,14 +87,14 @@ class Categories extends React.Component {
             <Col className="pl-1" md="10">
               <FormGroup>
                 <label htmlFor="userName">Category Name</label>
-                <Input placeholder="Enter Category Name" value={this.state.newCategory.name} onChange={(e) => this.handleOnChange(e, "name")} type="text" />
+                <Input placeholder="Enter Category Name" value={this.state.newCategory.name} onChange={(e) => this.handleOnChange(e, 'category', "name")} type="text" />
               </FormGroup>
             </Col>
             <Col className="pl-1" md="10">
               <FormGroup>
                 <label htmlFor="userName">Select Sub-Category</label>
-                <Select mode="multiple" style={{ width: "100%" }} placeholder="Select Sub Category" onSelect={(e)=>this.handleOnSelect(e, 'subCategoies')}>
-                  {this.state.allSubCategories.map(sub=><Option key={sub.name}>{sub.name}</Option>)}}
+                <Select mode="tags" tokenSeparators={[',']} style={{ width: "100%" }} placeholder="Select Sub Category" onDeselect={(e)=>this.handleOnSelect(e, 'category', 'subCategoies')} onSelect={(e)=>this.handleOnSelect(e, 'category', 'subCategoies')}>
+                  {this.state.allSubCategories.map(sub=><Option key={sub._id}>{sub.name}</Option>)}}
                 </Select>
               </FormGroup>
             </Col>
@@ -128,14 +128,14 @@ class Categories extends React.Component {
             <Col className="pl-1" md="10">
               <FormGroup>
                 <label htmlFor="userName">Sub Category Name</label>
-                <Input placeholder="Enter Sub Category Name" value={this.state.newSubCategory.name} onChange={(e) => this.handleOnChange(e, "name")} type="text" />
+                <Input placeholder="Enter Sub Category Name" value={this.state.newSubCategory.name} onChange={(e) => this.handleOnChange(e, 'subCategory', "name")} type="text" />
               </FormGroup>
             </Col>
             <Col className="pl-1" md="10">
               <FormGroup>
                 <label htmlFor="userName">Select Sub-Category</label>
-                <Select value={this.state.newSubCategory.categories} mode={'multiple'} style={{ width: "100%" }} placeholder="Select Sub Category" onSelect={(e)=>this.handleOnSelect(e, 'categoies')}>
-                  {this.state.allSubCategories.map(sub=><Option key={sub.name}>{sub.name}</Option>)}}
+                <Select value={this.state.newSubCategory.categories} mode={'multiple'} style={{ width: "100%" }} placeholder="Select Sub Category" onDeselect={(e)=>this.handleOnSelect(e, 'subCategory', 'categoies')} onSelect={(e)=>this.handleOnSelect(e, 'subCategory', 'categoies')}>
+                  {this.state.allSubCategories.map(sub=><Option key={sub.name}>{sub.name}</Option>)}
                 </Select>
               </FormGroup>
             </Col>
@@ -164,17 +164,39 @@ class Categories extends React.Component {
 
   toggleAddNewSubCategory = () => this.setState({ addNewSubCategoryModalVisibility: !this.state.addNewSubCategoryModalVisibility, errorMessage: `` });
 
-  handleOnChange = (e, key) => {
-    let { newCategory } = this.state;
-    newCategory[key] = e.target.value;
-    this.setState({ newCategory });
+  handleOnChange = (e, type, key) => {
+    if(type === 'category'){
+      let { newCategory } = this.state;
+      newCategory[key] = e.target.value;
+      this.setState({ newCategory });
+    }else if(type === 'subCategory') {
+      let { newSubCategory } = this.state;
+      newSubCategory[key] = e.target.value;
+      this.setState({ newSubCategory });
+    }
   };
-  handleOnSelect = (e, key) => {
-    let { newCategory } = this.state;
-    newCategory[key] = e;
-    this.setState({ newCategory });
-  }
 
+  handleOnSelect = (e, type, key) => {
+    console.log(e, type, key)
+    if(type === 'category'){
+      let { newCategory } = this.state;
+      let index = newCategory[key].indexOf(e);
+      
+      if(index == -1) newCategory[key].push(e);
+      else newCategory[key].splice(index, 1);
+      
+      this.setState({ newCategory });
+    
+    }else if(type === 'subCategory') {
+      let { newSubCategory } = this.state;
+      let index = newSubCategory[key].indexOf(e);
+
+      if(index === -1) newSubCategory[key].push(e);
+      else newSubCategory[key].splice(index, 1);
+      
+      this.setState({ newSubCategory });
+    }
+  }
 
   handleOnAddNewCategorySave = () => {
     let { newCategory, errorMessage } = this.state;
@@ -231,6 +253,4 @@ class Categories extends React.Component {
       </>
     );
   }
-}
-
-export default Categories;
+  }

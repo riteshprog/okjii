@@ -37,7 +37,7 @@ class App extends React.Component {
     };
   }
   componentDidMount() {
-    if(window.location.hostname.split('.')[0] == 'admin'){
+    if(window.location.hostname.split('.')[0] == 'admin' || window.location.hostname.split('.')[0] == 'devadmin'){
       this.setState({showAdmin: true});
     }
   }
