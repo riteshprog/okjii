@@ -1,125 +1,256 @@
 import React from "react";
 import Axios from "axios";
-import { Radio, message } from 'antd';
-import { Card, CardHeader, CardBody, CardTitle, Row, Col, Button, Modal, ModalBody, ModalFooter, ModalHeader, FormGroup, Form, Input } from "reactstrap";
-import { Avatar, Table, Tag } from 'antd';
-import moment from 'moment-timezone';
+import moment from "moment-timezone";
+import { Radio, message, Table, Select  } from "antd";
+import { Row, Col, Button, Modal, ModalBody, ModalFooter, ModalHeader, FormGroup, Form, Input } from "reactstrap";
 
-class Categories extends React.Component {
+const { Option } = Select;
+
+export default class Categories extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       showActions: false,
       allCategories: [],
+      allSubCategories: [],
       addNewCategoryModalVisibility: false,
+      addNewSubCategoryModalVisibility: false,
       newCategory: {
-        name: ''
+        name: "",
+        subCategoies: []
       },
-      errorMessage: ''
+      newSubCategory: {
+        name: "",
+        categoies: []
+      },
+      errorMessage: "",
     };
   }
 
-  columns = [
+  categoriesColumns = [
     {
-      title: 'Categories',
-      dataIndex: 'name',
-      key: '_id',
-      render: name => <span>{name}</span>,
-    }
-  ]
+      title: "Categories",
+      dataIndex: "name",
+      key: "_id",
+      render: (name) => <span>{name}</span>,
+    },
+  ];
+
+  subCategoriesColumns = [
+    {
+      title: "Sub Categories",
+      dataIndex: "name",
+      key: "_id",
+      render: (name) => <span>{name}</span>,
+    },
+  ];
 
   componentDidMount() {
+    this.getAllCategories();
+    this.getAllSubCategories();
+  }
+  
+  getAllCategories = () => {
     Axios.get(process.env.REACT_APP_API_URL + "/category")
-      .then(({ data }) => {
-        if (data.status) {
-          this.setState({ allCategories: data.allCategories });
-        } else {
-          console.log("no allCategories found");
-        }
-      })
-      .catch(err => {
-        console.log(`catch`, err);
-      });
+    .then(({ data }) => {
+      if (data.status) {
+        this.setState({ allCategories: data.allCategories });
+      } else {
+        console.log("no category found");
+      }
+    })
+    .catch((err) => {
+      console.log(`catch`, err);
+    });
+  }
+  getAllSubCategories = () => {
+   Axios.get(process.env.REACT_APP_API_URL + "/sub-category")
+    .then(({ data }) => {
+      if (data.status) {
+        console.log(`sub categories`, data)
+        this.setState({ allSubCategories: data.allSubCategories });
+      } else {
+        console.log("no subcategory found");
+      }
+    })
+    .catch((err) => {
+      console.log(`catch`, err);
+    }); 
   }
 
-  renderAddNewModal = () => (
+  renderAddNewCategoryModal = () => (
     <Modal isOpen={this.state.addNewCategoryModalVisibility} toggle={this.toggleAddNewCategory} >
-      <ModalHeader toggle={this.toggleAddNewCategory}>Add New Category</ModalHeader>
+      <ModalHeader toggle={this.toggleAddNewCategory}> Add New Category </ModalHeader>
       <ModalBody>
         <Form>
-          <Row className='df jcc'>
+          <Row className="df jcc">
             <Col className="pl-1" md="10">
               <FormGroup>
-                <label htmlFor="userName">
-                  Category Name
-                </label>
-                <Input placeholder="Enter Category Name" value={this.state.newCategory.name} onChange={(e)=>this.handleOnChange(e, 'name')} type="text" />
+                <label htmlFor="userName">Category Name</label>
+                <Input placeholder="Enter Category Name" value={this.state.newCategory.name} onChange={(e) => this.handleOnChange(e, 'category', "name")} type="text" />
+              </FormGroup>
+            </Col>
+            <Col className="pl-1" md="10">
+              <FormGroup>
+                <label htmlFor="userName">Select Sub-Category</label>
+                <Select mode="tags" tokenSeparators={[',']} style={{ width: "100%" }} placeholder="Select Sub Category" onDeselect={(e)=>this.handleOnSelect(e, 'category', 'subCategoies')} onSelect={(e)=>this.handleOnSelect(e, 'category', 'subCategoies')}>
+                  {this.state.allSubCategories.map(sub=><Option key={sub._id}>{sub.name}</Option>)}}
+                </Select>
               </FormGroup>
             </Col>
           </Row>
         </Form>
-               
       </ModalBody>
       <ModalFooter>
-        {this.state.errorMessage?<span className='mr-3 text-danger'>{this.state.errorMessage}</span>:null}
-        <Button id='save-btn' color="primary" onClick={this.handleOnAddNewCategorySave}>Add</Button>
-        <Button color="secondary" onClick={this.toggleAddNewCategory}>Cancel</Button>
+        {this.state.errorMessage ? (
+          <span className="mr-3 text-danger">{this.state.errorMessage}</span>
+        ) : null}
+        <Button
+          id="save-btn"
+          color="primary"
+          onClick={this.handleOnAddNewCategorySave}
+        >
+          Add
+        </Button>
+        <Button color="secondary" onClick={this.toggleAddNewCategory}>
+          Cancel
+        </Button>
       </ModalFooter>
     </Modal>
-  )
+  );
 
-  toggleAddNewCategory = () => this.setState({addNewCategoryModalVisibility: !this.state.addNewCategoryModalVisibility, errorMessage: ``});
-  
-  handleOnChange = (e, key) => {
-    let {newCategory} = this.state;
-    newCategory[key] = e.target.value;
-    this.setState({newCategory});
-  }
-  
-  handleOnAddNewCategorySave = () => {
-    let {newCategory, errorMessage} = this.state;
-    if(!newCategory.name) this.setState({errorMessage: 'Invalid Category Name'});
-    else if(!errorMessage) {
-      Axios.post(process.env.REACT_APP_API_URL + '/category', newCategory).then(({data})=>{
-        if(!data.status){
-          this.setState({errorMessage: data.errorMessage});
-        }else {
-          message.success(`New Category Added Successfully`);
-          this.setState({errorMessage: ``, addNewCategoryModalVisibility: false})
-        }
-      }).catch((er)=>{
-        this.setState({errorMessage: `Something went wrong`})
-      })
+  renderAddNewSubCategoryModal = () => (
+    <Modal isOpen={this.state.addNewSubCategoryModalVisibility} toggle={this.toggleAddNewSubCategory} >
+      <ModalHeader toggle={this.toggleAddNewSubCategory}> Add New Sub Category </ModalHeader>
+      <ModalBody>
+        <Form>
+          <Row className="df jcc">
+            <Col className="pl-1" md="10">
+              <FormGroup>
+                <label htmlFor="userName">Sub Category Name</label>
+                <Input placeholder="Enter Sub Category Name" value={this.state.newSubCategory.name} onChange={(e) => this.handleOnChange(e, 'subCategory', "name")} type="text" />
+              </FormGroup>
+            </Col>
+            <Col className="pl-1" md="10">
+              <FormGroup>
+                <label htmlFor="userName">Select Sub-Category</label>
+                <Select value={this.state.newSubCategory.categories} mode={'multiple'} style={{ width: "100%" }} placeholder="Select Sub Category" onDeselect={(e)=>this.handleOnSelect(e, 'subCategory', 'categoies')} onSelect={(e)=>this.handleOnSelect(e, 'subCategory', 'categoies')}>
+                  {this.state.allSubCategories.map(sub=><Option key={sub.name}>{sub.name}</Option>)}
+                </Select>
+              </FormGroup>
+            </Col>
+          </Row>
+        </Form>
+      </ModalBody>
+      <ModalFooter>
+        {this.state.errorMessage ? (
+          <span className="mr-3 text-danger">{this.state.errorMessage}</span>
+        ) : null}
+        <Button
+          id="save-btn"
+          color="primary"
+          onClick={this.handleOnAddNewCategorySave}
+        >
+          Add
+        </Button>
+        <Button color="secondary" onClick={this.toggleAddNewSubCategory}>
+          Cancel
+        </Button>
+      </ModalFooter>
+    </Modal>
+  );
+
+  toggleAddNewCategory = () => this.setState({ addNewCategoryModalVisibility: !this.state.addNewCategoryModalVisibility, errorMessage: `` });
+
+  toggleAddNewSubCategory = () => this.setState({ addNewSubCategoryModalVisibility: !this.state.addNewSubCategoryModalVisibility, errorMessage: `` });
+
+  handleOnChange = (e, type, key) => {
+    if(type === 'category'){
+      let { newCategory } = this.state;
+      newCategory[key] = e.target.value;
+      this.setState({ newCategory });
+    }else if(type === 'subCategory') {
+      let { newSubCategory } = this.state;
+      newSubCategory[key] = e.target.value;
+      this.setState({ newSubCategory });
+    }
+  };
+
+  handleOnSelect = (e, type, key) => {
+    console.log(e, type, key)
+    if(type === 'category'){
+      let { newCategory } = this.state;
+      let index = newCategory[key].indexOf(e);
+      
+      if(index == -1) newCategory[key].push(e);
+      else newCategory[key].splice(index, 1);
+      
+      this.setState({ newCategory });
+    
+    }else if(type === 'subCategory') {
+      let { newSubCategory } = this.state;
+      let index = newSubCategory[key].indexOf(e);
+
+      if(index === -1) newSubCategory[key].push(e);
+      else newSubCategory[key].splice(index, 1);
+      
+      this.setState({ newSubCategory });
     }
   }
+
+  handleOnAddNewCategorySave = () => {
+    let { newCategory, errorMessage } = this.state;
+    if (!newCategory.name)
+      this.setState({ errorMessage: "Invalid Category Name" });
+    else if (!errorMessage) {
+      Axios.post(process.env.REACT_APP_API_URL + "/category", newCategory)
+        .then(({ data }) => {
+          if (!data.status) {
+            this.setState({ errorMessage: data.errorMessage });
+          } else {
+            message.success(`New Category Added Successfully`);
+            this.setState({
+              errorMessage: ``,
+              addNewCategoryModalVisibility: false,
+            });
+          }
+        })
+        .catch((er) => {
+          this.setState({ errorMessage: `Something went wrong` });
+        });
+    }
+  };
 
   render() {
     return (
       <>
         <div className="content">
           <Row>
-            <Col md="12">
-              <Card>
-                <CardHeader>
-                  <CardTitle tag="h4">Categories</CardTitle>
-                </CardHeader>
-                <CardBody>
-                  <Button color="primary" onClick={this.toggleAddNewCategory}>Add New Category</Button>
-                  <Row>
-                    <Col className="pr-1" md={12}>
-                      <Table  columns={this.columns} dataSource={this.state.allCategories} />  
-                    </Col>
-                  </Row>
-                  
-                </CardBody>
-              </Card>
+            <Col md="6">
+              <Button color="primary" onClick={this.toggleAddNewCategory}>
+                Add New Category
+              </Button>
+              <Row>
+                <Col className="pr-1" md={12}>
+                  <Table columns={this.categoriesColumns} dataSource={this.state.allCategories} />
+                </Col>
+              </Row>
             </Col>
-            {this.renderAddNewModal()}
+            <Col md="6">
+              <Button color="primary" onClick={this.toggleAddNewSubCategory}>
+                Add New Sub Category
+              </Button>
+              <Row>
+                <Col className="pr-1" md={12}>
+                  <Table columns={this.subCategoriesColumns} dataSource={this.state.allSubCategories} />
+                </Col>
+              </Row>
+            </Col>
+            {this.renderAddNewCategoryModal()}
+            {this.renderAddNewSubCategoryModal()}
           </Row>
         </div>
       </>
     );
   }
-}
-
-export default Categories;
+  }

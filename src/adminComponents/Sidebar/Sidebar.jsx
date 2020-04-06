@@ -3,6 +3,9 @@ import { NavLink } from "react-router-dom";
 import { Nav } from "reactstrap";
 import PerfectScrollbar from "perfect-scrollbar";
 import CookieHandler from '../../utils/cookieHandler';
+import { Menu } from "antd";
+import {Link} from 'react-router-dom'
+const { SubMenu } = Menu;
 
 var ps;
 
@@ -35,6 +38,7 @@ class Sidebar extends React.Component {
     }
   }
   render() {
+    console.log(`this.props.routes`, this.props.routes);
     return (
       <div className="sidebar" data-color={this.props.bgColor} data-active-color={this.props.activeColor}>
         <div className="logo">
@@ -46,19 +50,28 @@ class Sidebar extends React.Component {
           <a href="#" className="simple-text logo-normal"> <i class="fas fa-align-right float-right"></i> </a>
         </div>
         <div className="sidebar-wrapper" ref={this.sidebar}>
-          {console.log(this.state.userData)};
           <Nav>
-            {this.props.routes.map((prop, key) => {
-              // if(prop.accessTo.includes(this.state.userData))
-              return (
-                <li className={ this.activeRoute(prop.path) + (prop.pro ? " active-pro" : "") } key={key} >
-                  <NavLink to={prop.layout + prop.path} className="nav-link" activeClassName="active" >
-                    <i className={prop.icon} />
-                    <p>{prop.name}</p>
-                  </NavLink>
-                </li>
-              );
-            })}
+            {this.props.routes.map((prop, key) => (prop.type != 'subMenu')?(
+              <li className={ this.activeRoute(prop.path) + (prop.pro ? "active-pro" : "") } key={key} >
+                <NavLink to={prop.layout + prop.path} className="nav-link" activeClassName="active" >
+                  <i className={prop.icon} />
+                  <p>{prop.name}</p>
+                </NavLink>
+              </li>
+            ):(
+              <Menu mode="inline" >
+              <SubMenu className='nav-link'
+                style={{backgroundColor: '#eee'}}
+                title={
+                  <span>
+                    <i className={prop.icon}/>
+                    <p>{prop.subMenuTitle}</p>
+                  </span>
+                }>
+                  {prop.routes.map((subMenu, i)=><Menu.Item className='nav-link' ><Link to={subMenu.path}>{subMenu.name}</Link></Menu.Item>)}
+              </SubMenu>
+              </Menu>
+            ))}
           </Nav>
         </div>
       </div>

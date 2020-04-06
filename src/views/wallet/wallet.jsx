@@ -24,7 +24,7 @@ class Wallet extends Component {
                 <div class="customer-filter wallet-row">
                   <div class="col-md-9">
                     <p>
-                      Customer <i class="left-space fa fa-angle-right"></i>{" "}
+                      Customer <i class="left-space fa fa-angle-right"></i>
                       Wallet
                     </p>
                   </div>
