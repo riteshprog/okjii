@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Switch } from 'antd';
+
 import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 import avatar from '../../img/home/avatar.png';
@@ -12,7 +14,7 @@ export default class StoreDetails extends Component {
   render() {
     return (
       <>
-        <div className="content">
+        <div className="content store-page">
           <CustomerNavBar />
          <MDBTable className="customer-table" striped>
       <MDBTableHead>
@@ -33,8 +35,8 @@ export default class StoreDetails extends Component {
           <td><span className="text-green">Ravi Kumar Singh</span></td>
           <td>9876543210</td>
           <td>Kankarbagh</td>
-          <td className="text-center"><CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch"  /></td>
-          <td className="text-center"><MDBDropdown dropleft>
+          <td className="text-center"><Switch checkedChildren="yes" unCheckedChildren="no" className="Switch-button" /></td>
+         <td className="text-center"><MDBDropdown dropleft>
         <MDBDropdownToggle color="primary">
         <i class="fas fa-ellipsis-v" />
         </MDBDropdownToggle>
@@ -55,7 +57,7 @@ export default class StoreDetails extends Component {
           <td><span className="text-green">Praveen Kumar</span></td>
           <td>9998887777</td>
           <td>Kankarbagh</td>
-          <td className="text-center"><CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch"  /></td>
+          <td className="text-center"><Switch checkedChildren="yes" unCheckedChildren="no" className="Switch-button" /></td>
           <td className="text-center"><MDBDropdown dropleft>
         <MDBDropdownToggle color="primary">
         <i class="fas fa-ellipsis-v" />
@@ -77,7 +79,7 @@ export default class StoreDetails extends Component {
           <td><span className="text-green">Ravinesh Gupta</span></td>
           <td>9876543210</td>
           <td>Kankarbagh</td>
-          <td className="text-center"><CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch"  /></td>
+          <td className="text-center"><Switch checkedChildren="yes" unCheckedChildren="no" className="Switch-button" /></td>
           <td className="text-center"><MDBDropdown dropleft>
         <MDBDropdownToggle color="primary">
         <i class="fas fa-ellipsis-v" />
@@ -99,7 +101,7 @@ export default class StoreDetails extends Component {
           <td><span className="text-green">Sumit Kumar Singh</span></td>
           <td>9999999999</td>
           <td>Bhootnath</td>
-          <td className="text-center"><CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch"  /></td>
+          <td className="text-center"><Switch checkedChildren="yes" unCheckedChildren="no" className="Switch-button" /></td>
           <td className="text-center"><MDBDropdown dropleft>
         <MDBDropdownToggle color="primary">
         <i class="fas fa-ellipsis-v" />
@@ -121,7 +123,7 @@ export default class StoreDetails extends Component {
           <td><span className="text-green">Sudhir Kumar</span></td>
           <td>9876543210</td>
           <td>Bhootnath</td>
-          <td className="text-center"><CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch"  /></td>
+          <td className="text-center"><Switch checkedChildren="yes" unCheckedChildren="no" className="Switch-button" /></td>
           <td className="text-center"><MDBDropdown dropleft>
         <MDBDropdownToggle color="primary">
         <i class="fas fa-ellipsis-v" />
@@ -143,7 +145,7 @@ export default class StoreDetails extends Component {
           <td><span className="text-green">Yashwant Singh Yadav</span></td>
           <td>8888888888</td>
           <td>BhootNath</td>
-          <td className="text-center"><CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch"  /></td>
+          <td className="text-center"><Switch checkedChildren="yes" unCheckedChildren="no" className="Switch-button" /></td>
           <td className="text-center"><MDBDropdown dropleft>
         <MDBDropdownToggle color="primary">
         <i class="fas fa-ellipsis-v" />
@@ -159,10 +161,10 @@ export default class StoreDetails extends Component {
         </MDBDropdownMenu>
       </MDBDropdown></td>
         </tr>
-
-
       </MDBTableBody>
     </MDBTable>
+
+
    
         </div>
       </>

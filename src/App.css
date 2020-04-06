@@ -3820,11 +3820,11 @@ color:#289C71;
   border-bottom: 1px solid #AEB0AF;
 }
 
-.product-details .customer-table thead th{
+.product-details .customer-table thead th, .store-page .customer-table thead th {
   padding: 1.5rem 1rem;
 }
 
-.product-details .customer-table tbody td{
+.product-details .customer-table tbody td, .store-page .customer-table tbody td {
   padding: 1rem !important;
 }
 
