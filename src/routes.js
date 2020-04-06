@@ -43,6 +43,8 @@ import TotalSale from "./views/totalSale/totalSale";
 import Notification from "./views/notification/notification";
 import EmailNotification from "./views/notification/EmailNotification.jsx";
 import { notification } from "antd";
+import MessagesPage from "./views/messages/MessagesPage.jsx";
+import ProductDetails from "./views/product/ProductDetails.jsx";
 
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
@@ -148,6 +150,15 @@ var routes = [
     layout: "/admin"
   },
   {
+    path: "/store/product/:storeId",
+    onSideBar: false,
+    name: "Product",
+    icon: "fa fa-credit-card",
+    component: ProductDetails,
+    layout: "/admin"
+  },
+
+  {
     path: "/foodji",
     onSideBar: true,
     name: "Foodji",
@@ -170,6 +181,15 @@ var routes = [
     name: "Blog",
     icon: "fa fa-pencil-square-o",
     component: BlogDetails,
+    accessTo: ["admin"],
+    layout: "/admin"
+  },
+  {
+    path: "/messages",
+    onSideBar: true,
+    name: "Messages",
+    icon: "fa fa-pencil-square-o",
+    component: MessagesPage,
     accessTo: ["admin"],
     layout: "/admin"
   },
@@ -243,6 +263,7 @@ var routes = [
     accessTo: ["admin", "market"],
     layout: "/admin"
   },
+
   {
     path: "/shops/single/edit/:shopId",
     onSideBar: false,

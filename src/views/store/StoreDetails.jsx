@@ -40,7 +40,7 @@ export default class StoreDetails extends Component {
         </MDBDropdownToggle>
         <MDBDropdownMenu  basic className="dropdown-bottom" >
           <MDBDropdownItem><Link to="store/viewstoredetails/:storeId">View Details</Link></MDBDropdownItem>
-          <MDBDropdownItem>Product</MDBDropdownItem>
+          <MDBDropdownItem><Link to="store/product/:storeId">Product</Link></MDBDropdownItem>
           <MDBDropdownItem>Wallet</MDBDropdownItem>
           <MDBDropdownItem>OkkJi Khata</MDBDropdownItem>
           <MDBDropdownItem>Setting</MDBDropdownItem>
@@ -62,7 +62,7 @@ export default class StoreDetails extends Component {
         </MDBDropdownToggle>
         <MDBDropdownMenu  basic className="dropdown-bottom" >
           <MDBDropdownItem><Link to="store/viewstoredetails/:storeId">View Details</Link></MDBDropdownItem>
-          <MDBDropdownItem>Product</MDBDropdownItem>
+          <MDBDropdownItem><Link to="store/product/:storeId">Product</Link></MDBDropdownItem>
           <MDBDropdownItem>Wallet</MDBDropdownItem>
           <MDBDropdownItem>OkkJi Khata</MDBDropdownItem>
           <MDBDropdownItem>Setting</MDBDropdownItem>
@@ -84,7 +84,7 @@ export default class StoreDetails extends Component {
         </MDBDropdownToggle>
         <MDBDropdownMenu  basic className="dropdown-bottom" >
           <MDBDropdownItem><Link to="store/viewstoredetails/:storeId">View Details</Link></MDBDropdownItem>
-          <MDBDropdownItem>Product</MDBDropdownItem>
+          <MDBDropdownItem><Link to="store/product/:storeId">Product</Link></MDBDropdownItem>
           <MDBDropdownItem>Wallet</MDBDropdownItem>
           <MDBDropdownItem>OkkJi Khata</MDBDropdownItem>
           <MDBDropdownItem>Setting</MDBDropdownItem>
@@ -106,7 +106,7 @@ export default class StoreDetails extends Component {
         </MDBDropdownToggle>
         <MDBDropdownMenu  basic className="dropdown-bottom" >
           <MDBDropdownItem><Link to="store/viewstoredetails/:storeId">View Details</Link></MDBDropdownItem>
-          <MDBDropdownItem>Product</MDBDropdownItem>
+          <MDBDropdownItem><Link to="store/product/:storeId">Product</Link></MDBDropdownItem>
           <MDBDropdownItem>Wallet</MDBDropdownItem>
           <MDBDropdownItem>OkkJi Khata</MDBDropdownItem>
           <MDBDropdownItem>Setting</MDBDropdownItem>
@@ -128,7 +128,7 @@ export default class StoreDetails extends Component {
         </MDBDropdownToggle>
         <MDBDropdownMenu  basic className="dropdown-bottom" >
           <MDBDropdownItem><Link to="store/viewstoredetails/:storeId">View Details</Link></MDBDropdownItem>
-          <MDBDropdownItem>Product</MDBDropdownItem>
+          <MDBDropdownItem><Link to="store/product/:storeId">Product</Link></MDBDropdownItem>
           <MDBDropdownItem>Wallet</MDBDropdownItem>
           <MDBDropdownItem>OkkJi Khata</MDBDropdownItem>
           <MDBDropdownItem>Setting</MDBDropdownItem>
@@ -150,7 +150,7 @@ export default class StoreDetails extends Component {
         </MDBDropdownToggle>
         <MDBDropdownMenu  basic className="dropdown-bottom" >
           <MDBDropdownItem><Link to="store/viewstoredetails/:storeId">View Details</Link></MDBDropdownItem>
-          <MDBDropdownItem>Product</MDBDropdownItem>
+          <MDBDropdownItem><Link to="store/product/:storeId">Product</Link></MDBDropdownItem>
           <MDBDropdownItem>Wallet</MDBDropdownItem>
           <MDBDropdownItem>OkkJi Khata</MDBDropdownItem>
           <MDBDropdownItem>Setting</MDBDropdownItem>
