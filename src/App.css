@@ -13,6 +13,18 @@ section.okkji-faq.offer-mobile {
   display: none;
 }
 
+.sidebar .sidebar-wrapper li.active>a:not([data-toggle=collapse]):after {
+  border-right: 0px solid #f4f3ef;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -17px;
+  opacity: 1;
+  top: 7px;
+  transition: opacity .15s ease-in;
+}
 .row.text-center.mobile {
   display: none;
 }
@@ -3265,6 +3277,7 @@ input.no-border.form-control {
   background-color: #259d70;
   border-radius: 50%;
   padding: 6px;
+  font-size: .8rem;
   color: #fff;
   transform: rotate(90deg);
 }
@@ -3273,6 +3286,7 @@ input.no-border.form-control {
   background-color: #259d70;
   border-radius: 50%;
   padding: 8px;
+  font-size: .8rem;
   color: #fff;
 
 }
@@ -3800,10 +3814,22 @@ color:#289C71;
 
 }
 
-.product-details  .form-group{
+.product-details .product-form .form-group{
   margin-right:1rem;
 }
 
+.product-details .product-form .form-group:last-child{
+  margin-right:0rem;
+}
+
+.product-details .form-group{
+  padding-bottom: .5rem;
+}
+
+.product-details .modal-footer{
+  padding-top:.5rem;
+  justify-content: center !important;
+}
 
 .product-form{
   display: flex;
@@ -3820,11 +3846,11 @@ color:#289C71;
   border-bottom: 1px solid #AEB0AF;
 }
 
-.product-details .customer-table thead th{
+.product-details .customer-table thead th, .store-page .customer-table thead th {
   padding: 1.5rem 1rem;
 }
 
-.product-details .customer-table tbody td{
+.product-details .customer-table tbody td, .store-page .customer-table tbody td {
   padding: 1rem !important;
 }
 
@@ -3852,6 +3878,7 @@ color:#289C71;
   width: auto !important;
   border-radius: 15px;
 }
+
 
 /* Product Page End */
 
