@@ -264,21 +264,12 @@ img {
 #table-comment {
     font-size: 16px
 }
-<<<<<<< HEAD
 .customer-table{
     margin-top: 2%;
     border: 2px solid #fff;
     box-shadow: 2px 2px 2px 2px #CFCFCF;
     border-radius: 5px;
     width: auto;
-=======
-.customer-table {
-  margin-top: 6%;
-  border: 2px solid #fff;
-  box-shadow: 0px 1px 3px 3px #cfcfcf;
-  border-radius: 5px;
-  width: auto;
->>>>>>> edb48651fc8771ded788696a85d68e28d1e3f5dc
 }
 
 .customer-table-th {
