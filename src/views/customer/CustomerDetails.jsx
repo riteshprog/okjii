@@ -38,8 +38,8 @@ export default class CustomerDetails extends Component {
         </MDBDropdownToggle>
         <MDBDropdownMenu  basic className="dropdown-bottom" >
           <MDBDropdownItem><Link to="customer/singlecustomer/:custId">View Details</Link></MDBDropdownItem>
-          <MDBDropdownItem>Wallet</MDBDropdownItem>
-          <MDBDropdownItem>OkkJi Khata</MDBDropdownItem>
+          <MDBDropdownItem><Link to="customer/customer-wallet/:custId">Wallet</Link></MDBDropdownItem>
+          <MDBDropdownItem><Link to="customer/okkji-khata/:custId">OkkJi Khata</Link></MDBDropdownItem>
           <MDBDropdownItem>Setting</MDBDropdownItem>
         </MDBDropdownMenu>
       </MDBDropdown></td>
@@ -56,7 +56,7 @@ export default class CustomerDetails extends Component {
         </MDBDropdownToggle>
         <MDBDropdownMenu  basic className="dropdown-bottom" >
           <MDBDropdownItem><Link to="customer/singlecustomer/:custId">View Details</Link></MDBDropdownItem>
-          <MDBDropdownItem>Wallet</MDBDropdownItem>
+          <MDBDropdownItem><Link to="customer/customer-wallet/:custId">Wallet</Link></MDBDropdownItem>
           <MDBDropdownItem>OkkJi Khata</MDBDropdownItem>
           <MDBDropdownItem>Setting</MDBDropdownItem>
         </MDBDropdownMenu>
@@ -74,7 +74,7 @@ export default class CustomerDetails extends Component {
         </MDBDropdownToggle>
         <MDBDropdownMenu  basic className="dropdown-bottom" >
           <MDBDropdownItem><Link to="customer/singlecustomer/:custId">View Details</Link></MDBDropdownItem>
-          <MDBDropdownItem>Wallet</MDBDropdownItem>
+          <MDBDropdownItem ><Link to="customer/customer-wallet/:custId">Wallet</Link></MDBDropdownItem>
           <MDBDropdownItem>OkkJi Khata</MDBDropdownItem>
           <MDBDropdownItem>Setting</MDBDropdownItem>
         </MDBDropdownMenu>
