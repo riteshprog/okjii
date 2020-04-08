@@ -4,6 +4,8 @@ import moment from "moment-timezone";
 import { Radio, message, Table, Select, Tag  } from "antd";
 import { Row, Col, Button, Modal, ModalBody, ModalFooter, ModalHeader, FormGroup, Form, Input } from "reactstrap";
 
+import './setting.css';
+
 const { Option } = Select;
 
 export default class Categories extends React.Component {
@@ -13,6 +15,8 @@ export default class Categories extends React.Component {
       showActions: false,
       allCategories: [],
       allSubCategories: [],
+      allStoreTypes: [],
+      allBrands: [],
       addNewCategoryModalVisibility: false,
       addNewSubCategoryModalVisibility: false,
       addNewBrandModalVisibility: false,
@@ -24,6 +28,14 @@ export default class Categories extends React.Component {
       newSubCategory: {
         name: "",
         categoies: []
+      },
+      newBrand:{
+        name: '',
+        category: '',
+        subCategory: ''
+      },
+      newStoreType: {
+        name: ''
       },
       errorMessage: "",
     };
@@ -70,16 +82,22 @@ export default class Categories extends React.Component {
   
   brandColumns = [
     {
-      title: "Categories",
+      title: "Brand Name",
       dataIndex: "name",
       key: "_id",
       render: (name) => <span>{name}</span>,
     },
     {
-      title: "Sub Categories",
-      dataIndex: "subCategories",
+      title: "Category",
+      dataIndex: "category",
       key: "_id",
-      render: (sub) => <span>{sub.map(single=>single.name)}</span>,
+      render: (cat) => <span>{cat.map(single=>single)}</span>,
+    },
+    {
+      title: "Sub Category",
+      dataIndex: "subCategory",
+      key: "_id",
+      render: (sub) => <span>{sub.map(single=>single)}</span>,
     }
   ];
 
@@ -115,6 +133,20 @@ export default class Categories extends React.Component {
       console.log(`catch`, err);
     }); 
   }
+  getAllSubCategories = () => {
+   Axios.get(process.env.REACT_APP_API_URL + "/store-type")
+    .then(({ data }) => {
+      if (data.status) {
+        console.log(`allStoreTypes`, data)
+        this.setState({ allStoreTypes: data.allStoreTypes });
+      } else {
+        console.log("no Store Type found");
+      }
+    })
+    .catch((err) => {
+      console.log(`catch`, err);
+    }); 
+  }
 
   renderAddNewCategoryModal = () => (
     <Modal isOpen={this.state.addNewCategoryModalVisibility} toggle={this.toggleAddNewCategory} >
@@ -130,7 +162,7 @@ export default class Categories extends React.Component {
             </Col>
             <Col className="pl-1" md="10">
               <FormGroup>
-                <label htmlFor="userName">Select Sub-Category</label>
+                <label htmlFor="userName">Select Sub Categories</label>
                 <Select mode="tags" tokenSeparators={[',']} style={{ width: "100%" }} placeholder="Select Sub Category" onDeselect={(e)=>this.handleOnSelect(e, 'category', 'subCategories')} onSelect={(e)=>this.handleOnSelect(e, 'category', 'subCategories')}>
                   {this.state.allSubCategories.map(sub=><Option key={sub._id}>{sub.name}</Option>)}}
                 </Select>
@@ -163,9 +195,9 @@ export default class Categories extends React.Component {
             </Col>
             <Col className="pl-1" md="10">
               <FormGroup>
-                <label htmlFor="userName">Select Sub-Category</label>
-                <Select value={this.state.newSubCategory.categories} mode={'multiple'} style={{ width: "100%" }} placeholder="Select Sub Category" onDeselect={(e)=>this.handleOnSelect(e, 'subCategory', 'categoies')} onSelect={(e)=>this.handleOnSelect(e, 'subCategory', 'categoies')}>
-                  {this.state.allSubCategories.map(sub=><Option key={sub.name}>{sub.name}</Option>)}
+                <label htmlFor="userName">Select Category</label>
+                <Select mode="tags" tokenSeparators={[',']}  value={this.state.newSubCategory.categories} style={{ width: "100%" }} placeholder="Select Sub Category" onDeselect={(e)=>this.handleOnSelect(e, 'subCategory', 'categoies')} onSelect={(e)=>this.handleOnSelect(e, 'subCategory', 'categoies')}>
+                  {this.state.allCategories.map(sub=><Option key={sub.name}>{sub.name}</Option>)}
                 </Select>
               </FormGroup>
             </Col>
@@ -179,11 +211,73 @@ export default class Categories extends React.Component {
         <Button
           id="save-btn"
           color="primary"
-          onClick={this.handleOnAddNewCategorySave}
+          onClick={this.handleOnAddNewSubCategorySave}
         >
           Add
         </Button>
         <Button color="secondary" onClick={this.toggleAddNewSubCategory}>
+          Cancel
+        </Button>
+      </ModalFooter>
+    </Modal>
+  );
+
+  renderAddNewStoreType = () => (
+    <Modal isOpen={this.state.addNewStoreTypeModalVisibility} toggle={this.toggleAddNewStoreType} >
+      <ModalHeader toggle={this.toggleAddNewStoreType}> Add New Sub Category </ModalHeader>
+      <ModalBody>
+        <Form>
+          <Row className="df jcc">
+            <Col className="pl-1" md="10">
+              <FormGroup>
+                <label >Store Type Name</label>
+                <Input placeholder="Enter Store Type Name" value={this.state.newStoreType.name} onChange={(e) => this.handleOnChange(e, 'storeType', "name")} type="text" />
+              </FormGroup>
+            </Col>
+          </Row>
+        </Form>
+      </ModalBody>
+      <ModalFooter>
+        { this.state.errorMessage ? ( <span className="mr-3 text-danger">{this.state.errorMessage}</span> ) : null }
+        <Button id="save-btn" color="primary" onClick={this.handleOnAddNewStoreType} > Add </Button>
+        <Button color="secondary" onClick={this.toggleAddNewStoreType}> Cancel </Button>
+      </ModalFooter>
+    </Modal>
+  );
+
+  renderAddNewBrand = () => (
+    <Modal isOpen={this.state.addNewBrandModalVisibility} toggle={this.toggleAddNewBrand} >
+      <ModalHeader toggle={this.toggleAddNewBrand}> Add New Sub Category </ModalHeader>
+      <ModalBody>
+        <Form>
+          <Row className="df jcc">
+            <Col className="pl-1" md="10">
+              <FormGroup>
+                <label htmlFor="userName">Name</label>
+                <Input placeholder="Enter Brand Name" value={this.state.newBrand.name} onChange={(e) => this.handleOnChange(e, 'brand', "name")} type="text" />
+              </FormGroup>
+            </Col>
+            <Col className="pl-1" md="10">
+              <FormGroup>
+                <label htmlFor="userName">Name</label>
+                <Input placeholder="Enter Brand Name" value={this.state.newBrand.name} onChange={(e) => this.handleOnChange(e, 'brand', "name")} type="text" />
+              </FormGroup>
+            </Col>
+          </Row>
+        </Form>
+      </ModalBody>
+      <ModalFooter>
+        {this.state.errorMessage ? (
+          <span className="mr-3 text-danger">{this.state.errorMessage}</span>
+        ) : null}
+        <Button
+          id="save-btn"
+          color="primary"
+          onClick={this.handleOnAddNewStoreType}
+        >
+          Add
+        </Button>
+        <Button color="secondary" onClick={this.toggleAddNewBrand}>
           Cancel
         </Button>
       </ModalFooter>
@@ -204,6 +298,10 @@ export default class Categories extends React.Component {
       let { newSubCategory } = this.state;
       newSubCategory[key] = e.target.value;
       this.setState({ newSubCategory });
+    }else if (type === 'storeType') {
+      let { newStoreType } = this.state;
+      newStoreType[key] = e.target.value;
+      this.setState({newStoreType});
     }
   };
 
@@ -275,6 +373,29 @@ export default class Categories extends React.Component {
     }
   };
 
+  handleOnAddNewStoreType = () => {
+    let { newStoreType, errorMessage } = this.state;
+    if (!newStoreType.name)
+      this.setState({ errorMessage: "Invalid Store Type" });
+    else if (!errorMessage) {
+      Axios.post(process.env.REACT_APP_API_URL + "/store-type", newStoreType)
+        .then(({ data }) => {
+          if (!data.status) {
+            this.setState({ errorMessage: data.errorMessage });
+          } else {
+            message.success(`New Store Type Added Successfully`);
+            this.setState({
+              errorMessage: ``,
+              addNewStoreTypeModalVisibility: false,
+            });
+          }
+        })
+        .catch((er) => {
+          this.setState({ errorMessage: `Something went wrong` });
+        });
+    }
+  }
+
   render() {
     return (
       <>
@@ -305,25 +426,27 @@ export default class Categories extends React.Component {
           </Row>
           <Row>
             <Col md="6">
-              <Button color="primary" onClick={this.toggleAddNewCategory}>
+              <Button color="primary" onClick={this.toggleAddNewStoreType}>
                 Add New Store Type
               </Button>
               <Row>
                 <Col className="pr-1" md={12}>
-                  <Table columns={this.storeTypeColumns} dataSource={this.state.allCategories} />
+                  <Table columns={this.storeTypeColumns} dataSource={this.state.storeTypeColumns} />
                 </Col>
               </Row>
             </Col>
             <Col md="6">
-              <Button color="primary" onClick={this.toggleAddNewSubCategory}>
-                Add New Sub Category
+              <Button color="primary" onClick={this.toggleAddNewBrand}>
+                Add New Brand
               </Button>
               <Row>
                 <Col className="pr-1" md={12}>
-                  <Table columns={this.subCategoriesColumns} dataSource={this.state.allSubCategories} />
+                  <Table columns={this.brandColumns} dataSource={this.state.brandColumns} />
                 </Col>
               </Row>
             </Col>
+            {this.renderAddNewBrand()}
+            {this.renderAddNewStoreType()}
           </Row>
         </div>
       </>
