@@ -3176,7 +3176,7 @@ input.no-border.form-control {
 }
 .sidebar .nav,
 .off-canvas-sidebar .nav {
-  margin-top: -31px !important;
+  margin-top: 0px !important;
   display: block;
 }
 .sidebar{
