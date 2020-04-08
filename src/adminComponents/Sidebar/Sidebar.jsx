@@ -15,7 +15,8 @@ class Sidebar extends React.Component {
     this.activeRoute.bind(this);
     this.sidebar = React.createRef();
     this.state = {
-      userData: null
+      userData: null,
+      showNotification: false,
     }
   }
   // verifies if routeName is the one active (in browser input)
@@ -59,18 +60,25 @@ class Sidebar extends React.Component {
                 </NavLink>
               </li>
             ):(
-              <Menu mode="inline" >
-              <SubMenu className='nav-link'
-                style={{backgroundColor: '#eee'}}
-                title={
-                  <span>
-                    <i className={prop.icon}/>
-                    <p>{prop.subMenuTitle}</p>
-                  </span>
-                }>
-                  {prop.routes.map((subMenu, i)=><Menu.Item className='nav-link' ><Link to={subMenu.path}>{subMenu.name}</Link></Menu.Item>)}
-              </SubMenu>
-              </Menu>
+              <li className={ this.activeRoute(prop.path) + (prop.pro ? "active-pro" : "") } key={key} >
+                {prop.routes.map((subMenu, i)=><NavLink to={subMenu.layout + subMenu.path} className="nav-link" activeClassName="active" >
+                  <i className={subMenu.icon} />
+                  <p>{subMenu.name}</p>
+                </NavLink>)}
+              </li>
+
+              // <Menu mode="inline" >
+              // <SubMenu className='nav-link'
+              //   style={{backgroundColor: '#eee'}}
+              //   title={
+              //     <span>
+              //       <i className={prop.icon}/>
+              //       <p>{prop.subMenuTitle}</p>
+              //     </span>
+              //   }>
+              //     {prop.routes.map((subMenu, i)=><Menu.Item className='nav-link' ><Link to={subMenu.path}>{subMenu.name}</Link></Menu.Item>)}
+              // </SubMenu>
+              // </Menu>
             ))}
           </Nav>
         </div>
