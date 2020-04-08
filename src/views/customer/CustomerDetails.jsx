@@ -12,7 +12,7 @@ export default class CustomerDetails extends Component {
   render() {
     return (
       <>
-        <div className="content">
+        <div className="content customer-information">
           <CustomerNavBar />
          <MDBTable className="customer-table" striped>
       <MDBTableHead>

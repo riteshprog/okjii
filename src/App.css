@@ -14,17 +14,13 @@ section.okkji-faq.offer-mobile {
 }
 
 .sidebar .sidebar-wrapper li.active>a:not([data-toggle=collapse]):after {
-  border-right: 0px solid #f4f3ef;
-  border-top: 17px solid transparent;
-  border-bottom: 17px solid transparent;
-  content: "";
-  display: inline-block;
-  position: absolute;
-  right: -17px;
-  opacity: 1;
-  top: 7px;
-  transition: opacity .15s ease-in;
+  border-right: none !important;
 }
+
+.sidebar .sidebar-wrapper li.active>a:not([data-toggle=collapse])::before {
+  border-right: none !important;
+}
+
 .row.text-center.mobile {
   display: none;
 }
@@ -3535,7 +3531,7 @@ z-index: 5;
 .notification-container .customer-table {
   margin-top: 2%; 
   border: 2px solid #fff;
-  box-shadow: 1px 1px 11px 3px #cfcfcf;
+  box-shadow: 0px 1px 3px 3px #cfcfcf;
   border-radius: 5px !important;
 }
 
@@ -3846,14 +3842,19 @@ color:#289C71;
   border-bottom: 1px solid #AEB0AF;
 }
 
-.product-details .customer-table thead th, .store-page .customer-table thead th {
-  padding: 1.5rem 1rem;
+.product-details .customer-table thead th, .store-page .customer-table thead th, .customer-information .customer-table thead th, .customer-notification .customer-table thead th, .customer-offer .customer-table thead th {
+  padding: 1rem 1rem;
 }
 
-.product-details .customer-table tbody td, .store-page .customer-table tbody td {
+
+
+.product-details .customer-table tbody td, .store-page .customer-table tbody td, .customer-information .customer-table tbody td, .customer-notification .customer-table tbody td, .customer-offer .customer-table tbody td {
   padding: 1rem !important;
 }
 
+.customer-notification .customer-table{
+  margin-top:1%;
+}
 .product-details .ant-form-item{
   margin-bottom: 0;
 }
@@ -3881,6 +3882,83 @@ color:#289C71;
 
 
 /* Product Page End */
+
+/*  Customer Notification page start */
+.customer-notification .customer-table thead{
+border-bottom: 1.5px solid #5e5e5e;
+}
+
+.customer-notification .customer-table tbody tr{
+  border-bottom: .5px solid #5e5e5e;
+}
+
+.customer-notification .customer-filter p{
+  font-size:1.2rem;
+
+}
+
+.customer-notification .fa-trash{
+  margin-right: 2rem;
+  color: #259D70;
+}
+
+.customer-notification .filter-txt{
+  font-size: .9rem;
+  color:#5e5e5e !important;
+}
+
+.customer-notification .ant-checkbox-inner{
+  width:25px;
+  height: 25px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
+}
+
+.customer-notification .table-striped img.rounded-circle.testimoni-img {
+  margin-left: 1rem !important;
+  margin-right: 0rem !important;
+}
+
+.customer-offer .table-striped thead tr th{
+  border-bottom: 1px solid #5e5e5e;
+}
+
+.customer-offer .table-striped tbody tr td{
+  border-bottom: none !important;
+}
+
+.customer-offer .table-striped tbody tr td:first-child{
+  width:15%;
+}
+
+.customer-offer .table-striped th.text-center.thead-background {
+  background-color: #9BE8C8;
+  border-radius: 10px;
+  color:#269D70;
+  width: 33%;
+}
+
+.customer-offer .table-striped{
+  margin-top: 1%;
+}
+.customer-offer p:first-child{
+  padding-top: 0rem !important;
+}
+
+.customer-offer p:last-child{
+  padding-top: 1rem;
+}
+
+.customer-offer .customer-filter p{
+  font-size: 1.2rem;
+  color:#5e5e5e;
+}
+
+.customer-offer p{
+  font-size: 1rem;
+} 
+/* Customer Notification Page End */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
