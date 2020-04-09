@@ -56,23 +56,10 @@ var routes = [
   { path: "/Order", onSideBar: true, name: "Order", icon: "nc-icon nc-app", component: Order, layout: "/admin" },
   { path: "/TotalSale", onSideBar: true, name: "Total Sale", icon: "fa fa-pie-chart", component: TotalSale, layout: "/admin" },
   
-<<<<<<< HEAD
-  // { path: "/notification", onSideBar: true, name: "Push Notification", icon: "far fa-bell", component: Notification, layout: "/admin", type: 'subMenu', subMenuTitle: 'Notification' },
-  // { path: "/EmailNotification", onSideBar: true, name: "Email Notification", icon: "far fa-bell", component: EmailNotification, layout: "/admin", type: 'subMenu', subMenuTitle: 'Notification' },
-  { path: "/notification", name: "Push Notification", onSideBar:true, icon: "far fa-bell", component: Notification, layout: "/admin", subMenuTitle: 'Notification' },
-  { path: "/EmailNotification", name: "Email Notification", onSideBar:true, icon: "far fa-bell", component: EmailNotification, layout: "/admin", subMenuTitle: 'Notification' },
-  { path: "/customer-notification", name: "Customer Notification", onSideBar:true, icon: "far fa-bell", component: CustomerNotification, layout: "/admin", subMenuTitle: 'Customer Notification' },
-  { path: "/customer-offer", name: "Customer Offer", onSideBar:true, icon: "far fa-bell", component: CustomerOffer, layout: "/admin", subMenuTitle: 'Customer Offer' },
-
-
-  
-
-=======
   { path: "/notification", onSideBar: true, name: "Push Notification", icon: "far fa-bell", component: Notification, layout: "/admin", subMenuTitle: 'Notification' },
   { path: "/EmailNotification", onSideBar: true, name: "Email Notification", icon: "far fa-bell", component: EmailNotification, layout: "/admin", subMenuTitle: 'Notification' },
   // { path: "/notification", name: "Push Notification", icon: "far fa-bell", component: Notification, layout: "/admin", subMenuTitle: 'Notification' },
   // { path: "/EmailNotification", name: "Email Notification", icon: "far fa-bell", component: EmailNotification, layout: "/admin", subMenuTitle: 'Notification' },
->>>>>>> dc69f3f4d71f0c374f954cb11eb79b4f0b9e6701
 
  //  { type: 'subMenu', onSideBar: true, icon: 'fa fa-pie-chart', subMenuTitle: 'Notification', routes: [
  //    { path: "/notification", onSideBar: true, name: "Push Notification", icon: "far fa-bell", component: Notification, layout: "/admin", type: 'subMenu', subMenuTitle: 'Notification' },
