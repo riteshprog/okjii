@@ -2,10 +2,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
-import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon, MDBInput } from "mdbreact";
-import avatar from '../../img/home/avatar.png';
+//import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon, MDBInput } from "mdbreact";
+//import avatar from '../../img/home/avatar.png';
 import { Row, Col } from 'reactstrap';
-import { Checkbox, Form } from 'antd';
+//import { Checkbox, Form } from 'antd';
 
 
 
