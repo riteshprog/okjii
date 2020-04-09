@@ -1,5 +1,8 @@
 import React from 'react';
+import filterIcon from '../../assets/img/filterIcon.png';
 
+import walletIcon from '../../assets/img/walletIcon.png';
+import Profile01 from '../../assets/img/Profile-01.png'
 export default class ViewAllPreTransactions extends React.Component {
 	render() {
 		return (
@@ -13,7 +16,7 @@ export default class ViewAllPreTransactions extends React.Component {
           </div>
           <div class="filter-search col-md-3">
             <p><i class="fa fa-search"></i></p>
-            <p><span class="filter-txt"> Filter</span> <img src="./assets/img/filterIcon.png"/></p>
+            <p><span class="filter-txt"> Filter</span> <img src={filterIcon}/></p>
           </div>
         </div>
         {/*--------------top bar Ends-----------------*/}
@@ -24,7 +27,7 @@ export default class ViewAllPreTransactions extends React.Component {
 	            <div class="wallet-body">
 	              <div class="wallet-row">
 	                <div class=" wallet-img text-center icon-warning">
-	                   <img src="./assets/img/walletIcon.png" width="70"/>
+	                   <img src={walletIcon} width="70"/>
 	                </div>
 	                <div class="numbers">
 	                  <p class="card-category"><span class="wallet-green">OKK</span>JI WALLET</p>
@@ -43,7 +46,7 @@ export default class ViewAllPreTransactions extends React.Component {
 	                  <p class="card-title"><span class="wallet-green">Okk</span>P0001</p>
 	                </div>
 	                <div class="customer-img text-center icon-warning">
-	                   <img src="./assets/img/Profile-01.png" width="65"/>
+	                   <img src={Profile01} width="65"/>
 	                </div>
 	              </div>
 	            </div>

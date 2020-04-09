@@ -30,10 +30,10 @@ export default class CustomerDetails extends Component {
         <tr>
           <td className="text-center">77</td>
           <td>Why Kirana stores are Evergreen in Indian Society?</td>
-          <td><span className="text-green-background">Blog Latest New</span></td>
-          <td><span className="text-green-background">Published</span></td>
+          <td><span className="text-green-background no-break">Blog Latest New</span></td>
+          <td><span className="text-green-background no-break">Published</span></td>
           <td>Two Weak ago</td>
-          <td>8 Hours ago</td>
+          <td className="no-break">8 Hours ago</td>
           <td className="text-center"><MDBDropdown dropleft>
         <MDBDropdownToggle color="primary">
         <i class="fas fa-ellipsis-v" />
@@ -48,10 +48,10 @@ export default class CustomerDetails extends Component {
         <tr>
           <td className="text-center">78</td>
           <td>Why Kirana Store is Loosing its Charm?</td>
-          <td><span className="text-green-background">Blog Latest New</span></td>
-          <td><span className="text-green-background">Published</span></td>
-          <td>One Weak ago</td>
-          <td>11 Hours ago</td>
+          <td><span className="text-green-background no-break">Blog Latest New</span></td>
+          <td><span className="text-green-background no-break">Published</span></td>
+          <td className="no-break">One Weak ago</td>
+          <td className="no-break">11 Hours ago</td>
           <td className="text-center"><MDBDropdown dropleft>
         <MDBDropdownToggle color="primary">
         <i class="fas fa-ellipsis-v" />
@@ -66,9 +66,9 @@ export default class CustomerDetails extends Component {
         <tr>
           <td className="text-center">79</td>
           <td>Why India Needs Online Kirana Stores?</td>
-          <td><span className="text-green-background">Blog Latest New</span></td>
-          <td><span className="text-green-background">Published</span></td>
-          <td>Three Weak ago</td>
+          <td><span className="text-green-background no-break">Blog Latest New</span></td>
+          <td><span className="text-green-background no-break">Published</span></td>
+          <td className="no-break">Three Weak ago</td>
           <td>1 Hours ago</td>
           <td className="text-center"><MDBDropdown dropleft>
         <MDBDropdownToggle color="primary">
@@ -84,8 +84,8 @@ export default class CustomerDetails extends Component {
         <tr>
           <td className="text-center">77</td>
           <td>Why Neighbourhood Kirana Survive in the Wave of E-Commerce</td>
-          <td><span className="text-green-background">Blog Latest New</span></td>
-          <td><span className="text-green-background">Published</span></td>
+          <td><span className="text-green-background no-break">Blog Latest New</span></td>
+          <td><span className="text-green-background no-break">Published</span></td>
           <td>Four Weak ago</td>
           <td>5 Hours ago</td>
           <td className="text-center"><MDBDropdown dropleft>
@@ -102,8 +102,8 @@ export default class CustomerDetails extends Component {
         <tr>
         <td className="text-center">77</td>
           <td>What is SONAR?</td>
-          <td><span className="text-green-background">Blog Latest New</span></td>
-          <td><span className="text-green-background">Published</span></td>
+          <td><span className="text-green-background no-break">Blog Latest New</span></td>
+          <td><span className="text-green-background no-break">Published</span></td>
           <td>One Weak ago</td>
           <td>11 Hours ago</td>
           <td className="text-center"><MDBDropdown dropleft>
@@ -120,8 +120,8 @@ export default class CustomerDetails extends Component {
         <tr>
           <td className="text-center">77</td>
           <td>What is SONAR?</td>
-          <td><span className="text-green-background">Blog Latest New</span></td>
-          <td><span className="text-green-background">Published</span></td>
+          <td><span className="text-green-background no-break">Blog Latest New</span></td>
+          <td><span className="text-green-background no-break">Published</span></td>
           <td>One Weak ago</td>
           <td>11 Hours ago</td>
           <td className="text-center"><MDBDropdown dropleft>

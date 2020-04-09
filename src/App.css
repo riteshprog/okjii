@@ -3838,17 +3838,17 @@ color:#289C71;
   margin-top:1%;
 
 }
-.product-details .customer-table thead{
+.product-details .customer-table thead, .reward-content .customer-table thead{
   border-bottom: 1px solid #AEB0AF;
 }
 
-.product-details .customer-table thead th, .store-page .customer-table thead th, .customer-information .customer-table thead th, .customer-notification .customer-table thead th, .customer-offer .customer-table thead th {
+.product-details .customer-table thead th, .store-page .customer-table thead th, .customer-information .customer-table thead th, .customer-notification .customer-table thead th, .customer-offer .customer-table thead th, .reward-content .customer-table thead th {
   padding: 1rem 1rem  !important;
 }
 
 
 
-.product-details .customer-table tbody td, .store-page .customer-table tbody td, .customer-information .customer-table tbody td, .customer-notification .customer-table tbody td, .customer-offer .customer-table tbody td {
+.product-details .customer-table tbody td, .store-page .customer-table tbody td, .customer-information .customer-table tbody td, .customer-notification .customer-table tbody td, .customer-offer .customer-table tbody td, .reward-content .customer-table tbody td {
   padding: 1rem !important;
 }
 
@@ -3959,6 +3959,192 @@ border-bottom: 1.5px solid #5e5e5e;
   font-size: 1rem;
 } 
 /* Customer Notification Page End */
+
+
+/*  Reward Page start */
+.reward-content .btn{
+  background-color: #259D70 !important;
+  text-transform: uppercase !important;
+  margin: 0 0 1rem 1rem;
+  font-weight: 300 !important;
+
+}
+
+.reward-content .card-stats{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.reward-content .card-category{
+  padding-bottom: 1rem;
+}
+.reward-content .totalearning{
+margin-top: .5rem;
+width: 75%;
+}
+.reward-content .acceptorder{
+  margin-top: .5rem;
+  width: 75%;
+  }
+
+  .reward-content .pickpay{
+    margin-top: .5rem;
+    width: 65%;  
+  }
+  .reward-content .reviews, .reward-content .callicon{
+  margin-top: .5rem;
+  width: 72%;
+}
+
+.reward-content p:last-child{
+  padding-bottom: 1rem;
+
+}
+
+.reward-content .card-title{
+  font-size:1rem;
+  font-weight: 600;
+}
+.reward-content .customer-table{
+  margin-top: 0%;
+}
+
+.reward-content .wallet-row .numbers p:first-child{
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.reward-content .wallet-row .numbers p{
+  text-align: left;
+  font-size: .9rem;
+  margin-bottom: .3rem !important;
+}
+
+.reward-content .wallet-row .profile p:first-child{
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.reward-content .wallet-row .profile p{
+  text-align: right;
+  font-size: .9rem;
+  margin-bottom: .3rem !important;
+
+}
+
+
+.reward-content .wallet-stats .profile-body .profile {
+  margin-right: 1.5rem !important;
+}
+
+.reward-content .close{
+  display: none;
+}
+
+.reward-content .modal-title{
+  margin-top: 0rem;
+}
+
+.reward-content h4{
+  font-size: 1.2rem;
+  font-weight: 500;
+  color:#259D70;
+}
+
+.reward-content ol{
+  margin-left: 1rem;
+}
+.reward-content li{
+  line-height: 2;
+}
+
+
+.reward-content h4{
+  padding-top: .5rem;
+  padding-left:1rem;
+  padding-right:1rem;
+  padding-bottom: 1.5rem;
+  margin-top: 1rem;
+  border-bottom: 1px solid #dee2e6;
+
+}
+
+.reward-content h4 span{
+  font-size: .8rem;
+  vertical-align: center;
+  color:red;
+  font-weight: 400;
+}
+
+.reward-content .modal-dialog .modal-content{
+  border-radius: 10px;
+}
+
+.card.card-payment{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-payment{
+  width:90%;
+  padding:.5rem 2rem;
+  margin-top: 1rem;
+  margin: auto;
+  vertical-align: center;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18) !important;
+}
+
+.card-download{
+  width:70%;
+  padding:0rem 2rem;
+  margin-top: 1rem;
+  margin: auto;
+  vertical-align: center;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18) !important;
+
+}
+
+.card-payment p.payment-Rupee.float-right{
+  color:#9A9A9A;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.card-payment .TotalOnline{
+  width:15%;
+}
+
+.card-payment .Calender{
+  width:10%;
+}
+.card-payment p{
+  margin-top:1rem;
+  font-size: 1rem;
+}
+
+.card-download p{
+  margin-top:1rem;
+  text-align: center;
+  margin-bottom: 0rem;
+  font-size: 1rem;
+
+}
+
+
+.card-download img{
+  margin-right: 1.5rem;
+}
+
+.card-download i{
+  margin-left: 1rem;
+}
+
+.card-payment .TotalOnline {
+  margin-right: 2rem;
+}
+
+/*  Reward Page end */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {

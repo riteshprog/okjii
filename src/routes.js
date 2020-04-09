@@ -42,6 +42,10 @@ import MessagesPage from "./views/messages/MessagesPage.jsx";
 import ProductDetails from "./views/product/ProductDetails.jsx";
 import CustomerNotification from "./views/customernotification/CustomerNotification.jsx";
 import CustomerOffer from "./views/customernotification/CustomerOffer.jsx";
+import StoreReward from "./views/store/StoreReward.jsx";
+
+import StoreCustomerPayment from "./views/store/StoreCustomerPayment.jsx"
+
 
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
@@ -94,6 +98,9 @@ var routes = [
     layout: "/admin"
   },
 
+
+  { path: "/store/reward", onSideBar: true, name: "Reward", icon: "fa fa-money", accessTo: ["admin"], component: StoreReward, layout: "/admin" },
+  { path: "/store/cust-payment", onSideBar: true, name: "Customer Payment", icon: "fa fa-money", accessTo: ["admin"], component: StoreCustomerPayment, layout: "/admin" },
   /* --------------------Side Bar Routes Ends-------------------- */
   
   /* --------------------Other Routes -------------------------- */
