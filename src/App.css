@@ -3843,7 +3843,7 @@ color:#289C71;
 }
 
 .product-details .customer-table thead th, .store-page .customer-table thead th, .customer-information .customer-table thead th, .customer-notification .customer-table thead th, .customer-offer .customer-table thead th {
-  padding: 1rem 1rem;
+  padding: 1rem 1rem  !important;
 }
 
 
