@@ -4329,7 +4329,18 @@ border-radius: 4px;
 
 /* coupion page end */
 
+/*  Comming Soon Start */
 
+.comming-soon .ComingSoon{
+  width:50%;
+}
+
+.comming-soon figcaption{
+  font-size: 1rem;
+  color: #5e5e5e;
+  margin-top: .8rem;
+}
+/*  Comming Soon end */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {

@@ -50,6 +50,7 @@ import StoreCustomerPayment from "./views/store/StoreCustomerPayment.jsx"
 import StoreOrder from "./views/store/StoreOrder.jsx"
 import CouponForm from "./views/coupon/CouponForm.jsx"
 import CouponAddFormDetails from "./views/coupon/CouponAddFormDetails.jsx"
+import CommingSoon from "./views/commingsoon/CommingSoon.jsx"
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
   { path: "/dashboard", onSideBar: true, name: "Dashboard", icon: "nc-icon nc-bank", component: Dashboard, layout: "/admin" },
@@ -84,6 +85,8 @@ var routes = [
   { path: "/pre-registration", onSideBar: true, name: "Pre Registrations", icon: "nc-icon nc-badge", accessTo: ["admin"], component: PreReg, layout: "/admin" },
   { path: "/store/wallet", onSideBar: true, name: "Wallet", icon: "fa fa-money", accessTo: ["admin"], component: Wallet, layout: "/admin" },
   { path: "/Setting", onSideBar: true, name: "Setting", icon: "fa fa-cog", component: Setting, layout: "/admin" },
+  { path: "/commingsoon/", onSideBar: true, name: "Total Sale", icon: "nc-icon nc-chat-33", accessTo: ["admin"], component: CommingSoon, layout: "/admin" },
+
   {
     path: "/store/product/:storeId",
     onSideBar: false,
@@ -108,7 +111,7 @@ var routes = [
   { path: "/store/cust-order", onSideBar: true, name: "Store Order", icon: "fa fa-money", accessTo: ["admin"], component: StoreOrder, layout: "/admin" },
   { path: "/coupon/", onSideBar: true, name: "Coupon", icon: "fa fa-money", accessTo: ["admin"], component: CouponForm, layout: "/admin" },
   { path: "/coupon/coupon-add/", onSideBar: true, name: "Coupon Add", icon: "fa fa-money", accessTo: ["admin"], component: CouponAddFormDetails, layout: "/admin" },
-
+  
 
   
   /* --------------------Side Bar Routes Ends-------------------- */
