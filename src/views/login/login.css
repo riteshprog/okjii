@@ -1,0 +1,9 @@
+.input-otp input {
+	cursor: pointer;
+	border: none;
+	border-radius: 10px;
+	color: gray !important;
+	width: 45px !important;
+	background-color: #ddd;
+	font-size: 35px !important;
+}

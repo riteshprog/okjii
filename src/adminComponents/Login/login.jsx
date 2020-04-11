@@ -102,10 +102,9 @@ class Login extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     axios.post(process.env.REACT_APP_API_URL + '/user/login', {
-      email: this.state.email || 'user2@gmail.com',
-      password: this.state.password || '123456'
+      email: this.state.email,
+      password: this.state.password
     }).then((response)=> {
-      console.log(response.data);
       response = response.data;
       if(!response.status){
         this.setState({loginError: true})
@@ -150,6 +149,7 @@ class Login extends React.Component {
               
               <Button color='success' type='submit'>Login</Button>
               {this.state.loginError? <span className='text-danger ml-3'>Invalid email/password, Try Again!</span>: null }
+              <Link className='text-success' to='/login-marketing'>Login as a Marketing User</Link>
             </Form>
           </CardBody>
         </Card>

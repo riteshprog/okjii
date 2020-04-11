@@ -119,6 +119,7 @@ class Header extends React.Component {
     window.location = '/';
   }
   render() {
+    let user = this.state.userData;
     return (
       // add or remove classes depending if we are on full-screen-maps page or not
       <Navbar
@@ -189,9 +190,9 @@ class Header extends React.Component {
                 </Link>
               </NavItem> */}
 
-              {/* <div className='df aic ml-2'>
-                <span >Hi, {this.state.userData.email}</span>
-              </div> */}
+              { <div className='df aic ml-2'>
+                <span >Hello, { user && user.basic.mobileNumber }</span>
+              </div> }
               
               <Dropdown nav isOpen={this.state.dropdownOpen} toggle={e => this.dropdownToggle(e)}>
                 <DropdownToggle caret nav>

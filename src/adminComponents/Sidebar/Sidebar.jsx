@@ -17,6 +17,11 @@ class Sidebar extends React.Component {
     this.state = {
       userData: null,
       showNotification: false,
+      userPermissions: [{
+        name: 'shopKeeper',
+        canView: ['Dashboard', 'Store', 'Customer', 'Location', 'Target', 'Incentive', 'Support']
+      }],
+      sidebarRoutes: []
     }
   }
   // verifies if routeName is the one active (in browser input)
@@ -32,6 +37,17 @@ class Sidebar extends React.Component {
         suppressScrollY: false
       });
     }
+
+    let {sidebarRoutes, userPermissions} = this.state;
+    console.log(`userdata`, userData);
+    let {userInfo} = userData;
+    let currentUserType = userInfo.userType.key;
+    if(currentUserType == 'marketing'){
+      let userShouldView = ['Dashboard', 'Retailer Shop', 'User', 'Location', 'Target', 'Incentive', 'Support'];
+      sidebarRoutes = this.props.routes;
+      sidebarRoutes = sidebarRoutes.filter(singleRoute => userShouldView.includes(singleRoute.name))
+      this.setState({sidebarRoutes});
+    }
   }
   componentWillUnmount() {
     if (navigator.platform.indexOf("Win") > -1) {
@@ -40,6 +56,7 @@ class Sidebar extends React.Component {
   }
   render() {
     console.log(`this.props.routes`, this.props.routes);
+    let {sidebarRoutes} = this.state;
     return (
       <div className="sidebar" data-color={this.props.bgColor} data-active-color={this.props.activeColor}>
         <div className="logo">
@@ -52,7 +69,7 @@ class Sidebar extends React.Component {
         </div>
         <div className="sidebar-wrapper" ref={this.sidebar}>
           <Nav>
-            {this.props.routes.map((prop, key) => (prop.type != 'subMenu')?(
+            {sidebarRoutes.map((prop, key) => (prop.type != 'subMenu')?(
               <li className={ this.activeRoute(prop.path) + (prop.pro ? "active-pro" : "") } key={key} >
                 <NavLink to={prop.layout + prop.path} className="nav-link" activeClassName="active" >
                   <i className={prop.icon} />
@@ -61,7 +78,7 @@ class Sidebar extends React.Component {
               </li>
             ):(
               <li className={ this.activeRoute(prop.path) + (prop.pro ? "active-pro" : "") } key={key} >
-                {prop.routes.map((subMenu, i)=><NavLink to={subMenu.layout + subMenu.path} className="nav-link" activeClassName="active" >
+                {sidebarRoutes.map((subMenu, i)=><NavLink to={subMenu.layout + subMenu.path} className="nav-link" activeClassName="active" >
                   <i className={subMenu.icon} />
                   <p>{subMenu.name}</p>
                 </NavLink>)}

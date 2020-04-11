@@ -54,6 +54,11 @@ class AddNewShop extends React.Component {
             lat: "",
             lng: ""
           },
+          state: '',
+          distirct: '',
+          country: '',
+          address: '',
+          landmark: '',
           ownerPhoto: "",
           uploadDocuments: []
         },

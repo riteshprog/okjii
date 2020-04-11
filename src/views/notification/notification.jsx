@@ -1,5 +1,5 @@
-import Axios from "axios";
-import { Switch, notification } from "antd";
+import axios from "axios";
+import { Switch, notification, message } from "antd";
 import moment from "moment-timezone";
 import React, { Component } from "react";
 import { MDBTable, MDBTableBody, MDBTableHead } from "mdbreact";
@@ -18,6 +18,7 @@ class Notification extends Component {
       status: 1
     },
     pushData: [],
+    allNotifications: []
   };
 
   constructor(props) {
@@ -38,11 +39,10 @@ class Notification extends Component {
   }
 
   getNotification = () => {
-    Axios.get(process.env.REACT_APP_API_URL + "/pushNotifications")
+    axios.get(process.env.REACT_APP_API_URL + "/pushNotifications")
     .then(({ data }) => {
-      const pushData = data.data;
-      this.pushData = pushData;
-      this.setState({ pushData });
+      const allNotifications = data.data;
+      this.setState({ allNotifications });
     })
     .catch((err) => {
       console.log(`catch err`, err);
@@ -89,10 +89,12 @@ class Notification extends Component {
       let {deletePushNotificationModalVisibility} = this.state;
       this.setState({ deletePushNotificationModalVisibility: !deletePushNotificationModalVisibility });
     }else if(type === 'edit'){
-      console.log(`data`, data);
       let {editPushNotificationModalVisibility, newNotification} = this.state;
-      newNotification = data;
       this.setState({ editPushNotificationModalVisibility: !editPushNotificationModalVisibility });
+    }
+    if(data){
+      let { newNotification } = this.state;
+      newNotification = data;
       data && this.setState({ newNotification});
     }
   };
@@ -123,8 +125,7 @@ class Notification extends Component {
   };
 
   handleOnUpdate = (e) => {
-    console.log(this.state.modalData);
-    Axios.post(
+    axios.post(
       process.env.REACT_APP_API_URL + "/pushNotifications/update",
       this.state.modalData
     )
@@ -137,6 +138,17 @@ class Notification extends Component {
         console.log(`catch err`, err);
       });
   };
+  handleOnDelete = () => {
+    const { newNotification } = this.state;
+    axios.delete(process.env.REACT_APP_API_URL + '/pushNotifications/' + newNotification._id)
+    .then(({data})=> {
+      if(data.status) message.suceess(data.message)
+    }).catch(ex=>{
+      console.log(ex)
+      message.error(`Something went wrong`)
+    })
+  }
+
   handleToggleActive = (e, id) => {
     let updateObj = {
       status: e?1:2
@@ -148,15 +160,17 @@ class Notification extends Component {
 
   handleOnAdd = ()=> {
     const data = this.state.newNotification;
-    Axios.post(process.env.REACT_APP_API_URL + '/pushNotifications', data)
+    axios.post(process.env.REACT_APP_API_URL + '/pushNotifications/add', data)
     .then(({data})=>{
-      console.log(data);
+      if(data.status) {
+        this.toggleModal('create');
+      }
     }).catch(err=>{
       console.log(err);
     })
   }
   handleUpdateNotification = (id, updateObj) => {
-    Axios.patch(process.env.REACT_APP_API_URL + '/pushNotifications/' + id, updateObj)
+    axios.patch(process.env.REACT_APP_API_URL + '/pushNotifications/' + id, updateObj)
     .then(({data})=>{
       this.getNotification()
 
@@ -166,8 +180,7 @@ class Notification extends Component {
   }
 
   render() {
-    const { collapseID, createPushNotificationModalVisibility, deletePushNotificationModalVisibility, editPushNotificationModalVisibility, newNotification } = this.state;
-    const data = this.state.pushData;
+    const { collapseID, createPushNotificationModalVisibility, deletePushNotificationModalVisibility, editPushNotificationModalVisibility, newNotification, allNotifications } = this.state;
     return (
       <div className="content notification-container">
         <Row className="customer-filter">
@@ -195,7 +208,7 @@ class Notification extends Component {
             </tr>
           </MDBTableHead>
           <MDBTableBody>
-            {data.map((obj, index) => {
+            {allNotifications.map((obj, index) => {
               return (
                 <tr>
                   <td>
@@ -216,7 +229,7 @@ class Notification extends Component {
                       </MDBDropdownToggle>
                       <MDBDropdownMenu basic className="dropdown-bottom">
                         <MDBDropdownItem onClick={()=>this.toggleModal('edit', obj)}> Edit </MDBDropdownItem>
-                        <MDBDropdownItem onClick={()=>this.toggleModal('delete')}> Delete </MDBDropdownItem>
+                        <MDBDropdownItem onClick={()=>this.toggleModal('delete', obj)}> Delete </MDBDropdownItem>
                       </MDBDropdownMenu>
                     </MDBDropdown>
                   </td>
@@ -289,7 +302,7 @@ class Notification extends Component {
         <MDBModalHeader toggle={()=>this.toggleModal('delete')} > Delete Push Notification </MDBModalHeader>
         <MDBModalBody> You want to Delete &#x201C;PUSH ID Okk01&#x201D; notification, Please Confirm </MDBModalBody>
         <MDBModalFooter>
-          <MDBBtn color="secondary" onClick={()=>this.toggleModal('delete')}> DELETE </MDBBtn>
+          <MDBBtn color="secondary" onClick={()=>this.handleOnDelete()}> DELETE </MDBBtn>
           <MDBBtn outline color="green" className="cancel-model" onClick={()=>this.toggleModal('delete')}> CANCEL </MDBBtn>
         </MDBModalFooter>
       </MDBModal>

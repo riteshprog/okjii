@@ -6,6 +6,9 @@ import CookieHandler from './utils/cookieHandler';
 
 import './common.css'
 import Login from './adminComponents/Login/login.jsx';
+import LoginOtp from './views/login/LoaginPage.jsx';
+import LoginOtpVerify from './views/login/LoginPageOtp.jsx';
+
 const history = createBrowserHistory();
 
 export default class Routes extends Component {
@@ -14,11 +17,14 @@ export default class Routes extends Component {
     this.state = {
       userData: null,
     }
+    const userData = CookieHandler.readCookie('userData');
+    console.log(`user data admin page`, userData);
     // const userData = CookieHandler.readCookie('userData');
     // if(!userData) window.location = '/login'
   }
   componentDidMount() {
-    const userData = CookieHandler.readCookie('userData');    
+    const userData = CookieHandler.readCookie('userData');
+    console.log(`user data admin page`, userData);
     this.setUserData(userData)
   }
   setUserData = (userData)=> {
@@ -41,6 +47,9 @@ export default class Routes extends Component {
         <Router history={history}>
           <Switch>
             <Route path="/login" component={() => (<Login setUserData={(data)=>this.setUserData(data)} />)}/>
+            <Route path="/login-marketing" component={() => (<LoginOtp />)}/>
+            <Route path="/verify-otp" component={() => (<LoginOtpVerify setUserData={(data)=>this.setUserData(data)} />)}/>
+            
             <Route path="/admin" render={props => <AdminLayout {...props} />} />
             <Redirect path="*" to="/login" />
           </Switch>

@@ -56,6 +56,12 @@ class User extends React.Component {
       render: ({name}) => <span>{name?name:'N/A'}</span>,
     },
     {
+      title: 'Mobile Number',
+      dataIndex: 'basic',
+      key: '_id',
+      render: ({mobileNumber}) => <span>{mobileNumber}</span>,
+    },
+    {
       title: 'Email',
       dataIndex: 'basic',
       key: '_id',
@@ -66,12 +72,6 @@ class User extends React.Component {
       dataIndex: 'userInfo',
       key: '_id',
       render: ({userType}) => (userType && userType.name)?<Tag>{userType.name}</Tag>:<span>N/A</span>,
-    },
-    {
-      title: 'Gender',
-      dataIndex: 'basic',
-      key: '_id',
-      render: ({gender}) => <span>{gender?gender:'N/A'}</span>,
     },
     {
       title: 'Action',

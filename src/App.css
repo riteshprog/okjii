@@ -9,6 +9,10 @@
   text-transform: lowercase !important;
 }
 
+.navbar.navbar-absolute{
+  z-index: 0 !important;
+}
+
 section.okkji-faq.offer-mobile {
   display: none;
 }
