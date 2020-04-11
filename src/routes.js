@@ -48,7 +48,10 @@ import StoreReward from "./views/store/StoreReward.jsx";
 import StoreCustomerPayment from "./views/store/StoreCustomerPayment.jsx"
 
 import StoreOrder from "./views/store/StoreOrder.jsx"
+import StoreCurrentOrder from "./views/store/StoreCurrentOrder.jsx"
 import CouponForm from "./views/coupon/CouponForm.jsx"
+import AddFAQ  from "./views/coupon/AddFAQ.jsx"
+import AddFAQDetail  from "./views/coupon/AddFAQDetail.jsx"
 import CouponAddFormDetails from "./views/coupon/CouponAddFormDetails.jsx"
 import CommingSoon from "./views/commingsoon/CommingSoon.jsx"
 var routes = [
@@ -109,8 +112,18 @@ var routes = [
   { path: "/store/reward", onSideBar: true, name: "Reward", icon: "fa fa-money", accessTo: ["admin"], component: StoreReward, layout: "/admin" },
   { path: "/store/cust-payment", onSideBar: true, name: "Customer Payment", icon: "fa fa-money", accessTo: ["admin"], component: StoreCustomerPayment, layout: "/admin" },
   { path: "/store/cust-order", onSideBar: true, name: "Store Order", icon: "fa fa-money", accessTo: ["admin"], component: StoreOrder, layout: "/admin" },
-  { path: "/coupon/", onSideBar: true, name: "Coupon", icon: "fa fa-money", accessTo: ["admin"], component: CouponForm, layout: "/admin" },
-  { path: "/coupon/coupon-add/", onSideBar: true, name: "Coupon Add", icon: "fa fa-money", accessTo: ["admin"], component: CouponAddFormDetails, layout: "/admin" },
+  { path: "/store/current-order", onSideBar: true, name: "Store Current Order", icon: "fa fa-money", accessTo: ["admin"], component: StoreCurrentOrder, layout: "/admin" },
+  
+  
+  
+  { path: "/coupon", onSideBar: true, name: "Create Coupon", icon: "fa fa-money", accessTo: ["admin"], component: CouponForm, layout: "/admin" },
+  { path: "/coupon/coupon-add", onSideBar: false, name: "Coupon List", icon: "fa fa-money", accessTo: ["admin"], component: CouponAddFormDetails, layout: "/admin" },
+  
+  { path: "/coupon/add-faq", onSideBar: true, name: "Add Faq", icon: "fa fa-money", accessTo: ["admin"], component: AddFAQDetail, layout: "/admin" },
+  { path: "/coupon/add-faq-list", onSideBar: false, name: "Coupon Add", icon: "fa fa-money", accessTo: ["admin"], component: AddFAQ, layout: "/admin" },
+  
+
+  
   
 
   

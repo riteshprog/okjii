@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 export default class CouponForm extends Component {
   renderRequiredIcon = () => <span className='form-required'> * </span>
@@ -17,7 +18,7 @@ export default class CouponForm extends Component {
             </p>
           </div>
           <div class="filter-search col-md-3">
-<Button>List</Button>
+          <Link class="wallet-link" to="/admin/coupon/coupon-add"><Button>List</Button></Link>
           </div>
         </div>
         <Row>

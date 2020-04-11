@@ -1657,6 +1657,26 @@ img.img-fluid.mobile {
   color: #259d70;
 }
 
+.store-customer-order .profile p:first-child{
+  margin-bottom: 0 !important;
+  font-weight: 600;
+  text-align: right;
+}
+.store-customer-order .profile p:last-child{
+  font-size: .9rem;
+  margin-top: 0rem !important;
+  text-align: right;
+}
+.store-customer-order .profile{
+  margin-right: 1rem !important;
+}
+.store-customer-order .callIcon{
+  width:70%;
+}
+.text-orange {
+  color: #E5582D;
+}
+
 .okjii-offer-image {
   width: 100% !important;
   padding-right: 0 !important;
@@ -3315,6 +3335,15 @@ input.no-border.form-control {
   color: #fff;
   transform: rotate(90deg);
 }
+.coupion-content .customer-filter i.fa-plus{
+  background-color: #5484F4;
+  border-radius: 50%;
+  padding: 8px;
+  font-size: .8rem;
+  color: #fff;
+
+}
+
 
 .customer-filter i.fa-plus{
   background-color: #259d70;
@@ -4287,7 +4316,7 @@ width: 75%;
   padding: .9rem;
 }
 
-.customer-coupon-button .btn{
+.customer-coupon-button .btn {
   background-color: royalblue !important;
 margin-right: 1rem;
 text-transform: uppercase !important;
@@ -4295,7 +4324,7 @@ letter-spacing: .1em;
 font-weight: 400 !important;
 }
 
-.coupion-content .customer-table .btn{
+.coupion-content .customer-table .edit-back .btn{
   font-size:.8rem !important;
   background-color: #F0B935 !important;
   color:#fff;
@@ -4340,6 +4369,27 @@ border-radius: 4px;
   color: #5e5e5e;
   margin-top: .8rem;
 }
+
+.rdw-editor-wrapper{
+  border:1px solid #DDDDDD !important;
+}
+
+.coupion-content .filter-search a .btn, .coupion-content .customer-table tbody tr td .btn{
+  background-color: #5484F4 !important;
+  
+}
+
+.coupion-content .customer-table thead th{
+  padding:1rem 2rem;
+} 
+.coupion-content .btn:last-child{
+  background-color: #3CCD5E !important;
+  color:#fff;
+  text-transform: uppercase !important;
+  font-size: .9rem;
+  font-weight: 400;
+}
+
 /*  Comming Soon end */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

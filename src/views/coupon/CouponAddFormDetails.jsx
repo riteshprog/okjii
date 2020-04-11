@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
+import { Link } from 'react-router-dom';
 
 import { MDBIcon } from "mdbreact";
 
@@ -20,10 +21,10 @@ export default class CouponAddFormDetails extends Component {
           <div class="col-md-6 customer-coupon-button">
 <Button><MDBIcon icon="search" /> Search</Button>
 <Button>All Coupon</Button>
-<Button><MDBIcon icon="plus" />Add</Button>
+<Link class="wallet-link" to="/admin/coupon"><Button><MDBIcon icon="plus" />Add</Button></Link>
           </div>
         </div>
-        <MDBTable className="customer-table" striped>
+        <MDBTable className="customer-table" responsive striped>
       <MDBTableHead>
         <tr>
           <th>Id</th>
@@ -53,7 +54,7 @@ export default class CouponAddFormDetails extends Component {
           <td><span className="bg-danger">Inactive</span></td>
           <td className="no-break">11 months ago</td>
           <td className="no-break">11 months ago</td>
-          <td><Button><MDBIcon icon="pencil-alt" /> Edit</Button></td>
+          <td className="edit-back"><Button><MDBIcon icon="pencil-alt" /> Edit</Button></td>
         </tr>
         <tr>
           <td>2</td>
@@ -67,7 +68,7 @@ export default class CouponAddFormDetails extends Component {
           <td><span className="bg-green">Inactive</span></td>
           <td>11 months ago</td>
           <td>11 months ago</td>
-          <td><Button><MDBIcon icon="pencil-alt" /> Edit</Button></td>
+          <td className="edit-back"><Button><MDBIcon icon="pencil-alt" /> Edit</Button></td>
         </tr>
         <tr>
           <td>3</td>
@@ -81,7 +82,7 @@ export default class CouponAddFormDetails extends Component {
           <td><span className="bg-danger">Inactive</span></td>
           <td>11 months ago</td>
           <td>11 months ago</td>
-          <td className="no-break"><Button><MDBIcon icon="pencil-alt" /> Edit</Button></td>
+          <td className="no-break edit-back"><Button><MDBIcon icon="pencil-alt" /> Edit</Button></td>
         </tr>
       </MDBTableBody>
     </MDBTable>
