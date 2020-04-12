@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box !important;
 }
-
 .btn,
 .navbar .navbar-nav > a.btn >p{
   text-transform: lowercase !important;

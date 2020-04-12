@@ -18,7 +18,7 @@ class User extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      addNewUserModalVisibility: false,
+      addNewUserModalVisibility: true,
       showActions: false,
       allUsers: [],
       newUser: {
@@ -65,7 +65,7 @@ class User extends React.Component {
       title: 'Email',
       dataIndex: 'basic',
       key: '_id',
-      render: ({email}) => <span>{email}</span>,
+      render: ({email}) => <span>{email?email:'N/A'}</span>,
     },
     {
       title: 'User Type',
@@ -77,7 +77,7 @@ class User extends React.Component {
       title: 'Action',
       dataIndex: '_id',
       key: 'x',
-      render: shopId => <a >View</a>, //href={`/admin/shops/single/${shopId}`}
+      render: shopId => <a href='#'>View</a>,
     }
   ]
   componentDidMount(){
@@ -264,6 +264,14 @@ class User extends React.Component {
           <Row className='df jcc'>
             <Col className="pl-1" md="5">
               <FormGroup>
+                <label htmlFor="userName">
+                  Name
+                </label>
+                <Input placeholder="Enter Name" value={this.state.newUser.name} onChange={(e)=>this.handleOnChange(e, 'name')} type="text" />
+              </FormGroup>
+            </Col>
+            <Col className="pl-1" md="5">
+              <FormGroup>
                 <label htmlFor="userEmail">
                   Email address
                 </label>
@@ -271,12 +279,16 @@ class User extends React.Component {
                 {this.state.showEmailError?<span className='text-danger'>Invalid Email</span>:null}
               </FormGroup>
             </Col>
-            <Col className="pl-1" md="5">
+          </Row>
+          <Row className='df jcc'>
+            <Col className="pl-1" md="10">
               <FormGroup>
                 <label htmlFor="userName">
-                  Name
+                  Mobile Number
                 </label>
-                <Input placeholder="Enter Name" value={this.state.newUser.name} onChange={(e)=>this.handleOnChange(e, 'name')} type="text" />
+                <Input placeholder="Enter Mobile Number" value={this.state.newUser.mobileNUmber} onChange={(e)=>this.handleOnChange(e, 'mobileNumber')} type="number" />
+                <InputGroup>
+                </InputGroup>
               </FormGroup>
             </Col>
           </Row>
@@ -302,19 +314,6 @@ class User extends React.Component {
                 <input type='file' accept='image/png,image/jpeg' onChange={(e)=>this.handleOnChange(e, 'ownerPhoto')} id='file' ref={this.ownerPhotoRef} style={{display: 'none'}}/>
                 <span className='form-control'>{this.state.hasOwnerAvtar?this.state.userPhoto.name :'No File Selected'}</span>
                   <InputGroupAddon><button onClick={(e)=>this.handleOnSelect(e, 'userPhoto')}  className='btn-primary i-grp-btn'>Browse</button></InputGroupAddon>
-                </InputGroup>
-              </FormGroup>
-            </Col>
-          </Row>
-
-          <Row className='df jcc'>
-            <Col className="pl-1" md="10">
-              <FormGroup>
-                <label htmlFor="userName">
-                  Mobile Number
-                </label>
-                <Input placeholder="Enter Mobile Number" value={this.state.newUser.mobileNUmber} onChange={(e)=>this.handleOnChange(e, 'mobileNumber')} type="number" />
-                <InputGroup>
                 </InputGroup>
               </FormGroup>
             </Col>

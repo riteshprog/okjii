@@ -50,7 +50,7 @@ export default class LoginPage extends Component {
         message.error(data.message);
       }else{
         let { user } = data.data
-        message.success(message);
+        message.success(data.message);
         CookieHandler.createCookie('userData', JSON.stringify(user));
         this.props.setUserData(user);
       }

@@ -330,6 +330,7 @@ class AddNewShop extends React.Component {
         distirct: joi.any(),
         country: joi.any(),
         address: joi.any(),
+        landmark: joi.any(),
         businessEntityIncorporation: joi.any(),
         shopActRegistration: joi.any(),
         gstRegistration: joi.any(),
@@ -340,14 +341,14 @@ class AddNewShop extends React.Component {
       return joi.validate(this.state.shopData.basic, basicSchema);
     } else if (category == "bankDetails") {
       const bankSchema = {
-        accountNumber: joi.string().required(),
-        confirmAccountNumber: joi.string().required(),
-        accountHolderName: joi.string().required(),
-        bankName: joi.string().required(),
-        ifscCode: joi.string().required(),
-        accountType: joi.string(),
-        bankAddress: joi.string(),
-        mobileNumber: joi.any().allow("")
+        accountNumber: joi.string().allow(''),
+        confirmAccountNumber: joi.string().allow(''),
+        accountHolderName: joi.string().allow(''),
+        bankName: joi.string().allow(''),
+        ifscCode: joi.string().allow(''),
+        accountType: joi.string().allow(''),
+        bankAddress: joi.string().allow(''),
+        mobileNumber: joi.any().allow('')
       };
       return joi.validate(this.state.shopData.bankDetails, bankSchema);
     } else if (category == "storeCatelogue") {
@@ -377,7 +378,7 @@ class AddNewShop extends React.Component {
         else
           this.setState({
             currentStep: step,
-            errorObj: { error: `Fileds Can't be Empty` }
+            errorObj: {}
           });
       } else if (this.state.currentStep == 1) {
         const bankDetails = this.state.shopData.bankDetails;
@@ -386,12 +387,12 @@ class AddNewShop extends React.Component {
         else
           this.setState({
             currentStep: step,
-            errorObj: { error: `Fileds Can't be Empty` }
+            errorObj: {}
           });
       } else {
         this.setState({
           currentStep: step,
-          errorObj: { error: `Fileds Can't be Empty` }
+          errorObj: {}
         });
       }
     }
@@ -961,6 +962,18 @@ class AddNewShop extends React.Component {
                             onMarkerClick={this.handleMarkerClick}
                           /> */}
                             {/* <ShopMap center={this.state.defaultCenter} containerElement={<div style={{ height: '250px', width: '100%' }} />} mapElement={<div style={{ height: '100%', width: '100%' }} />}/> */}
+                          </FormGroup>
+                        </Col>
+                        <Col className="pr-1" md={6}>
+                          <FormGroup>
+                            <label className="add-shop-label"> Compelete Address </label> {this.renderRequiredIcon()} 
+                            <Input placeholder='Enter Compelete Address' type='text' onChange={e => this.handleOnChange(e, 'address', "basic") } value={this.state.shopData.basic.address} />
+                          </FormGroup>
+                        </Col>
+                        <Col className="pr-1" md={6}>
+                          <FormGroup>
+                            <label className="add-shop-label"> Landmark </label> {this.renderRequiredIcon()} 
+                            <Input placeholder='Enter Landmark' type='text' onChange={e => this.handleOnChange(e, 'landmark', "basic") } value={this.state.shopData.basic.landmark} />
                           </FormGroup>
                         </Col>
                         <Col className="pr-1" md={12}>
