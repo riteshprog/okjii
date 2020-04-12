@@ -163,7 +163,7 @@ export default class CustomerKhataBook extends React.Component {
                         <th scope="col">last purchase</th>
                         <th scope="col">View Details</th>
                       </tr>
-                    </thead>
+                    </thead>  
                     <tbody>
                       <tr class="no-bottom-border">
                         <th scope="row" class="algin-center"><img src="./assets/img/Profile-01.png"/></th>

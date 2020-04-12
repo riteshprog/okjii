@@ -1661,6 +1661,26 @@ img.img-fluid.mobile {
   color: #259d70;
 }
 
+.store-customer-order .profile p:first-child{
+  margin-bottom: 0 !important;
+  font-weight: 600;
+  text-align: right;
+}
+.store-customer-order .profile p:last-child{
+  font-size: .9rem;
+  margin-top: 0rem !important;
+  text-align: right;
+}
+.store-customer-order .profile{
+  margin-right: 1rem !important;
+}
+.store-customer-order .callIcon{
+  width:70%;
+}
+.text-orange {
+  color: #E5582D;
+}
+
 .okjii-offer-image {
   width: 100% !important;
   padding-right: 0 !important;
@@ -3049,17 +3069,21 @@ input[type="radio"]:checked + label:before {
 /*  Dash Bord Card  Start */
 .dashbord-card1 {
   background-image: linear-gradient(-90deg, #6071e3, #805fe4);
+  height:140px;
 }
 .dashbord-card2 {
   background-image: linear-gradient(-90deg, #12b0ef, #1173ee);
+  height:140px;
 }
 
 .dashbord-card3 {
   background-image: linear-gradient(-90deg, #f53759, #f55d38);
+  height:140px;
 }
 
 .dashbord-card4 {
   background-image: linear-gradient(-90deg, #17294d, #1b184d);
+  height:140px;
 }
 
 .dashbord-card1 i,
@@ -3115,12 +3139,46 @@ input[type="radio"]:checked + label:before {
   padding-bottom: 8px;
 }
 
+.card-list-body .card-body div:first-child{
+  padding-top: 0px !important;
+}
+
+.marketing-dashbord .Acceptorder{
+
+  width:78%;
+
+}
+
+.marketing-dashbord .Target{
+
+  width:85%;
+
+}
+
+.marketing-dashbord .Performence{
+ width:6%;
+}
+
+
+.marketing-dashbord .card-title{
+  padding-top:1rem;
+}
+
+
 .card-list-body .card-body .card-list {
-  border-bottom: 1px solid #5e5e5e !important;
-  padding-bottom: 14px;
-  padding-top: 14px;
+  border-bottom: 1px solid #EAEAEA !important;
+  padding-bottom: 10px;
+  padding-top: 10px;
   margin-left: 0px;
   margin-right: 0px;
+}
+.okjii-dashboard h5{
+  color:#5e5e5e;
+}
+
+.card-list-body .card-body div{
+  font-size:.9rem;
+  color:#5e5e5e;
 }
 .dashbord-text {
   padding-left: 16px;
@@ -3281,6 +3339,15 @@ input.no-border.form-control {
   color: #fff;
   transform: rotate(90deg);
 }
+.coupion-content .customer-filter i.fa-plus{
+  background-color: #5484F4;
+  border-radius: 50%;
+  padding: 8px;
+  font-size: .8rem;
+  color: #fff;
+
+}
+
 
 .customer-filter i.fa-plus{
   background-color: #259d70;
@@ -3846,13 +3913,13 @@ color:#289C71;
   border-bottom: 1px solid #AEB0AF;
 }
 
-.product-details .customer-table thead th, .store-page .customer-table thead th, .customer-information .customer-table thead th, .customer-notification .customer-table thead th, .customer-offer .customer-table thead th, .reward-content .customer-table thead th {
+.product-details .customer-table thead th, .store-page .customer-table thead th, .customer-information .customer-table thead th, .customer-notification .customer-table thead th, .customer-offer .customer-table thead th, .reward-content .customer-table thead th, .store-order .customer-table thead th {
   padding: 1rem 1rem  !important;
 }
 
 
 
-.product-details .customer-table tbody td, .store-page .customer-table tbody td, .customer-information .customer-table tbody td, .customer-notification .customer-table tbody td, .customer-offer .customer-table tbody td, .reward-content .customer-table tbody td {
+.product-details .customer-table tbod-y td, .store-page .customer-table tbody td, .customer-information .customer-table t+body td, .customer-notification .customer-table tbody td, .customer-offer .customer-table tbody td, .reward-content .customer-table tbody td, .store-order .customer-table tbody td {
   padding: 1rem !important;
 }
 
@@ -3936,13 +4003,18 @@ border-bottom: 1.5px solid #5e5e5e;
   width:15%;
 }
 
-.customer-offer .table-striped th.text-center.thead-background {
+.customer-offer .table-striped th.text-center.thead-background{
   background-color: #9BE8C8;
   border-radius: 10px;
   color:#269D70;
   width: 33%;
 }
 
+.store-order .table-striped th.text-center.thead-background {
+  background-color: #9BE8C8;
+  border-radius: 10px;
+  color:#269D70;
+}
 .customer-offer .table-striped{
   margin-top: 1%;
 }
@@ -4149,6 +4221,180 @@ width: 75%;
 }
 
 /*  Reward Page end */
+
+/*  Store Order Page Start */
+
+.store-order .Bulb{
+  background-color: #259D70;
+  width:90%;
+  padding: .3rem 2rem;
+  vertical-align: middle;
+}
+
+.store-order .wallet-row.store-order{
+  margin-right: 2rem !important;
+}
+
+
+.store-order .numbers p:first-child{
+  font-size: 1.2rem;
+  margin-bottom: 0rem !important;
+}
+.store-order p{
+  font-size: 1rem;
+}
+
+
+.store-order .btn{
+  background-color: #259D70 !important;
+  font-size: .9rem;
+  padding: .3rem 1rem;
+  color: #fff;
+  font-weight: 300;
+}
+
+.store-order .customer-table thead tr:first-child{
+  border-bottom: 1px solid #DADADA;
+}
+
+.store-order .customer-table thead tr:last-child{
+  border-bottom: 2px solid #DADADA;
+
+}
+
+
+
+/* .store-order .wallet-row{
+  margin-right: 2rem;
+} */
+/* Store Order Page End */
+
+/* coupion page start */
+
+
+.coupion-content .form-group .form-control-file{
+  padding: 5px 10px 32px 10px !important;
+  border-radius: 4px;
+  border: 1px solid #DDDDDD;
+}
+
+
+.coupion-content .form-group input[type=file] {
+  opacity: 1;
+  position: absolute;
+  top: 2rem;
+}
+.coupion-content .customer-filter, .coupion-content .wallet-row{
+  background-color: #fff;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18);
+}
+
+.coupion-content .customer-filter p{
+  font-size: 1.2rem;
+  color:#5e5e5e;
+  margin-top:1rem;
+  font-weight: 600;
+}
+
+.coupion-content .customer-filter .btn{
+  background-color: blue !important;
+  color:#fff;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3em;
+  font-weight: 400 !important;
+}
+.coupion-content label{
+  font-weight: 600 !important;
+}
+
+
+.coupion-content .customer-coupon{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.customer-coupon input{
+  margin-right: 1rem;
+  padding: .9rem;
+}
+
+.customer-coupon-button .btn {
+  background-color: royalblue !important;
+margin-right: 1rem;
+text-transform: uppercase !important;
+letter-spacing: .1em;
+font-weight: 400 !important;
+}
+
+.coupion-content .customer-table .edit-back .btn{
+  font-size:.8rem !important;
+  background-color: #F0B935 !important;
+  color:#fff;
+  padding: .5rem;
+  display: flex;
+  text-transform: uppercase !important;
+  font-weight: 400;
+
+}
+
+.coupion-content .bg-green{
+  background-color: #3CCD5E;
+  color:#fff;
+}
+.coupion-content .bg-danger,.coupion-content .bg-green{
+padding: .2rem .5rem;
+border-radius: 4px;
+}
+
+.coupion-content .customer-table .btn i{
+  margin-right:.5rem;
+}
+.coupion-content .customer-table thead{
+  border:1px solid #F8F9F9;
+}
+
+.coupion-content .customer-table tbody tr td{
+  border:1px solid #F8F9F9;
+
+}
+
+/* coupion page end */
+
+/*  Comming Soon Start */
+
+.comming-soon .ComingSoon{
+  width:50%;
+}
+
+.comming-soon figcaption{
+  font-size: 1rem;
+  color: #5e5e5e;
+  margin-top: .8rem;
+}
+
+.rdw-editor-wrapper{
+  border:1px solid #DDDDDD !important;
+}
+
+.coupion-content .filter-search a .btn, .coupion-content .customer-table tbody tr td .btn{
+  background-color: #5484F4 !important;
+  
+}
+
+.coupion-content .customer-table thead th{
+  padding:1rem 2rem;
+} 
+.coupion-content .btn:last-child{
+  background-color: #3CCD5E !important;
+  color:#fff;
+  text-transform: uppercase !important;
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+/*  Comming Soon end */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {

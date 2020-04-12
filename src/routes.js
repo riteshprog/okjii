@@ -1,4 +1,5 @@
 import Dashboard from "./views/Dashboard.jsx";
+import MarketingDashBoard from "./views/MarketingDashBoard.jsx";
 import RetailerShop from "./views/retailShop/retailerShop.jsx";
 import AddNewShop from "./views/retailShop/addNewShop.jsx";
 import SingleShop from "./views/retailShop/./viewSingleShop.jsx";
@@ -46,10 +47,17 @@ import StoreReward from "./views/store/StoreReward.jsx";
 
 import StoreCustomerPayment from "./views/store/StoreCustomerPayment.jsx"
 
-
+import StoreOrder from "./views/store/StoreOrder.jsx"
+import StoreCurrentOrder from "./views/store/StoreCurrentOrder.jsx"
+import CouponForm from "./views/coupon/CouponForm.jsx"
+import AddFAQ  from "./views/coupon/AddFAQ.jsx"
+import AddFAQDetail  from "./views/coupon/AddFAQDetail.jsx"
+import CouponAddFormDetails from "./views/coupon/CouponAddFormDetails.jsx"
+import CommingSoon from "./views/commingsoon/CommingSoon.jsx"
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
   { path: "/dashboard", onSideBar: true, name: "Dashboard", icon: "nc-icon nc-bank", component: Dashboard, layout: "/admin" },
+  { path: "/Marketdashboard", onSideBar: true, name: "MarKeting Dashboard", icon: "nc-icon nc-bank", component: MarketingDashBoard, layout: "/admin" },
   { path: "/shops", onSideBar: true, name: "Retailer Shop", icon: "nc-icon nc-shop", accessTo: ["admin", "market"], component: RetailerShop, layout: "/admin" },
   { path: "/customer", onSideBar: true, name: "Customer", icon: "far fa-user", component: CustomerDetails, accessTo: ["admin"], layout: "/admin" },
   { path: "/store", onSideBar: true, name: "Store", icon: "nc-icon nc-shop", accessTo: ["admin", "market"], component: StoreDetails, layout: "/admin" },
@@ -80,6 +88,8 @@ var routes = [
   { path: "/pre-registration", onSideBar: true, name: "Pre Registrations", icon: "nc-icon nc-badge", accessTo: ["admin"], component: PreReg, layout: "/admin" },
   { path: "/store/wallet", onSideBar: true, name: "Wallet", icon: "fa fa-money", accessTo: ["admin"], component: Wallet, layout: "/admin" },
   { path: "/Setting", onSideBar: true, name: "Setting", icon: "fa fa-cog", component: Setting, layout: "/admin" },
+  { path: "/commingsoon/", onSideBar: true, name: "Total Sale", icon: "nc-icon nc-chat-33", accessTo: ["admin"], component: CommingSoon, layout: "/admin" },
+
   {
     path: "/store/product/:storeId",
     onSideBar: false,
@@ -101,6 +111,22 @@ var routes = [
 
   { path: "/store/reward", onSideBar: true, name: "Reward", icon: "fa fa-money", accessTo: ["admin"], component: StoreReward, layout: "/admin" },
   { path: "/store/cust-payment", onSideBar: true, name: "Customer Payment", icon: "fa fa-money", accessTo: ["admin"], component: StoreCustomerPayment, layout: "/admin" },
+  { path: "/store/cust-order", onSideBar: true, name: "Store Order", icon: "fa fa-money", accessTo: ["admin"], component: StoreOrder, layout: "/admin" },
+  { path: "/store/current-order", onSideBar: true, name: "Store Current Order", icon: "fa fa-money", accessTo: ["admin"], component: StoreCurrentOrder, layout: "/admin" },
+  
+  
+  
+  { path: "/coupon", onSideBar: true, name: "Create Coupon", icon: "fa fa-money", accessTo: ["admin"], component: CouponForm, layout: "/admin" },
+  { path: "/coupon/coupon-add", onSideBar: false, name: "Coupon List", icon: "fa fa-money", accessTo: ["admin"], component: CouponAddFormDetails, layout: "/admin" },
+  
+  { path: "/coupon/add-faq", onSideBar: true, name: "Add Faq", icon: "fa fa-money", accessTo: ["admin"], component: AddFAQDetail, layout: "/admin" },
+  { path: "/coupon/add-faq-list", onSideBar: false, name: "Coupon Add", icon: "fa fa-money", accessTo: ["admin"], component: AddFAQ, layout: "/admin" },
+  
+
+  
+  
+
+  
   /* --------------------Side Bar Routes Ends-------------------- */
   
   /* --------------------Other Routes -------------------------- */
