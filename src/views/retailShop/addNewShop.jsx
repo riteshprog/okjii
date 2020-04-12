@@ -150,7 +150,7 @@ class AddNewShop extends React.Component {
         hint: "Enter Account Number",
         changeHandler: "onChange",
         space: 6,
-        required: true
+        required: false
       },
       {
         type: "number",
@@ -160,7 +160,7 @@ class AddNewShop extends React.Component {
         hint: "Confirm Account Number",
         changeHandler: "onChange",
         space: 6,
-        required: true
+        required: false
       },
       {
         type: "text",
@@ -170,7 +170,7 @@ class AddNewShop extends React.Component {
         hint: "Enter Account Holder Name",
         changeHandler: "onChange",
         space: 6,
-        required: true
+        required: false
       },
       {
         type: "text",
@@ -180,7 +180,7 @@ class AddNewShop extends React.Component {
         hint: "Enter Bank Name",
         changeHandler: "onChange",
         space: 6,
-        required: true
+        required: false
       },
       {
         type: "text",
@@ -190,7 +190,7 @@ class AddNewShop extends React.Component {
         hint: "Enter IFSC Code",
         changeHandler: "onChange",
         space: 6,
-        required: true
+        required: false
       },
       {
         type: "text",
@@ -201,7 +201,7 @@ class AddNewShop extends React.Component {
         hint: "Enter Account Type",
         changeHandler: "onChange",
         space: 6,
-        required: true
+        required: false
       },
       {
         type: "text",
@@ -211,7 +211,7 @@ class AddNewShop extends React.Component {
         hint: "Enter Bank Address",
         changeHandler: "onChange",
         space: 6,
-        required: true
+        required: false
       },
       {
         type: "text",
@@ -490,9 +490,13 @@ class AddNewShop extends React.Component {
     shopData.basic.waltLicense &&
       data.append("waltLicense", shopData.basic.waltLicense);
 
+    let {userInfo, _id} = JSON.parse(CookieHandler.readCookie('userData'));
+    let token = JSON.parse(CookieHandler.readCookie('token'))
+      
     Axios.post(process.env.REACT_APP_API_URL + "/shop", data, {
       headers: {
-        Accept: "application/json"
+        Accept: "application/json",
+        token
       }
     })
       .then(({ data }) => {

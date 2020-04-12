@@ -32,8 +32,7 @@ export default class LoginPage extends Component {
           window.location.href = 'verify-otp?mobileNumber=' + mobileNumber;
         }
       }).catch(err=> {
-        alert(`Error, Something Went Wrong`)
-        console.log(err)
+        message.error(`Something Went Wrong / user not found`)
       })
     }
   }

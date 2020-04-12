@@ -109,8 +109,10 @@ class Login extends React.Component {
       if(!response.status){
         this.setState({loginError: true})
       }else{
-        CookieHandler.createCookie('userData', JSON.stringify(response.userData));
-        this.props.setUserData(response.userData);
+        console.log(`response`, response);
+        CookieHandler.createCookie('userData', JSON.stringify(response.userData.user));
+        CookieHandler.createCookie('token', JSON.stringify(response.token));
+        this.props.setUserData(response.userData.user);
       }
     }).catch(err=> {
       alert(`Error, Something Went Wrong`)

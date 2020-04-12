@@ -4,6 +4,7 @@ import moment from 'moment-timezone';
 import { Link } from "react-router-dom";
 import { Avatar, Table, Tag } from "antd";
 import { Card, CardHeader, CardBody, CardTitle, Row, Col, Button } from "reactstrap";
+import CookieHandler from '../../utils/cookieHandler';
 
 class Tables extends React.Component {
   
@@ -11,8 +12,9 @@ class Tables extends React.Component {
     super(props);
     this.state = {
       showActions: false,
-      allShops: []
+      allShops: [],
     }
+  let {userInfo} = JSON.parse(CookieHandler.readCookie('userData'));
   }
   columns = [
     {
@@ -62,13 +64,27 @@ class Tables extends React.Component {
       dataIndex: '_id',
       key: 'x',
       render: shopId => <div className='df fdc'>
-        <a href={`/admin/shops/single/${shopId}`}>View</a>
+        {this.userInfo && this.userInfo.userType.key != 'admin' && <a href={`/admin/shops/single/${shopId}`}>View</a>}
         <a href={`/admin/shops/add-item/${shopId}`}>Add Product</a>
       </div>, //
     }
   ]
   componentDidMount(){
-    Axios.get(process.env.REACT_APP_API_URL + '/shop')
+    let {userInfo, _id} = JSON.parse(CookieHandler.readCookie('userData'));
+    let token = JSON.parse(CookieHandler.readCookie('token'))
+    let url = process.env.REACT_APP_API_URL + '/shop';
+    if(userInfo.userType.key == 'marketing') { 
+      url+='?addedBy=' + _id
+    } 
+    this.getShopList(url, token);
+  }
+
+  getShopList = (url, token) => {
+    Axios.get(url, {
+      headers: {
+        token
+      }
+    })
     .then(({data})=>{
       if(data.status){
         this.setState({allShops: data.allShops})

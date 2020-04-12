@@ -22,17 +22,9 @@ export default class LoginPage extends Component {
   componentDidMount() {
     const urlParams = new URLSearchParams(window.location.search);
     let mobileNumber = urlParams.get('mobileNumber');
-    console.log(urlParams.get('mobileNumber'))
     this.setState({mobileNumber});
   }
-  handleOnChange = (e, key) => {
-    let { otp } = this.state;
-    otp = e.target.value;
-    this.setState({otp});
-    if(otp.length == 6){
-      // e.target.focus = false
-    }
-  }
+
   handleOnChangeOtp = (enteredOTP) => {
     let { otp } = this.state;
     this.setState({otp: enteredOTP});
@@ -49,9 +41,11 @@ export default class LoginPage extends Component {
       if(!data.status){
         message.error(data.message);
       }else{
-        let { user } = data.data
+        let { user, token } = data.data
         message.success(data.message);
         CookieHandler.createCookie('userData', JSON.stringify(user));
+        CookieHandler.createCookie('token', JSON.stringify(token));
+        
         this.props.setUserData(user);
       }
     }).catch(err=> {

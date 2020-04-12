@@ -21,7 +21,7 @@ class Sidebar extends React.Component {
         name: 'shopKeeper',
         canView: ['Dashboard', 'Store', 'Customer', 'Location', 'Target', 'Incentive', 'Support']
       }],
-      sidebarRoutes: []
+      sidebarRoutes: this.props.routes
     }
   }
   // verifies if routeName is the one active (in browser input)
@@ -39,11 +39,10 @@ class Sidebar extends React.Component {
     }
 
     let {sidebarRoutes, userPermissions} = this.state;
-    console.log(`userdata`, userData);
     let {userInfo} = userData;
     let currentUserType = userInfo.userType.key;
     if(currentUserType == 'marketing'){
-      let userShouldView = ['Dashboard', 'Retailer Shop', 'User', 'Location', 'Target', 'Incentive', 'Support'];
+      let userShouldView = ['Dashboard', 'Store', 'Customer', 'Location', 'Target', 'Incentive', 'Support'];
       sidebarRoutes = this.props.routes;
       sidebarRoutes = sidebarRoutes.filter(singleRoute => userShouldView.includes(singleRoute.name))
       this.setState({sidebarRoutes});
@@ -55,7 +54,6 @@ class Sidebar extends React.Component {
     }
   }
   render() {
-    console.log(`this.props.routes`, this.props.routes);
     let {sidebarRoutes} = this.state;
     return (
       <div className="sidebar" data-color={this.props.bgColor} data-active-color={this.props.activeColor}>

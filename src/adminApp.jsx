@@ -18,13 +18,11 @@ export default class Routes extends Component {
       userData: null,
     }
     const userData = CookieHandler.readCookie('userData');
-    console.log(`user data admin page`, userData);
     // const userData = CookieHandler.readCookie('userData');
     // if(!userData) window.location = '/login'
   }
   componentDidMount() {
     const userData = CookieHandler.readCookie('userData');
-    console.log(`user data admin page`, userData);
     this.setUserData(userData)
   }
   setUserData = (userData)=> {

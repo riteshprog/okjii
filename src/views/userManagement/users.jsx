@@ -18,7 +18,7 @@ class User extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      addNewUserModalVisibility: true,
+      addNewUserModalVisibility: false,
       showActions: false,
       allUsers: [],
       newUser: {

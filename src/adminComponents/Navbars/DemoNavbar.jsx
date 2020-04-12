@@ -191,7 +191,7 @@ class Header extends React.Component {
               </NavItem> */}
 
               { <div className='df aic ml-2'>
-                <span >Hello, { user && user.basic.mobileNumber }</span>
+                <span >Hello </span>
               </div> }
               
               <Dropdown nav isOpen={this.state.dropdownOpen} toggle={e => this.dropdownToggle(e)}>
