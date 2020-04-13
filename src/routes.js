@@ -54,6 +54,9 @@ import AddFAQ  from "./views/coupon/AddFAQ.jsx"
 import AddFAQDetail  from "./views/coupon/AddFAQDetail.jsx"
 import CouponAddFormDetails from "./views/coupon/CouponAddFormDetails.jsx"
 import CommingSoon from "./views/commingsoon/CommingSoon.jsx"
+import AddPage  from "./views/coupon/AddPage.jsx"
+import AddPageDetails  from "./views/coupon/AddPageDetails.jsx"
+import StoreTotalSale from "./views/store/StoreTotalSale.jsx"
 
 
 var routes = [
@@ -125,6 +128,8 @@ var routes = [
   { path: "/store/cust-order", onSideBar: true, name: "Store Order", icon: "fa fa-money", accessTo: ["admin"], component: StoreOrder, layout: "/admin" },
   { path: "/store/current-order", onSideBar: true, name: "Store Current Order", icon: "fa fa-money", accessTo: ["admin"], component: StoreCurrentOrder, layout: "/admin" },
   
+  { path: "/store/total-sale", onSideBar: true, name: "Store Total Sale", icon: "fa fa-money", accessTo: ["admin"], component: StoreTotalSale, layout: "/admin" },
+  
   
   
   { path: "/coupon", onSideBar: true, name: "Create Coupon", icon: "fa fa-money", accessTo: ["admin"], component: CouponForm, layout: "/admin" },
@@ -133,6 +138,8 @@ var routes = [
   { path: "/coupon/add-faq", onSideBar: true, name: "Add Faq", icon: "fa fa-money", accessTo: ["admin"], component: AddFAQDetail, layout: "/admin" },
   { path: "/coupon/add-faq-list", onSideBar: false, name: "Coupon Add", icon: "fa fa-money", accessTo: ["admin"], component: AddFAQ, layout: "/admin" },
   
+  { path: "/coupon/add-page", onSideBar: true, name: "Add Page", icon: "fa fa-money", accessTo: ["admin"], component: AddPage, layout: "/admin" },
+  { path: "/coupon/add-pagedetails", onSideBar: false, name: "Page Details", icon: "fa fa-money", accessTo: ["admin"], component: AddPageDetails, layout: "/admin" },
 
   
   

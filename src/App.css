@@ -4395,6 +4395,60 @@ border-radius: 4px;
 
 /*  Comming Soon end */
 
+/*  Total Sale Start */
+.sale-order{
+  margin-top:1.5rem;
+  margin-bottom: 2rem;
+  
+}
+
+.total-sale-card{
+  display: flex;
+  position: absolute;
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+  justify-content: left;
+  padding:15px;
+}
+
+.total-sale-card img{
+  margin-right:1rem
+}
+
+.total-sale-card h4{
+  font-size:1rem;
+  color:#5e5e5e !important;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.total-sale-card .big-text{
+  font-size:1.2rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.total-sale-card .small-text{
+  font-size: .75rem;
+}
+
+
+.total-sale-content{
+  margin-top: -2rem;
+}
+
+.date-font{
+  font-size:1rem;
+}
+.BlackCalendar{
+  width:2.5%;
+  margin-left: .5rem;
+  margin-right: 2rem;
+}
+
+/*  Total Sale End */
+
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
   .navbar .navbar-toggler {

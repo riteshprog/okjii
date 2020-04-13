@@ -38,15 +38,15 @@ class Sidebar extends React.Component {
       });
     }
 
-    let {sidebarRoutes, userPermissions} = this.state;
-    let {userInfo} = userData;
-    let currentUserType = userInfo.userType.key;
-    if(currentUserType == 'marketing'){
-      let userShouldView = ['Dashboard', 'Store', 'Customer', 'Location', 'Target', 'Incentive', 'Support'];
-      sidebarRoutes = this.props.routes;
-      sidebarRoutes = sidebarRoutes.filter(singleRoute => userShouldView.includes(singleRoute.name))
-      this.setState({sidebarRoutes});
-    }
+    // let {sidebarRoutes, userPermissions} = this.state;
+    // let {userInfo} = userData;
+    // let currentUserType = userInfo.userType.key;
+    // if(currentUserType == 'marketing'){
+    //   let userShouldView = ['Dashboard', 'Store', 'Customer', 'Location', 'Target', 'Incentive', 'Support'];
+    //   sidebarRoutes = this.props.routes;
+    //   sidebarRoutes = sidebarRoutes.filter(singleRoute => userShouldView.includes(singleRoute.name))
+    //   this.setState({sidebarRoutes});
+    // }
   }
   componentWillUnmount() {
     if (navigator.platform.indexOf("Win") > -1) {
