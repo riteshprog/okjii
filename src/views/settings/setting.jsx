@@ -168,7 +168,7 @@ class Setting extends Component {
     <MDBContainer>
         
         <MDBModal isOpen={this.state.modal14} toggle={this.toggle(14)} centered>
-          <MDBModalHeader toggle={this.toggle(14)}>Edit Email Notification</MDBModalHeader>
+          <MDBModalHeader toggle={this.toggle(14)}>Edit Feedback</MDBModalHeader>
           <MDBModalBody>
           <FormGroup>
         <Label for="exampleEmail">Parameter</Label>
@@ -212,7 +212,7 @@ class Setting extends Component {
       <MDBContainer>
         
         <MDBModal isOpen={this.state.modal15} toggle={this.toggle(15)} centered>
-          <MDBModalHeader toggle={this.toggle(15)}>Delete Email Notification</MDBModalHeader>
+          <MDBModalHeader toggle={this.toggle(15)}>Delete Feedback</MDBModalHeader>
           <MDBModalBody>
 You want to Delete &#x201C;PUSH ID Okk01&#x201D; notification, Please Confirme.            </MDBModalBody>
           <MDBModalFooter>
@@ -225,7 +225,7 @@ You want to Delete &#x201C;PUSH ID Okk01&#x201D; notification, Please Confirme. 
       <MDBContainer>
         
         <MDBModal isOpen={this.state.modal16} toggle={this.toggle(16)} centered>
-          <MDBModalHeader toggle={this.toggle(16)}>Edit Email Notification</MDBModalHeader>
+          <MDBModalHeader toggle={this.toggle(16)}>Edit Feedback</MDBModalHeader>
           <MDBModalBody>
           <FormGroup>
         <Label for="exampleEmail">Parameter</Label>

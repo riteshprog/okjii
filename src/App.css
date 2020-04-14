@@ -205,19 +205,6 @@ a {
   white-space: nowrap;
 }
 
-.login-page {
-  background-image: url(../src/img/login/background.jpg);
-
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
 
 .okjii-mainbody {
   background-image: url(../src/img/home/Home-background.png);
@@ -3438,18 +3425,15 @@ input.no-border.form-control {
 
 /*  Customer Page End */
 /* Customer Login start */
-.login-page {
-  width: 100%;
+
+.mobile-login{
+  display: none;
 }
-.login-page-information {
-  background-color: #fff !important;
-  /* clip-path: polygon(0% 0%, 65% 0%, 65% 0%, 47% 100%, 0% 100%); */
-}
+
+
 
 .login-information {
   padding-top: 10rem;
-  width: 60%;
-  height: 100vh;
   margin: 0 auto;
 }
 .login-information h1 {
@@ -3475,25 +3459,59 @@ input.no-border.form-control {
   border-radius: 5px !important;
 }
 
-/* .login-page {
-	width: 100%;
-	height: 100vh;
-	background-color:  red !important;
-  transition: 0.4s cubic-bezier(1, -1, 0, 2);
-  clip-path: polygon(35% 0%, 100% 0%, 100% 50%, 100% 100%, 30% 100%);
-z-index: 5;
+.login-page-information{
+  position: relative;
+  text-align: center;
+  
+}
+
+/* .login-page:before {
+  background-color: rgba(255, 255, 255,.1);
+  background-image: url(../src/img/login/background.jpg);
+  background-repeat: no-repeat;
+  background-position: 80%;
+  width: 100%;
+  height: 80%;
+  position: fixed;
+  content: "";
 } */
+
+
+
+.login-page-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+
+
+.logo-white-login{
+  position: relative;
+  text-align: center;
+
+} 
+.top-left-login{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+.Logowhite-bg{
+  z-index: 99999 !important;
+  position: absolute;
+}
 
 .login-information .btn {
   padding: 0.7rem 2rem;
   margin-top: 3rem;
-  margin-bottom: 12rem;
+  margin-bottom: 10rem;
 }
 
 .login-information p {
   font-size: 1rem;
   color: #5e5e5e;
   background-color: none !important;
+  margin-bottom: 12rem;
 }
 /* Customer Login End  */
 /*  Blog Page Start  */
@@ -4359,6 +4377,11 @@ border-radius: 4px;
 
 }
 
+.city-module .pagination{
+  margin-top:3rem;
+}
+
+
 /* coupion page end */
 
 /*  Comming Soon Start */
@@ -5207,6 +5230,14 @@ border-radius: 4px;
     display: block;
   }
 
+  .desktop-login{
+    display: none;
+  }
+
+  .mobile-login{
+    display: block;
+  }
+
   .refer-earn-con h1 {
     font-size: 17pt;
     font-weight: 600;
@@ -5329,6 +5360,87 @@ border-radius: 4px;
 } */
 
   /*refer earn page end */
+
+/*  Admin Panels Mobile View */
+
+.main-panel {
+  position: relative;
+  float: right;
+  width: calc(100% - 0px) !important;
+  background-color: #fdfeff;
+  transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+}
+
+nav.navbar-absolute.fixed-top.navbar.navbar-expand-lg.bg-dark {
+  background-color: #eeeeee !important;
+}
+
+nav.navbar-absolute.fixed-top.navbar.navbar-expand-lg.bg-dark {
+  z-index: 9999 !important;
+}
+
+a.nav-link.nav-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+a.nav-link.nav-btn i{
+  padding-bottom: 1rem;
+}
+
+.sidebar {
+  width: 260px !important;
+}
+.sidebar .sidebar-wrapper {
+  width: 260px !important;
+}
+
+a.nav-link.nav-btn i:last-child{
+  padding-bottom: 0;
+}
+
+/* Login Page Start */
+
+.footer {
+  padding: 24px 0;
+  margin-top: 12rem;
+}
+.login-information .btn {
+  padding: 0.7rem 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.login-page-right {
+background-color: #fff;
+margin-top: 8rem !important;
+border-radius: 15px;
+}
+.login-information {
+  padding-top: 15px;
+  margin: 0 auto;
+}
+
+.login-page-right {
+  position: absolute;
+  top: 8px;
+   right: 20px;
+}
+.login-information p{
+  margin-bottom: 1rem;
+}
+
+.main-panel > .content {
+  padding: 0px 0px !important;
+  margin-top: 0px !important;
+}
+
+
+
+/*  Login Page End */
+
+
 }
 /* @media screen and (max-width: 991px){ */
 .navbar {
@@ -5345,6 +5457,40 @@ border-radius: 4px;
     z-index: -1;
   
   } */
+/*Admin Panal Css Start*/ 
+.main-panel {
+  position: relative;
+  float: right;
+  width: calc(100% - 240px) !important;
+  background-color: #fdfeff;
+  transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+}
+
+nav.navbar-absolute.fixed-top.navbar.navbar-expand-lg.bg-dark {
+  background-color: #eeeeee !important;
+}
+
+nav.navbar-absolute.fixed-top.navbar.navbar-expand-lg.bg-dark {
+  z-index: 9999 !important;
+}
+
+a.nav-link.nav-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+a.nav-link.nav-btn i{
+  padding-bottom: 1rem;
+}
+
+.nav-open .main-panel {
+    right: 0;
+     transform: translate3d(0px, 0, 0) !important;
+}
+
+/* Admin Panel Css End */
+
 
   .container-fluid.okjii-mainbody.main-body-desktop {
     display: none;
