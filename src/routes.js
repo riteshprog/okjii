@@ -1,5 +1,8 @@
 import Dashboard from "./views/Dashboard.jsx";
 import MarketingDashBoard from "./views/MarketingDashBoard.jsx";
+import LoginPage from "./views/login/LoaginPage.jsx";
+import LoginPageOtp from "./views/login/LoginPageOtp.jsx";
+
 import RetailerShop from "./views/retailShop/retailerShop.jsx";
 import AddNewShop from "./views/retailShop/addNewShop.jsx";
 import SingleShop from "./views/retailShop/./viewSingleShop.jsx";
@@ -19,6 +22,7 @@ import CustomerKhataBookUdaarSingleView from "./views/customer/CustomerKhataBook
 import CustomerKhataPaymentHistory from "./views/customer/CustomerKhataPayementHistory.jsx";
 import CustomerKhataPurchaseHistory from "./views/customer/CustomerKhataPurchaseHistory.jsx";
 import CustomerKhataPurchaseHistorySingleOrder from "./views/customer/CustomerKhataPurchaseHistorySingleOrder.jsx";
+
 
 import Categories from "./views/category/viewAllCategories.jsx";
 import BlogDetails from "./views/blog/BlogDetails";
@@ -54,13 +58,22 @@ import AddFAQ  from "./views/coupon/AddFAQ.jsx"
 import AddFAQDetail  from "./views/coupon/AddFAQDetail.jsx"
 import CouponAddFormDetails from "./views/coupon/CouponAddFormDetails.jsx"
 import CommingSoon from "./views/commingsoon/CommingSoon.jsx"
+import AddPage  from "./views/coupon/AddPage.jsx"
+import AddPageDetails  from "./views/coupon/AddPageDetails.jsx"
+import StoreTotalSale from "./views/store/StoreTotalSale.jsx"
+import AddCity  from "./views/coupon/AddCity.jsx"
+import AddCityDetail  from "./views/coupon/AddCityDetail.jsx"
 
 
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
   { path: "/dashboard", onSideBar: true, name: "Dashboard", icon: "nc-icon nc-bank", component: Dashboard, layout: "/admin" },
   { path: "/Marketdashboard", onSideBar: true, name: "MarKeting Dashboard", icon: "nc-icon nc-bank", component: MarketingDashBoard, layout: "/admin" },
+  { path: "/login", onSideBar: true, name: "Otp Login", icon: "nc-icon nc-shop", accessTo: ["admin", "market"], component: LoginPage, layout: "/admin" },
+  { path: "/login-otp", onSideBar: true, name: "Otp Page", icon: "nc-icon nc-shop", accessTo: ["admin", "market"], component: LoginPageOtp, layout: "/admin" },
+  
   { path: "/shops", onSideBar: true, name: "Store", icon: "nc-icon nc-shop", accessTo: ["admin", "market"], component: RetailerShop, layout: "/admin" },
+  
   
   // { path: "/customer", onSideBar: true, name: "Customer", icon: "far fa-user", component: CustomerDetails, accessTo: ["admin"], layout: "/admin" },
   { path: "/customer", onSideBar: true, name: "Customer", icon: "far fa-user", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
@@ -125,6 +138,8 @@ var routes = [
   { path: "/store/cust-order", onSideBar: true, name: "Store Order", icon: "fa fa-money", accessTo: ["admin"], component: StoreOrder, layout: "/admin" },
   { path: "/store/current-order", onSideBar: true, name: "Store Current Order", icon: "fa fa-money", accessTo: ["admin"], component: StoreCurrentOrder, layout: "/admin" },
   
+  { path: "/store/total-sale", onSideBar: true, name: "Store Total Sale", icon: "fa fa-money", accessTo: ["admin"], component: StoreTotalSale, layout: "/admin" },
+  
   
   
   { path: "/coupon", onSideBar: true, name: "Create Coupon", icon: "fa fa-money", accessTo: ["admin"], component: CouponForm, layout: "/admin" },
@@ -133,7 +148,11 @@ var routes = [
   { path: "/coupon/add-faq", onSideBar: true, name: "Add Faq", icon: "fa fa-money", accessTo: ["admin"], component: AddFAQDetail, layout: "/admin" },
   { path: "/coupon/add-faq-list", onSideBar: false, name: "Coupon Add", icon: "fa fa-money", accessTo: ["admin"], component: AddFAQ, layout: "/admin" },
   
+  { path: "/coupon/add-page", onSideBar: true, name: "Add Page", icon: "fa fa-money", accessTo: ["admin"], component: AddPage, layout: "/admin" },
+  { path: "/coupon/add-pagedetails", onSideBar: false, name: "Page Details", icon: "fa fa-money", accessTo: ["admin"], component: AddPageDetails, layout: "/admin" },
 
+  { path: "/coupon/add-city", onSideBar: true, name: "Add City Module", icon: "fa fa-money", accessTo: ["admin"], component: AddCity, layout: "/admin" },
+  { path: "/coupon/add-citydetails", onSideBar: false, name: "City Module", icon: "fa fa-money", accessTo: ["admin"], component: AddCityDetail, layout: "/admin" },
   
   
 

@@ -7,11 +7,13 @@ import axios from 'axios';
 import CookieHandler from '../../utils/cookieHandler.js';
 
 import './login.css';
+import background from "../../img/login/background.jpg";
 
 import okkjibigfavicon from "../../img/login/okkji-big-favicon.png";
 import logowhite from "../../img/login/logowhite.png";
+import MobileBackground from "../../img/login/MobileBackground.jpg";
 
-export default class LoginPage extends Component {
+export default class LoginPageOtp extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -57,13 +59,16 @@ export default class LoginPage extends Component {
     return (
       <>
         <div className="content login-page login-page-information">
-
-          <Row className="">
-            <Col className="" md="6">
-              <img src={logowhite} width="70" height="70"  className="img-fluid mt-3" />
-            </Col>
-            <Col md="6" className="text-center ">
-              <div className="login-information">
+        <div className="logo-white-login ">
+          <div className=" login-page-information">
+            <figure className="okkji-faq-figure okjii-fast-img4">
+            <img src={background} alt="" className="img-fluid desktop-login" />
+            <img src={MobileBackground} alt="" className="img-fluid mobile-login" />
+            
+            
+            </figure>
+            <div class="login-page-right">
+            <div className="login-information">
               <img src={okkjibigfavicon} width="50" height="50" alt="" />
               <h1>Enter OTP</h1>
               <div>
@@ -80,8 +85,16 @@ export default class LoginPage extends Component {
                 </div>
                   <p className="footer-text">If You have any login issue please, <Link to="/contact">Contact Us</Link></p>
               </div>
-            </Col>
-          </Row>
+
+            </div>
+            
+          </div>
+          <Row className="top-left-login">
+<img src={logowhite}  className="img-fluid  Logowhite-bg" />
+
+</Row>
+        </div>
+
         </div>
       </>
     )
