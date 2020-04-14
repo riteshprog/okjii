@@ -117,7 +117,7 @@ class Tables extends React.Component {
                 </CardHeader>
                 <CardBody>
                 {this.state.allShops.length?<span className='ml-1 desc'>Total Shops: {this.state.allShops.length}</span>:(null)}
-                  <Table columns={this.columns} dataSource={this.state.allShops} />
+                  <Table columns={this.columns} scroll={{ x: true }} dataSource={this.state.allShops} />
                 </CardBody>
               </Card>
             </Col>
