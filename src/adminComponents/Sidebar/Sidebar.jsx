@@ -3,9 +3,10 @@ import { NavLink } from "react-router-dom";
 import { Nav } from "reactstrap";
 import PerfectScrollbar from "perfect-scrollbar";
 import CookieHandler from '../../utils/cookieHandler';
-import { Menu } from "antd";
+import { Menu, Layout } from "antd";
 import {Link} from 'react-router-dom'
 const { SubMenu } = Menu;
+const {Sider} = Layout;
 
 var ps;
 
@@ -31,6 +32,7 @@ class Sidebar extends React.Component {
   componentDidMount() {
     let userData = JSON.parse(CookieHandler.readCookie('userData'));
     this.setState({userData});
+    
     if (navigator.platform.indexOf("Win") > -1) {
       ps = new PerfectScrollbar(this.sidebar.current, {
         suppressScrollX: true,
@@ -38,15 +40,16 @@ class Sidebar extends React.Component {
       });
     }
 
-    // let {sidebarRoutes, userPermissions} = this.state;
-    // let {userInfo} = userData;
-    // let currentUserType = userInfo.userType.key;
-    // if(currentUserType == 'marketing'){
-    //   let userShouldView = ['Dashboard', 'Store', 'Customer', 'Location', 'Target', 'Incentive', 'Support'];
-    //   sidebarRoutes = this.props.routes;
-    //   sidebarRoutes = sidebarRoutes.filter(singleRoute => userShouldView.includes(singleRoute.name))
-    //   this.setState({sidebarRoutes});
-    // }
+    let {sidebarRoutes, userPermissions} = this.state;
+    let {userInfo} = userData;
+    let currentUserType = userInfo.userType.key;
+
+    if(currentUserType == 'marketing'){
+      let userShouldView = ['Dashboard', 'Store', 'Customer', 'Location', 'Target', 'Incentive', 'Support'];
+      sidebarRoutes = this.props.routes;
+      sidebarRoutes = sidebarRoutes.filter(singleRoute => userShouldView.includes(singleRoute.name))
+      this.setState({sidebarRoutes});
+    }
   }
   componentWillUnmount() {
     if (navigator.platform.indexOf("Win") > -1) {
@@ -75,25 +78,20 @@ class Sidebar extends React.Component {
                 </NavLink>
               </li>
             ):(
-              <li className={ this.activeRoute(prop.path) + (prop.pro ? "active-pro" : "") } key={key} >
-                {sidebarRoutes.map((subMenu, i)=><NavLink to={subMenu.layout + subMenu.path} className="nav-link" activeClassName="active" >
-                  <i className={subMenu.icon} />
-                  <p>{subMenu.name}</p>
-                </NavLink>)}
-              </li>
-
-              // <Menu mode="inline" >
-              // <SubMenu className='nav-link'
-              //   style={{backgroundColor: '#eee'}}
-              //   title={
-              //     <span>
-              //       <i className={prop.icon}/>
-              //       <p>{prop.subMenuTitle}</p>
-              //     </span>
-              //   }>
-              //     {prop.routes.map((subMenu, i)=><Menu.Item className='nav-link' ><Link to={subMenu.path}>{subMenu.name}</Link></Menu.Item>)}
-              // </SubMenu>
-              // </Menu>
+              <Menu mode="inline" >
+                <SubMenu className='nav-link'
+                  style={{backgroundColor: '#eee'}}
+                  title={
+                    <span>
+                      <i className={prop.icon}/>
+                      <p>{prop.subMenuTitle}</p>
+                    </span>
+                  }>
+                    {prop.routes.map((subMenu, i)=><Menu.Item className='nav-link'>
+                      <i className={prop.icon}/><Link to={subMenu.layout + subMenu.path}>{subMenu.name}</Link>
+                    </Menu.Item>)}
+                </SubMenu>
+              </Menu>
             ))}
           </Nav>
         </div>
