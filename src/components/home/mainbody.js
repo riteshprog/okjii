@@ -26,7 +26,7 @@ export default class mainbody extends Component {
     return (
       <div className="okjii-home">
         <Helmet>
-          <title>Home</title>
+          <title>Home | Online Kirana Shopping | Near By Shop</title>
         </Helmet>
         <div className="container-fluid okjii-mainbody main-body-desktop">
           <div className="row image-position">
