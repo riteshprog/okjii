@@ -30,12 +30,11 @@ export default class LoginPage extends Component {
         mobileNumber,
         type: 3
       }).then(({data})=> {
-        console.log(`data`, data)
         let response = data.result;
         if(response.type != 'success'){
           message.error(response.message);
         }else{
-          // window.location.href = 'verify-otp?mobileNumber=' + mobileNumber;
+          window.location.href = 'verify-otp?mobileNumber=' + mobileNumber;
         }
       }).catch(err=> {
         message.error(`Something Went Wrong / user not found`)
