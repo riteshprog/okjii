@@ -61,7 +61,7 @@ export default class LoginPageOtp extends Component {
         <div className="content login-page login-page-information">
         <div className="logo-white-login ">
           <div className=" login-page-information">
-            <figure className="okkji-faq-figure okjii-fast-img4">
+            <figure className="">
             <img src={background} alt="" className="img-fluid desktop-login" />
             <img src={MobileBackground} alt="" className="img-fluid mobile-login" />
             
@@ -69,6 +69,7 @@ export default class LoginPageOtp extends Component {
             </figure>
             <div class="login-page-right">
             <div className="login-information">
+            <img src={logowhite}  className="img-fluid  Logowhite-bg" />
               <img src={okkjibigfavicon} width="50" height="50" alt="" />
               <h1>Enter OTP</h1>
               <div>
@@ -89,10 +90,6 @@ export default class LoginPageOtp extends Component {
             </div>
             
           </div>
-          <Row className="top-left-login">
-<img src={logowhite}  className="img-fluid  Logowhite-bg" />
-
-</Row>
         </div>
 
         </div>

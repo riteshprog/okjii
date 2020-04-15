@@ -3431,6 +3431,11 @@ input.no-border.form-control {
 }
 
 
+img.img-fluid.Logowhite-bg {
+  transform: translate(-1002px, -61px);
+  width: 32%;
+}
+
 
 .login-information {
   padding-top: 10rem;
@@ -3500,18 +3505,22 @@ input.no-border.form-control {
   z-index: 99999 !important;
   position: absolute;
 }
+.login-page-information img:first-child{
+  margin-top:-1.4rem;
+}
+
 
 .login-information .btn {
   padding: 0.7rem 2rem;
   margin-top: 3rem;
-  margin-bottom: 10rem;
+  margin-bottom: 6rem;
 }
 
 .login-information p {
   font-size: 1rem;
   color: #5e5e5e;
   background-color: none !important;
-  margin-bottom: 12rem;
+  margin-bottom: 6rem;
 }
 /* Customer Login End  */
 /*  Blog Page Start  */
@@ -5402,30 +5411,46 @@ a.nav-link.nav-btn i:last-child{
 
 /* Login Page Start */
 
-.footer {
+.login-page .footer {
   padding: 24px 0;
-  margin-top: 12rem;
+  margin-top: 1rem;
 }
 .login-information .btn {
   padding: 0.7rem 2rem;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
-
+img.img-fluid.Logowhite-bg {
+  transform: translate(-20px, -66px);
+  width: 30%;
+}
+.login-information p{
+  font-size: .9rem;
+}
 .login-page-right {
 background-color: #fff;
-margin-top: 8rem !important;
+margin-top: 5rem !important;
+padding-top: 15px;
 border-radius: 15px;
+margin-left: 20px;
 }
 .login-information {
   padding-top: 15px;
   margin: 0 auto;
+}
+.logo-white-login{
+  margin-top: 0px !important;
+}
+
+.login-information h1 {
+  padding: 1rem 0rem;
 }
 
 .login-page-right {
   position: absolute;
   top: 8px;
    right: 20px;
+   left: 0px;
 }
 .login-information p{
   margin-bottom: 1rem;
@@ -5433,9 +5458,11 @@ border-radius: 15px;
 
 .main-panel > .content {
   padding: 0px 0px !important;
-  margin-top: 0px !important;
+  margin-top: 80px !important;
 }
-
+.login-page-information .mobile-login{
+  margin-top:-1.7rem !important;
+}
 
 
 /*  Login Page End */
@@ -5458,13 +5485,25 @@ border-radius: 15px;
   
   } */
 /*Admin Panal Css Start*/ 
-.main-panel {
+
+.nav-open .main-panel  {
   position: relative;
   float: right;
   width: calc(100% - 240px) !important;
   background-color: #fdfeff;
   transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  z-index: 9999;
 }
+
+.main-panel  {
+  position: relative;
+  float: right;
+  width: calc(100% - 0px) !important;
+  background-color: #fdfeff;
+  transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  z-index: 9999;
+}
+
 
 nav.navbar-absolute.fixed-top.navbar.navbar-expand-lg.bg-dark {
   background-color: #eeeeee !important;
@@ -5528,6 +5567,19 @@ a.nav-link.nav-btn i{
   .turested-slide img.vmart {
     height: 50px !important;
   }
+/*  Login Page Css*/
+
+.login-information {
+  padding-top: 0rem;
+  margin: 0 auto;
+}
+
+.login-information .btn {
+  padding: 0.7rem 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -5566,6 +5618,21 @@ a.nav-link.nav-btn i{
     margin-left: 19rem;
     margin-right: 19rem;
   }
+  .login-information {
+    padding-top: 6rem;
+    margin: 0 auto;
+}
+.login-information .btn {
+  padding: 0.7rem 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.login-information .main-panel > .content {
+  min-height: calc(100vh - 353px);
+ 
+}
+
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
@@ -5589,6 +5656,16 @@ a.nav-link.nav-btn i{
   .turested-slide img.vishal {
     height: 52px !important;
   }
+  .login-information {
+    padding-top: 6rem;
+    margin: 0 auto;
+}
+.login-information .btn {
+  padding: 0.7rem 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
 }
 
 .offer-page {
