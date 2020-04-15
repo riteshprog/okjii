@@ -44,10 +44,16 @@ export default class Routes extends Component {
       return (
         <Router history={history}>
           <Switch>
-            <Route path="/login" component={() => (<Login setUserData={(data)=>this.setUserData(data)} />)}/>
-            <Route path="/login-marketing" component={() => (<LoginOtp />)}/>
-            <Route path="/verify-otp" component={() => (<LoginOtpVerify setUserData={(data)=>this.setUserData(data)} />)}/>
-            
+            {(this.props.type != 'marketing')?
+              (
+                <Route path="/login" component={() => (<Login setUserData={(data)=>this.setUserData(data)} />)}/>
+              )
+              :
+              (
+                <Route path="/login" component={() => (<LoginOtp />)}/>
+                // <Route path="/verify-otp" component={() => (<LoginOtpVerify setUserData={(data)=>this.setUserData(data)} />)}/>
+              )
+            }
             <Route path="/admin" render={props => <AdminLayout {...props} />} />
             <Redirect path="*" to="/login" />
           </Switch>
