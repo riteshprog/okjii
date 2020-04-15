@@ -51,9 +51,9 @@ export default class Routes extends Component {
               :
               (
                 <Route path="/login" component={() => (<LoginOtp />)}/>
-                // <Route path="/verify-otp" component={() => (<LoginOtpVerify setUserData={(data)=>this.setUserData(data)} />)}/>
               )
             }
+            <Route path="/verify-otp" component={() => (<LoginOtpVerify setUserData={(data)=>this.setUserData(data)} />)}/>
             <Route path="/admin" render={props => <AdminLayout {...props} />} />
             <Redirect path="*" to="/login" />
           </Switch>

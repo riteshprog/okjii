@@ -71,6 +71,7 @@ class Dashboard extends React.Component {
     return (
       <div className="wrapper">
         <Sidebar
+          type={window.location.hostname.split('.')[0]}
           {...this.props}
           routes={routes.filter(route=> route.onSideBar)}
           bgColor={this.state.backgroundColor}
