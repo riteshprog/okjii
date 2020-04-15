@@ -64,7 +64,7 @@ class Tables extends React.Component {
       dataIndex: '_id',
       key: 'x',
       render: shopId => <div className='df fdc'>
-        {this.userInfo && this.userInfo.userType.key != 'admin' && <a href={`/admin/shops/single/${shopId}`}>View</a>}
+        {window.location.hostname.split('.')[0] === 'admin'?<a href={`/admin/shops/single/${shopId}`}>View</a>: null}
         <a href={`/admin/shops/add-item/${shopId}`}>Add Product</a>
       </div>, //
     }

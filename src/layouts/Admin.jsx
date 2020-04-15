@@ -71,6 +71,7 @@ class Dashboard extends React.Component {
     return (
       <div className="wrapper">
         <Sidebar
+          type={window.location.hostname.split('.')[0]}
           {...this.props}
           routes={routes.filter(route=> route.onSideBar)}
           bgColor={this.state.backgroundColor}
@@ -80,15 +81,17 @@ class Dashboard extends React.Component {
           <DemoNavbar userData={this.props.userData} {...this.props} />
           <Switch>
             {routes.map((prop, key) => {
-              return (
-                <Route
-                  exact
-                  path={prop.layout + prop.path}
-                  component={prop.component}
-                  key={key}
-                />
-              );
-            })}
+              if(prop.type != 'subMenu'){
+                return (
+                  <Route
+                    exact
+                    path={prop.layout + prop.path}
+                    component={prop.component}
+                    key={key}
+                  />
+                )}
+              })
+            }
           </Switch>
           <Footer fluid />
         </div>

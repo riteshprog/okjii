@@ -41,11 +41,11 @@ class Sidebar extends React.Component {
     }
 
     let {sidebarRoutes, userPermissions} = this.state;
-    let {userInfo} = userData;
-    let currentUserType = userInfo.userType.key;
-
-    if(currentUserType == 'marketing'){
-      let userShouldView = ['Dashboard', 'Store', 'Customer', 'Location', 'Target', 'Incentive', 'Support'];
+    let {userInfo} = userData, { type } = this.props;
+    let userShouldView = [];
+    
+    if(type == 'marketing'){
+      userShouldView = ['Marketing Dashboard', 'Store', 'Customer', 'Location', 'Target', 'Incentive', 'Support'];
       sidebarRoutes = this.props.routes;
       sidebarRoutes = sidebarRoutes.filter(singleRoute => userShouldView.includes(singleRoute.name))
       this.setState({sidebarRoutes});

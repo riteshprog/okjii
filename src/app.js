@@ -37,7 +37,7 @@ class App extends React.Component {
     };
   }
   componentDidMount() {
-    if(window.location.hostname.split('.')[0] == 'admin' || window.location.hostname.split('.')[0] == 'devadmin'){
+    if(window.location.hostname.split('.')[0] == 'admin' || window.location.hostname.split('.')[0] == 'devadmin' || window.location.hostname.split('.')[0] == 'marketing'){
       this.setState({showAdmin: true});
     }
   }
@@ -116,7 +116,7 @@ class App extends React.Component {
         </div>
       );
     } else {
-      return <AdminApp/>;
+      return <AdminApp type={window.location.hostname.split('.')[0]}/>;
     }
   }
 }

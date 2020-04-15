@@ -1,10 +1,6 @@
 import Dashboard from "./views/Dashboard.jsx";
 import MarketingDashBoard from "./views/MarketingDashBoard.jsx";
 
-
-import LoginPage from "./views/login/LoaginPage.jsx";
-import LoginPageOtp from "./views/login/LoginPageOtp.jsx";
-
 import RetailerShop from "./views/retailShop/retailerShop.jsx";
 
 import AddNewShop from "./views/retailShop/addNewShop.jsx";
@@ -75,9 +71,7 @@ var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
 
   { path: "/dashboard", onSideBar: true, name: "Dashboard", icon: "nc-icon nc-bank", component: Dashboard, layout: "/admin" },
-  { path: "/Marketdashboard", onSideBar: true, name: "M Dashboard", icon: "nc-icon nc-bank", component: MarketingDashBoard, layout: "/admin" },
-  { path: "/login", onSideBar: true, name: "Login page", icon: "nc-icon nc-bank", component: LoginPage, layout: "/admin" },
-  { path: "/login-otp", onSideBar: true, name: "Login-otp", icon: "nc-icon nc-bank", component: LoginPageOtp, layout: "/admin" },
+  { path: "/market-dashboard", onSideBar: true, name: "Marketing Dashboard", icon: "nc-icon nc-bank", component: MarketingDashBoard, layout: "/admin" },
   
   
   { path: "/shops", onSideBar: true, name: "Store", icon: "nc-icon nc-shop", accessTo: ["admin", "market"], component: RetailerShop, layout: "/admin" },
@@ -91,8 +85,8 @@ var routes = [
   { path: "/Order", onSideBar: true, name: "Order", icon: "nc-icon nc-app", component: Order, layout: "/admin" },
   { path: "/TotalSale", onSideBar: true, name: "Total Sale", icon: "fa fa-pie-chart", component: TotalSale, layout: "/admin" },
   
-  { path: "/notification", name: "Push Notification", onSideBar:true, icon: "far fa-bell", component: Notification, layout: "/admin"},
-  { path: "/EmailNotification", name: "Email Notification", onSideBar:true, icon: "far fa-bell", component: EmailNotification, layout: "/admin"},
+  { path: "/notification", name: "Push Notification", onSideBar:false, icon: "far fa-bell", component: Notification, layout: "/admin"},
+  { path: "/EmailNotification", name: "Email Notification", onSideBar:false, icon: "far fa-bell", component: EmailNotification, layout: "/admin"},
   
   { path: "/customer-notification", name: "Customer Notification", onSideBar:true, icon: "far fa-bell", component: CustomerNotification, layout: "/admin", subMenuTitle: 'Customer Notification' },
   { path: "/customer-offer", name: "Customer Offer", onSideBar:true, icon: "far fa-bell", component: CustomerOffer, layout: "/admin", subMenuTitle: 'Customer Offer' },
@@ -115,11 +109,11 @@ var routes = [
   { path: "/support", onSideBar: true, name: "Support", icon: "nc-icon nc-support-17", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
 
     // notification submenu
-  // { type: 'subMenu', onSideBar: true, icon: 'fa fa-pie-chart', subMenuTitle: 'Notification', routes: [
-  //     { path: "/notification", onSideBar: true, name: "Push Notification", icon: "far fa-bell", component: Notification, layout: "/admin", type: 'subMenu', subMenuTitle: 'Notification' },
-  //     { path: "/EmailNotification", onSideBar: true, name: "Email Notification", icon: "far fa-bell", component: EmailNotification, layout: "/admin", type: 'subMenu', subMenuTitle: 'Notification' }
-  //   ]
-  // },
+  { type: 'subMenu', onSideBar: true, icon: 'fa fa-pie-chart', subMenuTitle: 'Notification', routes: [
+      { path: "/notification", onSideBar: true, name: "Push Notification", icon: "far fa-bell", component: Notification, layout: "/admin", type: 'subMenu', subMenuTitle: 'Notification' },
+      { path: "/EmailNotification", onSideBar: true, name: "Email Notification", icon: "far fa-bell", component: EmailNotification, layout: "/admin", type: 'subMenu', subMenuTitle: 'Notification' }
+    ]
+  },
 
   {
     path: "/store/product/:storeId",
