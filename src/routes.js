@@ -11,6 +11,7 @@ import PreReg from "./views/preRegistration/preReg";
 import Users from "./views/userManagement/users";
 import SingleShopEdit from "./views/retailShop/singleShopEdit";
 
+
 import CustomerDetails from "./views/customer/CustomerDetails";
 import ViewDetailsCustomer from "./views/customer/ViewDetailsCustomer.jsx";
 import CustomerWallet from "./views/customer/CustomerWallet.jsx";
