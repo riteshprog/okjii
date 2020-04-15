@@ -641,7 +641,7 @@ class AddNewShop extends React.Component {
               {/* onClick={()=>this.changeStep(0) */}
               <Step
                 title={
-                  <span style={{ lineHeight: 2.5 }} className="step  box arrow-right">
+                  <span style={{ lineHeight: 2.5 }} className="step">
                     Basic
                   </span>
                 }
@@ -649,7 +649,7 @@ class AddNewShop extends React.Component {
               />
               <Step
                 title={
-                  <span style={{ lineHeight: 2.5 }} className="step  box arrow-right">
+                  <span style={{ lineHeight: 2.5 }} className="step">
                     Bank Details
                   </span>
                 }
@@ -657,7 +657,7 @@ class AddNewShop extends React.Component {
               />
               <Step
                 title={
-                  <span style={{ lineHeight: 2.5 }} className="step  box arrow-right">
+                  <span style={{ lineHeight: 2.5 }} className="step">
                     Store Product/Catelog
                   </span>
                 }
