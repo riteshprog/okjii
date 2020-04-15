@@ -5569,6 +5569,11 @@ a.nav-link.nav-btn {
 a.nav-link.nav-btn i{
   padding-bottom: 1rem;
 }
+img.img-fluid.Logowhite-bg {
+  transform: translate(-480px, 15px);
+  width: 32%;
+}
+
 
 .nav-open .main-panel {
     right: 0;
@@ -5679,6 +5684,10 @@ a.nav-link.nav-btn i{
   min-height: calc(100vh - 353px);
  
 }
+img.img-fluid.Logowhite-bg {
+  transform: translate(-500px, -60px);
+  width: 32%;
+}
 
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -5711,6 +5720,11 @@ a.nav-link.nav-btn i{
   padding: 0.7rem 2rem;
   margin-top: 3rem;
   margin-bottom: 2rem;
+}
+
+img.img-fluid.Logowhite-bg {
+  transform: translate(-750px, -60px);
+  width: 32%;
 }
 
 }
