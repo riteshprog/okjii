@@ -15,18 +15,65 @@
 section.okkji-faq.offer-mobile {
   display: none;
 }
-
+.ant-menu-inline .ant-menu-submenu{
+  padding: 0px !important;
+}
+.ant-menu-inline .ant-menu-submenu .nav-link{
+  padding: 0px !important;
+}
+.ant-menu{
+  background: #eee !important;
+}
 .sidebar .sidebar-wrapper li.active>a:not([data-toggle=collapse]):after {
   border-right: none !important;
 }
-
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
+  background-color: #4b9e70 !important;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected > i{
+  color: #fff !important;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected > a{
+  color: #fff !important;
+}
+.ant-menu-inline .ant-menu-item::after{
+  border: none !important;
+}
 .sidebar .sidebar-wrapper li.active>a:not([data-toggle=collapse])::before {
   border-right: none !important;
+}
+.ant-menu-submenu .ant-menu-submenu-inline .nav-link {
+  background-color: rgb(238, 238, 238);
+}
+.ant-menu-submenu > .ant-menu{
+ background-color: rgb(238, 238, 238) !important; 
+}
+.ant-menu-sub.ant-menu-inline > .ant-menu-item{
+  display: flex;
+  align-items: center;
+  padding-left: 10px !important;
+}
+.sidebar .nav li > a{
+  margin: 2px 0px !important;
+  color: #777 !important;
+}
+.sidebar .nav i{
+  color: #777 !important;
+}
+
+.ant-menu-inline .ant-menu-item:not(:last-child){
+  margin-bottom: 0px !important;
+}
+
+.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title{
+  padding-left: 10px !important;
+  line-height: 30px !important; 
 }
 
 .row.text-center.mobile {
   display: none;
 }
+
 p {
   font-size: 1.25rem;
   color: #5e5e5e;

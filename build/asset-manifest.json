@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.109584ec.chunk.css",
-    "main.js": "/static/js/main.e0f57f14.chunk.js",
-    "main.js.map": "/static/js/main.e0f57f14.chunk.js.map",
+    "main.css": "/static/css/main.dc50034c.chunk.css",
+    "main.js": "/static/js/main.7c68d5df.chunk.js",
+    "main.js.map": "/static/js/main.7c68d5df.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e4c39bdf.js",
     "runtime-main.js.map": "/static/js/runtime-main.e4c39bdf.js.map",
     "static/css/2.9cabbf67.chunk.css": "/static/css/2.9cabbf67.chunk.css",
-    "static/js/2.2328cdbe.chunk.js": "/static/js/2.2328cdbe.chunk.js",
-    "static/js/2.2328cdbe.chunk.js.map": "/static/js/2.2328cdbe.chunk.js.map",
+    "static/js/2.f421b3e9.chunk.js": "/static/js/2.f421b3e9.chunk.js",
+    "static/js/2.f421b3e9.chunk.js.map": "/static/js/2.f421b3e9.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.aaa0162385689fbdab5bc3b8613d4e08.js": "/precache-manifest.aaa0162385689fbdab5bc3b8613d4e08.js",
+    "precache-manifest.a1bc5844cc71addf4b64e4aefae30ba7.js": "/precache-manifest.a1bc5844cc71addf4b64e4aefae30ba7.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.9cabbf67.chunk.css.map": "/static/css/2.9cabbf67.chunk.css.map",
-    "static/css/main.109584ec.chunk.css.map": "/static/css/main.109584ec.chunk.css.map",
-    "static/js/2.2328cdbe.chunk.js.LICENSE.txt": "/static/js/2.2328cdbe.chunk.js.LICENSE.txt",
+    "static/css/main.dc50034c.chunk.css.map": "/static/css/main.dc50034c.chunk.css.map",
+    "static/js/2.f421b3e9.chunk.js.LICENSE.txt": "/static/js/2.f421b3e9.chunk.js.LICENSE.txt",
     "static/media/Aastha.png": "/static/media/Aastha.9b0fff1e.png",
     "static/media/Akash.png": "/static/media/Akash.90402a10.png",
     "static/media/Ankur.png": "/static/media/Ankur.53d1be2e.png",
@@ -35,6 +35,7 @@
     "static/media/Mannu.png": "/static/media/Mannu.4d72aace.png",
     "static/media/Mobile-background.jpg": "/static/media/Mobile-background.be284cc8.jpg",
     "static/media/MobileBackground.png": "/static/media/MobileBackground.6f385037.png",
+    "static/media/MobileBackground.jpg": "/static/media/MobileBackground.f13e0da0.jpg",
     "static/media/OkkJiFast01.png": "/static/media/OkkJiFast01.50f5a494.png",
     "static/media/Police.png": "/static/media/Police.0c44aa5c.png",
     "static/media/PreRegistration.png": "/static/media/PreRegistration.b061cf67.png",
@@ -46,6 +47,7 @@
     "static/media/Simpy.png": "/static/media/Simpy.8b19d1c6.png",
     "static/media/Sweety.png": "/static/media/Sweety.d71e0de9.png",
     "static/media/Vicky.png": "/static/media/Vicky.322f50a7.png",
+    "static/media/background.jpg": "/static/media/background.c34f21e2.jpg",
     "static/media/blog.png": "/static/media/blog.10a36261.png",
     "static/media/blog3.jpg": "/static/media/blog3.8b5c0531.jpg",
     "static/media/blog4.jpg": "/static/media/blog4.c96f681a.jpg",
@@ -73,8 +75,8 @@
   "entrypoints": [
     "static/js/runtime-main.e4c39bdf.js",
     "static/css/2.9cabbf67.chunk.css",
-    "static/js/2.2328cdbe.chunk.js",
-    "static/css/main.109584ec.chunk.css",
-    "static/js/main.e0f57f14.chunk.js"
+    "static/js/2.f421b3e9.chunk.js",
+    "static/css/main.dc50034c.chunk.css",
+    "static/js/main.7c68d5df.chunk.js"
   ]
 }
