@@ -48,7 +48,7 @@ export default class LoginPage extends Component {
         <div className="content">
         <div className="logo-white-login ">
           <div className=" login-page-information">
-            <figure className="okkji-faq-figure okjii-fast-img4">
+            <figure className="">
             <img src={background} alt="" className="img-fluid desktop-login" />
             <img src={MobileBackground} alt="" className="img-fluid mobile-login" />
             
@@ -56,6 +56,7 @@ export default class LoginPage extends Component {
             </figure>
             <div class="login-page-right">
             <div className="login-information">
+            <img src={logowhite}  className="img-fluid  Logowhite-bg" />
             <img src={okkjibigfavicon} width="50" height="50" alt="" />
             <h1>Sign in to OkkJi</h1>
             <div class="input-form offer-input">
@@ -74,10 +75,6 @@ export default class LoginPage extends Component {
             </div>
             
           </div>
-          <Row className="top-left-login">
-<img src={logowhite}  className="img-fluid  Logowhite-bg" />
-
-</Row>
         </div>
 
 

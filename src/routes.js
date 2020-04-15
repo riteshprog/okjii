@@ -1,6 +1,10 @@
 import Dashboard from "./views/Dashboard.jsx";
 import MarketingDashBoard from "./views/MarketingDashBoard.jsx";
 
+
+import LoginPage from "./views/login/LoaginPage.jsx";
+import LoginPageOtp from "./views/login/LoginPageOtp.jsx";
+
 import RetailerShop from "./views/retailShop/retailerShop.jsx";
 import AddNewShop from "./views/retailShop/addNewShop.jsx";
 import SingleShop from "./views/retailShop/./viewSingleShop.jsx";
@@ -67,6 +71,9 @@ var routes = [
 
   { path: "/dashboard", onSideBar: true, name: "Dashboard", icon: "nc-icon nc-bank", component: Dashboard, layout: "/admin" },
   { path: "/Marketdashboard", onSideBar: true, name: "MarKeting Dashboard", icon: "nc-icon nc-bank", component: MarketingDashBoard, layout: "/admin" },
+  { path: "/login", onSideBar: true, name: "Login page", icon: "nc-icon nc-bank", component: LoginPage, layout: "/admin" },
+  { path: "/login-otp", onSideBar: true, name: "Login-otp", icon: "nc-icon nc-bank", component: LoginPageOtp, layout: "/admin" },
+  
   
   { path: "/shops", onSideBar: true, name: "Store", icon: "nc-icon nc-shop", accessTo: ["admin", "market"], component: RetailerShop, layout: "/admin" },
   
