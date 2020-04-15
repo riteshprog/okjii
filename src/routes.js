@@ -6,6 +6,7 @@ import LoginPage from "./views/login/LoaginPage.jsx";
 import LoginPageOtp from "./views/login/LoginPageOtp.jsx";
 
 import RetailerShop from "./views/retailShop/retailerShop.jsx";
+
 import AddNewShop from "./views/retailShop/addNewShop.jsx";
 import SingleShop from "./views/retailShop/./viewSingleShop.jsx";
 import { MyFancyComponent } from "./adminComponents/googleMap/googleMap";
@@ -65,17 +66,22 @@ import StoreTotalSale from "./views/store/StoreTotalSale.jsx"
 import AddCity  from "./views/coupon/AddCity.jsx"
 import AddCityDetail  from "./views/coupon/AddCityDetail.jsx"
 
+//Marketing Page import
 
+import MStore from "./views/marketing/store/MStore.jsx";
+
+import MStoreViewDetails from "./views/marketing/store/MStoreViewDetails.jsx"
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
 
   { path: "/dashboard", onSideBar: true, name: "Dashboard", icon: "nc-icon nc-bank", component: Dashboard, layout: "/admin" },
-  { path: "/Marketdashboard", onSideBar: true, name: "MarKeting Dashboard", icon: "nc-icon nc-bank", component: MarketingDashBoard, layout: "/admin" },
+  { path: "/Marketdashboard", onSideBar: true, name: "M Dashboard", icon: "nc-icon nc-bank", component: MarketingDashBoard, layout: "/admin" },
   { path: "/login", onSideBar: true, name: "Login page", icon: "nc-icon nc-bank", component: LoginPage, layout: "/admin" },
   { path: "/login-otp", onSideBar: true, name: "Login-otp", icon: "nc-icon nc-bank", component: LoginPageOtp, layout: "/admin" },
   
   
   { path: "/shops", onSideBar: true, name: "Store", icon: "nc-icon nc-shop", accessTo: ["admin", "market"], component: RetailerShop, layout: "/admin" },
+  { path: "/mstore", onSideBar: true, name: "M Store", icon: "nc-icon nc-shop", accessTo: ["admin", "market"], component: MStore, layout: "/admin" },
   
   { path: "/customer", onSideBar: true, name: "Customer", icon: "far fa-user", component: CustomerDetails, accessTo: ["admin"], layout: "/admin" },
 
@@ -159,6 +165,12 @@ var routes = [
   /* --------------------Side Bar Routes Ends-------------------- */
   
   /* --------------------Other Routes -------------------------- */
+
+//Marketing Route
+
+{ path: "/mstore/storeviewDdetails/:mstoreId", onSideBar: false, name: "Store Details", icon: "nc-icon nc-shop", component: MStoreViewDetails, layout: "/admin" },
+
+
 
   //store wallet routes 
   { path: "/store/wallet/view-all-pre-transactions", name: "View All Pre Transactions", component: ViewAllPreTransactions, accessTo: ["admin", "market"], layout: "/admin" },

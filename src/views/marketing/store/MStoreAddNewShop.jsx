@@ -14,7 +14,7 @@ import "./retailshop.css";
 const { Step } = Steps;
 const { Option } = Select;
 
-class AddNewShop extends React.Component {
+class MStoreAddNewShop extends React.Component {
   constructor(props) {
     super(props);
 
@@ -641,7 +641,7 @@ class AddNewShop extends React.Component {
               {/* onClick={()=>this.changeStep(0) */}
               <Step
                 title={
-                  <span style={{ lineHeight: 2.5 }} className="step  box arrow-right">
+                  <span style={{ lineHeight: 2.5 }} className="step box arrow-right">
                     Basic
                   </span>
                 }
@@ -649,7 +649,7 @@ class AddNewShop extends React.Component {
               />
               <Step
                 title={
-                  <span style={{ lineHeight: 2.5 }} className="step  box arrow-right">
+                  <span style={{ lineHeight: 2.5 }} className="step box arrow-right">
                     Bank Details
                   </span>
                 }
@@ -657,7 +657,7 @@ class AddNewShop extends React.Component {
               />
               <Step
                 title={
-                  <span style={{ lineHeight: 2.5 }} className="step  box arrow-right">
+                  <span style={{ lineHeight: 2.5 }} className="step box arrow-right">
                     Store Product/Catelog
                   </span>
                 }
@@ -1220,4 +1220,4 @@ class AddNewShop extends React.Component {
   }
 }
 
-export default AddNewShop;
+export default MStoreAddNewShop;

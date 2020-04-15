@@ -39,6 +39,7 @@ import {
 
 import routes from "../../routes";
 import CookieHandler from '../../utils/cookieHandler.js';
+import Add from '../../assets/img/Add.png';
 
 class Header extends React.Component {
   constructor(props) {
@@ -169,8 +170,10 @@ class Header extends React.Component {
               </InputGroup>
             </form>
             <Nav navbar>
-            <NavItem>
-              <Link to="/" className="nav-link nav-btn"><i class="far fa-question-circle"></i> <MDBIcon far icon="bell" /> <MDBIcon icon="dharmachakra" /></Link>
+            <NavItem className="nav-btn">
+              <Link to="/" className="nav-link"><i class="far fa-question-circle"></i></Link>
+              <Link to="/" className="nav-link"><MDBIcon far icon="bell" /></Link>
+              <Link to="shops/add-new" className="nav-link"><img src={Add} alt="" className="Add" /></Link> <Link to="/" className="nav-link"><MDBIcon icon="dharmachakra" /></Link>
             </NavItem>
 
 

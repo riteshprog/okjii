@@ -44,6 +44,7 @@ import Winning from '../assets/img/Winning.png';
 import newcustomer from '../assets/img/newcustomer.png';
 import Eye from '../assets/img/Eye.png';
 import storeIcon from '../assets/img/storeIcon.png';
+import filterIcon from '../assets/img/filterIcon.png';
 
 
 class MarketingDashBoard extends React.Component {
@@ -70,9 +71,15 @@ class MarketingDashBoard extends React.Component {
     return (
       <>
         <div className="content okjii-dashboard marketing-dashbord">
-          <Row>
-            <Col md="12"><p className="border-bottom dashbord-text">Dashboard</p></Col>
-          </Row>
+          <div class="customer-filter wallet-row">
+          <div class="col-md-9 col-sm-6">
+          <p className=" dashbord-text">Dashboard</p>
+                    </div>
+          <div class="filter-search col-md-3 col-sm-6">
+            <p><i class="fa fa-search"></i></p>
+            <p><span class="filter-txt"> Filter</span> <img src={filterIcon} alt="" /></p>
+          </div>
+        </div>
           <Row>
             <Col lg="3" md="6" sm="6">
               <Card className="card-stats dashbord-card1">
@@ -180,7 +187,7 @@ class MarketingDashBoard extends React.Component {
             </Col>
           </Row>
                    <Row>
-                   <Col  className="card-list-body" md="4">
+                   <Col  className="card-list-body" md="5">
               <Card>
                 <CardHeader>
                   <CardTitle tag="h5">Current Listing <img src={OrderListing} alt="" className="OrderListing float-right" /></CardTitle>
@@ -226,7 +233,7 @@ class MarketingDashBoard extends React.Component {
                 </CardBody>
               </Card>
             </Col>
-            <Col md="8">
+            <Col md="7">
               <Card className="card-chart">
                 <CardHeader>
                   <CardTitle tag="h5">Performence <img src={Performence} alt="" className="Performence float-right" /></CardTitle>
