@@ -93,7 +93,7 @@ class MarketingDashBoard extends React.Component {
                     <Col md="8" xs="7">
                       <div className="numbers">
                         <p className="card-category">Today's Listing</p>
-                          <CardTitle tag="p">10</CardTitle>
+                          <CardTitle tag="p">{this.state.dashboardData.shopsCount}</CardTitle>
                         <p />
                       </div>
                     </Col>

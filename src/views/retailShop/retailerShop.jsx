@@ -3,7 +3,8 @@ import Axios from "axios";
 import moment from 'moment-timezone';
 import { Link } from "react-router-dom";
 import { Avatar, Table, Tag } from "antd";
-import { Card, CardHeader, CardBody, CardTitle, Row, Col, Button } from "reactstrap";
+import { Card, CardHeader, CardBody, CardTitle, Row, Col, Button, DropdownMenu, DropdownToggle, Dropdown, DropdownItem } from "reactstrap";
+import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 import CookieHandler from '../../utils/cookieHandler';
 
 class Tables extends React.Component {
@@ -66,7 +67,43 @@ class Tables extends React.Component {
       render: shopId => <div className='df fdc'>
         {window.location.hostname.split('.')[0] === 'admin'?<a href={`/admin/shops/single/${shopId}`}>View</a>: null}
         <a href={`/admin/shops/add-item/${shopId}`}>Add Product</a>
-      </div>, //
+      </div>,
+    },
+    {
+      title: 'Action',
+      dataIndex: '_id',
+      key: 'x',
+      render: ()=>(<MDBDropdown>
+        <MDBDropdownToggle color="primary">
+        <i class="fas fa-ellipsis-v" />
+        </MDBDropdownToggle>
+        <MDBDropdownMenu  basic className="dropdown-bottom" >
+          <MDBDropdownItem><Link to="store/viewstoredetails/:storeId">View Details</Link></MDBDropdownItem>
+          <MDBDropdownItem><Link to="store/product/:storeId">Product</Link></MDBDropdownItem>
+          <MDBDropdownItem>Wallet</MDBDropdownItem>
+          <MDBDropdownItem>OkkJi Khata</MDBDropdownItem>
+          <MDBDropdownItem>Setting</MDBDropdownItem>
+          <MDBDropdownItem>Target</MDBDropdownItem>
+          <MDBDropdownItem>Revenue</MDBDropdownItem>
+        </MDBDropdownMenu>
+      </MDBDropdown>
+      )
+    },
+    {
+      title: 'Action',
+      dataIndex: '_id',
+      key: 'x',
+      render: ()=>(
+        <Dropdown nav isOpen={this.state.dropdownOpen} toggle={e => this.dropdownToggle(e)}>
+          <DropdownToggle caret nav>
+            <i className="nc-icon nc-single-02" />
+            <p> <span className="d-lg-none d-md-block">User Actions</span></p>
+          </DropdownToggle>
+          <DropdownMenu right>
+            <DropdownItem onClick={this.handleLogout} tag="a">Logout</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+      )
     }
   ]
   componentDidMount(){

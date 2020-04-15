@@ -11,7 +11,12 @@
 .navbar.navbar-absolute{
   z-index: 0 !important;
 }
-
+.dropdown-menu .dropdown-item a{
+  color: #333;
+}
+.dropdown-menu .dropdown-item:hover > a {
+  color: #fff !important;
+}
 section.okkji-faq.offer-mobile {
   display: none;
 }
@@ -1473,7 +1478,7 @@ figcaption h4 {
 } */
 .input-form .input-group {
   background-color: #e9ecef !important;
-  border-radius: 10px !important;
+  border-radius: 5px !important;
 }
 
 .input-form .input-group-lg > .form-control:not(textarea) {
@@ -1693,7 +1698,13 @@ img.img-fluid.mobile {
 .text-green {
   color: #259d70;
 }
-
+.new-customer div {
+  overflow: scroll !important;
+}
+.retail-store > div {
+  overflow: scroll !important;
+  min-height: 75vh;
+}
 .store-customer-order .profile p:first-child{
   margin-bottom: 0 !important;
   font-weight: 600;
@@ -3537,7 +3548,7 @@ img.img-fluid.Logowhite-bg {
 .login-page-right {
   position: absolute;
   top: 8px;
-  right: 16px;
+  right: 120px;
 }
 
 
@@ -3557,9 +3568,8 @@ img.img-fluid.Logowhite-bg {
   position: absolute;
 }
 .login-page-information img:first-child{
-  margin-top:-1.4rem;
+  margin-top:-0.4rem;
 }
-
 
 .login-information .btn {
   padding: 0.7rem 2rem;
@@ -3993,7 +4003,15 @@ color:#289C71;
 .product-details .customer-table thead th, .store-page .customer-table thead th, .customer-information .customer-table thead th, .customer-notification .customer-table thead th, .customer-offer .customer-table thead th, .reward-content .customer-table thead th, .store-order .customer-table thead th {
   padding: 1rem 1rem  !important;
 }
-
+.customer-information .customer-table thead th:nth-child(1){
+  width: 1px;
+}
+.customer-information .customer-table thead th{
+  padding: 21px !important;
+}
+.store-page .customer-table thead th:nth-child(1){
+  width: 1px;
+}
 
 
 .product-details .customer-table tbod-y td, .store-page .customer-table tbody td, .customer-information .customer-table t+body td, .customer-notification .customer-table tbody td, .customer-offer .customer-table tbody td, .reward-content .customer-table tbody td, .store-order .customer-table tbody td {
@@ -4530,7 +4548,7 @@ border-radius: 4px;
 }
 
 img.Add {
-  width: 50%;
+  width: 21px;
 }
 
 .customer-filter{
@@ -4988,6 +5006,9 @@ img.Add {
   .input-form {
     padding-left: 0rem;
     padding-right: 0rem;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
   }
   .btn-offerpage {
     margin-top: 2rem !important;
@@ -5847,6 +5868,9 @@ img.img-fluid.Logowhite-bg {
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .img.img-fluid.Logowhite-bg{
+    transform: translate(-1372px, -60px) !important;
+  }
   .carousel-control-next,
   .carousel-control-prev {
     top: 100% !important;

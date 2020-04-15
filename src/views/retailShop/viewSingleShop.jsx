@@ -70,7 +70,7 @@ class AddNewShop extends React.Component {
                       <span className="text-green">OKK</span>P0001
                     </p>
                   </Col>
-                  <Col className='df jcc aic' sm={2}>
+                  {window.location.hostname.split('.')[0] == 'Marketing'?(<Col className='df jcc aic' sm={2}>
                     <a
                       href={
                         "/admin/shops/single/edit/" + this.state.shopData._id
@@ -79,7 +79,7 @@ class AddNewShop extends React.Component {
                     >
                       Edit
                     </a>
-                  </Col>
+                  </Col>):(null)}
                 </FormGroup>
               </Form>
               <Form className="retail-shop-background">
@@ -108,7 +108,9 @@ class AddNewShop extends React.Component {
                     Mobile Number:
                   </Label>
                   <Col sm={4}>
+                  {window.location.hostname.split('.')[0] == 'Marketing'?(<>
                     <p>{basic.mobileNumber}</p>
+                  </>):(<p>Secure</p>)}
                   </Col>
                 </FormGroup>
 
@@ -125,39 +127,56 @@ class AddNewShop extends React.Component {
                     Bank Name:
                   </Label>
                   <Col sm={4}>
+                  {window.location.hostname.split('.')[0] == 'Marketing'?(<>
                     <p>{bankDetails.bankName}</p>
+                  </>):(<p>Secure</p>)}
                   </Col>
+
                   <Label for="exampleMNumber" sm={2}>
                     Acc Holder Name:
                   </Label>
                   <Col sm={4}>
+                  {window.location.hostname.split('.')[0] == 'Marketing'?(<>
                     <p>{bankDetails.accountHolderName}</p>
+                  </>):(<p>Secure</p>)}
                   </Col>
+
                 </FormGroup>
+                
                 <FormGroup row inline>
                   <Label for="exampleAName" sm={2}>
                     Account Number:
                   </Label>
                   <Col sm={4}>
+                  {window.location.hostname.split('.')[0] == 'Marketing'?(<>
                     <p>{bankDetails.accountNumber}</p>
+                  </>):(<p>Secure</p>)}
                   </Col>
                   <Label for="exampleIFSCode" sm={2}>
                     IFSC Code:
                   </Label>
                   <Col sm={4}>
+                  {window.location.hostname.split('.')[0] == 'Marketing'?(<>
                     <p>{bankDetails.ifscCode}</p>
+                  </>):(<p>Secure</p>)}
                   </Col>
                 </FormGroup>
                 <FormGroup row inline>
                   <Label for="exampleAType" sm={2}>
                     Account Type:
                   </Label>
-                  <Col sm={4}>{bankDetails.accountType}</Col>
+                  <Col sm={4}>
+                    {window.location.hostname.split('.')[0] == 'Marketing'?(<>
+                    {bankDetails.accountType}
+                    </>):(<p>Secure</p>)}
+                  </Col>
                   <Label for="examplePNumber" sm={2}>
                     Phone Number:
                   </Label>
                   <Col sm={4}>
+                  {window.location.hostname.split('.')[0] == 'Marketing'?(<>
                     <p>{basic.mobileNumber}</p>
+                  </>):(<p>Secure</p>)}
                   </Col>
                 </FormGroup>
                 <FormGroup row inline>
@@ -165,7 +184,9 @@ class AddNewShop extends React.Component {
                     Bank Address:
                   </Label>
                   <Col sm={10}>
+                  {window.location.hostname.split('.')[0] == 'Marketing'?(<>
                     <p>{bankDetails.bankAddress}</p>
+                  </>):(<p>Secure</p>)}
                   </Col>
                 </FormGroup>
                 <FormGroup row inline>

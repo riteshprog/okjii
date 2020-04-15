@@ -171,9 +171,9 @@ class Header extends React.Component {
             </form>
             <Nav navbar>
             <NavItem className="nav-btn">
-              <Link to="/" className="nav-link"><i class="far fa-question-circle"></i></Link>
-              <Link to="/" className="nav-link"><MDBIcon far icon="bell" /></Link>
-              <Link to="shops/add-new" className="nav-link"><img src={Add} alt="" className="Add" /></Link> <Link to="/" className="nav-link"><MDBIcon icon="dharmachakra" /></Link>
+              <Link to="#" className="nav-link"><i class="far fa-question-circle"></i></Link>
+              <Link to="#" className="nav-link"><MDBIcon far icon="bell" /></Link>
+              <Link to="/admin/shops/add-new" className="nav-link"><img src={Add} alt="" className="Add" /></Link> <Link to="/" className="nav-link"><MDBIcon icon="dharmachakra" /></Link>
             </NavItem>
 
 
@@ -194,7 +194,7 @@ class Header extends React.Component {
               </NavItem> */}
 
               { <div className='df aic ml-2'>
-                <span >Hello </span>
+                <span >Hello {user && user.basic && user.basic.name} </span>
               </div> }
               
               <Dropdown nav isOpen={this.state.dropdownOpen} toggle={e => this.dropdownToggle(e)}>

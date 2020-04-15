@@ -40,7 +40,18 @@ body{
 .overflow-scroll {
   overflow: scroll;
 }
-
+.mt-10{
+  margin-top: 10px;
+}
+.btn-primary {
+  background-color: #4b9e70 !important;
+}
+.btn-large{
+  font-size: 20px !important;
+  padding: 20px !important;
+  text-transform: capitalize !important;
+  width: 200px;
+}
 .icon-sm{
   width: 60px;
   height: 60px;

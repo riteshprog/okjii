@@ -981,7 +981,7 @@ class AddNewShop extends React.Component {
                           </FormGroup>
                         </Col>
                         <Col className="pr-1" md={12}>
-                          <div style={{ zIndex: -9999 }}>
+                          <div className='mt-10' style={{ zIndex: -9999 }}>
                             <MyFancyComponent
                               mapMarkerPostion={this.state.defaultCenter}
                               setPreferenceLocationChange={
@@ -1192,7 +1192,7 @@ class AddNewShop extends React.Component {
             {this.state.currentStep == 2 ? (
               <div className="update ml-auto mr-auto">
                 <Button
-                  className="btn-round"
+                  className="btn-round btn-large"
                   color="primary"
                   type="submit"
                   disabled={this.state.savingShop?true:false}
@@ -1204,7 +1204,7 @@ class AddNewShop extends React.Component {
             ) : (
               <div className="update ml-auto mr-auto">
                 <Button
-                  className="btn-round"
+                  className="btn-round btn-large"
                   color="primary"
                   type="submit"
                   onClick={() => this.changeStep(this.state.currentStep + 1)}
