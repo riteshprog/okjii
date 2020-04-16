@@ -4587,19 +4587,96 @@ img.Add {
 }
 
 .box {
-  width: 250px;
-  height: 40px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  color: #5e5e5e;
-  padding: 0px 0 0px 10px;
+  width: 300px;
+  height: 50px;
+  background-color: #2A88FA;
+  clip-path: polygon(84% 0, 100% 50%, 84% 100%, 0 100%, 0 0);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: #fff;
+  padding: 5px 0 0px 10px;
   position: relative;
-  margin: 5px 50px 5px 20px;
   float: left;
+  border-radius: 10px;
 }
 
+.box-white {
+width: 300px;
+height: 50px;
+background-color: #f8f9fa;
+clip-path: polygon(84% 0, 100% 50%, 84% 100%, 0 100%, 0 0);
+box-shadow: 0 2px 5px 0 rgba(#f8f9fa);
+color: #5e5e5e;
+padding: 5px 0 0px 10px;
+position: relative;
+float: left;
+border-radius: 10px;
+}
 
-.box.arrow-right:after {
+.m-store-view-add .ant-steps-navigation .ant-steps-item::before {
+  background-color: #fff;
+  content: '';
+}
+
+.m-store-view-add .ant-steps-item-icon{
+  display: none;
+}
+
+.m-store-view-add .card .card-body {
+  margin: 0 1.5rem;
+}
+
+.m-store-view-add .form-group .form-control, .input-group .form-control, .m-store-view-add .ant-select-single:not(.ant-select-customize-input) .ant-select-selector{
+padding:1rem 1rem;
+background-color: #F3F7F6;
+border:none;
+}
+
+.m-store-view-add .ant-select-arrow {
+  margin-right:3rem
+}
+
+.m-store-view-add .form-control{
+  border: none !important;
+}
+
+.m-store-view-add .input-group-undefined {
+  background: #F3F7F6;
+}
+.m-store-view-add .i-grp-btn {
+  height: 80%;
+  border: none;
+  margin: .3rem .4rem 0;
+  width: 100px;
+  border-radius: 0 5px 5px 0;
+}
+
+.m-store-view-add .i-grp-btn.camera-icon{
+  width: 33px;
+  background-color: #F3F7F6 !important;
+
+}
+
+.m-store-view-add .i-grp-btn.camera-icon i{
+  font-size:2rem;
+  color: #259D70;
+}
+
+.float-right.shop-location-map.input-group-undefined {
+  transform: translate(-7px, 40px);
+}
+
+.m-store-view-add .card-user form .form-group {
+  margin-bottom: 20px;
+  margin-right: 3rem;
+}
+
+.m-store-view-add .btn-primary {
+  background-color: #4b9e70 !important;
+  
+  text-transform: uppercase !important;
+}
+
+/* .box.arrow-right:after {
   content: " ";
   position: absolute;
   right: -50px;
@@ -4609,11 +4686,56 @@ img.Add {
   border-left: 50px solid rgb(0, 0, 0, 0.1);
   border-bottom: 20px solid transparent;
 
+} */
+
+/* M store Add Product */
+.right-navbar{
+  width:40%;
 }
 
+.progress-bar-nav{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+align-items: center;
+}
 
+.progress-bar-nav{
+  padding-top:1rem;
+}
+.progress-bar-nav div:first-child{
+  padding-right: .5rem;
+}
 
+.progress-bar-nav div label:last-child{
+  padding-left: .5rem;
+  padding-top: .5rem;
+  vertical-align: center;
+}
+.m-store-view .btn{
+  text-transform: uppercase;
+}
+
+.border-secondary {
+  border-color: #6c757d !important;
+  padding: 0.5rem 2.5rem !important;
+}
+
+.m-store-view .select-option-storetype>div{
+  margin-right: 10px;
+  font-size: large;
+}
+.m-store-view .custom-control {
+  width: 175px;
+}
+
+.m-store-view .card .card-body {
+  margin: 0 6rem;
+}
 /* Marketing Store End  */
+
+
+
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

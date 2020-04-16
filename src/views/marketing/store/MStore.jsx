@@ -54,7 +54,7 @@ export default class MStore extends Component {
         </MDBDropdownToggle>
         <MDBDropdownMenu  basic className="dropdown-bottom" >
           <MDBDropdownItem><Link to="mstore/storeviewDdetails/:mstoreId">View Details</Link></MDBDropdownItem>
-          <MDBDropdownItem><Link to="store/product/:storeId">Add Product</Link></MDBDropdownItem>
+          <MDBDropdownItem><Link to="mproduct/product/:mprodId">Add Product</Link></MDBDropdownItem>
           <MDBDropdownItem>Target</MDBDropdownItem>
         </MDBDropdownMenu>
       </MDBDropdown></td>

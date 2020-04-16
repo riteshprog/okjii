@@ -6,6 +6,7 @@ import { Switch, Modal, message } from 'antd';
 import CookieHandler from '../../utils/cookieHandler';
 import { CustomInput, Row, Col, FormGroup } from 'reactstrap';
 import { MDBTable, MDBTableBody, MDBTableHead, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from 'mdbreact';
+import filterIcon from '../../assets/img/filterIcon.png';
 
 import avatar from '../../assets/img/storeIcon.png';
 
@@ -103,7 +104,8 @@ export default class FeedbackSettings extends React.Component {
           <p><span className="filter-txt"> Filter</span> <i class="fas fa-bars"></i></p></Col>
         </Row>
 				<div className='retail-store'>
-				   <MDBTable className="customer-table table table-striped table-responsive-md btn-table" striped>
+					 <MDBTable className="customer-table table table-striped table-responsive-md btn-table" responsive
+					  striped>
 				    <MDBTableHead>
 				      <tr>
 				        <th>ID</th>
@@ -117,7 +119,7 @@ export default class FeedbackSettings extends React.Component {
 				  	{this.state.allFeedbackSettings.map((feedback, i)=>(
 				      <tr key={feedback._id}>
 				        <td><span className="text-green">{i}</span></td>
-				        <td><span className="text-green">{feedback.appId.join(', ')}</span></td>
+				        <td className="no-break"><span className="text-green">{feedback.appId.join(', ')}</span></td>
 				        <td><span className="text-green">{feedback.parameter}</span></td>
 				        <td className="text-center"><Switch checked={feedback.status?true:false} checkedChildren="yes" unCheckedChildren="no" className="Switch-button" /></td>
 				        <td><span className="text-green">{moment(feedback.createdAt).format('lll')}</span></td>
