@@ -1,11 +1,61 @@
-/*
-body {
-    font-family: Verdana !important;
+/*body {
+    font-family: Verdana !important; 
 }
 img {
     max-width: initial;
     border-radius: 3px;
 }
+
+.nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #239E70;
+    background-color: #9BE8C8;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.nav-pills .nav-link {
+    border-radius: .25rem;
+}
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+}
+.nav-pills .nav-link {
+    font-size: 16px;
+    color: #000000;
+    border-radius: .25rem;
+    text-transform: uppercase;
+}
+*/
+.table-margin-mt {
+    margin-top: 0px !important;
+}
+.store-icon {
+    width: 40px;
+}
+.track-btn{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.blub-img {
+    width: 20px;
+}
+
+.wallet-stats .profile-body .profile .track-order{
+    color: #444444;
+    font-size: 20px;
+    line-height: 3.4em;
+    text-align: end;
+}
+
 .sidebar .sidebar-wrapper li.active > a:not([data-toggle="collapse"]):after, .sidebar .sidebar-wrapper li.active > [data-toggle="collapse"] + div .nav li:after {
     display: none;
 }
@@ -37,7 +87,7 @@ img {
     text-align: center;
     color: rgba(255, 255, 255, 0.5);
     position: relative;
-}*/
+}
 .card {
     border-radius: 12px;
     box-shadow: none;
@@ -56,6 +106,16 @@ img {
 .customer-filter {
     border-bottom: 1px solid #BFBFBF;
     margin-bottom: 1rem;
+}
+.customer-filter p span {
+    font-size: 18px;
+    color: #5e5e5e;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.customer-filter p i {
+    font-size: 15px;
+    color: #239E70;
 }
 .customer-filter .left-space {
     margin-left: 15px;
@@ -141,7 +201,7 @@ img {
 .wallet-stats .profile-body .profile {
     text-align: left;
     font-size: 2em;
-    margin-right: 2rem;
+    margin-right: 1.2rem;
 }
 .wallet-stats .profile-body .profile .card-category {
     color: #259d70;
@@ -604,8 +664,17 @@ img {
     font-size: 18px;
     margin-bottom: 0px;
 }
+.khata-customer-text {
+    text-align: center;
+    margin-top: 2%
+}
+.khata-customer-text p{
+    color: #259d70;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
 
-/*udhaar*/
+    /*udhaar*/
 .expenses-card {
     padding-left: 5%
 }

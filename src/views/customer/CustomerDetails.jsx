@@ -6,8 +6,6 @@ import avatar from '../../img/home/avatar.png';
 import CustomerNavBar from '../customer/CustomerNavBar';
 import { Row, Col } from 'reactstrap';
 
-
-
 export default class CustomerDetails extends Component {
   render() {
     return (

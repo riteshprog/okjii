@@ -94,10 +94,10 @@ export default class StoreDetails extends Component {
                   <MDBDropdownItem><Link to={`/admin/shops/add-item/${shop._id}`}>Add Product</Link></MDBDropdownItem>
                   <MDBDropdownItem><Link to="store/product/:storeId">Product</Link></MDBDropdownItem>
                   <MDBDropdownItem><Link to="target">Target</Link></MDBDropdownItem>
-                  {window.location.hostname.split('.')[0] == 'Marketing'?<MDBDropdownItem>Wallet</MDBDropdownItem>:(null)}
-                  {window.location.hostname.split('.')[0] == 'Marketing'?<MDBDropdownItem>OkkJi Khata</MDBDropdownItem>:(null)}
-                  {window.location.hostname.split('.')[0] == 'Marketing'?<MDBDropdownItem>Setting</MDBDropdownItem>:(null)}
-                  {window.location.hostname.split('.')[0] == 'Marketing'?<MDBDropdownItem>Revenue</MDBDropdownItem>:(null)}
+                  {window.location.hostname.split('.')[0] != 'Marketing'?<MDBDropdownItem><Link to="store/wallet">wallet</Link></MDBDropdownItem>:(null)}
+                  {window.location.hostname.split('.')[0] != 'Marketing'?<MDBDropdownItem>OkkJi Khata</MDBDropdownItem>:(null)}
+                  {window.location.hostname.split('.')[0] != 'Marketing'?<MDBDropdownItem>Setting</MDBDropdownItem>:(null)}
+                  {window.location.hostname.split('.')[0] != 'Marketing'?<MDBDropdownItem>Revenue</MDBDropdownItem>:(null)}
                 </MDBDropdownMenu>
               </MDBDropdown></td>
                 </tr>
