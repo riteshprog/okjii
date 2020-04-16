@@ -1,15 +1,16 @@
 import joi from "joi";
 import React from "react";
 import Axios from "axios";
-import CookieHandler from "../../utils/cookieHandler";
+import CookieHandler from "../../../utils/cookieHandler";
 import { Steps, Select, Avatar, message } from "antd";
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from "react-places-autocomplete";
-import { MyFancyComponent, MyMapComponent } from "../../adminComponents/googleMap/googleMap";
+import { MyFancyComponent, MyMapComponent } from "../../../adminComponents/googleMap/googleMap";
 import { Card, CardHeader, CardBody, CardTitle, Row, Col, Button, Form, FormGroup, Input, CustomInput, InputGroup, InputGroupAddon } from "reactstrap";
-
+import {MDBIcon} from 'mdbreact';
 import { IdcardFilled, BankOutlined, StarOutlined, UploadOutlined, CheckOutlined } from "@ant-design/icons";
+import Googlemap from '../../../img/retailer/Googlemap.png';
 
-import "./retailshop.css";
+//import "../../retailShop/retailshop.css";
 
 const { Step } = Steps;
 const { Option } = Select;
@@ -143,10 +144,31 @@ class MStoreAddNewShop extends React.Component {
     ],
     bankDetails: [
       {
+        type: "text",
+        tag: "input",
+        key: "accountHolderName",
+        label: "Account Holder Name*",
+        hint: "Name",
+        changeHandler: "onChange",
+        space: 6,
+        required: false
+      },
+
+      {
+        type: "text",
+        tag: "input",
+        key: "bankName",
+        label: "Bank Name*",
+        hint: "Enter Bank Name",
+        changeHandler: "onChange",
+        space: 6,
+        required: false
+      },
+            {
         type: "number",
         tag: "input",
         key: "accountNumber",
-        label: "Account Number",
+        label: "Account Number*",
         hint: "Enter Account Number",
         changeHandler: "onChange",
         space: 6,
@@ -156,8 +178,8 @@ class MStoreAddNewShop extends React.Component {
         type: "number",
         tag: "input",
         key: "confirmAccountNumber",
-        label: "Confirm Account Number",
-        hint: "Confirm Account Number",
+        label: "Confirm Account Number*",
+        hint: "Re-enter Account Number",
         changeHandler: "onChange",
         space: 6,
         required: false
@@ -165,19 +187,9 @@ class MStoreAddNewShop extends React.Component {
       {
         type: "text",
         tag: "input",
-        key: "accountHolderName",
-        label: "Account Holder Name",
-        hint: "Enter Account Holder Name",
-        changeHandler: "onChange",
-        space: 6,
-        required: false
-      },
-      {
-        type: "text",
-        tag: "input",
-        key: "bankName",
-        label: "Bank Name",
-        hint: "Enter Bank Name",
+        key: "bankAddress",
+        label: "Bank Address*",
+        hint: "Enter Bank Address",
         changeHandler: "onChange",
         space: 6,
         required: false
@@ -186,7 +198,7 @@ class MStoreAddNewShop extends React.Component {
         type: "text",
         tag: "input",
         key: "ifscCode",
-        label: "IFSC Code",
+        label: "IFSC Code*",
         hint: "Enter IFSC Code",
         changeHandler: "onChange",
         space: 6,
@@ -198,27 +210,19 @@ class MStoreAddNewShop extends React.Component {
         key: "accountType",
         options: ["Saving", "Current", "Regular"],
         label: "Account Type",
-        hint: "Enter Account Type",
+        hint: "Choose Account*",
         changeHandler: "onChange",
         space: 6,
         required: false
       },
-      {
-        type: "text",
-        tag: "input",
-        key: "bankAddress",
-        label: "Bank Address",
-        hint: "Enter Bank Address",
-        changeHandler: "onChange",
-        space: 6,
-        required: false
-      },
+
+
       {
         type: "text",
         tag: "input",
         key: "mobileNumber",
-        label: "Mobile Number",
-        hint: "Enter Mobile Number",
+        label: "Mobile Number (Optional)",
+        hint: "No File Selected",
         changeHandler: "onChange",
         space: 6,
         required: false
@@ -240,7 +244,7 @@ class MStoreAddNewShop extends React.Component {
         tag: "input",
         key: "storeOpeningTiming",
         label: "Store Opeing Timing",
-        hint: "Enter Store Opeing Timing",
+        hint: "Shop Open &amp; Close Time",
         changeHandler: "onChange",
         space: 6,
         required: true
@@ -631,7 +635,7 @@ class MStoreAddNewShop extends React.Component {
   render() {
     return (
       <>
-        <div className="content">
+        <div className="content m-store-view-add">
           <Row>
             <Steps
               type="navigation"
@@ -641,36 +645,40 @@ class MStoreAddNewShop extends React.Component {
               {/* onClick={()=>this.changeStep(0) */}
               <Step
                 title={
-                  <span style={{ lineHeight: 2.5 }} className="step box arrow-right">
-                    Basic
+                  <span style={{ lineHeight: 2.5 }} className="step box">
+                    Store Details
                   </span>
                 }
-                icon={<IdcardFilled type="idcard" />}
+                
               />
               <Step
                 title={
-                  <span style={{ lineHeight: 2.5 }} className="step box arrow-right">
+                  <span style={{ lineHeight: 2.5 }} className="step box-white">
                     Bank Details
                   </span>
                 }
-                icon={<BankOutlined />}
+
               />
               <Step
                 title={
-                  <span style={{ lineHeight: 2.5 }} className="step box arrow-right">
-                    Store Product/Catelog
+                  <span style={{ lineHeight: 2.5 }} className="step box-white">
+                    Store Catelog
                   </span>
                 }
-                icon={<StarOutlined />}
+                
               />
             </Steps>
           </Row>
+
+
+
+
+
           <Row>
             {this.state.currentStep == 0 ? (
               <Col md="12 mt-3">
                 <Card className="card-user pr-3">
                   <CardHeader>
-                    <CardTitle tag="h5">Basic</CardTitle>
                   </CardHeader>
                   <CardBody>
                     <Form>
@@ -755,9 +763,9 @@ class MStoreAddNewShop extends React.Component {
                                           "basic"
                                         )
                                       }
-                                      className="btn-primary i-grp-btn"
+                                      className="btn-primary camera-icon i-grp-btn"
                                     >
-                                      Browse
+                                      <MDBIcon icon="camera" />
                                     </button>
                                   </InputGroupAddon>
                                 </InputGroup>
@@ -951,6 +959,13 @@ class MStoreAddNewShop extends React.Component {
                             <label className="add-shop-label">
                               Enter Shop Location
                             </label>
+                            <InputGroupAddon className="float-right shop-location-map">
+                                    <button
+                                      className="btn-primary camera-icon i-grp-btn"
+                                    >
+                                      <img src={Googlemap}  alt="Google Map"  />
+                                    </button>
+                                  </InputGroupAddon>
                             {this.renderRequiredIcon()}
                             <PlacesAutocomplete
                               onChange={this.onPreferenceLocationChange}
@@ -959,8 +974,10 @@ class MStoreAddNewShop extends React.Component {
                               }
                               options={{ types: ["(regions)"] }}
                             >
+
                               {this.renderFunc}
                             </PlacesAutocomplete>
+                            
                             {/* <MyMapComponent
                             isMarkerShown
                             onMarkerClick={this.handleMarkerClick}
@@ -1002,9 +1019,9 @@ class MStoreAddNewShop extends React.Component {
             {this.state.currentStep == 1 ? (
               <Col md="12 mt-3">
                 <Card className="card-user pr-3">
-                  <CardHeader>
+                  {/* <CardHeader>
                     <CardTitle tag="h5">Bank Details</CardTitle>
-                  </CardHeader>
+                  </CardHeader> */}
                   <CardBody>
                     <Form>
                       <Row>
@@ -1076,13 +1093,12 @@ class MStoreAddNewShop extends React.Component {
                 </Card>
               </Col>
             ) : null}
-
             {this.state.currentStep == 2 ? (
               <Col md="12 mt-3">
                 <Card className="card-user pr-3">
-                  <CardHeader>
+                  {/* <CardHeader>
                     <CardTitle tag="h5">Store Product/Catelog</CardTitle>
-                  </CardHeader>
+                  </CardHeader> */}
                   <CardBody>
                     <Form>
                       <Row>
@@ -1198,7 +1214,7 @@ class MStoreAddNewShop extends React.Component {
                   disabled={this.state.savingShop?true:false}
                   onClick={this.handleOnSave}
                 > 
-                  Save
+                  Back
                 </Button>
               </div>
             ) : (
@@ -1209,7 +1225,7 @@ class MStoreAddNewShop extends React.Component {
                   type="submit"
                   onClick={() => this.changeStep(this.state.currentStep + 1)}
                 >
-                  Next
+                  Save &amp; Next
                 </Button>
               </div>
             )}
