@@ -85,6 +85,27 @@ var routes = [
   { path: "/customer", onSideBar: true, name: "Customer", icon: "far fa-user", component: CustomerDetails, accessTo: ["admin"], layout: "/admin" },
   { path: "/new-customer", onSideBar: true, name: "New Customer", icon: "far fa-user", component: MarketingCustomer, accessTo: ["admin"], layout: "/admin" },
 
+
+  // notification routes
+  { path: "/notification", name: "Push Notification", onSideBar:false, icon: "far fa-bell", component: Notification, layout: "/admin"},
+  { path: "/EmailNotification", name: "Email Notification", onSideBar:false, icon: "far fa-bell", component: EmailNotification, layout: "/admin"},
+  // notification submenu
+  { type: 'subMenu', onSideBar: true, icon: 'fa fa-pie-chart', subMenuTitle: 'Notification', routes: [
+      { path: "/notification", onSideBar: true, name: "Push Notification", icon: "far fa-bell", component: Notification, layout: "/admin", type: 'subMenu', subMenuTitle: 'Notification' },
+      { path: "/EmailNotification", onSideBar: true, name: "Email Notification", icon: "far fa-bell", component: EmailNotification, layout: "/admin", type: 'subMenu', subMenuTitle: 'Notification' }
+    ]
+  },
+
+  { path: "/feedbackSettings", name: "Feedback Settings", onSideBar:false, icon: "far fa-bell", component: FeedbackSettings, layout: "/admin"},
+  // settings submenu
+  { type: 'subMenu', onSideBar: true, icon: 'fa fa-pie-chart', subMenuTitle: 'Settings', routes: [
+      { path: "/feedbackSettings", onSideBar: true, name: "Feedback Settings", icon: "far fa-bell", component: FeedbackSettings, layout: "/admin", type: 'subMenu', subMenuTitle: 'Settings' },
+      
+    ]
+  },
+
+
+
   { path: "/category", onSideBar: true, name: "Store Catalogue", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: Categories, layout: "/admin" },
   { path: "/user", onSideBar: true, name: "User", icon: "nc-icon nc-satisfied", component: Users, accessTo: ["admin"], layout: "/admin" },
   { path: "/Order", onSideBar: true, name: "Order", icon: "nc-icon nc-app", component: Order, layout: "/admin" },
@@ -108,23 +129,6 @@ var routes = [
   { path: "/incentive", onSideBar: true, name: "Incentive", icon: "nc-icon nc-money-coins", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
   { path: "/target", onSideBar: true, name: "Target", icon: "nc-icon nc-spaceship", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
   { path: "/support", onSideBar: true, name: "Support", icon: "nc-icon nc-support-17", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
-  
-  // notification routes
-  { path: "/notification", name: "Push Notification", onSideBar:false, icon: "far fa-bell", component: Notification, layout: "/admin"},
-  { path: "/EmailNotification", name: "Email Notification", onSideBar:false, icon: "far fa-bell", component: EmailNotification, layout: "/admin"},
-  // notification submenu
-  { type: 'subMenu', onSideBar: true, icon: 'fa fa-pie-chart', subMenuTitle: 'Notification', routes: [
-      { path: "/notification", onSideBar: true, name: "Push Notification", icon: "far fa-bell", component: Notification, layout: "/admin", type: 'subMenu', subMenuTitle: 'Notification' },
-      { path: "/EmailNotification", onSideBar: true, name: "Email Notification", icon: "far fa-bell", component: EmailNotification, layout: "/admin", type: 'subMenu', subMenuTitle: 'Notification' }
-    ]
-  },
-
-  // settings submenu
-  { type: 'subMenu', onSideBar: true, icon: 'fa fa-pie-chart', subMenuTitle: 'Settings', routes: [
-      { path: "/notification", onSideBar: true, name: "Push Notification", icon: "far fa-bell", component: Notification, layout: "/admin", type: 'subMenu', subMenuTitle: 'Notification' },
-      { path: "/EmailNotification", onSideBar: true, name: "Email Notification", icon: "far fa-bell", component: EmailNotification, layout: "/admin", type: 'subMenu', subMenuTitle: 'Notification' }
-    ]
-  },
 
   {
     path: "/store/product/:storeId",

@@ -7,7 +7,6 @@
 .navbar .navbar-nav > a.btn >p{
   text-transform: lowercase !important;
 }
-
 .navbar.navbar-absolute{
   z-index: 0 !important;
 }
@@ -117,6 +116,7 @@ body {
 .main-panel > .content{
   padding: 0px 20px !important;
   margin-top: 85px !important;
+  min-height: 75vh;
 }
 
 /*.col-sm-7.figure-img1:before{
@@ -5824,7 +5824,7 @@ img.img-fluid.Logowhite-bg {
     z-index: -1;
   }
   .main-panel > .content {
-    min-height: calc(100vh - 800px) !important;
+    min-height: calc(100vh - 123px) !important;
   }
   
   .carousel-control-next,
