@@ -111,7 +111,7 @@ class Notification extends Component {
       const { newNotification } = this.state;
       if(key==='parameter') newNotification[key] = e.target.value;
       else {
-        const value = e.target.id;
+        const value = parseInt(e.target.value);
         const index = newNotification[key].indexOf(value);
         if(index == -1) newNotification[key].push(value);
         else newNotification[key].splice(index, 1);
@@ -164,6 +164,7 @@ class Notification extends Component {
     .then(({data})=>{
       if(data.status) {
         this.toggleModal('create');
+        this.getNotification();
       }
     }).catch(err=>{
       console.log(err);
@@ -273,15 +274,15 @@ class Notification extends Component {
             <MDBCollapse id="collapse1" isOpen={collapseID}>
               <MDBCardBody>
                 <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customer" onChange={(e)=>this.handleOnChange(e, 'create', 'appId')} checked={this.state.newNotification.appId.includes('customer')} />
+                  <input type="checkbox" class="custom-control-input" id="customer" value={1} onChange={(e)=>this.handleOnChange(e, 'create', 'appId')} checked={this.state.newNotification.appId.includes(1)} />
                   <label class="custom-control-label" for="customer"> Customer </label>
                 </div>
                 <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="retailer" onChange={(e)=>this.handleOnChange(e, 'create', 'appId')} checked={this.state.newNotification.appId.includes('retailer')} />
+                  <input type="checkbox" class="custom-control-input" id="retailer" value={2} onChange={(e)=>this.handleOnChange(e, 'create', 'appId')} checked={this.state.newNotification.appId.includes(2)} />
                   <label class="custom-control-label" for="retailer"> Retailer </label>
                 </div>
                 <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="okkjiFast" onChange={(e)=>this.handleOnChange(e, 'create', 'appId')} checked={this.state.newNotification.appId.includes('okkjiFast')}/>
+                  <input type="checkbox" class="custom-control-input" id="okkjiFast" value={3} onChange={(e)=>this.handleOnChange(e, 'create', 'appId')} checked={this.state.newNotification.appId.includes(3)}/>
                   <label class="custom-control-label" for="okkjiFast"> OkkJi Fast </label>
                 </div>
               </MDBCardBody>
@@ -333,13 +334,6 @@ class Notification extends Component {
                 <input
                   onChange={(e) => this.handleOnSelect(e, "appId")}
                   value="1"
-                  // checked={
-                  //   modalData &&
-                  //   modalData.appId &&
-                  //   modalData.appId.includes(1)
-                  //     ? true
-                  //     : false
-                  // }
                   type="checkbox"
                   class="custom-control-input"
                   id="customerCheckbox"
@@ -355,13 +349,6 @@ class Notification extends Component {
                 <input
                   onChange={(e) => this.handleOnSelect(e, "appId")}
                   value="2"
-                  // checked={
-                  //   modalData &&
-                  //   modalData.appId &&
-                  //   modalData.appId.includes(2)
-                  //     ? true
-                  //     : false
-                  // }
                   type="checkbox"
                   class="custom-control-input"
                   id="retailerCheckbox"
@@ -377,13 +364,6 @@ class Notification extends Component {
                 <input
                   onChange={(e) => this.handleOnSelect(e, "appId")}
                   value="3"
-                  // checked={
-                  //   modalData &&
-                  //   modalData.appId &&
-                  //   modalData.appId.includes(3)
-                  //     ? true
-                  //     : false
-                  // }
                   type="checkbox"
                   class="custom-control-input"
                   id="fastCheckbox"

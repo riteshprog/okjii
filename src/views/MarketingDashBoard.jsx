@@ -46,7 +46,6 @@ import Eye from '../assets/img/Eye.png';
 import storeIcon from '../assets/img/storeIcon.png';
 import filterIcon from '../assets/img/filterIcon.png';
 
-
 class MarketingDashBoard extends React.Component {
   constructor(props){
     super(props)
@@ -66,6 +65,7 @@ class MarketingDashBoard extends React.Component {
     }).catch(err=>{
       console.log(`catch err`, err);
     })
+
   }
   render() {
     return (

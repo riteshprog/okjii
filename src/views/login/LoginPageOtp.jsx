@@ -47,7 +47,6 @@ export default class LoginPageOtp extends Component {
         message.success(data.message);
         CookieHandler.createCookie('userData', JSON.stringify(user));
         CookieHandler.createCookie('token', JSON.stringify(token));
-        
         this.props.setUserData(user);
       }
     }).catch(err=> {

@@ -30,8 +30,11 @@ import BlogAdd from "./views/blog/BlogAdd.jsx";
 
 import StoreDetails from "./views/store/StoreDetails.jsx";
 import StoreWallet from "./views/store/StoreWallet.jsx";
-
 import ViewStoreDetails from "./views/store/ViewStoreDetails.jsx";
+import storeWalletPreSettlement from "./views/store/storeWalletPreSettlement.jsx";
+import storeWalletDownloadStatement from './views/store/storeWalletDownloadStatement'
+
+
 import ViewAllPreTransactions from "./views/wallet/viewAllPreTransactions.jsx";
 import DownloadWalletStatement from "./views/wallet/storeWalletDownloadStatement.jsx";
 
@@ -103,10 +106,9 @@ var routes = [
   { path: "/feedbackSettings", name: "Feedback Settings", onSideBar:false, icon: "far fa-bell", component: FeedbackSettings, layout: "/admin"},
   // settings submenu
   { type: 'subMenu', onSideBar: true, icon: 'fa fa-pie-chart', subMenuTitle: 'Settings', routes: [
-      { path: "/feedbackSettings", onSideBar: true, name: "Feedback Settings", icon: "far fa-bell", component: FeedbackSettings, layout: "/admin", type: 'subMenu', subMenuTitle: 'Settings' },
-  { path: "/catalogue-settings", onSideBar: false, name: "Store Catalogue", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: Categories, layout: "/admin" },    
-    ]
-  },
+    { path: "/feedbackSettings", onSideBar: true, name: "Feedback Settings", icon: "far fa-bell", component: FeedbackSettings, layout: "/admin", type: 'subMenu', subMenuTitle: 'Settings' },
+    { path: "/catalogue-settings", onSideBar: false, name: "Store Catalogue", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: Categories, layout: "/admin" },    
+  ]},
 
   { path: "/trusted", onSideBar: true, name: "Trusted By", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TrustedBy, layout: "/admin" },    
   { path: "/target", onSideBar: true, name: "Target", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TargetDetails, layout: "/admin" },    
@@ -129,7 +131,6 @@ var routes = [
   { path: "/Setting", onSideBar: true, name: "Setting", icon: "fa fa-cog", component: Setting, layout: "/admin" },
   { path: "/commingsoon/", onSideBar: false, name: "Total Sale", icon: "nc-icon nc-chat-33", accessTo: ["admin"], component: CommingSoon, layout: "/admin" },
 
-  // { path: "/customer", onSideBar: true, name: "Customer", icon: "far fa-user", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
   { path: "/location", onSideBar: true, name: "Location", icon: "nc-icon nc-map-big", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
   { path: "/incentive", onSideBar: true, name: "Incentive", icon: "nc-icon nc-money-coins", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
   { path: "/target", onSideBar: true, name: "Target", icon: "nc-icon nc-spaceship", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
@@ -140,8 +141,11 @@ var routes = [
   { path: "/messages", onSideBar: true, name: "Messages", icon: "fa fa-pencil-square-o", component: MessagesPage, accessTo: ["admin"], layout: "/admin" },
 
 
-  { path: "/store/wallet", onSideBar: true, name: "Wallet", icon: "fa fa-money", accessTo: ["admin"], component: StoreWallet, layout: "/admin" },
+  { path: "/store/wallet", onSideBar: false, name: "Wallet", icon: "fa fa-money", accessTo: ["admin"], component: StoreWallet, layout: "/admin" },
+  { path: "/store/wallet/pre-settelments", onSideBar: true, name: "Wallet", icon: "fa fa-money", accessTo: ["admin"], component: storeWalletPreSettlement, layout: "/admin" },
+  { path: "/store/wallet/download-statement", onSideBar: true, name: "Wallet", icon: "fa fa-money", accessTo: ["admin"], component: storeWalletDownloadStatement, layout: "/admin" },
   { path: "/store/reward", onSideBar: true, name: "Reward", icon: "fa fa-money", accessTo: ["admin"], component: StoreReward, layout: "/admin" },
+  
   { path: "/store/cust-payment", onSideBar: true, name: "Customer Payment", icon: "fa fa-money", accessTo: ["admin"], component: StoreCustomerPayment, layout: "/admin" },
   { path: "/store/cust-order", onSideBar: true, name: "Store Order", icon: "fa fa-money", accessTo: ["admin"], component: StoreOrder, layout: "/admin" },
   { path: "/store/current-order", onSideBar: true, name: "Store Current Order", icon: "fa fa-money", accessTo: ["admin"], component: StoreCurrentOrder, layout: "/admin" },

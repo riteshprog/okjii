@@ -36,7 +36,7 @@ export default class Routes extends Component {
         <Router history={history}>
           <Switch>
             <Route path="/admin" render={props => <AdminLayout userData={this.state.userData} {...props} />} />
-            <Redirect to="/admin/dashboard" />
+            {(this.props.type != 'marketing')?(<Redirect to="/admin/dashboard" />):(<Redirect to="/admin/market-dashboard" />)}
           </Switch>
         </Router>
       )
