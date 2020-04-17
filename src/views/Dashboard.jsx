@@ -50,6 +50,9 @@ class Dashboard extends React.Component {
     }
   }
   componentDidMount() {
+    if(window.location.hostname.split('.')[0] === 'marketing') {
+      window.location.href = '/admin/market-dashboard';
+    }
     Axios.get(process.env.REACT_APP_API_URL + '/dashboard').then(({data})=>{
       const dashboardData = data.dashboardData;
       this.setState({dashboardData})

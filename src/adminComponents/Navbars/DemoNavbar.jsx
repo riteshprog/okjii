@@ -173,7 +173,7 @@ class Header extends React.Component {
             <NavItem className="nav-btn">
               <Link to="#" className="nav-link"><i class="far fa-question-circle"></i></Link>
               <Link to="#" className="nav-link"><MDBIcon far icon="bell" /></Link>
-              <Link to="/admin/mshops/add-new-shop" className="nav-link"><img src={Add} alt="" className="Add" /></Link> <Link to="/" className="nav-link"><MDBIcon icon="dharmachakra" /></Link>
+              <Link title='Add New Shop' to="/admin/mshops/add-new-shop" className="nav-link"><img src={Add} alt="" className="Add" /></Link> <Link to="/" className="nav-link"><MDBIcon icon="dharmachakra" /></Link>
             </NavItem>
 
 
