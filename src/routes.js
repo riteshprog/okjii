@@ -65,6 +65,9 @@ import StoreTotalSale from "./views/store/StoreTotalSale.jsx"
 import AddCity  from "./views/coupon/AddCity.jsx"
 import AddCityDetail  from "./views/coupon/AddCityDetail.jsx"
 import FeedbackSettings from './views/feedbackSettings/feedbackSettings.jsx';
+import TrustedBy from  './views/trusted/TrustedBy.jsx';
+import TargetDetails  from  './views/target/TargetDetails.jsx';
+
 
 //Marketing Page import
 
@@ -73,6 +76,7 @@ import MStore from "./views/marketing/store/MStore.jsx";
 import MStoreViewDetails from "./views/marketing/store/MStoreViewDetails.jsx"
 import MStoreAddProduct from "./views/marketing/product/MStoreAddProduct.jsx"
 import MStoreAddNewShop from "./views/marketing/store/MStoreAddNewShop.jsx"
+import marketingCustomerDetails from "./views/marketing/customers/marketingCustomerDetails.jsx"
 
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
@@ -104,7 +108,9 @@ var routes = [
     ]
   },
 
-
+  { path: "/trusted", onSideBar: true, name: "Trusted By", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TrustedBy, layout: "/admin" },    
+  { path: "/target", onSideBar: true, name: "Target", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TargetDetails, layout: "/admin" },    
+ 
 
   { path: "/catalogue-settings", onSideBar: false, name: "Store Catalogue", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: Categories, layout: "/admin" },
   { path: "/user", onSideBar: true, name: "User", icon: "nc-icon nc-satisfied", component: Users, accessTo: ["admin"], layout: "/admin" },
@@ -166,6 +172,8 @@ var routes = [
 { path: "/mstore/storeviewDdetails/:mstoreId", onSideBar: false, name: "Store Details", icon: "nc-icon nc-shop", component: MStoreViewDetails, layout: "/admin" },
 { path: "/mproduct/product/:mprodId", onSideBar: false, name: "Add Product", icon: "nc-icon nc-shop", component: MStoreAddProduct, layout: "/admin" },
 { path: "/mshops/add-new-shop", name: "Add New Shop", icon: "nc-icon nc-shop", component: MStoreAddNewShop, accessTo: ["admin", "market"], layout: "/admin" },
+
+{ path: "/mcustomer/cust-details", onSideBar: true, name: "M Customer", icon: "nc-icon nc-shop", accessTo: ["admin"], component: marketingCustomerDetails, layout: "/admin" },
   
 
 
