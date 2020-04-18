@@ -55,7 +55,7 @@ export default class marketingCustomerDetails extends Component {
 
 
       <>
-       <div className="content m-store-view-add">
+       <div className="content m-store-view-add target-card">
        <div class="customer-filter">
           <div>
             <p>
@@ -69,12 +69,12 @@ export default class marketingCustomerDetails extends Component {
           </div>
 
 	      </div>
-<p>Target complete in 10 April 2020 to 20 April 2020</p>
+<h4>Target complete in 10 April 2020 to 20 April 2020</h4>
         <Row>
         <Col md="4">
               <Card>
                 <CardHeader>
-                  <CardTitle tag="h5">Sell </CardTitle>
+                  <CardTitle tag="h5" className="sell">Sell </CardTitle>
                   <p className="card-category">Target set on the basic of sell</p>
                 </CardHeader>
                 <CardBody>
@@ -86,17 +86,17 @@ export default class marketingCustomerDetails extends Component {
                 </CardBody>
                 <CardFooter>
                   <div className="legend">
-                  <i className="fa fa-circle text-warning" /> Completed
-                    <i className="fa fa-circle text-danger" /> Remains
+                  <i className="fa fa-circle sell-com" /> Completed
+                    <i className="fa fa-circle sell-reman" /> Remains
                   </div>
                 </CardFooter>
+                <Button className="text-center"><Link to="TSell/view-details/:ViewId">View Details</Link></Button>
               </Card>
-              <Button className="text-center">View Details</Button>
             </Col>
             <Col md="4">
               <Card>
                 <CardHeader>
-                  <CardTitle tag="h5">Add Store</CardTitle>
+                  <CardTitle tag="h5" className="addstore">Add Store</CardTitle>
                   <p className="card-category">Target set on the basic of Added</p>
                 </CardHeader>
                 <CardBody>
@@ -107,17 +107,17 @@ export default class marketingCustomerDetails extends Component {
                 </CardBody>
                 <CardFooter>
                   <div className="legend">
-                  <i className="fa fa-circle text-warning" /> Completed
-                    <i className="fa fa-circle text-danger" /> Remains
+                  <i className="fa fa-circle addstore-com" /> Completed
+                    <i className="fa fa-circle addstore-reman" /> Remains
                   </div>
                 </CardFooter>
+                <Button className="text-center"><Link to="market/view-details/:ViewId">View Details</Link></Button>
               </Card>
-              <Button className="text-center">View Details</Button>
             </Col>
             <Col md="4">
               <Card>
                 <CardHeader>
-                  <CardTitle tag="h5">Add Customer</CardTitle>
+                  <CardTitle tag="h5" className="addcustomer">Add Customer</CardTitle>
                   <p className="card-category">Target set on the basic of store added</p>
                 </CardHeader>
                 <CardBody>
@@ -128,17 +128,16 @@ export default class marketingCustomerDetails extends Component {
                 </CardBody>
                 <CardFooter>
                   <div className="legend">
-                    <i className="fa fa-circle text-warning" /> Completed
-                    <i className="fa fa-circle text-danger" /> Remains
+                    <i className="fa fa-circle addcust-com" /> Completed
+                    <i className="fa fa-circle addcust-reman" /> Remains
                   </div>
                 </CardFooter>
+                <Button className="text-center"><Link to="TAddCust/view-details/:ViewId">View Details</Link></Button>
               </Card>
-              <Button className="text-center">View Details</Button>
             </Col>
 
         </Row>
-          <div className='new-customer'>
-             <MDBTable className="customer-table" striped>
+             <MDBTable className="customer-table" responsive striped>
               <MDBTableHead>
                 <tr>
                   <th>Start Day</th>
@@ -166,7 +165,7 @@ export default class marketingCustomerDetails extends Component {
                   <p>{target.Status[1]}</p>
                   <p>{target.Status[2]}</p>
                   </td>
-                  <td><Button className="btn-primary">{target.Details}</Button></td>
+                  <td><Button className="btn-primary"><Link to="market/view-details/:ViewId">{target.Details}</Link></Button></td>
                 </tr>
               ))
   }
@@ -174,7 +173,6 @@ export default class marketingCustomerDetails extends Component {
 
               </MDBTableBody>
             </MDBTable>
-          </div>
         </div>
       </>
     )

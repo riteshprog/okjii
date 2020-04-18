@@ -27,6 +27,7 @@
     "react-google-maps": "^9.4.5",
     "react-helmet": "^5.2.1",
     "react-light-accordion": "^0.1.4",
+    "react-minimal-pie-chart": "^7.2.0",
     "react-multi-carousel": "^2.5.2",
     "react-notification-alert": "0.0.12",
     "react-otp-input": "^1.0.1",

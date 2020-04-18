@@ -70,6 +70,9 @@ import AddCityDetail  from "./views/coupon/AddCityDetail.jsx"
 import FeedbackSettings from './views/feedbackSettings/feedbackSettings.jsx';
 import TrustedBy from  './views/trusted/TrustedBy.jsx';
 import TargetDetails  from  './views/target/TargetDetails.jsx';
+import TargetViewDetails from  './views/target/TargetViewDetails.jsx';
+import TargetSellViewDetails from './views/target/TargetSellViewDetails.jsx';
+import TargetAddCustomerViewDetails from './views/target/TargetAddCustomerViewDetails.jsx';
 
 
 //Marketing Page import
@@ -112,6 +115,11 @@ var routes = [
 
   { path: "/trusted", onSideBar: true, name: "Trusted By", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TrustedBy, layout: "/admin" },    
   { path: "/target", onSideBar: true, name: "Target", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TargetDetails, layout: "/admin" },    
+  { path: "/market/view-details/:ViewId", onSideBar: false, name: "Target", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TargetViewDetails, layout: "/admin" },    
+  { path: "/TSell/view-details/:ViewId", onSideBar: false, name: "Target", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TargetSellViewDetails, layout: "/admin" },    
+  { path: "/TAddCust/view-details/:ViewId", onSideBar: false, name: "Target", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TargetAddCustomerViewDetails, layout: "/admin" },    
+
+
  
 
   { path: "/catalogue-settings", onSideBar: false, name: "Store Catalogue", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: Categories, layout: "/admin" },
