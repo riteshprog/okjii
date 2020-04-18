@@ -88,7 +88,7 @@ export default class marketingCustomerDetails extends Component {
   label
   labelPosition={50}
   labelStyle={{
-    fill: '#121212',
+    fill: '#fff',
     fontFamily: 'sans-serif',
     fontSize: '5px'
   }}
@@ -132,7 +132,7 @@ export default class marketingCustomerDetails extends Component {
   label
   labelPosition={50}
   labelStyle={{
-    fill: '#121212',
+    fill: '#fff',
     fontFamily: 'sans-serif',
     fontSize: '5px'
   }}
@@ -176,7 +176,7 @@ export default class marketingCustomerDetails extends Component {
   label
   labelPosition={50}
   labelStyle={{
-    fill: '#121212',
+    fill: '#fff',
     fontFamily: 'sans-serif',
     fontSize: '5px'
   }}
