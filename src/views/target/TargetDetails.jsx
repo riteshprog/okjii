@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 import avatar from '../../img/home/avatar.png';
-import { Pie } from "react-chartjs-2";
+//import { Pie } from "react-chartjs-2";
+import PieChart from 'react-minimal-pie-chart';
 import {
   Card,
   CardHeader,
@@ -78,11 +79,33 @@ export default class marketingCustomerDetails extends Component {
                   <p className="card-category">Target set on the basic of sell</p>
                 </CardHeader>
                 <CardBody>
-                  <Pie
-                    data={Sell.data}
-                    options={Sell.options}
-            
-                  />
+<PieChart
+  data={[
+    { title: 'One', value: 70, color: '#FFAE2B' },
+    { title: 'Two', value: 30, color: '#FEE6C2' },
+    
+  ]}
+  label
+  labelPosition={50}
+  labelStyle={{
+    fill: '#121212',
+    fontFamily: 'sans-serif',
+    fontSize: '5px'
+  }}
+  lengthAngle={360}
+  lineWidth={100}
+  paddingAngle={0}
+  radius={50}
+  rounded={false}
+  startAngle={270}
+  viewBoxSize={[
+    30,
+    30
+  ]}
+  style={{
+    height: '150px'
+  }}
+/>
                 </CardBody>
                 <CardFooter>
                   <div className="legend">
@@ -100,10 +123,33 @@ export default class marketingCustomerDetails extends Component {
                   <p className="card-category">Target set on the basic of Added</p>
                 </CardHeader>
                 <CardBody>
-                  <Pie
-                    data={AddStore.data}
-                    options={AddStore.options}
-                  />
+<PieChart
+  data={[
+    { title: 'One', value: 7, color: '#B71FFE' },
+    { title: 'Two', value: 3, color: '#DABDFF' },
+    
+  ]}
+  label
+  labelPosition={50}
+  labelStyle={{
+    fill: '#121212',
+    fontFamily: 'sans-serif',
+    fontSize: '5px'
+  }}
+  lengthAngle={360}
+  lineWidth={100}
+  paddingAngle={0}
+  radius={50}
+  rounded={false}
+  startAngle={270}
+  viewBoxSize={[
+    30,
+    30
+  ]}
+  style={{
+    height: '150px'
+  }}
+/>
                 </CardBody>
                 <CardFooter>
                   <div className="legend">
@@ -121,10 +167,33 @@ export default class marketingCustomerDetails extends Component {
                   <p className="card-category">Target set on the basic of store added</p>
                 </CardHeader>
                 <CardBody>
-                  <Pie
-                    data={AddCustomer.data}
-                    options={AddCustomer.options}
-                  />
+<PieChart
+  data={[
+    { title: 'One', value: 7, color: '#3059FF' },
+    { title: 'Two', value: 3, color: '#B8CCFF' },
+    
+  ]}
+  label
+  labelPosition={50}
+  labelStyle={{
+    fill: '#121212',
+    fontFamily: 'sans-serif',
+    fontSize: '5px'
+  }}
+  lengthAngle={360}
+  lineWidth={100}
+  paddingAngle={0}
+  radius={50}
+  rounded={false}
+  startAngle={270}
+  viewBoxSize={[
+    30,
+    30
+  ]}
+  style={{
+    height: '150px'
+  }}
+/>
                 </CardBody>
                 <CardFooter>
                   <div className="legend">
