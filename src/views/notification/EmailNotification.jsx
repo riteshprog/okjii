@@ -15,7 +15,8 @@ class EmailNotification extends Component {
     newEmailNotification: {
       parameter: "",
       appId: [],
-      status: 1
+      status: 1,
+      type: 1
     },
     pushData: [],
     allEmailNotifications: []
@@ -46,6 +47,11 @@ class EmailNotification extends Component {
     })
     .catch((err) => {
       console.log(`catch err`, err);
+      if(err.response && err.response.status == 401){
+        message.info('Session Expired!, Please Login Again.')
+      }else {
+				message.error(`Something went wrong`);
+			}
     });
   }
 

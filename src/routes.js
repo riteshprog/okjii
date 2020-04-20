@@ -69,6 +69,8 @@ import AddCity  from "./views/coupon/AddCity.jsx"
 import AddCityDetail  from "./views/coupon/AddCityDetail.jsx"
 import FeedbackSettings from './views/feedbackSettings/feedbackSettings.jsx';
 
+import CommonWallet from './views/wallet/commonWallet';
+
 //Marketing Page import
 
 import MStore from "./views/marketing/store/MStore.jsx";
@@ -76,6 +78,9 @@ import MStore from "./views/marketing/store/MStore.jsx";
 import MStoreViewDetails from "./views/marketing/store/MStoreViewDetails.jsx"
 import MStoreAddProduct from "./views/marketing/product/MStoreAddProduct.jsx"
 import MStoreAddNewShop from "./views/marketing/store/MStoreAddNewShop.jsx"
+import LanuageSettings from "./views/settings/languageSetting.jsx";
+
+import Region from './views/Region/region';
 
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
@@ -88,6 +93,8 @@ var routes = [
   { path: "/shops", onSideBar: true, name: "Retail Store", icon: "nc-icon nc-shop", accessTo: ["admin", "market"], component: StoreDetails, layout: "/admin" },
   { path: "/customer", onSideBar: true, name: "Customer", icon: "far fa-user", component: CustomerDetails, accessTo: ["admin"], layout: "/admin" },
   { path: "/new-customer", onSideBar: true, name: "New Customer", icon: "far fa-user", component: MarketingCustomer, accessTo: ["admin"], layout: "/admin" },
+  
+  { path: "/region", onSideBar: true, name: "Region", icon: "fa fa-globe", component: Region, accessTo: ["admin"], layout: "/admin" },
 
   // notification routes
   { path: "/notification", name: "Push Notification", onSideBar:false, icon: "far fa-bell", component: Notification, layout: "/admin"},
@@ -99,22 +106,30 @@ var routes = [
     ]
   },
 
-  { path: "/feedbackSettings", name: "Feedback Settings", onSideBar:false, icon: "far fa-bell", component: FeedbackSettings, layout: "/admin"},
+  { path: "/settings/feedbackSettings", name: "Feedback Settings", onSideBar:false, icon: "far fa-bell", component: FeedbackSettings, layout: "/admin"},
+  { path: "/settings/language", name: "Language Settings", onSideBar:false, icon: "far fa-bell", component: LanuageSettings, layout: "/admin"},
   // settings submenu
-  { type: 'subMenu', onSideBar: true, icon: 'fa fa-pie-chart', subMenuTitle: 'Settings', routes: [
-    { path: "/feedbackSettings", onSideBar: true, name: "Feedback Settings", icon: "far fa-bell", component: FeedbackSettings, layout: "/admin", type: 'subMenu', subMenuTitle: 'Settings' },
-    { path: "/catalogue-settings", onSideBar: false, name: "Store Catalogue", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: Categories, layout: "/admin" },    
+  { type: 'subMenu', onSideBar: true, icon: 'fa fa-cog', subMenuTitle: 'Settings', routes: [
+    { path: "/settings/feedbackSettings", onSideBar: true, name: "Feedback Settings", icon: "far fa-bell", component: FeedbackSettings, layout: "/admin", type: 'subMenu', subMenuTitle: 'Settings' },
+    { path: "/catalogue-settings", onSideBar: true, name: "Store Catalogue", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: Categories, layout: "/admin" },
+    { path: "/settings/language", name: "Language Settings", onSideBar:true, icon: "far fa-bell", component: LanuageSettings, layout: "/admin"},
   ]},
 
 
+  // -------------------common components starts -----------------------
+  
+  { path: "/store/wallet", onSideBar: false, name: "Store Wallet", icon: "nc-icon nc-money", accessTo: ["admin", "market"], component: StoreWallet, layout: "/admin" },
+  { path: "/customer/wallet", onSideBar: false, name: "Customer Wallet", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: CustomerWallet, layout: "/admin" },
+
+  // -------------------common components ends -----------------------
 
   { path: "/catalogue-settings", onSideBar: false, name: "Store Catalogue", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: Categories, layout: "/admin" },
   { path: "/user", onSideBar: true, name: "User", icon: "nc-icon nc-satisfied", component: Users, accessTo: ["admin"], layout: "/admin" },
   { path: "/Order", onSideBar: true, name: "Order", icon: "nc-icon nc-app", component: Order, layout: "/admin" },
   { path: "/TotalSale", onSideBar: true, name: "Total Sale", icon: "fa fa-pie-chart", component: TotalSale, layout: "/admin" },
   
-  { path: "/customer-notification", name: "Customer Notification", onSideBar:true, icon: "far fa-bell", component: CustomerNotification, layout: "/admin", subMenuTitle: 'Customer Notification' },
-  { path: "/customer-offer", name: "Customer Offer", onSideBar:true, icon: "far fa-bell", component: CustomerOffer, layout: "/admin", subMenuTitle: 'Customer Offer' },
+  { path: "/customer-notification", name: "Customer Notification", onSideBar:false, icon: "far fa-bell", component: CustomerNotification, layout: "/admin", subMenuTitle: 'Customer Notification' },
+  { path: "/customer-offer", name: "Customer Offer", onSideBar:false, icon: "far fa-bell", component: CustomerOffer, layout: "/admin", subMenuTitle: 'Customer Offer' },
 
   { path: "/Payment", onSideBar: true, name: "Payment", icon: "nc-icon nc-money-coins", component: Payment, layout: "/admin" },
   { path: "/StoreSettelment", onSideBar: true, name: "Store Settelment", icon: "fa fa-credit-card", component: StoreSettelment, layout: "/admin" },
@@ -134,31 +149,28 @@ var routes = [
 
   { path: "/messages", onSideBar: true, name: "Messages", icon: "fa fa-pencil-square-o", component: MessagesPage, accessTo: ["admin"], layout: "/admin" },
 
-
   { path: "/store/wallet", onSideBar: false, name: "Wallet", icon: "fa fa-money", accessTo: ["admin"], component: StoreWallet, layout: "/admin" },
-  { path: "/store/wallet/pre-settelments", onSideBar: true, name: "Wallet", icon: "fa fa-money", accessTo: ["admin"], component: storeWalletPreSettlement, layout: "/admin" },
-  { path: "/store/wallet/download-statement", onSideBar: true, name: "Wallet", icon: "fa fa-money", accessTo: ["admin"], component: storeWalletDownloadStatement, layout: "/admin" },
-  { path: "/store/reward", onSideBar: true, name: "Reward", icon: "fa fa-money", accessTo: ["admin"], component: StoreReward, layout: "/admin" },
+  { path: "/store/wallet/pre-settelments", onSideBar: false, name: "Wallet", icon: "fa fa-money", accessTo: ["admin"], component: storeWalletPreSettlement, layout: "/admin" },
+  { path: "/store/wallet/download-statement", onSideBar: false, name: "Wallet", icon: "fa fa-money", accessTo: ["admin"], component: storeWalletDownloadStatement, layout: "/admin" },
+  { path: "/store/reward", onSideBar: false, name: "Reward", icon: "fa fa-money", accessTo: ["admin"], component: StoreReward, layout: "/admin" },
   
-  { path: "/store/cust-payment", onSideBar: true, name: "Customer Payment", icon: "fa fa-money", accessTo: ["admin"], component: StoreCustomerPayment, layout: "/admin" },
-  { path: "/store/cust-order", onSideBar: true, name: "Store Order", icon: "fa fa-money", accessTo: ["admin"], component: StoreOrder, layout: "/admin" },
-  { path: "/store/current-order", onSideBar: true, name: "Store Current Order", icon: "fa fa-money", accessTo: ["admin"], component: StoreCurrentOrder, layout: "/admin" },
+  { path: "/store/cust-payment", onSideBar: false, name: "Customer Payment", icon: "fa fa-money", accessTo: ["admin"], component: StoreCustomerPayment, layout: "/admin" },
+  { path: "/store/cust-order", onSideBar: false, name: "Store Order", icon: "fa fa-money", accessTo: ["admin"], component: StoreOrder, layout: "/admin" },
+  { path: "/store/current-order", onSideBar: false, name: "Store Current Order", icon: "fa fa-money", accessTo: ["admin"], component: StoreCurrentOrder, layout: "/admin" },
   
-  { path: "/store/total-sale", onSideBar: true, name: "Store Total Sale", icon: "fa fa-money", accessTo: ["admin"], component: StoreTotalSale, layout: "/admin" },
-  
-  
+  { path: "/store/total-sale", onSideBar: false, name: "Store Total Sale", icon: "fa fa-money", accessTo: ["admin"], component: StoreTotalSale, layout: "/admin" },
   
   { path: "/coupon", onSideBar: true, name: "Create Coupon", icon: "fa fa-money", accessTo: ["admin"], component: CouponForm, layout: "/admin" },
   { path: "/coupon/coupon-add", onSideBar: false, name: "Coupon List", icon: "fa fa-money", accessTo: ["admin"], component: CouponAddFormDetails, layout: "/admin" },
   
-  { path: "/coupon/add-faq", onSideBar: true, name: "Add Faq", icon: "fa fa-money", accessTo: ["admin"], component: AddFAQDetail, layout: "/admin" },
-  { path: "/coupon/add-faq-list", onSideBar: false, name: "Coupon Add", icon: "fa fa-money", accessTo: ["admin"], component: AddFAQ, layout: "/admin" },
+  { path: "/faq/add-faq", onSideBar: true, name: "Add Faq", icon: "fa fa-money", accessTo: ["admin"], component: AddFAQDetail, layout: "/admin" },
+  { path: "/faq/add-faq-list", onSideBar: false, name: "Coupon Add", icon: "fa fa-money", accessTo: ["admin"], component: AddFAQ, layout: "/admin" },
   
-  { path: "/coupon/add-page", onSideBar: true, name: "Add Page", icon: "fa fa-money", accessTo: ["admin"], component: AddPage, layout: "/admin" },
+  { path: "/add-page", onSideBar: true, name: "Add Page", icon: "fa fa-money", accessTo: ["admin"], component: AddPage, layout: "/admin" },
   { path: "/coupon/add-pagedetails", onSideBar: false, name: "Page Details", icon: "fa fa-money", accessTo: ["admin"], component: AddPageDetails, layout: "/admin" },
 
-  { path: "/coupon/add-city", onSideBar: true, name: "Add City Module", icon: "fa fa-money", accessTo: ["admin"], component: AddCity, layout: "/admin" },
-  { path: "/coupon/add-citydetails", onSideBar: false, name: "City Module", icon: "fa fa-money", accessTo: ["admin"], component: AddCityDetail, layout: "/admin" },
+  { path: "/add-city", onSideBar: true, name: "Add City Module", icon: "fa fa-money", accessTo: ["admin"], component: AddCity, layout: "/admin" },
+  { path: "/add-citydetails", onSideBar: false, name: "City Module", icon: "fa fa-money", accessTo: ["admin"], component: AddCityDetail, layout: "/admin" },
   
   
   /* --------------------Side Bar Routes Ends-------------------- */

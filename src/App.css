@@ -739,7 +739,7 @@ i.fa.fa-quote-left.color-green {
 }
 
 .testimoni-img {
-  display: flex;
+  /* display: flex; */
 }
 
 .testimoni-img > .author-img {
@@ -748,7 +748,7 @@ i.fa.fa-quote-left.color-green {
 
 img.rounded-circle.testimoni-img {
   margin-left: 0 !important;
-  margin-right: 28px !important;
+  /* margin-right: 28px !important; */
 }
 
 .home-testimonial.card {
@@ -4202,6 +4202,32 @@ width: 75%;
 }
 
 
+/* --------------------common wallet css starts-------------------- */
+.wallet-card-button{
+    border-radius: 5px;
+    box-shadow: 2px 2px 9px 2px #CFCFCF;
+    background-color: #FFFFFF;
+    color: #252422;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    position: relative;
+    border: 2px solid #f9f9f9;
+    transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+    max-width: 550px;
+}
+.wallet-note {
+  border: 2px solid #259d70;
+  text-align: center;
+  margin: 0rem 16rem;
+  padding: 10px;
+}
+.wallet-note p{
+  margin: 0px;
+}
+
+/* --------------------common wallet css ends-------------------- */
+
+
 .reward-content .wallet-stats .profile-body .profile {
   margin-right: 1.5rem !important;
 }
@@ -4934,7 +4960,7 @@ align-items: center;
 
   img.rounded-circle.testimoni-img {
     margin-left: 0 !important;
-    margin-right: 20px !important;
+    /* margin-right: 20px !important; */
   }
 
   .container {
@@ -5800,7 +5826,7 @@ li.nav-btn.nav-item {
 .nav-open .main-panel  {
   position: relative;
   float: right;
-  width: calc(100% - 240px) !important;
+  width: calc(100% - 20px) !important;
   background-color: #fdfeff;
   transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   z-index: 9999;

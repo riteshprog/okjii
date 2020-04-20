@@ -31,14 +31,18 @@ export default class FeedbackSettings extends React.Component {
 		this.getAllFeedbackSettings();
 	}
 	getAllFeedbackSettings = () => {
-		axios.get(process.env.REACT_APP_API_URL + '/feedback-setting').then(({data})=>{
+		axios.get(process.env.REACT_APP_API_URL + '/feedBackSetting').then(({data})=>{
 			console.log(data);
 			if(data.status){
 				let allFeedbackSettings = data.data;
 				this.setState({allFeedbackSettings});
 			}
 		}).catch(err=>{
-			message.error(err);
+			if(err.response.status == 401){
+        message.info('Session Expired!, Please Login Again.')
+      }else {
+				message.error(`Something went wrong`);
+			}
 		})
 	}
 	

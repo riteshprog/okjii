@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Switch } from 'antd';
+import { Switch, message } from 'antd';
 
 import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 import avatar from '../../assets/img/storeIcon.png';
 import CustomerNavBar from '../customer/CustomerNavBar';
-import { CustomInput, Row, Col } from 'reactstrap';
 import CookieHandler from '../../utils/cookieHandler';
 import Axios from "axios";
 
@@ -45,7 +44,12 @@ export default class StoreDetails extends Component {
         console.log('no shop found')
       }
     }).catch(err=>{
-      console.log(`catch`, err);
+      console.log(`catch`, err.response.status);
+      if(err.response.status  == 401){
+        message.info('Session Expired!, Please Login Again.')
+      }else {
+        message.error(`Something went wrong`);
+      }
     })
   }
 

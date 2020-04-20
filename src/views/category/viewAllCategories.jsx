@@ -52,7 +52,7 @@ export default class Categories extends React.Component {
       title: "Sub Categories",
       dataIndex: "subCategories",
       key: "_id",
-      render: (sub) => <span>{sub.map(single=>single.name)}</span>,
+      render: (sub) => <span>{sub.map(single=>single.name + '; ')}</span>,
     }
   ];
 
@@ -62,12 +62,6 @@ export default class Categories extends React.Component {
       dataIndex: "name",
       key: "_id",
       render: (name) => <span>{name}</span>,
-    },
-    {
-      title: "Category",
-      dataIndex: "category",
-      key: "_id",
-      render: (cat) => <span>{cat.name}</span>,
     },
   ];
   
@@ -91,19 +85,21 @@ export default class Categories extends React.Component {
       title: "Category",
       dataIndex: "category",
       key: "_id",
-      render: (cat) => <span>{cat.map(single=>single)}</span>,
+      render: (cat) => <span>{cat}</span>,
     },
     {
       title: "Sub Category",
       dataIndex: "subCategory",
       key: "_id",
-      render: (sub) => <span>{sub.map(single=>single)}</span>,
+      render: (sub) => <span>{sub}</span>,
     }
   ];
 
   componentDidMount() {
     this.getAllCategories();
     this.getAllSubCategories();
+    this.getAllStoreType();
+    this.getAllBrands();
   }
   
   getAllCategories = () => {
@@ -133,7 +129,7 @@ export default class Categories extends React.Component {
       console.log(`catch`, err);
     }); 
   }
-  getAllSubCategories = () => {
+  getAllStoreType = () => {
    Axios.get(process.env.REACT_APP_API_URL + "/store-type")
     .then(({ data }) => {
       if (data.status) {
@@ -147,6 +143,21 @@ export default class Categories extends React.Component {
       console.log(`catch`, err);
     }); 
   }
+
+  getAllBrands = () => {
+    Axios.get(process.env.REACT_APP_API_URL + "/brand")
+     .then(({ data }) => {
+       if (data.status) {
+         console.log(`allBrands`, data)
+         this.setState({ allBrands: data.allBrands });
+       } else {
+         console.log("no Store Type found");
+       }
+     })
+     .catch((err) => {
+       console.log(`catch`, err);
+     }); 
+   }
 
   renderAddNewCategoryModal = () => (
     <Modal isOpen={this.state.addNewCategoryModalVisibility} toggle={this.toggleAddNewCategory} >
@@ -407,7 +418,7 @@ export default class Categories extends React.Component {
               </Button>
               <Row>
                 <Col className="pr-1" md={12}>
-                  <Table columns={this.categoriesColumns} dataSource={this.state.allCategories} />
+                  <Table columns={this.categoriesColumns}  loading={this.state.allCategories.length?false:true} dataSource={this.state.allCategories} />
                 </Col>
               </Row>
             </Col>
@@ -431,7 +442,7 @@ export default class Categories extends React.Component {
               </Button>
               <Row>
                 <Col className="pr-1" md={12}>
-                  <Table columns={this.storeTypeColumns} dataSource={this.state.storeTypeColumns} />
+                  <Table columns={this.storeTypeColumns} dataSource={this.state.allStoreTypes} />
                 </Col>
               </Row>
             </Col>
@@ -441,7 +452,7 @@ export default class Categories extends React.Component {
               </Button>
               <Row>
                 <Col className="pr-1" md={12}>
-                  <Table columns={this.brandColumns} dataSource={this.state.brandColumns} />
+                  <Table columns={this.brandColumns} dataSource={this.state.allBrands} />
                 </Col>
               </Row>
             </Col>
