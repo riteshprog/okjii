@@ -169,8 +169,8 @@ export default class marketingCustomerDetails extends Component {
                 <CardBody>
 <PieChart
   data={[
-    { title: 'One', value: 7, color: '#3059FF' },
-    { title: 'Two', value: 3, color: '#B8CCFF' },
+    { title: '07 D', value: 7, color: '#3059FF' },
+    { title: '03 D', value: 3, color: '#B8CCFF' },
     
   ]}
   label
@@ -234,7 +234,7 @@ export default class marketingCustomerDetails extends Component {
                   <p>{target.Status[1]}</p>
                   <p>{target.Status[2]}</p>
                   </td>
-                  <td><Button className="btn-primary"><Link to="market/view-details/:ViewId">{target.Details}</Link></Button></td>
+                  <td><Button className="btn-primary"><Link to="THistory/view-details/:ViewId">{target.Details}</Link></Button></td>
                 </tr>
               ))
   }
