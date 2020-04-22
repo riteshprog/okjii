@@ -5035,6 +5035,7 @@ margin-top: 2rem;
   background-color: #C2F2DC;
   padding: .5rem 1rem;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -5045,6 +5046,68 @@ margin-top: 2rem;
 
   color:#7F8F87;
   font-weight: 600;
+}
+
+.order-details .order-list{
+  color: #67C19D;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+
+.payment-details{
+  padding: 2rem 4rem;
+}
+
+.payment-details .card{
+
+display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 1rem 1rem;
+  margin-bottom: 0;
+}
+
+.payment-details p{
+  font-size: .9rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.payment-details img{
+  width: 70%;
+}
+
+
+.Process{
+  color:#FE975F;
+}
+.Modifing{
+  color:#86B5FE;
+}
+.Delivered{
+  color:#30A176;
+}
+.Canceled{
+  color:#DF5554;
+}
+
+.order-card .btn{
+
+  background-color: #30A176 !important;
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 400;
+  text-transform: capitalize !important;
+  padding: .5rem 1rem;
+}
+
+
+.main-panel > .content {
+  padding: 0px 0px !important;
+  margin-top: 85px !important;
 }
 
 /* Order Page End */
@@ -5060,7 +5123,12 @@ margin-top: 2rem;
   .target-view-card .row{
     margin: 0 auto;
     width:100%;
-  }  
+  }
+  
+  .payment-details {
+    padding: 1rem 1rem;
+}
+  
   .navbar .navbar-toggler {
     width: 84px !important;
     height: 50px;
