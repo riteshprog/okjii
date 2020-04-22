@@ -3,6 +3,7 @@ import Axios from "axios";
 import moment from "moment-timezone";
 import { Radio, message, Table, Select, Tag  } from "antd";
 import { Row, Col, Button, Modal, ModalBody, ModalFooter, ModalHeader, FormGroup, Form, Input } from "reactstrap";
+import CookieHandler from '../../utils/cookieHandler';
 
 import './setting.css';
 
@@ -17,13 +18,21 @@ export default class Categories extends React.Component {
       allSubCategories: [],
       allStoreTypes: [],
       allBrands: [],
+      allRegions: [],
       addNewCategoryModalVisibility: false,
       addNewSubCategoryModalVisibility: false,
       addNewBrandModalVisibility: false,
       addNewStoreTypeModalVisibility: false,
+      editCategoryModalVisibility: false,
       newCategory: {
         name: "",
-        subCategories: []
+        subCategories: [],
+        regionId: []
+      },
+      currentCategory: {
+        name: "",
+        subCategories: [],
+        regionId: []
       },
       newSubCategory: {
         name: "",
@@ -52,7 +61,19 @@ export default class Categories extends React.Component {
       title: "Sub Categories",
       dataIndex: "subCategories",
       key: "_id",
-      render: (sub) => <span>{sub.map(single=>single.name + '; ')}</span>,
+      render: (sub) => <span>{sub.map(single=><Tag>{single.name}</Tag>)}</span>,
+    },
+    {
+      title: "Regions",
+      dataIndex: "regionId",
+      key: "_id",
+      render: (regions) => <span>{regions.length?regions.map(region=><Tag>{region.name}</Tag>):'N/A'}</span>,
+    },
+    {
+      title: "Action",
+      dataIndex: "_id",
+      key: "_id",
+      render: (_id)=> <span onClick={()=>this.toggleEditCategory(_id)} className='cp op8 t-text'>Edit</span>
     }
   ];
 
@@ -100,10 +121,16 @@ export default class Categories extends React.Component {
     this.getAllSubCategories();
     this.getAllStoreType();
     this.getAllBrands();
+    this.getAllRegions();
   }
   
   getAllCategories = () => {
-    Axios.get(process.env.REACT_APP_API_URL + "/category")
+    let token = JSON.parse(CookieHandler.readCookie('token'));
+    Axios.get(process.env.REACT_APP_API_URL + "/category", {
+      headers: {
+        token
+      }
+    })
     .then(({ data }) => {
       if (data.status) {
         this.setState({ allCategories: data.allCategories });
@@ -114,6 +141,41 @@ export default class Categories extends React.Component {
     .catch((err) => {
       console.log(`catch`, err);
     });
+  }
+  getSingleCategoryById = (categoryId) => {
+    let token = JSON.parse(CookieHandler.readCookie('token'));
+    let url = process.env.REACT_APP_API_URL + '/category/' + categoryId;
+    return Axios.get(url, {
+      headers: {
+        token
+      }
+    }).then(({data})=>{
+      return data.data;
+    }).catch(ex=>{
+      if(ex.response && ex.response.status == 401){
+        message.info('Session Expired!, Please Login Again.')
+      }else {
+        message.error(`Something went wrong`);
+      }
+    })
+  } 
+  getAllRegions = () => {
+    let token = JSON.parse(CookieHandler.readCookie('token'));
+    Axios.get(process.env.REACT_APP_API_URL + '/region', {
+      headers: {
+        token
+      }
+    }).then(({data})=>{
+      let {allRegions} = this.state;
+      allRegions = data.data;
+      this.setState({allRegions})
+    }).catch(ex=>{
+      if(ex.response && ex.response.status == 401){
+        message.info('Session Expired!, Please Login Again.')
+      }else {
+        message.error(`Something went wrong`);
+      }
+    })
   }
   getAllSubCategories = () => {
    Axios.get(process.env.REACT_APP_API_URL + "/sub-category")
@@ -140,8 +202,8 @@ export default class Categories extends React.Component {
       }
     })
     .catch((err) => {
-      console.log(`catch`, err);
-    }); 
+      console.log(`catch`, err)
+;    }); 
   }
 
   getAllBrands = () => {
@@ -174,8 +236,16 @@ export default class Categories extends React.Component {
             <Col className="pl-1" md="10">
               <FormGroup>
                 <label htmlFor="userName">Select Sub Categories</label>
-                <Select mode="tags" tokenSeparators={[',']} style={{ width: "100%" }} placeholder="Select Sub Category" onDeselect={(e)=>this.handleOnSelect(e, 'category', 'subCategories')} onSelect={(e)=>this.handleOnSelect(e, 'category', 'subCategories')}>
+                <Select mode="tags" tokenSeparators={[',']} style={{ width: "100%" }} placeholder="Select Sub Category" onDeselect={(e)=>this.handleOnSelect(e, 'category', 'subCategories', 'add')} onSelect={(e)=>this.handleOnSelect(e, 'category', 'subCategories', 'add')}>
                   {this.state.allSubCategories.map(sub=><Option key={sub._id}>{sub.name}</Option>)}}
+                </Select>
+              </FormGroup>
+            </Col>
+            <Col className="pl-1" md="10">
+              <FormGroup>
+                <label htmlFor="userName">Select Regions</label>
+                <Select mode="tags" tokenSeparators={[',']} style={{ width: "100%" }} placeholder="Select Regions" onDeselect={(e)=>this.handleOnSelect(e, 'category', 'regionId', 'add')} onSelect={(e)=>this.handleOnSelect(e, 'category', 'regionId', 'add')}>
+                  {this.state.allRegions.map(region=><Option key={region._id}>{region.name}</Option>)}}
                 </Select>
               </FormGroup>
             </Col>
@@ -207,7 +277,7 @@ export default class Categories extends React.Component {
             <Col className="pl-1" md="10">
               <FormGroup>
                 <label htmlFor="userName">Select Category</label>
-                <Select mode="tags" tokenSeparators={[',']}  value={this.state.newSubCategory.categories} style={{ width: "100%" }} placeholder="Select Sub Category" onDeselect={(e)=>this.handleOnSelect(e, 'subCategory', 'categoies')} onSelect={(e)=>this.handleOnSelect(e, 'subCategory', 'categoies')}>
+                <Select mode="tags" tokenSeparators={[',']}  value={this.state.newSubCategory.categories} style={{ width: "100%" }} placeholder="Select Sub Category" onDeselect={(e)=>this.handleOnSelect(e, 'subCategory', 'categoies', 'add')} onSelect={(e)=>this.handleOnSelect(e, 'subCategory', 'categoies', 'add')}>
                   {this.state.allCategories.map(sub=><Option key={sub.name}>{sub.name}</Option>)}
                 </Select>
               </FormGroup>
@@ -296,6 +366,16 @@ export default class Categories extends React.Component {
   );
 
   toggleAddNewCategory = () => this.setState({ addNewCategoryModalVisibility: !this.state.addNewCategoryModalVisibility, errorMessage: `` });
+  toggleEditCategory = (selectedCategoryId) => {
+    if(selectedCategoryId){
+      let {currentCategory} = this.state;
+      this.getSingleCategoryById(selectedCategoryId).then( singleCategory=>{
+        this.setState({ currentCategory: singleCategory });
+      });
+    }
+    this.setState({ editCategoryModalVisibility: !this.state.editCategoryModalVisibility, errorMessage: `` });
+  }
+  
   toggleAddNewSubCategory = () => this.setState({ addNewSubCategoryModalVisibility: !this.state.addNewSubCategoryModalVisibility, errorMessage: `` });
   toggleAddNewStoreType = () => this.setState({ addNewStoreTypeModalVisibility: !this.state.addNewStoreTypeModalVisibility, errorMessage: `` });
   toggleAddNewBrand = () => this.setState({ addNewBrandModalVisibility: !this.state.addNewBrandModalVisibility, errorMessage: `` });
@@ -316,17 +396,27 @@ export default class Categories extends React.Component {
     }
   };
 
-  handleOnSelect = (e, type, key) => {
-    console.log(e, type, key)
+  handleOnSelect = (e, type, key, from) => {
     if(type === 'category'){
-      let { newCategory } = this.state;
-      let index = newCategory[key].indexOf(e);
-      
-      if(index == -1) newCategory[key].push(e);
-      else newCategory[key].splice(index, 1);
-      
-      this.setState({ newCategory });
-    
+      if(from == 'add'){
+        let { newCategory } = this.state;
+        let index = newCategory[key].indexOf(e);
+        
+        if(index == -1) newCategory[key].push(e);
+        else newCategory[key].splice(index, 1);
+        
+        this.setState({ newCategory });
+      }else if(from == 'edit'){
+        console.log(e, type, key, from)
+        // let { currentCategory } = this.state;
+        // let index = currentCategory[key].indexOf(e);
+        
+        // if(index == -1) currentCategory[key].push(e);
+        // else currentCategory[key].splice(index, 1);
+        // this.setState({ currentCategory });
+
+      }
+
     }else if(type === 'subCategory') {
       let { newSubCategory } = this.state;
       let index = newSubCategory[key].indexOf(e);
@@ -412,7 +502,7 @@ export default class Categories extends React.Component {
       <>
         <div className="content">
           <Row>
-            <Col md="6">
+            <Col md="12">
               <Button color="primary" onClick={this.toggleAddNewCategory}>
                 Add New Category
               </Button>
@@ -422,7 +512,12 @@ export default class Categories extends React.Component {
                 </Col>
               </Row>
             </Col>
-            <Col md="6">
+            {this.renderAddNewCategoryModal()}
+            {this.renderAddNewSubCategoryModal()}
+            {this.renderEditCategoryModal()}
+          </Row>
+          <Row>
+           <Col md="6">
               <Button color="primary" onClick={this.toggleAddNewSubCategory}>
                 Add New Sub Category
               </Button>
@@ -432,10 +527,6 @@ export default class Categories extends React.Component {
                 </Col>
               </Row>
             </Col>
-            {this.renderAddNewCategoryModal()}
-            {this.renderAddNewSubCategoryModal()}
-          </Row>
-          <Row>
             <Col md="6">
               <Button color="primary" onClick={this.toggleAddNewStoreType}>
                 Add New Store Type
@@ -446,7 +537,7 @@ export default class Categories extends React.Component {
                 </Col>
               </Row>
             </Col>
-            <Col md="6">
+            <Col md="12">
               <Button color="primary" onClick={this.toggleAddNewBrand}>
                 Add New Brand
               </Button>
@@ -463,4 +554,55 @@ export default class Categories extends React.Component {
       </>
     );
   }
+  searchFilter = (input, option) => {
+    input = input.toLowerCase();
+    if(!Array.isArray(option.props.children)) {
+      if(typeof option.props.children === 'string') {
+        return option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+      }
+    }
   }
+  renderEditCategoryModal = () => (
+    <Modal isOpen={this.state.editCategoryModalVisibility} toggle={this.toggleEditCategory} >
+      <ModalHeader toggle={this.toggleEditCategory}> Edit Category </ModalHeader>
+      <ModalBody>
+        <Form>
+          <Row className="df jcc">
+            <Col className="pl-1" md="10">
+              <FormGroup>
+                <label htmlFor="userName">Category Name</label>
+                <Input placeholder="Enter Category Name" value={this.state.currentCategory.name} onChange={(e) => this.handleOnChange(e, 'category', "name")} type="text" />
+              </FormGroup>
+            </Col>
+            <Col className="pl-1" md="10">
+              <FormGroup>
+                <label htmlFor="userName">Select Sub Categories</label>
+                <Select mode="multiple" defaultValue={this.state.currentCategory.subCategories.map(sCat=>sCat._id)} style={{ width: "100%" }} placeholder="Select Sub Category"
+                 onSelect={(value)=>this.handleOnSelect(value, 'category', 'subCategories', 'edit')}
+                >
+                  {this.state.allSubCategories.map(sub=><Option key={sub._id} value={sub._id}>{sub.name}</Option>)}}
+                </Select>
+              </FormGroup>
+            </Col>
+            <Col className="pl-1" md="10">
+              <FormGroup>
+                <label htmlFor="userName">Select Regions</label>
+                <Select mode="tags" value={this.state.currentCategory.regionId.map(region=>region._id)} tokenSeparators={[',']} style={{ width: "100%" }} placeholder="Select Regions" onDeselect={(e)=>this.handleOnSelect(e, 'category', 'regionId', 'edit')} onSelect={(e)=>this.handleOnSelect(e, 'category', 'regionId', 'edit')}>
+                  {this.state.allRegions.map(region=><Option key={region._id}>{region.name}</Option>)}}
+                </Select>
+              </FormGroup>
+            </Col>
+          </Row>
+        </Form>
+      </ModalBody>
+      <ModalFooter>
+        {this.state.errorMessage ? (
+          <span className="mr-3 text-danger">{this.state.errorMessage}</span>
+        ) : null}
+        <Button id="save-btn" color="primary" onClick={this.toggleEditCategory} > Add </Button>
+        <Button color="secondary" onClick={this.toggleEditCategory}> Cancel </Button>
+      </ModalFooter>
+    </Modal>
+  );
+
+}
