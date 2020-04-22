@@ -77,6 +77,8 @@ import TargetAddCustomerViewDetails from './views/target/TargetAddCustomerViewDe
 
 import CommonWallet from './views/wallet/commonWallet';
 
+import AllProducts from './views/product/allProducts.jsx';
+
 //Marketing Page import
 
 import MStore from "./views/marketing/store/MStore.jsx";
@@ -101,10 +103,12 @@ var routes = [
   { path: "/new-customer", onSideBar: true, name: "New Customer", icon: "far fa-user", component: MarketingCustomer, accessTo: ["admin"], layout: "/admin" },
   
   { path: "/region", onSideBar: true, name: "Region", icon: "fa fa-globe", component: Region, accessTo: ["admin"], layout: "/admin" },
+  { path: "/profucts", onSideBar: true, name: "Products", icon: "fa fa-globe", component: AllProducts, accessTo: ["admin"], layout: "/admin" },
 
   // notification routes
   { path: "/notification", name: "Push Notification", onSideBar:false, icon: "far fa-bell", component: Notification, layout: "/admin"},
   { path: "/EmailNotification", name: "Email Notification", onSideBar:false, icon: "far fa-bell", component: EmailNotification, layout: "/admin"},
+  
   // notification submenu
   { type: 'subMenu', onSideBar: true, icon: 'nc-icon nc-bell-55', subMenuTitle: 'Notification', routes: [
       { path: "/notification", onSideBar: true, name: "Push Notification", icon: "far fa-bell", component: Notification, layout: "/admin", type: 'subMenu', subMenuTitle: 'Notification' },

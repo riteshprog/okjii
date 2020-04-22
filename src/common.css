@@ -2,6 +2,9 @@ body{
   overflow-x: hidden;
 }
 
+.t-text{ 
+  color: #4b9e70 !important;
+}
 .width-wfa{
   width: -webkit-fill-available;
 }
