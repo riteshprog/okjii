@@ -73,6 +73,7 @@ import TargetDetails  from  './views/target/TargetDetails.jsx';
 import TargetViewDetails from  './views/target/TargetViewDetails.jsx';
 import TargetSellViewDetails from './views/target/TargetSellViewDetails.jsx';
 import TargetAddCustomerViewDetails from './views/target/TargetAddCustomerViewDetails.jsx';
+import TargetHistoryViewDetails from './views/target/TargetHistoryViewDetails.jsx';
 
 
 import CommonWallet from './views/wallet/commonWallet';
@@ -89,6 +90,7 @@ import MStoreAddNewShop from "./views/marketing/store/MStoreAddNewShop.jsx"
 import LanuageSettings from "./views/settings/languageSetting.jsx";
 import Region from './views/Region/region';
 import marketingCustomerDetails from "./views/marketing/customers/marketingCustomerDetails.jsx"
+import MarketingAddNewCustomer from "./views/marketing/customers/MarketingAddNewCustomer.jsx"
 
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
@@ -130,6 +132,7 @@ var routes = [
   { path: "/market/view-details/:ViewId", onSideBar: false, name: "Target", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TargetViewDetails, layout: "/admin" },    
   { path: "/TSell/view-details/:ViewId", onSideBar: false, name: "Target", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TargetSellViewDetails, layout: "/admin" },    
   { path: "/TAddCust/view-details/:ViewId", onSideBar: false, name: "Target", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TargetAddCustomerViewDetails, layout: "/admin" },    
+  { path: "/THistory/view-details/:ViewId", onSideBar: false, name: "Target", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TargetHistoryViewDetails, layout: "/admin" },    
 
 
   // -------------------common components starts -----------------------
@@ -200,6 +203,7 @@ var routes = [
 { path: "/mshops/add-new-shop", name: "Add New Shop", icon: "nc-icon nc-shop", component: MStoreAddNewShop, accessTo: ["admin", "market"], layout: "/admin" },
 
 { path: "/mcustomer/cust-details", onSideBar: true, name: "M Customer", icon: "nc-icon nc-shop", accessTo: ["admin"], component: marketingCustomerDetails, layout: "/admin" },
+{ path: "/Addcustomer/add-customer", onSideBar: true, name: "M Customer", icon: "nc-icon nc-shop", accessTo: ["admin"], component: MarketingAddNewCustomer, layout: "/admin" },
   
 
 
