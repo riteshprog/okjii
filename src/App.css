@@ -184,7 +184,7 @@ body {
 
 nav#parallelogram {
   background-color: #fdfffe !important;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.18) !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.18) !important;
 }
 
 .navbar.navbar-dark .navbar-toggler-icon {
@@ -257,21 +257,29 @@ a {
   white-space: nowrap;
 }
 
-
+.home-page-order {
+}
 .okjii-mainbody {
-  background-image: url(../src/img/home/Home-background.png);
-
-  top: 50px;
+  background-image: url(../src/img/home/Background-images.png);
+  top: 0;
   left: 0;
   right: 0;
-
+  margin-top: 2%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   position: relative;
 }
-
+.okkjii-customer-mt {
+  margin-top: -12%;
+}
+.navbar .navbar-nav .nav-link {
+    text-transform: initial !important;
+    font-size: 0.7142em;
+    padding: 0.5rem 0.7rem;
+    line-height: 1.625rem;
+    margin-right: 3px;
+}
 .search-page-faq .search-form {
   margin-left: 15px !important;
   margin-right: 15px !important;
@@ -370,6 +378,9 @@ section.okkji-faq.faq-mobile,
 .offer-mobile {
   display: none;
 }
+.mobile-number-mt {
+  margin-top: -25%;
+}
 
 .okjii-mainbody-mobile {
   background-image: linear-gradient(
@@ -377,7 +388,7 @@ section.okkji-faq.faq-mobile,
       rgb(255, 255, 255, 0.3),
       rgb(37, 157, 112, 0.1)
     ),
-    url(../src/img/home/BackgroundMobile.png);
+    url(../src/img/home/Background-images.png);
 
   top: 50px !important;
   left: 0;
@@ -402,7 +413,72 @@ section.okkji-faq.faq-mobile,
   width: 80% !important;
   margin-top: 2rem;
 }
+.image-position .RetailerHome {
+  width: 60% !important;
+  margin-top: -1rem;
+}
+.image-position .CustomerImage {
+  width: 10% !important;
+}
 
+.home-order-details{
+    left: 35%;
+    top: -27%;
+    position: inherit;
+  }
+  .total-order-amount{
+    text-align: center;
+    background: #fff;
+    padding: 10px 0px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px #DCDCDC;
+}
+.home-order-details p {
+    padding-bottom: 8px !important;
+    margin-bottom: 0px;
+}
+.order-color {
+  color: #EC4707 !important;
+  font-size: 1.1rem !important;
+    font-weight: 600;
+}
+.order-amount-cl {
+  color: #37A67E !important;
+  font-size: 1.1rem !important;
+    font-weight: 600;
+}
+.left-order-border {
+  border-left: 1px solid #9A9A9A;
+}
+.recent-order-list {
+    position: inherit;
+    top: 40px;
+
+}
+.order-list-items {
+    position: inherit;
+    top: 10px;
+    background: #fff;
+    padding: 8px 0px 8px 10px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px #DCDCDC;
+}
+.order-mt1 {
+  margin-top: 5%;
+}
+.order-list-items p{
+    margin-top: 9px;
+    font-size: 14px !important;
+    margin-left: 15px;
+}
+.order-list-items p span {
+  color: #0F955F !important;
+  font-weight: 600;
+}
+.order-list-items .pright {
+  text-align: right;
+  margin-left: 40px;
+}
 .image-position h1 {
   margin-top: 3rem;
 }
@@ -412,9 +488,11 @@ section.okkji-faq.faq-mobile,
 }
 
 .okjii-explore {
-  margin-left: 0 50px !important;
+  margin-left: 10% !important;
 }
-
+/*.okkjii-mt {
+  margin-top: 47%
+}*/
 .okjii-explore h1 {
   font-weight: 600;
   color: #5e5e5e !important;
@@ -431,8 +509,8 @@ section.okkji-faq.faq-mobile,
 }
 
 .okjii-explore p {
-  color: #5e5e5e !important;
-  font-size: 1rem !important;
+  color: #5e5e5e;
+  font-size: 1rem;
   letter-spacing: 0.5px;
   padding-bottom: 1rem;
 }
@@ -555,6 +633,7 @@ p.install-now {
   font-size: 1rem !important;
   padding-bottom: 0.5rem !important;
   letter-spacing: 0.5px;
+  text-align: justify;
 }
 
 ul.list-unstyle {
@@ -599,6 +678,7 @@ figure.daily-figure-img {
   font-size: 1rem !important;
   padding-bottom: 0.5rem !important;
   letter-spacing: 0.5px;
+  text-align: justify;
 }
 .home-delivery-figure-img {
   width: 90% !important;
@@ -614,6 +694,7 @@ figure.daily-figure-img {
   background-color: #3ba778 !important;
   padding-top: 1rem !important;
   padding-bottom: 1rem !important;
+  text-align: justify;
 }
 
 section.okjii-khatabook {
@@ -760,6 +841,7 @@ img.rounded-circle.testimoni-img {
 .home-testimonial blockquote p {
   font-size: 1rem !important;
   letter-spacing: 0.5px;
+  text-align: justify !important;
 }
 
 .turested-slide {
@@ -797,7 +879,7 @@ footer.page-footer a {
 }
 
 .container-fluid.footer-margin {
-  margin: 1.8rem;
+      margin: 1.8rem 0rem 1.8rem 0rem;
 }
 .d-flex.align-content-stretch.flex-wrap.example-parent img {
   width: 90% !important;
@@ -1017,7 +1099,18 @@ ol.carousel-indicators li {
 .okjii-contact img {
   padding-bottom: 0.4rem;
 }
-
+.appIcon-row {
+    display: block;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    text-align: center;
+}
+.appIcon {
+  margin: 10px;
+  width: 50px; 
+  height: 50px;
+}
 .google-map-right {
   float: right;
   transform: translate(37%, -107%);
@@ -1061,7 +1154,7 @@ ol.carousel-indicators li {
 .okjii-create-store p {
   color: #5e5e5e !important;
   font-size: 1rem !important;
-
+  text-align: justify;
   letter-spacing: 0.5px;
 }
 
@@ -1115,6 +1208,7 @@ ol.carousel-indicators li {
   color: #5e5e5e !important;
   font-size: 1rem !important;
   letter-spacing: 0.5;
+  text-align: justify;
 }
 
 .okjii-contact button {
@@ -1141,6 +1235,23 @@ ol.carousel-indicators li {
   flex-direction: column;
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
+}
+.okjii-explore-left {
+  margin-left: 5%;
+  margin-top: 2%;
+}
+.home-video {
+  margin-left: 25%
+}
+.home-video video{
+  width: 75%;
+  margin-top: 18%;
+}
+.getapplink-ml {
+  margin-left: 15%;
+}
+.okkjii-home-bg {
+  background: #EAECEA;
 }
 
 .okjii-whyweshop section h1 {
@@ -1176,10 +1287,11 @@ ol.carousel-indicators li {
 }
 
 .okjii-fastcon h1 {
-  font-size: 17pt !important;
+  font-size: 16pt !important;
   font-weight: 600;
   color: #fff;
   padding-top: 1.5rem;
+  line-height: 1.8rem;
 }
 
 .okjii-fastcon h2 {
@@ -1792,6 +1904,7 @@ figure.figure-whayweshop img {
   font-size: 1rem;
   color: #5e5e5e !important;
   padding-top: 0.2rem;
+  text-align: justify;
 }
 
 .okjii-about-para {
@@ -1866,6 +1979,7 @@ figure.figure-whayweshop img {
 .our-story p {
   font-size: 1rem;
   color: #5e5e5e;
+  text-align: justify;
 }
 
 .our-story img {
@@ -1928,6 +2042,7 @@ figure.figure-whayweshop img {
 .okkji-ourpractice p {
   font-size: 1rem;
   color: #5e5e5e;
+  text-align: justify;
 }
 
 .okkji-ourpractice .ourpractice {
@@ -1945,8 +2060,8 @@ figure.figure-whayweshop img {
 }
 
 .getapp-link .input-group {
-  background-color: #e9ecef !important;
-  border-radius: 7px !important;
+  background-color: #ffffff !important;
+  border-radius: 5px !important;
 }
 
 .getapp-link .form-control {
@@ -1968,7 +2083,7 @@ input.form-control::placeholder {
 
 .getapp-link .input-group-lg > .form-control:not(textarea) {
   height: calc(1em + 3rem + 2px) !important;
-  background-color: #e9ecef;
+  background-color: #ffffff;
 }
 
 .input-group-lg > .form-control {
@@ -4955,7 +5070,12 @@ padding: .5rem !important;
 /* Target Page End */
 
 
+@media only screen and (max-width: 1258px) {
+  .getapplink-ml {
+    margin-left: 10%;
+}
 
+}
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
   .target-view-card th img, .target-view-card td img {
@@ -5029,7 +5149,7 @@ padding: .5rem !important;
 
   nav#parallelogram {
     background-color: #fdfffe !important;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.18) !important;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.18) !important;
   }
 
   .navbar-brand {
@@ -5057,8 +5177,8 @@ padding: .5rem !important;
   .okjii-home .getapp-link {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 
   .about-getapplink {
@@ -5150,7 +5270,7 @@ padding: .5rem !important;
   }
 
   .container-fluid.footer-margin {
-    margin: 0.5rem;
+    margin: 0.5rem 0 0.5rem 0;
   }
 
   .promoting-card.pt-5 {
@@ -6016,6 +6136,51 @@ img.Add {
   
   } */
 /*Admin Panal Css Start*/ 
+.okkjii-customer-mt {
+  margin-top: 0%;
+}
+.okjii-fastcon h1 {
+    font-size: 10pt !important;
+    font-weight: 600;
+    color: #fff;
+    padding-top: 1.5rem;
+    line-height: 1.8rem;
+}
+.okjii-fastcon {
+    position: absolute;
+    top: 55px;
+    left: 30px;
+}
+.RetailerHome {
+  width: 50% !important;
+  margin-top: 0rem;
+}
+.home-order-details {
+    left: 20%;
+    top: -280px;
+    position: relative !important;
+}
+.order-list-items {
+    position: inherit;
+    top: 10px;
+    background: #fff;
+    padding: 5px 0px 5px 10px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px #DCDCDC;
+}
+.order-list-items p {
+    margin-top: 16px;
+    font-size: 14px !important;
+    margin-left: 20px;
+}
+.order-list-items .pright {
+    text-align: center;
+    margin-left: 80px;
+}
+.recent-order-list {
+    position: inherit;
+    top: 30px;
+}
 li.nav-btn.nav-item {
   display: flex;
   flex-direction: column;
@@ -6083,6 +6248,7 @@ img.img-fluid.Logowhite-bg {
   }
   .okjii-home .main-body-mobile {
     display: block !important;
+    margin-top: 24px;
   }
 
   .retailer-figure-img2,
@@ -6140,15 +6306,83 @@ img.img-fluid.Logowhite-bg {
 }
 
 }
+@media screen and (max-width: 425px) and (min-width: 320px) {
+  .home-order-details {
+    left: 15px;
+    top: -225px;
+    position: relative !important;
+}
+.okjii-fast-img4, .faqimg01, .okjii-fast-ourpractice {
+    width: 106% !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-top: 56px !important;
+    z-index: -1;
+    height: 310px;
+}
+.okkjii-customer-mt {
+  margin-top: 0%;
+}
+.okjii-fastcon h1 {
+    font-size: 8pt !important;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 0rem;
+    padding-bottom: 0 !important;
+    line-height: 1.2rem;
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    text-align: center;
+}
+.order-list-items .pright {
+    text-align: right;
+    margin-left: 65px;
+    margin-top: -5%;
+}
+.okjii-explore-left {
+    margin-left: 5%;
+    margin-top: 0%;
+}
+.okjii-mainbody-mobile {
+    top: 40px !important;
+}
+.navbar {
+    padding: 15px !important;
+}
+  }
+@media only screen and (min-width: 1024px) {
+  .navbar-nav > li {
+    list-style-type: none;
+    padding-right: 1.5rem;
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 0.85rem !important;
+    font-weight: 300px !important;
+    flex-wrap: nowrap;
+    word-break: normal;
+    white-space: nowrap;
+}
+.navbar .navbar-nav .nav-item:first-child {
+    margin-top: 0px; 
+}
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (min-width: 800px) {
   /* .figure-img2 {
   padding-right: 0 !important;
   padding-left: 3% !important;
 } */
 /* Dashboard page start */
-
+.navbar .navbar-nav .nav-item:first-child {
+    margin-top: 0px; 
+}
 .dashbord-card1, .dashbord-card2, .dashbord-card3, .dashbord-card4 {
   height:160px;
 }
@@ -6159,7 +6393,18 @@ img.img-fluid.Logowhite-bg {
 }
 
 
-
+.navbar-nav > li {
+    list-style-type: none;
+    padding-right: 1.0rem;
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 0.85rem !important;
+    font-weight: 300px !important;
+    flex-wrap: nowrap;
+    word-break: normal;
+    white-space: nowrap;
+}
 
   .retailer-figure-img2,
   .okjii-fast-img4,
@@ -6212,6 +6457,23 @@ img.img-fluid.Logowhite-bg {
   width: 32%;
 }
 
+}
+@media only screen and (min-width: 768px) {
+.navbar-nav > li {
+    list-style-type: none;
+    padding-right: 0rem;
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 0.85rem !important;
+    font-weight: 300px !important;
+    flex-wrap: nowrap;
+    word-break: normal;
+    white-space: nowrap;
+}
+.navbar .navbar-nav .nav-item:first-child {
+    margin-top: 0px !important; 
+}
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
