@@ -2,6 +2,9 @@ body{
   overflow-x: hidden;
 }
 
+.t-text{ 
+  color: #4b9e70 !important;
+}
 .width-wfa{
   width: -webkit-fill-available;
 }
@@ -28,6 +31,9 @@ body{
 
 .cp{
   cursor: pointer;
+}
+.op8:hover  {
+  opacity: .8;
 }
 
 .desc{
@@ -82,7 +88,9 @@ body{
 .jcfe{
   justify-content: flex-end;
 }
-
+.jcsa{
+  justify-content: space-around;
+}
 .aic{
   align-items: center;
 }
@@ -114,4 +122,21 @@ body{
 /* dashboard common class */
 .dashboard-card{
   max-height: 31.5rem;
+}
+
+.p-10{
+  padding: 10px;
+}
+
+.m-card{
+    border-radius: 5px;
+    box-shadow: 2px 2px 9px 2px #CFCFCF;
+    background-color: #FFFFFF;
+    color: #252422;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    position: relative;
+    border: 2px solid #f9f9f9;
+    transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+    max-width: 550px;
 }

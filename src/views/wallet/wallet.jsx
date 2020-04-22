@@ -31,7 +31,7 @@ class Wallet extends Component {
                   <i class="fa fa-search"></i>
                 </p>
                 <p>
-                  <span class="filter-txt"> Filter</span>{" "}
+                  <span class="filter-txt"> Filter</span>
                   <img src={filterIcon} />
                 </p>
               </div>

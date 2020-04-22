@@ -46,6 +46,11 @@ class Notification extends Component {
     })
     .catch((err) => {
       console.log(`catch err`, err);
+      if(err.response.status == 401){
+        message.info('Session Expired!, Please Login Again.')
+      }else {
+				message.error(`Something went wrong`);
+			}
     });
   }
 

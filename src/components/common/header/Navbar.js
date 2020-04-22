@@ -23,7 +23,7 @@ class NavbarPage extends Component {
 render() {
   return (
     <div className=" bg-image">
-      <MDBNavbar  className="nav-bar fixed-top" style={{padding: '16px'}}  id="parallelogram" dark expand="md" >
+      <MDBNavbar  className="nav-bar fixed-top" style={{padding: '10px'}}  id="parallelogram" dark expand="md" >
         <MDBNavbarBrand href="/">
         <img src={logo} alt="store"   id="logo" height="35"/>
        
@@ -34,22 +34,22 @@ render() {
 
           <MDBNavbarNav right>
           <MDBNavItem  onClick={ this.onClick }>
-              <MDBNavLink className="pre-registration" to="/registration">PRE-REGISTRATION</MDBNavLink>
+              <MDBNavLink className="pre-registration" to="/registration">Pre-registration</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick } active>
-              <MDBNavLink  to="/">HOME</MDBNavLink>
+              <MDBNavLink  to="/">Home</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick }>
-              <MDBNavLink  to="/okkji-retailer">OKKJI FOR RETAILER</MDBNavLink>
+              <MDBNavLink  to="/okkji-retailer">OkkJi For Retailer</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick }>
-              <MDBNavLink to="/okkji-fast">OKKJI FAST</MDBNavLink>
+              <MDBNavLink to="/okkji-fast">OkkJi Fast</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick }>
-              <MDBNavLink to="/about">ABOUT US</MDBNavLink>
+              <MDBNavLink to="/about">About Us</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick }>
-              <MDBNavLink  to="/offer">OFFER <sup className="badge badge-warning badge-text"><span >New</span></sup></MDBNavLink>
+              <MDBNavLink  to="/offer">Offer <sup className="badge badge-warning badge-text"><span >New</span></sup></MDBNavLink>
             </MDBNavItem>
 
             

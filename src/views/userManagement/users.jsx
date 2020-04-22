@@ -96,8 +96,8 @@ class User extends React.Component {
       console.log(`catch`, err);
     })
   }
-  getAllUsers = () => {
-    Axios.get(process.env.REACT_APP_API_URL + '/user')
+  getAllUsers = (query = '') => {
+    Axios.get(process.env.REACT_APP_API_URL + '/user?' + query)
     .then(({data})=>{
       if(data.status){
         this.setState({allUsers: data.allUsers})
@@ -341,7 +341,7 @@ class User extends React.Component {
                 </label>
                 <Select placeholder='Select User Type' size="large" onSelect={(e)=>this.handleOnSelect(e, 'userType')} showSearch style={{ width: '100%' }} >
                   <Option value="user types" disabled>User Types</Option>
-                    {this.state.userTypes.map(type=><Option value={type.name}>{type.name}</Option>)}
+                    {this.state.userTypes.map(type=> (type.key != 'shopKeeper')?<Option value={type.name}>{type.name}</Option>: (null))}
                 </Select>
               </FormGroup>
             </Col>

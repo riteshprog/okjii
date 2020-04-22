@@ -49,10 +49,14 @@ export default class AddProductToShop extends React.Component {
       },
       shopProductData: {},
       storeTypeCategoriesVisited: [],
-      storeTypeSubCategoriesVisited: []
+      storeTypeSubCategoriesVisited: [],
+      currentVisitedCount: 0
     }
   }
   componentDidMount(){
+    let visitedShopData = this.state.shopProductData;
+    let visitedSubCatArr = Object.keys(visitedShopData);
+    console.log(`shopProductData`, visitedShopData)
     Axios.get(process.env.REACT_APP_API_URL + '/shop/' + this.props.match.params.shopId)
     .then(({data})=>{
       if(data.status){
@@ -81,7 +85,7 @@ export default class AddProductToShop extends React.Component {
   handleAddNewShop = (e, type) => {
     if(type == 'addNewShop'){
       window.location.pathname= 'admin/shops/add-new';
-      // this.toggleAddNewShopModal();
+      this.toggleAddNewShopModal();
     }
   }
   

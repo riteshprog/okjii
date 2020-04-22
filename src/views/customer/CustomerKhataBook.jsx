@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../views/wallet/wallet.css'
 
 export default class CustomerKhataBook extends React.Component {
 	render(){

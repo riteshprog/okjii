@@ -65,8 +65,11 @@ class Dashboard extends React.Component {
       <>
         <div className="content okjii-dashboard">
           <Row>
-            <Col md="12"><p className="border-bottom dashbord-text">Dashboard</p></Col>
+            <Col md="12">
+              <p className="border-bottom dashbord-text">Dashboard</p>
+            </Col>
           </Row>
+        {/*-------------------Top Cards Starts-----------  */}
           <Row>
             <Col lg="3" md="6" sm="6">
               <Card className="card-stats dashbord-card1">
@@ -173,30 +176,10 @@ class Dashboard extends React.Component {
               </Card>
             </Col>
           </Row>
-          <Row>
-            <Col md="12">
-              <Card>
-                <CardHeader>
-                  <CardTitle tag="h5">Users Behavior</CardTitle>
-                  <p className="card-category">24 Hours performance</p>
-                </CardHeader>
-                <CardBody>
-                  <Line
-                    data={dashboard24HoursPerformanceChart.data}
-                    options={dashboard24HoursPerformanceChart.options}
-                    width={400}
-                    height={100}
-                  />
-                </CardBody>
-                <CardFooter>
-                  <hr />
-                  <div className="stats">
-                    <i className="fa fa-history" /> Updated 3 minutes ago
-                  </div>
-                </CardFooter>
-              </Card>
-            </Col>
-          </Row>
+          {/*-------------------Top Cards Ends-----------  */}
+         
+          {/*-------------------Pie Starts-----------  */}
+         
           <Row>
             <Col md="4">
               <Card>
@@ -251,7 +234,35 @@ class Dashboard extends React.Component {
               </Card>
             </Col>
           </Row>
+          {/*-------------------Pie Ends-----------  */}
+          
+          {/*-------------------bar starts-----------  */}
 
+          {/*-------------------bar Ends-----------  */}
+
+
+        
+          {/* ---------------other Cards------------- */}
+          <div className='df jcsa'>
+            <div className='m-card df jcsa aic p-10 f1'>
+              <i className="fa fa-money fa-3x" />
+              <div>
+                <p>Today's Online Payment</p>
+                <p>Rs. 4710.00</p>
+              </div>
+              <i className="far fa-calendar-alt fa-3x" />
+            </div>
+            <div className='m-card df jcsa aic p-10 f1'>
+              <i className="fa fa-money fa-3x" />
+              <div>
+                <p>Today's COD Payment</p>
+                <p>Rs. 4710.00</p>
+              </div>
+              <i className="far fa-calendar-alt fa-3x" />
+            </div>
+          </div>
+
+          {/* ------------------current listing */}
           <Row className="card-list-body">
             <Col md="4">
               <Card>
@@ -291,7 +302,6 @@ class Dashboard extends React.Component {
             <Col md="8">
             </Col>
           </Row>
-
 
         </div>
       </>
