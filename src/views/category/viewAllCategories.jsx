@@ -4,6 +4,7 @@ import moment from "moment-timezone";
 import { Radio, message, Table, Select, Tag  } from "antd";
 import { Row, Col, Button, Modal, ModalBody, ModalFooter, ModalHeader, FormGroup, Form, Input } from "reactstrap";
 import CookieHandler from '../../utils/cookieHandler';
+import _ from 'lodash';
 
 import './setting.css';
 
@@ -370,10 +371,12 @@ export default class Categories extends React.Component {
     if(selectedCategoryId){
       let {currentCategory} = this.state;
       this.getSingleCategoryById(selectedCategoryId).then( singleCategory=>{
-        this.setState({ currentCategory: singleCategory });
+        this.setState({ currentCategory: singleCategory, editCategoryModalVisibility: !this.state.editCategoryModalVisibility, errorMessage: `` });
       });
+    }else {
+      this.setState({ editCategoryModalVisibility: !this.state.editCategoryModalVisibility, errorMessage: `` });
     }
-    this.setState({ editCategoryModalVisibility: !this.state.editCategoryModalVisibility, errorMessage: `` });
+    
   }
   
   toggleAddNewSubCategory = () => this.setState({ addNewSubCategoryModalVisibility: !this.state.addNewSubCategoryModalVisibility, errorMessage: `` });
@@ -397,6 +400,7 @@ export default class Categories extends React.Component {
   };
 
   handleOnSelect = (e, type, key, from) => {
+    console.log(e, type, key, from);
     if(type === 'category'){
       if(from == 'add'){
         let { newCategory } = this.state;
@@ -408,12 +412,24 @@ export default class Categories extends React.Component {
         this.setState({ newCategory });
       }else if(from == 'edit'){
         console.log(e, type, key, from)
-        // let { currentCategory } = this.state;
+        let { currentCategory } = this.state;
+
+        if(key == 'subCategories') {
+          let subCategory = this.state.allSubCategories.filter(sub=>sub._id == e);
+          e = subCategory[0];  
+        }else if(key == 'regionId'){
+          let region = this.state.allRegions.filter(region=>region._id == e);
+          e = region[0];
+        }
         // let index = currentCategory[key].indexOf(e);
-        
-        // if(index == -1) currentCategory[key].push(e);
-        // else currentCategory[key].splice(index, 1);
-        // this.setState({ currentCategory });
+        let index = _.findIndex(currentCategory[key], function(o){
+         return o.name == e.name
+        });
+        console.log(`index`, index)
+        console.log(currentCategory[key])
+        if(index == -1) currentCategory[key].push(e);
+        else currentCategory[key].splice(index, 1);
+        this.setState({ currentCategory });
 
       }
 
@@ -453,10 +469,15 @@ export default class Categories extends React.Component {
   
   handleOnAddNewCategorySave = () => {
     let { newCategory, errorMessage } = this.state;
+    let token = JSON.parse(CookieHandler.readCookie('token'));
     if (!newCategory.name)
       this.setState({ errorMessage: "Invalid Category Name" });
     else if (!errorMessage) {
-      Axios.post(process.env.REACT_APP_API_URL + "/category", newCategory)
+      Axios.post(process.env.REACT_APP_API_URL + "/category", newCategory, {
+        headers: {
+          token
+        }
+      })
         .then(({ data }) => {
           if (!data.status) {
             this.setState({ errorMessage: data.errorMessage });
@@ -466,6 +487,7 @@ export default class Categories extends React.Component {
               errorMessage: ``,
               addNewCategoryModalVisibility: false,
             });
+            this.getAllCategories();
           }
         })
         .catch((er) => {
@@ -495,6 +517,34 @@ export default class Categories extends React.Component {
           this.setState({ errorMessage: `Something went wrong` });
         });
     }
+  }
+
+  handleCategoryUpdate = () => {
+    let {currentCategory} = this.state, updateObj = { name: currentCategory.name };
+    updateObj.regionId = currentCategory.regionId.map(region=>region._id);
+    updateObj.subCategories = currentCategory.subCategories.map(sub=>sub._id);
+    
+    let url = process.env.REACT_APP_API_URL + '/category/' + currentCategory._id;
+    let token = JSON.parse(CookieHandler.readCookie('token'));
+
+    this.updateCategory(updateObj, url, token);
+  }
+  updateCategory = (updateObj, url, token)=> {
+    Axios.patch(url, updateObj, {
+      headers: {
+        token
+      }
+    }).then(({data})=>{
+      if(data.status){
+        message.success(data.message);
+        this.toggleEditCategory();
+        this.getAllCategories();
+      }else{
+        message.info(data.message);
+      }
+    }).catch(ex=>{
+      console.log(ex);
+    })
   }
 
   render() {
@@ -563,8 +613,8 @@ export default class Categories extends React.Component {
     }
   }
   renderEditCategoryModal = () => (
-    <Modal isOpen={this.state.editCategoryModalVisibility} toggle={this.toggleEditCategory} >
-      <ModalHeader toggle={this.toggleEditCategory}> Edit Category </ModalHeader>
+    <Modal isOpen={this.state.editCategoryModalVisibility} toggle={()=>this.toggleEditCategory(null)} >
+      <ModalHeader toggle={()=>this.toggleEditCategory(null)}> Edit Category </ModalHeader>
       <ModalBody>
         <Form>
           <Row className="df jcc">
@@ -579,6 +629,8 @@ export default class Categories extends React.Component {
                 <label htmlFor="userName">Select Sub Categories</label>
                 <Select mode="multiple" defaultValue={this.state.currentCategory.subCategories.map(sCat=>sCat._id)} style={{ width: "100%" }} placeholder="Select Sub Category"
                  onSelect={(value)=>this.handleOnSelect(value, 'category', 'subCategories', 'edit')}
+                 onDeselect={(value)=>this.handleOnSelect(value, 'category', 'subCategories', 'edit')}
+                 
                 >
                   {this.state.allSubCategories.map(sub=><Option key={sub._id} value={sub._id}>{sub.name}</Option>)}}
                 </Select>
@@ -587,8 +639,11 @@ export default class Categories extends React.Component {
             <Col className="pl-1" md="10">
               <FormGroup>
                 <label htmlFor="userName">Select Regions</label>
-                <Select mode="tags" value={this.state.currentCategory.regionId.map(region=>region._id)} tokenSeparators={[',']} style={{ width: "100%" }} placeholder="Select Regions" onDeselect={(e)=>this.handleOnSelect(e, 'category', 'regionId', 'edit')} onSelect={(e)=>this.handleOnSelect(e, 'category', 'regionId', 'edit')}>
-                  {this.state.allRegions.map(region=><Option key={region._id}>{region.name}</Option>)}}
+                <Select mode="multiple" defaultValue={this.state.currentCategory.regionId.map(region=>region._id)} style={{ width: "100%" }} placeholder="Select Region for Category"
+                 onSelect={(value)=>this.handleOnSelect(value, 'category', 'regionId', 'edit')}
+                 onDeselect={(value)=>this.handleOnSelect(value, 'category', 'regionId', 'edit')}
+                >
+                  {this.state.allRegions.map(region=><Option key={region._id} value={region._id}>{region.name}</Option>)}}
                 </Select>
               </FormGroup>
             </Col>
@@ -599,8 +654,8 @@ export default class Categories extends React.Component {
         {this.state.errorMessage ? (
           <span className="mr-3 text-danger">{this.state.errorMessage}</span>
         ) : null}
-        <Button id="save-btn" color="primary" onClick={this.toggleEditCategory} > Add </Button>
-        <Button color="secondary" onClick={this.toggleEditCategory}> Cancel </Button>
+        <Button id="save-btn" color="primary" onClick={this.handleCategoryUpdate} > Update </Button>
+        <Button color="secondary" onClick={()=>this.toggleEditCategory(null)}> Cancel </Button>
       </ModalFooter>
     </Modal>
   );
