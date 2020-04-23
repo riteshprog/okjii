@@ -5591,7 +5591,7 @@ padding: .5rem !important;
     padding-bottom: 0.5rem !important;
   }
   .offerheading h2 {
-    font-size: 1rem !important;
+    font-size: 14px !important;
     font-weight: 500;
     color: #5e5e5e;
     padding-left: 1rem !important;
@@ -6336,12 +6336,12 @@ img.img-fluid.Logowhite-bg {
 }
 
 .okjii-fast-img4, .faqimg01, .okjii-fast-ourpractice {
-    width: 106% !important;
+    width: 100% !important;
     padding-right: 0 !important;
     padding-left: 0 !important;
     margin-top: 56px !important;
     z-index: -1;
-    height: 310px;
+    height: auto;
 }
 .okkjii-customer-mt {
   margin-top: 0%;
