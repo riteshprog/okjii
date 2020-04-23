@@ -27,7 +27,6 @@ render() {
         <MDBNavbarBrand href="/">
         <img src={logo} alt="store"   id="logo" height="35"/>
        
-
         </MDBNavbarBrand>
               <MDBNavbarToggler onClick={ this.onClick } />
               <MDBCollapse id="navbarCollapse3" isOpen = { this.state.collapse } navbar>
@@ -36,7 +35,7 @@ render() {
           <MDBNavItem  onClick={ this.onClick }>
               <MDBNavLink className="pre-registration" to="/registration">Pre-registration</MDBNavLink>
             </MDBNavItem>
-            <MDBNavItem  onClick={ this.onClick } active>
+            <MDBNavItem  onClick={ this.onClick }>
               <MDBNavLink  to="/">Home</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem  onClick={ this.onClick }>

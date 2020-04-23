@@ -387,8 +387,8 @@ section.okkji-faq.faq-mobile,
 .okjii-mainbody-mobile {
   background-image: linear-gradient(
       to right,
-      rgb(255, 255, 255, 0.3),
-      rgb(37, 157, 112, 0.1)
+      rgb(234, 236, 234, 0.6),
+      rgb(234, 236, 234, 0.6)
     ),
     url(../src/img/home/Background-images.png);
 
@@ -2689,7 +2689,7 @@ input[type="radio"] + label:before {
   line-height: 1;
 }
 .form-table {
-  padding-bottom: 2rem;
+  padding-bottom: 0rem;
 }
 .reg-howtoapply {
   background-color: #f7f7f7;
@@ -2703,7 +2703,9 @@ input[type="radio"] + label:before {
   margin-top: 0rem;
   margin-bottom: 0rem;
 }
-
+.active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    font-weight: 600 !important;
+}
 .bolded-list-indicator li {
   font-size: 1.3rem;
   color: #5e5e5e;
@@ -5354,7 +5356,7 @@ padding: .5rem !important;
     padding-top: 2rem !important;
     color: #2a2aff !important;
     font-weight: 400 !important;
-    font-size: 1.6rem !important;
+    font-size: 1.3rem !important;
     padding-bottom: 1rem;
   }
 
@@ -5716,7 +5718,7 @@ padding: .5rem !important;
   }
 
   h1.okjii-reg-h1 {
-    font-size: 1.2rem !important;
+    font-size: 1.1rem !important;
     font-weight: 600 !important;
   }
 
@@ -6384,7 +6386,7 @@ img.img-fluid.Logowhite-bg {
     padding: 0px 0 0 0;
 }
 .img-fluid, .img-thumbnail {
-    max-width: 85%;
+    max-width: 100%;
     height: auto;
 }
 .okjii-explore h2 {

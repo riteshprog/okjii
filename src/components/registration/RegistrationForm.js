@@ -97,7 +97,7 @@ export default class RegistrationForm extends Component {
   handleOtpVerify = e => {
     e.preventDefault();
     const { otp } = this.state;
-    if (!otp || (otp && otp.length != 6)) message.error(`Invalid Otp`);
+    if (!otp || (otp && otp.length != 6)) message.error(`Please enter the correct OTP`);
     else {
       const data = {
         mobile: this.state.preRegistraionData.mobileNumber,
@@ -228,6 +228,9 @@ export default class RegistrationForm extends Component {
                   id="defaultFormCardCity"
                   className="form-control"
                   placeholder="Pin Code"
+                  maxlength="6"
+                  min="0" 
+                  max="6"
                 />
                 {this.state.showPincodeMark ? (
                   <div className="p-2">
@@ -275,7 +278,7 @@ export default class RegistrationForm extends Component {
                 {this.state.offer.howToApply.map((step, index) => (
                   <div className="df aic mtb-10">
                     <MDBIcon className="green-text" icon="certificate" />
-                    <li className="lsn ml-2">{step} {index==0?<span className='text-danger'> (Comming Soon...) </span>:(null)}</li>
+                    <li className="lsn ml-2">{step} {index==0?<span className='text-danger'> (Coming Soon...) </span>:(null)}</li>
                   </div>
                 ))}
               </span>
