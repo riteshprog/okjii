@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {MDBIcon} from 'mdbreact'
+import {MDBIcon} from 'mdbreact';
+import { Link } from 'react-router-dom';
 import rupeesSymbol from '../../assets/img/rupeesSymbol.png';
 import filterIcon from '../../assets/img/filterIcon.png';
 import { Col, Row, Button } from 'reactstrap';
@@ -151,7 +152,7 @@ class Order extends Component {
                   <td>{targetv.Item}</td>
                   <td>{targetv.Location}</td>
                   <td className={targetv.Status}>{targetv.Status}</td>
-                  <td><Button>{targetv.VDetails}</Button></td>
+                  <td className="no-break"><Button><Link to="Order/view-details">{targetv.VDetails}</Link></Button></td>
                 </tr>
               ))
   }

@@ -5251,14 +5251,126 @@ display: flex;
   text-transform: capitalize !important;
   padding: .5rem 1rem;
 }
+.order-row{
+  display: flex;
+  justify-content: space-between;
+  margin: .5rem 1rem;
+}
+
+.order-row p{
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5e5e5e;
+}
+
+.order-para{
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5e5e5e;
+  margin-left: 5.8rem;
+}
+.order-left-navbar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.order-left-navbar p{
+  margin-left: 1rem;
+}
+
+.order-right-navbar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.order-right-navbar p{
+  margin-bottom: 0;
+  text-align: right;
+  margin-right: 2rem;
+}
+
+.order-view-details .customer-table{
+  width: 80%;
+  margin: 0 auto;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.order-view-details .customer-table tr td{
+  border-top:none !important;
+}
 
 
-.main-panel > .content {
-  padding: 0px 0px !important;
-  margin-top: 85px !important;
+.order-view-details .btn{
+  background-color: #259D70;
+  text-transform: capitalize !important;
+}
+
+.order-view-details button.no-background.btn.btn-secondary {
+  background-color: #fff;
+  color: blue;
+  margin:0 0 0rem 3rem;
+  padding: 0;
 }
 
 /* Order Page End */
+
+
+/*  Total Sale Page Start */
+
+.total-sale-details{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.total-sale-details img{
+  padding-right: 0rem;
+  padding-top: .5rem;
+  width: 70%;
+}
+
+.total-sale-details p{
+  font-size: .8rem;
+  margin-bottom: 0;
+}
+
+.total-sale-details p:first-child{
+  font-weight: 600;
+}
+.total-sale-details p:last-child{
+  font-size: .7rem;
+}
+
+.total-sale-details .text-large{
+  font-size: 1.1rem !important;
+}
+
+.total-sale-para{
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0 !important;
+  color: #5e5e5e;
+}
+
+
+
+.total-sals-details .customer-table thead tr th{
+  border-bottom: 2px solid #dcdcdc;
+  padding: 1rem 1rem;
+}
+
+.total-sals-details .customer-table tbody tr td{
+  padding: 1rem 1rem;
+}
+
+.total-sals-details tr td img{
+  width:50%;
+}
+
+/* Total Sale Page End */
 
 
 @media only screen and (max-width: 1258px) {

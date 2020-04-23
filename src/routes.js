@@ -41,6 +41,7 @@ import DownloadWalletStatement from "./views/wallet/storeWalletDownloadStatement
 import Foodji from "./views/foodJi/foodji";
 import OkkjiSelect from "./views/okkjiSelect/okkjiSelect";
 import Order from "./views/order/order";
+import OrderViewDetails from "./views/order/OrderViewDetails.jsx";
 import Payment from "./views/payment/payment";
 import Setting from "./views/settings/setting";
 import StoreSettelment from "./views/storeSettelment/storeSettelment";
@@ -145,6 +146,10 @@ var routes = [
   { path: "/catalogue-settings", onSideBar: false, name: "Store Catalogue", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: Categories, layout: "/admin" },
   { path: "/user", onSideBar: true, name: "User", icon: "nc-icon nc-satisfied", component: Users, accessTo: ["admin"], layout: "/admin" },
   { path: "/Order", onSideBar: true, name: "Order", icon: "nc-icon nc-app", component: Order, layout: "/admin" },
+  { path: "/Order/view-details", onSideBar: false, name: "Order", icon: "nc-icon nc-app", component: OrderViewDetails, layout: "/admin" },
+
+
+  
   { path: "/TotalSale", onSideBar: true, name: "Total Sale", icon: "fa fa-pie-chart", component: TotalSale, layout: "/admin" },
   
   { path: "/customer-notification", name: "Customer Notification", onSideBar:false, icon: "far fa-bell", component: CustomerNotification, layout: "/admin", subMenuTitle: 'Customer Notification' },
