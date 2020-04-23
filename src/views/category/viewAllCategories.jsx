@@ -404,6 +404,7 @@ export default class Categories extends React.Component {
     if(type === 'category'){
       if(from == 'add'){
         let { newCategory } = this.state;
+        console.log(`cat`, e)
         let index = newCategory[key].indexOf(e);
         
         if(index == -1) newCategory[key].push(e);
