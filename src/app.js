@@ -37,7 +37,8 @@ class App extends React.Component {
     };
   }
   componentDidMount() {
-    if(window.location.hostname.split('.')[0] == 'admin' || window.location.hostname.split('.')[0] == 'devadmin' || window.location.hostname.split('.')[0] == 'marketing'){
+    let adminAllowSubDomains = ['admin', 'devadmin', 'marketing', 'qaadmin'];
+    if(adminAllowSubDomains.includes(window.location.hostname.split('.')[0])){
       this.setState({showAdmin: true});
     }
   }
