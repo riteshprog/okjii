@@ -16,7 +16,7 @@ export default class AllProducts extends React.Component {
 			editVisibilty: false,
 			createVisibilty: false,
 			currentProduct: {
-				regionId: []
+				region: []
 			},
 			allProducts: [],
 			allRegions: []
@@ -67,8 +67,8 @@ export default class AllProducts extends React.Component {
 		{
 			key: '_id',
 			title: 'Region',
-			dataIndex: 'regionId',
-			render: (regionId) => regionId.length?regionId.map(type=><Tag>{type.name}</Tag>):<span>N/A</span>
+			dataIndex: 'region',
+			render: (region) => region.length?region.map(type=><Tag color={type.isActive?'green':'red'} >{type.regionId.name}</Tag>):<span>N/A</span>
 		},
 		{
 			key: '_id',
@@ -143,6 +143,14 @@ export default class AllProducts extends React.Component {
 			if(productId){
 				let {currentProduct} = this.state;
 				this.getSingleCategoryById(productId).then( singleProduct=>{
+					let region = singleProduct.region.map(r=>{
+						return {
+							isActive: r.isActive,
+							regionId: r.regionId._id,
+							regionName: r.regionId.name
+						}
+					})
+					singleProduct.region = region;
 				  this.setState({ currentProduct: singleProduct, editVisibilty: !this.state.editVisibilty, errorMessage: `` });
 				});
 			}else {
@@ -154,21 +162,28 @@ export default class AllProducts extends React.Component {
 
 	handleOnSelect = (value, key) => {
 		let { currentProduct } = this.state;
-		console.log(currentProduct[key], value)
-		if(key == 'regionId'){
-			let region = this.state.allRegions.filter(region=>region._id == value);
+		if(key == 'region'){
+			console.log('value', value);
+			let region = this.state.allRegions.filter(region=>(region.name == value || region._id == value));
 			value = region[0];
-		}
-		
-		let index = _.findIndex(currentProduct[key], function(o){
-     return o.name == value.name
-    });
+			console.log('value', value, region);
+			let index = _.findIndex(currentProduct[key], function(o){
+			return o.regionId == value._id
+			});
+			console.log(index);
 
-		if(index == -1){
-			currentProduct[key].push(value);
-		}else {
-			currentProduct[key].splice(index, 1)
+			if(index == -1){
+				let singleRegionObj = {
+					regionId: value._id,
+					regionName: value.name,
+					isActive: true
+				}
+				currentProduct[key].push(singleRegionObj);
+			}else {
+				currentProduct[key].splice(index, 1)
+			}
 		}
+
 		this.setState({currentProduct})
 	}
 
@@ -219,6 +234,13 @@ export default class AllProducts extends React.Component {
 		}).catch(ex=>{
 			message.error(`Something went wrong`);
 		})
+	}
+	toggleProductRegionStatusClicked = (value, id) => {
+		console.log(value, id);
+		let {currentProduct} = this.state;
+		let index = _.findIndex(currentProduct.region, r=>r.regionId == id);
+		currentProduct.region[index].isActive = value;
+		this.setState({currentProduct})
 	}
 
 	render(){
@@ -279,15 +301,24 @@ export default class AllProducts extends React.Component {
             <Col className="pl-1" md="10">
               <FormGroup>
               <label htmlFor="userName">Select Regions</label>
-              <Select mode="multiple" defaultValue={this.state.currentProduct.regionId.map(region=>region._id)} style={{ width: "100%" }} placeholder="Select Region for Category"
-               onSelect={(value)=>this.handleOnSelect(value, 'regionId')}
-               onDeselect={(value)=>this.handleOnSelect(value, 'regionId')}
+              <Select mode="multiple" defaultValue={this.state.currentProduct.region.map(region=>region.regionId)} style={{ width: "100%" }} placeholder="Select Region for Category"
+               onSelect={(value)=>this.handleOnSelect(value, 'region')}
+               onDeselect={(value)=>this.handleOnSelect(value, 'region')}
               >
                 {this.state.allRegions.map(region=><Option key={region._id} value={region._id}>{region.name}</Option>)}}
               </Select>
               </FormGroup>
             </Col>
           </Row>
+          {this.state.currentProduct.region && this.state.currentProduct.region.length?(<Row className='df jcc'>
+            <Col className="pl-1" md="10">
+              <FormGroup>
+              <label htmlFor="userName">Manage Region Status</label>
+              	{this.state.currentProduct.region.map(r=>(<div className='df jcsb m-3'><span>{r.regionName}</span><Switch onChange={(e)=>this.toggleProductRegionStatusClicked(e, r.regionId)} checked={r.isActive}/></div>))}
+              </FormGroup>
+            </Col>
+          </Row>):(null)}
+
         </Form>
                
       </ModalBody>

@@ -60,7 +60,8 @@ export default class AddProductToShop extends React.Component {
     Axios.get(process.env.REACT_APP_API_URL + '/shop/' + this.props.match.params.shopId)
     .then(({data})=>{
       if(data.status){
-        console.log(data);
+        console.log(`data`, data);
+        data = data.data;
         let shopProductData = this.state.shopProductData;
         data.storeTypeCategories.map(cat=>{
           shopProductData[cat] = {}
@@ -100,7 +101,6 @@ export default class AddProductToShop extends React.Component {
     .then(({data})=>{
       if(data.status){
         this.setState({subCategoriesWithBrands: data.subCategoriesWithBrands})
-        console.log(`subCategoriesWithBrands`, data.subCategoriesWithBrands)
       }else{
         console.log('no subCategoriesWithBrands found')
       }

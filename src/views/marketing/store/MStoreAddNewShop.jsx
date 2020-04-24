@@ -57,6 +57,7 @@ class MStoreAddNewShop extends React.Component {
           },
           state: '',
           distirct: '',
+          city: '',
           country: '',
           address: '',
           landmark: '',
@@ -269,7 +270,7 @@ class MStoreAddNewShop extends React.Component {
     const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyBfvdlr4pZ5UbmIM9KzNSASmDy9pZsLQn0`;
     return Axios.get(url)
       .then(({ data }) => {
-        let address = "";
+        let address = "", city = '';
         if (data.results.length) {
           for (var i = 0; i < data.results[0].address_components.length; i++) {
             if (
@@ -291,6 +292,7 @@ class MStoreAddNewShop extends React.Component {
               ) > -1
             ) {
               address += data.results[0].address_components[i].long_name + ", ";
+              city = data.results[0].address_components[i].long_name;
             }
             if (
               data.results[0].address_components[i].types.indexOf(
@@ -300,8 +302,8 @@ class MStoreAddNewShop extends React.Component {
               address += data.results[0].address_components[i].long_name + ", ";
             }
           }
-          return address;
-        } else return address;
+          return {address, city};
+        } else return {address, city};
       })
       .catch(err => {
         console.log(err);
@@ -332,6 +334,7 @@ class MStoreAddNewShop extends React.Component {
         shopLocation: joi.any(),
         state: joi.any(),
         distirct: joi.any(),
+        city: joi.any(),
         country: joi.any(),
         address: joi.any(),
         landmark: joi.any(),
@@ -545,14 +548,15 @@ class MStoreAddNewShop extends React.Component {
       this.getAddressFromLatLong(
         preferenceLocation.lat,
         preferenceLocation.lng
-      ).then(result => {
-        shopData["basic"]["shopLocation"]["label"] = result || "No Name found";
-        let resultArr = result.split(", ").reverse();
-        if (resultArr.length) {
-          shopData["basic"]["country"] = resultArr[0];
-          shopData["basic"]["state"] = resultArr[1];
-          shopData["basic"]["distirct"] = resultArr[2];
-          shopData['basic']['address'] = result.split(', ').splice(0, result.split(', ').length-3).join(', ');
+      ).then(({address, city}) => {
+        shopData["basic"]["shopLocation"]["label"] = address || "No Name found";
+        let addressArr = address.split(", ").reverse();
+        if (addressArr.length) {
+          shopData["basic"]["country"] = addressArr[0];
+          shopData["basic"]["state"] = addressArr[1];
+          shopData["basic"]["distirct"] = addressArr[2];
+          shopData["basic"]["city"] = city;
+          shopData['basic']['address'] = address.split(', ').splice(0, address.split(', ').length-3).join(', ');
         }
         this.setState({ shopData });
       });
@@ -565,9 +569,9 @@ class MStoreAddNewShop extends React.Component {
       shopData["basic"]["country"] = preferenceLocationArrReverse[0];
       shopData["basic"]["state"] = preferenceLocationArrReverse[1];
       shopData["basic"]["distirct"] = preferenceLocationArrReverse[2];
+      shopData["basic"]["city"] = preferenceLocationArrReverse[2];
       shopData["basic"]['address'] = preferenceLocationArr.splice(0, preferenceLocationArr.length-3).join(', ')
 
-      console.log(shopData["basic"])
       this.setState({ shopData }, () => {
 
         geocodeByAddress(preferenceLocation)
@@ -991,7 +995,13 @@ class MStoreAddNewShop extends React.Component {
                             <Input placeholder='Enter Compelete Address' type='text' onChange={e => this.handleOnChange(e, 'address', "basic") } value={this.state.shopData.basic.address} />
                           </FormGroup>
                         </Col>
-                        <Col className="pr-1" md={6}>
+                        <Col className="pr-1" md={3}>
+                          <FormGroup>
+                            <label className="add-shop-label"> City </label> {this.renderRequiredIcon()} 
+                            <Input placeholder='Enter City Name' type='text' onChange={e => this.handleOnChange(e, 'city', "basic") } value={this.state.shopData.basic.city} />
+                          </FormGroup>
+                        </Col>
+                        <Col className="pr-1" md={3}>
                           <FormGroup>
                             <label className="add-shop-label"> Landmark </label> {this.renderRequiredIcon()} 
                             <Input placeholder='Enter Landmark' type='text' onChange={e => this.handleOnChange(e, 'landmark', "basic") } value={this.state.shopData.basic.landmark} />
