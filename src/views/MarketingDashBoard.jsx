@@ -244,7 +244,7 @@ class MarketingDashBoard extends React.Component {
                     data={dashboardNASDAQChart.data}
                     options={dashboardNASDAQChart.options}
                     width={400}
-                    height={144}
+                    height={163}
                   />
                 </CardBody>
                 <CardFooter>
