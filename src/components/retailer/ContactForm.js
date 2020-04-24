@@ -17,14 +17,15 @@ const ContactForm = () => {
                   id="defaultFormCardNameEx"
                   className="form-control"
                   placeholder="Name"
+                  required
                 />
                 <br />
                 <div class="input-group1">
-    <input id="location" type="Location" class="form-control" name="location" placeholder="Location" />
-    <span class="input-group-addon1 Googlemap google-map-right"><img src={Googlemap}  alt="Google Map"  /></span>
+            <input id="location" type="Location" class="form-control" name="location" placeholder="Location" required/>
+            <span class="input-group-addon1 Googlemap google-map-right"><img src={Googlemap}  alt="Google Map"  /></span>
 
 
-  </div>
+          </div>
                 <br />
                 <input
                   type="number"
@@ -32,6 +33,8 @@ const ContactForm = () => {
                   id="defaultFormCardNumber"
                   className="form-control"
                   placeholder="Number"
+                  pattern="[0-9]{10}"
+                  required
                 />
 
                 <div className="text-center mt-3">

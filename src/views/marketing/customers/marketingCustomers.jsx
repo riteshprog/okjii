@@ -15,8 +15,8 @@ export default class MarketingCustomerDetails extends Component {
         <div className="content customer-information">
           <div className="content">
           <Row className="customer-filter">
-            <Col md="10"><p>New Customer</p></Col>
-            <Col md="2" className="filter-search"><p><i class="fas fa-search" /></p>
+            <Col md="10" className="col-5"><p>New Customer</p></Col>
+            <Col md="2" className="filter-search col-7"><p><i class="fas fa-search" /></p>
             <p><span className="filter-txt"> Filter</span> <i class="fas fa-bars"></i></p></Col>
           </Row>
         </div>

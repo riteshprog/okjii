@@ -166,7 +166,8 @@ const dashboardEmailStatisticsChart = {
   }
 };
 
-const dashboardNASDAQChart = {
+const dashboardNASDAQChart =  {
+  type: 'bar',
   data: {
     labels: [
       "Jan",
@@ -182,34 +183,24 @@ const dashboardNASDAQChart = {
       "Nov",
       "Dec"
     ],
-    datasets: [
-      {
-        data: [0, 19, 15, 20, 30, 40, 40, 50, 25, 30, 50, 70],
-        fill: false,
-        borderColor: "#fbc658",
-        backgroundColor: "transparent",
-        pointBorderColor: "#fbc658",
-        pointRadius: 4,
-        pointHoverRadius: 4,
-        pointBorderWidth: 8
-      },
-      {
-        data: [0, 5, 10, 12, 20, 27, 30, 34, 42, 45, 55, 63],
-        fill: false,
-        borderColor: "#51CACF",
-        backgroundColor: "transparent",
-        pointBorderColor: "#51CACF",
-        pointRadius: 4,
-        pointHoverRadius: 4,
-        pointBorderWidth: 8
-      }
-    ]
+    datasets: [{
+        fill:true,
+        backgroundColor: '#259D70',
+        data:[30,20,30,40,30,50,70,30,89,30,20,50]
+      }]
   },
   options: {
     legend: {
       display: false,
       position: "top"
-    }
+    },
+    scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
   }
 };
 

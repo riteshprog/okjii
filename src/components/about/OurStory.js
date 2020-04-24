@@ -17,6 +17,11 @@ export default class OurStory extends Component {
             </div>
           </div>
           <div className="row">
+            <div className="col-md-6 about-mobile-view-image">
+              <figure className="text-center">
+                <img src={iedagen} alt="" className="img-fluid iedagen about-mobile-view-image" />
+              </figure>
+            </div>
             <div className="col-md-6">
               <h2>Idea germination</h2>
               <p>Indians have been traditionally relying on neighbourhood stores (Kirana store) for food and grocery. The traditional way of purchasing is turning its fold due to the rising of disposable income and internet penetration. Customers want more transparency, speed,and convenience during purchase. Lack of time and rapid delivering era provoke customers to adopt digital means for monthly grocery purchases from their reliable neighbourhood shop instead of going and standing there.</p>
@@ -24,7 +29,7 @@ export default class OurStory extends Component {
             </div>
             <div className="col-md-6">
               <figure className="text-center">
-                <img src={iedagen} alt="" className="img-fluid iedagen" />
+                <img src={iedagen} alt="" className="img-fluid iedagen about-mobile-view-image1" />
               </figure>
             </div>
           </div>
@@ -41,6 +46,9 @@ export default class OurStory extends Component {
             </div>
           </div>
           <div className="row okjii-about-para">
+            <figure className="text-center">
+                <img src={destination} alt="" className="img-fluid iedagen about-mobile-view-image " />
+              </figure>
             <div className="col-md-6">
               <h2>Our destination</h2>
               <p>We start with a motive to establish a unanimous umbrella, a giant mom-Dad retail store chain across the country where every single store has its sovereignty and growing opportunity. We wish to transform the ancient purchase method and customer-shop relationship according to new trends but with the same fragrance, naive, touch, nativity and customer satisfaction.</p>
@@ -48,7 +56,7 @@ export default class OurStory extends Component {
             </div>
             <div className="col-md-6">
               <figure className="text-center">
-                <img src={destination} alt="" className="img-fluid iedagen" />
+                <img src={destination} alt="" className="img-fluid iedagen about-mobile-view-image1" />
               </figure>
             </div>
           </div>

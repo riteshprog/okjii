@@ -18,7 +18,7 @@
 */
 import React from "react";
 // react plugin used to create charts
-import { Line, Pie } from "react-chartjs-2";
+import { Line, Pie, Bar } from "react-chartjs-2";
 // reactstrap components
 import {
   Card,
@@ -72,10 +72,10 @@ class MarketingDashBoard extends React.Component {
       <>
         <div className="content okjii-dashboard marketing-dashbord">
           <div class="customer-filter wallet-row">
-          <div class="col-md-9 col-sm-6">
+          <div class="col-md-9 col-sm-6 col-5">
           <p className=" dashbord-text">Dashboard</p>
                     </div>
-          <div class="filter-search col-md-3 col-sm-6">
+          <div class="filter-search col-md-3 col-sm-6 col-7">
             <p><i class="fa fa-search"></i></p>
             <p><span class="filter-txt"> Filter</span> <img src={filterIcon} alt="" /></p>
           </div>
@@ -240,11 +240,11 @@ class MarketingDashBoard extends React.Component {
                   <p className="card-category">Month&#x2019;s Campaign Performance </p>
                 </CardHeader>
                 <CardBody>
-                  <Line
+                  <Bar
                     data={dashboardNASDAQChart.data}
                     options={dashboardNASDAQChart.options}
                     width={400}
-                    height={130}
+                    height={144}
                   />
                 </CardBody>
                 <CardFooter>

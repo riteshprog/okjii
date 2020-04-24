@@ -54,6 +54,9 @@ return (
                      {/* <img className="img-fluid apple"  src={apple} alt=""/> */}
                   </div>
                   <div className="col-sm-6">
+                     <img className="img-fluid apple"  src={apple} alt=""/>
+                  </div>
+                  <div className="col-sm-6">
                      <img className="img-fluid google" src={google} alt=""/>
                   </div>
                </div>

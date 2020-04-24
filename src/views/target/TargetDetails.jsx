@@ -57,13 +57,13 @@ export default class marketingCustomerDetails extends Component {
 
       <>
        <div className="content m-store-view-add target-card">
-       <div class="customer-filter">
+       <div class="customer-filter col-12">
           <div>
             <p>
             Target 
             </p>
           </div>
-          <div className="filter-search ">
+          <div className="filter-search">
             <p><i class="fa fa-search"></i></p>
             <p>Add Customer <i class="fas fa-plus mr-2"/></p>
             <p><span class="filter-txt"> Filter</span> <img src={filterIcon} alt="" /></p>
