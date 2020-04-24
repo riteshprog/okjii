@@ -3,7 +3,7 @@ import { Row, Col } from 'reactstrap';
 import filterIcon from '../../assets/img/filterIcon.png';
 import ComingSoon from '../../assets/img/ComingSoon.png';
 
-export default class CommingSoon extends Component {
+export default class MarketingCommingSoon extends Component {
   render() {
  
     return (
@@ -22,12 +22,24 @@ export default class CommingSoon extends Component {
             </div>
           </div>
           */}
+          <div>
+          <h4> Support Videos</h4>
+          </div>
           <Row>
-            <Col md="12">
-              <figure className="text-center">
-                <img src={ComingSoon} alt="" className=" ComingSoon" />
-                <figcaption className="text-center">We will be here soon here</figcaption>
-              </figure>
+            <Col lg="4" md="6" sm="12">
+              <iframe className="marketing-iframe"
+              src="https://www.youtube.com/embed/D6LYJXhcBdU">
+              </iframe>
+            </Col>
+            <Col lg="4" md="6" sm="12">
+              <iframe className="marketing-iframe"
+              src="https://www.youtube.com/embed/VKlrRn4Q0a0">
+              </iframe>
+            </Col>
+            <Col lg="4" md="6" sm="12">
+              <iframe className="marketing-iframe"
+              src="https://www.youtube.com/embed/V7l8BYhahvc">
+              </iframe>
             </Col>
           </Row>
         </div>

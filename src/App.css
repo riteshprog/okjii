@@ -126,6 +126,9 @@ body {
     color: #5e5e5e;
     margin-right: 5px;
 }
+.navbar a:not(.btn):not(.dropdown-item) {
+    color: #333 !important;
+}
 /*.col-sm-7.figure-img1:before{
   content: "";
     display: block;
@@ -547,7 +550,10 @@ section.okkji-faq.faq-mobile,
   display: flex;
   justify-content: flex-end;
 }
-
+.marketing-iframe {
+  width: 500px; 
+  height: 300px;
+}
 .okjii-explore {
   margin-left: 10% !important;
 }
@@ -4888,7 +4894,7 @@ border:none;
 
 .m-store-view-add .card-user form .form-group {
   margin-bottom: 20px;
-  margin-right: 3rem;
+  margin-right: 0.5rem;
 }
 
 .m-store-view-add .btn-primary {
@@ -6382,11 +6388,40 @@ img.img-fluid.Logowhite-bg {
 }
 
 }
+@media screen and (max-width: 1440px) {
+  .marketing-iframe {
+    width: 350px;
+    height: 300px;
+}
+}
 @media screen and (max-width: 425px) and (min-width: 320px) {
   .home-order-details {
     left: 15px;
     top: -225px;
     position: relative !important;
+}
+.customer-filter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0rem !important;
+}
+.customer-filter .filter-txt {
+    color: #259D70;
+    padding-right: 1rem;
+    padding-left: 0rem !important;
+}
+.ant-steps-horizontal.ant-steps-label-horizontal .ant-steps-item-title {
+    line-height: 32px;
+}
+.m-store-view-add .card .card-body {
+  margin: 0;
+  width: 350px !important;
+  padding: 15px 15px 15px 0px !important;
+}
+.ant-steps-navigation > .ant-steps-item::after {
+    display: none !important;
 }
 .nav-open .main-panel {
     right: 0;
@@ -6623,6 +6658,13 @@ img.img-fluid.Logowhite-bg {
 }
 .navbar .navbar-nav .nav-item:first-child {
     margin-top: 0px !important; 
+}
+.main-panel {
+    position: fixed;
+    float: right;
+    width: calc(100% - 260px);
+    background-color: #fdfeff;
+    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
 }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */

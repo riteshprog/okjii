@@ -62,6 +62,7 @@ import AddFAQ  from "./views/coupon/AddFAQ.jsx"
 import AddFAQDetail  from "./views/coupon/AddFAQDetail.jsx"
 import CouponAddFormDetails from "./views/coupon/CouponAddFormDetails.jsx"
 import CommingSoon from "./views/commingsoon/CommingSoon.jsx"
+import MarketingCommingSoon from "./views/commingsoon/marketingCommingSoon.jsx"
 import AddPage  from "./views/coupon/AddPage.jsx"
 import AddPageDetails  from "./views/coupon/AddPageDetails.jsx"
 import StoreTotalSale from "./views/store/StoreTotalSale.jsx"
@@ -159,7 +160,7 @@ var routes = [
   { path: "/location", onSideBar: true, name: "Location", icon: "nc-icon nc-map-big", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
   { path: "/incentive", onSideBar: true, name: "Incentive", icon: "nc-icon nc-money-coins", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
   // { path: "/target", onSideBar: true, name: "Target", icon: "nc-icon nc-spaceship", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
-  { path: "/support", onSideBar: true, name: "Support", icon: "nc-icon nc-support-17", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
+  { path: "/support", onSideBar: true, name: "Support", icon: "nc-icon nc-support-17", component: MarketingCommingSoon, accessTo: ["admin"], layout: "/admin" },
 
   { path: "/store/product/:storeId", onSideBar: false, name: "Product", icon: "fa fa-credit-card", component: ProductDetails, layout: "/admin" },
 
