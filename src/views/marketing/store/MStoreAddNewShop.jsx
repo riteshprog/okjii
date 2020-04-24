@@ -1224,7 +1224,7 @@ class MStoreAddNewShop extends React.Component {
                   disabled={this.state.savingShop?true:false}
                   onClick={this.handleOnSave}
                 > 
-                  Back
+                  Save
                 </Button>
               </div>
             ) : (
@@ -1235,7 +1235,7 @@ class MStoreAddNewShop extends React.Component {
                   type="submit"
                   onClick={() => this.changeStep(this.state.currentStep + 1)}
                 >
-                  Save &amp; Next
+                  Next
                 </Button>
               </div>
             )}

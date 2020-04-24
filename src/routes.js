@@ -4,7 +4,7 @@ import MarketingDashBoard from "./views/MarketingDashBoard.jsx";
 import RetailerShop from "./views/retailShop/retailerShop.jsx";
 
 import AddNewShop from "./views/retailShop/addNewShop.jsx";
-import SingleShop from "./views/retailShop/./viewSingleShop.jsx";
+import SingleShop from "./views/retailShop/viewSingleShop.jsx";
 import { MyFancyComponent } from "./adminComponents/googleMap/googleMap";
 import AddProductToShop from "./views/retailShop/addItemsToShop";
 import PreReg from "./views/preRegistration/preReg";
