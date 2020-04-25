@@ -973,6 +973,8 @@ h4.payment {
 
 footer.page-footer {
   border-bottom: 1px solid #cecece !important;
+  padding-left: 15px; 
+  padding-right: 5px;
 }
 .footer-bdr-right {
   border-right: 1px solid #cecece !important;
@@ -1325,6 +1327,13 @@ ol.carousel-indicators li {
     font-size: 3.5em;
     line-height: 1.15;
     margin-bottom: 15px !important;
+}
+.container-fluid {
+    width: 100%;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-right: auto;
+    margin-left: auto;
 }
 .getapplink-ml {
   margin-left: 15%;
@@ -4786,7 +4795,10 @@ img.Add {
   
   margin: 0 1rem;
 }
-
+.table-responsive {
+    overflow: scroll !important;
+    padding-bottom: 10px;
+}
 /*  Total Sale End */
 
 
@@ -6434,6 +6446,7 @@ img.img-fluid.Logowhite-bg {
 .customer-filter p {
     font-size: 15px !important;
     color: #5e5e5e;
+    margin-bottom: 15px !important;
 }
 .df {
   margin: 0 auto !important;
@@ -6533,8 +6546,8 @@ img.img-fluid.Logowhite-bg {
 }
 .okjii-home .getapp-link {
     padding-top: 0rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
 }
 .navbar {
     padding: 15px !important;
@@ -6703,7 +6716,7 @@ img.img-fluid.Logowhite-bg {
 }
 
 img.img-fluid.Logowhite-bg {
-  transform: translate(-600px, -60px);
+  transform: translate(-660px, -60px);
   width: 32%;
 }
 
