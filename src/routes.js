@@ -98,7 +98,7 @@ var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
 
   { path: "/dashboard", onSideBar: true, name: "Dashboard", icon: "nc-icon nc-bank", component: Dashboard, layout: "/admin" },
-  { path: "/market-dashboard", onSideBar: true, name: "Marketing Dashboard", icon: "nc-icon nc-bank", component: MarketingDashBoard, layout: "/admin" },
+  { path: "/market-dashboard", onSideBar: true, name: "Dashboard", icon: "nc-icon nc-bank", component: MarketingDashBoard, layout: "/admin" },
   
   
   // { path: "/shops", onSideBar: true, name: "Store", icon: "nc-icon nc-shop", accessTo: ["admin", "market"], component: RetailerShop, layout: "/admin" },
@@ -107,7 +107,7 @@ var routes = [
   { path: "/new-customer", onSideBar: true, name: "New Customer", icon: "far fa-user", component: MarketingCustomer, accessTo: ["admin"], layout: "/admin" },
   
   { path: "/region", onSideBar: true, name: "Region", icon: "fa fa-globe", component: Region, accessTo: ["admin"], layout: "/admin" },
-  { path: "/profucts", onSideBar: true, name: "Products", icon: "fa fa-globe", component: AllProducts, accessTo: ["admin"], layout: "/admin" },
+  { path: "/products", onSideBar: true, name: "Products", icon: "fa fa-globe", component: AllProducts, accessTo: ["admin"], layout: "/admin" },
 
   // notification routes
   { path: "/notification", name: "Push Notification", onSideBar:false, icon: "far fa-bell", component: Notification, layout: "/admin"},
