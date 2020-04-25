@@ -45,7 +45,7 @@ class Sidebar extends React.Component {
     let userShouldView = [];
     
     if(type == 'marketing'){
-      userShouldView = ['Marketing Dashboard', 'New Customer', 'Retail Store', 'Target', 'Incentive', 'Support'];
+      userShouldView = ['Home', 'New Customer', 'Retail Store', 'Target', 'Incentive', 'Support', 'M Customer'];
       sidebarRoutes = this.props.routes;
       sidebarRoutes = sidebarRoutes.filter(singleRoute => userShouldView.includes(singleRoute.name))
       this.setState({sidebarRoutes});
