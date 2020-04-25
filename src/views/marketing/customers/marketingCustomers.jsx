@@ -74,7 +74,7 @@ export default class MarketingCustomerDetails extends Component {
             <Col md="5" className="col-5"><p>New Customer </p></Col>
 
             <Col md="7" className="filter-search col-7">
-            <p ><Link to='/admin/Addcustomer/add-customer'><i class="fas fa-plus mr-2"/></Link></p>
+            <p ><Link to='/admin/Addcustomer/add-customer' className='t-text op8' >Add New Customer<i class="fas fa-plus mr-2"/></Link></p>
             <p><i class="fas fa-search" /></p>
             <p><span className="filter-txt"> Filter</span> <i class="fas fa-bars"></i></p></Col>
           </Row>

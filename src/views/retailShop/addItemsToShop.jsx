@@ -158,7 +158,7 @@ export default class AddProductToShop extends React.Component {
             <Col md="12">
               <Card className="card-user pr-3">
                 <CardHeader>
-                    <CardTitle tag="h4">{this.state.shopData.basic.shopName} - ({this.state.shopData.storeCatelogue.storeType})</CardTitle>
+                    <CardTitle tag="h4">{this.state.shopData.basic.shopName}</CardTitle>
                 </CardHeader>
                 <CardBody >
                 <Form className='df fd-c'> 
