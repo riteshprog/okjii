@@ -649,7 +649,7 @@ class MStoreAddNewShop extends React.Component {
               {/* onClick={()=>this.changeStep(0) */}
               <Step
                 title={
-                  <span style={{ lineHeight: 2.5 }} className="step box">
+                  <span style={{ lineHeight: 2.5 }} className={this.state.currentStep == 0?'step box':'step box-white'}>
                     Store Details
                   </span>
                 }
@@ -657,7 +657,7 @@ class MStoreAddNewShop extends React.Component {
               />
               <Step
                 title={
-                  <span style={{ lineHeight: 2.5 }} className="step box-white">
+                  <span style={{ lineHeight: 2.5 }} className={this.state.currentStep == 1?'step box':'step box-white'}>
                     Bank Details
                   </span>
                 }
@@ -665,7 +665,7 @@ class MStoreAddNewShop extends React.Component {
               />
               <Step
                 title={
-                  <span style={{ lineHeight: 2.5 }} className="step box-white">
+                  <span style={{ lineHeight: 2.5 }} className={this.state.currentStep == 2?'step box':'step box-white'}>
                     Store Catelog
                   </span>
                 }
