@@ -41,6 +41,7 @@ import DownloadWalletStatement from "./views/wallet/storeWalletDownloadStatement
 import Foodji from "./views/foodJi/foodji";
 import OkkjiSelect from "./views/okkjiSelect/okkjiSelect";
 import Order from "./views/order/order";
+import OrderViewDetails from "./views/order/OrderViewDetails.jsx";
 import Payment from "./views/payment/payment";
 import Setting from "./views/settings/setting";
 import StoreSettelment from "./views/storeSettelment/storeSettelment";
@@ -74,6 +75,7 @@ import TargetDetails  from  './views/target/TargetDetails.jsx';
 import TargetViewDetails from  './views/target/TargetViewDetails.jsx';
 import TargetSellViewDetails from './views/target/TargetSellViewDetails.jsx';
 import TargetAddCustomerViewDetails from './views/target/TargetAddCustomerViewDetails.jsx';
+import TargetHistoryViewDetails from './views/target/TargetHistoryViewDetails.jsx';
 
 
 import CommonWallet from './views/wallet/commonWallet';
@@ -90,6 +92,7 @@ import MStoreAddNewShop from "./views/marketing/store/MStoreAddNewShop.jsx"
 import LanuageSettings from "./views/settings/languageSetting.jsx";
 import Region from './views/Region/region';
 import marketingCustomerDetails from "./views/marketing/customers/marketingCustomerDetails.jsx"
+import MarketingAddNewCustomer from "./views/marketing/customers/MarketingAddNewCustomer.jsx"
 
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
@@ -127,10 +130,11 @@ var routes = [
   ]},
 
   { path: "/trusted", onSideBar: true, name: "Trusted By", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TrustedBy, layout: "/admin" },    
-  { path: "/target", onSideBar: true, name: "Target", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TargetDetails, layout: "/admin" },    
+  { path: "/target", onSideBar: true, name: "Target", icon: "nc-icon nc-spaceship", accessTo: ["admin", "market"], component: TargetDetails, layout: "/admin" },    
   { path: "/market/view-details/:ViewId", onSideBar: false, name: "Target", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TargetViewDetails, layout: "/admin" },    
   { path: "/TSell/view-details/:ViewId", onSideBar: false, name: "Target", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TargetSellViewDetails, layout: "/admin" },    
   { path: "/TAddCust/view-details/:ViewId", onSideBar: false, name: "Target", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TargetAddCustomerViewDetails, layout: "/admin" },    
+  { path: "/THistory/view-details/:ViewId", onSideBar: false, name: "Target", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: TargetHistoryViewDetails, layout: "/admin" },    
 
 
   // -------------------common components starts -----------------------
@@ -143,6 +147,10 @@ var routes = [
   { path: "/catalogue-settings", onSideBar: false, name: "Store Catalogue", icon: "nc-icon nc-tag-content", accessTo: ["admin", "market"], component: Categories, layout: "/admin" },
   { path: "/user", onSideBar: true, name: "User", icon: "nc-icon nc-satisfied", component: Users, accessTo: ["admin"], layout: "/admin" },
   { path: "/Order", onSideBar: true, name: "Order", icon: "nc-icon nc-app", component: Order, layout: "/admin" },
+  { path: "/Order/view-details", onSideBar: false, name: "Order", icon: "nc-icon nc-app", component: OrderViewDetails, layout: "/admin" },
+
+
+  
   { path: "/TotalSale", onSideBar: true, name: "Total Sale", icon: "fa fa-pie-chart", component: TotalSale, layout: "/admin" },
   
   { path: "/customer-notification", name: "Customer Notification", onSideBar:false, icon: "far fa-bell", component: CustomerNotification, layout: "/admin", subMenuTitle: 'Customer Notification' },
@@ -160,7 +168,7 @@ var routes = [
   { path: "/location", onSideBar: true, name: "Location", icon: "nc-icon nc-map-big", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
   { path: "/incentive", onSideBar: true, name: "Incentive", icon: "nc-icon nc-money-coins", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
   // { path: "/target", onSideBar: true, name: "Target", icon: "nc-icon nc-spaceship", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
-  { path: "/support", onSideBar: true, name: "Support", icon: "nc-icon nc-support-17", component: MarketingCommingSoon, accessTo: ["admin"], layout: "/admin" },
+  { path: "/support", onSideBar: true, name: "Support", icon: "nc-icon nc-support-17", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
 
   { path: "/store/product/:storeId", onSideBar: false, name: "Product", icon: "fa fa-credit-card", component: ProductDetails, layout: "/admin" },
 
@@ -201,6 +209,7 @@ var routes = [
 { path: "/mshops/add-new-shop", name: "Add New Shop", icon: "nc-icon nc-shop", component: MStoreAddNewShop, accessTo: ["admin", "market"], layout: "/admin" },
 
 { path: "/mcustomer/cust-details", onSideBar: true, name: "M Customer", icon: "nc-icon nc-shop", accessTo: ["admin"], component: marketingCustomerDetails, layout: "/admin" },
+{ path: "/Addcustomer/add-customer", onSideBar: true, name: "M Customer", icon: "nc-icon nc-shop", accessTo: ["admin"], component: MarketingAddNewCustomer, layout: "/admin" },
   
 
 

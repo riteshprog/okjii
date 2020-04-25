@@ -5077,6 +5077,9 @@ text-transform: uppercase !important;
   margin-bottom: 0;
 }
 
+.target-card a:hover {
+  text-decoration: none !important;
+}
 .target-card td button{
   width:140px;
 margin:0 auto;
@@ -5166,7 +5169,300 @@ padding: .5rem !important;
   margin-left: 10px;
   margin-right: 10px;
 }
+.row.target-view-history{
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.target-view-card h3{
+  font-size: .9rem;
+  font-weight: 600;
+  color: #5e5e5e;
+  text-align: center;
+  margin-bottom: .3rem;
+}
+
+.target-history-details .content.target-view-card .table-responsive{
+  text-align: left;
+}
+
+.table-responsive {
+  overflow: visible !important;
+  padding-bottom: 10px;
+}
+
+.target-history-details .content.target-view-card {
+  text-align: center;
+}
+
+button.load-more {
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border: none;
+  color: #259D70
+}
 /* Target Page End */
+
+/*  Add New Customer Page Start */
+
+.add-new-customer .customer-filter{
+  margin-bottom: 1.5rem;
+}
+
+.details-add-new-customer{
+  padding: 1rem;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.18);
+}
+
+.details-add-new-customer .form-group i{
+  padding: 1rem;
+  font-size: 1.5rem;
+
+}
+
+.details-add-new-customer .form-group i.fa-times-circle{
+  color:#FFD2D2;
+  fill: #757575;
+}
+
+.details-add-new-customer .form-group i.fa-plus-square{
+color:#BEFEED;
+}
+
+.details-add-new-customer .form-group i.fa-check-square{
+color:#259D70;
+}
+
+.details-add-new-customer button{
+  background-color: #259D70;
+text-transform: uppercase !important;
+text-decoration: none;
+font-weight: 400 !important;
+padding: .5rem 2rem;
+margin-top: 2rem;
+
+}
+
+.filter-search p:first-child{
+  margin-right: 1rem;
+} 
+
+.customer-filter p{
+  font-size: 1rem;
+  font-weight: 500;
+  color: #5e5e5e;
+} 
+.details-add-new-customer button:hover{
+  background-color: #259D78 !important;
+
+}
+.details-add-new-customer .text-hiden{
+  visibility: hidden;
+}
+
+.details-add-new-customer input{
+  border:none !important;
+  background-color: #F3F7F6;
+}
+
+/* Add New Customer Page End */
+
+
+/* Order Page Start */
+
+.order-details{
+  background-color: #C2F2DC;
+  padding: .5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-details p{
+  font-size: .8rem;
+  text-align: center;
+
+  color:#7F8F87;
+  font-weight: 600;
+}
+
+.order-details .order-list{
+  color: #67C19D;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+
+.payment-details{
+  padding: 2rem 4rem;
+}
+
+.payment-details .card{
+
+display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 1rem 1rem;
+  margin-bottom: 0;
+}
+
+.payment-details p{
+  font-size: .9rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.payment-details img{
+  width: 70%;
+}
+
+
+.Process{
+  color:#FE975F;
+}
+.Modifing{
+  color:#86B5FE;
+}
+.Delivered{
+  color:#30A176;
+}
+.Canceled{
+  color:#DF5554;
+}
+
+.order-card .btn{
+
+  background-color: #30A176 !important;
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 400;
+  text-transform: capitalize !important;
+  padding: .5rem 1rem;
+}
+.order-row{
+  display: flex;
+  justify-content: space-between;
+  margin: .5rem 1rem;
+}
+
+.order-row p{
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5e5e5e;
+}
+
+.order-para{
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5e5e5e;
+  margin-left: 5.8rem;
+}
+.order-left-navbar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.order-left-navbar p{
+  margin-left: 1rem;
+}
+
+.order-right-navbar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.order-right-navbar p{
+  margin-bottom: 0;
+  text-align: right;
+  margin-right: 2rem;
+}
+
+.order-view-details .customer-table{
+  width: 80%;
+  margin: 0 auto;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.order-view-details .customer-table tr td{
+  border-top:none !important;
+}
+
+
+.order-view-details .btn{
+  background-color: #259D70;
+  text-transform: capitalize !important;
+}
+
+.order-view-details button.no-background.btn.btn-secondary {
+  background-color: #fff;
+  color: blue;
+  margin:0 0 0rem 3rem;
+  padding: 0;
+}
+
+/* Order Page End */
+
+
+/*  Total Sale Page Start */
+
+.total-sale-details{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.total-sale-details img{
+  padding-right: 0rem;
+  padding-top: .5rem;
+  width: 70%;
+}
+
+.total-sale-details p{
+  font-size: .8rem;
+  margin-bottom: 0;
+}
+
+.total-sale-details p:first-child{
+  font-weight: 600;
+}
+.total-sale-details p:last-child{
+  font-size: .7rem;
+}
+
+.total-sale-details .text-large{
+  font-size: 1.1rem !important;
+}
+
+.total-sale-para{
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0 !important;
+  color: #5e5e5e;
+}
+
+
+
+.total-sals-details .customer-table thead tr th{
+  border-bottom: 2px solid #dcdcdc;
+  padding: 1rem 1rem;
+}
+
+.total-sals-details .customer-table tbody tr td{
+  padding: 1rem 1rem;
+}
+
+.total-sals-details tr td img{
+  width:50%;
+}
+
+/* Total Sale Page End */
 
 
 @media only screen and (max-width: 1258px) {
@@ -5184,7 +5480,12 @@ padding: .5rem !important;
   .target-view-card .row{
     margin: 0 auto;
     width:100%;
-  }  
+  }
+  
+  .payment-details {
+    padding: 1rem 1rem;
+}
+  
   .navbar .navbar-toggler {
     width: 50px !important;
     height: 50px;
