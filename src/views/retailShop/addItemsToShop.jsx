@@ -120,12 +120,13 @@ export default class AddProductToShop extends React.Component {
   handleOnBrandChecked = (e, sub, brand) => {
     let shopProductData = this.state.shopProductData;
     console.log(`shopProductData`, shopProductData)
-    if(!shopProductData[this.state.selectedCategory][sub]) shopProductData[this.state.selectedCategory][sub] = [brand];
-    else if(shopProductData[this.state.selectedCategory][sub].includes(brand)){
-      const index = shopProductData[this.state.selectedCategory][sub].indexOf(brand);
-      shopProductData[this.state.selectedCategory][sub].splice(index, 1);
+    let cat = this.state.selectedCategory;
+    if(!shopProductData[cat][sub]) shopProductData[cat][sub] = [brand];
+    else if(shopProductData[cat][sub].includes(brand)){
+      const index = shopProductData[cat][sub].indexOf(brand);
+      shopProductData[cat][sub].splice(index, 1);
     } else {
-      shopProductData[this.state.selectedCategory][sub] = [...shopProductData[this.state.selectedCategory][sub], brand];
+      shopProductData[cat][sub] = [...shopProductData[cat][sub], brand];
     }
     let storeTypeSubCategoriesVisited = this.state.storeTypeSubCategoriesVisited;
     !storeTypeSubCategoriesVisited.includes(sub) && storeTypeSubCategoriesVisited.push(sub);
@@ -193,11 +194,11 @@ export default class AddProductToShop extends React.Component {
                       <div className='select-option-storetype df'>
                         {sub.brands.map(item=>(
                         <CustomInput 
-                          onClick={(e)=>this.handleOnBrandChecked(e, sub._id, item._id)}
-                          checked={(this.state.shopProductData[this.state.selectedCategory][sub._id]&& this.state.shopProductData[this.state.selectedCategory][sub._id].includes(item._id))?true:false}
+                          onClick={(e)=>this.handleOnBrandChecked(e, sub.subCatId, item._id)}
+                          checked={(this.state.shopProductData[this.state.selectedCategory][sub.subCatId]&& this.state.shopProductData[this.state.selectedCategory][sub.subCatId].includes(item._id))?true:false}
                           style={{width: '50px', backgroundColor: 'red'}} 
                           type="checkbox"
-                          id={item.name}
+                          id={sub.subCatId + item._id}
                           label={item.name.toUpperCase()} 
                         />
                         ))}
