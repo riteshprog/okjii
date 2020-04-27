@@ -31,10 +31,15 @@ class BarChart extends React.Component {
         }
       ]
     },
+
+
     barChartOptions: {
       responsive: true,
       maintainAspectRatio: false,
-      scales: {
+      legend: {
+        display: false,
+      },
+        scales: {
         xAxes: [
           {
             barPercentage: .5,
