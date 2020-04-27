@@ -113,7 +113,7 @@ export default class TargetViewDetails extends Component {
           </div>
           <div className="filter-search ">
             <p><i class="fa fa-search"></i></p>
-            <p>Add Customer <i class="fas fa-plus mr-2"/></p>
+            <p>Add Store <i class="fas fa-plus mr-2"/></p>
             <p><span class="filter-txt"> Filter</span> <img src={filterIcon} alt="" /></p>
           </div>
 

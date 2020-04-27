@@ -1,9 +1,9 @@
 body{
   overflow-x: hidden;
 }
-
 .t-text{ 
   color: #4b9e70 !important;
+  text-decoration: none !important;
 }
 .width-wfa{
   width: -webkit-fill-available;

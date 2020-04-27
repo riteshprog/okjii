@@ -7,7 +7,7 @@ import GetAppLink from '../about/GetAppLink';
 export default class OurPractice extends Component {
   render() {
     return (
-      <div>
+      <div className="about-us-page">
         <div className="container-fluid okkji-ourpractice">
           <div className="container df fdc">
           <div className="row">
@@ -58,7 +58,7 @@ export default class OurPractice extends Component {
 
           </div>
           <div className="about-getapplink">
-          <GetAppLink />
+            <GetAppLink />
           </div>
           </div>
         </div>

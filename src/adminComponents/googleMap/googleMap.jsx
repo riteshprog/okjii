@@ -99,7 +99,6 @@ export const MyMapComponent = compose(
     center={props.center}//{props.center}
     onClick={(e)=>{
       props.setMarker(e.latLng)
-      console.log(e)
       const location = {
         lat: e.latLng.lat(),
         lng: e.latLng.lng()

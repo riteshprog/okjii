@@ -9,78 +9,101 @@ import { Row, Col } from 'reactstrap';
 
 
 export default class MarketingCustomerDetails extends Component {
+    constructor(props) {
+    super(props);
+    this.state = {
+      targetViewDetails: [
+        {_id: 1, 
+          CustomerID: '9876543210',
+          CustomerName: 'Ram Lal Kumar',
+          Location: 'P.C. Colony, Kankarbagh',
+          Time: '09: 10 am',
+          Day: 'Today',
+          Status: 'Link Sent',
+        },
+        {_id: 2, 
+          CustomerID: '9876543210',
+          CustomerName: 'Ravi Retail Shop',
+          Location: 'P.C. Colony, Kankarbagh',
+          Time: '09: 10 am',
+          Day: 'Today',
+          Status: 'Install Successfully',
+        },
+        {_id: 3, 
+          CustomerID: '9876543210',
+          CustomerName: 'Akash Kirana Dukan',
+          Location: 'P.C. Colony, Kankarbagh',
+          Time: '09: 10 am',
+          Day: 'Today',
+          Status: 'Install Successfully',
+        },
+        {_id: 4, 
+          CustomerID: '9876543210',
+          CustomerName: 'Ram Lal Kirana Store',
+          Location: 'Main Road, Bhootnath',
+          Time: '09: 10 am',
+          Day: '15 Apr',
+          Status: 'Install Successfully',
+        },
+        {_id: 5, 
+          CustomerID: '9876543210',
+          CustomerName: 'Ravi Retail Shop',
+          Location: 'Main Road, Bhootnath',
+          Time: '09: 10 am',
+          Day: '15 Apr',
+          Status: 'Install Successfully',
+        },
+        {_id: 6, 
+          CustomerID: '9876543210',
+          CustomerName: 'Akash Kirana Dukan',
+          Location: 'Main Road, Bhootnath',
+          Time: '09: 10 am',
+          Day: '15 Apr',
+          Status: 'Install Successfully',
+        },
+                ]
+
+      }
+    }
   render() {
     return (
       <>
         <div className="content customer-information">
           <div className="content">
           <Row className="customer-filter">
-            <Col md="10"><p>New Customer</p></Col>
-            <Col md="2" className="filter-search"><p><i class="fas fa-search" /></p>
+            <Col md="5" className="col-5"><p>New Customer </p></Col>
+
+            <Col md="7" className="filter-search col-7">
+            <p ><Link to='/admin/Addcustomer/add-customer' className='t-text op8' >Add New Customer<i class="fas fa-plus mr-2"/></Link></p>
+            <p><i class="fas fa-search" /></p>
             <p><span className="filter-txt"> Filter</span> <i class="fas fa-bars"></i></p></Col>
           </Row>
         </div>
           <div className='new-customer'>
-             <MDBTable className="customer-table" striped>
+            <MDBTable className="customer-table" responsive striped>
               <MDBTableHead>
                 <tr>
-                  <th><img src={avatar} className="rounded-circle testimoni-img" width="40" height="40" alt="avatar" /></th>
-                  <th>Serial No.</th>
+                  <th>Customer Id.</th>
                   <th>Customer Name</th>
-                  <th>Mobile Number</th>
                   <th>Location</th>
+                  <th>Time</th>
+                  <th>Day</th>
                   <th>Status</th>
                 </tr>
               </MDBTableHead>
               <MDBTableBody>
-                <tr>
-                  <td><img src={avatar} className="rounded-circle testimoni-img" width="40" height="40" alt="avatar" /></td>
-                  <td><span className="text-green">Okk</span>P0001</td>
-                  <td><span className="text-green">Ravi Kumar Singh</span></td>
-                  <td>999XXX1230</td>
-                  <td>Kanti Factory, Kankarbagh</td>
-                  <td>Installed</td>
+              {this.state.targetViewDetails.map((targetv, i)=>(
+              <tr key={targetv._id}>
+                  <td><span className="text-green">#</span>{targetv.CustomerID}</td>
+                  <td><span className="text-green">{targetv.CustomerName}</span>
+                  </td>
+                  <td>{targetv.Location}</td>
+                  <td>{targetv.Time}</td>
+                  <td>{targetv.Day}</td>
+                  <td><span className="text-green">{targetv.Status}</span></td>
                 </tr>
-                <tr>
-                  <td><img src={avatar} className="rounded-circle testimoni-img" width="40" height="40" alt="avatar" /></td>
-                  <td><span className="text-green">Okk</span>P0002</td>
-                  <td><span className="text-green">Praveen Kumar</span></td>
-                  <td>999XXX1230</td>
-                  <td>Hanumam Nagar, Kankarbagh</td>
-                  <td>Installed</td>
-                </tr>
-                <tr>
-                  <td><img src={avatar} className="rounded-circle testimoni-img" width="40" height="40" alt="avatar" /></td>
-                  <td><span className="text-green">Okk</span>P0005</td>
-                  <td><span className="text-green">Ravinesh Gupta</span></td>
-                  <td>999XXX1230</td>
-                  <td>P.C. Colony, Kankarbagh</td>
-                  <td>Installed</td>
-                </tr>
-                <tr>
-                  <td><img src={avatar} className="rounded-circle testimoni-img" width="40" height="40" alt="avatar" /></td>
-                  <td><span className="text-green">Okk</span>P0007</td>
-                  <td><span className="text-green">Sumit Kumar Singh</span></td>
-                  <td>999XXX1230</td>
-                  <td>Pani Tanki, Bhootnath</td>
-                  <td>Installed</td>
-                </tr>
-                <tr>
-                  <td><img src={avatar} className="rounded-circle testimoni-img" width="40" height="40" alt="avatar" /></td>
-                  <td><span className="text-green">Okk</span>P0010</td>
-                  <td><span className="text-green">Sudhir Kumar</span></td>
-                  <td>999XXX1230</td>
-                  <td>Main Road, Bhootnath</td>
-                  <td>Installed</td>
-                </tr>
-                <tr>
-                  <td><img src={avatar} className="rounded-circle testimoni-img" width="40" height="40" alt="avatar" /></td>
-                  <td><span className="text-green">Okk</span>P0013</td>
-                  <td><span className="text-green">Yashwant Singh Yadav</span></td>
-                  <td>999XXX1230</td>
-                  <td>Pani Tanki, BhootNath</td>
-                  <td>Installed</td>
-                </tr>
+              ))
+  }
 
 
               </MDBTableBody>

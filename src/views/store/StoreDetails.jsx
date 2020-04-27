@@ -44,7 +44,6 @@ export default class StoreDetails extends Component {
         console.log('no shop found')
       }
     }).catch(err=>{
-      console.log(`catch`, err.response.status);
       if(err.response.status  == 401){
         message.info('Session Expired!, Please Login Again.')
       }else {
@@ -60,6 +59,9 @@ export default class StoreDetails extends Component {
   }
 
   handleOnAddProductClicked = (shopId)=> <Link to='/login'/>
+  handleOnDeleteShop = (shopId) => {
+    console.log(shopId)
+  }
 
   render() {
     return (
@@ -87,7 +89,7 @@ export default class StoreDetails extends Component {
                   <td><span className="text-green">{shop.shopInfo.shopCode}</span></td>
                   <td><span className="text-green">{shop.basic.shopName}</span></td>
                   <td>{shop.basic.district?shop.basic.district:shop.basic.shopLocation.label.split(', ').slice(0, 2).join(', ') }</td>
-                  <td><span className="text-green">{shop.storeCatelogue.storeType}</span></td>
+                  <td><span className="text-green">{shop.storeCatelogue.storeType.name}</span></td>
                   <td className="text-center"><Switch checked={shop.shopInfo.status === 'Active'?true:false} checkedChildren="yes" unCheckedChildren="no" className="Switch-button" /></td>
                  <td className="text-center"><MDBDropdown dropleft>
                 <MDBDropdownToggle color="primary">
@@ -102,6 +104,7 @@ export default class StoreDetails extends Component {
                   {window.location.hostname.split('.')[0] != 'marketing'?<MDBDropdownItem>OkkJi Khata</MDBDropdownItem>:(null)}
                   {window.location.hostname.split('.')[0] != 'marketing'?<MDBDropdownItem>Setting</MDBDropdownItem>:(null)}
                   {window.location.hostname.split('.')[0] != 'marketing'?<MDBDropdownItem>Revenue</MDBDropdownItem>:(null)}
+                  {window.location.hostname.split('.')[0] != 'marketing'?<MDBDropdownItem onSelect={()=>this.handleOnDeleteShop(shop._id)}>Delete</MDBDropdownItem>:(null)}
                 </MDBDropdownMenu>
               </MDBDropdown></td>
                 </tr>

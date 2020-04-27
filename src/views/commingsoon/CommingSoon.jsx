@@ -26,7 +26,7 @@ export default class CommingSoon extends Component {
             <Col md="12">
               <figure className="text-center">
                 <img src={ComingSoon} alt="" className=" ComingSoon" />
-                <figcaption className="text-center">We will be here soon</figcaption>
+                <figcaption className="text-center">We will be here soon here</figcaption>
               </figure>
             </Col>
           </Row>

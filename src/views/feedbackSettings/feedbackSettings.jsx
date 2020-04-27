@@ -20,7 +20,8 @@ export default class FeedbackSettings extends React.Component {
 			newFeedback: {
 				parameter: '',
 				appId: [],
-				status: 1
+				status: 1,
+				type: 1
 			},
 			allFeedbackSettings: [
 			]
@@ -80,7 +81,7 @@ export default class FeedbackSettings extends React.Component {
 		}
 		else {
 			let token = JSON.parse(CookieHandler.readCookie('token'))
-			axios.post(process.env.REACT_APP_API_URL + '/feedback-setting/add', data, {
+			axios.post(process.env.REACT_APP_API_URL + '/feedBackSetting/add', data, {
 	      headers: {
 	        token
 	      }

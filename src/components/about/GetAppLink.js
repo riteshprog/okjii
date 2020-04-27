@@ -9,9 +9,9 @@ const GetAppLink = () => {
     <div className="getapp-link ">
       <div className="row">
         <MDBInputGroup
-          style={{ height: '100%',width: '100%', padding: 'none'}}
+          style={{ height: '65px',width: '100%', padding: 'none'}}
           container
-          ClassName="mb-3"
+          ClassName="mb-3 getapp-link-mobile"
           prepend="+91"
           append="GET APP LINK"
           hint="Mobile Number"
