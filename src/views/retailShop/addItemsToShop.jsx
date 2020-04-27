@@ -64,7 +64,7 @@ export default class AddProductToShop extends React.Component {
         data = data.data;
         let shopProductData = this.state.shopProductData;
         data.storeTypeCategories.map(cat=>{
-          shopProductData[cat] = {}
+          shopProductData[cat.data._id] = {}
         });
         if(data.shopData.shopInfo && data.shopData.shopInfo.hasOwnProperty('shopProductsBief')){
           Object.keys(data.shopData.shopInfo.shopProductsBief).map(cat=>{
@@ -72,7 +72,6 @@ export default class AddProductToShop extends React.Component {
           })
         }
         this.setState({shopData: data.shopData, storeTypeCategories: data.storeTypeCategories, shopProductData})
-        console.log(data.shopData)
       }else{
         console.log('no shop found')
       }
@@ -110,6 +109,7 @@ export default class AddProductToShop extends React.Component {
   }
 
   handleOnSelect = (e, type)=> {
+    console.log(e)
     if(type == 'brandCategory'){
       let storeTypeCategoriesVisited = this.state.storeTypeCategoriesVisited;
       !storeTypeCategoriesVisited.includes(e) && storeTypeCategoriesVisited.push(e);
@@ -119,12 +119,14 @@ export default class AddProductToShop extends React.Component {
   }
   handleOnBrandChecked = (e, sub, brand) => {
     let shopProductData = this.state.shopProductData;
-    if(!shopProductData[this.state.selectedCategory][sub]) shopProductData[this.state.selectedCategory][sub] = [brand];
-    else if(shopProductData[this.state.selectedCategory][sub].includes(brand)){
-      const index = shopProductData[this.state.selectedCategory][sub].indexOf(brand);
-      shopProductData[this.state.selectedCategory][sub].splice(index, 1);
+    console.log(`shopProductData`, shopProductData)
+    let cat = this.state.selectedCategory;
+    if(!shopProductData[cat][sub]) shopProductData[cat][sub] = [brand];
+    else if(shopProductData[cat][sub].includes(brand)){
+      const index = shopProductData[cat][sub].indexOf(brand);
+      shopProductData[cat][sub].splice(index, 1);
     } else {
-      shopProductData[this.state.selectedCategory][sub] = [...shopProductData[this.state.selectedCategory][sub], brand];
+      shopProductData[cat][sub] = [...shopProductData[cat][sub], brand];
     }
     let storeTypeSubCategoriesVisited = this.state.storeTypeSubCategoriesVisited;
     !storeTypeSubCategoriesVisited.includes(sub) && storeTypeSubCategoriesVisited.push(sub);
@@ -168,7 +170,7 @@ export default class AddProductToShop extends React.Component {
                       <label className='add-shop-label'>Select Product Category</label>{this.renderRequiredIcon()} 
                         <Select placeholder='Select Product Category' size="large" onSelect={(e)=>this.handleOnSelect(e, 'brandCategory')} showSearch style={{ width: '100%' }} >
                           <Option value="Categories" disabled>Store Product Categories</Option>
-                            {this.state.storeTypeCategories.map(cat=><Option value={cat}>{cat}{this.state.storeTypeCategoriesVisited.includes(cat)?<i className='text-success nc-icon nc-check-2 ml-3'/>:null}</Option>)}
+                            {this.state.storeTypeCategories.map(cat=><Option value={cat.data._id}>{cat.data.name}{this.state.storeTypeCategoriesVisited.includes(cat)?<i className='text-success nc-icon nc-check-2 ml-3'/>:null}</Option>)}
                         </Select>
                       </FormGroup>
                     </Col>
@@ -186,12 +188,19 @@ export default class AddProductToShop extends React.Component {
                   <Row>
                     {this.state.subCategoriesWithBrands.map(sub=><Col className='pr-1' md={12}>
                       <div className='df jcc'>
-                        <span className='border border-secondary label-round'>{sub._id}</span>
+                        <span className='border border-secondary label-round'>{sub.subCatName}</span>
                       </div>
                       <FormGroup className='mt-4'>
                       <div className='select-option-storetype df'>
                         {sub.brands.map(item=>(
-                          <CustomInput checked={(this.state.shopProductData[this.state.selectedCategory][sub._id]&& this.state.shopProductData[this.state.selectedCategory][sub._id].includes(item))?true:false} onChange={(e)=>this.handleOnBrandChecked(e, sub._id, item)} name={item} style={{width: '50px', backgroundColor: 'red'}} type="checkbox" id={item + sub._id} label={item.toUpperCase()} />
+                        <CustomInput 
+                          onClick={(e)=>this.handleOnBrandChecked(e, sub.subCatId, item._id)}
+                          checked={(this.state.shopProductData[this.state.selectedCategory][sub.subCatId]&& this.state.shopProductData[this.state.selectedCategory][sub.subCatId].includes(item._id))?true:false}
+                          style={{width: '50px', backgroundColor: 'red'}} 
+                          type="checkbox"
+                          id={sub.subCatId + item._id}
+                          label={item.name.toUpperCase()} 
+                        />
                         ))}
                       </div>
                       </FormGroup>
