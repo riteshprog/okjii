@@ -8,10 +8,8 @@ class BarChart extends React.Component {
       labels: ['02', '03', '04', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15'],
       datasets: [
         {
-          label: {
-            display:false
-          },
-          data: [900, 1000, 1100, 1200, 1500, 2500, 3500, 1800, 1700, 1600, 1300, 1200, 3800],
+          label: '',
+              data: [900, 1000, 1100, 1200, 1500, 2500, 3500, 1800, 1700, 1600, 1300, 1200, 3800],
           backgroundColor: [
             "rgba(94, 212, 164)",
             "rgba(77, 193, 144)",
@@ -61,7 +59,8 @@ class BarChart extends React.Component {
             }
           }
         ]
-      }
+      },
+  
     }
   }
 

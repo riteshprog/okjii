@@ -92,6 +92,7 @@ import LanuageSettings from "./views/settings/languageSetting.jsx";
 import Region from './views/Region/region';
 import marketingCustomerDetails from "./views/marketing/customers/marketingCustomerDetails.jsx"
 import MarketingAddNewCustomer from "./views/marketing/customers/MarketingAddNewCustomer.jsx"
+import MainComponent from "./views/userfirebase/MainComponent.jsx";
 
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
@@ -209,6 +210,7 @@ var routes = [
 
 { path: "/mcustomer/cust-details", onSideBar: true, name: "M Customer", icon: "nc-icon nc-shop", accessTo: ["admin"], component: marketingCustomerDetails, layout: "/admin" },
 { path: "/Addcustomer/add-customer", onSideBar: true, name: "M Customer", icon: "nc-icon nc-shop", accessTo: ["admin"], component: MarketingAddNewCustomer, layout: "/admin" },
+{ path: "/maincomponent", onSideBar: true, name: "Customer Add", icon: "nc-icon nc-shop", accessTo: ["admin"], component: MainComponent, layout: "/admin" },
   
 
 
