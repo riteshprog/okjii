@@ -72,10 +72,10 @@ class MarketingDashBoard extends React.Component {
       <>
         <div className="content okjii-dashboard marketing-dashbord">
           <div class="customer-filter wallet-row">
-          <div class="col-md-9 col-sm-6 col-5">
+          <div class="col-5">
           <p className=" dashbord-text">Dashboard</p>
                     </div>
-          <div class="filter-search col-md-3 col-sm-6 col-7">
+          <div class="filter-search col-7">
             <p><i class="fa fa-search"></i></p>
             <p><span class="filter-txt"> Filter</span> <img src={filterIcon} alt="" /></p>
           </div>
