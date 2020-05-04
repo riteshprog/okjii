@@ -91,7 +91,7 @@ export default class AllProducts extends React.Component {
 			key: '_id',
 			title: 'Region',
 			dataIndex: 'region',
-			render: (region) => region.length?region.map(type=><Tag color={type.isActive?'green':'red'} >{type.regionId.name}</Tag>):<span>N/A</span>
+			render: (region) => region.length?region.map(type=><Tag color={type.isActive?'green':'red'} >{type.regionId && type.regionId.name}</Tag>):<span>N/A</span>
 		},
 		{
 			key: '_id',
