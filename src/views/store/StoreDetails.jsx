@@ -7,7 +7,7 @@ import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from
 import avatar from '../../assets/img/storeIcon.png';
 import CustomerNavBar from '../customer/CustomerNavBar';
 import CookieHandler from '../../utils/cookieHandler';
-import Axios from "axios";
+import axios from "axios";
 
 export default class StoreDetails extends Component {
   
@@ -31,7 +31,7 @@ export default class StoreDetails extends Component {
   }
 
   getShopList = (url, token) => {
-    Axios.get(url, {
+    axios.get(url, {
       headers: {
         token
       }
@@ -60,7 +60,24 @@ export default class StoreDetails extends Component {
 
   handleOnAddProductClicked = (shopId)=> <Link to='/login'/>
   handleOnDeleteShop = (shopId) => {
-    console.log(shopId)
+    console.log(`erhe`)
+    let url = process.env.REACT_APP_API_URL + '/shop/' + shopId;
+    let token = JSON.parse(CookieHandler.readCookie('token'));
+    axios.delete(url, {
+      headers: {
+        token
+      }
+    }).then(({data})=>{
+      console.log(data);
+      if(data.status){
+        message.success('shop deleted successfully');
+        this.getShopList();
+      }else{
+        message.info(data.message);
+      }
+    }).catch(err=>{
+      console.log(`error while deleting shop`, err);
+    })
   }
 
   render() {
@@ -98,13 +115,13 @@ export default class StoreDetails extends Component {
                 <MDBDropdownMenu  basic className="dropdown-bottom" >
                   <MDBDropdownItem><Link to={`/admin/shops/single/${shop._id}`}>View Details</Link></MDBDropdownItem>
                   <MDBDropdownItem><Link to={`/admin/shops/add-item/${shop._id}`}>Add Product</Link></MDBDropdownItem>
-                  <MDBDropdownItem><Link to="store/product/:storeId">Product</Link></MDBDropdownItem>
+                  <MDBDropdownItem><Link to={`shops/product/${shop._id}`}>Product</Link></MDBDropdownItem>
                   <MDBDropdownItem><Link to="target">Target</Link></MDBDropdownItem>
                   {window.location.hostname.split('.')[0] != 'marketing'?<MDBDropdownItem><Link to="store/wallet">wallet</Link></MDBDropdownItem>:(null)}
                   {window.location.hostname.split('.')[0] != 'marketing'?<MDBDropdownItem>OkkJi Khata</MDBDropdownItem>:(null)}
                   {window.location.hostname.split('.')[0] != 'marketing'?<MDBDropdownItem>Setting</MDBDropdownItem>:(null)}
                   {window.location.hostname.split('.')[0] != 'marketing'?<MDBDropdownItem>Revenue</MDBDropdownItem>:(null)}
-                  {window.location.hostname.split('.')[0] != 'marketing'?<MDBDropdownItem onSelect={()=>this.handleOnDeleteShop(shop._id)}>Delete</MDBDropdownItem>:(null)}
+                  {window.location.hostname.split('.')[0] != 'marketing'?<MDBDropdownItem onClick={()=>this.handleOnDeleteShop(shop._id)}>Delete</MDBDropdownItem>:(null)}
                 </MDBDropdownMenu>
               </MDBDropdown></td>
                 </tr>

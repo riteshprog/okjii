@@ -992,7 +992,7 @@ class MStoreAddNewShop extends React.Component {
                         <Col className="pr-1" md={6}>
                           <FormGroup>
                             <label className="add-shop-label"> Compelete Address </label> {this.renderRequiredIcon()} 
-                            <Input placeholder='Enter Compelete Address' type='text' onChange={e => this.handleOnChange(e, 'address', "basic") } value={this.state.shopData.basic.address} />
+                            <Input placeholder='Enter Complete Address' type='text' onChange={e => this.handleOnChange(e, 'address', "basic") } value={this.state.shopData.basic.address} />
                           </FormGroup>
                         </Col>
                         <Col className="pr-1" md={3}>

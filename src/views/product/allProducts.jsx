@@ -1,10 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 import moment from "moment-timezone";
-import { Switch, notification, message, Table, Tag, Avatar, Input, Select } from "antd";
+import { Switch, notification, message, Table, Tag, Avatar, Input, Select, Pagination } from "antd";
 import { CustomInput, Row, Col, Form, FormGroup, Label, FormText, Modal, ModalHeader, ModalBody, ModalFooter,  InputGroup, InputGroupAddon, Button} from "reactstrap";
 import CookieHandler from '../../utils/cookieHandler';
 import _ from 'lodash'
+
+import AddSingleProduct from './addSingleProduct.jsx';
 
 const {Search} = Input;
 const {Option} = Select;
@@ -14,12 +16,33 @@ export default class AllProducts extends React.Component {
 		super(props);
 		this.state = {
 			editVisibilty: false,
-			createVisibilty: false,
+			addVisibilty: false,
 			currentProduct: {
 				region: []
 			},
+			newProduct: {
+				categoryId: '',
+				subCategoryId: '',
+				brandId: '',
+				category: '',
+				subCategory: '',
+				brand: '',
+				region: [],
+				productName: '',
+				varient: [],
+				productBelongs: [],
+				productType: '',
+				isPackedProduct: '',
+				isActive: '',
+			},
 			allProducts: [],
-			allRegions: []
+			totalProuctsCount: 0,
+			allRegions: [],
+			allBrands: [],
+			allCategories: [],
+			allSubCategories: [],
+			allStoreTypes: []
+				
 		}
 	}
 	componentDidMount() {
@@ -43,20 +66,20 @@ export default class AllProducts extends React.Component {
 		{
 			key: '_id',
 			title: 'Category',
-			dataIndex: 'category',
-			render: (category) => <span>{category}</span>
+			dataIndex: 'categoryId',
+			render: (category) => <span>{category && category.name}</span>
 		},
 		{
 			key: '_id',
 			title: 'Sub Category',
-			dataIndex: 'subCategory',
-			render: (subCategory) => <span>{subCategory}</span>
+			dataIndex: 'subCategoryId',
+			render: (subCategory) => <span>{subCategory && subCategory.name}</span>
 		},
 		{
 			key: '_id',
 			title: 'Brand',
-			dataIndex: 'brand',
-			render: (brand) => <span>{brand}</span>
+			dataIndex: 'brandId',
+			render: (brand) => <span>{brand && brand.name}</span>
 		},
 		{
 			key: '_id',
@@ -105,18 +128,72 @@ export default class AllProducts extends React.Component {
     })
   }
 
-	getAllProducts = ()=>{
+  getAllCategories = () => {
+  	let token = JSON.parse(CookieHandler.readCookie('token'));
+  	axios.get(process.env.REACT_APP_API_URL + "/category", {
+  	  headers: {
+  	    token
+  	  }
+  	})
+  	.then(({ data }) => {
+  	  if (data.status) {
+  	    this.setState({ allCategories: data.allCategories });
+  	  } else {
+  	    console.log("no category found");
+  	  }
+  	})
+  	.catch((err) => {
+  	  console.log(`catch`, err);
+  	});
+  }
+
+  getAllBrands = (query='') => {
+  	let token = JSON.parse(CookieHandler.readCookie('token'));
+  	axios.get(process.env.REACT_APP_API_URL + "/brand" + query, {
+  	  headers: {
+  	    token
+  	  }
+  	})
+  	.then(({ data }) => {
+  	  if (data.status) {
+  	    this.setState({ allBrands: data.allBrands });
+  	  } else {
+  	    console.log("No Brand found");
+  	  }
+  	})
+  	.catch((err) => {
+  	  console.log(`catch`, err);
+  	});
+  }
+
+  getAllStoreType = () => {
+   axios.get(process.env.REACT_APP_API_URL + "/store-type")
+    .then(({ data }) => {
+      if (data.status) {
+        this.setState({ allStoreTypes: data.allStoreTypes });
+      } else {
+        console.log("no Store Type found");
+      }
+    })
+    .catch((err) => {
+      console.log(`catch`, err)
+;    }); 
+  }
+
+
+	getAllProducts = (query = '')=>{
 		let token = JSON.parse(CookieHandler.readCookie('token'));
-		let url = process.env.REACT_APP_API_URL + '/product';
+		let url = process.env.REACT_APP_API_URL + '/product' + query;
 		axios.get(url, {
 			headers: {
 				token
 			}
 		}).then(({data})=>{
 			if(data.status){
-				let allProducts = this.state.allProducts;
+				let {allProducts, totalProuctsCount} = this.state;
 				allProducts = data.allItems;
-				this.setState({allProducts})
+				totalProuctsCount = data.totalItems;
+				this.setState({allProducts, totalProuctsCount})
 			}else{
 				message.info(data.message)
 			}
@@ -124,6 +201,21 @@ export default class AllProducts extends React.Component {
 			console.error(err);
 		})
 	}
+	getAllSubCategories = () => {
+	 axios.get(process.env.REACT_APP_API_URL + "/sub-category")
+	  .then(({ data }) => {
+	    if (data.status) {
+	      console.log(`sub categories`, data)
+	      this.setState({ allSubCategories: data.allSubCategories });
+	    } else {
+	      console.log("no subcategory found");
+	    }
+	  })
+	  .catch((err) => {
+	    console.log(`catch`, err);
+	  }); 
+	}
+
 	getSingleCategoryById = (productId)=> {
 		let token = JSON.parse(CookieHandler.readCookie('token'));
 		let url = process.env.REACT_APP_API_URL + '/product/' + productId;
@@ -157,7 +249,7 @@ export default class AllProducts extends React.Component {
 				this.setState({editVisibilty: !this.state.editVisibilty})
 			}
 		}
-		else if(type == 'create') this.setState({createVisibilty: !this.state.createVisibilty})
+		else if(type == 'add') this.setState({addVisibilty: !this.state.addVisibilty})
 	}
 
 	handleOnSelect = (value, key) => {
@@ -243,6 +335,15 @@ export default class AllProducts extends React.Component {
 		this.setState({currentProduct})
 	}
 
+	handleOnChange = (e, type, from) => {
+
+	}
+
+	handleSearchProduct = (value) => {
+		let q=`?q=${value}`;
+		this.getAllProducts(q);
+	}
+
 	render(){
 		return(
 			<div class='content'>
@@ -252,7 +353,7 @@ export default class AllProducts extends React.Component {
             <p> All Products </p>
           </Col>
           <Col md="2" className="filter-search">
-            <a onClick={()=>this.toggleModal('create')}>
+            <a onClick={()=>this.toggleModal('add')}>
               <span className="filter-txt"> Create</span>
               <span className="pluse-sign">
                 <i class="fas fa-plus"></i>
@@ -261,16 +362,15 @@ export default class AllProducts extends React.Component {
           </Col>
         </Row>
 
-
         <Table 
-	      	pagination={{ pageSize: 50 }}
-	      	loading={this.state.allProducts.length?false:true}
+	      	pagination= { {pageSizeOptions: ['30', '40', '50', '100'], showSizeChanger: false, total: this.state.totalProuctsCount}}
+	      	// loading={this.state.allProducts.length?false:true}
 	      	bordered 
 	      	title={() => <div className='df jcsb'>
 	      		<span>Master Product List</span>
 	      		 <Search
 				      placeholder="Search Product Name/Category/Brand"
-				      onSearch={value => console.log(value)}
+				      onSearch={value => this.handleSearchProduct(value)}
 				      style={{ width: 350 }}
 				    />
 	      		</div>} 
@@ -278,12 +378,25 @@ export default class AllProducts extends React.Component {
 	      	dataSource={this.state.allProducts} 
       	/>
       	{this.renderEditProductModal()}
-			</div>
+      	<AddSingleProduct
+      		addVisibilty={this.state.addVisibilty}
+      		allRegions={this.state.allRegions}
+      		toggleModal={(type)=>this.toggleModal(type)}
+      		getAllCategories={this.getAllCategories}
+      		allCategories={this.state.allCategories}
+      		getAllBrands={this.getAllBrands}
+      		allBrands={this.state.allBrands}
+      		allSubCategories={this.state.allSubCategories}
+      		getAllSubCategories={this.getAllSubCategories}
+      		allStoreTypes={this.state.allStoreTypes}
+      		getAllStoreType={this.getAllStoreType}
+      	/>
+		</div>
 		)
 	}
 
 	renderEditProductModal = () => (
-		<Modal isOpen={this.state.editVisibilty} toggle={()=>this.toggleModal('edit')} >
+	<Modal isOpen={this.state.editVisibilty} toggle={()=>this.toggleModal('edit')} >
       <ModalHeader toggle={()=>this.toggleModal('edit')}>Edit Product</ModalHeader>
       <ModalBody>
         <Form>
