@@ -44,10 +44,11 @@ export default class StoreDetails extends Component {
         console.log('no shop found')
       }
     }).catch(err=>{
-      if(err.response.status  == 401){
+      if(err.response && err.response.status  == 401){
         message.info('Session Expired!, Please Login Again.')
       }else {
-        message.error(`Something went wrong`);
+        console.log(err);
+        // message.error(`Something went wrong`);
       }
     })
   }
@@ -71,7 +72,7 @@ export default class StoreDetails extends Component {
       console.log(data);
       if(data.status){
         message.success('shop deleted successfully');
-        this.getShopList();
+        setTimeout(()=>this.getShopList(), 1000)
       }else{
         message.info(data.message);
       }

@@ -2,13 +2,14 @@ import joi from "joi";
 import React from "react";
 import Axios from "axios";
 import CookieHandler from "../../../utils/cookieHandler";
-import { Steps, Select, Avatar, message } from "antd";
+import { Steps, Select, Avatar, message, TimePicker } from "antd";
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 import { MyFancyComponent, MyMapComponent } from "../../../adminComponents/googleMap/googleMap";
 import { Card, CardHeader, CardBody, CardTitle, Row, Col, Button, Form, FormGroup, Input, CustomInput, InputGroup, InputGroupAddon } from "reactstrap";
 import {MDBIcon} from 'mdbreact';
 import { IdcardFilled, BankOutlined, StarOutlined, UploadOutlined, CheckOutlined } from "@ant-design/icons";
 import Googlemap from '../../../img/retailer/Googlemap.png';
+import moment from 'moment-timezone';
 
 //import "../../retailShop/retailshop.css";
 
@@ -267,7 +268,8 @@ class MStoreAddNewShop extends React.Component {
   };
 
   getAddressFromLatLong = (lat, lng) => {
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyBfvdlr4pZ5UbmIM9KzNSASmDy9pZsLQn0`;
+    console.log(process.env.REACT_APP_GOOGLE_API_KEY)
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyCmbjYzue6gtnR6xDiDT7cOEyz9kCjCcZs`//${process.env.REACT_APP_GOOGLE_API_KEY}`;
     return Axios.get(url)
       .then(({ data }) => {
         let address = "", city = '';
@@ -421,6 +423,8 @@ class MStoreAddNewShop extends React.Component {
       shopData[category][type] = e.target.files[0];
     } else if (type == "storeType") {
       shopData[category][type] = e.target.id;
+    } else if(type == 'storeOpeningTiming' || type == 'storeClosingTiming'){
+      shopData[category][type] = moment(e).format('hh:mm a');
     } else shopData[category][type] = e.target.value;
 
     this.setState({ shopData });
@@ -1159,21 +1163,7 @@ class MStoreAddNewShop extends React.Component {
                                 </div>
                               ) : null}
                               {item.type == "time" ? (
-                                <Input
-                                  placeholder={item.hint}
-                                  type={item.type || "text"}
-                                  onChange={e =>
-                                    this.handleOnChange(
-                                      e,
-                                      item.key,
-                                      "storeCatelogue"
-                                    )
-                                  }
-                                  value={
-                                    this.state.shopData.storeCatelogue[item.key]
-                                  }
-                                />
-                              ) : null}
+                                <TimePicker use12Hours format="h:mm a" onChange={e => this.handleOnChange(e, item.key,"storeCatelogue") } />):(null)}
                             </FormGroup>
                           </Col>
                         ))}
