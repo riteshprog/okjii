@@ -524,7 +524,8 @@ class MStoreAddNewShop extends React.Component {
       .catch(err => {
         this.setState({savingShop: false})
         console.log(`catch err`, err);
-        message.error("Something went wrong!");
+        message.error("Something went wrong!", err);
+        alert(err);
       });
   };
   renderFunc = ({ getInputProps, getSuggestionItemProps, suggestions }) => (
