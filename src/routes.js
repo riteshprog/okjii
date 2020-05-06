@@ -172,6 +172,7 @@ var routes = [
   // { path: "/target", onSideBar: true, name: "Target", icon: "nc-icon nc-spaceship", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
   { path: "/support", onSideBar: true, name: "Support", icon: "nc-icon nc-support-17", component: MarketingCommingSoon, accessTo: ["admin"], layout: "/admin" },
 
+  // { path: "/shops/product/:shopId", onSideBar: false, name: "Product", icon: "fa fa-credit-card", component: ProductDetails, layout: "/admin" },
   { path: "/shops/product/:shopId", onSideBar: false, name: "Product", icon: "fa fa-credit-card", component: ShopProductsList, layout: "/admin" },
   { path: "/messages", onSideBar: true, name: "Messages", icon: "fa fa-pencil-square-o", component: MessagesPage, accessTo: ["admin"], layout: "/admin" },
 

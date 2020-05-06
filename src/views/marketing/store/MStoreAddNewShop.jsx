@@ -406,6 +406,15 @@ class MStoreAddNewShop extends React.Component {
       }
     }
   };
+  uploadImg = (file) => {
+    let formData = new FormData();
+    formData.append('image', file);
+    return axios.post(process.env.REACT_APP_API_URL + '/utils/upload-single-img', formData).then(data=>{
+      return data.data;
+    }).catch(err=>{
+      return err;
+    })
+  }
 
   handleOnChange = (e, type, category) => {
     let shopData = this.state.shopData;
@@ -417,10 +426,30 @@ class MStoreAddNewShop extends React.Component {
       type == "tradeLicense" ||
       type == "waltLicense"
     ) {
-      shopData[category][type] = e.target.files[0];
+      // shopData[category][type] = e.target.files[0];
+      this.uploadImg(e.target.files[0]).then(data=>{
+        if(data.status){
+          shopData[category]['uploadDocuments'].push({ docName: type, docUrl: data.imgUrl })
+          this.setState({shopData})
+        }else{
+          message.info('upload falid, try again');
+        }
+      }).catch(err=>{
+        message.info('upload falid, try again');
+      })
     } else if (type == "ownerPhoto") {
+
       this.setState({ hasOwnerAvtar: true });
-      shopData[category][type] = e.target.files[0];
+      // shopData[category][type] = e.target.files[0];
+      this.uploadImg(e.target.files[0]).then(data=>{
+        if(data.status){
+          shopData[category][type] = data.imgUrl
+        }else{
+          message.info('upload falid, try again');
+        }
+      }).catch(err=>{
+        message.info('upload falid, try again');
+      })
     } else if (type == "storeType") {
       shopData[category][type] = e.target.id;
     } else if(type == 'storeOpeningTiming' || type == 'storeClosingTiming'){
@@ -439,6 +468,7 @@ class MStoreAddNewShop extends React.Component {
       this.setState({ errorObj });
     }
   };
+
 
   handleOnSelect = (e, type, category) => {
     type == "ownerPhoto" && e.preventDefault();
@@ -473,79 +503,58 @@ class MStoreAddNewShop extends React.Component {
   };
 
   handleOnSave = () => {
-    message.info(`saving shop`)
     this.setState({savingShop: true})
-    let data = new FormData();
+    // let data = new FormData();
     const shopData = this.state.shopData;
-    data.append("basic", JSON.stringify(shopData.basic));
-    data.set("bankDetails", JSON.stringify(shopData.bankDetails));
-    data.set("storeCatelogue", JSON.stringify(shopData.storeCatelogue));
+    
+    // data.append("basic", JSON.stringify(shopData.basic));
+    // data.set("bankDetails", JSON.stringify(shopData.bankDetails));
+    // data.set("storeCatelogue", JSON.stringify(shopData.storeCatelogue));
 
-    shopData.basic.ownerPhoto &&
-      data.append("ownerPhoto", shopData.basic.ownerPhoto);
+    // shopData.basic.ownerPhoto &&
+    //   data.append("ownerPhoto", shopData.basic.ownerPhoto);
 
-    shopData.basic.businessEntityIncorporation &&
-      data.append(
-        "businessEntityIncorporation",
-        shopData.basic.businessEntityIncorporation
-      );
-    shopData.basic.fssaiLicenceAndRegistration &&
-      data.append(
-        "fssaiLicenceAndRegistration",
-        shopData.basic.fssaiLicenceAndRegistration
-      );
-    shopData.basic.gstRegistration &&
-      data.append("gstRegistration", shopData.basic.gstRegistration);
-    shopData.basic.tradeLicense &&
-      data.append("tradeLicense", shopData.basic.tradeLicense);
-    shopData.basic.waltLicense &&
-      data.append("waltLicense", shopData.basic.waltLicense);
+    // shopData.basic.businessEntityIncorporation &&
+    //   data.append(
+    //     "businessEntityIncorporation",
+    //     shopData.basic.businessEntityIncorporation
+    //   );
+    // shopData.basic.fssaiLicenceAndRegistration &&
+    //   data.append(
+    //     "fssaiLicenceAndRegistration",
+    //     shopData.basic.fssaiLicenceAndRegistration
+    //   );
+    // shopData.basic.gstRegistration &&
+    //   data.append("gstRegistration", shopData.basic.gstRegistration);
+    // shopData.basic.tradeLicense &&
+    //   data.append("tradeLicense", shopData.basic.tradeLicense);
+    // shopData.basic.waltLicense &&
+    //   data.append("waltLicense", shopData.basic.waltLicense);
 
-    let {userInfo, _id} = JSON.parse(CookieHandler.readCookie('userData'));
     let token = JSON.parse(CookieHandler.readCookie('token'))
-    console.log(`data`, data, `shopData`, shopData, `...data`, ...data);    
-    message.info(`now calling post api`)
-    const url = process.env.REACT_APP_API_URL + "/shop";
-    const headers = {
-      headers: {
-        Accept: "application/json",
-        token
-      }
+    console.log('shopData', shopData);
+    axios.post(process.env.REACT_APP_API_URL + "/shop", shopData, {
+    headers: {
+      Accept: "application/json",
+      token
     }
-    fetch({
-      method: 'POST',
-      url,
-      headers
-    }).then(response => response.json())
-    .then(data=>{
-      alert(data);
-      console.log(data);
-    }).catch(err=>{
-      console.log(err)
-      alert(err);
-    })
-  {/*axios.post(process.env.REACT_APP_API_URL + "/shop", data, {
-      headers: {
-        Accept: "application/json",
-        token
-      }
     }).then(({ data }) => {
-        this.setState({savingShop: false})
-        if (data.status) {
-          message.success("Shop saved successfully");
-          setTimeout(() => {
-            window.location.pathname = "admin/shops";
-          }, 1000);
-        } else {
-          alert(`inside then else `, data);
-          message.error(data.errorMessage);
-        }
-      }).catch(err => {
-        this.setState({savingShop: false})
-        console.log(`catch err`, err);
-        message.error("Something went wrong!", err);
-        alert(err);
-      });*/}
+    this.setState({savingShop: false})
+    if (data.status) {
+      message.success("Shop saved successfully");
+      setTimeout(() => {
+        window.location.pathname = "admin/shops";
+      }, 1000);
+    } else {
+      alert(`inside then else `, data);
+      message.error(data.errorMessage);
+    }
+  }).catch(err => {
+    this.setState({savingShop: false})
+    console.log(`catch err`, err);
+    message.error("Something went wrong!", err);
+    alert(err);
+  });
   };
   renderFunc = ({ getInputProps, getSuggestionItemProps, suggestions }) => (
     <div className="autocomplete-root">
