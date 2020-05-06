@@ -427,9 +427,11 @@ class MStoreAddNewShop extends React.Component {
       type == "waltLicense"
     ) {
       // shopData[category][type] = e.target.files[0];
+      message.info('uploading...')
       this.uploadImg(e.target.files[0]).then(data=>{
         if(data.status){
           shopData[category]['uploadDocuments'].push({ docName: type, docUrl: data.imgUrl })
+          message.success('image uploaded...')
           this.setState({shopData})
         }else{
           message.info('upload falid, try again');
