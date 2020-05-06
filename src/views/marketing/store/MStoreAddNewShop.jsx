@@ -332,7 +332,7 @@ class MStoreAddNewShop extends React.Component {
         OwnerPicture: joi.any(),
         uploadDocuments: joi.any(),
         otp: joi.any(),
-        ownerPhoto: joi.any(),
+        ownerPhoto: joi.string().required().label("Owner Image"),
         shopLocation: joi.any(),
         state: joi.any(),
         distirct: joi.any(),
@@ -431,21 +431,23 @@ class MStoreAddNewShop extends React.Component {
       this.uploadImg(e.target.files[0]).then(data=>{
         if(data.status){
           shopData[category]['uploadDocuments'].push({ docName: type, docUrl: data.imgUrl })
-          message.success('image uploaded...')
           this.setState({shopData})
+          message.success('image uploaded')
         }else{
+          console.log(data);
           message.info('upload falid, try again');
         }
       }).catch(err=>{
+        console.log(err);
         message.info('upload falid, try again');
       })
     } else if (type == "ownerPhoto") {
-
-      this.setState({ hasOwnerAvtar: true });
-      // shopData[category][type] = e.target.files[0];
+      message.info('uploading...')
       this.uploadImg(e.target.files[0]).then(data=>{
         if(data.status){
+          message.success('image uploaded')
           shopData[category][type] = data.imgUrl
+          this.setState({ hasOwnerAvtar: true });
         }else{
           message.info('upload falid, try again');
         }
@@ -789,8 +791,7 @@ class MStoreAddNewShop extends React.Component {
                                 <InputGroup>
                                   <span className="form-control">
                                     {this.state.hasOwnerAvtar
-                                      ? this.state.shopData.basic.ownerPhoto
-                                          .name
+                                      ? 'Image Uploaded Successfully'
                                       : "No File Selected"}
                                   </span>
                                   <InputGroupAddon>
@@ -947,6 +948,11 @@ class MStoreAddNewShop extends React.Component {
                               })}
                             </Select>
                             <div>
+                              {this.state.shopData.basic.uploadDocuments.map((doc, index)=>(
+                              <span className="badge badge-primary m-2">
+                                {doc.docName}
+                              </span>
+                              ))}
                               {this.state.shopData.basic.hasOwnProperty(
                                 "businessEntityIncorporation"
                               ) && (
