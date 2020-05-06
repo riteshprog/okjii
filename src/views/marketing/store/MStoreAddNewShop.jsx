@@ -505,13 +505,31 @@ class MStoreAddNewShop extends React.Component {
     let token = JSON.parse(CookieHandler.readCookie('token'))
     console.log(`data`, data, `shopData`, shopData, `...data`, ...data);    
     message.info(`now calling post api`)
-    axios.post(process.env.REACT_APP_API_URL + "/shop", data, {
+    const url = process.env.REACT_APP_API_URL + "/shop";
+    const headers = {
       headers: {
         Accept: "application/json",
         token
       }
+    }
+    fetch({
+      method: 'POST',
+      url,
+      headers
+    }).then(response => response.json())
+    .then(data=>{
+      alert(data);
+      console.log(data);
+    }).catch(err=>{
+      console.log(err)
+      alert(err);
     })
-      .then(({ data }) => {
+  {/*axios.post(process.env.REACT_APP_API_URL + "/shop", data, {
+      headers: {
+        Accept: "application/json",
+        token
+      }
+    }).then(({ data }) => {
         this.setState({savingShop: false})
         if (data.status) {
           message.success("Shop saved successfully");
@@ -522,13 +540,12 @@ class MStoreAddNewShop extends React.Component {
           alert(`inside then else `, data);
           message.error(data.errorMessage);
         }
-      })
-      .catch(err => {
+      }).catch(err => {
         this.setState({savingShop: false})
         console.log(`catch err`, err);
         message.error("Something went wrong!", err);
         alert(err);
-      });
+      });*/}
   };
   renderFunc = ({ getInputProps, getSuggestionItemProps, suggestions }) => (
     <div className="autocomplete-root">
