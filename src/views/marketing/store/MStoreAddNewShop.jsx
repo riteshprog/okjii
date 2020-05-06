@@ -1,6 +1,6 @@
 import joi from "joi";
 import React from "react";
-import Axios from "axios";
+import axios from "axios";
 import CookieHandler from "../../../utils/cookieHandler";
 import { Steps, Select, Avatar, message, TimePicker } from "antd";
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from "react-places-autocomplete";
@@ -270,7 +270,7 @@ class MStoreAddNewShop extends React.Component {
   getAddressFromLatLong = (lat, lng) => {
     console.log(process.env.REACT_APP_GOOGLE_API_KEY)
     const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyCmbjYzue6gtnR6xDiDT7cOEyz9kCjCcZs`//${process.env.REACT_APP_GOOGLE_API_KEY}`;
-    return Axios.get(url)
+    return axios.get(url)
       .then(({ data }) => {
         let address = "", city = '';
         if (data.results.length) {
@@ -473,10 +473,10 @@ class MStoreAddNewShop extends React.Component {
   };
 
   handleOnSave = () => {
+    message.info(`saving shop`)
     this.setState({savingShop: true})
     let data = new FormData();
     const shopData = this.state.shopData;
-
     data.append("basic", JSON.stringify(shopData.basic));
     data.set("bankDetails", JSON.stringify(shopData.bankDetails));
     data.set("storeCatelogue", JSON.stringify(shopData.storeCatelogue));
@@ -503,8 +503,9 @@ class MStoreAddNewShop extends React.Component {
 
     let {userInfo, _id} = JSON.parse(CookieHandler.readCookie('userData'));
     let token = JSON.parse(CookieHandler.readCookie('token'))
-      
-    Axios.post(process.env.REACT_APP_API_URL + "/shop", data, {
+    console.log(`data`, data, `shopData`, shopData, `...data`, ...data);    
+    message.info(`now calling post api`)
+    axios.post(process.env.REACT_APP_API_URL + "/shop", data, {
       headers: {
         Accept: "application/json",
         token
@@ -518,6 +519,7 @@ class MStoreAddNewShop extends React.Component {
             window.location.pathname = "admin/shops";
           }, 1000);
         } else {
+          alert(`inside then else `, data);
           message.error(data.errorMessage);
         }
       })
@@ -596,14 +598,14 @@ class MStoreAddNewShop extends React.Component {
   };
   handleGetOtp = e => {
     e.preventDefault();
-    Axios.get(
+    axios.get(
       process.env.REACT_APP_API_URL +
         "/utils/check-mobile/" +
         this.state.shopData.basic.mobileNumber
     )
       .then(({ data }) => {
         if (data.status) {
-          Axios.get(
+          axios.get(
             process.env.REACT_APP_API_URL +
               "/otp/send/" +
               this.state.shopData.basic.mobileNumber
@@ -626,7 +628,7 @@ class MStoreAddNewShop extends React.Component {
       mobile: this.state.shopData.basic.mobileNumber,
       otp: this.state.shopData.basic.otp
     };
-    Axios.post(process.env.REACT_APP_API_URL + "/otp/verify", body)
+    axios.post(process.env.REACT_APP_API_URL + "/otp/verify", body)
       .then(({ data }) => {
         if (data.type == "success") {
           message.success("OTP Verified");
