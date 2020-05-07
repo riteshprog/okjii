@@ -39,7 +39,7 @@ class AddNewShop extends React.Component {
     Axios.get(process.env.REACT_APP_API_URL + "/shop/" + params.shopId)
       .then(({ data }) => {
         if (data.status) {
-          this.setState({ shopData: data.shopData });
+          this.setState({ shopData: data.data.shopData });
         } else {
           message.error(data.errorMessage);
         }
@@ -70,7 +70,7 @@ class AddNewShop extends React.Component {
                       <span className="text-green">OKK</span>P0001
                     </p>
                   </Col>
-                  {window.location.hostname.split('.')[0] == 'Marketing'?(<Col className='df jcc aic' sm={2}>
+                  {window.location.hostname.split('.')[0] != 'marketing'?(<Col className='df jcc aic' sm={2}>
                     <a
                       href={
                         "/admin/shops/single/edit/" + this.state.shopData._id

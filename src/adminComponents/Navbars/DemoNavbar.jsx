@@ -163,7 +163,7 @@ class Header extends React.Component {
               <InputGroup className="no-border">
               <InputGroupAddon addonType="prepend">
                   <InputGroupText>
-                  <i class="fas fa-search" />
+                  <i className="fas fa-search" />
                   </InputGroupText>
                 </InputGroupAddon>
                 <Input className='no-border' placeholder="Search..." />
@@ -171,9 +171,9 @@ class Header extends React.Component {
             </form>
             <Nav navbar>
             <NavItem className="nav-btn">
-              <Link to="#" className="nav-link"><i class="far fa-question-circle"></i></Link>
+              <Link to="#" className="nav-link"><i className="far fa-question-circle"></i></Link>
               <Link to="#" className="nav-link"><MDBIcon far icon="bell" /></Link>
-              <Link title='Add New Shop' to="/admin/mshops/add-new-shop" className="nav-link"><img src={Add} alt="" className="Add" /></Link> <Link to="/" className="nav-link"><MDBIcon icon="dharmachakra" /></Link>
+              <Link title='Add New Shop' to="/admin/shops/add-new-shop" className="nav-link"><img src={Add} alt="" className="Add" /></Link> <Link to="/" className="nav-link"><MDBIcon icon="dharmachakra" /></Link>
             </NavItem>
 
 

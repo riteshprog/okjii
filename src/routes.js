@@ -4,7 +4,7 @@ import MarketingDashBoard from "./views/MarketingDashBoard.jsx";
 import RetailerShop from "./views/retailShop/retailerShop.jsx";
 
 import AddNewShop from "./views/retailShop/addNewShop.jsx";
-import SingleShop from "./views/retailShop/./viewSingleShop.jsx";
+import SingleShop from "./views/retailShop/viewSingleShop.jsx";
 import { MyFancyComponent } from "./adminComponents/googleMap/googleMap";
 import AddProductToShop from "./views/retailShop/addItemsToShop";
 import PreReg from "./views/preRegistration/preReg";
@@ -29,6 +29,7 @@ import BlogDetails from "./views/blog/BlogDetails";
 import BlogAdd from "./views/blog/BlogAdd.jsx";
 
 import StoreDetails from "./views/store/StoreDetails.jsx";
+import ShopProductsList from "./views/retailShop/shopProductsList.jsx";
 import StoreWallet from "./views/store/StoreWallet.jsx";
 import ViewStoreDetails from "./views/store/ViewStoreDetails.jsx";
 import storeWalletPreSettlement from "./views/store/storeWalletPreSettlement.jsx";
@@ -93,12 +94,13 @@ import LanuageSettings from "./views/settings/languageSetting.jsx";
 import Region from './views/Region/region';
 import marketingCustomerDetails from "./views/marketing/customers/marketingCustomerDetails.jsx"
 import MarketingAddNewCustomer from "./views/marketing/customers/MarketingAddNewCustomer.jsx"
+//import MainComponent from "./views/userfirebase/MainComponent.jsx";
 
 var routes = [
   /* --------------------Side Bar Routes Starts-------------------- */
 
   { path: "/dashboard", onSideBar: true, name: "Dashboard", icon: "nc-icon nc-bank", component: Dashboard, layout: "/admin" },
-  { path: "/market-dashboard", onSideBar: true, name: "Marketing Dashboard", icon: "nc-icon nc-bank", component: MarketingDashBoard, layout: "/admin" },
+  { path: "/market-dashboard", onSideBar: true, name: "Home", icon: "nc-icon nc-bank", component: MarketingDashBoard, layout: "/admin" },
   
   
   // { path: "/shops", onSideBar: true, name: "Store", icon: "nc-icon nc-shop", accessTo: ["admin", "market"], component: RetailerShop, layout: "/admin" },
@@ -107,7 +109,7 @@ var routes = [
   { path: "/new-customer", onSideBar: true, name: "New Customer", icon: "far fa-user", component: MarketingCustomer, accessTo: ["admin"], layout: "/admin" },
   
   { path: "/region", onSideBar: true, name: "Region", icon: "fa fa-globe", component: Region, accessTo: ["admin"], layout: "/admin" },
-  { path: "/profucts", onSideBar: true, name: "Products", icon: "fa fa-globe", component: AllProducts, accessTo: ["admin"], layout: "/admin" },
+  { path: "/products", onSideBar: true, name: "Products", icon: "fas fa-box-open", component: AllProducts, accessTo: ["admin"], layout: "/admin" },
 
   // notification routes
   { path: "/notification", name: "Push Notification", onSideBar:false, icon: "far fa-bell", component: Notification, layout: "/admin"},
@@ -168,10 +170,10 @@ var routes = [
   { path: "/location", onSideBar: true, name: "Location", icon: "nc-icon nc-map-big", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
   { path: "/incentive", onSideBar: true, name: "Incentive", icon: "nc-icon nc-money-coins", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
   // { path: "/target", onSideBar: true, name: "Target", icon: "nc-icon nc-spaceship", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
-  { path: "/support", onSideBar: true, name: "Support", icon: "nc-icon nc-support-17", component: CommingSoon, accessTo: ["admin"], layout: "/admin" },
+  { path: "/support", onSideBar: true, name: "Support", icon: "nc-icon nc-support-17", component: MarketingCommingSoon, accessTo: ["admin"], layout: "/admin" },
 
-  { path: "/store/product/:storeId", onSideBar: false, name: "Product", icon: "fa fa-credit-card", component: ProductDetails, layout: "/admin" },
-
+  // { path: "/shops/product/:shopId", onSideBar: false, name: "Product", icon: "fa fa-credit-card", component: ProductDetails, layout: "/admin" },
+  { path: "/shops/product/:shopId", onSideBar: false, name: "Product", icon: "fa fa-credit-card", component: ShopProductsList, layout: "/admin" },
   { path: "/messages", onSideBar: true, name: "Messages", icon: "fa fa-pencil-square-o", component: MessagesPage, accessTo: ["admin"], layout: "/admin" },
 
   { path: "/store/wallet", onSideBar: false, name: "Wallet", icon: "fa fa-money", accessTo: ["admin"], component: StoreWallet, layout: "/admin" },
@@ -206,10 +208,10 @@ var routes = [
 
 { path: "/mstore/storeviewDdetails/:mstoreId", onSideBar: false, name: "Store Details", icon: "nc-icon nc-shop", component: MStoreViewDetails, layout: "/admin" },
 { path: "/mproduct/product/:mprodId", onSideBar: false, name: "Add Product", icon: "nc-icon nc-shop", component: MStoreAddProduct, layout: "/admin" },
-{ path: "/mshops/add-new-shop", name: "Add New Shop", icon: "nc-icon nc-shop", component: MStoreAddNewShop, accessTo: ["admin", "market"], layout: "/admin" },
+{ path: "/shops/add-new-shop", name: "Add New Shop", icon: "nc-icon nc-shop", component: MStoreAddNewShop, accessTo: ["admin", "market"], layout: "/admin" },
 
-{ path: "/mcustomer/cust-details", onSideBar: true, name: "M Customer", icon: "nc-icon nc-shop", accessTo: ["admin"], component: marketingCustomerDetails, layout: "/admin" },
-{ path: "/Addcustomer/add-customer", onSideBar: true, name: "M Customer", icon: "nc-icon nc-shop", accessTo: ["admin"], component: MarketingAddNewCustomer, layout: "/admin" },
+// { path: "/mcustomer/cust-details", onSideBar: true, name: "M Customer", icon: "nc-icon nc-shop", accessTo: ["admin"], component: marketingCustomerDetails, layout: "/admin" },
+{ path: "/Addcustomer/add-customer", onSideBar: false, name: "M Customer- Add New Customer", icon: "nc-icon nc-shop", accessTo: ["admin"], component: MarketingAddNewCustomer, layout: "/admin" },
   
 
 

@@ -1,14 +1,15 @@
 import joi from "joi";
 import React from "react";
-import Axios from "axios";
+import axios from "axios";
 import CookieHandler from "../../../utils/cookieHandler";
-import { Steps, Select, Avatar, message } from "antd";
+import { Steps, Select, Avatar, message, TimePicker } from "antd";
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 import { MyFancyComponent, MyMapComponent } from "../../../adminComponents/googleMap/googleMap";
 import { Card, CardHeader, CardBody, CardTitle, Row, Col, Button, Form, FormGroup, Input, CustomInput, InputGroup, InputGroupAddon } from "reactstrap";
 import {MDBIcon} from 'mdbreact';
 import { IdcardFilled, BankOutlined, StarOutlined, UploadOutlined, CheckOutlined } from "@ant-design/icons";
 import Googlemap from '../../../img/retailer/Googlemap.png';
+import moment from 'moment-timezone';
 
 //import "../../retailShop/retailshop.css";
 
@@ -267,8 +268,9 @@ class MStoreAddNewShop extends React.Component {
   };
 
   getAddressFromLatLong = (lat, lng) => {
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyBfvdlr4pZ5UbmIM9KzNSASmDy9pZsLQn0`;
-    return Axios.get(url)
+    console.log(process.env.REACT_APP_GOOGLE_API_KEY)
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyCmbjYzue6gtnR6xDiDT7cOEyz9kCjCcZs`//${process.env.REACT_APP_GOOGLE_API_KEY}`;
+    return axios.get(url)
       .then(({ data }) => {
         let address = "", city = '';
         if (data.results.length) {
@@ -330,7 +332,7 @@ class MStoreAddNewShop extends React.Component {
         OwnerPicture: joi.any(),
         uploadDocuments: joi.any(),
         otp: joi.any(),
-        ownerPhoto: joi.any(),
+        ownerPhoto: joi.string().allow('').label("Owner Image"),
         shopLocation: joi.any(),
         state: joi.any(),
         distirct: joi.any(),
@@ -379,8 +381,8 @@ class MStoreAddNewShop extends React.Component {
     } else {
       if (this.state.currentStep == 0) {
         let {basic} = this.state.shopData;
-        if(!this.state.hasOwnerAvtar) message.error("Shop Owner Image is Required");
-        else if (!basic.country) message.error("Shop Location is Required");
+        // if(!this.state.hasOwnerAvtar) message.error("Shop Owner Image is Required");
+        if (!basic.country) message.error("Shop Location is Required");
         else if (!this.state.otpVerified) message.error("Please Verify Your Mobile Number");
         else
           this.setState({
@@ -404,6 +406,15 @@ class MStoreAddNewShop extends React.Component {
       }
     }
   };
+  uploadImg = (file) => {
+    let formData = new FormData();
+    formData.append('image', file);
+    return axios.post(process.env.REACT_APP_API_URL + '/utils/upload-single-img', formData).then(data=>{
+      return data.data;
+    }).catch(err=>{
+      return err;
+    })
+  }
 
   handleOnChange = (e, type, category) => {
     let shopData = this.state.shopData;
@@ -415,12 +426,38 @@ class MStoreAddNewShop extends React.Component {
       type == "tradeLicense" ||
       type == "waltLicense"
     ) {
-      shopData[category][type] = e.target.files[0];
+      // shopData[category][type] = e.target.files[0];
+      message.info('uploading...')
+      this.uploadImg(e.target.files[0]).then(data=>{
+        if(data.status){
+          shopData[category]['uploadDocuments'].push({ docName: type, docUrl: data.imgUrl })
+          this.setState({shopData})
+          message.success('image uploaded')
+        }else{
+          console.log(data);
+          message.info('upload falid, try again');
+        }
+      }).catch(err=>{
+        console.log(err);
+        message.info('upload falid, try again');
+      })
     } else if (type == "ownerPhoto") {
-      this.setState({ hasOwnerAvtar: true });
-      shopData[category][type] = e.target.files[0];
+      message.info('uploading...')
+      this.uploadImg(e.target.files[0]).then(data=>{
+        if(data.status){
+          message.success('image uploaded')
+          shopData[category][type] = data.imgUrl
+          this.setState({ hasOwnerAvtar: true });
+        }else{
+          message.info('upload falid, try again');
+        }
+      }).catch(err=>{
+        message.info('upload falid, try again');
+      })
     } else if (type == "storeType") {
       shopData[category][type] = e.target.id;
+    } else if(type == 'storeOpeningTiming' || type == 'storeClosingTiming'){
+      shopData[category][type] = moment(e).format('hh:mm a');
     } else shopData[category][type] = e.target.value;
 
     this.setState({ shopData });
@@ -435,6 +472,7 @@ class MStoreAddNewShop extends React.Component {
       this.setState({ errorObj });
     }
   };
+
 
   handleOnSelect = (e, type, category) => {
     type == "ownerPhoto" && e.preventDefault();
@@ -470,58 +508,57 @@ class MStoreAddNewShop extends React.Component {
 
   handleOnSave = () => {
     this.setState({savingShop: true})
-    let data = new FormData();
+    // let data = new FormData();
     const shopData = this.state.shopData;
+    
+    // data.append("basic", JSON.stringify(shopData.basic));
+    // data.set("bankDetails", JSON.stringify(shopData.bankDetails));
+    // data.set("storeCatelogue", JSON.stringify(shopData.storeCatelogue));
 
-    data.append("basic", JSON.stringify(shopData.basic));
-    data.set("bankDetails", JSON.stringify(shopData.bankDetails));
-    data.set("storeCatelogue", JSON.stringify(shopData.storeCatelogue));
+    // shopData.basic.ownerPhoto &&
+    //   data.append("ownerPhoto", shopData.basic.ownerPhoto);
 
-    shopData.basic.ownerPhoto &&
-      data.append("ownerPhoto", shopData.basic.ownerPhoto);
+    // shopData.basic.businessEntityIncorporation &&
+    //   data.append(
+    //     "businessEntityIncorporation",
+    //     shopData.basic.businessEntityIncorporation
+    //   );
+    // shopData.basic.fssaiLicenceAndRegistration &&
+    //   data.append(
+    //     "fssaiLicenceAndRegistration",
+    //     shopData.basic.fssaiLicenceAndRegistration
+    //   );
+    // shopData.basic.gstRegistration &&
+    //   data.append("gstRegistration", shopData.basic.gstRegistration);
+    // shopData.basic.tradeLicense &&
+    //   data.append("tradeLicense", shopData.basic.tradeLicense);
+    // shopData.basic.waltLicense &&
+    //   data.append("waltLicense", shopData.basic.waltLicense);
 
-    shopData.basic.businessEntityIncorporation &&
-      data.append(
-        "businessEntityIncorporation",
-        shopData.basic.businessEntityIncorporation
-      );
-    shopData.basic.fssaiLicenceAndRegistration &&
-      data.append(
-        "fssaiLicenceAndRegistration",
-        shopData.basic.fssaiLicenceAndRegistration
-      );
-    shopData.basic.gstRegistration &&
-      data.append("gstRegistration", shopData.basic.gstRegistration);
-    shopData.basic.tradeLicense &&
-      data.append("tradeLicense", shopData.basic.tradeLicense);
-    shopData.basic.waltLicense &&
-      data.append("waltLicense", shopData.basic.waltLicense);
-
-    let {userInfo, _id} = JSON.parse(CookieHandler.readCookie('userData'));
     let token = JSON.parse(CookieHandler.readCookie('token'))
-      
-    Axios.post(process.env.REACT_APP_API_URL + "/shop", data, {
-      headers: {
-        Accept: "application/json",
-        token
-      }
-    })
-      .then(({ data }) => {
-        this.setState({savingShop: false})
-        if (data.status) {
-          message.success("Shop saved successfully");
-          setTimeout(() => {
-            window.location.pathname = "admin/shops";
-          }, 1000);
-        } else {
-          message.error(data.errorMessage);
-        }
-      })
-      .catch(err => {
-        this.setState({savingShop: false})
-        console.log(`catch err`, err);
-        message.error("Something went wrong!");
-      });
+    console.log('shopData', shopData);
+    axios.post(process.env.REACT_APP_API_URL + "/shop", shopData, {
+    headers: {
+      Accept: "application/json",
+      token
+    }
+    }).then(({ data }) => {
+    this.setState({savingShop: false})
+    if (data.status) {
+      message.success("Shop saved successfully");
+      setTimeout(() => {
+        window.location.pathname = "admin/shops";
+      }, 1000);
+    } else {
+      alert(`inside then else `, data);
+      message.error(data.errorMessage);
+    }
+  }).catch(err => {
+    this.setState({savingShop: false})
+    console.log(`catch err`, err);
+    message.error("Something went wrong!", err);
+    alert(err);
+  });
   };
   renderFunc = ({ getInputProps, getSuggestionItemProps, suggestions }) => (
     <div className="autocomplete-root">
@@ -591,14 +628,14 @@ class MStoreAddNewShop extends React.Component {
   };
   handleGetOtp = e => {
     e.preventDefault();
-    Axios.get(
+    axios.get(
       process.env.REACT_APP_API_URL +
         "/utils/check-mobile/" +
         this.state.shopData.basic.mobileNumber
     )
       .then(({ data }) => {
         if (data.status) {
-          Axios.get(
+          axios.get(
             process.env.REACT_APP_API_URL +
               "/otp/send/" +
               this.state.shopData.basic.mobileNumber
@@ -621,7 +658,7 @@ class MStoreAddNewShop extends React.Component {
       mobile: this.state.shopData.basic.mobileNumber,
       otp: this.state.shopData.basic.otp
     };
-    Axios.post(process.env.REACT_APP_API_URL + "/otp/verify", body)
+    axios.post(process.env.REACT_APP_API_URL + "/otp/verify", body)
       .then(({ data }) => {
         if (data.type == "success") {
           message.success("OTP Verified");
@@ -649,7 +686,7 @@ class MStoreAddNewShop extends React.Component {
               {/* onClick={()=>this.changeStep(0) */}
               <Step
                 title={
-                  <span style={{ lineHeight: 2.5 }} className="step box">
+                  <span style={{ lineHeight: 2.5 }} className={this.state.currentStep == 0?'step box':'step box-white'}>
                     Store Details
                   </span>
                 }
@@ -657,7 +694,7 @@ class MStoreAddNewShop extends React.Component {
               />
               <Step
                 title={
-                  <span style={{ lineHeight: 2.5 }} className="step box-white">
+                  <span style={{ lineHeight: 2.5 }} className={this.state.currentStep == 1?'step box':'step box-white'}>
                     Bank Details
                   </span>
                 }
@@ -665,7 +702,7 @@ class MStoreAddNewShop extends React.Component {
               />
               <Step
                 title={
-                  <span style={{ lineHeight: 2.5 }} className="step box-white">
+                  <span style={{ lineHeight: 2.5 }} className={this.state.currentStep == 2?'step box':'step box-white'}>
                     Store Catelog
                   </span>
                 }
@@ -754,8 +791,7 @@ class MStoreAddNewShop extends React.Component {
                                 <InputGroup>
                                   <span className="form-control">
                                     {this.state.hasOwnerAvtar
-                                      ? this.state.shopData.basic.ownerPhoto
-                                          .name
+                                      ? 'Image Uploaded Successfully'
                                       : "No File Selected"}
                                   </span>
                                   <InputGroupAddon>
@@ -912,6 +948,11 @@ class MStoreAddNewShop extends React.Component {
                               })}
                             </Select>
                             <div>
+                              {this.state.shopData.basic.uploadDocuments.map((doc, index)=>(
+                              <span className="badge badge-primary m-2">
+                                {doc.docName}
+                              </span>
+                              ))}
                               {this.state.shopData.basic.hasOwnProperty(
                                 "businessEntityIncorporation"
                               ) && (
@@ -992,7 +1033,7 @@ class MStoreAddNewShop extends React.Component {
                         <Col className="pr-1" md={6}>
                           <FormGroup>
                             <label className="add-shop-label"> Compelete Address </label> {this.renderRequiredIcon()} 
-                            <Input placeholder='Enter Compelete Address' type='text' onChange={e => this.handleOnChange(e, 'address', "basic") } value={this.state.shopData.basic.address} />
+                            <Input placeholder='Enter Complete Address' type='text' onChange={e => this.handleOnChange(e, 'address', "basic") } value={this.state.shopData.basic.address} />
                           </FormGroup>
                         </Col>
                         <Col className="pr-1" md={3}>
@@ -1159,21 +1200,7 @@ class MStoreAddNewShop extends React.Component {
                                 </div>
                               ) : null}
                               {item.type == "time" ? (
-                                <Input
-                                  placeholder={item.hint}
-                                  type={item.type || "text"}
-                                  onChange={e =>
-                                    this.handleOnChange(
-                                      e,
-                                      item.key,
-                                      "storeCatelogue"
-                                    )
-                                  }
-                                  value={
-                                    this.state.shopData.storeCatelogue[item.key]
-                                  }
-                                />
-                              ) : null}
+                                <TimePicker use12Hours format="h:mm a" onChange={e => this.handleOnChange(e, item.key,"storeCatelogue") } />):(null)}
                             </FormGroup>
                           </Col>
                         ))}
@@ -1224,7 +1251,7 @@ class MStoreAddNewShop extends React.Component {
                   disabled={this.state.savingShop?true:false}
                   onClick={this.handleOnSave}
                 > 
-                  Back
+                  Save
                 </Button>
               </div>
             ) : (
@@ -1235,7 +1262,7 @@ class MStoreAddNewShop extends React.Component {
                   type="submit"
                   onClick={() => this.changeStep(this.state.currentStep + 1)}
                 >
-                  Save &amp; Next
+                  Next
                 </Button>
               </div>
             )}

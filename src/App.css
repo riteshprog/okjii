@@ -4315,7 +4315,7 @@ border-bottom: 1.5px solid #5e5e5e;
   width: 33%;
 }
 
-.store-order .table-striped th.text-center.thead-background {
+.store-order .table-striped th.text-center.thead-background, .table-striped th.text-center.thead-background {
   background-color: #9BE8C8;
   border-radius: 10px;
   color:#269D70;
@@ -5416,6 +5416,8 @@ display: flex;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .total-sale-details img{
@@ -5455,11 +5457,22 @@ display: flex;
 }
 
 .total-sals-details .customer-table tbody tr td{
-  padding: 1rem 1rem;
+  padding: 1rem 1rem !important;
 }
 
 .total-sals-details tr td img{
   width:50%;
+}
+
+.total-sals-details table{
+  margin-top: 0;
+}
+
+.total-sals-details .recent-payment{
+  font-size: 1rem;
+  color:#5e5e5e;
+  margin: 1rem 0rem;
+  
 }
 
 /* Total Sale Page End */

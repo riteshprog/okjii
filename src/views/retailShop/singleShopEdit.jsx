@@ -62,7 +62,7 @@ class SingleShopEdit extends Component {
     Axios.get(process.env.REACT_APP_API_URL + "/shop/" + params.shopId)
       .then(({ data }) => {
         if (data.status) {
-          this.setState({ shopData: data.shopData });
+          this.setState({ shopData: data.data.shopData });
         } else {
           message.error(data.errorMessage);
         }
@@ -143,6 +143,7 @@ class SingleShopEdit extends Component {
                 <Label sm={2}>Store Type:</Label>
                 <Col sm={4}>
                   <Select
+                    disabled
                     value={storeCatelogue.storeType}
                     placeholder="Select Account Type"
                     size="large"

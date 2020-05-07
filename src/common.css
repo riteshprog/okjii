@@ -3,7 +3,18 @@ body{
 }
 .t-text{ 
   color: #4b9e70 !important;
+  text-decoration: none !important;
 }
+.t-back-round{
+  display: flex;
+  text-align: center;
+  align-self: center;
+  background-color: #4b9e70 !important;
+  border-radius: 100px;
+  color: #fff !important;
+  padding: 8px;
+}
+
 .width-wfa{
   width: -webkit-fill-available;
 }
@@ -114,6 +125,13 @@ body{
 .t-large{
   font-size: 30px !important;
 }
+.t-medium{
+  font-size: 20px !important;
+}
+.t-small{
+ font-size: 10px !important; 
+}
+
 .no-border{
   border: none !important;
 }

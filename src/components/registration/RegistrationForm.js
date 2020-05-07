@@ -23,6 +23,7 @@ export default class RegistrationForm extends Component {
         mobileNumber: "",
         pincode: ""
       },
+      selectedRadio: 'Patna',
       offer: {
         title: '',
         howToApply: []
@@ -33,7 +34,8 @@ export default class RegistrationForm extends Component {
       pincodeAllowed: false,
       showPincodeMark: false,
       district: "",
-      state: ""
+      state: "",
+      errorMsg: `Currently Service Not Available`
     };
   }
   getAddressFromPincode = async pincode => {
@@ -48,6 +50,7 @@ export default class RegistrationForm extends Component {
       name = e.target.name;
     if (name == "pincode" && value.length == 6) {
       const { pincodeObj } = await this.getAddressFromPincode(value);
+      console.log(pincodeObj)
       this.setState({ showPincodeMark: true });
       if (pincodeObj.district && pincodeObj.state) {
         let { district, state } = pincodeObj;
@@ -59,7 +62,8 @@ export default class RegistrationForm extends Component {
           );
         } else {
           console.log(district, state);
-          this.setState({ pincodeAllowed: true, district, state });
+          if(district == this.state.selectedRadio) this.setState({ pincodeAllowed: true, district, state });
+          else this.setState({ pincodeAllowed: false, errorMsg: `Pincode is Not of Selected Region` });
         }
       } else {
         this.setState({ pincodeAllowed: false });
@@ -117,7 +121,29 @@ export default class RegistrationForm extends Component {
         });
     }
   };
-  handleOnRadioChange = e => {};
+  handleOnRadioChange = async value => {
+    this.setState({selectedRadio: value})
+    const { pincodeObj } = await this.getAddressFromPincode(this.state.preRegistraionData.pincode);
+    console.log(pincodeObj)
+    this.setState({ showPincodeMark: true });
+    if (pincodeObj.district && pincodeObj.state) {
+      let { district, state } = pincodeObj;
+      const preRegistrationAllowedDistricts = ["Patna", "Jaipur"];
+      if (!preRegistrationAllowedDistricts.includes(district)) {
+        this.setState({ pincodeAllowed: false });
+        console.log(
+          `Pincode should be of ${preRegistrationAllowedDistricts.join(", ")}`
+        );
+      } else {
+        console.log(district, state);
+        if(district == this.state.selectedRadio) this.setState({ pincodeAllowed: true, district, state });
+        else this.setState({ pincodeAllowed: false, errorMsg: `Pincode is Not of Selected Region` });
+      }
+    } else {
+      this.setState({ pincodeAllowed: false });
+      console.log(`invalid pincode`);
+    }
+  };
   handleSubmit = e => {
     e.preventDefault();
     const { district, state, pincodeAllowed, isMobileVerified } = this.state;
@@ -220,7 +246,12 @@ export default class RegistrationForm extends Component {
                   placeholder="E-mail (optional)"
                 />
                 <br />
-                <RadioButton />
+                <div class="sound-signal">
+                  <input onClick={()=>this.handleOnRadioChange('Patna')} type="radio" name="soundsignal" id="soundsignal1" checked={this.state.selectedRadio === 'Patna'} />
+                  <label for="soundsignal1" style={{margin: '10px'}} className='preReg-radio-label'>Patna</label>
+                  <input onClick={()=>this.handleOnRadioChange('Jaipur')} type="radio" name="soundsignal" id="soundsignal2" className="float-right" checked={this.state.selectedRadio === 'Jaipur'} />
+                  <label for="soundsignal2">Jaipur</label>
+                </div>
                 <input
                   onChange={e => this.handleOnChange(e)}
                   type="pincode"
@@ -250,7 +281,7 @@ export default class RegistrationForm extends Component {
                           className="deep-orange-text mr-2"
                         />
                         <span className="text-danger">
-                        Currently Service Not Available
+                        {this.state.errorMsg}
                         </span>
                       </>
                     )}

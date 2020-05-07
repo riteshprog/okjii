@@ -6,9 +6,13 @@ import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 import avatar from '../../assets/img/storeIcon.png';
 import CookieHandler from '../../utils/cookieHandler';
+<<<<<<< HEAD
 import Axios from "axios";
 import filterIcon from '../../assets/img/filterIcon.png';
 
+=======
+import axios from "axios";
+>>>>>>> master
 
 export default class StoreDetails extends Component {
   
@@ -32,7 +36,7 @@ export default class StoreDetails extends Component {
   }
 
   getShopList = (url, token) => {
-    Axios.get(url, {
+    axios.get(url, {
       headers: {
         token
       }
@@ -45,11 +49,11 @@ export default class StoreDetails extends Component {
         console.log('no shop found')
       }
     }).catch(err=>{
-      console.log(`catch`, err.response.status);
-      if(err.response.status  == 401){
+      if(err.response && err.response.status  == 401){
         message.info('Session Expired!, Please Login Again.')
       }else {
-        message.error(`Something went wrong`);
+        console.log(err);
+        // message.error(`Something went wrong`);
       }
     })
   }
@@ -61,6 +65,26 @@ export default class StoreDetails extends Component {
   }
 
   handleOnAddProductClicked = (shopId)=> <Link to='/login'/>
+  handleOnDeleteShop = (shopId) => {
+    console.log(`erhe`)
+    let url = process.env.REACT_APP_API_URL + '/shop/' + shopId;
+    let token = JSON.parse(CookieHandler.readCookie('token'));
+    axios.delete(url, {
+      headers: {
+        token
+      }
+    }).then(({data})=>{
+      console.log(data);
+      if(data.status){
+        message.success('shop deleted successfully');
+        setTimeout(()=>this.getShopList(), 1000)
+      }else{
+        message.info(data.message);
+      }
+    }).catch(err=>{
+      console.log(`error while deleting shop`, err);
+    })
+  }
 
   render() {
     return (
@@ -96,11 +120,11 @@ export default class StoreDetails extends Component {
               <MDBTableBody>
               {this.state.allShops.map(shop=>(
                 <tr>
-                  <td><img src={shop.basic.ownerPhoto} className="rounded-circle testimoni-img" width="50" height="50" alt="avatar" /></td>
+                  <td><img src={shop.basic.ownerPhoto?shop.basic.ownerPhoto:avatar} className="rounded-circle testimoni-img" width="50" height="50" alt="avatar" /></td>
                   <td><span className="text-green">{shop.shopInfo.shopCode}</span></td>
                   <td><span className="text-green">{shop.basic.shopName}</span></td>
                   <td>{shop.basic.district?shop.basic.district:shop.basic.shopLocation.label.split(', ').slice(0, 2).join(', ') }</td>
-                  <td><span className="text-green">{shop.storeCatelogue.storeType}</span></td>
+                  <td><span className="text-green">{shop.storeCatelogue.storeType.name}</span></td>
                   <td className="text-center"><Switch checked={shop.shopInfo.status === 'Active'?true:false} checkedChildren="yes" unCheckedChildren="no" className="Switch-button" /></td>
                  <td className="text-center"><MDBDropdown dropleft>
                 <MDBDropdownToggle color="primary">
@@ -109,12 +133,13 @@ export default class StoreDetails extends Component {
                 <MDBDropdownMenu  basic className="dropdown-bottom" >
                   <MDBDropdownItem><Link to={`/admin/shops/single/${shop._id}`}>View Details</Link></MDBDropdownItem>
                   <MDBDropdownItem><Link to={`/admin/shops/add-item/${shop._id}`}>Add Product</Link></MDBDropdownItem>
-                  <MDBDropdownItem><Link to="store/product/:storeId">Product</Link></MDBDropdownItem>
+                  <MDBDropdownItem><Link to={`shops/product/${shop._id}`}>Product</Link></MDBDropdownItem>
                   <MDBDropdownItem><Link to="target">Target</Link></MDBDropdownItem>
                   {window.location.hostname.split('.')[0] != 'marketing'?<MDBDropdownItem><Link to="store/wallet">wallet</Link></MDBDropdownItem>:(null)}
                   {window.location.hostname.split('.')[0] != 'marketing'?<MDBDropdownItem>OkkJi Khata</MDBDropdownItem>:(null)}
                   {window.location.hostname.split('.')[0] != 'marketing'?<MDBDropdownItem>Setting</MDBDropdownItem>:(null)}
                   {window.location.hostname.split('.')[0] != 'marketing'?<MDBDropdownItem>Revenue</MDBDropdownItem>:(null)}
+                  {window.location.hostname.split('.')[0] != 'marketing'?<MDBDropdownItem onClick={()=>this.handleOnDeleteShop(shop._id)}>Delete</MDBDropdownItem>:(null)}
                 </MDBDropdownMenu>
               </MDBDropdown></td>
                 </tr>

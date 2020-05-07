@@ -1,5 +1,5 @@
 import React from "react";
-import Axios from "axios";
+import axios from "axios";
 import moment from "moment-timezone";
 import { Radio, message, Table, Select, Tag  } from "antd";
 import { Row, Col, Button, Modal, ModalBody, ModalFooter, ModalHeader, FormGroup, Form, Input } from "reactstrap";
@@ -127,7 +127,7 @@ export default class Categories extends React.Component {
   
   getAllCategories = () => {
     let token = JSON.parse(CookieHandler.readCookie('token'));
-    Axios.get(process.env.REACT_APP_API_URL + "/category", {
+    axios.get(process.env.REACT_APP_API_URL + "/category", {
       headers: {
         token
       }
@@ -146,7 +146,7 @@ export default class Categories extends React.Component {
   getSingleCategoryById = (categoryId) => {
     let token = JSON.parse(CookieHandler.readCookie('token'));
     let url = process.env.REACT_APP_API_URL + '/category/' + categoryId;
-    return Axios.get(url, {
+    return axios.get(url, {
       headers: {
         token
       }
@@ -162,7 +162,7 @@ export default class Categories extends React.Component {
   } 
   getAllRegions = () => {
     let token = JSON.parse(CookieHandler.readCookie('token'));
-    Axios.get(process.env.REACT_APP_API_URL + '/region', {
+    axios.get(process.env.REACT_APP_API_URL + '/region', {
       headers: {
         token
       }
@@ -179,7 +179,7 @@ export default class Categories extends React.Component {
     })
   }
   getAllSubCategories = () => {
-   Axios.get(process.env.REACT_APP_API_URL + "/sub-category")
+   axios.get(process.env.REACT_APP_API_URL + "/sub-category")
     .then(({ data }) => {
       if (data.status) {
         console.log(`sub categories`, data)
@@ -193,7 +193,7 @@ export default class Categories extends React.Component {
     }); 
   }
   getAllStoreType = () => {
-   Axios.get(process.env.REACT_APP_API_URL + "/store-type")
+   axios.get(process.env.REACT_APP_API_URL + "/store-type")
     .then(({ data }) => {
       if (data.status) {
         console.log(`allStoreTypes`, data)
@@ -208,7 +208,7 @@ export default class Categories extends React.Component {
   }
 
   getAllBrands = () => {
-    Axios.get(process.env.REACT_APP_API_URL + "/brand")
+    axios.get(process.env.REACT_APP_API_URL + "/brand")
      .then(({ data }) => {
        if (data.status) {
          console.log(`allBrands`, data)
@@ -450,7 +450,7 @@ export default class Categories extends React.Component {
     if (!newSubCategory.name)
       this.setState({ errorMessage: "Invalid Category Name" });
     else if (!errorMessage) {
-      Axios.post(process.env.REACT_APP_API_URL + "/sub-category", newSubCategory)
+      axios.post(process.env.REACT_APP_API_URL + "/sub-category", newSubCategory)
         .then(({ data }) => {
           if (!data.status) {
             this.setState({ errorMessage: data.errorMessage });
@@ -474,7 +474,7 @@ export default class Categories extends React.Component {
     if (!newCategory.name)
       this.setState({ errorMessage: "Invalid Category Name" });
     else if (!errorMessage) {
-      Axios.post(process.env.REACT_APP_API_URL + "/category", newCategory, {
+      axios.post(process.env.REACT_APP_API_URL + "/category", newCategory, {
         headers: {
           token
         }
@@ -502,7 +502,7 @@ export default class Categories extends React.Component {
     if (!newStoreType.name)
       this.setState({ errorMessage: "Invalid Store Type" });
     else if (!errorMessage) {
-      Axios.post(process.env.REACT_APP_API_URL + "/store-type", newStoreType)
+      axios.post(process.env.REACT_APP_API_URL + "/store-type", newStoreType)
         .then(({ data }) => {
           if (!data.status) {
             this.setState({ errorMessage: data.errorMessage });
@@ -531,7 +531,7 @@ export default class Categories extends React.Component {
     this.updateCategory(updateObj, url, token);
   }
   updateCategory = (updateObj, url, token)=> {
-    Axios.patch(url, updateObj, {
+    axios.patch(url, updateObj, {
       headers: {
         token
       }

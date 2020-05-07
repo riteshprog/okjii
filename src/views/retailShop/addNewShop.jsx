@@ -262,7 +262,7 @@ class AddNewShop extends React.Component {
   };
 
   getAddressFromLatLong = (lat, lng) => {
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyBfvdlr4pZ5UbmIM9KzNSASmDy9pZsLQn0`;
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyCmbjYzue6gtnR6xDiDT7cOEyz9kCjCcZs`;
     return Axios.get(url)
       .then(({ data }) => {
         let address = "";

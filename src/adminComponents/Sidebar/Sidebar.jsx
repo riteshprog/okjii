@@ -45,7 +45,7 @@ class Sidebar extends React.Component {
     let userShouldView = [];
     
     if(type == 'marketing'){
-      userShouldView = ['Marketing Dashboard', 'New Customer', 'Retail Store', 'Target', 'Incentive', 'Support'];
+      userShouldView = ['Home', 'New Customer', 'Retail Store', 'Target', 'Incentive', 'Support', 'M Customer'];
       sidebarRoutes = this.props.routes;
       sidebarRoutes = sidebarRoutes.filter(singleRoute => userShouldView.includes(singleRoute.name))
       this.setState({sidebarRoutes});
@@ -66,7 +66,7 @@ class Sidebar extends React.Component {
               <img src='/SMALL-OKKJI-LOGO.PNG' alt="react-logo" />
             </div>
           </a>
-          <a href="#" className="simple-text logo-normal"> <i class="fas fa-align-right float-right"></i> </a>
+          <a href="#" className="simple-text logo-normal"> <i className="fas fa-align-right float-right"></i> </a>
         </div>
         <div className="sidebar-wrapper" ref={this.sidebar}>
           <Nav>
@@ -78,7 +78,7 @@ class Sidebar extends React.Component {
                 </NavLink>
               </li>
             ):(
-              <Menu mode="inline" >
+              <Menu key={key} mode="inline" >
                 <SubMenu className='nav-link'
                   style={{backgroundColor: '#eee'}}
                   title={
@@ -87,7 +87,7 @@ class Sidebar extends React.Component {
                       <p>{prop.subMenuTitle}</p>
                     </span>
                   }>
-                    {prop.routes.map((subMenu, i)=><Menu.Item className='nav-link'>
+                    {prop.routes.map((subMenu, i)=><Menu.Item key={key} className='nav-link'>
                       <i className={prop.icon}/><Link to={subMenu.layout + subMenu.path}>{subMenu.name}</Link>
                     </Menu.Item>)}
                 </SubMenu>
