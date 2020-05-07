@@ -332,7 +332,7 @@ class MStoreAddNewShop extends React.Component {
         OwnerPicture: joi.any(),
         uploadDocuments: joi.any(),
         otp: joi.any(),
-        ownerPhoto: joi.string().allow('').label("Owner Image"),
+        ownerPhoto: joi.string().required().label("Owner Image"),
         shopLocation: joi.any(),
         state: joi.any(),
         distirct: joi.any(),
@@ -381,8 +381,8 @@ class MStoreAddNewShop extends React.Component {
     } else {
       if (this.state.currentStep == 0) {
         let {basic} = this.state.shopData;
-        // if(!this.state.hasOwnerAvtar) message.error("Shop Owner Image is Required");
-        if (!basic.country) message.error("Shop Location is Required");
+        if(!this.state.hasOwnerAvtar) message.error("Shop Owner Image is Required");
+        else if (!basic.country) message.error("Shop Location is Required");
         else if (!this.state.otpVerified) message.error("Please Verify Your Mobile Number");
         else
           this.setState({

@@ -54,17 +54,17 @@ export default class LoginPage extends Component {
             
             
             </figure>
-            <div class="login-page-right">
+            <div className="login-page-right">
             <div className="login-information">
             <img src={logowhite}  className="img-fluid  Logowhite-bg" />
             <img src={okkjibigfavicon} width="50" height="50" alt="" />
             <h1>Sign in to OkkJi</h1>
-            <div class="input-form offer-input">
-              <div data-test="input-group" class="input-group input-group-lg">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">+91</span>
+            <div className="input-form offer-input">
+              <div data-test="input-group" className="input-group input-group-lg">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">+91</span>
                 </div>
-                <input onChange={(e)=>this.handleOnChage(e, 'mobileNumber')} data-test="input" type="number" class="form-control" placeholder="Mobile Number" aria-disabled="false" value={this.state.mobileNumber} />
+                <input onChange={(e)=>this.handleOnChage(e, 'mobileNumber')} data-test="input" type="number" className="form-control" placeholder="Mobile Number" aria-disabled="false" value={this.state.mobileNumber} />
                 </div>
                   <button className='btn-success btn Ripple-parent btn-subscribe  text-center' onClick={this.handleSendOtp}>Send OTP</button>
                 {/*<Link data-test="button" type="button" to={'/verify-otp?mobileNumber=' + this.state.mobileNumber } class='btn-success btn Ripple-parent btn-subscribe  text-center'>LOGIN</Link>*/}

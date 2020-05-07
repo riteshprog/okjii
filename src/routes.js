@@ -211,10 +211,8 @@ var routes = [
 { path: "/shops/add-new-shop", name: "Add New Shop", icon: "nc-icon nc-shop", component: MStoreAddNewShop, accessTo: ["admin", "market"], layout: "/admin" },
 
 // { path: "/mcustomer/cust-details", onSideBar: true, name: "M Customer", icon: "nc-icon nc-shop", accessTo: ["admin"], component: marketingCustomerDetails, layout: "/admin" },
-{ path: "/Addcustomer/add-customer", onSideBar: false, name: "Add New Customer", icon: "nc-icon nc-shop", accessTo: ["admin"], component: MarketingAddNewCustomer, layout: "/admin" },
+{ path: "/Addcustomer/add-customer", onSideBar: false, name: "Customer- Add New Customer", icon: "nc-icon nc-shop", accessTo: ["admin"], component: MarketingAddNewCustomer, layout: "/admin" },
   
-
-
   //store wallet routes 
   { path: "/store/wallet/view-all-pre-transactions", name: "View All Pre Transactions", component: ViewAllPreTransactions, accessTo: ["admin", "market"], layout: "/admin" },
   { path: "/store/wallet/download-statement", name: "Download Statement", component: DownloadWalletStatement, accessTo: ["admin", "market"], layout: "/admin" },

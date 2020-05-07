@@ -118,13 +118,13 @@ body {
 }
 .main-panel > .content{
   padding: 0px 20px !important;
-  margin-top: 85px !important;
+  margin-top: 90px !important;
   min-height: 75vh;
 }
 .customer-filter p {
     font-size: 17px;
     color: #5e5e5e;
-    margin-right: 5px;
+    margin: 8px !important;
 }
 .navbar a:not(.btn):not(.dropdown-item) {
     color: #333 !important;
@@ -215,7 +215,7 @@ body {
 }
 
 .navbar {
-  padding: 16px;
+  padding: 5px;
   font-weight: 300;
   box-shadow: none !important;
 }
@@ -3409,7 +3409,11 @@ input[type="radio"]:checked + label:before {
 .marketing-dashbord .Performence{
  width:6%;
 }
-
+.customer-filter p span {
+    color: #5e5e5e;
+    font-weight: 500;
+    margin-left: 10px;
+}
 
 .marketing-dashbord .card-title{
   padding-top:1rem;
@@ -3569,7 +3573,8 @@ li.nav-btn.nav-item {
   border-top: none !important;
 }
 .table-striped img.rounded-circle.testimoni-img {
-  margin-left: 3rem !important;
+  margin-left: 0rem !important;
+  margin-left: 0.5rem !important;
   margin-right: 3rem !important;
 }
 
@@ -3637,11 +3642,9 @@ li.nav-btn.nav-item {
   padding-left: 0rem;
 }
 
-
-
-
-
-
+.kirna-store-name {
+  margin-top: 15px;
+}
 .customer-details {
   padding-left: 3rem;
   padding-top: 2rem;
@@ -3752,7 +3755,16 @@ img.img-fluid.Logowhite-bg {
   content: "";
 } */
 
-
+.card {
+    border-radius: 8px !important;
+    box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+    background-color: #FFFFFF;
+    color: #252422;
+    margin-bottom: 20px;
+    position: relative;
+    border: 0 none;
+    transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+}
 
 .login-page-right {
   position: absolute;
@@ -4906,7 +4918,7 @@ border:none;
 
 .m-store-view-add .card-user form .form-group {
   margin-bottom: 20px;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 .m-store-view-add .btn-primary {
@@ -6544,7 +6556,8 @@ margin-left: 20px;
     z-index: -1;
   
   } */
-/*Admin Panal Css Start*/ 
+/*Admin Panal Css Start*/
+
 .okkjii-customer-mt {
   margin-top: 0%;
 }
@@ -6725,10 +6738,48 @@ img.img-fluid.Logowhite-bg {
 }
 }
 @media screen and (max-width: 425px) and (min-width: 320px) {
+  .marketing-iframe {
+    width: inherit;
+    height: 200px;
+}
+.store-page table {
+    margin: 0 0.5rem;
+}
+.OrderListing-img {
+  width: 35px;
+}
+.card .card-body {
+    padding: 15px 0px 0px 0px !important;
+}
+.target-card h4 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #5e5e5e;
+}
+.okjii-dashboard h5 {
+    color: #5e5e5e;
+    font-size: 18px;
+}
+.customer-filter p span {
+    font-size: 16px;
+    color: #5e5e5e;
+    font-weight: 500;
+    margin-left: 10px;
+}
+.target-view-card h4 {
+    font-size: 14px;
+    color: #5e5e5e;
+    padding: 0 1rem;
+}
+
   .home-order-details {
     left: 15px;
     top: -225px;
     position: relative !important;
+}
+.navbar .navbar-brand {
+    font-size: 14px !important;
+    margin-right: 0;
 }
 .customer-filter {
     display: flex;
@@ -6736,6 +6787,16 @@ img.img-fluid.Logowhite-bg {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0rem !important;
+    margin-bottom: 10px !important;
+    padding: 0px 5px;
+
+    margin-bottom: 0.8rem !important;
+}
+.marketing-dashbord .Acceptorder {
+    width: 65%;
+}
+.marketing-dashbord .Target {
+    width: 65%;
 }
 .customer-filter .filter-txt {
     color: #259D70;
@@ -6747,7 +6808,9 @@ img.img-fluid.Logowhite-bg {
 }
 .m-store-view-add .card .card-body {
   margin: 0;
-  width: 350px !important;
+  width: 340px !important;
+
+  width: auto !important;
   padding: 15px 15px 15px 0px !important;
 }
 .ant-steps-navigation > .ant-steps-item::after {
@@ -6771,7 +6834,7 @@ img.img-fluid.Logowhite-bg {
   margin-left: 0 !important
 }
 .main-panel .ml-2, .mx-2 {
-  margin-left: 27% !important
+  margin-left: 35% !important
 }
 
 .navbar .container-fluid {
@@ -6868,7 +6931,17 @@ img.img-fluid.Logowhite-bg {
     padding-right: 0rem;
 }
 .navbar {
-    padding: 15px !important;
+    padding: 5px !important;
+}
+.main-panel > .content {
+    padding: 0px 3px !important;
+    margin-top: 65px !important;
+}
+.marketing-dashbord .Target {
+    width: 60%;
+}
+.marketing-dashbord .Acceptorder {
+    width: 45%;
 }
   }
 @media only screen and (min-width: 1024px) {
@@ -6888,7 +6961,17 @@ img.img-fluid.Logowhite-bg {
     margin-top: 0px; 
 }
 }
-
+@media screen and (max-width: 320px) {
+.m-store-view-add .card .card-body {
+    margin: 0;
+    width: 300px !important;
+    padding: 15px 15px 15px 0px !important;
+}
+.ant-steps-navigation {
+    padding-top: 12px;
+    padding-left: 20px !important;
+}
+}
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) and (min-width: 800px) {
   /* .figure-img2 {
@@ -6975,6 +7058,13 @@ img.img-fluid.Logowhite-bg {
 
 }
 @media only screen and (min-width: 768px) {
+
+
+  .main-panel > .content {
+    padding: 0px 20px !important;
+    margin-top: 75px !important;
+    min-height: 75vh;
+}
 .navbar-nav > li {
     list-style-type: none;
     padding-right: 0rem;
@@ -6994,7 +7084,7 @@ img.img-fluid.Logowhite-bg {
     position: fixed;
     float: right;
     width: calc(100% - 260px);
-    background-color: #fdfeff;
+    background-color: #ffffff;
     transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
 }
 }

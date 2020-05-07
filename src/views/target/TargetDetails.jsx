@@ -57,20 +57,13 @@ export default class marketingCustomerDetails extends Component {
 
       <>
        <div className="content m-store-view-add target-card">
-       <div class="customer-filter col-12">
-          <div>
-            <p>
-            Target 
-            </p>
-          </div>
-          <div className="filter-search">
-            <p><i class="fa fa-search"></i></p>
-            <p>Add Customer <i class="fas fa-plus mr-2"/></p>
-            <p><span class="filter-txt"> Filter</span> <img src={filterIcon} alt="" /></p>
-          </div>
-
-	      </div>
-<h4>Target complete in 10 April 2020 to 20 April 2020</h4>
+        <Row className="customer-filter">
+            <Col md="4" className="col-5"><p>Target</p></Col>
+            <Col md="8" className="filter-search col-7"><p><i class="fas fa-search" /></p>
+            <p>Add Customer <i className="fas fa-plus mr-2"/></p>
+            <p><span className="filter-txt"> Filter</span> <i class="fas fa-bars"></i></p></Col>
+          </Row>
+        <h4>Target complete in 10 April 2020 to 20 April 2020</h4>
         <Row>
         <Col md="4">
               <Card>
@@ -206,6 +199,7 @@ export default class marketingCustomerDetails extends Component {
             </Col>
 
         </Row>
+        <div className='new-customer'>
              <MDBTable className="customer-table" responsive striped>
               <MDBTableHead>
                 <tr>
@@ -242,6 +236,7 @@ export default class marketingCustomerDetails extends Component {
 
               </MDBTableBody>
             </MDBTable>
+            </div>
         </div>
       </>
     )
