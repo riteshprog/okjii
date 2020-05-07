@@ -518,6 +518,7 @@ export default class Categories extends React.Component {
               errorMessage: ``,
               addNewStoreTypeModalVisibility: false,
             });
+            this.getAllStoreType();
           }
         })
         .catch((er) => {
@@ -536,6 +537,7 @@ export default class Categories extends React.Component {
 
     this.updateCategory(updateObj, url, token);
   }
+
   updateCategory = (updateObj, url, token)=> {
     axios.patch(url, updateObj, {
       headers: {
@@ -543,8 +545,13 @@ export default class Categories extends React.Component {
       }
     }).then(({data})=>{
       if(data.status){
-        message.success(data.message);
-        this.toggleEditCategory();
+        if(this.state.editCategoryModalVisibility){
+          this.toggleEditCategory()
+          message.success(data.message);
+        } else if(this.state.deleteCurrentCategory){
+          this.toggleDeleteCategory()
+          message.success(`Successfully Deleted`);
+        }
         this.getAllCategories();
       }else{
         message.info(data.message);
@@ -688,7 +695,13 @@ export default class Categories extends React.Component {
   )
 
   handleOnDeleteCategory = () => {
-    console.log(this.state.currentCategoryId);
+    let updateObj = {
+      isDeleted: true
+    }
+    let url = process.env.REACT_APP_API_URL + '/category/' + this.state.currentCategoryId;
+    let token = JSON.parse(CookieHandler.readCookie('token'));
+
+    this.updateCategory(updateObj, url, token);
   }
 
 }
