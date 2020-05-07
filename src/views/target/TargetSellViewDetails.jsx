@@ -148,6 +148,7 @@ export default class TargetSellViewDetails extends Component {
             </Col>
 
         </Row>
+          <div className='new-customer'>
              <MDBTable className="customer-table" responsive striped>
               <MDBTableHead>
                 <tr>
@@ -181,6 +182,7 @@ export default class TargetSellViewDetails extends Component {
 
               </MDBTableBody>
             </MDBTable>
+            </div>
         </div>
       </>
     )

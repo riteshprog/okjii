@@ -211,7 +211,7 @@ var routes = [
 { path: "/shops/add-new-shop", name: "Add New Shop", icon: "nc-icon nc-shop", component: MStoreAddNewShop, accessTo: ["admin", "market"], layout: "/admin" },
 
 // { path: "/mcustomer/cust-details", onSideBar: true, name: "M Customer", icon: "nc-icon nc-shop", accessTo: ["admin"], component: marketingCustomerDetails, layout: "/admin" },
-{ path: "/Addcustomer/add-customer", onSideBar: false, name: "M Customer- Add New Customer", icon: "nc-icon nc-shop", accessTo: ["admin"], component: MarketingAddNewCustomer, layout: "/admin" },
+{ path: "/Addcustomer/add-customer", onSideBar: false, name: "Customer- Add New Customer", icon: "nc-icon nc-shop", accessTo: ["admin"], component: MarketingAddNewCustomer, layout: "/admin" },
   
 
 

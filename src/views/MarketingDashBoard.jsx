@@ -80,7 +80,8 @@ class MarketingDashBoard extends React.Component {
             <p><span class="filter-txt"> Filter</span> <img src={filterIcon} alt="" /></p>
           </div>
         </div>
-          <Row>
+          <Row style={{'margin-top': '15px'
+  }}>
             <Col lg="3" md="6" sm="6">
               <Card className="card-stats dashbord-card1">
                 <CardBody>
@@ -190,45 +191,34 @@ class MarketingDashBoard extends React.Component {
                    <Col  className="card-list-body" md="5">
               <Card>
                 <CardHeader>
-                  <CardTitle tag="h5">Current Listing <img src={OrderListing} alt="" className="OrderListing float-right" /></CardTitle>
+                  <CardTitle tag="h5">Current Listing <img src={OrderListing} alt="" className="OrderListing OrderListing-img float-right" /></CardTitle>
                   <p className="card-category">Today's Campaign Performance</p>
                   
                 </CardHeader>
                 <CardBody>
                   <Row className="card-list">
-                    <Col md="2"><img src={storeIcon} alt="" className="storeIcon" />
+                    <Col md="2" className="col-3"><img src={storeIcon} alt="" className="storeIcon" />
                     </Col>
-                    <Col md="8">Ram Lal Kirana Store</Col>
-                    <Col md="2"><img src={Eye} alt="" className="Eye" />
-                    </Col>
+                    <Col md="10" className="col-9 kirna-store-name">Ram Lal Kirana Store</Col>
+    
                   </Row>
                   <Row className="card-list">
-                    <Col md="2"><img src={storeIcon} alt="" className="storeIcon" />
+                    <Col md="2" className="col-3"><img src={storeIcon} alt="" className="storeIcon" />
                     </Col>
-                    <Col md="8">Ravi Retail Shop</Col>
-                    <Col md="2"><img src={Eye} alt="" className="Eye" />
-                    </Col>
+                    <Col md="10" className="col-9 kirna-store-name">Ram Lal Kirana Store</Col>
+    
                   </Row>
                   <Row className="card-list">
-                    <Col md="2"><img src={storeIcon} alt="" className="storeIcon" />
+                    <Col md="2" className="col-3"><img src={storeIcon} alt="" className="storeIcon" />
                     </Col>
-                    <Col md="8">Akash Kirana</Col>
-                    <Col md="2"><img src={Eye} alt="" className="Eye" />
-                    </Col>
+                    <Col md="10" className="col-9 kirna-store-name">Ram Lal Kirana Store</Col>
+    
                   </Row>
                   <Row className="card-list">
-                    <Col md="2"><img src={storeIcon} alt="" className="storeIcon" />
+                    <Col md="2" className="col-3"><img src={storeIcon} alt="" className="storeIcon" />
                     </Col>
-                    <Col md="8">Easy Club</Col>
-                    <Col md="2"><img src={Eye} alt="" className="Eye" />
-                    </Col>
-                  </Row>
-                  <Row className="card-list">
-                    <Col md="2"><img src={storeIcon} alt="" className="storeIcon" />
-                    </Col>
-                    <Col md="8">9 to 9 Store</Col>
-                    <Col md="2"><img src={Eye} alt="" className="Eye" />
-                    </Col>
+                    <Col md="10" className="col-9 kirna-store-name">Ram Lal Kirana Store</Col>
+    
                   </Row>
                 </CardBody>
               </Card>
