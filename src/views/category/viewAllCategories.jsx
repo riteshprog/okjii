@@ -21,10 +21,12 @@ export default class Categories extends React.Component {
       allBrands: [],
       allRegions: [],
       addNewCategoryModalVisibility: false,
+      editCategoryModalVisibility: false,
+      deleteCurrentCategory: false,
       addNewSubCategoryModalVisibility: false,
       addNewBrandModalVisibility: false,
       addNewStoreTypeModalVisibility: false,
-      editCategoryModalVisibility: false,
+      currentCategoryId: null,
       newCategory: {
         name: "",
         subCategories: [],
@@ -74,7 +76,10 @@ export default class Categories extends React.Component {
       title: "Action",
       dataIndex: "_id",
       key: "_id",
-      render: (_id)=> <span onClick={()=>this.toggleEditCategory(_id)} className='cp op8 t-text'>Edit</span>
+      render: (_id)=> <div className='df fdc aic'>
+        <span onClick={()=>this.toggleEditCategory(_id)} className='cp op8 t-text'>Edit</span>
+        <span onClick={()=>this.toggleDeleteCategory(_id)} className='cp op8 t-text'>Delete</span>
+      </div>
     }
   ];
 
@@ -231,7 +236,7 @@ export default class Categories extends React.Component {
             <Col className="pl-1" md="10">
               <FormGroup>
                 <label htmlFor="userName">Category Name</label>
-                <Input placeholder="Enter Category Name" value={this.state.newCategory.name} onChange={(e) => this.handleOnChange(e, 'category', "name")} type="text" />
+                <Input placeholder="Enter Category Name" value={this.state.currentCategory.name} onChange={(e) => this.handleOnChange(e, 'category', "name")} type="text" />
               </FormGroup>
             </Col>
             <Col className="pl-1" md="10">
@@ -367,9 +372,10 @@ export default class Categories extends React.Component {
   );
 
   toggleAddNewCategory = () => this.setState({ addNewCategoryModalVisibility: !this.state.addNewCategoryModalVisibility, errorMessage: `` });
+  toggleDeleteCategory = (_id) => this.setState({ deleteCurrentCategory: !this.state.deleteCurrentCategory, currentCategoryId: _id, errorMessage: `` });
   toggleEditCategory = (selectedCategoryId) => {
     if(selectedCategoryId){
-      let {currentCategory} = this.state;
+      // let {currentCategory} = this.state;
       this.getSingleCategoryById(selectedCategoryId).then( singleCategory=>{
         this.setState({ currentCategory: singleCategory, editCategoryModalVisibility: !this.state.editCategoryModalVisibility, errorMessage: `` });
       });
@@ -385,9 +391,9 @@ export default class Categories extends React.Component {
 
   handleOnChange = (e, type, key) => {
     if(type === 'category'){
-      let { newCategory } = this.state;
-      newCategory[key] = e.target.value;
-      this.setState({ newCategory });
+      let { currentCategory } = this.state;
+      currentCategory[key] = e.target.value;
+      this.setState({ currentCategory });
     }else if(type === 'subCategory') {
       let { newSubCategory } = this.state;
       newSubCategory[key] = e.target.value;
@@ -403,14 +409,14 @@ export default class Categories extends React.Component {
     console.log(e, type, key, from);
     if(type === 'category'){
       if(from == 'add'){
-        let { newCategory } = this.state;
+        let { currentCategory } = this.state;
         console.log(`cat`, e)
-        let index = newCategory[key].indexOf(e);
+        let index = currentCategory[key].indexOf(e);
         
-        if(index == -1) newCategory[key].push(e);
-        else newCategory[key].splice(index, 1);
+        if(index == -1) currentCategory[key].push(e);
+        else currentCategory[key].splice(index, 1);
         
-        this.setState({ newCategory });
+        this.setState({ currentCategory });
       }else if(from == 'edit'){
         console.log(e, type, key, from)
         let { currentCategory } = this.state;
@@ -469,12 +475,12 @@ export default class Categories extends React.Component {
   }
   
   handleOnAddNewCategorySave = () => {
-    let { newCategory, errorMessage } = this.state;
+    let { currentCategory, errorMessage } = this.state;
     let token = JSON.parse(CookieHandler.readCookie('token'));
-    if (!newCategory.name)
+    if (!currentCategory.name)
       this.setState({ errorMessage: "Invalid Category Name" });
     else if (!errorMessage) {
-      axios.post(process.env.REACT_APP_API_URL + "/category", newCategory, {
+      axios.post(process.env.REACT_APP_API_URL + "/category", currentCategory, {
         headers: {
           token
         }
@@ -566,6 +572,7 @@ export default class Categories extends React.Component {
             {this.renderAddNewCategoryModal()}
             {this.renderAddNewSubCategoryModal()}
             {this.renderEditCategoryModal()}
+            {this.renderDeleteCategoryModal()}
           </Row>
           <Row>
            <Col md="6">
@@ -622,7 +629,7 @@ export default class Categories extends React.Component {
             <Col className="pl-1" md="10">
               <FormGroup>
                 <label htmlFor="userName">Category Name</label>
-                <Input placeholder="Enter Category Name" value={this.state.currentCategory.name} onChange={(e) => this.handleOnChange(e, 'category', "name")} type="text" />
+                <Input placeholder="Enter Category Name" value={this.state.currentCategory.name} onChange={(e) => this.handleOnChange(e, 'category', "name", 'edit')} type="text" />
               </FormGroup>
             </Col>
             <Col className="pl-1" md="10">
@@ -660,5 +667,28 @@ export default class Categories extends React.Component {
       </ModalFooter>
     </Modal>
   );
+
+  renderDeleteCategoryModal = () => (
+    <Modal isOpen={this.state.deleteCurrentCategory} toggle={()=>this.toggleDeleteCategory()} >
+    <ModalHeader toggle={()=>this.toggleDeleteCategory()}> Delete Category </ModalHeader>
+    <ModalBody>
+      <Form>
+        <Row className="df jcc">
+          <Col className="pl-1" md="10">
+              <p>Are you sure you want to delete this category?</p>
+          </Col>
+        </Row>
+      </Form>
+    </ModalBody>
+    <ModalFooter>
+      <Button id="save-btn" color="danger" onClick={()=>this.handleOnDeleteCategory()} > Delete </Button>
+      <Button color="secondary" onClick={()=>this.toggleDeleteCategory()}> Cancel </Button>
+    </ModalFooter>
+  </Modal>
+  )
+
+  handleOnDeleteCategory = () => {
+    console.log(this.state.currentCategoryId);
+  }
 
 }

@@ -18,10 +18,13 @@ class Region extends Component {
     super(props);
     this.state = {
       createRegionModalVisibility: false,
+      editRegionModalVisibility: false,
       allRegions: [
       ],
       singleRegion: {
         name: '',
+      },
+      editRegion: {
       }
     }
   }
@@ -52,26 +55,31 @@ class Region extends Component {
   toggleModal = (type, data) => {
     if(type === 'create') {
       let {createRegionModalVisibility} = this.state;
-      this.setState({ createRegionModalVisibility: !createRegionModalVisibility });
+      this.setState({ createRegionModalVisibility: !createRegionModalVisibility, singleRegion: {} });
     }else if(type === 'delete'){
       let {deleteRegionModalVisibility} = this.state;
-      this.setState({ deleteRegionModalVisibility: !deleteRegionModalVisibility });
+      this.setState({ deleteRegionModalVisibility: !deleteRegionModalVisibility, singleRegion: {} });
     }else if(type === 'edit'){
       let {editRegionModalVisibility} = this.state;
-      this.setState({ editRegionModalVisibility: !editRegionModalVisibility });
+      this.setState({ editRegionModalVisibility: !editRegionModalVisibility, singleRegion: {} });
     }
     if(data){
-      let { singleRegion } = this.state;
-      singleRegion = data;
-      this.setState({ singleRegion});
+      let { editRegion } = this.state;
+      editRegion = data;
+      this.setState({ editRegion});
     }
   };
   handleOnChange = (e, type, key) => {
     let value = e.target.value;
-    let { singleRegion } = this.state;
+    let { singleRegion, editRegion } = this.state;
 
-    if(type == 'create') singleRegion[key] = value
-    this.setState({singleRegion});
+    if(type == 'create') {
+      singleRegion[key] = value
+      this.setState({singleRegion});
+    } else if(type == 'edit') {
+      editRegion[key] = value;
+      this.setState({editRegion});
+    }
   }
 
   handleOnAdd = () => {
@@ -110,9 +118,14 @@ class Region extends Component {
     this.handleOnUpdate(region._id, updateObj, 'status')
   }
 
-  handleOnUpdate = (regionId, updateObject, type) => {
+  handleOnUpdate = (regionId, updateObject = null, type) => {
     let url = process.env.REACT_APP_API_URL + '/region/' + regionId;
     let token = JSON.parse(CookieHandler.readCookie('token'));
+    if(!updateObject){
+      updateObject = this.state.editRegion;
+      console.log(updateObject)
+    }
+
     axios.patch(url, updateObject, {
       headers: {
         token
@@ -152,7 +165,7 @@ class Region extends Component {
                 </p>
               </div>
             </div>
-        <div className='retail-store'>
+        <div className=''>
              <MDBTable className="customer-table" striped>
               <MDBTableHead>
                 <tr>
@@ -171,7 +184,7 @@ class Region extends Component {
                       <i className="fas fa-ellipsis-v" />
                       </MDBDropdownToggle>
                       <MDBDropdownMenu  basic className="dropdown-bottom" >
-                        <MDBDropdownItem onClick={()=>this.toggleModal('edit', region)}>Edit</MDBDropdownItem>
+                        <MDBDropdownItem onClick={()=>this.toggleModal('edit', Object.assign({}, region))}>Edit</MDBDropdownItem>
                     </MDBDropdownMenu>
                     </MDBDropdown>
                   </td>
@@ -180,8 +193,8 @@ class Region extends Component {
             </MDBTableBody>
           </MDBTable>
           </div>
-          {this.renderCreateNewRegionModal(this.state.createRegionModalVisibility)}
-          {this.renderEditRegionModal(this.state.editRegionModalVisibility, this.state.singleRegion)}
+          {this.state.createRegionModalVisibility?this.renderCreateNewRegionModal(this.state.createRegionModalVisibility):null}
+          {this.state.editRegionModalVisibility?this.renderEditRegionModal(this.state.editRegionModalVisibility):null}
       </div>
      );
   }
@@ -206,7 +219,7 @@ class Region extends Component {
     </MDBContainer>
   );
 
-  renderEditRegionModal = ( editRegionModalVisibility, region ) => (
+  renderEditRegionModal = ( editRegionModalVisibility) => (
     <MDBContainer>
       <MDBModal isOpen={editRegionModalVisibility} toggle={()=>this.toggleModal('edit')}>
         <MDBModalHeader toggle={()=>this.toggleModal('edit')}>
@@ -215,11 +228,11 @@ class Region extends Component {
         <MDBModalBody>
           <FormGroup>
             <Label>Name</Label>
-            <Input onChange={(e)=>this.handleOnChange(e, 'edit', 'name')} value={region.name} type="text" placeholder="Enter Name of the Region" />
+            <Input onChange={(e)=>this.handleOnChange(e, 'edit', 'name')} value={this.state.editRegion.name} type="text" placeholder="Enter Name of the Region" />
           </FormGroup>
         </MDBModalBody>
-        <MDBModalFooter>
-          <MDBBtn color="success" onClick={()=>this.handleOnAdd('edit')}> UPDATE </MDBBtn>
+        <MDBModalFooter>  
+          <MDBBtn color="success" onClick={()=>this.handleOnUpdate(this.state.editRegion._id)}> UPDATE </MDBBtn>
           <MDBBtn onClick={()=>this.toggleModal('edit')}> CANCEL </MDBBtn>
         </MDBModalFooter>
       </MDBModal>

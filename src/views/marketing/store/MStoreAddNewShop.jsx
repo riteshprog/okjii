@@ -291,18 +291,18 @@ class MStoreAddNewShop extends React.Component {
             if (
               data.results[0].address_components[i].types.indexOf(
                 "administrative_area_level_2"
-              ) > -1
-            ) {
-              address += data.results[0].address_components[i].long_name + ", ";
-              city = data.results[0].address_components[i].long_name;
-            }
-            if (
-              data.results[0].address_components[i].types.indexOf(
-                "locality"
-              ) > -1
-            ) {
-              address += data.results[0].address_components[i].long_name + ", ";
-            }
+                ) > -1
+                ) {
+                  address += data.results[0].address_components[i].long_name + ", ";
+                }
+                if (
+                  data.results[0].address_components[i].types.indexOf(
+                    "locality"
+                    ) > -1
+                    ) {
+                      address += data.results[0].address_components[i].long_name + ", ";
+                      city = data.results[0].address_components[i].long_name;
+                    }
           }
           return {address, city};
         } else return {address, city};
@@ -599,15 +599,20 @@ class MStoreAddNewShop extends React.Component {
       });
     } else {
       // invokes when user types the location
-      const map = new MyMapComponent();
       let shopData = this.state.shopData;
+      
       shopData["basic"]["shopLocation"]["label"] = preferenceLocation;
-      let preferenceLocationArr = preferenceLocation.split(', '), preferenceLocationArrReverse = preferenceLocationArr.reverse();
+      
+      let preferenceLocationArr = preferenceLocation.split(', ');
+      let preferenceLocationArrReverse = preferenceLocationArr.reverse();
+
       shopData["basic"]["country"] = preferenceLocationArrReverse[0];
       shopData["basic"]["state"] = preferenceLocationArrReverse[1];
       shopData["basic"]["distirct"] = preferenceLocationArrReverse[2];
-      shopData["basic"]["city"] = preferenceLocationArrReverse[2];
+      // shopData["basic"]["city"] = preferenceLocationArrReverse[2];
       shopData["basic"]['address'] = preferenceLocationArr.splice(0, preferenceLocationArr.length-3).join(', ')
+      
+      console.log(`preferenceLocationArrReverse`, preferenceLocationArrReverse)
 
       this.setState({ shopData }, () => {
 
@@ -617,10 +622,13 @@ class MStoreAddNewShop extends React.Component {
             let shopData = this.state.shopData;
             shopData["basic"]["shopLocation"]["lat"] = latLng.lat;
             shopData["basic"]["shopLocation"]["lng"] = latLng.lng;
-            this.setState({
-              shopData,
-              defaultCenter: { lat: latLng.lat, lng: latLng.lng }
-            });
+            this.getAddressFromLatLong(latLng.lat, latLng.lng).then(({address, city})=>{
+              shopData["basic"]["city"] = city;
+              this.setState({
+                shopData,
+                defaultCenter: { lat: latLng.lat, lng: latLng.lng }
+              });
+            })
           })
           .catch(error => console.error("Error", error));
       });
