@@ -85,7 +85,7 @@ class MarketingDashBoard extends React.Component {
               <Card className="card-stats dashbord-card1">
                 <CardBody>
                   <Row>
-                    <Col md="4" xs="5">
+                    <Col md="4" xs="4">
                       <div className="icon-big text-center icon-warning">
                         <img src={Acceptorder} alt="" className="Acceptorder" />
                       </div>
@@ -111,7 +111,7 @@ class MarketingDashBoard extends React.Component {
               <Card className="card-stats dashbord-card2">
                 <CardBody>
                   <Row>
-                    <Col md="4" xs="5">
+                    <Col md="4" xs="4">
                       <div className="text-center">
                       <img src={Target} alt="" className="Target" />
                       </div>
@@ -137,7 +137,7 @@ class MarketingDashBoard extends React.Component {
               <Card className="card-stats dashbord-card3">
                 <CardBody>
                   <Row>
-                    <Col md="4" xs="5">
+                    <Col md="4" xs="4">
                       <div className="text-center">
                       <img src={newcustomer} alt="" className="Target" />
                       </div>
@@ -163,7 +163,7 @@ class MarketingDashBoard extends React.Component {
               <Card className="card-stats dashbord-card4">
                 <CardBody>
                   <Row>
-                    <Col md="4" xs="5">
+                    <Col md="4" xs="4">
                       <div className="text-center">
                       <img src={Winning} alt="" className="Acceptorder" />
                       </div>

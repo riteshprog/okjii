@@ -5188,7 +5188,7 @@ padding: .5rem !important;
 }
 
 .table-responsive {
-  overflow: visible !important;
+  overflow: scroll !important;
   padding-bottom: 10px;
 }
 
@@ -6626,6 +6626,10 @@ a.nav-link.nav-btn {
   display: flex;
   flex-direction: column;
   justify-content: left;
+}
+
+.dashboard-card-icon {
+  max-width: 31% !important;
 }
 
 a.nav-link.nav-btn i{
