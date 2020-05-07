@@ -6,13 +6,10 @@ import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 import avatar from '../../assets/img/storeIcon.png';
 import CookieHandler from '../../utils/cookieHandler';
-<<<<<<< HEAD
 import Axios from "axios";
 import filterIcon from '../../assets/img/filterIcon.png';
 
-=======
 import axios from "axios";
->>>>>>> master
 
 export default class StoreDetails extends Component {
   
