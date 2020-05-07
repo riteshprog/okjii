@@ -117,7 +117,7 @@ export default class StoreDetails extends Component {
               <MDBTableBody>
               {this.state.allShops.map(shop=>(
                 <tr>
-                  <td><img src={shop.basic.ownerPhoto?shop.basic.ownerPhoto:avatar} className="rounded-circle testimoni-img" width="50" height="50" alt="avatar" /></td>
+                  <td><img src={shop.basic.ownerPhoto} className="rounded-circle testimoni-img" width="50" height="50" alt="avatar" /></td>
                   <td><span className="text-green">{shop.shopInfo.shopCode}</span></td>
                   <td><span className="text-green">{shop.basic.shopName}</span></td>
                   <td>{shop.basic.district?shop.basic.district:shop.basic.shopLocation.label.split(', ').slice(0, 2).join(', ') }</td>
