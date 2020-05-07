@@ -44,8 +44,7 @@ class Dashboard extends React.Component {
       dashboardData: {
         shopsCount: 0,
         productCount: 0,
-        earning: 0,
-        preReg: 0
+        earning: 0
       }
     }
   }
@@ -160,8 +159,8 @@ class Dashboard extends React.Component {
                     </Col>
                     <Col md="8" xs="7">
                       <div className="numbers">
-                        <p className="card-category">Pre Registrations</p>
-                          <CardTitle tag="p">{this.state.dashboardData.preReg?this.state.dashboardData.preReg:0}</CardTitle>
+                        <p className="card-category">Followers</p>
+                        <CardTitle tag="p">+45K</CardTitle>
                         <p />
                       </div>
                     </Col>
