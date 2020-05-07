@@ -5,8 +5,10 @@ import { Switch, message } from 'antd';
 import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 import avatar from '../../assets/img/storeIcon.png';
-import CustomerNavBar from '../customer/CustomerNavBar';
 import CookieHandler from '../../utils/cookieHandler';
+import Axios from "axios";
+import filterIcon from '../../assets/img/filterIcon.png';
+
 import axios from "axios";
 
 export default class StoreDetails extends Component {
@@ -85,10 +87,22 @@ export default class StoreDetails extends Component {
     return (
       <>
         <div className="content store-page">
-          <CustomerNavBar />
+          <div class="customer-filter">
+          <div>
+            <p>
+            Store
+            </p>
+          </div>
+          <div className="filter-search ">
+            <p><i class="fa fa-search"></i></p>
+            <p>Add Store <i class="fas fa-plus mr-2"/></p>
+            <p><span class="filter-txt"> Filter</span> <img src={filterIcon} alt="" /></p>
+          </div>
+
+        </div>
          
           <div className='retail-store'>
-             <MDBTable className="customer-table" striped>
+             <MDBTable className="customer-table" responsive striped>
               <MDBTableHead>
                 <tr>
                   <th><img src={avatar} className="rounded-circle testimoni-img" width="50" height="50" alt="avatar" /></th>

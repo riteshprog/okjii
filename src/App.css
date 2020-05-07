@@ -118,13 +118,13 @@ body {
 }
 .main-panel > .content{
   padding: 0px 20px !important;
-  margin-top: 85px !important;
+  margin-top: 90px !important;
   min-height: 75vh;
 }
 .customer-filter p {
     font-size: 17px;
     color: #5e5e5e;
-    margin-right: 5px;
+    margin: 8px !important;
 }
 .navbar a:not(.btn):not(.dropdown-item) {
     color: #333 !important;
@@ -3574,6 +3574,7 @@ li.nav-btn.nav-item {
 }
 .table-striped img.rounded-circle.testimoni-img {
   margin-left: 0rem !important;
+  margin-left: 0.5rem !important;
   margin-right: 3rem !important;
 }
 
@@ -5199,7 +5200,7 @@ padding: .5rem !important;
 }
 
 .table-responsive {
-  overflow: visible !important;
+  overflow: visible;
   padding-bottom: 10px;
 }
 
@@ -6784,6 +6785,14 @@ img.img-fluid.Logowhite-bg {
     margin: 0rem !important;
     margin-bottom: 10px !important;
     padding: 0px 5px;
+
+    margin-bottom: 0.8rem !important;
+}
+.marketing-dashbord .Acceptorder {
+    width: 65%;
+}
+.marketing-dashbord .Target {
+    width: 65%;
 }
 .customer-filter .filter-txt {
     color: #259D70;
@@ -6796,6 +6805,8 @@ img.img-fluid.Logowhite-bg {
 .m-store-view-add .card .card-body {
   margin: 0;
   width: 340px !important;
+
+  width: auto !important;
   padding: 15px 15px 15px 0px !important;
 }
 .ant-steps-navigation > .ant-steps-item::after {
@@ -7044,6 +7055,12 @@ img.img-fluid.Logowhite-bg {
 }
 @media only screen and (min-width: 768px) {
 
+
+  .main-panel > .content {
+    padding: 0px 20px !important;
+    margin-top: 75px !important;
+    min-height: 75vh;
+}
 .navbar-nav > li {
     list-style-type: none;
     padding-right: 0rem;

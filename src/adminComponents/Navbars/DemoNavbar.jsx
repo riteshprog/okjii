@@ -193,7 +193,7 @@ class Header extends React.Component {
                 </Link>
               </NavItem> */}
 
-              { <div className='df aic ml-2'>
+              { <div className='df aic'>
                 <span >Hello {user && user.basic && user.basic.name} </span>
               </div> }
               
