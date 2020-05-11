@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Switch, message } from 'antd';
+import { Switch, message, Select } from 'antd';
 import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter, MDBCollapse, MDBCard, MDBCardBody } from "mdbreact";
 
@@ -13,6 +13,8 @@ import CookieHandler from '../../utils/cookieHandler';
 import axios from 'axios';
 import filterIcon from "../../img/wallet/filterIcon.png";
 
+const {Option} = Select;
+
 class Region extends Component {
   constructor(props){
     super(props);
@@ -23,6 +25,7 @@ class Region extends Component {
       ],
       singleRegion: {
         name: '',
+        alias: []
       },
       editRegion: {
       }
@@ -55,7 +58,9 @@ class Region extends Component {
   toggleModal = (type, data) => {
     if(type === 'create') {
       let {createRegionModalVisibility} = this.state;
-      this.setState({ createRegionModalVisibility: !createRegionModalVisibility, singleRegion: {} });
+      this.setState({ createRegionModalVisibility: !createRegionModalVisibility, singleRegion: {
+        name: '', alias: []
+      } });
     }else if(type === 'delete'){
       let {deleteRegionModalVisibility} = this.state;
       this.setState({ deleteRegionModalVisibility: !deleteRegionModalVisibility, singleRegion: {} });
@@ -144,32 +149,50 @@ class Region extends Component {
       }
     })
   }
+  handleOnSelect = (value, key, type='create') => {
+    if(type =='create'){
+      let {singleRegion} = this.state;
+      if(singleRegion.alias.includes(value)){
+        let index = singleRegion.alias.findIndex((name => name==value));
+        singleRegion.alias.splice(index, 1)
+      }else singleRegion.alias.push(value);
+      this.setState({singleRegion});
+    }else if(type == 'edit') {
+      let {editRegion} = this.state;
+      if(editRegion[key].includes(value)){
+        let index = editRegion.alias.findIndex((name => name==value));
+        editRegion.alias.splice(index, 1)
+      }else editRegion.alias.push(value);
+      this.setState({editRegion});
+    }
+  }
   
   render() { 
     return ( 
       <div className="content">
         <div className="customer-filter wallet-row">
-              <div className="col-md-9">
-                <p>
-                  Region
-                </p>
-              </div>
-              <div className="filter-search col-md-3">
-                <p>
-                <i onClick={()=>this.toggleModal('create')} className="cp op8 fa fa-plus mr-3"></i>
-                  <i className="fa fa-search"></i>
-                </p>
-                <p>
-                  <span className="filter-txt"> Filter</span>
-                  <img src={filterIcon} />
-                </p>
-              </div>
-            </div>
+          <div className="col-md-9">
+            <p>
+              Region
+            </p>
+          </div>
+          <div className="filter-search col-md-3">
+            <p>
+            <i onClick={()=>this.toggleModal('create')} className="cp op8 fa fa-plus mr-3"></i>
+              <i className="fa fa-search"></i>
+            </p>
+            <p>
+              <span className="filter-txt"> Filter</span>
+              <img src={filterIcon} />
+            </p>
+          </div>
+        </div>
         <div className=''>
-             <MDBTable className="customer-table" striped>
+            <MDBTable className="customer-table" striped>
               <MDBTableHead>
                 <tr>
                   <th className="text-center">Name</th>
+                  <th className="text-center">Alias</th>
                   <th className="text-center">Active</th>
                   <th className="text-center">Action</th>
                 </tr>
@@ -178,6 +201,7 @@ class Region extends Component {
               {this.state.allRegions.map(region=>(
                 <tr>
                   <td className="text-center"><span className="text-green">{region.name}</span></td>
+                  <td className="text-center"><span className="text-green">{region.alias.join(', ')}</span></td>
                   <td className="text-center"><Switch onChange={(e)=>this.handleUpdateStatus(e, region)} checked={region.isActive?true:false} checkedChildren="yes" unCheckedChildren="no" className="Switch-button" /></td>
                   <td className="text-center"><MDBDropdown dropleft>
                       <MDBDropdownToggle color="primary">
@@ -203,12 +227,24 @@ class Region extends Component {
     <MDBContainer>
       <MDBModal isOpen={createRegionModalVisibility} toggle={()=>this.toggleModal('create')}>
         <MDBModalHeader toggle={()=>this.toggleModal('create')}>
-        Create A New Region
+          Create A New Region
         </MDBModalHeader>
         <MDBModalBody>
           <FormGroup>
             <Label>Name</Label>
             <Input onChange={(e)=>this.handleOnChange(e, 'create', 'name')} placeholder="Enter Name of the Region" />
+          </FormGroup>
+          <FormGroup>
+            <Label>Add Alias</Label>
+            <Select 
+            mode="tags" 
+            tokenSeparators={[',']} 
+            style={{ width: "100%" }} 
+            placeholder="Enter Alias"
+            onSelect={(value)=>this.handleOnSelect(value, 'alias')}
+            onDeselect={(value)=>this.handleOnSelect(value, 'alias')}
+            >
+            </Select>
           </FormGroup>
         </MDBModalBody>
         <MDBModalFooter>
@@ -229,6 +265,19 @@ class Region extends Component {
           <FormGroup>
             <Label>Name</Label>
             <Input onChange={(e)=>this.handleOnChange(e, 'edit', 'name')} value={this.state.editRegion.name} type="text" placeholder="Enter Name of the Region" />
+          </FormGroup>
+          <FormGroup>
+            <Label>Add Alias</Label>
+            <Select
+            defaultValue={this.state.editRegion.alias}
+            mode="tags" 
+            tokenSeparators={[',']} 
+            style={{ width: "100%" }} 
+            placeholder="Enter Alias"
+            onSelect={(value)=>this.handleOnSelect(value, 'alias', 'edit')}
+            onDeselect={(value)=>this.handleOnSelect(value, 'alias', 'edit')}
+            >
+            </Select>
           </FormGroup>
         </MDBModalBody>
         <MDBModalFooter>  

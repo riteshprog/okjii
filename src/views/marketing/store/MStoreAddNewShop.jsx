@@ -40,11 +40,12 @@ class MStoreAddNewShop extends React.Component {
       isShopSaved: false,
       hasOwnerAvtar: false,
       otpBtn: false,
-      otpVerified: false,
+      otpVerified: true,
       savingShop: false,
       otp: "",
       defaultCenter: { lat: 27.5440247, lng: 81.63638689999999 },
       errorObj: { basic: `Fileds Can't be Empty` },
+      allStoreTypes: [],
       shopData: {
         basic: {
           shopName: "",
@@ -86,186 +87,42 @@ class MStoreAddNewShop extends React.Component {
   }
   shopForm = {
     basic: [
-      {
-        type: "text",
-        tag: "input",
-        key: "shopName",
-        label: "Store Name",
-        hint: "Enter Store Name",
-        changeHandler: "handleOnchange",
-        space: 6,
-        required: true
-      },
-      {
-        type: "text",
-        tag: "input",
-        key: "ownerName",
-        label: "Owner Name",
-        hint: "Enter Owner Name",
-        changeHandler: "handleOnchange",
-        required: true
-      },
-      {
-        type: "number",
-        tag: "inputGroupOtpSend",
-        buttonText: "Get OTP",
-        key: "mobileNumber",
-        label: "Mobile Number",
-        hint: "Enter Mobile Number",
-        changeHandler: "handleOnchange",
-        required: true
-      },
-      {
-        type: "number",
-        tag: "inputGroupOtpVerify",
-        buttonText: "Verify",
-        key: "otp",
-        label: "Enter Otp",
-        hint: "Six Digit OTP",
-        changeHandler: "handleOnchange",
-        required: true
-      },
-      {
-        type: "number",
-        tag: "input",
-        key: "altMobileNumber",
-        label: "Alternate Mobile Number",
-        hint: "Enter Alt Mobile Number",
-        changeHandler: "handleOnchange",
-        required: false
-      },
-      {
-        type: "file",
-        tag: "inputGroupFileType",
-        key: "ownerPhoto",
-        label: "Upload Owner Photo",
-        changeHandler: "onChange",
-        space: 6,
-        required: true
-      }
+      { type: "text", tag: "input", key: "shopName", label: "Store Name", hint: "Enter Store Name", hangeHandler: "handleOnchange", space: 6, required: true },
+      { type: "text", tag: "input", key: "ownerName", label: "Owner Name", hint: "Enter Owner Name", hangeHandler: "handleOnchange", required: true },
+      { type: "number", tag: "inputGroupOtpSend", uttonText: "Get OTP", key: "mobileNumber", label: "Mobile Number", hint: "Enter Mobile Number", hangeHandler: "handleOnchange", required: true },
+      { type: "number", tag: "inputGroupOtpVerify", uttonText: "Verify", key: "otp", label: "Enter Otp", hint: "Six Digit OTP", hangeHandler: "handleOnchange", required: true },
+      { type: "number", tag: "input", key: "altMobileNumber", label: "Alternate Mobile Number", hint: "Enter Alt Mobile Number", hangeHandler: "handleOnchange", required: false },
+      { type: "file", tag: "inputGroupFileType", key: "ownerPhoto", label: "Upload Owner Photo", hangeHandler: "onChange", space: 6, required: true }
     ],
     bankDetails: [
-      {
-        type: "text",
-        tag: "input",
-        key: "accountHolderName",
-        label: "Account Holder Name*",
-        hint: "Name",
-        changeHandler: "onChange",
-        space: 6,
-        required: false
-      },
-
-      {
-        type: "text",
-        tag: "input",
-        key: "bankName",
-        label: "Bank Name*",
-        hint: "Enter Bank Name",
-        changeHandler: "onChange",
-        space: 6,
-        required: false
-      },
-            {
-        type: "number",
-        tag: "input",
-        key: "accountNumber",
-        label: "Account Number*",
-        hint: "Enter Account Number",
-        changeHandler: "onChange",
-        space: 6,
-        required: false
-      },
-      {
-        type: "number",
-        tag: "input",
-        key: "confirmAccountNumber",
-        label: "Confirm Account Number*",
-        hint: "Re-enter Account Number",
-        changeHandler: "onChange",
-        space: 6,
-        required: false
-      },
-      {
-        type: "text",
-        tag: "input",
-        key: "bankAddress",
-        label: "Bank Address*",
-        hint: "Enter Bank Address",
-        changeHandler: "onChange",
-        space: 6,
-        required: false
-      },
-      {
-        type: "text",
-        tag: "input",
-        key: "ifscCode",
-        label: "IFSC Code*",
-        hint: "Enter IFSC Code",
-        changeHandler: "onChange",
-        space: 6,
-        required: false
-      },
-      {
-        type: "text",
-        tag: "select",
-        key: "accountType",
-        options: ["Saving", "Current", "Regular"],
-        label: "Account Type",
-        hint: "Choose Account*",
-        changeHandler: "onChange",
-        space: 6,
-        required: false
-      },
-
-
-      {
-        type: "text",
-        tag: "input",
-        key: "mobileNumber",
-        label: "Mobile Number (Optional)",
-        hint: "No File Selected",
-        changeHandler: "onChange",
-        space: 6,
-        required: false
-      }
+      { type: "text", tag: "input", key: "accountHolderName", label: "Account Holder Name*", hint: "Name", hangeHandler: "onChange", space: 6, required: false },
+      { type: "text", tag: "input", key: "bankName", label: "Bank Name*", hint: "Enter Bank Name", hangeHandler: "onChange", space: 6, required: false      },    { type: "number", tag: "input", key: "accountNumber", label: "Account Number*", hint: "Enter Account Number", hangeHandler: "onChange", space: 6, required: false },
+      { type: "number", tag: "input", key: "confirmAccountNumber", label: "Confirm Account Number*", hint: "Re-enter Account Number", hangeHandler: "onChange", space: 6, required: false },
+      { type: "text", tag: "input", key: "bankAddress", label: "Bank Address*", hint: "Enter Bank Address", hangeHandler: "onChange", space: 6, required: false },
+      { type: "text", tag: "input", key: "ifscCode", label: "IFSC Code*", hint: "Enter IFSC Code", hangeHandler: "onChange", space: 6, required: false },
+      { type: "text", tag: "select", key: "accountType", ptions: ["Saving", "Current", "Regular"], label: "Account Type", hint: "Choose Account*", hangeHandler: "onChange", space: 6, required: false },
+      { type: "text", tag: "input", key: "mobileNumber", label: "Mobile Number (Optional)", hint: "No File Selected", hangeHandler: "onChange", space: 6, required: false }
     ],
     storeCatelogue: [
-      {
-        type: "radio",
-        tag: "radio",
-        key: "storeType",
-        label: "Choose Store Type",
-        hint: "Choose Store Type",
-        changeHandler: "onChange",
-        space: 12,
-        required: true
-      },
-      {
-        type: "time",
-        tag: "input",
-        key: "storeOpeningTiming",
-        label: "Store Opeing Timing",
-        hint: "Shop Open &amp; Close Time",
-        changeHandler: "onChange",
-        space: 6,
-        required: true
-      },
-      {
-        type: "time",
-        tag: "input",
-        key: "storeClosingTiming",
-        label: "Store Closing Timing",
-        hint: "Enter Store Closing Timing",
-        changeHandler: "onChange",
-        space: 6,
-        required: true
-      }
+      { type: "radio", tag: "radio", key: "storeType", label: "Choose Store Type", hint: "Choose Store Type", hangeHandler: "onChange", space: 12, required: true },
+      { type: "time", tag: "input", key: "storeOpeningTiming", label: "Store Opeing Timing", hint: "Shop Open &amp; Close Time", hangeHandler: "onChange", space: 6, required: true },
+      { type: "time", tag: "input", key: "storeClosingTiming", label: "Store Closing Timing", hint: "Enter Store Closing Timing", hangeHandler: "onChange", space: 6, required: true }
     ]
   };
-  setDefaultCenter = defaultCenter => {
-    this.setState({ defaultCenter });
-  };
+
+  componentDidMount() {
+    this.getAllStoreTypes();
+  }
+
+  getAllStoreTypes = () => {
+    axios.get(process.env.REACT_APP_API_URL + "/store-type")
+    .then(({ data }) => {
+      if (data.status) this.setState({ allStoreTypes: data.allStoreTypes });
+      else message.info("no Store Type found");
+    }).catch((err) => console.log(`catch`, err)); 
+  }
+
+  setDefaultCenter = defaultCenter => this.setState({ defaultCenter })
 
   getAddressFromLatLong = (lat, lng) => {
     console.log(process.env.REACT_APP_GOOGLE_API_KEY)
@@ -275,34 +132,16 @@ class MStoreAddNewShop extends React.Component {
         let address = "", city = '';
         if (data.results.length) {
           for (var i = 0; i < data.results[0].address_components.length; i++) {
-            if (
-              data.results[0].address_components[i].types.indexOf("country") >
-              -1
-            ) {
+            if ( data.results[0].address_components[i].types.indexOf("country") > -1 ) {
               address += data.results[0].address_components[i].long_name + "";
-            }
-            if (
-              data.results[0].address_components[i].types.indexOf(
-                "administrative_area_level_1"
-              ) > -1
-            ) {
+            } if ( data.results[0].address_components[i].types.indexOf( "administrative_area_level_1" ) > -1 ) {
               address += data.results[0].address_components[i].long_name + ", ";
+            } if ( data.results[0].address_components[i].types.indexOf( "administrative_area_level_2" ) > -1 ) {
+              address += data.results[0].address_components[i].long_name + ", ";
+            } if ( data.results[0].address_components[i].types.indexOf( "locality" ) > -1 ) {
+              address += data.results[0].address_components[i].long_name + ", ";
+              city = data.results[0].address_components[i].long_name;
             }
-            if (
-              data.results[0].address_components[i].types.indexOf(
-                "administrative_area_level_2"
-                ) > -1
-                ) {
-                  address += data.results[0].address_components[i].long_name + ", ";
-                }
-                if (
-                  data.results[0].address_components[i].types.indexOf(
-                    "locality"
-                    ) > -1
-                    ) {
-                      address += data.results[0].address_components[i].long_name + ", ";
-                      city = data.results[0].address_components[i].long_name;
-                    }
           }
           return {address, city};
         } else return {address, city};
@@ -313,10 +152,8 @@ class MStoreAddNewShop extends React.Component {
       });
   };
 
-  toggleAddNewShopModal = () =>
-    this.setState({
-      addNewShopModalVisibility: !this.state.addNewShopModalVisibility
-    });
+  toggleAddNewShopModal = () => this.setState({addNewShopModalVisibility: !this.state.addNewShopModalVisibility});
+
   handleAddNewShop = (e, type) => {
     if (type == "addNewShop") {
       this.toggleAddNewShopModal();
@@ -394,15 +231,9 @@ class MStoreAddNewShop extends React.Component {
         if (bankDetails.accountNumber != bankDetails.confirmAccountNumber)
           message.error(`Account Number Doesn't Match`);
         else
-          this.setState({
-            currentStep: step,
-            errorObj: {}
-          });
+          this.setState({currentStep: step, errorObj: {}});
       } else {
-        this.setState({
-          currentStep: step,
-          errorObj: {}
-        });
+        this.setState({currentStep: step, errorObj: {}});
       }
     }
   };
@@ -508,32 +339,7 @@ class MStoreAddNewShop extends React.Component {
 
   handleOnSave = () => {
     this.setState({savingShop: true})
-    // let data = new FormData();
     const shopData = this.state.shopData;
-    
-    // data.append("basic", JSON.stringify(shopData.basic));
-    // data.set("bankDetails", JSON.stringify(shopData.bankDetails));
-    // data.set("storeCatelogue", JSON.stringify(shopData.storeCatelogue));
-
-    // shopData.basic.ownerPhoto &&
-    //   data.append("ownerPhoto", shopData.basic.ownerPhoto);
-
-    // shopData.basic.businessEntityIncorporation &&
-    //   data.append(
-    //     "businessEntityIncorporation",
-    //     shopData.basic.businessEntityIncorporation
-    //   );
-    // shopData.basic.fssaiLicenceAndRegistration &&
-    //   data.append(
-    //     "fssaiLicenceAndRegistration",
-    //     shopData.basic.fssaiLicenceAndRegistration
-    //   );
-    // shopData.basic.gstRegistration &&
-    //   data.append("gstRegistration", shopData.basic.gstRegistration);
-    // shopData.basic.tradeLicense &&
-    //   data.append("tradeLicense", shopData.basic.tradeLicense);
-    // shopData.basic.waltLicense &&
-    //   data.append("waltLicense", shopData.basic.waltLicense);
 
     let token = JSON.parse(CookieHandler.readCookie('token'))
     console.log('shopData', shopData);
@@ -1030,12 +836,6 @@ class MStoreAddNewShop extends React.Component {
 
                               {this.renderFunc}
                             </PlacesAutocomplete>
-                            
-                            {/* <MyMapComponent
-                            isMarkerShown
-                            onMarkerClick={this.handleMarkerClick}
-                          /> */}
-                            {/* <ShopMap center={this.state.defaultCenter} containerElement={<div style={{ height: '250px', width: '100%' }} />} mapElement={<div style={{ height: '100%', width: '100%' }} />}/> */}
                           </FormGroup>
                         </Col>
                         <Col className="pr-1" md={6}>
@@ -1181,30 +981,9 @@ class MStoreAddNewShop extends React.Component {
                               {item.required ? this.renderRequiredIcon() : null}
                               {item.type == "radio" ? (
                                 <div className="select-option-storetype">
-                                  <CustomInput
-                                    type="radio"
-                                    name="storeType"
-                                    id="Medium Store"
-                                    label="Medium Store"
-                                  />
-                                  <CustomInput
-                                    type="radio"
-                                    name="storeType"
-                                    id="Standard Store"
-                                    label="Standard Store"
-                                  />
-                                  <CustomInput
-                                    type="radio"
-                                    name="storeType"
-                                    id="24x7 Store"
-                                    label="24x7 Store"
-                                  />
-                                  <CustomInput
-                                    type="radio"
-                                    name="storeType"
-                                    id="OkkJi Access"
-                                    label="OkkJi Access"
-                                  />
+                                  {this.state.allStoreTypes.map((type, key)=>(
+                                    <CustomInput type="radio" name="storeType" id={type._id} label={type.name} />
+                                  ))}
                                 </div>
                               ) : null}
                               {item.type == "time" ? (

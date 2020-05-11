@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
-import moment from "moment-timezone";
-import { Radio, message, Table, Select, Tag  } from "antd";
+import { message, Table, Select, Tag  } from "antd";
 import { Row, Col, Button, Modal, ModalBody, ModalFooter, ModalHeader, FormGroup, Form, Input } from "reactstrap";
 import CookieHandler from '../../utils/cookieHandler';
 import _ from 'lodash';
@@ -26,7 +25,10 @@ export default class Categories extends React.Component {
       addNewSubCategoryModalVisibility: false,
       addNewBrandModalVisibility: false,
       addNewStoreTypeModalVisibility: false,
+      editStoreTypeModalVisibility: false,
+      deleteCurrentStoreType: false,
       currentCategoryId: null,
+      currentStoreTypeId: null,
       newCategory: {
         name: "",
         subCategories: [],
@@ -98,6 +100,15 @@ export default class Categories extends React.Component {
       dataIndex: "name",
       key: "_id",
       render: (name) => <span>{name}</span>,
+    },
+    {
+      title: "Action",
+      dataIndex: "_id",
+      key: "_id",
+      render: (_id) => <div className='df fdc'>
+        <span onClick={()=>this.toggleEditStoreType(_id)} className='cp op8 t-text'>Edit</span>
+        <span onClick={()=>this.toggleDeleteStoreType(_id)} className='cp op8 t-text'>Delete</span>
+      </div>
     }
   ];
   
@@ -164,7 +175,25 @@ export default class Categories extends React.Component {
         message.error(`Something went wrong`);
       }
     })
-  } 
+  }
+  getSingleStorTypeById = (storeTypeId) => {
+    let token = JSON.parse(CookieHandler.readCookie('token'));
+    let url = process.env.REACT_APP_API_URL + '/store-type/' + storeTypeId;
+    return axios.get(url, {
+      headers: {
+        token
+      }
+    }).then(({data})=>{
+      return data.data;
+    }).catch(ex=>{
+      if(ex.response && ex.response.status == 401){
+        message.info('Session Expired!, Please Login Again.')
+      }else {
+        message.error(`Something went wrong`);
+      }
+    })
+  }
+
   getAllRegions = () => {
     let token = JSON.parse(CookieHandler.readCookie('token'));
     axios.get(process.env.REACT_APP_API_URL + '/region', {
@@ -386,8 +415,19 @@ export default class Categories extends React.Component {
   }
   
   toggleAddNewSubCategory = () => this.setState({ addNewSubCategoryModalVisibility: !this.state.addNewSubCategoryModalVisibility, errorMessage: `` });
-  toggleAddNewStoreType = () => this.setState({ addNewStoreTypeModalVisibility: !this.state.addNewStoreTypeModalVisibility, errorMessage: `` });
   toggleAddNewBrand = () => this.setState({ addNewBrandModalVisibility: !this.state.addNewBrandModalVisibility, errorMessage: `` });
+  
+  toggleAddNewStoreType = () => this.setState({ addNewStoreTypeModalVisibility: !this.state.addNewStoreTypeModalVisibility, errorMessage: `` });
+  toggleEditStoreType= (_id) => {
+    if(_id){
+      this.getSingleStorTypeById(_id).then(singleStoreType=>{
+        this.setState({newStoreType: singleStoreType, editStoreTypeModalVisibility: !this.state.editStoreTypeModalVisibility, errorMessage: ``})
+      })
+    }else {
+      this.setState({ editStoreTypeModalVisibility: !this.state.editStoreTypeModalVisibility, errorMessage: `` });
+    }
+  }
+  toggleDeleteStoreType = (_id) => this.setState({ deleteCurrentStoreType: !this.state.deleteCurrentStoreType, currentStoreTypeId: _id, errorMessage: `` });
 
   handleOnChange = (e, type, key) => {
     if(type === 'category'){
@@ -561,6 +601,36 @@ export default class Categories extends React.Component {
     })
   }
 
+  handleStoreTypeUpdate = () => {
+    let {newStoreType} = this.state, updateObj = { name: newStoreType.name };    
+    let url = process.env.REACT_APP_API_URL + '/store-type/' + newStoreType._id;
+    let token = JSON.parse(CookieHandler.readCookie('token'));
+    this.updateStoreType(updateObj, url, token);
+  }
+  
+  updateStoreType = (updateObj, url, token) => {
+    axios.patch(url, updateObj, {
+      headers: {
+        token
+      }
+    }).then(({data})=>{
+      if(data.status){
+        if(this.state.editStoreTypeModalVisibility){
+          this.toggleEditStoreType()
+          message.success(data.message);
+        } else if(this.state.deleteCurrentStoreType){
+          this.toggleDeleteStoreType()
+          message.success(`Successfully Deleted`);
+        }
+        this.getAllStoreType();
+      }else{
+        message.info(data.message);
+      }
+    }).catch(ex=>{
+      console.log(`catch here`, ex);
+    })
+  }
+
   render() {
     return (
       <>
@@ -588,7 +658,7 @@ export default class Categories extends React.Component {
               </Button>
               <Row>
                 <Col className="pr-1" md={12}>
-                  <Table columns={this.subCategoriesColumns} dataSource={this.state.allSubCategories} />
+                  <Table pagination={{pageSize: 7}} columns={this.subCategoriesColumns} dataSource={this.state.allSubCategories} />
                 </Col>
               </Row>
             </Col>
@@ -614,19 +684,15 @@ export default class Categories extends React.Component {
             </Col>
             {this.renderAddNewBrand()}
             {this.renderAddNewStoreType()}
+            {this.state.editStoreTypeModalVisibility && this.renderEditStoreTypeModal()}
+            {this.state.deleteCurrentStoreType && this.renderDeleteStoreTypeModal()}
+            {this.state.editStoreTypeModalVisibility && this.renderDeleteStoreTypeModal()}
           </Row>
         </div>
       </>
     );
   }
-  searchFilter = (input, option) => {
-    input = input.toLowerCase();
-    if(!Array.isArray(option.props.children)) {
-      if(typeof option.props.children === 'string') {
-        return option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-      }
-    }
-  }
+
   renderEditCategoryModal = () => (
     <Modal isOpen={this.state.editCategoryModalVisibility} toggle={()=>this.toggleEditCategory(null)} >
       <ModalHeader toggle={()=>this.toggleEditCategory(null)}> Edit Category </ModalHeader>
@@ -702,6 +768,58 @@ export default class Categories extends React.Component {
     let token = JSON.parse(CookieHandler.readCookie('token'));
 
     this.updateCategory(updateObj, url, token);
+  }
+
+  renderEditStoreTypeModal = () => (
+    <Modal isOpen={this.state.editStoreTypeModalVisibility} toggle={()=>this.toggleEditStoreType()} >
+      <ModalHeader toggle={()=>this.toggleEditStoreType()}> Edit Store Type </ModalHeader>
+      <ModalBody>
+        <Form>
+          <Row className="df jcc">
+            <Col className="pl-1" md="10">
+              <FormGroup>
+                <label>Store Type Name</label>
+                <Input placeholder="Enter Category Name" value={this.state.newStoreType.name} onChange={(e) => this.handleOnChange(e, 'storeType', "name", 'edit')} type="text" />
+              </FormGroup>
+            </Col>
+          </Row>
+        </Form>
+      </ModalBody>
+      <ModalFooter>
+        {this.state.errorMessage ? ( <span className="mr-3 text-danger">{this.state.errorMessage}</span> ) : null}
+        <Button id="save-btn" color="primary" onClick={this.handleStoreTypeUpdate}> Update </Button>
+        <Button color="secondary" onClick={()=>this.toggleEditStoreType()}> Cancel </Button>
+      </ModalFooter>
+    </Modal>
+  );
+
+  renderDeleteStoreTypeModal = () => (
+    <Modal isOpen={this.state.deleteCurrentStoreType} toggle={()=>this.toggleDeleteStoreType()} >
+    <ModalHeader toggle={()=>this.toggleDeleteStoreType()}> Delete Store Type </ModalHeader>
+    <ModalBody>
+      <Form>
+        <Row className="df jcc">
+          <Col className="pl-1" md="10">
+            <p>Are you sure you want to delete this store type?</p>
+          </Col>
+        </Row>
+      </Form>
+    </ModalBody>
+    <ModalFooter>
+      <Button id="save-btn" color="danger" onClick={()=>this.handleOnDeleteStoreType()} > Delete </Button>
+      <Button color="secondary" onClick={()=>this.toggleDeleteStoreType()}> Cancel </Button>
+    </ModalFooter>
+  </Modal>
+  )
+
+  handleOnDeleteStoreType = () => {
+    let updateObj = {
+      isDeleted: true
+    }
+    let url = process.env.REACT_APP_API_URL + '/store-type/' + this.state.currentStoreTypeId;
+    let token = JSON.parse(CookieHandler.readCookie('token'));
+
+    this.updateStoreType(updateObj, url, token);
   }
 
 }
