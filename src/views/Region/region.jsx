@@ -1,16 +1,11 @@
+import axios from 'axios';
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { Switch, message, Select } from 'antd';
 import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
-import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter, MDBCollapse, MDBCard, MDBCardBody } from "mdbreact";
+import { FormGroup, Label, Input } from "reactstrap";
+import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from "mdbreact";
 
-import wallet from "../../img/wallet/walletIcon.png";
-import profile from "../../img/wallet/Profile-01.png";
-import transaction from "../../img/wallet/transaction.png";
-import downloadStatement from "../../img/wallet/downloadStatement.png";
-import { CustomInput, Row, Col, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import CookieHandler from '../../utils/cookieHandler';
-import axios from 'axios';
 import filterIcon from "../../img/wallet/filterIcon.png";
 
 const {Option} = Select;

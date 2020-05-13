@@ -40,7 +40,7 @@ class MStoreAddNewShop extends React.Component {
       isShopSaved: false,
       hasOwnerAvtar: false,
       otpBtn: false,
-      otpVerified: true,
+      otpVerified: false,
       savingShop: false,
       otp: "",
       defaultCenter: { lat: 27.5440247, lng: 81.63638689999999 },
@@ -89,8 +89,8 @@ class MStoreAddNewShop extends React.Component {
     basic: [
       { type: "text", tag: "input", key: "shopName", label: "Store Name", hint: "Enter Store Name", hangeHandler: "handleOnchange", space: 6, required: true },
       { type: "text", tag: "input", key: "ownerName", label: "Owner Name", hint: "Enter Owner Name", hangeHandler: "handleOnchange", required: true },
-      { type: "number", tag: "inputGroupOtpSend", uttonText: "Get OTP", key: "mobileNumber", label: "Mobile Number", hint: "Enter Mobile Number", hangeHandler: "handleOnchange", required: true },
-      { type: "number", tag: "inputGroupOtpVerify", uttonText: "Verify", key: "otp", label: "Enter Otp", hint: "Six Digit OTP", hangeHandler: "handleOnchange", required: true },
+      { type: "number", tag: "inputGroupOtpSend", buttonText: "Get OTP", key: "mobileNumber", label: "Mobile Number", hint: "Enter Mobile Number", hangeHandler: "handleOnchange", required: true },
+      { type: "number", tag: "inputGroupOtpVerify", buttonText: "Verify", key: "otp", label: "Enter Otp", hint: "Six Digit OTP", hangeHandler: "handleOnchange", required: true },
       { type: "number", tag: "input", key: "altMobileNumber", label: "Alternate Mobile Number", hint: "Enter Alt Mobile Number", hangeHandler: "handleOnchange", required: false },
       { type: "file", tag: "inputGroupFileType", key: "ownerPhoto", label: "Upload Owner Photo", hangeHandler: "onChange", space: 6, required: true }
     ],
@@ -100,7 +100,7 @@ class MStoreAddNewShop extends React.Component {
       { type: "number", tag: "input", key: "confirmAccountNumber", label: "Confirm Account Number*", hint: "Re-enter Account Number", hangeHandler: "onChange", space: 6, required: false },
       { type: "text", tag: "input", key: "bankAddress", label: "Bank Address*", hint: "Enter Bank Address", hangeHandler: "onChange", space: 6, required: false },
       { type: "text", tag: "input", key: "ifscCode", label: "IFSC Code*", hint: "Enter IFSC Code", hangeHandler: "onChange", space: 6, required: false },
-      { type: "text", tag: "select", key: "accountType", ptions: ["Saving", "Current", "Regular"], label: "Account Type", hint: "Choose Account*", hangeHandler: "onChange", space: 6, required: false },
+      { type: "text", tag: "select", key: "accountType", options: ["Saving", "Current", "Regular"], label: "Account Type", hint: "Choose Account*", hangeHandler: "onChange", space: 6, required: false },
       { type: "text", tag: "input", key: "mobileNumber", label: "Mobile Number (Optional)", hint: "No File Selected", hangeHandler: "onChange", space: 6, required: false }
     ],
     storeCatelogue: [
