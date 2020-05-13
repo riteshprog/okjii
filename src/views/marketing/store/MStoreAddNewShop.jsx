@@ -169,7 +169,7 @@ class MStoreAddNewShop extends React.Component {
         OwnerPicture: joi.any(),
         uploadDocuments: joi.any(),
         otp: joi.any(),
-        ownerPhoto: joi.string().required().label("Owner Image"),
+        ownerPhoto: joi.string().allow('').required().label("Owner Image"),
         shopLocation: joi.any(),
         state: joi.any(),
         distirct: joi.any(),
@@ -278,7 +278,7 @@ class MStoreAddNewShop extends React.Component {
         if(data.status){
           message.success('image uploaded')
           shopData[category][type] = data.imgUrl
-          this.setState({ hasOwnerAvtar: true });
+          this.setState({ hasOwnerAvtar: true, errorObj: {} });
         }else{
           message.info('upload falid, try again');
         }
