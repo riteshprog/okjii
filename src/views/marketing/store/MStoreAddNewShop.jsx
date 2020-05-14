@@ -356,7 +356,6 @@ class MStoreAddNewShop extends React.Component {
         window.location.pathname = "admin/shops";
       }, 1000);
     } else {
-      alert(`inside then else `, data);
       message.error(data.errorMessage);
     }
   }).catch(err => {

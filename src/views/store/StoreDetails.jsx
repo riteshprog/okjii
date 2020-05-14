@@ -121,7 +121,7 @@ export default class StoreDetails extends Component {
                   <td><span className="text-green">{shop.shopInfo.shopCode}</span></td>
                   <td><span className="text-green">{shop.basic.shopName}</span></td>
                   <td>{shop.basic.district?shop.basic.district:shop.basic.shopLocation.label.split(', ').slice(0, 2).join(', ') }</td>
-                  <td><span className="text-green">{shop.storeCatelogue.storeType.name}</span></td>
+                  <td><span className="text-green">{shop.storeCatelogue.storeType && shop.storeCatelogue.storeType.name}</span></td>
                   <td className="text-center"><Switch checked={shop.shopInfo.status === 'Active'?true:false} checkedChildren="yes" unCheckedChildren="no" className="Switch-button" /></td>
                  <td className="text-center"><MDBDropdown dropleft>
                 <MDBDropdownToggle color="primary">
