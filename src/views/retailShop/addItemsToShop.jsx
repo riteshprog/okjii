@@ -2,17 +2,16 @@ import React from "react";
 import Axios from "axios";
 import moment from 'moment-timezone';
 import {Steps, Select, Avatar, Switch, message } from 'antd';
-import {CheckOutlined, CloseOutlined} from '@ant-design/icons';
 import { Card, CardHeader, CardBody, CardTitle, Row, Col, Button, Form, FormGroup, CustomInput } from "reactstrap";
 const { Option } = Select;
 
-export default class AddProductToShop extends React.Component {
-  
+export default class AddProductToShop extends React.Component {  
   constructor(props){
     super(props);
     this.state = {
       addNewShopModalVisibility: false,
       showActions: false,
+      isCategoryProductSaved: true,
       selectedCategory: '',
       storeTypeCategories: [],
       subCategoriesWithBrands: [],
@@ -110,15 +109,20 @@ export default class AddProductToShop extends React.Component {
 
   handleOnSelect = (e, type)=> {
     console.log(e)
-    if(type == 'brandCategory'){
+    if(type == 'brandCategory' && this.state.isCategoryProductSaved){
+      console.log('true')
       let storeTypeCategoriesVisited = this.state.storeTypeCategoriesVisited;
       !storeTypeCategoriesVisited.includes(e) && storeTypeCategoriesVisited.push(e);
       this.setState({selectedCategory: e, storeTypeCategoriesVisited, storeTypeSubCategoriesVisited: []});
       this.getSubCategoriesWithBrands(e);
+    }else{
+      message.info('please save the products first to go further')
+      // this.setState(selectedCategory)
     }
   }
   handleOnBrandChecked = (e, sub, brand) => {
     let shopProductData = this.state.shopProductData;
+    let isCategoryProductSaved = this.state.isCategoryProductSaved;
     console.log(`shopProductData`, shopProductData)
     let cat = this.state.selectedCategory;
     if(!shopProductData[cat][sub]) shopProductData[cat][sub] = [brand];
@@ -130,7 +134,7 @@ export default class AddProductToShop extends React.Component {
     }
     let storeTypeSubCategoriesVisited = this.state.storeTypeSubCategoriesVisited;
     !storeTypeSubCategoriesVisited.includes(sub) && storeTypeSubCategoriesVisited.push(sub);
-    this.setState({shopProductData, storeTypeSubCategoriesVisited});
+    this.setState({shopProductData, storeTypeSubCategoriesVisited, isCategoryProductSaved: false});
   }
   handleSubmit = (e) => {
     e.preventDefault();
@@ -138,13 +142,19 @@ export default class AddProductToShop extends React.Component {
     let data = {
       shopId: this.state.shopData._id,
       shopType: this.state.shopData.storeCatelogue.storeType,
-      shopProductData: this.state.shopProductData
+      shopProductData: {
+        [this.state.selectedCategory]:this.state.shopProductData[this.state.selectedCategory]
+      }
     }
+
+    console.log(data);
     Axios.post(url, data)
     .then(({data})=>{
       if(data.status){
         console.log(`status`, data.status)
-        window.location.pathname = '/admin/shops'
+        // window.location.pathname = '/admin/shops'
+        this.setState({isCategoryProductSaved: true});
+        message.success('Shop products saved for this category')
       }else{
         console.log('no shop found')
       }
@@ -168,9 +178,9 @@ export default class AddProductToShop extends React.Component {
                     <Col className='pr-1' md={12}>
                       <FormGroup>
                       <label className='add-shop-label'>Select Product Category</label>{this.renderRequiredIcon()} 
-                        <Select placeholder='Select Product Category' size="large" onSelect={(e)=>this.handleOnSelect(e, 'brandCategory')} showSearch style={{ width: '100%' }} >
+                        <Select placeholder='Select Product Category' size="large" value={this.state.selectedCategory} onSelect={(e)=>this.handleOnSelect(e, 'brandCategory')} showSearch style={{ width: '100%' }} >
                           <Option value="Categories" disabled>Store Product Categories</Option>
-                            {this.state.storeTypeCategories.map(cat=><Option value={cat.data._id}>{cat.data.name}{this.state.storeTypeCategoriesVisited.includes(cat)?<i className='text-success nc-icon nc-check-2 ml-3'/>:null}</Option>)}
+                            {this.state.storeTypeCategories.map(cat=><Option value={cat.data._id}>{cat.data.name}{this.state.storeTypeCategoriesVisited.includes(cat.data._id)?<i className='text-success nc-icon nc-check-2 ml-3'/>:null}</Option>)}
                         </Select>
                       </FormGroup>
                     </Col>
