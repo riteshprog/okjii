@@ -36,7 +36,7 @@ class MStoreAddNewShop extends React.Component {
     this.state = {
       addNewShopModalVisibility: true,
       isMarkerShown: false,
-      currentStep: 0,
+      currentStep: 2,
       isShopSaved: false,
       hasOwnerAvtar: false,
       otpBtn: false,
@@ -199,12 +199,13 @@ class MStoreAddNewShop extends React.Component {
       return joi.validate(this.state.shopData.bankDetails, bankSchema);
     } else if (category == "storeCatelogue") {
       const storeCatelogueSchema = {
-        storeType: joi.string().required()
+        storeType: joi.string().required(),
+        storeOpeningTiming: joi.string().required(),
+        storeClosingTiming: joi.string().required(),
+        storeOpeningDays: joi.array().items(joi.string()).required()
+
       };
-      return joi.validate(
-        this.state.shopData.storeCatelogue,
-        storeCatelogueSchema
-      );
+      return joi.validate( this.state.shopData.storeCatelogue, storeCatelogueSchema );
     }
   };
 

@@ -53,9 +53,7 @@ class Region extends Component {
   toggleModal = (type, data) => {
     if(type === 'create') {
       let {createRegionModalVisibility} = this.state;
-      this.setState({ createRegionModalVisibility: !createRegionModalVisibility, singleRegion: {
-        name: '', alias: []
-      } });
+      this.setState({ createRegionModalVisibility: !createRegionModalVisibility, singleRegion: { name: '', alias: [] } });
     }else if(type === 'delete'){
       let {deleteRegionModalVisibility} = this.state;
       this.setState({ deleteRegionModalVisibility: !deleteRegionModalVisibility, singleRegion: {} });
