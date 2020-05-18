@@ -102,7 +102,7 @@ class AddNewShop extends React.Component {
                     Store Type:
                   </Label>
                   <Col sm={4}>
-                    <p>{storeCatelogue.storeType}</p>
+                    <p>{storeCatelogue.storeType && storeCatelogue.storeType.name}</p>
                   </Col>
                   <Label for="exampleMNumber" sm={2}>
                     Mobile Number:

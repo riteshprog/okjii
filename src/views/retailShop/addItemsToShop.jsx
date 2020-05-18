@@ -12,6 +12,7 @@ export default class AddProductToShop extends React.Component {
       addNewShopModalVisibility: false,
       showActions: false,
       isCategoryProductSaved: true,
+      isSavingProducts: false,
       selectedCategory: '',
       storeTypeCategories: [],
       subCategoriesWithBrands: [],
@@ -113,7 +114,14 @@ export default class AddProductToShop extends React.Component {
       console.log('true')
       let storeTypeCategoriesVisited = this.state.storeTypeCategoriesVisited;
       !storeTypeCategoriesVisited.includes(e) && storeTypeCategoriesVisited.push(e);
-      this.setState({selectedCategory: e, storeTypeCategoriesVisited, storeTypeSubCategoriesVisited: []});
+      let {storeTypeSubCategoriesVisited} = this.state;
+      if(Object.keys(this.state.shopData.shopInfo.shopProductsBief).length){
+        console.log('this.state.shopData.shopInfo.shopProductsBief', this.state.shopData.shopInfo.shopProductsBief)
+        storeTypeSubCategoriesVisited = Object.keys(this.state.shopData.shopInfo.shopProductsBief[e]);
+      }else{
+        console.log('this.state.shopData.shopInfo.shopProductsBief -- else', this.state.shopData.shopInfo.shopProductsBief)
+      }
+      this.setState({selectedCategory: e, storeTypeCategoriesVisited, storeTypeSubCategoriesVisited});
       this.getSubCategoriesWithBrands(e);
     }else{
       message.info('please save the products first to go further')
@@ -138,23 +146,22 @@ export default class AddProductToShop extends React.Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
+    this.setState({isSavingProducts: true})
+    message.info('Please wait while we save shop products')
     const url = process.env.REACT_APP_API_URL + '/shop/add-products';
     let data = {
       shopId: this.state.shopData._id,
-      shopType: this.state.shopData.storeCatelogue.storeType,
+      shopType: this.state.shopData.storeCatelogue.storeType._id,
       shopProductData: {
         [this.state.selectedCategory]:this.state.shopProductData[this.state.selectedCategory]
-      }
+      },
+      categoryId: this.state.selectedCategory
     }
-
-    console.log(data);
     Axios.post(url, data)
     .then(({data})=>{
       if(data.status){
-        console.log(`status`, data.status)
-        // window.location.pathname = '/admin/shops'
-        this.setState({isCategoryProductSaved: true});
-        message.success('Shop products saved for this category')
+        this.setState({isCategoryProductSaved: true, isSavingProducts: false});
+        message.success('Shop products saved Successfully')
       }else{
         console.log('no shop found')
       }
@@ -219,7 +226,7 @@ export default class AddProductToShop extends React.Component {
                   
                   <Row>
                     <Col className='pr-1 df jcc' md={12}>
-                      <button className='btn btn-success' onClick={this.handleSubmit}>Submit</button>
+                      <button className='btn btn-success' disabled={this.state.isSavingProducts?true:false} onClick={this.handleSubmit}>{this.state.isSavingProducts?'Saving':'Submit'}</button>
                     </Col>
                   </Row>
                   

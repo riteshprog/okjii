@@ -144,7 +144,7 @@ class SingleShopEdit extends Component {
                 <Col sm={4}>
                   <Select
                     disabled
-                    value={storeCatelogue.storeType}
+                    value={storeCatelogue.storeType.name}
                     placeholder="Select Account Type"
                     size="large"
                     onSelect={value =>
@@ -174,6 +174,7 @@ class SingleShopEdit extends Component {
                     type="tel"
                     value={basic.mobileNumber}
                     placeholder="Mobile Number"
+                    disabled
                     onChange={e =>
                       this.handleOnChange(e, "basic", "mobileNumber")
                     }
@@ -261,9 +262,9 @@ class SingleShopEdit extends Component {
                 <Label sm={2}>Account Type:</Label>
                 <Col sm={4}>
                   <Select
-                    value={bankDetails.accountType}
-                    placeholder="Select Account Type"
-                    size="large"
+                    placeholder='Select Account Type'
+                    size='large'
+                    value={bankDetails.accountType?bankDetails.accountType:'No Account Type Found'}
                     onSelect={value =>
                       this.handleOnSelect(value, "bankDetails", "accountType")
                     }

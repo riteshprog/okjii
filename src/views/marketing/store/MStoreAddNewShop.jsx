@@ -36,7 +36,7 @@ class MStoreAddNewShop extends React.Component {
     this.state = {
       addNewShopModalVisibility: true,
       isMarkerShown: false,
-      currentStep: 2,
+      currentStep: 0,
       isShopSaved: false,
       hasOwnerAvtar: false,
       otpBtn: false,

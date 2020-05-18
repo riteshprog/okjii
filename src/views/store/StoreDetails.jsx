@@ -74,7 +74,7 @@ export default class StoreDetails extends Component {
       console.log(data);
       if(data.status){
         message.success('shop deleted successfully');
-        setTimeout(()=>this.getShopList(), 1000)
+        this.getShopList();
       }else{
         message.info(data.message);
       }
@@ -95,7 +95,6 @@ export default class StoreDetails extends Component {
           </div>
           <div className="filter-search ">
             <p><i class="fa fa-search"></i></p>
-            <p>Add Store <i class="fas fa-plus mr-2"/></p>
             <p><span class="filter-txt"> Filter</span> <img src={filterIcon} alt="" /></p>
           </div>
 
