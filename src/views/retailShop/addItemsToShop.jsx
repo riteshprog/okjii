@@ -110,14 +110,16 @@ export default class AddProductToShop extends React.Component {
 
   handleOnSelect = (e, type)=> {
     console.log(e)
-    if(type == 'brandCategory' && this.state.isCategoryProductSaved){
+    if(type == 'brandCategory' && this.state.isCategoryProductSaved && !this.state.isSavingProducts){
       console.log('true')
       let storeTypeCategoriesVisited = this.state.storeTypeCategoriesVisited;
       !storeTypeCategoriesVisited.includes(e) && storeTypeCategoriesVisited.push(e);
       let {storeTypeSubCategoriesVisited} = this.state;
       if(Object.keys(this.state.shopData.shopInfo.shopProductsBief).length){
-        console.log('this.state.shopData.shopInfo.shopProductsBief', this.state.shopData.shopInfo.shopProductsBief)
-        storeTypeSubCategoriesVisited = Object.keys(this.state.shopData.shopInfo.shopProductsBief[e]);
+        if(this.state.shopData.shopInfo.shopProductsBief[e]){
+          console.log('this.state.shopData.shopInfo.shopProductsBief', this.state.shopData.shopInfo.shopProductsBief)
+          storeTypeSubCategoriesVisited = Object.keys(this.state.shopData.shopInfo.shopProductsBief[e]);
+        }
       }else{
         console.log('this.state.shopData.shopInfo.shopProductsBief -- else', this.state.shopData.shopInfo.shopProductsBief)
       }
