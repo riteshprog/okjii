@@ -363,70 +363,70 @@ class AddNewShop extends React.Component {
   };
 
   changeStep = step => {
-    if (step >= 5) step = 4;
-    let errorObjKeys = Object.keys(this.state.errorObj);
-    if (step <= this.state.currentStep) {
-      this.setState({ currentStep: step });
-    } else if (errorObjKeys.length) {
-      message.error(this.state.errorObj[errorObjKeys[0]]);
-    } else {
-      if (this.state.currentStep == 0) {
-        let {basic} = this.state.shopData;
-        if(!this.state.hasOwnerAvtar) message.error("Shop Owner Image is Required");
-        else if (!basic.country) message.error("Shop Location is Required");
-        else if (!this.state.otpVerified) message.error("Please Verify Your Mobile Number");
-        else
-          this.setState({
-            currentStep: step,
-            errorObj: {}
-          });
-      } else if (this.state.currentStep == 1) {
-        const bankDetails = this.state.shopData.bankDetails;
-        if (bankDetails.accountNumber != bankDetails.confirmAccountNumber)
-          message.error(`Account Number Doesn't Match`);
-        else
-          this.setState({
-            currentStep: step,
-            errorObj: {}
-          });
-      } else {
-        this.setState({
-          currentStep: step,
-          errorObj: {}
-        });
-      }
-    }
+    // if (step >= 5) step = 4;
+    // let errorObjKeys = Object.keys(this.state.errorObj);
+    // if (step <= this.state.currentStep) {
+    //   this.setState({ currentStep: step });
+    // } else if (errorObjKeys.length) {
+    //   message.error(this.state.errorObj[errorObjKeys[0]]);
+    // } else {
+    //   if (this.state.currentStep == 0) {
+    //     let {basic} = this.state.shopData;
+    //     if(!this.state.hasOwnerAvtar) message.error("Shop Owner Image is Required");
+    //     else if (!basic.country) message.error("Shop Location is Required");
+    //     else if (!this.state.otpVerified) message.error("Please Verify Your Mobile Number");
+    //     else
+    //       this.setState({
+    //         currentStep: step,
+    //         errorObj: {}
+    //       });
+    //   } else if (this.state.currentStep == 1) {
+    //     const bankDetails = this.state.shopData.bankDetails;
+    //     if (bankDetails.accountNumber != bankDetails.confirmAccountNumber)
+    //       message.error(`Account Number Doesn't Match`);
+    //     else
+    //       this.setState({
+    //         currentStep: step,
+    //         errorObj: {}
+    //       });
+    //   } else {
+    //     this.setState({
+    //       currentStep: step,
+    //       errorObj: {}
+    //     });
+    //   }
+    // }
   };
 
   handleOnChange = (e, type, category) => {
-    let shopData = this.state.shopData;
-    if (
-      type == "businessEntityIncorporation" ||
-      type == "shopActRegistration" ||
-      type == "gstRegistration" ||
-      type == "fssaiLicenceAndRegistration" ||
-      type == "tradeLicense" ||
-      type == "waltLicense"
-    ) {
-      shopData[category][type] = e.target.files[0];
-    } else if (type == "ownerPhoto") {
-      this.setState({ hasOwnerAvtar: true });
-      shopData[category][type] = e.target.files[0];
-    } else if (type == "storeType") {
-      shopData[category][type] = e.target.id;
-    } else shopData[category][type] = e.target.value;
+    // let shopData = this.state.shopData;
+    // if (
+    //   type == "businessEntityIncorporation" ||
+    //   type == "shopActRegistration" ||
+    //   type == "gstRegistration" ||
+    //   type == "fssaiLicenceAndRegistration" ||
+    //   type == "tradeLicense" ||
+    //   type == "waltLicense"
+    // ) {
+    //   shopData[category][type] = e.target.files[0];
+    // } else if (type == "ownerPhoto") {
+    //   this.setState({ hasOwnerAvtar: true });
+    //   shopData[category][type] = e.target.files[0];
+    // } else if (type == "storeType") {
+    //   shopData[category][type] = e.target.id;
+    // } else shopData[category][type] = e.target.value;
 
-    this.setState({ shopData });
+    // this.setState({ shopData });
 
-    const isValid = this.checkForErrors(category);
-    let errorObj = {};
-    if (isValid.error) {
-      errorObj[category] = isValid.error.details[0].message;
-      this.setState({ errorObj });
-    } else {
-      errorObj = {};
-      this.setState({ errorObj });
-    }
+    // const isValid = this.checkForErrors(category);
+    // let errorObj = {};
+    // if (isValid.error) {
+    //   errorObj[category] = isValid.error.details[0].message;
+    //   this.setState({ errorObj });
+    // } else {
+    //   errorObj = {};
+    //   this.setState({ errorObj });
+    // }
   };
 
   handleOnSelect = (e, type, category) => {

@@ -57,27 +57,27 @@ export default class AddProductToShop extends React.Component {
     let visitedShopData = this.state.shopProductData;
     let visitedSubCatArr = Object.keys(visitedShopData);
     console.log(`shopProductData`, visitedShopData)
-    Axios.get(process.env.REACT_APP_API_URL + '/shop/' + this.props.match.params.shopId)
-    .then(({data})=>{
-      if(data.status){
-        console.log(`data`, data);
-        data = data.data;
-        let shopProductData = this.state.shopProductData;
-        data.storeTypeCategories.map(cat=>{
-          shopProductData[cat.data._id] = {}
-        });
-        if(data.shopData.shopInfo && data.shopData.shopInfo.hasOwnProperty('shopProductsBief')){
-          Object.keys(data.shopData.shopInfo.shopProductsBief).map(cat=>{
-            shopProductData[cat] = data.shopData.shopInfo.shopProductsBief[cat]
-          })
-        }
-        this.setState({shopData: data.shopData, storeTypeCategories: data.storeTypeCategories, shopProductData})
-      }else{
-        console.log('no shop found')
-      }
-    }).catch(err=>{
-      console.log(`catch`, err);
-    })
+    // Axios.get(process.env.REACT_APP_API_URL + '/shop/' + this.props.match.params.shopId)
+    // .then(({data})=>{
+    //   if(data.status){
+    //     console.log(`data`, data);
+    //     data = data.data;
+    //     let shopProductData = this.state.shopProductData;
+    //     data.storeTypeCategories.map(cat=>{
+    //       shopProductData[cat.data._id] = {}
+    //     });
+    //     if(data.shopData.shopInfo && data.shopData.shopInfo.hasOwnProperty('shopProductsBief')){
+    //       Object.keys(data.shopData.shopInfo.shopProductsBief).map(cat=>{
+    //         shopProductData[cat] = data.shopData.shopInfo.shopProductsBief[cat]
+    //       })
+    //     }
+    //     this.setState({shopData: data.shopData, storeTypeCategories: data.storeTypeCategories, shopProductData})
+    //   }else{
+    //     console.log('no shop found')
+    //   }
+    // }).catch(err=>{
+    //   console.log(`catch`, err);
+    // })
   }
 
   toggleAddNewShopModal = () => this.setState({addNewShopModalVisibility: !this.state.addNewShopModalVisibility})
