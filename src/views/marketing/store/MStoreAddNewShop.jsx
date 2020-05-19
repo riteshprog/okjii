@@ -275,17 +275,20 @@ class MStoreAddNewShop extends React.Component {
       })
     } else if (type == "ownerPhoto") {
       message.info('uploading...')
-      this.uploadImg(e.target.files[0]).then(data=>{
-        if(data.status){
-          message.success('image uploaded')
-          shopData[category][type] = data.imgUrl
-          this.setState({ hasOwnerAvtar: true, errorObj: {} });
-        }else{
-          message.info('upload falid, try again');
-        }
-      }).catch(err=>{
-        message.info('upload falid, try again');
-      })
+      setTimeout(()=>{
+        message.error('Something went Wrong')
+      }, 10000)
+      // this.uploadImg(e.target.files[0]).then(data=>{
+      //   if(data.status){
+      //     message.success('image uploaded')
+      //     shopData[category][type] = data.imgUrl
+      //     this.setState({ hasOwnerAvtar: true, errorObj: {} });
+      //   }else{
+      //     message.info('upload falid, try again');
+      //   }
+      // }).catch(err=>{
+      //   message.info('upload falid, try again');
+      // })
     } else if (type == "storeType") {
       shopData[category][type] = e.target.id;
     } else if(type == 'storeOpeningTiming' || type == 'storeClosingTiming'){
