@@ -1047,7 +1047,7 @@ class MStoreAddNewShop extends React.Component {
                   className="btn-round"
                   color="primary"
                   type="submit"
-                  // onClick={() => this.changeStep(this.state.currentStep + 1)}
+                  onClick={() => this.changeStep(this.state.currentStep + 1)}
                 >
                   Next
                 </Button>
