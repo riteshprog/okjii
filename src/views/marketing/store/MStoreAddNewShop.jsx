@@ -275,20 +275,17 @@ class MStoreAddNewShop extends React.Component {
       })
     } else if (type == "ownerPhoto") {
       message.info('uploading...')
-      setTimeout(()=>{
-        message.error('Something went Wrong')
-      }, 10000)
-      // this.uploadImg(e.target.files[0]).then(data=>{
-      //   if(data.status){
-      //     message.success('image uploaded')
-      //     shopData[category][type] = data.imgUrl
-      //     this.setState({ hasOwnerAvtar: true, errorObj: {} });
-      //   }else{
-      //     message.info('upload falid, try again');
-      //   }
-      // }).catch(err=>{
-      //   message.info('upload falid, try again');
-      // })
+      this.uploadImg(e.target.files[0]).then(data=>{
+        if(data.status){
+          message.success('image uploaded')
+          shopData[category][type] = data.imgUrl
+          this.setState({ hasOwnerAvtar: true, errorObj: {} });
+        }else{
+          message.info('upload falid, try again');
+        }
+      }).catch(err=>{
+        message.info('upload falid, try again');
+      })
     } else if (type == "storeType") {
       shopData[category][type] = e.target.id;
     } else if(type == 'storeOpeningTiming' || type == 'storeClosingTiming'){
@@ -651,9 +648,7 @@ class MStoreAddNewShop extends React.Component {
                         <input
                           type="file"
                           accept="image/png,image/jpeg"
-                          onChange={e =>
-                            this.handleOnChange(e, "ownerPhoto", "basic")
-                          }
+                          onChange={e => this.handleOnChange(e, "ownerPhoto", "basic") }
                           id="file"
                           ref={this.ownerPhotoRef}
                           style={{ display: "none" }}
@@ -661,17 +656,10 @@ class MStoreAddNewShop extends React.Component {
                         <input
                           type="file"
                           accept="image/png,image/jpeg"
-                          onChange={e =>
-                            this.handleOnChange(
-                              e,
-                              "businessEntityIncorporation",
-                              "basic"
-                            )
-                          }
+                          onChange={e => this.handleOnChange( e, "businessEntityIncorporation", "basic" )}
                           id="file"
                           ref={this.businessEntityIncorporation}
-                          style={{ display: "none" }}
-                        />
+                          style={{ display: "none" }} />
                         <input
                           type="file"
                           accept="image/png,image/jpeg"
