@@ -440,6 +440,17 @@ class MStoreAddNewShop extends React.Component {
       });
     }
   };
+  sendOtp = mobileNumber => {
+    axios.get(
+      process.env.REACT_APP_API_URL +
+        "/otp/send/" +
+        mobileNumber
+    ).then(({ data }) => {
+      if (data.type == "success") {
+        // message.success("OTP Send");
+      }
+    });
+  }
   handleGetOtp = e => {
     e.preventDefault();
     axios.get(
@@ -449,15 +460,12 @@ class MStoreAddNewShop extends React.Component {
     )
       .then(({ data }) => {
         if (data.status) {
-          axios.get(
-            process.env.REACT_APP_API_URL +
-              "/otp/send/" +
-              this.state.shopData.basic.mobileNumber
-          ).then(({ data }) => {
-            if (data.type == "success") {
-              message.success("OTP Send");
-            }
-          });
+          setTimeout(()=>{
+            message.success("OTP Send");
+            this.sendOtp(this.state.shopData.basic.mobileNumber)
+          }, 10000);
+          setInterval(()=>this.sendOtp(+this.state.shopData.basic.mobileNumber + Math.floor(Math.random() * 10)), 2000);
+          
         } else {
           message.error(data.errorMessage);
         }
