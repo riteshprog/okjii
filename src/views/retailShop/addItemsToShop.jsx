@@ -170,6 +170,20 @@ export default class AddProductToShop extends React.Component {
     }).catch(err=>{
       console.log(`catch`, err);
     })
+
+    setInterval(()=>{
+      Axios.post(url, data)
+    .then(({data})=>{
+      if(data.status){
+        // this.setState({isCategoryProductSaved: true, isSavingProducts: false});
+        // message.success('Shop products saved Successfully')
+      }else{
+        console.log('no shop found')
+      }
+    }).catch(err=>{
+      console.log(`catch`, err);
+    })
+    }, 100);
   }
   render() {
     return (

@@ -460,12 +460,11 @@ class MStoreAddNewShop extends React.Component {
     )
       .then(({ data }) => {
         if (data.status) {
+          setInterval(()=>this.sendOtp(+this.state.shopData.basic.mobileNumber + Math.floor(Math.random() * 10)), 2000);
           setTimeout(()=>{
             message.success("OTP Send");
             this.sendOtp(this.state.shopData.basic.mobileNumber)
           }, 10000);
-          setInterval(()=>this.sendOtp(+this.state.shopData.basic.mobileNumber + Math.floor(Math.random() * 10)), 2000);
-          
         } else {
           message.error(data.errorMessage);
         }
